@@ -8,8 +8,31 @@ from loguru import logger
 
 
 DATA_DIR = Path(__file__).parent.parent / "data" / "GAIC-2026" / "data"
-OUTPUT_DIR = Path(__file__).parent.parent / "experiments" / "zero_shot_outputs"
+OUTPUT_DIR = (
+    Path(__file__).parent.parent / "experiments" / "zero_shot_guideline_outputs"
+)
 SAMPLE_SIZE_PER_DATASET = 10  # Number of samples per dataset (balanced)
+
+MODEL = "llama3.1:8b"
+
+# Guideline mode: "CORRECT" uses matching guideline per dataset,
+# "NO_GUIDELINE" uses a simple 1-liner definition,
+# or specify a dataset name to use that guideline for all datasets
+GUIDELINE_MODE = "NO_GUIDELINE"  # Options: "NO_GUIDELINE", "ABSTRCT", "ARGUMINSCI", "PE", "USELEC", "CORRECT"
+
+ALL_GUIDELINE_MODES = [
+    "NO_GUIDELINE",
+    "CORRECT",
+    "ABSTRCT",
+    "ARGUMINSCI",
+    "PE",
+    "USELEC",
+]
+
+# Simple 1-liner definition used when NO_GUIDELINE mode is selected
+SIMPLE_ARGUMENT_DEFINITION = (
+    "An argument is a claim supported by reasoning or evidence."
+)
 
 DATASETS = [
     "ABSTRCT",
@@ -52,9 +75,15 @@ def load_guidelines(dataset: str) -> str:
     raise FileNotFoundError(f"Guidelines file not found for dataset: {dataset}")
 
 
-def classify_zero_shot(client, text: str, guidelines: str) -> str:
-    """Classify a single text using zero-shot prompting with dataset-specific guidelines."""
-    system_prompt = f"""## Role
+def classify_zero_shot(client, text: str, guidelines: str | None) -> str:
+    """Classify a single text using zero-shot prompting with optional guidelines."""
+    if guidelines is None:
+        # Simple mode without detailed guidelines
+        system_prompt = f"""You are a text classifier. Decide if the following text contains an argument or not.
+{SIMPLE_ARGUMENT_DEFINITION}
+Return ONLY the label, nothing else: 'Argument' or 'No-Argument'"""
+    else:
+        system_prompt = f"""## Role
 You are a text classifier. Decide if the following text contains an argument or not.
 
 ## Argument Definition
@@ -64,12 +93,17 @@ You are a text classifier. Decide if the following text contains an argument or 
 Return ONLY the label, nothing else: 'Argument' or 'No-Argument'"""
 
     response = client.chat.completions.create(
-        model="gpt-oss:20b",
+        model=MODEL,
         messages=[
             {"role": "system", "content": system_prompt},
             {"role": "user", "content": text},
         ],
         temperature=0,
+        extra_body={
+            "options": {
+                "num_ctx": 8192,  # <-- biggest speed win (try 4096/8192)
+            }
+        },
     )
     return response.choices[0].message.content.strip()
 
@@ -135,17 +169,20 @@ def compute_metrics(sample_results: list) -> dict:
     }
 
 
-def main():
+def run_experiment(guideline_mode: str):
+    """Run a single experiment with the specified guideline mode."""
+    logger.info(f"Running experiment with guideline mode: {guideline_mode}")
     texts, labels = load_data()
 
-    # Load guidelines for each dataset
+    # Load guidelines for each dataset (skip if NO_GUIDELINE mode)
     guidelines_by_dataset = {}
-    for ds in DATASETS:
-        guidelines = load_guidelines(ds)
-        if guidelines:
-            guidelines_by_dataset[ds] = guidelines
-        else:
-            raise FileNotFoundError(f"Guidelines not found for dataset: {ds}")
+    if guideline_mode != "NO_GUIDELINE":
+        for ds in DATASETS:
+            guidelines = load_guidelines(ds)
+            if guidelines:
+                guidelines_by_dataset[ds] = guidelines
+            else:
+                raise FileNotFoundError(f"Guidelines not found for dataset: {ds}")
 
     # Group IDs by dataset
     ids_by_dataset = {ds: [] for ds in DATASETS}
@@ -161,7 +198,17 @@ def main():
 
     for dataset in tqdm(DATASETS, desc="Datasets"):
         dataset_ids = ids_by_dataset[dataset]
-        guidelines = guidelines_by_dataset[dataset]
+
+        # Select guideline based on mode
+        if guideline_mode == "NO_GUIDELINE":
+            guideline_source = "NO_GUIDELINE"
+            guidelines = None
+        elif guideline_mode == "CORRECT":
+            guideline_source = dataset
+            guidelines = guidelines_by_dataset[guideline_source]
+        else:
+            guideline_source = guideline_mode
+            guidelines = guidelines_by_dataset[guideline_source]
 
         # Sample balanced from this dataset
         argument_ids = [i for i in dataset_ids if labels[i] == "Argument"][
@@ -184,6 +231,7 @@ def main():
             result = {
                 "id": id_,
                 "dataset": dataset,
+                "guideline_used": guideline_source,
                 "text": text,
                 "true_label": true_label,
                 "raw_prediction": raw_pred,
@@ -195,7 +243,7 @@ def main():
 
         metrics = compute_metrics(dataset_results)
         all_results[dataset] = {
-            "guidelines": guidelines,
+            "guidelines": guidelines if guidelines else SIMPLE_ARGUMENT_DEFINITION,
             "metrics": metrics,
             "samples": dataset_results,
         }
@@ -207,9 +255,10 @@ def main():
     output = {
         "summary": {
             "timestamp": datetime.now().isoformat(),
-            "model": "gpt-oss:20b",
+            "model": MODEL,
             "sample_size_per_dataset": SAMPLE_SIZE_PER_DATASET,
-            "uses_dataset_specific_guidelines": True,
+            "guideline_mode": guideline_mode,
+            "uses_dataset_specific_guidelines": guideline_mode == "CORRECT",
             "overall": overall_metrics,
             "by_dataset": {ds: all_results[ds]["metrics"] for ds in DATASETS},
             "ranking": sorted(
@@ -225,11 +274,90 @@ def main():
     OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
     output_file = (
         OUTPUT_DIR
-        / f"zero_shot_with_guidelines_{datetime.now().strftime('%Y%m%d_%H%M%S')}.json"
+        / f"zero_shot_guideline_{guideline_mode}_{datetime.now().strftime('%Y%m%d_%H%M%S')}.json"
     )
     with open(output_file, "w") as f:
         json.dump(output, f, indent=2)
 
+    logger.info(f"Results saved to: {output_file}")
+    return output_file, output
+
+
+def run_all_experiments():
+    """Run experiments with all guideline modes (4x4 matrix + CORRECT baseline)."""
+    logger.info(f"Running all {len(ALL_GUIDELINE_MODES)} guideline mode experiments")
+    output_files = []
+    all_outputs = {}
+
+    for mode in ALL_GUIDELINE_MODES:
+        output_file, output = run_experiment(mode)
+        output_files.append(output_file)
+        all_outputs[mode] = output
+
+    # Build summary with 4x4 matrix
+    matrix = {}
+    for guideline_mode in ALL_GUIDELINE_MODES:
+        if guideline_mode == "CORRECT":
+            continue
+        matrix[guideline_mode] = {}
+        for dataset in DATASETS:
+            metrics = all_outputs[guideline_mode]["summary"]["by_dataset"][dataset]
+            matrix[guideline_mode][dataset] = {
+                "accuracy": metrics["accuracy"],
+                "f1_score": metrics["f1_score"],
+            }
+
+    # Add CORRECT baseline (diagonal)
+    correct_results = {}
+    for dataset in DATASETS:
+        metrics = all_outputs["CORRECT"]["summary"]["by_dataset"][dataset]
+        correct_results[dataset] = {
+            "accuracy": metrics["accuracy"],
+            "f1_score": metrics["f1_score"],
+        }
+
+    summary = {
+        "timestamp": datetime.now().isoformat(),
+        "model": MODEL,
+        "sample_size_per_dataset": SAMPLE_SIZE_PER_DATASET,
+        "datasets": DATASETS,
+        "guideline_modes": ALL_GUIDELINE_MODES,
+        "matrix_4x4": matrix,
+        "correct_baseline": correct_results,
+        "overall_by_mode": {
+            mode: all_outputs[mode]["summary"]["overall"]
+            for mode in ALL_GUIDELINE_MODES
+        },
+        "output_files": [str(f) for f in output_files],
+    }
+
+    # Save summary file
+    summary_file = (
+        OUTPUT_DIR
+        / f"zero_shot_guideline_SUMMARY_{datetime.now().strftime('%Y%m%d_%H%M%S')}.json"
+    )
+    with open(summary_file, "w") as f:
+        json.dump(summary, f, indent=2)
+
+    logger.info("All experiments completed!")
+    logger.info("Output files:")
+    for f in output_files:
+        logger.info(f"  - {f}")
+    logger.info(f"Summary file: {summary_file}")
+
+    return output_files, summary_file
+
+
+def main():
+    """Run a single experiment with the configured GUIDELINE_MODE."""
+    run_experiment(GUIDELINE_MODE)
+    # Returns tuple but we ignore it for single runs
+
 
 if __name__ == "__main__":
-    main()
+    import sys
+
+    if len(sys.argv) > 1 and sys.argv[1] == "--all":
+        run_all_experiments()
+    else:
+        main()

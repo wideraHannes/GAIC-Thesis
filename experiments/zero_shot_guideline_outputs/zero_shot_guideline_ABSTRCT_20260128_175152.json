@@ -1,0 +1,532 @@
+{
+  "summary": {
+    "timestamp": "2026-01-28T17:51:52.907763",
+    "model": "llama3.1:8b",
+    "sample_size_per_dataset": 10,
+    "guideline_mode": "ABSTRCT",
+    "uses_dataset_specific_guidelines": false,
+    "overall": {
+      "total_samples": 40,
+      "valid_predictions": 40,
+      "unparseable_predictions": 0,
+      "accuracy": 0.65,
+      "precision": 0.625,
+      "recall": 0.75,
+      "f1_score": 0.6818181818181818
+    },
+    "by_dataset": {
+      "ABSTRCT": {
+        "total_samples": 10,
+        "valid_predictions": 10,
+        "unparseable_predictions": 0,
+        "accuracy": 0.9,
+        "precision": 1.0,
+        "recall": 0.8,
+        "f1_score": 0.8888888888888888
+      },
+      "ARGUMINSCI": {
+        "total_samples": 10,
+        "valid_predictions": 10,
+        "unparseable_predictions": 0,
+        "accuracy": 0.6,
+        "precision": 0.6666666666666666,
+        "recall": 0.4,
+        "f1_score": 0.5
+      },
+      "PE": {
+        "total_samples": 10,
+        "valid_predictions": 10,
+        "unparseable_predictions": 0,
+        "accuracy": 0.6,
+        "precision": 0.5555555555555556,
+        "recall": 1.0,
+        "f1_score": 0.7142857142857143
+      },
+      "USELEC": {
+        "total_samples": 10,
+        "valid_predictions": 10,
+        "unparseable_predictions": 0,
+        "accuracy": 0.5,
+        "precision": 0.5,
+        "recall": 0.8,
+        "f1_score": 0.6153846153846154
+      }
+    },
+    "ranking": [
+      [
+        "ABSTRCT",
+        0.9
+      ],
+      [
+        "ARGUMINSCI",
+        0.6
+      ],
+      [
+        "PE",
+        0.6
+      ],
+      [
+        "USELEC",
+        0.5
+      ]
+    ]
+  },
+  "datasets": {
+    "ABSTRCT": {
+      "guidelines": "### `argument`\n\nLabel a sentence/span as **`argument`** if it expresses an **argumentative component**:\n\n- a **Claim**: a concluding/assertive statement by the author about the study outcome (a statement/claim that needs support), or\n- a **Premise**: an observed **fact/measurement/outcome/side-effect report** from the trial used as evidence supporting or attacking a claim.\n\nIn this guideline, an argument is understood as a **claim that is supported or attacked by evidence (premises)**.\n\n### `no argument`\n\nLabel as **`no argument`** if the sentence/span contains **neither a claim nor an evidence premise** (i.e., it does not make an outcome assertion and does not report observations/measurements as evidence).",
+      "metrics": {
+        "total_samples": 10,
+        "valid_predictions": 10,
+        "unparseable_predictions": 0,
+        "accuracy": 0.9,
+        "precision": 1.0,
+        "recall": 0.8,
+        "f1_score": 0.8888888888888888
+      },
+      "samples": [
+        {
+          "id": "ABSTRCT-train-1",
+          "dataset": "ABSTRCT",
+          "guideline_used": "ABSTRCT",
+          "text": "Both treatments were safe and well tolerated.",
+          "true_label": "Argument",
+          "raw_prediction": "no argument",
+          "normalized_prediction": "No-Argument",
+          "correct": false
+        },
+        {
+          "id": "ABSTRCT-train-2",
+          "dataset": "ABSTRCT",
+          "guideline_used": "ABSTRCT",
+          "text": "The TAX 326 study shows that docetaxel-platinum regimens relieve symptoms and improve QoL in patients with advanced NSCLC.",
+          "true_label": "Argument",
+          "raw_prediction": "Argument",
+          "normalized_prediction": "Argument",
+          "correct": true
+        },
+        {
+          "id": "ABSTRCT-train-3",
+          "dataset": "ABSTRCT",
+          "guideline_used": "ABSTRCT",
+          "text": "Docetaxel has shown activity in elderly patients with advanced non-small-cell lung cancer (NSCLC).",
+          "true_label": "Argument",
+          "raw_prediction": "Argument",
+          "normalized_prediction": "Argument",
+          "correct": true
+        },
+        {
+          "id": "ABSTRCT-train-4",
+          "dataset": "ABSTRCT",
+          "guideline_used": "ABSTRCT",
+          "text": "Targeted therapies may improve chemotherapy effectiveness without worsening toxicity.",
+          "true_label": "Argument",
+          "raw_prediction": "Argument",
+          "normalized_prediction": "Argument",
+          "correct": true
+        },
+        {
+          "id": "ABSTRCT-train-5",
+          "dataset": "ABSTRCT",
+          "guideline_used": "ABSTRCT",
+          "text": "The incidence of hepatotoxicity during IPT and ART was high.",
+          "true_label": "Argument",
+          "raw_prediction": "argument",
+          "normalized_prediction": "Argument",
+          "correct": true
+        },
+        {
+          "id": "ABSTRCT-train-511",
+          "dataset": "ABSTRCT",
+          "guideline_used": "ABSTRCT",
+          "text": "Participants were enrolled in a randomized intervention trial to treat sexual dysfunction and completed outcome measures prior to randomization.",
+          "true_label": "No-Argument",
+          "raw_prediction": "no argument",
+          "normalized_prediction": "No-Argument",
+          "correct": true
+        },
+        {
+          "id": "ABSTRCT-train-512",
+          "dataset": "ABSTRCT",
+          "guideline_used": "ABSTRCT",
+          "text": "QoL:",
+          "true_label": "No-Argument",
+          "raw_prediction": "no argument",
+          "normalized_prediction": "No-Argument",
+          "correct": true
+        },
+        {
+          "id": "ABSTRCT-train-513",
+          "dataset": "ABSTRCT",
+          "guideline_used": "ABSTRCT",
+          "text": "Prespecified outcomes were three genitourinary symptoms (bowel function tenderness, frequent urination, and erectile dysfunction [ED]) and measures of physical and emotional function.",
+          "true_label": "No-Argument",
+          "raw_prediction": "## No-Argument",
+          "normalized_prediction": "No-Argument",
+          "correct": true
+        },
+        {
+          "id": "ABSTRCT-train-514",
+          "dataset": "ABSTRCT",
+          "guideline_used": "ABSTRCT",
+          "text": "At six oncology clinics, physicians (N=22) and nurses (N=23) enrolled patients (N=93) who were over 18 years of age, with cancer diagnoses, pain, and a life expectancy of at least 6 months.",
+          "true_label": "No-Argument",
+          "raw_prediction": "No-Argument",
+          "normalized_prediction": "No-Argument",
+          "correct": true
+        },
+        {
+          "id": "ABSTRCT-train-515",
+          "dataset": "ABSTRCT",
+          "guideline_used": "ABSTRCT",
+          "text": "Patients in both arms were assessed every 3 weeks.",
+          "true_label": "No-Argument",
+          "raw_prediction": "no argument",
+          "normalized_prediction": "No-Argument",
+          "correct": true
+        }
+      ]
+    },
+    "ARGUMINSCI": {
+      "guidelines": "### `argument`\n\nLabel a sentence/span as **`argument`** if it expresses an **argumentative component**:\n\n- a **Claim**: a concluding/assertive statement by the author about the study outcome (a statement/claim that needs support), or\n- a **Premise**: an observed **fact/measurement/outcome/side-effect report** from the trial used as evidence supporting or attacking a claim.\n\nIn this guideline, an argument is understood as a **claim that is supported or attacked by evidence (premises)**.\n\n### `no argument`\n\nLabel as **`no argument`** if the sentence/span contains **neither a claim nor an evidence premise** (i.e., it does not make an outcome assertion and does not report observations/measurements as evidence).",
+      "metrics": {
+        "total_samples": 10,
+        "valid_predictions": 10,
+        "unparseable_predictions": 0,
+        "accuracy": 0.6,
+        "precision": 0.6666666666666666,
+        "recall": 0.4,
+        "f1_score": 0.5
+      },
+      "samples": [
+        {
+          "id": "ARGUMINSCI-train-1",
+          "dataset": "ARGUMINSCI",
+          "guideline_used": "ABSTRCT",
+          "text": "The four selected fabrics span a large range of possible cloth behaviors.",
+          "true_label": "Argument",
+          "raw_prediction": "no argument",
+          "normalized_prediction": "No-Argument",
+          "correct": false
+        },
+        {
+          "id": "ARGUMINSCI-train-2",
+          "dataset": "ARGUMINSCI",
+          "guideline_used": "ABSTRCT",
+          "text": "In a nutshell, #12 is isotropic and very compliant in stretch and bending; #4 is also isotropic, very stiff in stretch but compliant in bending; #14 is stiff and quite isotropic in stretch, but extremely anisotropic in bending (with 33/1 stiffness ratio in weft and warp); and #18 is anisotropic both in stretch (with 10/1 stiffness ratio) and in bending (with 13/1 stiffness ratio).",
+          "true_label": "Argument",
+          "raw_prediction": "Argument",
+          "normalized_prediction": "Argument",
+          "correct": true
+        },
+        {
+          "id": "ARGUMINSCI-train-3",
+          "dataset": "ARGUMINSCI",
+          "guideline_used": "ABSTRCT",
+          "text": "In addition, the animators often wish to create non-realistic motions that defy the laws of physics, a space where motion capture simply fails to provide any samples.",
+          "true_label": "Argument",
+          "raw_prediction": "no argument",
+          "normalized_prediction": "No-Argument",
+          "correct": false
+        },
+        {
+          "id": "ARGUMINSCI-train-4",
+          "dataset": "ARGUMINSCI",
+          "guideline_used": "ABSTRCT",
+          "text": "The explicit representation provides our method with several advantages.",
+          "true_label": "Argument",
+          "raw_prediction": "Argument",
+          "normalized_prediction": "Argument",
+          "correct": true
+        },
+        {
+          "id": "ARGUMINSCI-train-5",
+          "dataset": "ARGUMINSCI",
+          "guideline_used": "ABSTRCT",
+          "text": "A motion graph is a directed graph where all edges correspond to clips of motion.",
+          "true_label": "Argument",
+          "raw_prediction": "no argument",
+          "normalized_prediction": "No-Argument",
+          "correct": false
+        },
+        {
+          "id": "ARGUMINSCI-train-511",
+          "dataset": "ARGUMINSCI",
+          "guideline_used": "ABSTRCT",
+          "text": "i , 0) ))",
+          "true_label": "No-Argument",
+          "raw_prediction": "no argument",
+          "normalized_prediction": "No-Argument",
+          "correct": true
+        },
+        {
+          "id": "ARGUMINSCI-train-512",
+          "dataset": "ARGUMINSCI",
+          "guideline_used": "ABSTRCT",
+          "text": "i O .",
+          "true_label": "No-Argument",
+          "raw_prediction": "no argument",
+          "normalized_prediction": "No-Argument",
+          "correct": true
+        },
+        {
+          "id": "ARGUMINSCI-train-513",
+          "dataset": "ARGUMINSCI",
+          "guideline_used": "ABSTRCT",
+          "text": "[q T , q  \u0307 T ] T , respectively.",
+          "true_label": "No-Argument",
+          "raw_prediction": "no argument",
+          "normalized_prediction": "No-Argument",
+          "correct": true
+        },
+        {
+          "id": "ARGUMINSCI-train-514",
+          "dataset": "ARGUMINSCI",
+          "guideline_used": "ABSTRCT",
+          "text": "We can, thus, use SPH-based approaches to approximate the boundary conditions stated in Sections 3.2, 3.3 and 3.4.\n          (a) (b)\n          \n            Figure 5: (a) Boundary particles on a triangle according to the seven point rule.",
+          "true_label": "No-Argument",
+          "raw_prediction": "## Argument",
+          "normalized_prediction": "Argument",
+          "correct": false
+        },
+        {
+          "id": "ARGUMINSCI-train-515",
+          "dataset": "ARGUMINSCI",
+          "guideline_used": "ABSTRCT",
+          "text": "H ARLOW , F., AND W ELCH , E. 1965.",
+          "true_label": "No-Argument",
+          "raw_prediction": "no argument",
+          "normalized_prediction": "No-Argument",
+          "correct": true
+        }
+      ]
+    },
+    "PE": {
+      "guidelines": "### `argument`\n\nLabel a sentence/span as **`argument`** if it expresses an **argumentative component**:\n\n- a **Claim**: a concluding/assertive statement by the author about the study outcome (a statement/claim that needs support), or\n- a **Premise**: an observed **fact/measurement/outcome/side-effect report** from the trial used as evidence supporting or attacking a claim.\n\nIn this guideline, an argument is understood as a **claim that is supported or attacked by evidence (premises)**.\n\n### `no argument`\n\nLabel as **`no argument`** if the sentence/span contains **neither a claim nor an evidence premise** (i.e., it does not make an outcome assertion and does not report observations/measurements as evidence).",
+      "metrics": {
+        "total_samples": 10,
+        "valid_predictions": 10,
+        "unparseable_predictions": 0,
+        "accuracy": 0.6,
+        "precision": 0.5555555555555556,
+        "recall": 1.0,
+        "f1_score": 0.7142857142857143
+      },
+      "samples": [
+        {
+          "id": "PE-train-1",
+          "dataset": "PE",
+          "guideline_used": "ABSTRCT",
+          "text": "Taking all into account, I think that living in the city is much better nowadays, because of the opportunities it gives.",
+          "true_label": "Argument",
+          "raw_prediction": "Argument",
+          "normalized_prediction": "Argument",
+          "correct": true
+        },
+        {
+          "id": "PE-train-2",
+          "dataset": "PE",
+          "guideline_used": "ABSTRCT",
+          "text": "Some people say that if humans stop using technology and lead a simple way of life then only we can save the environment.",
+          "true_label": "Argument",
+          "raw_prediction": "Argument",
+          "normalized_prediction": "Argument",
+          "correct": true
+        },
+        {
+          "id": "PE-train-3",
+          "dataset": "PE",
+          "guideline_used": "ABSTRCT",
+          "text": "In conclusion, I personally disagree this this notion that we should replace classroom with online class.",
+          "true_label": "Argument",
+          "raw_prediction": "argument",
+          "normalized_prediction": "Argument",
+          "correct": true
+        },
+        {
+          "id": "PE-train-4",
+          "dataset": "PE",
+          "guideline_used": "ABSTRCT",
+          "text": "From my perspective, I agree with the view that students can acquire more benefits from the remote education.",
+          "true_label": "Argument",
+          "raw_prediction": "Argument",
+          "normalized_prediction": "Argument",
+          "correct": true
+        },
+        {
+          "id": "PE-train-5",
+          "dataset": "PE",
+          "guideline_used": "ABSTRCT",
+          "text": "As a result, information from those sources is subject to question.",
+          "true_label": "Argument",
+          "raw_prediction": "Argument",
+          "normalized_prediction": "Argument",
+          "correct": true
+        },
+        {
+          "id": "PE-train-511",
+          "dataset": "PE",
+          "guideline_used": "ABSTRCT",
+          "text": "In this new environment, parent should find friends coming from their same country so that they can socialize in a very familiar manner as feeling being home.",
+          "true_label": "No-Argument",
+          "raw_prediction": "## No-Argument",
+          "normalized_prediction": "No-Argument",
+          "correct": true
+        },
+        {
+          "id": "PE-train-512",
+          "dataset": "PE",
+          "guideline_used": "ABSTRCT",
+          "text": "Nowadays, unscrupulous paparazzi constantly follow celebrities just to take a photo while they are eating or training.",
+          "true_label": "No-Argument",
+          "raw_prediction": "Argument",
+          "normalized_prediction": "Argument",
+          "correct": false
+        },
+        {
+          "id": "PE-train-513",
+          "dataset": "PE",
+          "guideline_used": "ABSTRCT",
+          "text": "Much information as the Internet may provide, most of the sources are unjustified by experts.",
+          "true_label": "No-Argument",
+          "raw_prediction": "Argument",
+          "normalized_prediction": "Argument",
+          "correct": false
+        },
+        {
+          "id": "PE-train-514",
+          "dataset": "PE",
+          "guideline_used": "ABSTRCT",
+          "text": "Teachers think that students get affected too as they can not clear their doubts in study topics instantly.",
+          "true_label": "No-Argument",
+          "raw_prediction": "Argument",
+          "normalized_prediction": "Argument",
+          "correct": false
+        },
+        {
+          "id": "PE-train-515",
+          "dataset": "PE",
+          "guideline_used": "ABSTRCT",
+          "text": "You are watching football stars play the game with your own eyes and sharing your feelings with about 40,000 people at the stadium, such an excitement you can never have when you are watching it at home.",
+          "true_label": "No-Argument",
+          "raw_prediction": "Argument",
+          "normalized_prediction": "Argument",
+          "correct": false
+        }
+      ]
+    },
+    "USELEC": {
+      "guidelines": "### `argument`\n\nLabel a sentence/span as **`argument`** if it expresses an **argumentative component**:\n\n- a **Claim**: a concluding/assertive statement by the author about the study outcome (a statement/claim that needs support), or\n- a **Premise**: an observed **fact/measurement/outcome/side-effect report** from the trial used as evidence supporting or attacking a claim.\n\nIn this guideline, an argument is understood as a **claim that is supported or attacked by evidence (premises)**.\n\n### `no argument`\n\nLabel as **`no argument`** if the sentence/span contains **neither a claim nor an evidence premise** (i.e., it does not make an outcome assertion and does not report observations/measurements as evidence).",
+      "metrics": {
+        "total_samples": 10,
+        "valid_predictions": 10,
+        "unparseable_predictions": 0,
+        "accuracy": 0.5,
+        "precision": 0.5,
+        "recall": 0.8,
+        "f1_score": 0.6153846153846154
+      },
+      "samples": [
+        {
+          "id": "USELEC-train-1",
+          "dataset": "USELEC",
+          "guideline_used": "ABSTRCT",
+          "text": "I do not believe that we, the United States, should sell, give or otherwise transfer military hardware to the People's Republic of China, or any other Communist nation, such as the Soviet Union and the like.",
+          "true_label": "Argument",
+          "raw_prediction": "Argument",
+          "normalized_prediction": "Argument",
+          "correct": true
+        },
+        {
+          "id": "USELEC-train-2",
+          "dataset": "USELEC",
+          "guideline_used": "ABSTRCT",
+          "text": "That costs the government $7,700 per family.",
+          "true_label": "Argument",
+          "raw_prediction": "no argument",
+          "normalized_prediction": "No-Argument",
+          "correct": false
+        },
+        {
+          "id": "USELEC-train-3",
+          "dataset": "USELEC",
+          "guideline_used": "ABSTRCT",
+          "text": "He was wrong.",
+          "true_label": "Argument",
+          "raw_prediction": "Argument",
+          "normalized_prediction": "Argument",
+          "correct": true
+        },
+        {
+          "id": "USELEC-train-4",
+          "dataset": "USELEC",
+          "guideline_used": "ABSTRCT",
+          "text": "I think we should try to raise the fuel efficiency.",
+          "true_label": "Argument",
+          "raw_prediction": "Argument",
+          "normalized_prediction": "Argument",
+          "correct": true
+        },
+        {
+          "id": "USELEC-train-5",
+          "dataset": "USELEC",
+          "guideline_used": "ABSTRCT",
+          "text": "Number two, Governor Romney, before he knew the facts, before he even knew that our ambassador was killed, he was out making a political statement which was panned by the media around the world.",
+          "true_label": "Argument",
+          "raw_prediction": "## Argument",
+          "normalized_prediction": "Argument",
+          "correct": true
+        },
+        {
+          "id": "USELEC-train-511",
+          "dataset": "USELEC",
+          "guideline_used": "ABSTRCT",
+          "text": "(Laughter and applause) But--but--see, let me make it very clear.",
+          "true_label": "No-Argument",
+          "raw_prediction": "Argument",
+          "normalized_prediction": "Argument",
+          "correct": false
+        },
+        {
+          "id": "USELEC-train-512",
+          "dataset": "USELEC",
+          "guideline_used": "ABSTRCT",
+          "text": "Drug use doubled.",
+          "true_label": "No-Argument",
+          "raw_prediction": "Argument",
+          "normalized_prediction": "Argument",
+          "correct": false
+        },
+        {
+          "id": "USELEC-train-513",
+          "dataset": "USELEC",
+          "guideline_used": "ABSTRCT",
+          "text": "The Congress passed uh an enterprise zone after the Los Angeles riots five years ago.",
+          "true_label": "No-Argument",
+          "raw_prediction": "no argument",
+          "normalized_prediction": "No-Argument",
+          "correct": true
+        },
+        {
+          "id": "USELEC-train-514",
+          "dataset": "USELEC",
+          "guideline_used": "ABSTRCT",
+          "text": "The Soviets say we'll have a meeting when we think there can be progress and yet they left those talks.",
+          "true_label": "No-Argument",
+          "raw_prediction": "Argument",
+          "normalized_prediction": "Argument",
+          "correct": false
+        },
+        {
+          "id": "USELEC-train-515",
+          "dataset": "USELEC",
+          "guideline_used": "ABSTRCT",
+          "text": "Thank you so much.",
+          "true_label": "No-Argument",
+          "raw_prediction": "Please go ahead with the text for classification. I'll decide if it contains an argument or not.",
+          "normalized_prediction": "Argument",
+          "correct": false
+        }
+      ]
+    }
+  }
+}
