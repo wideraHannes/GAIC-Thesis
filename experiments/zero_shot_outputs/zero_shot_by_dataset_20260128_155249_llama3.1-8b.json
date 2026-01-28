@@ -1,0 +1,1182 @@
+{
+  "summary": {
+    "timestamp": "2026-01-28T15:52:49.958246",
+    "model": "llama3.1:8b",
+    "sample_size_per_dataset": 10,
+    "overall": {
+      "total_samples": 100,
+      "valid_predictions": 100,
+      "unparseable_predictions": 0,
+      "accuracy": 0.66,
+      "precision": 0.7666666666666667,
+      "recall": 0.46,
+      "f1_score": 0.575
+    },
+    "by_dataset": {
+      "ABSTRCT": {
+        "total_samples": 10,
+        "valid_predictions": 10,
+        "unparseable_predictions": 0,
+        "accuracy": 0.7,
+        "precision": 1.0,
+        "recall": 0.4,
+        "f1_score": 0.5714285714285714
+      },
+      "ACQUA": {
+        "total_samples": 10,
+        "valid_predictions": 10,
+        "unparseable_predictions": 0,
+        "accuracy": 0.5,
+        "precision": 0.5,
+        "recall": 0.2,
+        "f1_score": 0.2857142857142857
+      },
+      "AEC": {
+        "total_samples": 10,
+        "valid_predictions": 10,
+        "unparseable_predictions": 0,
+        "accuracy": 0.5,
+        "precision": 0.5,
+        "recall": 0.2,
+        "f1_score": 0.2857142857142857
+      },
+      "AFS": {
+        "total_samples": 10,
+        "valid_predictions": 10,
+        "unparseable_predictions": 0,
+        "accuracy": 0.7,
+        "precision": 0.75,
+        "recall": 0.6,
+        "f1_score": 0.6666666666666666
+      },
+      "ARGUMINSCI": {
+        "total_samples": 10,
+        "valid_predictions": 10,
+        "unparseable_predictions": 0,
+        "accuracy": 0.7,
+        "precision": 1.0,
+        "recall": 0.4,
+        "f1_score": 0.5714285714285714
+      },
+      "FINARG": {
+        "total_samples": 10,
+        "valid_predictions": 10,
+        "unparseable_predictions": 0,
+        "accuracy": 0.7,
+        "precision": 1.0,
+        "recall": 0.4,
+        "f1_score": 0.5714285714285714
+      },
+      "IAM": {
+        "total_samples": 10,
+        "valid_predictions": 10,
+        "unparseable_predictions": 0,
+        "accuracy": 0.8,
+        "precision": 0.7142857142857143,
+        "recall": 1.0,
+        "f1_score": 0.8333333333333334
+      },
+      "PE": {
+        "total_samples": 10,
+        "valid_predictions": 10,
+        "unparseable_predictions": 0,
+        "accuracy": 0.6,
+        "precision": 0.6666666666666666,
+        "recall": 0.4,
+        "f1_score": 0.5
+      },
+      "SCIARK": {
+        "total_samples": 10,
+        "valid_predictions": 10,
+        "unparseable_predictions": 0,
+        "accuracy": 0.6,
+        "precision": 0.6666666666666666,
+        "recall": 0.4,
+        "f1_score": 0.5
+      },
+      "USELEC": {
+        "total_samples": 10,
+        "valid_predictions": 10,
+        "unparseable_predictions": 0,
+        "accuracy": 0.8,
+        "precision": 1.0,
+        "recall": 0.6,
+        "f1_score": 0.75
+      }
+    },
+    "ranking": [
+      [
+        "IAM",
+        0.8
+      ],
+      [
+        "USELEC",
+        0.8
+      ],
+      [
+        "ABSTRCT",
+        0.7
+      ],
+      [
+        "AFS",
+        0.7
+      ],
+      [
+        "ARGUMINSCI",
+        0.7
+      ],
+      [
+        "FINARG",
+        0.7
+      ],
+      [
+        "PE",
+        0.6
+      ],
+      [
+        "SCIARK",
+        0.6
+      ],
+      [
+        "ACQUA",
+        0.5
+      ],
+      [
+        "AEC",
+        0.5
+      ]
+    ]
+  },
+  "datasets": {
+    "ABSTRCT": {
+      "metrics": {
+        "total_samples": 10,
+        "valid_predictions": 10,
+        "unparseable_predictions": 0,
+        "accuracy": 0.7,
+        "precision": 1.0,
+        "recall": 0.4,
+        "f1_score": 0.5714285714285714
+      },
+      "samples": [
+        {
+          "id": "ABSTRCT-train-1",
+          "dataset": "ABSTRCT",
+          "text": "Both treatments were safe and well tolerated.",
+          "true_label": "Argument",
+          "raw_prediction": "No-Argument",
+          "normalized_prediction": "No-Argument",
+          "correct": false
+        },
+        {
+          "id": "ABSTRCT-train-2",
+          "dataset": "ABSTRCT",
+          "text": "The TAX 326 study shows that docetaxel-platinum regimens relieve symptoms and improve QoL in patients with advanced NSCLC.",
+          "true_label": "Argument",
+          "raw_prediction": "Argument",
+          "normalized_prediction": "Argument",
+          "correct": true
+        },
+        {
+          "id": "ABSTRCT-train-3",
+          "dataset": "ABSTRCT",
+          "text": "Docetaxel has shown activity in elderly patients with advanced non-small-cell lung cancer (NSCLC).",
+          "true_label": "Argument",
+          "raw_prediction": "No-Argument",
+          "normalized_prediction": "No-Argument",
+          "correct": false
+        },
+        {
+          "id": "ABSTRCT-train-4",
+          "dataset": "ABSTRCT",
+          "text": "Targeted therapies may improve chemotherapy effectiveness without worsening toxicity.",
+          "true_label": "Argument",
+          "raw_prediction": "Argument",
+          "normalized_prediction": "Argument",
+          "correct": true
+        },
+        {
+          "id": "ABSTRCT-train-5",
+          "dataset": "ABSTRCT",
+          "text": "The incidence of hepatotoxicity during IPT and ART was high.",
+          "true_label": "Argument",
+          "raw_prediction": "No-Argument",
+          "normalized_prediction": "No-Argument",
+          "correct": false
+        },
+        {
+          "id": "ABSTRCT-train-511",
+          "dataset": "ABSTRCT",
+          "text": "Participants were enrolled in a randomized intervention trial to treat sexual dysfunction and completed outcome measures prior to randomization.",
+          "true_label": "No-Argument",
+          "raw_prediction": "No-Argument",
+          "normalized_prediction": "No-Argument",
+          "correct": true
+        },
+        {
+          "id": "ABSTRCT-train-512",
+          "dataset": "ABSTRCT",
+          "text": "QoL:",
+          "true_label": "No-Argument",
+          "raw_prediction": "No-Argument",
+          "normalized_prediction": "No-Argument",
+          "correct": true
+        },
+        {
+          "id": "ABSTRCT-train-513",
+          "dataset": "ABSTRCT",
+          "text": "Prespecified outcomes were three genitourinary symptoms (bowel function tenderness, frequent urination, and erectile dysfunction [ED]) and measures of physical and emotional function.",
+          "true_label": "No-Argument",
+          "raw_prediction": "No-Argument",
+          "normalized_prediction": "No-Argument",
+          "correct": true
+        },
+        {
+          "id": "ABSTRCT-train-514",
+          "dataset": "ABSTRCT",
+          "text": "At six oncology clinics, physicians (N=22) and nurses (N=23) enrolled patients (N=93) who were over 18 years of age, with cancer diagnoses, pain, and a life expectancy of at least 6 months.",
+          "true_label": "No-Argument",
+          "raw_prediction": "No-Argument",
+          "normalized_prediction": "No-Argument",
+          "correct": true
+        },
+        {
+          "id": "ABSTRCT-train-515",
+          "dataset": "ABSTRCT",
+          "text": "Patients in both arms were assessed every 3 weeks.",
+          "true_label": "No-Argument",
+          "raw_prediction": "No-Argument",
+          "normalized_prediction": "No-Argument",
+          "correct": true
+        }
+      ]
+    },
+    "ACQUA": {
+      "metrics": {
+        "total_samples": 10,
+        "valid_predictions": 10,
+        "unparseable_predictions": 0,
+        "accuracy": 0.5,
+        "precision": 0.5,
+        "recall": 0.2,
+        "f1_score": 0.2857142857142857
+      },
+      "samples": [
+        {
+          "id": "ACQUA-train-1",
+          "dataset": "ACQUA",
+          "text": "This means that earnings at LinkedIn and amazon are likely to grow vastly faster than earnings at facebook over the next few years.",
+          "true_label": "Argument",
+          "raw_prediction": "Argument",
+          "normalized_prediction": "Argument",
+          "correct": true
+        },
+        {
+          "id": "ACQUA-train-2",
+          "dataset": "ACQUA",
+          "text": "For Java I like NetBeans over Eclipse.",
+          "true_label": "Argument",
+          "raw_prediction": "No-Argument",
+          "normalized_prediction": "No-Argument",
+          "correct": false
+        },
+        {
+          "id": "ACQUA-train-3",
+          "dataset": "ACQUA",
+          "text": "Python, in my informal tests, is a bit faster than Ruby -- anywhere from 10% to 40%.",
+          "true_label": "Argument",
+          "raw_prediction": "No-Argument",
+          "normalized_prediction": "No-Argument",
+          "correct": false
+        },
+        {
+          "id": "ACQUA-train-4",
+          "dataset": "ACQUA",
+          "text": "@Dave M - when you suggest a Toyota Camry would drive better than a Ford Contour, what exactly did you mean?",
+          "true_label": "Argument",
+          "raw_prediction": "No-Argument",
+          "normalized_prediction": "No-Argument",
+          "correct": false
+        },
+        {
+          "id": "ACQUA-train-5",
+          "dataset": "ACQUA",
+          "text": "It's a well-known fact that returning from a holiday weekend isn't always easy, but a beautiful bride with an \"aversion to all things boring\" and a drop-dead gorgeous Fort Lauderdale wedding can make the transition much, much easier.",
+          "true_label": "Argument",
+          "raw_prediction": "No-Argument",
+          "normalized_prediction": "No-Argument",
+          "correct": false
+        },
+        {
+          "id": "ACQUA-train-511",
+          "dataset": "ACQUA",
+          "text": "Job description: ...Solid experience with JavaScript frameworks like Angular, Backbone, Ember, Knockout, etc.Strong experience with languages: jQuery, PHP, Java , C#, Python, Ruby, HTML5 and CSSExperience with Java Backend and front-end web developmentExperience...",
+          "true_label": "No-Argument",
+          "raw_prediction": "No-Argument",
+          "normalized_prediction": "No-Argument",
+          "correct": true
+        },
+        {
+          "id": "ACQUA-train-512",
+          "dataset": "ACQUA",
+          "text": "USB and Ethernet cables have to be reeved around inside the machine, under the scanner section, but it's probably easier to set it up for a wireless connection.",
+          "true_label": "No-Argument",
+          "raw_prediction": "No-Argument",
+          "normalized_prediction": "No-Argument",
+          "correct": true
+        },
+        {
+          "id": "ACQUA-train-513",
+          "dataset": "ACQUA",
+          "text": "Photo Rescue Photo Recovery Software Mac tool is a superior facility which fully supports various types of digital camera brands including Nikon , Canon, Sony, Samsung, Olympus, Kodak, Sigma, Pentax, and other similar popular brands.",
+          "true_label": "No-Argument",
+          "raw_prediction": "No-Argument",
+          "normalized_prediction": "No-Argument",
+          "correct": true
+        },
+        {
+          "id": "ACQUA-train-514",
+          "dataset": "ACQUA",
+          "text": "Is it better to try to sell a distinctly American model like a Ford Mustang or Jeep Wrangler or a more generic model like a Chevrolet Cruze?",
+          "true_label": "No-Argument",
+          "raw_prediction": "Argument",
+          "normalized_prediction": "Argument",
+          "correct": false
+        },
+        {
+          "id": "ACQUA-train-515",
+          "dataset": "ACQUA",
+          "text": "INCLUDES OUR EXCLUSIVE UNLIMITED MILEAGE LIFETIME POWERTRAIN WARRANTY, You won't find a better suv than this great 2014 jeep Wrangler.",
+          "true_label": "No-Argument",
+          "raw_prediction": "No-Argument",
+          "normalized_prediction": "No-Argument",
+          "correct": true
+        }
+      ]
+    },
+    "AEC": {
+      "metrics": {
+        "total_samples": 10,
+        "valid_predictions": 10,
+        "unparseable_predictions": 0,
+        "accuracy": 0.5,
+        "precision": 0.5,
+        "recall": 0.2,
+        "f1_score": 0.2857142857142857
+      },
+      "samples": [
+        {
+          "id": "AEC-train-1",
+          "dataset": "AEC",
+          "text": "So you (presumably) think that the world is a mere six thousand years old, but fifty million years is a \"narrow variable\"?",
+          "true_label": "Argument",
+          "raw_prediction": "No-Argument",
+          "normalized_prediction": "No-Argument",
+          "correct": false
+        },
+        {
+          "id": "AEC-train-2",
+          "dataset": "AEC",
+          "text": "If r^2 were .2, 20% of the change in crime rate would have been predictable due to a certain factor.",
+          "true_label": "Argument",
+          "raw_prediction": "No-Argument",
+          "normalized_prediction": "No-Argument",
+          "correct": false
+        },
+        {
+          "id": "AEC-train-3",
+          "dataset": "AEC",
+          "text": "If your thinking of just taking the away guns in a confiscation.",
+          "true_label": "Argument",
+          "raw_prediction": "No-Argument",
+          "normalized_prediction": "No-Argument",
+          "correct": false
+        },
+        {
+          "id": "AEC-train-4",
+          "dataset": "AEC",
+          "text": "Some people are guilty beyond any doubt.",
+          "true_label": "Argument",
+          "raw_prediction": "Argument",
+          "normalized_prediction": "Argument",
+          "correct": true
+        },
+        {
+          "id": "AEC-train-5",
+          "dataset": "AEC",
+          "text": "If you feel safe and moral with all of this, YOU are free to pay the $200 million your state spends on it annually.",
+          "true_label": "Argument",
+          "raw_prediction": "No-Argument",
+          "normalized_prediction": "No-Argument",
+          "correct": false
+        },
+        {
+          "id": "AEC-train-511",
+          "dataset": "AEC",
+          "text": "Yes, lesbian sex is safter than heterosexual sex.",
+          "true_label": "No-Argument",
+          "raw_prediction": "Argument",
+          "normalized_prediction": "Argument",
+          "correct": false
+        },
+        {
+          "id": "AEC-train-512",
+          "dataset": "AEC",
+          "text": "Prejudice women against gays + big boobs = profit!",
+          "true_label": "No-Argument",
+          "raw_prediction": "No-Argument",
+          "normalized_prediction": "No-Argument",
+          "correct": true
+        },
+        {
+          "id": "AEC-train-513",
+          "dataset": "AEC",
+          "text": "no, but your quote wasnt about gays, it was about gay marriage and how marriage has nothing to do with gay people.",
+          "true_label": "No-Argument",
+          "raw_prediction": "No-Argument",
+          "normalized_prediction": "No-Argument",
+          "correct": true
+        },
+        {
+          "id": "AEC-train-514",
+          "dataset": "AEC",
+          "text": "Back up in Numbers and you'll find that if we touch a woman in her menstrual cycle that we are to sacrifice 2 doves and a lamb.",
+          "true_label": "No-Argument",
+          "raw_prediction": "No-Argument",
+          "normalized_prediction": "No-Argument",
+          "correct": true
+        },
+        {
+          "id": "AEC-train-515",
+          "dataset": "AEC",
+          "text": "That's all they wanted!!",
+          "true_label": "No-Argument",
+          "raw_prediction": "No-Argument",
+          "normalized_prediction": "No-Argument",
+          "correct": true
+        }
+      ]
+    },
+    "AFS": {
+      "metrics": {
+        "total_samples": 10,
+        "valid_predictions": 10,
+        "unparseable_predictions": 0,
+        "accuracy": 0.7,
+        "precision": 0.75,
+        "recall": 0.6,
+        "f1_score": 0.6666666666666666
+      },
+      "samples": [
+        {
+          "id": "AFS-train-1",
+          "dataset": "AFS",
+          "text": "What amazes me is someone could actually believe a constitutional ban on gay marriage is in anyway a contributing factor to divorce rates.",
+          "true_label": "Argument",
+          "raw_prediction": "Argument",
+          "normalized_prediction": "Argument",
+          "correct": true
+        },
+        {
+          "id": "AFS-train-2",
+          "dataset": "AFS",
+          "text": "Those are all the government, if it has gotten as far as the people, and the government (the president, the congress, the supreme court) has decided on gun control, who's going to arrest them for it?",
+          "true_label": "Argument",
+          "raw_prediction": "No-Argument",
+          "normalized_prediction": "No-Argument",
+          "correct": false
+        },
+        {
+          "id": "AFS-train-3",
+          "dataset": "AFS",
+          "text": "Logically, those socialists that wish to destroy property rights, and the legal system that upholds such values, are often the same people who suggest that you relinquish your right to bear arms.",
+          "true_label": "Argument",
+          "raw_prediction": "Argument",
+          "normalized_prediction": "Argument",
+          "correct": true
+        },
+        {
+          "id": "AFS-train-4",
+          "dataset": "AFS",
+          "text": "As I mentioned, I feel that two witnesses to the crime(s) or a confession in court is sufficient.",
+          "true_label": "Argument",
+          "raw_prediction": "Argument",
+          "normalized_prediction": "Argument",
+          "correct": true
+        },
+        {
+          "id": "AFS-train-5",
+          "dataset": "AFS",
+          "text": "My major complaint against the death penalty is that it is quite permanent.",
+          "true_label": "Argument",
+          "raw_prediction": "No-Argument",
+          "normalized_prediction": "No-Argument",
+          "correct": false
+        },
+        {
+          "id": "AFS-train-511",
+          "dataset": "AFS",
+          "text": "The arming of police in the United Kingdom is a perennial topic of debate.",
+          "true_label": "No-Argument",
+          "raw_prediction": "No-Argument",
+          "normalized_prediction": "No-Argument",
+          "correct": true
+        },
+        {
+          "id": "AFS-train-512",
+          "dataset": "AFS",
+          "text": "The tax process, the actual control point, takes about 90-days for the transfer of any class 3 weapon, which documents the seller, the licensed class 3 selling transfer agent, the licensed receiving class 3 transfer agent and the buyer.",
+          "true_label": "No-Argument",
+          "raw_prediction": "No-Argument",
+          "normalized_prediction": "No-Argument",
+          "correct": true
+        },
+        {
+          "id": "AFS-train-513",
+          "dataset": "AFS",
+          "text": "Giles Hattersley finds out why so many young people feel obliged to carry knives.",
+          "true_label": "No-Argument",
+          "raw_prediction": "No-Argument",
+          "normalized_prediction": "No-Argument",
+          "correct": true
+        },
+        {
+          "id": "AFS-train-514",
+          "dataset": "AFS",
+          "text": "The crux of your argument is that since \"you\" do not believe, it can not be.",
+          "true_label": "No-Argument",
+          "raw_prediction": "No-Argument",
+          "normalized_prediction": "No-Argument",
+          "correct": true
+        },
+        {
+          "id": "AFS-train-515",
+          "dataset": "AFS",
+          "text": "You're being a bit silly here--STDs are a direct result of unprotected (and sometimes protected) sex.",
+          "true_label": "No-Argument",
+          "raw_prediction": "Argument",
+          "normalized_prediction": "Argument",
+          "correct": false
+        }
+      ]
+    },
+    "ARGUMINSCI": {
+      "metrics": {
+        "total_samples": 10,
+        "valid_predictions": 10,
+        "unparseable_predictions": 0,
+        "accuracy": 0.7,
+        "precision": 1.0,
+        "recall": 0.4,
+        "f1_score": 0.5714285714285714
+      },
+      "samples": [
+        {
+          "id": "ARGUMINSCI-train-1",
+          "dataset": "ARGUMINSCI",
+          "text": "The four selected fabrics span a large range of possible cloth behaviors.",
+          "true_label": "Argument",
+          "raw_prediction": "No-Argument",
+          "normalized_prediction": "No-Argument",
+          "correct": false
+        },
+        {
+          "id": "ARGUMINSCI-train-2",
+          "dataset": "ARGUMINSCI",
+          "text": "In a nutshell, #12 is isotropic and very compliant in stretch and bending; #4 is also isotropic, very stiff in stretch but compliant in bending; #14 is stiff and quite isotropic in stretch, but extremely anisotropic in bending (with 33/1 stiffness ratio in weft and warp); and #18 is anisotropic both in stretch (with 10/1 stiffness ratio) and in bending (with 13/1 stiffness ratio).",
+          "true_label": "Argument",
+          "raw_prediction": "Argument",
+          "normalized_prediction": "Argument",
+          "correct": true
+        },
+        {
+          "id": "ARGUMINSCI-train-3",
+          "dataset": "ARGUMINSCI",
+          "text": "In addition, the animators often wish to create non-realistic motions that defy the laws of physics, a space where motion capture simply fails to provide any samples.",
+          "true_label": "Argument",
+          "raw_prediction": "No-Argument",
+          "normalized_prediction": "No-Argument",
+          "correct": false
+        },
+        {
+          "id": "ARGUMINSCI-train-4",
+          "dataset": "ARGUMINSCI",
+          "text": "The explicit representation provides our method with several advantages.",
+          "true_label": "Argument",
+          "raw_prediction": "Argument",
+          "normalized_prediction": "Argument",
+          "correct": true
+        },
+        {
+          "id": "ARGUMINSCI-train-5",
+          "dataset": "ARGUMINSCI",
+          "text": "A motion graph is a directed graph where all edges correspond to clips of motion.",
+          "true_label": "Argument",
+          "raw_prediction": "No-Argument",
+          "normalized_prediction": "No-Argument",
+          "correct": false
+        },
+        {
+          "id": "ARGUMINSCI-train-511",
+          "dataset": "ARGUMINSCI",
+          "text": "i , 0) ))",
+          "true_label": "No-Argument",
+          "raw_prediction": "No-Argument",
+          "normalized_prediction": "No-Argument",
+          "correct": true
+        },
+        {
+          "id": "ARGUMINSCI-train-512",
+          "dataset": "ARGUMINSCI",
+          "text": "i O .",
+          "true_label": "No-Argument",
+          "raw_prediction": "No-Argument",
+          "normalized_prediction": "No-Argument",
+          "correct": true
+        },
+        {
+          "id": "ARGUMINSCI-train-513",
+          "dataset": "ARGUMINSCI",
+          "text": "[q T , q  \u0307 T ] T , respectively.",
+          "true_label": "No-Argument",
+          "raw_prediction": "No-Argument",
+          "normalized_prediction": "No-Argument",
+          "correct": true
+        },
+        {
+          "id": "ARGUMINSCI-train-514",
+          "dataset": "ARGUMINSCI",
+          "text": "We can, thus, use SPH-based approaches to approximate the boundary conditions stated in Sections 3.2, 3.3 and 3.4.\n          (a) (b)\n          \n            Figure 5: (a) Boundary particles on a triangle according to the seven point rule.",
+          "true_label": "No-Argument",
+          "raw_prediction": "No-Argument",
+          "normalized_prediction": "No-Argument",
+          "correct": true
+        },
+        {
+          "id": "ARGUMINSCI-train-515",
+          "dataset": "ARGUMINSCI",
+          "text": "H ARLOW , F., AND W ELCH , E. 1965.",
+          "true_label": "No-Argument",
+          "raw_prediction": "No-Argument",
+          "normalized_prediction": "No-Argument",
+          "correct": true
+        }
+      ]
+    },
+    "FINARG": {
+      "metrics": {
+        "total_samples": 10,
+        "valid_predictions": 10,
+        "unparseable_predictions": 0,
+        "accuracy": 0.7,
+        "precision": 1.0,
+        "recall": 0.4,
+        "f1_score": 0.5714285714285714
+      },
+      "samples": [
+        {
+          "id": "FINARG-train-1",
+          "dataset": "FINARG",
+          "text": "So, on Instagram, there are a number of really exciting opportunities.",
+          "true_label": "Argument",
+          "raw_prediction": "No-Argument",
+          "normalized_prediction": "No-Argument",
+          "correct": false
+        },
+        {
+          "id": "FINARG-train-2",
+          "dataset": "FINARG",
+          "text": "And so you can see the iPhone, the Mac, and the App Store adding, and with the iPad in PRC, not in Greater China, but in the PRC, iPad had its best quarter ever, higher than all the others, and also grew in a market that contracted for the overall market.",
+          "true_label": "Argument",
+          "raw_prediction": "Argument",
+          "normalized_prediction": "Argument",
+          "correct": true
+        },
+        {
+          "id": "FINARG-train-3",
+          "dataset": "FINARG",
+          "text": "And I will actually combine these, because really those are fundamental driver that sits underneath this and then we can get to the specifics of end of support.",
+          "true_label": "Argument",
+          "raw_prediction": "No-Argument",
+          "normalized_prediction": "No-Argument",
+          "correct": false
+        },
+        {
+          "id": "FINARG-train-4",
+          "dataset": "FINARG",
+          "text": "And so I'm a big believer that the two countries together can both win and grow the pie, not just allocate it differently.",
+          "true_label": "Argument",
+          "raw_prediction": "Argument",
+          "normalized_prediction": "Argument",
+          "correct": true
+        },
+        {
+          "id": "FINARG-train-5",
+          "dataset": "FINARG",
+          "text": "Where there's significant room left \u2013 and we're not just standing still in terms of adding value for new segments, so those are all in play.",
+          "true_label": "Argument",
+          "raw_prediction": "No-Argument",
+          "normalized_prediction": "No-Argument",
+          "correct": false
+        },
+        {
+          "id": "FINARG-train-511",
+          "dataset": "FINARG",
+          "text": "It's getting better.",
+          "true_label": "No-Argument",
+          "raw_prediction": "No-Argument",
+          "normalized_prediction": "No-Argument",
+          "correct": true
+        },
+        {
+          "id": "FINARG-train-512",
+          "dataset": "FINARG",
+          "text": "EGM in North America grew 32%, which was higher than the revenue growth rate, and also grew 36% internationally.",
+          "true_label": "No-Argument",
+          "raw_prediction": "No-Argument",
+          "normalized_prediction": "No-Argument",
+          "correct": true
+        },
+        {
+          "id": "FINARG-train-513",
+          "dataset": "FINARG",
+          "text": "And as I said, this is going to take multiple quarters to play out.",
+          "true_label": "No-Argument",
+          "raw_prediction": "No-Argument",
+          "normalized_prediction": "No-Argument",
+          "correct": true
+        },
+        {
+          "id": "FINARG-train-514",
+          "dataset": "FINARG",
+          "text": "So, nothing really to note on Q2 or Q3 from that standpoint.",
+          "true_label": "No-Argument",
+          "raw_prediction": "No-Argument",
+          "normalized_prediction": "No-Argument",
+          "correct": true
+        },
+        {
+          "id": "FINARG-train-515",
+          "dataset": "FINARG",
+          "text": "Specifically, we're putting more behind that more quickly than we anticipated, and so that's where you're going to see it come up.",
+          "true_label": "No-Argument",
+          "raw_prediction": "No-Argument",
+          "normalized_prediction": "No-Argument",
+          "correct": true
+        }
+      ]
+    },
+    "IAM": {
+      "metrics": {
+        "total_samples": 10,
+        "valid_predictions": 10,
+        "unparseable_predictions": 0,
+        "accuracy": 0.8,
+        "precision": 0.7142857142857143,
+        "recall": 1.0,
+        "f1_score": 0.8333333333333334
+      },
+      "samples": [
+        {
+          "id": "IAM-train-1",
+          "dataset": "IAM",
+          "text": "It is worrying when parents are told that school-based programmes in other countries have led to an enormous increase in premarital sex, teen promiscuity and teenage pregnancy.",
+          "true_label": "Argument",
+          "raw_prediction": "Argument",
+          "normalized_prediction": "Argument",
+          "correct": true
+        },
+        {
+          "id": "IAM-train-2",
+          "dataset": "IAM",
+          "text": "The research has shown it time and time again: Abstinence-only education doesn't affect the rates at which teenagers decide to have sex.2\ufeff Given that the primary purpose of abstinence-only education is to do exactly that, it is clear that it doesn't work.",
+          "true_label": "Argument",
+          "raw_prediction": "Argument",
+          "normalized_prediction": "Argument",
+          "correct": true
+        },
+        {
+          "id": "IAM-train-3",
+          "dataset": "IAM",
+          "text": "Kids shouldn't be forced to do what they don't wanna, so they shouldn't stay in school forever either.",
+          "true_label": "Argument",
+          "raw_prediction": "Argument",
+          "normalized_prediction": "Argument",
+          "correct": true
+        },
+        {
+          "id": "IAM-train-4",
+          "dataset": "IAM",
+          "text": "Statistical meta-analysis conducted by Tom Stanley in 2005 in contrast found that there is evidence of publication bias in minimum wage literature, and that correction of this bias shows no relationship between the minimum wage and unemployment [ref].",
+          "true_label": "Argument",
+          "raw_prediction": "Argument",
+          "normalized_prediction": "Argument",
+          "correct": true
+        },
+        {
+          "id": "IAM-train-5",
+          "dataset": "IAM",
+          "text": "The purpose of minimum wage laws is to stop employers from exploiting desperate workers.",
+          "true_label": "Argument",
+          "raw_prediction": "Argument",
+          "normalized_prediction": "Argument",
+          "correct": true
+        },
+        {
+          "id": "IAM-train-511",
+          "dataset": "IAM",
+          "text": "Also increasing the number of skilled maths teachers in every maths class, not just senior maths classes, and developing curriculum models that have the capacity to reinforce concepts and remediate any misconceptions will have a significant, positive impact.",
+          "true_label": "No-Argument",
+          "raw_prediction": "Argument",
+          "normalized_prediction": "Argument",
+          "correct": false
+        },
+        {
+          "id": "IAM-train-512",
+          "dataset": "IAM",
+          "text": "When the compensation was reduced to the previous level (DKK 250) again one year later in 2005 there was no effect either.",
+          "true_label": "No-Argument",
+          "raw_prediction": "No-Argument",
+          "normalized_prediction": "No-Argument",
+          "correct": true
+        },
+        {
+          "id": "IAM-train-513",
+          "dataset": "IAM",
+          "text": "Despite many interventions attempting this approach, ample evidence indicates providing more information is often ineffective in changing a vaccine-hesitant person's views and may, in fact, have the opposite of the intended effect and reinforce their misconceptions [ref].",
+          "true_label": "No-Argument",
+          "raw_prediction": "Argument",
+          "normalized_prediction": "Argument",
+          "correct": false
+        },
+        {
+          "id": "IAM-train-514",
+          "dataset": "IAM",
+          "text": "In Europe, for example Belgium's Royal Military Academy, military science remains an academic discipline, and is studied alongside Social Sciences, including such subjects as Humanitarian law.",
+          "true_label": "No-Argument",
+          "raw_prediction": "No-Argument",
+          "normalized_prediction": "No-Argument",
+          "correct": true
+        },
+        {
+          "id": "IAM-train-515",
+          "dataset": "IAM",
+          "text": "Knight classified three types of uncertainty:",
+          "true_label": "No-Argument",
+          "raw_prediction": "No-Argument",
+          "normalized_prediction": "No-Argument",
+          "correct": true
+        }
+      ]
+    },
+    "PE": {
+      "metrics": {
+        "total_samples": 10,
+        "valid_predictions": 10,
+        "unparseable_predictions": 0,
+        "accuracy": 0.6,
+        "precision": 0.6666666666666666,
+        "recall": 0.4,
+        "f1_score": 0.5
+      },
+      "samples": [
+        {
+          "id": "PE-train-1",
+          "dataset": "PE",
+          "text": "Taking all into account, I think that living in the city is much better nowadays, because of the opportunities it gives.",
+          "true_label": "Argument",
+          "raw_prediction": "Argument",
+          "normalized_prediction": "Argument",
+          "correct": true
+        },
+        {
+          "id": "PE-train-2",
+          "dataset": "PE",
+          "text": "Some people say that if humans stop using technology and lead a simple way of life then only we can save the environment.",
+          "true_label": "Argument",
+          "raw_prediction": "No-Argument",
+          "normalized_prediction": "No-Argument",
+          "correct": false
+        },
+        {
+          "id": "PE-train-3",
+          "dataset": "PE",
+          "text": "In conclusion, I personally disagree this this notion that we should replace classroom with online class.",
+          "true_label": "Argument",
+          "raw_prediction": "No-Argument",
+          "normalized_prediction": "No-Argument",
+          "correct": false
+        },
+        {
+          "id": "PE-train-4",
+          "dataset": "PE",
+          "text": "From my perspective, I agree with the view that students can acquire more benefits from the remote education.",
+          "true_label": "Argument",
+          "raw_prediction": "Argument",
+          "normalized_prediction": "Argument",
+          "correct": true
+        },
+        {
+          "id": "PE-train-5",
+          "dataset": "PE",
+          "text": "As a result, information from those sources is subject to question.",
+          "true_label": "Argument",
+          "raw_prediction": "No-Argument",
+          "normalized_prediction": "No-Argument",
+          "correct": false
+        },
+        {
+          "id": "PE-train-511",
+          "dataset": "PE",
+          "text": "In this new environment, parent should find friends coming from their same country so that they can socialize in a very familiar manner as feeling being home.",
+          "true_label": "No-Argument",
+          "raw_prediction": "No-Argument",
+          "normalized_prediction": "No-Argument",
+          "correct": true
+        },
+        {
+          "id": "PE-train-512",
+          "dataset": "PE",
+          "text": "Nowadays, unscrupulous paparazzi constantly follow celebrities just to take a photo while they are eating or training.",
+          "true_label": "No-Argument",
+          "raw_prediction": "Argument",
+          "normalized_prediction": "Argument",
+          "correct": false
+        },
+        {
+          "id": "PE-train-513",
+          "dataset": "PE",
+          "text": "Much information as the Internet may provide, most of the sources are unjustified by experts.",
+          "true_label": "No-Argument",
+          "raw_prediction": "No-Argument",
+          "normalized_prediction": "No-Argument",
+          "correct": true
+        },
+        {
+          "id": "PE-train-514",
+          "dataset": "PE",
+          "text": "Teachers think that students get affected too as they can not clear their doubts in study topics instantly.",
+          "true_label": "No-Argument",
+          "raw_prediction": "No-Argument",
+          "normalized_prediction": "No-Argument",
+          "correct": true
+        },
+        {
+          "id": "PE-train-515",
+          "dataset": "PE",
+          "text": "You are watching football stars play the game with your own eyes and sharing your feelings with about 40,000 people at the stadium, such an excitement you can never have when you are watching it at home.",
+          "true_label": "No-Argument",
+          "raw_prediction": "No-Argument",
+          "normalized_prediction": "No-Argument",
+          "correct": true
+        }
+      ]
+    },
+    "SCIARK": {
+      "metrics": {
+        "total_samples": 10,
+        "valid_predictions": 10,
+        "unparseable_predictions": 0,
+        "accuracy": 0.6,
+        "precision": 0.6666666666666666,
+        "recall": 0.4,
+        "f1_score": 0.5
+      },
+      "samples": [
+        {
+          "id": "SCIARK-train-1",
+          "dataset": "SCIARK",
+          "text": "Conclusion and recommendation: Among all RTAs the leading cause of injuries is Motor cycle traffic accidents followed by motor vehicle.",
+          "true_label": "Argument",
+          "raw_prediction": "No-Argument",
+          "normalized_prediction": "No-Argument",
+          "correct": false
+        },
+        {
+          "id": "SCIARK-train-2",
+          "dataset": "SCIARK",
+          "text": "These improvements, which include both fundamental adaptations to the PVS Pathway methods and the development of new PVS Pathway activities targeting topics such as multisectoral collaboration, rabies and AMR, have further strengthened and embedded the One Health approach within the PVS Pathway.",
+          "true_label": "Argument",
+          "raw_prediction": "No-Argument",
+          "normalized_prediction": "No-Argument",
+          "correct": false
+        },
+        {
+          "id": "SCIARK-train-3",
+          "dataset": "SCIARK",
+          "text": "Copyright \u00a9 2010 John Wiley & Sons, Ltd.",
+          "true_label": "Argument",
+          "raw_prediction": "No-Argument",
+          "normalized_prediction": "No-Argument",
+          "correct": false
+        },
+        {
+          "id": "SCIARK-train-4",
+          "dataset": "SCIARK",
+          "text": "Empirical results suggest strong evidence that the subprime crisis has lowered the level/trend and increased the volatility of crude oil prices.",
+          "true_label": "Argument",
+          "raw_prediction": "Argument",
+          "normalized_prediction": "Argument",
+          "correct": true
+        },
+        {
+          "id": "SCIARK-train-5",
+          "dataset": "SCIARK",
+          "text": "The paper finds that the inter-relationship between policy design and the broader configuration of the political economy in the energy sector are key for understanding dismantling processes.",
+          "true_label": "Argument",
+          "raw_prediction": "Argument",
+          "normalized_prediction": "Argument",
+          "correct": true
+        },
+        {
+          "id": "SCIARK-train-511",
+          "dataset": "SCIARK",
+          "text": "3.64 (95% CI: 3.39-3.89) people died and 105.5 (95% CI: 104.1-106.8) were injured in every 10,000.",
+          "true_label": "No-Argument",
+          "raw_prediction": "No-Argument",
+          "normalized_prediction": "No-Argument",
+          "correct": true
+        },
+        {
+          "id": "SCIARK-train-512",
+          "dataset": "SCIARK",
+          "text": "Forest areas designated for production purposes differ considerably between subregions.",
+          "true_label": "No-Argument",
+          "raw_prediction": "No-Argument",
+          "normalized_prediction": "No-Argument",
+          "correct": true
+        },
+        {
+          "id": "SCIARK-train-513",
+          "dataset": "SCIARK",
+          "text": "In this work, the authors tried to review alternative fuel characteristics, alongside their utilisation and production opportunities.",
+          "true_label": "No-Argument",
+          "raw_prediction": "No-Argument",
+          "normalized_prediction": "No-Argument",
+          "correct": true
+        },
+        {
+          "id": "SCIARK-train-514",
+          "dataset": "SCIARK",
+          "text": "Self-rated health (well-being) and health-related empowerment were measured using a questionnaire.",
+          "true_label": "No-Argument",
+          "raw_prediction": "No-Argument",
+          "normalized_prediction": "No-Argument",
+          "correct": true
+        },
+        {
+          "id": "SCIARK-train-515",
+          "dataset": "SCIARK",
+          "text": "RE reduces  emissions and shows a substantial effect at the 10th quantile.",
+          "true_label": "No-Argument",
+          "raw_prediction": "Argument",
+          "normalized_prediction": "Argument",
+          "correct": false
+        }
+      ]
+    },
+    "USELEC": {
+      "metrics": {
+        "total_samples": 10,
+        "valid_predictions": 10,
+        "unparseable_predictions": 0,
+        "accuracy": 0.8,
+        "precision": 1.0,
+        "recall": 0.6,
+        "f1_score": 0.75
+      },
+      "samples": [
+        {
+          "id": "USELEC-train-1",
+          "dataset": "USELEC",
+          "text": "I do not believe that we, the United States, should sell, give or otherwise transfer military hardware to the People's Republic of China, or any other Communist nation, such as the Soviet Union and the like.",
+          "true_label": "Argument",
+          "raw_prediction": "Argument",
+          "normalized_prediction": "Argument",
+          "correct": true
+        },
+        {
+          "id": "USELEC-train-2",
+          "dataset": "USELEC",
+          "text": "That costs the government $7,700 per family.",
+          "true_label": "Argument",
+          "raw_prediction": "No-Argument",
+          "normalized_prediction": "No-Argument",
+          "correct": false
+        },
+        {
+          "id": "USELEC-train-3",
+          "dataset": "USELEC",
+          "text": "He was wrong.",
+          "true_label": "Argument",
+          "raw_prediction": "No-Argument",
+          "normalized_prediction": "No-Argument",
+          "correct": false
+        },
+        {
+          "id": "USELEC-train-4",
+          "dataset": "USELEC",
+          "text": "I think we should try to raise the fuel efficiency.",
+          "true_label": "Argument",
+          "raw_prediction": "Argument",
+          "normalized_prediction": "Argument",
+          "correct": true
+        },
+        {
+          "id": "USELEC-train-5",
+          "dataset": "USELEC",
+          "text": "Number two, Governor Romney, before he knew the facts, before he even knew that our ambassador was killed, he was out making a political statement which was panned by the media around the world.",
+          "true_label": "Argument",
+          "raw_prediction": "Argument",
+          "normalized_prediction": "Argument",
+          "correct": true
+        },
+        {
+          "id": "USELEC-train-511",
+          "dataset": "USELEC",
+          "text": "(Laughter and applause) But--but--see, let me make it very clear.",
+          "true_label": "No-Argument",
+          "raw_prediction": "No-Argument",
+          "normalized_prediction": "No-Argument",
+          "correct": true
+        },
+        {
+          "id": "USELEC-train-512",
+          "dataset": "USELEC",
+          "text": "Drug use doubled.",
+          "true_label": "No-Argument",
+          "raw_prediction": "No-Argument",
+          "normalized_prediction": "No-Argument",
+          "correct": true
+        },
+        {
+          "id": "USELEC-train-513",
+          "dataset": "USELEC",
+          "text": "The Congress passed uh an enterprise zone after the Los Angeles riots five years ago.",
+          "true_label": "No-Argument",
+          "raw_prediction": "No-Argument",
+          "normalized_prediction": "No-Argument",
+          "correct": true
+        },
+        {
+          "id": "USELEC-train-514",
+          "dataset": "USELEC",
+          "text": "The Soviets say we'll have a meeting when we think there can be progress and yet they left those talks.",
+          "true_label": "No-Argument",
+          "raw_prediction": "No-Argument",
+          "normalized_prediction": "No-Argument",
+          "correct": true
+        },
+        {
+          "id": "USELEC-train-515",
+          "dataset": "USELEC",
+          "text": "Thank you so much.",
+          "true_label": "No-Argument",
+          "raw_prediction": "No-Argument",
+          "normalized_prediction": "No-Argument",
+          "correct": true
+        }
+      ]
+    }
+  }
+}
