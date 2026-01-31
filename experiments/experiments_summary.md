@@ -24,41 +24,17 @@ Feger, Boland, and Dietze (ACL 2025) demonstrated that **state-of-the-art models
 - **Dramatic cross-dataset failure** (mean F1 = 0.56–0.61)
 - **No reliance on linguistic structure**: Removing stop words, function words, and discourse markers caused negligible change (Δ ≤ 0.02)
 
-The paper concludes: *"Decoder-based argument mining may be of interest."* This thesis investigates exactly that.
+The paper concludes: _"Decoder-based argument mining may be of interest."_ This thesis investigates exactly that.
 
 ### Thesis Framework: Diagnose → Measure → Improve
 
 This thesis follows a three-part methodology to answer whether LLMs overcome shortcut learning:
 
-| Part | Research Question | Status |
-|------|-------------------|--------|
-| **Part 1: DIAGNOSE** | Do LLMs rely on shortcuts for argument identification? | 🔄 In Progress |
-| **Part 2: MEASURE** | Do LLMs actually utilize context information (guidelines, documents)? | 🔄 In Progress |
-| **Part 3: IMPROVE** | Can discriminative LLM classification improve generalization? | ⏳ Planned |
-
-### How Current Experiments Map to Thesis Parts
-
-| Experiment | Thesis Part | Purpose |
-|------------|-------------|---------|
-| **1. Zero-Shot Baseline** | Part 1 | Establish LLM baseline before diagnostics |
-| **2. Guideline Enhancement** | Part 2 | Test if LLMs utilize guidelines (context channel G) |
-| **3. Cross-Guideline Transfer** | Part 2 | Test guideline generalization across domains |
-| **4. Shuffle Test** | Part 1 | Novel diagnostic: semantic vs. lexical reliance |
-
-### EDA Findings: No Simple Shortcuts Exist
-
-Exploratory data analysis revealed that common argument markers have **near-zero correlation** with argument labels:
-
-| Marker | Avg. Correlation | Implication |
-|--------|------------------|-------------|
-| "because" | 0.04 | Not predictive |
-| "therefore" | 0.05 | Not predictive |
-| "however" | 0.02 | Not predictive |
-| "argues" | 0.02 | Not predictive |
-
-This confirms that simple lexical shortcuts cannot solve this task—genuine understanding of argumentative structure is required.
-
----
+| Part                 | Research Question                                                     |
+| -------------------- | --------------------------------------------------------------------- |
+| **Part 1: DIAGNOSE** | Do LLMs rely on shortcuts for argument identification?                |
+| **Part 2: MEASURE**  | Do LLMs actually utilize context information (guidelines, documents)? |
+| **Part 3: IMPROVE**  | Can discriminative LLM classification improve generalization?         |
 
 ## Experiment 1: Zero-Shot Classification (Baseline)
 
@@ -66,37 +42,39 @@ This confirms that simple lexical shortcuts cannot solve this task—genuine und
 
 ### Why This Experiment
 
-Before testing whether guidelines help, we need to establish how well LLMs perform **without** any domain-specific guidance. This baseline answers: *"What does a state-of-the-art LLM already know about argumentation?"* If zero-shot performance is high and consistent across datasets, guidelines may be unnecessary. If performance varies significantly, it suggests the model lacks a robust, generalizable concept of "argument."
+Before testing whether guidelines help, we need to establish how well LLMs perform **without** any domain-specific guidance. This baseline answers: _"What does a state-of-the-art LLM already know about argumentation?"_ If zero-shot performance is high and consistent across datasets, guidelines may be unnecessary. If performance varies significantly, it suggests the model lacks a robust, generalizable concept of "argument."
 
 ### Methodology
+
 - Generic zero-shot argument classification without domain-specific guidance
 - Tested 3 models: llama3.1-8b, gemini3-flash, gptoss-20b
 - 10 samples per dataset across all 10 datasets (100 total samples)
 
 ### Results
 
-| Model | Accuracy | Precision | Recall | F1 Score |
-|-------|----------|-----------|--------|----------|
-| llama3.1-8b | **66%** | 0.77 | 0.46 | 0.58 |
-| gemini3-flash | 50% | 0.50 | 0.28 | 0.36 |
-| gptoss-20b | 54% | 0.60 | 0.24 | 0.34 |
+| Model         | Accuracy | Precision | Recall | F1 Score |
+| ------------- | -------- | --------- | ------ | -------- |
+| llama3.1-8b   | **66%**  | 0.77      | 0.46   | 0.58     |
+| gemini3-flash | 50%      | 0.50      | 0.28   | 0.36     |
+| gptoss-20b    | 54%      | 0.60      | 0.24   | 0.34     |
 
 **Per-Dataset Breakdown (llama3.1-8b):**
 
-| Dataset | Accuracy | F1 Score | Domain |
-|---------|----------|----------|--------|
-| IAM | 80% | 0.83 | Debate arguments |
-| USELEC | 80% | 0.75 | Political debates |
-| ABSTRCT | 70% | 0.57 | Medical abstracts |
-| AFS | 70% | 0.67 | Forum discussions |
-| ARGUMINSCI | 70% | 0.57 | Scientific papers |
-| FINARG | 70% | 0.57 | Financial reports |
-| PE | 60% | 0.50 | Student essays |
-| SCIARK | 60% | 0.50 | Scientific abstracts |
-| ACQUA | 50% | 0.29 | Q&A comparisons |
-| AEC | 50% | 0.29 | Online comments |
+| Dataset    | Accuracy | F1 Score | Domain               |
+| ---------- | -------- | -------- | -------------------- |
+| IAM        | 80%      | 0.83     | Debate arguments     |
+| USELEC     | 80%      | 0.75     | Political debates    |
+| ABSTRCT    | 70%      | 0.57     | Medical abstracts    |
+| AFS        | 70%      | 0.67     | Forum discussions    |
+| ARGUMINSCI | 70%      | 0.57     | Scientific papers    |
+| FINARG     | 70%      | 0.57     | Financial reports    |
+| PE         | 60%      | 0.50     | Student essays       |
+| SCIARK     | 60%      | 0.50     | Scientific abstracts |
+| ACQUA      | 50%      | 0.29     | Q&A comparisons      |
+| AEC        | 50%      | 0.29     | Online comments      |
 
 ### Key Insight
+
 Without guidelines, performance varies significantly across datasets (50-80%), suggesting the model lacks consistent understanding of what constitutes an "argument" in different domains.
 
 ---
@@ -110,6 +88,7 @@ Without guidelines, performance varies significantly across datasets (50-80%), s
 This is the **core test of the GAIC hypothesis**: can explicit annotation guidelines improve argument identification? By providing the same instructions human annotators received, we test whether LLMs can leverage declarative task definitions to make better predictions. A significant improvement would validate that guidelines provide useful semantic grounding beyond what the model learns from pretraining.
 
 ### Methodology
+
 - Same classification task, but with dataset-specific annotation guidelines in prompt
 - Only 4 datasets have available guidelines: ABSTRCT, ARGUMINSCI, PE, USELEC
 - 10 samples per dataset (40 total samples)
@@ -117,22 +96,23 @@ This is the **core test of the GAIC hypothesis**: can explicit annotation guidel
 
 ### Results
 
-| Approach | Accuracy | Precision | Recall | F1 Score |
-|----------|----------|-----------|--------|----------|
-| Correct Dataset-Specific Guidelines | **82.5%** | 0.84 | 0.80 | 0.82 |
-| ARGUMINSCI Guideline Only (on all) | 73% | 0.65 | 1.00 | 0.78 |
-| No Guideline (baseline) | 66% | 0.77 | 0.46 | 0.58 |
+| Approach                            | Accuracy  | Precision | Recall | F1 Score |
+| ----------------------------------- | --------- | --------- | ------ | -------- |
+| Correct Dataset-Specific Guidelines | **82.5%** | 0.84      | 0.80   | 0.82     |
+| ARGUMINSCI Guideline Only (on all)  | 73%       | 0.65      | 1.00   | 0.78     |
+| No Guideline (baseline)             | 66%       | 0.77      | 0.46   | 0.58     |
 
 **Per-Dataset Results with Correct Guidelines:**
 
-| Dataset | Accuracy | F1 Score | Improvement vs Baseline |
-|---------|----------|----------|------------------------|
-| ABSTRCT | 90% | 0.89 | +20% |
-| PE | 90% | 0.91 | +30% |
-| ARGUMINSCI | 80% | 0.75 | +10% |
-| USELEC | 70% | 0.73 | -10% |
+| Dataset    | Accuracy | F1 Score | Improvement vs Baseline |
+| ---------- | -------- | -------- | ----------------------- |
+| ABSTRCT    | 90%      | 0.89     | +20%                    |
+| PE         | 90%      | 0.91     | +30%                    |
+| ARGUMINSCI | 80%      | 0.75     | +10%                    |
+| USELEC     | 70%      | 0.73     | -10%                    |
 
 ### Key Insight
+
 Annotation guidelines provide a +16.5% accuracy boost. The model can effectively leverage explicit task definitions to improve classification, demonstrating that **contextual information helps overcome dataset-specific biases**.
 
 ---
@@ -148,7 +128,8 @@ Annotation guidelines provide a +16.5% accuracy boost. The model can effectively
 GAIC provides guidelines only for 4 of 10 datasets. For a robust system, we need to handle datasets **without** native guidelines. This experiment tests **guideline transfer**: can a guideline from one domain help classification in another? This is a key **causal utilization test** from Part 2—if guidelines transfer, the model is learning generalizable argument criteria, not dataset-specific patterns.
 
 ### Methodology
-- Tests which guideline works best for datasets *without* native guidelines
+
+- Tests which guideline works best for datasets _without_ native guidelines
 - Applied 4 available guidelines (ABSTRCT, ARGUMINSCI, PE, USELEC) to 6 datasets without guidelines (ACQUA, AEC, AFS, FINARG, IAM, SCIARK)
 - Creates a 4x6 performance matrix
 
@@ -156,25 +137,26 @@ GAIC provides guidelines only for 4 of 10 datasets. For a robust system, we need
 
 **Guideline Effectiveness Across Datasets:**
 
-| Guideline | Avg Accuracy | Best For | Observations |
-|-----------|--------------|----------|--------------|
-| **ABSTRCT** | **70%** | ACQUA, AFS, FINARG, IAM, SCIARK | Most universal |
-| USELEC | 65% | AFS, SCIARK | Good for debate-style |
-| PE | 65% | AFS, IAM | Works for essays |
-| ARGUMINSCI | 57% | IAM | Too technical |
+| Guideline   | Avg Accuracy | Best For                        | Observations          |
+| ----------- | ------------ | ------------------------------- | --------------------- |
+| **ABSTRCT** | **70%**      | ACQUA, AFS, FINARG, IAM, SCIARK | Most universal        |
+| USELEC      | 65%          | AFS, SCIARK                     | Good for debate-style |
+| PE          | 65%          | AFS, IAM                        | Works for essays      |
+| ARGUMINSCI  | 57%          | IAM                             | Too technical         |
 
 **Best Guideline Per Dataset:**
 
 | Dataset | Best Guideline | Accuracy | F1 Score |
-|---------|----------------|----------|----------|
-| ACQUA | ABSTRCT | 80% | 0.80 |
-| AEC | ABSTRCT (tied) | 50% | 0.67 |
-| AFS | ABSTRCT | 80% | 0.83 |
-| FINARG | ABSTRCT | 50% | 0.44 |
-| IAM | ABSTRCT (tied) | 80% | 0.83 |
-| SCIARK | ABSTRCT | 80% | 0.80 |
+| ------- | -------------- | -------- | -------- |
+| ACQUA   | ABSTRCT        | 80%      | 0.80     |
+| AEC     | ABSTRCT (tied) | 50%      | 0.67     |
+| AFS     | ABSTRCT        | 80%      | 0.83     |
+| FINARG  | ABSTRCT        | 50%      | 0.44     |
+| IAM     | ABSTRCT (tied) | 80%      | 0.83     |
+| SCIARK  | ABSTRCT        | 80%      | 0.80     |
 
 ### Key Insight
+
 The **ABSTRCT guideline emerges as the most universal**, achieving the highest average accuracy (70%) across all tested datasets. This suggests that medical abstract annotation guidelines, which focus on distinguishing claims from evidence, capture fundamental aspects of argumentation applicable across domains.
 
 ---
@@ -192,9 +174,10 @@ This is a **novel diagnostic** not present in Feger et al. The ACL paper removed
 - **If the model relies on bag-of-words shortcuts** (keyword matching), shuffled performance should remain similar
 - **If the model relies on semantic/syntactic understanding**, shuffled performance should drop substantially
 
-This directly tests hypothesis **H1b** from the thesis: *"LLMs will show substantial degradation under word-shuffle, indicating reliance on semantic structure rather than lexical shortcuts."*
+This directly tests hypothesis **H1b** from the thesis: _"LLMs will show substantial degradation under word-shuffle, indicating reliance on semantic structure rather than lexical shortcuts."_
 
 ### Methodology
+
 - Tests whether the model relies on word-level shortcuts or semantic understanding
 - Compares performance on original vs. randomly shuffled sentences
 - If model uses shortcuts (keyword matching), shuffled performance should be similar
@@ -203,37 +186,39 @@ This directly tests hypothesis **H1b** from the thesis: *"LLMs will show substan
 
 ### Results
 
-| Condition | Accuracy | Precision | Recall | F1 Score |
-|-----------|----------|-----------|--------|----------|
-| Baseline (original text) | 68% | 0.65 | 0.80 | 0.71 |
-| Shuffled words | 42% | 0.36 | 0.20 | 0.26 |
-| **Drop** | **-26%** | -0.29 | -0.60 | **-0.45** |
+| Condition                | Accuracy | Precision | Recall | F1 Score  |
+| ------------------------ | -------- | --------- | ------ | --------- |
+| Baseline (original text) | 68%      | 0.65      | 0.80   | 0.71      |
+| Shuffled words           | 42%      | 0.36      | 0.20   | 0.26      |
+| **Drop**                 | **-26%** | -0.29     | -0.60  | **-0.45** |
 
 **Per-Class Analysis:**
 
-| Class | Baseline Acc | Shuffled Acc | Drop |
-|-------|--------------|--------------|------|
-| Argument | 80% | 20% | **-60%** |
-| No-Argument | 56% | 64% | +8% |
+| Class       | Baseline Acc | Shuffled Acc | Drop     |
+| ----------- | ------------ | ------------ | -------- |
+| Argument    | 80%          | 20%          | **-60%** |
+| No-Argument | 56%          | 64%          | +8%      |
 
 **Consistency Analysis:**
+
 - Predictions matched between conditions: 62%
 - Flipped from correct to incorrect: 16 samples
 - Flipped from incorrect to correct: 3 samples
 
 ### Key Insight
+
 The **26% accuracy drop** (and 60% drop for Argument class specifically) provides strong evidence that the model relies on **semantic understanding rather than lexical shortcuts**. The model cannot correctly identify arguments when word order is destroyed, demonstrating genuine language comprehension.
 
 ---
 
 ## Comparative Overview
 
-| Experiment | Accuracy | Key Finding |
-|------------|----------|-------------|
-| 1. Zero-Shot (baseline) | 66% | High variance across datasets |
-| 2. With Guidelines | 82.5% | +16.5% improvement with correct guidelines |
-| 3. Cross-Guideline | 70% (ABSTRCT) | Universal guideline enables generalization |
-| 4. Shuffle Test | 42% (shuffled) | -26% confirms semantic understanding |
+| Experiment              | Accuracy       | Key Finding                                |
+| ----------------------- | -------------- | ------------------------------------------ |
+| 1. Zero-Shot (baseline) | 66%            | High variance across datasets              |
+| 2. With Guidelines      | 82.5%          | +16.5% improvement with correct guidelines |
+| 3. Cross-Guideline      | 70% (ABSTRCT)  | Universal guideline enables generalization |
+| 4. Shuffle Test         | 42% (shuffled) | -26% confirms semantic understanding       |
 
 ---
 
@@ -253,40 +238,42 @@ The **26% accuracy drop** (and 60% drop for Argument class specifically) provide
 
 ### Part 1 (DIAGNOSE) — Remaining Work
 
-| Task | Description | Status |
-|------|-------------|--------|
-| Replication experiments | Remove stop words, function words, discourse markers (following Feger et al.) | ⏳ Planned |
-| Compare to encoder baselines | Measure Δ and compare to BERT/RoBERTa/WRAP from ACL paper | ⏳ Planned |
-| Statistical analysis | Three repetitions, ANOVA, effect sizes | ⏳ Planned |
+| Task                         | Description                                                                   | Status     |
+| ---------------------------- | ----------------------------------------------------------------------------- | ---------- |
+| Replication experiments      | Remove stop words, function words, discourse markers (following Feger et al.) | ⏳ Planned |
+| Compare to encoder baselines | Measure Δ and compare to BERT/RoBERTa/WRAP from ACL paper                     | ⏳ Planned |
+| Statistical analysis         | Three repetitions, ANOVA, effect sizes                                        | ⏳ Planned |
 
 **Hypothesis to test:** H1a — LLMs will show larger Δ under manipulation than encoders (Δ > 0.05)
 
 ### Part 2 (MEASURE) — Remaining Work
 
-| Task | Description | Status |
-|------|-------------|--------|
-| ContextPack implementation | Standardized format: `[GUIDELINES] + [DOCUMENT CONTEXT] + [SENTENCE]` | ⏳ Planned |
-| Document context channel (D) | Add ±k sentences around target sentence | ⏳ Planned |
-| Paper context channel (P) | Add paper abstract/snippet | ⏳ Planned |
-| Channel ablation tests | Remove each channel and measure Δ | ⏳ Planned |
-| Swap tests | Replace guideline with wrong dataset's guideline | ⏳ Planned |
-| Full context evaluation | Compare S vs S+G vs S+D vs S+P+D+G | ⏳ Planned |
+| Task                         | Description                                                           | Status     |
+| ---------------------------- | --------------------------------------------------------------------- | ---------- |
+| ContextPack implementation   | Standardized format: `[GUIDELINES] + [DOCUMENT CONTEXT] + [SENTENCE]` | ⏳ Planned |
+| Document context channel (D) | Add ±k sentences around target sentence                               | ⏳ Planned |
+| Paper context channel (P)    | Add paper abstract/snippet                                            | ⏳ Planned |
+| Channel ablation tests       | Remove each channel and measure Δ                                     | ⏳ Planned |
+| Swap tests                   | Replace guideline with wrong dataset's guideline                      | ⏳ Planned |
+| Full context evaluation      | Compare S vs S+G vs S+D vs S+P+D+G                                    | ⏳ Planned |
 
 **Hypotheses to test:**
+
 - H2a — Full context outperforms sentence-only
 - H2b — Ablation/swap tests show significant effects (causal dependence)
 
 ### Part 3 (IMPROVE) — Planned
 
-| Task | Description | Status |
-|------|-------------|--------|
+| Task                      | Description                                          | Status     |
+| ------------------------- | ---------------------------------------------------- | ---------- |
 | Discriminative classifier | Classification head on LLM last token representation | ⏳ Planned |
-| Head-only training | Freeze backbone, train only classification head | ⏳ Planned |
-| Head + LoRA | Add LoRA adapters for lightweight fine-tuning | ⏳ Planned |
-| LODO evaluation | Leave-One-Dataset-Out cross-validation | ⏳ Planned |
-| GAIC submission | Final system for shared task | ⏳ Planned |
+| Head-only training        | Freeze backbone, train only classification head      | ⏳ Planned |
+| Head + LoRA               | Add LoRA adapters for lightweight fine-tuning        | ⏳ Planned |
+| LODO evaluation           | Leave-One-Dataset-Out cross-validation               | ⏳ Planned |
+| GAIC submission           | Final system for shared task                         | ⏳ Planned |
 
 **Hypotheses to test:**
+
 - H3a — Discriminative LLM outperforms prompted LLM on transfer
 - H3b — Discriminative classifier shows cleaner context utilization signals
 - H3c — Head + LoRA outperforms head-only (with diminishing returns)
@@ -305,5 +292,5 @@ The **26% accuracy drop** (and 60% drop for Argument class specifically) provide
 
 ## References
 
-- Feger, M., Boland, K., & Dietze, S. (2025). Limited generalizability in argument mining: State-of-the-art models learn datasets, not arguments. *Proceedings of ACL 2025*, 23900–23915.
-- GAIC Shared Task. (2026). Generalizable Argument Identification in Context. *Touché @ CLEF 2026*.
+- Feger, M., Boland, K., & Dietze, S. (2025). Limited generalizability in argument mining: State-of-the-art models learn datasets, not arguments. _Proceedings of ACL 2025_, 23900–23915.
+- GAIC Shared Task. (2026). Generalizable Argument Identification in Context. _Touché @ CLEF 2026_.
