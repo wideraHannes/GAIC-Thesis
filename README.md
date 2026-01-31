@@ -1,24 +1,39 @@
-# GAIC Thesis
+# Beyond Shortcuts: Can LLMs Generalize Arguments in Context?
 
-Codebase for the master thesis **"Beyond Shortcuts: Can Large Language Models Generalize Arguments in Context?"** at Heinrich Heine University Düsseldorf. This work participates in the [Touché @ CLEF 2026 Shared Task: Generalizability of Argument Identification in Context (GAIC)](https://touche.webis.de/clef26/touche26-web/generalizable-argument-mining.html). The goal is to investigate whether decoder-based LLMs can overcome the shortcut learning problem identified in encoder models (Feger et al., 2025) and develop robust argument identification systems that generalize across datasets. The experiments explore zero-shot classification, dataset-specific annotation guidelines, and cross-dataset transfer evaluation.
+**Master's Thesis** | Heinrich Heine University Düsseldorf | [Touché @ CLEF 2026 GAIC](https://touche.webis.de/clef26/touche26-web/generalizable-argument-mining.html)
 
-## Run Experiments
+Investigating whether decoder-based LLMs overcome shortcut learning in argument identification, building on [Feger et al. (ACL 2025)](https://aclanthology.org/2025.acl-long.1280/).
 
-Zero-shot classification (generic prompt):
+## Thesis Methodology
 
-```bash
-uv run python gaic/zero_shot.py
+| Part            | Question                                                  |
+| --------------- | --------------------------------------------------------- |
+| **1. Diagnose** | Do LLMs rely on shortcuts?                                |
+| **2. Measure**  | Do LLMs utilize context (guidelines, documents)?          |
+| **3. Improve**  | Can discriminative classification improve generalization? |
+
+## Quick Links
+
+- **[Experiments Summary](experiments/experiments_summary.md)** — Results and analysis
+- **[Dataset Overview](experiments/dataset_overview.md)** — 10 benchmark datasets
+
+## Experiments
+
+| Experiment | Command | Thesis Part | Purpose |
+|------------|---------|-------------|---------|
+| Zero-Shot Baseline | `uv run python gaic/zero_shot.py` | Part 1 | Establish LLM baseline without guidance |
+| With Guidelines | `uv run python gaic/zero_shot_with_guidelines.py` | Part 2 | Test if annotation guidelines improve accuracy |
+| Cross-Guideline | `uv run python gaic/cross_guideline_experiment.py` | Part 2 | Test guideline transfer to datasets without native guidelines |
+| Shuffle Test | `uv run python gaic/shuffle_experiment.py` | Part 1 | Detect shortcut learning via word-order destruction |
+
+Requires: Python 3.13+, local LLM at `localhost:11434` (Ollama)
+
+## Project Structure
+
 ```
-
-Zero-shot with dataset-specific guidelines:
-
-```bash
-uv run python gaic/zero_shot_with_guidelines.py
+gaic/           # Source code
+experiments/    # Results and analysis notebooks
+config/         # Path configuration
+data/           # GAIC-2026 dataset (not tracked)
+docs/           # Thesis documents
 ```
-
-Results are saved to `experiments/zero_shot_outputs/`.
-
-## Configuration
-
-- Edit `SAMPLE_SIZE_PER_DATASET` in the scripts to adjust sample size
-- Requires a local LLM server (e.g., Ollama) at `http://localhost:11434/v1`
