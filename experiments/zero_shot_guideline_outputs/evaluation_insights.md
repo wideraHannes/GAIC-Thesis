@@ -12,3 +12,9 @@ As expected in latter we found way better results - motivating further investiga
 | Correct Dataset-Specific Guidelines | 0.85     | 0.77      | 1.00   | 0.87     |
 
 **Sample Size:** 40 total samples (10 per dataset across 4 datasets with guidelines)
+
+Complete Experiment:
+
+We see the Guideline has an direct effect on the accuracy
+
+![alt text](../guideline_accuracy.png)
