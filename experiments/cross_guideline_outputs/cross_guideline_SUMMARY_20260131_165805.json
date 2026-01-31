@@ -1,0 +1,303 @@
+{
+  "timestamp": "2026-01-31T17:26:23.462645",
+  "model": "llama3.1:8b",
+  "sample_size_per_dataset": 10,
+  "datasets_tested": [
+    "ACQUA",
+    "AEC",
+    "AFS",
+    "FINARG",
+    "IAM",
+    "SCIARK"
+  ],
+  "guideline_sources": [
+    "ABSTRCT",
+    "ARGUMINSCI",
+    "PE",
+    "USELEC"
+  ],
+  "matrix_4x6": {
+    "ABSTRCT": {
+      "ACQUA": {
+        "accuracy": 0.8,
+        "f1_score": 0.8
+      },
+      "AEC": {
+        "accuracy": 0.5,
+        "f1_score": 0.6666666666666666
+      },
+      "AFS": {
+        "accuracy": 0.8,
+        "f1_score": 0.8333333333333334
+      },
+      "FINARG": {
+        "accuracy": 0.5,
+        "f1_score": 0.4444444444444444
+      },
+      "IAM": {
+        "accuracy": 0.8,
+        "f1_score": 0.8333333333333334
+      },
+      "SCIARK": {
+        "accuracy": 0.8,
+        "f1_score": 0.8
+      }
+    },
+    "ARGUMINSCI": {
+      "ACQUA": {
+        "accuracy": 0.5,
+        "f1_score": 0.5454545454545454
+      },
+      "AEC": {
+        "accuracy": 0.5,
+        "f1_score": 0.6666666666666666
+      },
+      "AFS": {
+        "accuracy": 0.5,
+        "f1_score": 0.6666666666666666
+      },
+      "FINARG": {
+        "accuracy": 0.4,
+        "f1_score": 0.5
+      },
+      "IAM": {
+        "accuracy": 0.8,
+        "f1_score": 0.8333333333333334
+      },
+      "SCIARK": {
+        "accuracy": 0.7,
+        "f1_score": 0.7272727272727273
+      }
+    },
+    "PE": {
+      "ACQUA": {
+        "accuracy": 0.6,
+        "f1_score": 0.5
+      },
+      "AEC": {
+        "accuracy": 0.5,
+        "f1_score": 0.6153846153846154
+      },
+      "AFS": {
+        "accuracy": 0.8,
+        "f1_score": 0.8333333333333334
+      },
+      "FINARG": {
+        "accuracy": 0.5,
+        "f1_score": 0.4444444444444444
+      },
+      "IAM": {
+        "accuracy": 0.8,
+        "f1_score": 0.8333333333333334
+      },
+      "SCIARK": {
+        "accuracy": 0.7,
+        "f1_score": 0.5714285714285714
+      }
+    },
+    "USELEC": {
+      "ACQUA": {
+        "accuracy": 0.5,
+        "f1_score": 0.5454545454545454
+      },
+      "AEC": {
+        "accuracy": 0.5,
+        "f1_score": 0.6153846153846154
+      },
+      "AFS": {
+        "accuracy": 0.8,
+        "f1_score": 0.8333333333333334
+      },
+      "FINARG": {
+        "accuracy": 0.5,
+        "f1_score": 0.4444444444444444
+      },
+      "IAM": {
+        "accuracy": 0.8,
+        "f1_score": 0.8333333333333334
+      },
+      "SCIARK": {
+        "accuracy": 0.8,
+        "f1_score": 0.8
+      }
+    }
+  },
+  "best_guideline_per_dataset": {
+    "ACQUA": {
+      "best_guideline": "ABSTRCT",
+      "accuracy": 0.8,
+      "f1_score": 0.8,
+      "all_results": {
+        "ABSTRCT": {
+          "accuracy": 0.8,
+          "f1_score": 0.8
+        },
+        "ARGUMINSCI": {
+          "accuracy": 0.5,
+          "f1_score": 0.5454545454545454
+        },
+        "PE": {
+          "accuracy": 0.6,
+          "f1_score": 0.5
+        },
+        "USELEC": {
+          "accuracy": 0.5,
+          "f1_score": 0.5454545454545454
+        }
+      }
+    },
+    "AEC": {
+      "best_guideline": "ABSTRCT",
+      "accuracy": 0.5,
+      "f1_score": 0.6666666666666666,
+      "all_results": {
+        "ABSTRCT": {
+          "accuracy": 0.5,
+          "f1_score": 0.6666666666666666
+        },
+        "ARGUMINSCI": {
+          "accuracy": 0.5,
+          "f1_score": 0.6666666666666666
+        },
+        "PE": {
+          "accuracy": 0.5,
+          "f1_score": 0.6153846153846154
+        },
+        "USELEC": {
+          "accuracy": 0.5,
+          "f1_score": 0.6153846153846154
+        }
+      }
+    },
+    "AFS": {
+      "best_guideline": "ABSTRCT",
+      "accuracy": 0.8,
+      "f1_score": 0.8333333333333334,
+      "all_results": {
+        "ABSTRCT": {
+          "accuracy": 0.8,
+          "f1_score": 0.8333333333333334
+        },
+        "ARGUMINSCI": {
+          "accuracy": 0.5,
+          "f1_score": 0.6666666666666666
+        },
+        "PE": {
+          "accuracy": 0.8,
+          "f1_score": 0.8333333333333334
+        },
+        "USELEC": {
+          "accuracy": 0.8,
+          "f1_score": 0.8333333333333334
+        }
+      }
+    },
+    "FINARG": {
+      "best_guideline": "ABSTRCT",
+      "accuracy": 0.5,
+      "f1_score": 0.4444444444444444,
+      "all_results": {
+        "ABSTRCT": {
+          "accuracy": 0.5,
+          "f1_score": 0.4444444444444444
+        },
+        "ARGUMINSCI": {
+          "accuracy": 0.4,
+          "f1_score": 0.5
+        },
+        "PE": {
+          "accuracy": 0.5,
+          "f1_score": 0.4444444444444444
+        },
+        "USELEC": {
+          "accuracy": 0.5,
+          "f1_score": 0.4444444444444444
+        }
+      }
+    },
+    "IAM": {
+      "best_guideline": "ABSTRCT",
+      "accuracy": 0.8,
+      "f1_score": 0.8333333333333334,
+      "all_results": {
+        "ABSTRCT": {
+          "accuracy": 0.8,
+          "f1_score": 0.8333333333333334
+        },
+        "ARGUMINSCI": {
+          "accuracy": 0.8,
+          "f1_score": 0.8333333333333334
+        },
+        "PE": {
+          "accuracy": 0.8,
+          "f1_score": 0.8333333333333334
+        },
+        "USELEC": {
+          "accuracy": 0.8,
+          "f1_score": 0.8333333333333334
+        }
+      }
+    },
+    "SCIARK": {
+      "best_guideline": "ABSTRCT",
+      "accuracy": 0.8,
+      "f1_score": 0.8,
+      "all_results": {
+        "ABSTRCT": {
+          "accuracy": 0.8,
+          "f1_score": 0.8
+        },
+        "ARGUMINSCI": {
+          "accuracy": 0.7,
+          "f1_score": 0.7272727272727273
+        },
+        "PE": {
+          "accuracy": 0.7,
+          "f1_score": 0.5714285714285714
+        },
+        "USELEC": {
+          "accuracy": 0.8,
+          "f1_score": 0.8
+        }
+      }
+    }
+  },
+  "overall_by_guideline": {
+    "ABSTRCT": {
+      "total_samples": 60,
+      "valid_predictions": 60,
+      "unparseable_predictions": 0,
+      "accuracy": 0.7,
+      "precision": 0.6578947368421053,
+      "recall": 0.8333333333333334,
+      "f1_score": 0.7352941176470589
+    },
+    "ARGUMINSCI": {
+      "total_samples": 60,
+      "valid_predictions": 60,
+      "unparseable_predictions": 0,
+      "accuracy": 0.5666666666666667,
+      "precision": 0.5434782608695652,
+      "recall": 0.8333333333333334,
+      "f1_score": 0.6578947368421053
+    },
+    "PE": {
+      "total_samples": 60,
+      "valid_predictions": 60,
+      "unparseable_predictions": 0,
+      "accuracy": 0.65,
+      "precision": 0.6451612903225806,
+      "recall": 0.6666666666666666,
+      "f1_score": 0.6557377049180327
+    },
+    "USELEC": {
+      "total_samples": 60,
+      "valid_predictions": 60,
+      "unparseable_predictions": 0,
+      "accuracy": 0.65,
+      "precision": 0.6216216216216216,
+      "recall": 0.7666666666666667,
+      "f1_score": 0.6865671641791045
+    }
+  }
+}
