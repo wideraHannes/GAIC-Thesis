@@ -1,4 +1,5 @@
 import json
+import time
 from datetime import datetime
 from pathlib import Path
 from openai import OpenAI
@@ -8,7 +9,8 @@ from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_sc
 
 DATA_DIR = Path(__file__).parent.parent / "data" / "GAIC-2026" / "data"
 OUTPUT_DIR = Path(__file__).parent.parent / "experiments" / "zero_shot_outputs"
-SAMPLE_SIZE_PER_DATASET = 10  # Number of samples per dataset (balanced)
+SAMPLE_SIZE_PER_DATASET = 20  # Number of samples per dataset (balanced)
+MODEL = "llama3.1:8b"
 
 DATASETS = [
     "ABSTRCT",
@@ -49,18 +51,14 @@ def get_dataset_from_id(id_: str) -> str:
 
 def classify_zero_shot(client, text: str) -> str:
     """Classify a single text using zero-shot prompting."""
-    response = client.chat.completions.create(
-        model="gpt-oss:20b",
-        messages=[
-            {
-                "role": "system",
-                "content": "You are a text classifier. Decide if the following text contains an argument or not. An argument is a claim supported by reasoning or evidence. Return ONLY the label, nothing else: 'Argument' or 'No-Argument'",
-            },
-            {"role": "user", "content": text},
-        ],
+    response = client.responses.create(
+        model=MODEL,
+        instructions="You are a text classifier. Decide if the following text contains an argument or not. An argument is a claim supported by reasoning or evidence. Return ONLY the label, nothing else: 'Argument' or 'No-Argument'",
+        input=text,
         temperature=0,
+        max_output_tokens=5,
     )
-    return response.choices[0].message.content.strip()
+    return response.output_text.strip()
 
 
 def normalize_label(pred: str) -> str:
@@ -138,6 +136,7 @@ def main():
 
     all_results = {}
     all_samples = []
+    inference_times = []
 
     for dataset in tqdm(DATASETS, desc="Datasets"):
         dataset_ids = ids_by_dataset[dataset]
@@ -153,11 +152,13 @@ def main():
 
         dataset_results = []
 
-        for id_ in sample_ids:
+        for id_ in tqdm(sample_ids, desc=f"  {dataset}", leave=False):
             text = texts[id_]
             true_label = labels[id_]
 
+            start_time = time.time()
             raw_pred = classify_zero_shot(client, text)
+            inference_times.append(time.time() - start_time)
             normalized = normalize_label(raw_pred)
 
             result = {
@@ -177,6 +178,9 @@ def main():
             "metrics": metrics,
             "samples": dataset_results,
         }
+        print(
+            f"\n{dataset}: Acc={metrics['accuracy']:.2%} | P={metrics['precision']:.2%} | R={metrics['recall']:.2%} | F1={metrics['f1_score']:.2%}"
+        )
 
     # Compute overall metrics
     overall_metrics = compute_metrics(all_samples)
@@ -185,8 +189,9 @@ def main():
     output = {
         "summary": {
             "timestamp": datetime.now().isoformat(),
-            "model": "llama3.1:8b",
+            "model": MODEL,
             "sample_size_per_dataset": SAMPLE_SIZE_PER_DATASET,
+            "avg_inference_time_seconds": sum(inference_times) / len(inference_times),
             "overall": overall_metrics,
             "by_dataset": {ds: all_results[ds]["metrics"] for ds in DATASETS},
             "ranking": sorted(
