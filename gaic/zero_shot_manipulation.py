@@ -199,14 +199,14 @@ def main():
             all_samples.append(result)
 
         # Compute metrics for this dataset
-        original_acc = compute_accuracy(dataset_results, "original_prediction")
-        manipulated_acc = compute_accuracy(dataset_results, "manipulated_prediction")
-        delta = original_acc - manipulated_acc
+        original_f1 = compute_f1(dataset_results, "original_prediction")
+        manipulated_f1 = compute_f1(dataset_results, "manipulated_prediction")
+        delta = original_f1 - manipulated_f1
 
         all_results[dataset] = {
             "metrics": {
-                "original_accuracy": original_acc,
-                "manipulated_accuracy": manipulated_acc,
+                "original_f1": original_f1,
+                "manipulated_f1": manipulated_f1,
                 "delta": delta,
                 "total_samples": len(dataset_results),
             },
@@ -214,28 +214,28 @@ def main():
         }
 
         print(
-            f"\n{dataset}: Orig={original_acc:.2%} | Manip={manipulated_acc:.2%} | Delta={delta:+.2%}"
+            f"\n{dataset}: Orig F1={original_f1:.2%} | Manip F1={manipulated_f1:.2%} | Delta={delta:+.2%}"
         )
 
     # Compute overall metrics
-    overall_original_acc = compute_accuracy(all_samples, "original_prediction")
-    overall_manipulated_acc = compute_accuracy(all_samples, "manipulated_prediction")
-    overall_delta = overall_original_acc - overall_manipulated_acc
+    overall_original_f1 = compute_f1(all_samples, "original_prediction")
+    overall_manipulated_f1 = compute_f1(all_samples, "manipulated_prediction")
+    overall_delta = overall_original_f1 - overall_manipulated_f1
 
     print("\n" + "=" * 70)
     print("OVERALL RESULTS")
     print("=" * 70)
-    print(f"Original Accuracy:    {overall_original_acc:.2%}")
-    print(f"Manipulated Accuracy: {overall_manipulated_acc:.2%}")
+    print(f"Original F1:    {overall_original_f1:.2%}")
+    print(f"Manipulated F1: {overall_manipulated_f1:.2%}")
     print(f"Delta (Orig - Manip): {overall_delta:+.2%}")
     print("=" * 70)
 
     if overall_delta > 0.1:
-        print("⚠️  Significant accuracy drop suggests reliance on lexical shortcuts")
+        print("Significant F1 drop suggests reliance on lexical shortcuts")
     elif overall_delta < -0.05:
-        print("📈 Accuracy improved with manipulation (unexpected)")
+        print("F1 improved with manipulation (unexpected)")
     else:
-        print("✓  Relatively stable accuracy suggests robust understanding")
+        print("Relatively stable F1 suggests robust understanding")
 
     # Build output JSON
     output = {
@@ -247,8 +247,8 @@ def main():
             if inference_times
             else 0,
             "overall": {
-                "original_accuracy": overall_original_acc,
-                "manipulated_accuracy": overall_manipulated_acc,
+                "original_f1": overall_original_f1,
+                "manipulated_f1": overall_manipulated_f1,
                 "delta": overall_delta,
                 "total_samples": len(all_samples),
             },
