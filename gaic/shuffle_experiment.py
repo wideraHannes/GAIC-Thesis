@@ -23,7 +23,7 @@ DATA_DIR = Path(__file__).parent.parent / "data" / "GAIC-2026" / "data"
 OUTPUT_DIR = Path(__file__).parent.parent / "experiments" / "shuffle_outputs"
 
 DATASET = "ABSTRCT"
-SAMPLE_SIZE = 50  # Larger sample for statistical significance
+SAMPLE_SIZE = 100  # Larger sample for statistical significance
 MODEL = "llama3.1:8b"
 
 
