@@ -24,21 +24,24 @@ DATA_DIR = Path(__file__).parent.parent / "data" / "GAIC-2026" / "data"
 OUTPUT_DIR = (
     Path(__file__).parent.parent / "experiments" / "zero_shot_manipulation_outputs"
 )
-SAMPLE_SIZE_PER_DATASET = 10  # Number of samples per dataset (balanced)
+SAMPLE_SIZE_PER_DATASET = 100  # Number of samples per dataset (balanced)
 MODEL = "llama3.1:8b"
 
 DATASETS = [
     "ABSTRCT",
-    "ACQUA",
-    "AEC",
-    "AFS",
-    "ARGUMINSCI",
-    "FINARG",
-    "IAM",
-    "PE",
-    "SCIARK",
-    "USELEC",
 ]
+
+"""    
+
+"ACQUA",
+"AEC",
+"AFS",
+"ARGUMINSCI",
+"FINARG",
+"IAM",
+"PE",
+"SCIARK",
+"USELEC", """
 
 
 def load_data():
@@ -122,7 +125,9 @@ def compute_f1(results: list, prediction_key: str) -> float:
     y_true_valid = [y_true[i] for i in valid_indices]
     y_pred_valid = [y_pred[i] for i in valid_indices]
 
-    return float(f1_score(y_true_valid, y_pred_valid, pos_label="Argument", zero_division=0))
+    return float(
+        f1_score(y_true_valid, y_pred_valid, pos_label="Argument", zero_division=0)
+    )
 
 
 def main():
@@ -266,7 +271,7 @@ def main():
     OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
     output_file = (
         OUTPUT_DIR
-        / f"manipulation_{datetime.now().strftime('%Y%m%d_%H%M%S')}_{MODEL.replace(':', '_')}.json"
+        / f"manipulation_{datetime.now().strftime('%Y%m%d_%H%M%S')}_{MODEL.replace(':', '_')}_onlyABSTRACT.json"
     )
     with open(output_file, "w") as f:
         json.dump(output, f, indent=2)
