@@ -166,6 +166,8 @@ def compute_metrics(sample_results: list) -> dict:
         "f1_score": f1_score(
             y_true_valid, y_pred_valid, pos_label="Argument", zero_division=0
         ),
+        # todo classification_report
+        # https://scikit-learn.org/stable/modules/generated/sklearn.metrics.classification_report.html
     }
 
 
