@@ -217,19 +217,21 @@ def run(config: dict):
         results["datasets"][dataset] = {
             "n_samples": len(y_true),
             "reports": reports,
-            "f1_original": round(f1_original, 4),
-            "f1_feger": round(reports["feger"]["macro avg"]["f1-score"], 4),
-            "f1_shuffle": round(reports["shuffle"]["macro avg"]["f1-score"], 4),
+            "macro_f1_original": round(f1_original, 4),
+            "macro_f1_feger": round(reports["feger"]["macro avg"]["f1-score"], 4),
+            "macro_f1_shuffle": round(reports["shuffle"]["macro avg"]["f1-score"], 4),
             **deltas,
             "samples": sample_records,
         }
 
-        logger.info(f"F1 original: {results['datasets'][dataset]['f1_original']:.4f}")
         logger.info(
-            f"F1 feger:    {results['datasets'][dataset]['f1_feger']:.4f}  (delta: {deltas['delta_feger']:+.4f})"
+            f"Macro-F1 original: {results['datasets'][dataset]['macro_f1_original']:.4f}"
         )
         logger.info(
-            f"F1 shuffle:  {results['datasets'][dataset]['f1_shuffle']:.4f}  (delta: {deltas['delta_shuffle']:+.4f})"
+            f"Macro-F1 feger:    {results['datasets'][dataset]['macro_f1_feger']:.4f}  (delta: {deltas['delta_feger']:+.4f})"
+        )
+        logger.info(
+            f"Macro-F1 shuffle:  {results['datasets'][dataset]['macro_f1_shuffle']:.4f}  (delta: {deltas['delta_shuffle']:+.4f})"
         )
 
     # overall summary
@@ -237,11 +239,15 @@ def run(config: dict):
     n = len(ds)
     if n:
         results["overall"] = {
-            "mean_f1_original": round(
-                sum(d["f1_original"] for d in ds.values()) / n, 4
+            "mean_macro_f1_original": round(
+                sum(d["macro_f1_original"] for d in ds.values()) / n, 4
             ),
-            "mean_f1_feger": round(sum(d["f1_feger"] for d in ds.values()) / n, 4),
-            "mean_f1_shuffle": round(sum(d["f1_shuffle"] for d in ds.values()) / n, 4),
+            "mean_macro_f1_feger": round(
+                sum(d["macro_f1_feger"] for d in ds.values()) / n, 4
+            ),
+            "mean_macro_f1_shuffle": round(
+                sum(d["macro_f1_shuffle"] for d in ds.values()) / n, 4
+            ),
             "mean_delta_feger": round(
                 sum(d["delta_feger"] for d in ds.values()) / n, 4
             ),
