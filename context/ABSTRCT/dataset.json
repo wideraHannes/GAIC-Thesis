@@ -1,0 +1,23 @@
+{
+  "dataset": "ABSTRCT",
+  "extracted_at": "2026-02-08T18:09:19.677102+00:00",
+  "model": "@azure-openai-foundry/gpt-5.2-chat",
+  "definition": "An argument is a textual component that contributes to evidence-based reasoning by either stating a conclusion about a study\u2019s outcome or providing observations that justify or challenge such conclusions. It consists of claims and evidence: a claim is an author\u2019s concluding statement about the effectiveness, comparison, or outcome of an intervention, derived from the study\u2019s results, while evidence is an observed fact or measurement from the study, such as outcomes, side effects, or statistical results, that can support or undermine another component. Claims may be general or specific and can appear anywhere in the text, not only at the end, and more general claims can be supported by more specific ones. Evidence is treated as credible observations that do not require further justification within the text because they report measured results. An argument is defined not in isolation but through its potential to stand in a support or attack relation with another component. Text that merely provides background information, describes study design or procedures without reporting results, introduces a topic without connecting to study outcomes, or states problems or limitations unconnected to the study\u2019s findings is not considered an argument. Similarly, purely descriptive context or introductory material that does not assert a conclusion or report an observation relevant to supporting or attacking a conclusion is not an argument.",
+  "guideline": "A sentence should be labeled as an Argument if it plays a role in the study\u2019s reasoning by making a claim or providing evidence for or against a claim. Claims are author interpretations or conclusions, such as general statements comparing treatments, asserting effectiveness, safety, non-inferiority, or suggesting clinical implications; for example, a sentence stating that a treatment was more effective than another or that results support its use counts as an argument. Premises are also arguments and consist of factual observations or measurements from the study, including numerical outcomes, statistical results, side effects, or even explicitly negative findings (e.g., no significant difference), because they serve as evidence. Typical signals of claims include phrases like \u201cthese results suggest,\u201d \u201caccording to the results,\u201d or broad comparative or evaluative language rather than raw data. In contrast, a sentence should be labeled No-Argument if it merely describes background information, study aims, methods, definitions, trial design, patient characteristics, procedural details, or terminology without asserting or supporting a conclusion. Purely underspecified or vague statements that do not clearly assert a general conclusion (such as noting that fewer side effects occurred without interpretation) are also not arguments. Overall, the key distinction is whether the sentence contributes to justifying, attacking, or concluding a standpoint, as opposed to simply reporting context or setup.",
+  "document_context": {
+    "available": true,
+    "strategy": "2 preceding sentences",
+    "preceding_sentences": 2
+  },
+  "sources": {
+    "paper_pdf": "data/GAIC-2026/data/ABSTRCT/paper/ABSTRCT.pdf",
+    "paper_text_chars": 54785,
+    "guidelines_pdf": "data/GAIC-2026/data/ABSTRCT/guidelines/ABSTRCT-Guidelines.pdf",
+    "guidelines_text_chars": 52907
+  },
+  "capabilities": {
+    "has_definition": true,
+    "has_guidelines": true,
+    "has_document_context": true
+  }
+}

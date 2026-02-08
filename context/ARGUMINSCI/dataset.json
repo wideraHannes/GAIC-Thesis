@@ -1,0 +1,23 @@
+{
+  "dataset": "ARGUMINSCI",
+  "extracted_at": "2026-02-08T18:09:53.475087+00:00",
+  "model": "@azure-openai-foundry/gpt-5.2-chat",
+  "definition": "An argument consists of explicit argumentative components that advance or evaluate propositions in scientific writing, namely claims and data. Claims are statements that assert something as true, either about the authors\u2019 own contributions or about background knowledge, prior work, or common practices in the field. Data are factual statements, examples, references, or observations that serve as evidence for or against a claim, and claims themselves may also support or contradict other claims. These components can be linked by relations such as support, contradiction, or semantic equivalence, forming a structured network of reasoning, and they may span from a few words to multiple sentences. Content that does not assert a proposition or provide evidence\u2014such as purely procedural descriptions, neutral narrative text, definitions without argumentative intent, or general exposition lacking a claim\u2013evidence role\u2014is not considered an argument. Likewise, rhetorical elements that do not function as claims or data, including implicit warrants or qualifiers not explicitly stated, fall outside the scope of what counts as an argument.",
+  "guideline": "A sentence should be labeled as an argument if it contains at least one explicit argumentative component, meaning a claim or supporting data, rather than being purely descriptive or procedural. Claims are statements the authors put forward for acceptance and can often be paraphrased as what the authors think or believe; for example, \u201cSkeleton Subspace Deformation is the predominant approach to character skinning\u201d counts as a claim because it makes a debatable assessment. Claims may concern general background beliefs in the field or specific assertions about the authors\u2019 own work, often signaled by phrases like \u201cwe suggest,\u201d \u201cwe argue,\u201d or \u201cwe claim,\u201d though such cues are not strictly required. Data are facts, observations, experimental results, examples, figures, tables, or citations that provide evidence or preconditions supporting a claim, such as references to prior studies or conditions introduced by \u201cif\u201d or \u201cwhen.\u201d A sentence can include multiple argumentative components, and only the minimal text span that expresses the claim or data should be annotated, excluding connectors like \u201cbecause\u201d or \u201chowever.\u201d In contrast, a sentence should be labeled as no-argument if it merely defines terms, explains notation, describes methods or implementation steps, announces upcoming sections without stating properties, or provides conventions, such as \u201cLet us denote matrices by capital letters.\u201d Similarly, announcements of intent without substantive assertions, or straightforward descriptions that do not advance or support a position, are considered non-argumentative.",
+  "document_context": {
+    "available": true,
+    "strategy": "2 preceding sentences",
+    "preceding_sentences": 2
+  },
+  "sources": {
+    "paper_pdf": "data/GAIC-2026/data/ARGUMINSCI/paper/ARGUMINSCI.pdf",
+    "paper_text_chars": 30861,
+    "guidelines_pdf": "data/GAIC-2026/data/ARGUMINSCI/guidelines/ARGUMINSCI-Guidelines.pdf",
+    "guidelines_text_chars": 34314
+  },
+  "capabilities": {
+    "has_definition": true,
+    "has_guidelines": true,
+    "has_document_context": true
+  }
+}

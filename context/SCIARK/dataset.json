@@ -1,0 +1,23 @@
+{
+  "dataset": "SCIARK",
+  "extracted_at": "2026-02-08T18:10:25.575038+00:00",
+  "model": "@azure-openai-foundry/gpt-5.2-chat",
+  "definition": "An argument is a set of one or more sentences in a scientific abstract that together express a research claim and the evidence that supports it. A claim is a declarative statement reporting the main findings or conclusions derived from the authors\u2019 original research. Evidence consists of sentences describing observations, factual findings, statistics, experimental results, or other scientific outcomes that provide support for a claim, with the relationship between evidence and claim implicitly supportive. Arguments are expressed at the sentence level, and only the minimal number of sentences necessary to state a claim and adequately support it are considered argumentative. Statements expressing speculation, possibility, opinions, proposals, or beliefs (e.g., using hedging such as \u201cmay,\u201d \u201csuggest,\u201d or \u201cwe propose\u201d) are not considered claims unless no other clear declarative claim is present and they are supported by evidence. Background information, methodological descriptions, general knowledge statements, definitions, motivations, or surplus result descriptions that do not directly support a specific claim are not considered part of an argument. Sentences that neither state a research finding nor provide direct supporting evidence are classified as non-argumentative.",
+  "guideline": null,
+  "document_context": {
+    "available": true,
+    "strategy": "2 preceding sentences",
+    "preceding_sentences": 2
+  },
+  "sources": {
+    "paper_pdf": "data/GAIC-2026/data/SCIARK/paper/SCIARK.pdf",
+    "paper_text_chars": 51616,
+    "guidelines_pdf": null,
+    "guidelines_text_chars": null
+  },
+  "capabilities": {
+    "has_definition": true,
+    "has_guidelines": false,
+    "has_document_context": true
+  }
+}

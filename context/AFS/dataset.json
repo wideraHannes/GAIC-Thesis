@@ -1,0 +1,23 @@
+{
+  "dataset": "AFS",
+  "extracted_at": "2026-02-08T18:09:38.083045+00:00",
+  "model": "@azure-openai-foundry/gpt-5.2-chat",
+  "definition": "An argument is a single, self-contained sentence that clearly expresses a claim, premise, or conclusion about a specific issue related to a broader social or political topic, such that its meaning can be understood without relying on surrounding context. It conveys a propositional point that supports or attacks a particular stance, even if that stance is implicit or the conclusion is left for the reader to infer. Arguments are focused on a concrete, recurring issue (a facet), such as effects, consequences, rights, morality, legality, or practicality, and may be expressed with varying levels of detail or explicitness. Sentences expressing opposite viewpoints can still both be arguments if they address the same underlying issue. In contrast, sentences are not arguments if they are vague, purely descriptive, conversational, emotional reactions, rhetorical filler, or expressions of stance without an accompanying reason or claim. Sentences that cannot be interpreted on their own, require extensive context to understand, or do not contribute a discernible propositional point about an issue are also not considered arguments.",
+  "guideline": null,
+  "document_context": {
+    "available": false,
+    "strategy": null,
+    "preceding_sentences": null
+  },
+  "sources": {
+    "paper_pdf": "data/GAIC-2026/data/AFS/paper/AFS.pdf",
+    "paper_text_chars": 52958,
+    "guidelines_pdf": null,
+    "guidelines_text_chars": null
+  },
+  "capabilities": {
+    "has_definition": true,
+    "has_guidelines": false,
+    "has_document_context": false
+  }
+}

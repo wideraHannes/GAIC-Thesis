@@ -1,0 +1,23 @@
+{
+  "dataset": "ACQUA",
+  "extracted_at": "2026-02-08T18:09:26.331017+00:00",
+  "model": "@azure-openai-foundry/gpt-5.2-chat",
+  "definition": "An argument is a sentence that explicitly compares two identifiable items and states a clear preference or superiority relation between them, indicating that one item is better or worse than the other. Such sentences function as pro or con support by making an oriented comparison where a single, obvious winner can be inferred from the wording. The comparison may be expressed using comparative adjectives, adverbs, or other linguistic constructions that convey relative advantage or disadvantage. Sentences that merely mention two items without comparing them, list items, or describe them independently are not arguments. Questions, hypothetical statements, or prompts that ask for a comparison without asserting a preference are also not arguments. Likewise, sentences that include a comparison but do not clearly favor one item over the other, or present balanced or ambiguous evaluations with no discernible winner, are not considered arguments.",
+  "guideline": null,
+  "document_context": {
+    "available": false,
+    "strategy": null,
+    "preceding_sentences": null
+  },
+  "sources": {
+    "paper_pdf": "data/GAIC-2026/data/ACQUA/paper/ACQUA.pdf",
+    "paper_text_chars": 43157,
+    "guidelines_pdf": null,
+    "guidelines_text_chars": null
+  },
+  "capabilities": {
+    "has_definition": true,
+    "has_guidelines": false,
+    "has_document_context": false
+  }
+}

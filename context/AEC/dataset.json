@@ -1,0 +1,23 @@
+{
+  "dataset": "AEC",
+  "extracted_at": "2026-02-08T18:09:32.011550+00:00",
+  "model": "@azure-openai-foundry/gpt-5.2-chat",
+  "definition": "An argument is a sentence or short segment that explicitly presents a claim, reason, justification, or challenge intended to support or oppose a position on an issue. It should clearly express a particular argumentative facet, such as asserting a causal relationship, offering evidence, drawing a comparison, or rebutting an opposing claim, and be interpretable on its own with minimal reliance on surrounding context. High-quality arguments are semantically rich, specific, and linguistically structured in a way that makes the intended reasoning understandable to a reader. An argument may reference another claim or use discourse cues (e.g., contrast, contingency, concession) as long as the argumentative content itself is clear. What does not count as an argument includes insults, sarcasm, meta-comments about the discussion or participants, vague reactions, questions without an implied claim, or statements whose argumentative meaning cannot be reconstructed without substantial additional context. Utterances that merely express emotion, agreement or disagreement without reasons, or that are too fragmentary or underspecified to convey a coherent position are also not arguments.",
+  "guideline": null,
+  "document_context": {
+    "available": false,
+    "strategy": null,
+    "preceding_sentences": null
+  },
+  "sources": {
+    "paper_pdf": "data/GAIC-2026/data/AEC/paper/AEC.pdf",
+    "paper_text_chars": 45483,
+    "guidelines_pdf": null,
+    "guidelines_text_chars": null
+  },
+  "capabilities": {
+    "has_definition": true,
+    "has_guidelines": false,
+    "has_document_context": false
+  }
+}

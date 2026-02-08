@@ -1,0 +1,23 @@
+{
+  "dataset": "PE",
+  "extracted_at": "2026-02-08T18:10:18.414135+00:00",
+  "model": "@azure-openai-foundry/gpt-5.2-chat",
+  "definition": "An argument is a structured expression of reasoning that aims to support or oppose a controversial standpoint by providing justifications or refutations. It consists of a central claim, which is an opinionated or debatable statement, and one or more premises, which give reasons that support or attack that claim or another premise. Argumentative components are explicitly linked by directed relations indicating support or attack, forming a coherent reasoning structure rather than isolated statements. Claims can stand as the focal point of an argument, while premises function as evidence or reasoning and typically have an outgoing relation to another component. Text is not considered an argument if it merely introduces a topic, provides background information, describes facts without a justificatory intent, summarizes content, or expresses opinions without giving or implying reasons. Likewise, narrative, descriptive, or rhetorical text that does not participate in a support or attack relation is non-argumentative.",
+  "guideline": "A sentence should be marked as an argument if it expresses a debatable position or provides a reason that supports or challenges such a position, rather than merely stating facts or background information. Arguments consist of claims\u2014statements the author wants the reader to accept, such as \u201chuman cloning should be prohibited\u201d\u2014and premises, which justify or refute those claims, for example \u201cbecause its consequences are unpredictable.\u201d Claims typically express opinions, evaluations, or recommendations that are not self-evident and often appear as conclusions in a paragraph, while premises give reasons, evidence, or examples for those claims. Sentences that only describe definitions, historical facts, topic introductions, rhetorical questions, or organizational remarks (e.g., \u201cI will discuss three reasons\u201d) are not arguments. Likewise, recommendations for future action at the very end of an essay, if not presented as reasons within an argument, are treated as non-argumentative. Indicators like \u201ctherefore,\u201d \u201cbecause,\u201d or \u201chowever\u201d can signal arguments, but their presence alone is insufficient; the key test is whether the sentence plays a role in persuading the reader by supporting or attacking a standpoint. For instance, \u201cWearing school uniforms restricts self-determination\u201d functions as an argument when it is used as a reason for or against a policy, whereas \u201cSchool uniforms are common in many countries\u201d is not argumentative because it only states a fact.",
+  "document_context": {
+    "available": true,
+    "strategy": "2 preceding sentences",
+    "preceding_sentences": 2
+  },
+  "sources": {
+    "paper_pdf": "data/GAIC-2026/data/PE/paper/PE.pdf",
+    "paper_text_chars": 142479,
+    "guidelines_pdf": "data/GAIC-2026/data/PE/guidelines/PE-Guidelines.pdf",
+    "guidelines_text_chars": 71547
+  },
+  "capabilities": {
+    "has_definition": true,
+    "has_guidelines": true,
+    "has_document_context": true
+  }
+}
