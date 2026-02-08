@@ -1,0 +1,38 @@
+# GAIC Experiment Configuration
+
+[experiment]
+sample_size = 2  # balanced Argument / No-Argument per dataset
+output_dir = "experiments/unified_outputs"
+
+[llm]
+provider = "ollama"  # "ollama" or "openai"
+model = "llama3.1:8b"
+temperature = 0.0
+max_tokens = 5
+api_key = ""  # only needed for openai
+
+[datasets]
+enabled = [
+    "ABSTRCT",
+    "ACQUA",
+    "AEC",
+    "AFS",
+    "ARGUMINSCI",
+    "FINARG",
+    "IAM",
+    "PE",
+    "SCIARK",
+    "USELEC",
+]
+
+[prompts]
+system = """You are an argument classifier.
+Classify the following sentence as "Argument" or "No-Argument".
+Respond with only the label, nothing else."""
+
+user = """Definition: In this dataset, an argument is a sentence that {definition}
+
+Classify the following sentence as "Argument" or "No-Argument".
+Respond with only the label.
+
+Sentence: {sentence}"""

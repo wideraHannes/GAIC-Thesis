@@ -3,7 +3,13 @@ from datetime import datetime
 from pathlib import Path
 from openai import OpenAI
 from tqdm import tqdm
-from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score
+from sklearn.metrics import (
+    accuracy_score,
+    classification_report,
+    f1_score,
+    precision_score,
+    recall_score,
+)
 from loguru import logger
 
 
@@ -152,6 +158,11 @@ def compute_metrics(sample_results: list) -> dict:
             "f1_score": 0.0,
         }
 
+    # Get classification report
+    report = classification_report(
+        y_true_valid, y_pred_valid, output_dict=True, zero_division=0
+    )
+
     return {
         "total_samples": len(sample_results),
         "valid_predictions": len(valid_indices),
@@ -166,8 +177,7 @@ def compute_metrics(sample_results: list) -> dict:
         "f1_score": f1_score(
             y_true_valid, y_pred_valid, pos_label="Argument", zero_division=0
         ),
-        # todo classification_report
-        # https://scikit-learn.org/stable/modules/generated/sklearn.metrics.classification_report.html
+        "classification_report": report,
     }
 
 
