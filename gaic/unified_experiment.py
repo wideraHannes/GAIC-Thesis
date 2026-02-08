@@ -10,6 +10,7 @@ Usage:
 """
 
 import json
+import os
 import random
 import sys
 import tomllib
@@ -17,8 +18,12 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 from datetime import datetime
 from pathlib import Path
 
+from dotenv import load_dotenv
 from loguru import logger
 from openai import OpenAI
+from portkey_ai import PORTKEY_GATEWAY_URL
+
+load_dotenv()
 from sklearn.metrics import classification_report
 from tqdm import tqdm
 
@@ -102,11 +107,22 @@ MANIPULATIONS = {
 
 
 def make_client(cfg: dict) -> OpenAI:
-    if cfg["provider"] == "ollama":
+    provider = cfg["provider"]
+    if provider == "ollama":
         return OpenAI(base_url="http://localhost:11434/v1", api_key="ollama")
-    elif cfg["provider"] == "openai":
+    if provider == "groq":
+        return OpenAI(
+            base_url="https://api.groq.com/openai/v1",
+            api_key=os.environ["GROQ_API_KEY"],
+        )
+    if provider == "portkey":
+        return OpenAI(
+            base_url=PORTKEY_GATEWAY_URL,
+            api_key=os.environ["PORTKEY_API_KEY"],
+        )
+    if provider == "openai":
         return OpenAI(api_key=cfg.get("api_key", ""))
-    raise ValueError(f"Unknown provider: {cfg['provider']}")
+    raise ValueError(f"Unknown provider: {provider}")
 
 
 def classify(
@@ -190,6 +206,7 @@ def run(config: dict):
                 futures = {}
                 for name, fn in MANIPULATIONS.items():
                     manipulated = fn(sentence)
+                    record[f"sent_{name}"] = manipulated
                     futures[name] = pool.submit(
                         classify, client, cfg_llm, cfg_prompts, manipulated, definition
                     )
@@ -258,9 +275,8 @@ def run(config: dict):
 
     # save
     ts = datetime.now().strftime("%Y%m%d_%H%M%S")
-    out_path = (
-        output_dir / f"manipulation_{cfg_llm['model'].replace(':', '_')}_{ts}.json"
-    )
+    safe_model = cfg_llm["model"].replace("/", "_").replace(":", "_").replace("@", "")
+    out_path = output_dir / f"manipulation_{safe_model}_{ts}.json"
     with open(out_path, "w") as f:
         json.dump(results, f, indent=2)
     logger.info(f"Results saved to {out_path}")

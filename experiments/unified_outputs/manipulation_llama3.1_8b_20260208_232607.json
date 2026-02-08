@@ -1,0 +1,1744 @@
+{
+  "timestamp": "2026-02-08T22:53:18.402099",
+  "model": "llama3.1:8b",
+  "sample_size": 10,
+  "datasets": {
+    "ABSTRCT": {
+      "n_samples": 10,
+      "reports": {
+        "original": {
+          "Argument": {
+            "precision": 0.625,
+            "recall": 1.0,
+            "f1-score": 0.7692307692307693,
+            "support": 5.0
+          },
+          "No-Argument": {
+            "precision": 1.0,
+            "recall": 0.4,
+            "f1-score": 0.5714285714285714,
+            "support": 5.0
+          },
+          "accuracy": 0.7,
+          "macro avg": {
+            "precision": 0.8125,
+            "recall": 0.7,
+            "f1-score": 0.6703296703296704,
+            "support": 10.0
+          },
+          "weighted avg": {
+            "precision": 0.8125,
+            "recall": 0.7,
+            "f1-score": 0.6703296703296703,
+            "support": 10.0
+          }
+        },
+        "feger": {
+          "Argument": {
+            "precision": 1.0,
+            "recall": 0.4,
+            "f1-score": 0.5714285714285714,
+            "support": 5.0
+          },
+          "No-Argument": {
+            "precision": 0.625,
+            "recall": 1.0,
+            "f1-score": 0.7692307692307693,
+            "support": 5.0
+          },
+          "accuracy": 0.7,
+          "macro avg": {
+            "precision": 0.8125,
+            "recall": 0.7,
+            "f1-score": 0.6703296703296704,
+            "support": 10.0
+          },
+          "weighted avg": {
+            "precision": 0.8125,
+            "recall": 0.7,
+            "f1-score": 0.6703296703296703,
+            "support": 10.0
+          }
+        },
+        "shuffle": {
+          "Argument": {
+            "precision": 0.6666666666666666,
+            "recall": 0.4,
+            "f1-score": 0.5,
+            "support": 5.0
+          },
+          "No-Argument": {
+            "precision": 0.5714285714285714,
+            "recall": 0.8,
+            "f1-score": 0.6666666666666666,
+            "support": 5.0
+          },
+          "accuracy": 0.6,
+          "macro avg": {
+            "precision": 0.6190476190476191,
+            "recall": 0.6000000000000001,
+            "f1-score": 0.5833333333333333,
+            "support": 10.0
+          },
+          "weighted avg": {
+            "precision": 0.619047619047619,
+            "recall": 0.6,
+            "f1-score": 0.5833333333333333,
+            "support": 10.0
+          }
+        }
+      },
+      "macro_f1_original": 0.6703,
+      "macro_f1_feger": 0.6703,
+      "macro_f1_shuffle": 0.5833,
+      "delta_feger": 0.0,
+      "delta_shuffle": -0.087,
+      "samples": [
+        {
+          "id": "ABSTRCT-train-223",
+          "sentence": "Both GEM and PV yield a symptom control rate much higher than expected by the objective tumour RR.",
+          "true_label": "Argument",
+          "pred_original": "Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "ABSTRCT-train-357",
+          "sentence": "This combination represents an improvement in the management of postmenopausal women with HR(+)/HER2(-) advanced breast cancer progressing on nonsteroidal aromatase inhibitors, regardless of ethnicity.",
+          "true_label": "Argument",
+          "pred_original": "Argument",
+          "pred_feger": "Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "ABSTRCT-train-389",
+          "sentence": "Patients treated with either docetaxel regimen had consistently improved QoL compared with VC-treated patients, who experienced deterioration in QoL. DC resulted in a more favorable overall response and survival rate than VC.",
+          "true_label": "Argument",
+          "pred_original": "Argument",
+          "pred_feger": "Argument",
+          "pred_shuffle": "Argument"
+        },
+        {
+          "id": "ABSTRCT-train-248",
+          "sentence": "Therapy of patients with advanced gastric or gastroesophageal junction cancer should provide symptom relief and improve quality of life (QOL) because most patients are symptomatic at baseline.",
+          "true_label": "Argument",
+          "pred_original": "Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "Argument"
+        },
+        {
+          "id": "ABSTRCT-train-60",
+          "sentence": "Although HRQoL should always be taken into account when determining treatment, our results show that the addition of RT does not impair overall quality of life.",
+          "true_label": "Argument",
+          "pred_original": "Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "ABSTRCT-train-810",
+          "sentence": "There were no differences in the anorectal manometry and endoanal ultrasound findings.",
+          "true_label": "No-Argument",
+          "pred_original": "Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "ABSTRCT-train-729",
+          "sentence": "Forty patients on Arm A and 19 on Arm B received at least one treatment.",
+          "true_label": "No-Argument",
+          "pred_original": "Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "ABSTRCT-train-818",
+          "sentence": "Nevertheless, from a clinical point of view, differences between ChOP and fludarabine were moderate or event slight (mean difference in TWIST of 1.45 months).",
+          "true_label": "No-Argument",
+          "pred_original": "Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "Argument"
+        },
+        {
+          "id": "ABSTRCT-train-996",
+          "sentence": "[-20%], 95% CI: -$2,605, -$586).",
+          "true_label": "No-Argument",
+          "pred_original": "No-Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "ABSTRCT-train-593",
+          "sentence": "Participants were randomized to short or long-acting human insulin (non-blinded) and then further randomized to metformin\u202f+\u202fplacebo, rosiglitazone\u202f+\u202fplacebo, metformin\u202f+\u202frosiglitazone or placebo\u202f+\u202fplacebo (blinded).",
+          "true_label": "No-Argument",
+          "pred_original": "No-Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        }
+      ]
+    },
+    "ACQUA": {
+      "n_samples": 10,
+      "reports": {
+        "original": {
+          "Argument": {
+            "precision": 0.6666666666666666,
+            "recall": 0.8,
+            "f1-score": 0.7272727272727273,
+            "support": 5.0
+          },
+          "No-Argument": {
+            "precision": 0.75,
+            "recall": 0.6,
+            "f1-score": 0.6666666666666666,
+            "support": 5.0
+          },
+          "accuracy": 0.7,
+          "macro avg": {
+            "precision": 0.7083333333333333,
+            "recall": 0.7,
+            "f1-score": 0.696969696969697,
+            "support": 10.0
+          },
+          "weighted avg": {
+            "precision": 0.7083333333333333,
+            "recall": 0.7,
+            "f1-score": 0.696969696969697,
+            "support": 10.0
+          }
+        },
+        "feger": {
+          "Argument": {
+            "precision": 0.5,
+            "recall": 0.6,
+            "f1-score": 0.5454545454545454,
+            "support": 5.0
+          },
+          "No-Argument": {
+            "precision": 0.5,
+            "recall": 0.4,
+            "f1-score": 0.4444444444444444,
+            "support": 5.0
+          },
+          "accuracy": 0.5,
+          "macro avg": {
+            "precision": 0.5,
+            "recall": 0.5,
+            "f1-score": 0.4949494949494949,
+            "support": 10.0
+          },
+          "weighted avg": {
+            "precision": 0.5,
+            "recall": 0.5,
+            "f1-score": 0.494949494949495,
+            "support": 10.0
+          }
+        },
+        "shuffle": {
+          "Argument": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1-score": 0.0,
+            "support": 5.0
+          },
+          "No-Argument": {
+            "precision": 0.375,
+            "recall": 0.6,
+            "f1-score": 0.46153846153846156,
+            "support": 5.0
+          },
+          "accuracy": 0.3,
+          "macro avg": {
+            "precision": 0.1875,
+            "recall": 0.3,
+            "f1-score": 0.23076923076923078,
+            "support": 10.0
+          },
+          "weighted avg": {
+            "precision": 0.1875,
+            "recall": 0.3,
+            "f1-score": 0.23076923076923078,
+            "support": 10.0
+          }
+        }
+      },
+      "macro_f1_original": 0.697,
+      "macro_f1_feger": 0.4949,
+      "macro_f1_shuffle": 0.2308,
+      "delta_feger": -0.202,
+      "delta_shuffle": -0.4662,
+      "samples": [
+        {
+          "id": "ACQUA-train-510",
+          "sentence": "It's gotten better with youtube, but Kreva's itunes page is bare except for his collaboration with Miyavi.",
+          "true_label": "Argument",
+          "pred_original": "Argument",
+          "pred_feger": "Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "ACQUA-train-225",
+          "sentence": "A second generation is planned for the mid-year point with Toshiba flash chips replacing the Samsung ones, and a Marvell controller, possibly a faster 6Gbit/s model.",
+          "true_label": "Argument",
+          "pred_original": "No-Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "ACQUA-train-48",
+          "sentence": "Groovy code often looks and feels like Java code, but is almost always simpler and easier to use.",
+          "true_label": "Argument",
+          "pred_original": "Argument",
+          "pred_feger": "Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "ACQUA-train-449",
+          "sentence": "However, the Ford seems more solid than the Titan, and the feedback from the steering was judged to be more informative than in the Nissan.",
+          "true_label": "Argument",
+          "pred_original": "Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "ACQUA-train-67",
+          "sentence": "espn gets much better and fox falls apart - how can that be?",
+          "true_label": "Argument",
+          "pred_original": "Argument",
+          "pred_feger": "Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "ACQUA-train-707",
+          "sentence": "california and oregon and the solid democratic states are going to be democratic anyway.",
+          "true_label": "No-Argument",
+          "pred_original": "No-Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "ACQUA-train-752",
+          "sentence": "Professional : Study the ways of Python, Ruby on Rails, and review PHP for better understanding.",
+          "true_label": "No-Argument",
+          "pred_original": "No-Argument",
+          "pred_feger": "Argument",
+          "pred_shuffle": "Argument"
+        },
+        {
+          "id": "ACQUA-train-1005",
+          "sentence": "potato bread is actually better for you in some cases.",
+          "true_label": "No-Argument",
+          "pred_original": "Argument",
+          "pred_feger": "Argument",
+          "pred_shuffle": "Argument"
+        },
+        {
+          "id": "ACQUA-train-996",
+          "sentence": "Proven manufacturers like HTC, rim, Nokia, Samsung, SonyEricsson deal Prices etc. continue deliver fresh and better innovated devices.",
+          "true_label": "No-Argument",
+          "pred_original": "No-Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "ACQUA-train-774",
+          "sentence": "In the end, GM's best bet may be simply picking a few top products and merging the division with the bigger Buick brand or the better-defined Cadillac.",
+          "true_label": "No-Argument",
+          "pred_original": "Argument",
+          "pred_feger": "Argument",
+          "pred_shuffle": "No-Argument"
+        }
+      ]
+    },
+    "AEC": {
+      "n_samples": 10,
+      "reports": {
+        "original": {
+          "Argument": {
+            "precision": 0.2857142857142857,
+            "recall": 0.4,
+            "f1-score": 0.3333333333333333,
+            "support": 5.0
+          },
+          "No-Argument": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1-score": 0.0,
+            "support": 5.0
+          },
+          "accuracy": 0.2,
+          "macro avg": {
+            "precision": 0.14285714285714285,
+            "recall": 0.2,
+            "f1-score": 0.16666666666666666,
+            "support": 10.0
+          },
+          "weighted avg": {
+            "precision": 0.14285714285714285,
+            "recall": 0.2,
+            "f1-score": 0.16666666666666666,
+            "support": 10.0
+          }
+        },
+        "feger": {
+          "Argument": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1-score": 0.0,
+            "support": 5.0
+          },
+          "No-Argument": {
+            "precision": 0.4444444444444444,
+            "recall": 0.8,
+            "f1-score": 0.5714285714285714,
+            "support": 5.0
+          },
+          "accuracy": 0.4,
+          "macro avg": {
+            "precision": 0.2222222222222222,
+            "recall": 0.4,
+            "f1-score": 0.2857142857142857,
+            "support": 10.0
+          },
+          "weighted avg": {
+            "precision": 0.22222222222222224,
+            "recall": 0.4,
+            "f1-score": 0.2857142857142857,
+            "support": 10.0
+          }
+        },
+        "shuffle": {
+          "Argument": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1-score": 0.0,
+            "support": 5.0
+          },
+          "No-Argument": {
+            "precision": 0.5,
+            "recall": 1.0,
+            "f1-score": 0.6666666666666666,
+            "support": 5.0
+          },
+          "accuracy": 0.5,
+          "macro avg": {
+            "precision": 0.25,
+            "recall": 0.5,
+            "f1-score": 0.3333333333333333,
+            "support": 10.0
+          },
+          "weighted avg": {
+            "precision": 0.25,
+            "recall": 0.5,
+            "f1-score": 0.3333333333333333,
+            "support": 10.0
+          }
+        }
+      },
+      "macro_f1_original": 0.1667,
+      "macro_f1_feger": 0.2857,
+      "macro_f1_shuffle": 0.3333,
+      "delta_feger": 0.119,
+      "delta_shuffle": 0.1667,
+      "samples": [
+        {
+          "id": "AEC-train-8",
+          "sentence": "If Carlin's plan was adopted, perhaps the innocents would overcome the guilty and survive.",
+          "true_label": "Argument",
+          "pred_original": "Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "AEC-train-17",
+          "sentence": "So, what are you talking about?",
+          "true_label": "Argument",
+          "pred_original": "No-Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "AEC-train-212",
+          "sentence": "If we make it easier for victems to admit they were abused and help them get past it, I think we can reduce the rate of molestation.",
+          "true_label": "Argument",
+          "pred_original": "Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "AEC-train-461",
+          "sentence": "If an person has a dominant gene for brown eyes and a recessive gene for blue eyes, what kind of eyes will they have?",
+          "true_label": "Argument",
+          "pred_original": "No-Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "AEC-train-67",
+          "sentence": "If you really think it is such a walk in the park, why not check yourself in?",
+          "true_label": "Argument",
+          "pred_original": "No-Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "AEC-train-585",
+          "sentence": "Unlike you, I have posted cases, sized, added emphasis etc. as well as the Constitution.",
+          "true_label": "No-Argument",
+          "pred_original": "Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "AEC-train-753",
+          "sentence": "Here is an news article from a paper stating that airline employees can be paid off to break the law.",
+          "true_label": "No-Argument",
+          "pred_original": "Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "AEC-train-783",
+          "sentence": "What proof do you have that owning guns will prevent mass murder?",
+          "true_label": "No-Argument",
+          "pred_original": "Argument",
+          "pred_feger": "Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "AEC-train-901",
+          "sentence": "Cool Hand Dave, I believe that God did say that, no matter if it was in the code of Hammurabi \"first.\"",
+          "true_label": "No-Argument",
+          "pred_original": "Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "AEC-train-589",
+          "sentence": "Everyone should be able to hold their own opinion and if that is being denied then it's wrong.",
+          "true_label": "No-Argument",
+          "pred_original": "Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        }
+      ]
+    },
+    "AFS": {
+      "n_samples": 10,
+      "reports": {
+        "original": {
+          "Argument": {
+            "precision": 0.7142857142857143,
+            "recall": 1.0,
+            "f1-score": 0.8333333333333334,
+            "support": 5.0
+          },
+          "No-Argument": {
+            "precision": 1.0,
+            "recall": 0.6,
+            "f1-score": 0.75,
+            "support": 5.0
+          },
+          "accuracy": 0.8,
+          "macro avg": {
+            "precision": 0.8571428571428572,
+            "recall": 0.8,
+            "f1-score": 0.7916666666666667,
+            "support": 10.0
+          },
+          "weighted avg": {
+            "precision": 0.8571428571428571,
+            "recall": 0.8,
+            "f1-score": 0.7916666666666667,
+            "support": 10.0
+          }
+        },
+        "feger": {
+          "Argument": {
+            "precision": 0.6666666666666666,
+            "recall": 0.4,
+            "f1-score": 0.5,
+            "support": 5.0
+          },
+          "No-Argument": {
+            "precision": 0.5714285714285714,
+            "recall": 0.8,
+            "f1-score": 0.6666666666666666,
+            "support": 5.0
+          },
+          "accuracy": 0.6,
+          "macro avg": {
+            "precision": 0.6190476190476191,
+            "recall": 0.6000000000000001,
+            "f1-score": 0.5833333333333333,
+            "support": 10.0
+          },
+          "weighted avg": {
+            "precision": 0.619047619047619,
+            "recall": 0.6,
+            "f1-score": 0.5833333333333333,
+            "support": 10.0
+          }
+        },
+        "shuffle": {
+          "Argument": {
+            "precision": 0.6666666666666666,
+            "recall": 0.4,
+            "f1-score": 0.5,
+            "support": 5.0
+          },
+          "No-Argument": {
+            "precision": 0.5714285714285714,
+            "recall": 0.8,
+            "f1-score": 0.6666666666666666,
+            "support": 5.0
+          },
+          "accuracy": 0.6,
+          "macro avg": {
+            "precision": 0.6190476190476191,
+            "recall": 0.6000000000000001,
+            "f1-score": 0.5833333333333333,
+            "support": 10.0
+          },
+          "weighted avg": {
+            "precision": 0.619047619047619,
+            "recall": 0.6,
+            "f1-score": 0.5833333333333333,
+            "support": 10.0
+          }
+        }
+      },
+      "macro_f1_original": 0.7917,
+      "macro_f1_feger": 0.5833,
+      "macro_f1_shuffle": 0.5833,
+      "delta_feger": -0.2083,
+      "delta_shuffle": -0.2083,
+      "samples": [
+        {
+          "id": "AFS-train-175",
+          "sentence": "Again I ask...could someone who opposes Gay marriage (or unions or whatever) tell me what the BFD is?",
+          "true_label": "Argument",
+          "pred_original": "Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "AFS-train-486",
+          "sentence": "are you saying that bisexuals AREN'T attracted to people of the same sex?",
+          "true_label": "Argument",
+          "pred_original": "Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "Argument"
+        },
+        {
+          "id": "AFS-train-462",
+          "sentence": "People abuse gun rights to rob places and take hostages.",
+          "true_label": "Argument",
+          "pred_original": "Argument",
+          "pred_feger": "Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "AFS-train-177",
+          "sentence": "What we (at least I) don't understand is what negative impact on your life same sex marriage could POSSIBLY have on your or any other heterosexual's life that would cause such extreme \"anti\" reactions from heterosexuals.",
+          "true_label": "Argument",
+          "pred_original": "Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "AFS-train-466",
+          "sentence": "It sounds like the author wishes to use fear as a weapon to unconstitutionally restrict the RKBA.",
+          "true_label": "Argument",
+          "pred_original": "Argument",
+          "pred_feger": "Argument",
+          "pred_shuffle": "Argument"
+        },
+        {
+          "id": "AFS-train-1014",
+          "sentence": "That case that you presented me with is from 10 years ago.",
+          "true_label": "No-Argument",
+          "pred_original": "No-Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "AFS-train-606",
+          "sentence": "Justice, while we have the hold of it, should be democratic and swift in these manners.",
+          "true_label": "No-Argument",
+          "pred_original": "Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "AFS-train-674",
+          "sentence": "Neighborhood watch is set up with the police so it's an official organization of concerned citizens, not some random group of vigilantes looking to hang somebody for being in the wrong neighborhood with the wrong color of skin.",
+          "true_label": "No-Argument",
+          "pred_original": "Argument",
+          "pred_feger": "Argument",
+          "pred_shuffle": "Argument"
+        },
+        {
+          "id": "AFS-train-785",
+          "sentence": "Of course \"immediate\" is sufficiently vague to guarantee other challenges.",
+          "true_label": "No-Argument",
+          "pred_original": "No-Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "AFS-train-829",
+          "sentence": "What Old Testament part from your last post did I ignore?",
+          "true_label": "No-Argument",
+          "pred_original": "No-Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        }
+      ]
+    },
+    "ARGUMINSCI": {
+      "n_samples": 10,
+      "reports": {
+        "original": {
+          "Argument": {
+            "precision": 1.0,
+            "recall": 0.8,
+            "f1-score": 0.8888888888888888,
+            "support": 5.0
+          },
+          "No-Argument": {
+            "precision": 0.8333333333333334,
+            "recall": 1.0,
+            "f1-score": 0.9090909090909091,
+            "support": 5.0
+          },
+          "accuracy": 0.9,
+          "macro avg": {
+            "precision": 0.9166666666666667,
+            "recall": 0.9,
+            "f1-score": 0.898989898989899,
+            "support": 10.0
+          },
+          "weighted avg": {
+            "precision": 0.9166666666666667,
+            "recall": 0.9,
+            "f1-score": 0.898989898989899,
+            "support": 10.0
+          }
+        },
+        "feger": {
+          "Argument": {
+            "precision": 1.0,
+            "recall": 0.8,
+            "f1-score": 0.8888888888888888,
+            "support": 5.0
+          },
+          "No-Argument": {
+            "precision": 0.8333333333333334,
+            "recall": 1.0,
+            "f1-score": 0.9090909090909091,
+            "support": 5.0
+          },
+          "accuracy": 0.9,
+          "macro avg": {
+            "precision": 0.9166666666666667,
+            "recall": 0.9,
+            "f1-score": 0.898989898989899,
+            "support": 10.0
+          },
+          "weighted avg": {
+            "precision": 0.9166666666666667,
+            "recall": 0.9,
+            "f1-score": 0.898989898989899,
+            "support": 10.0
+          }
+        },
+        "shuffle": {
+          "Argument": {
+            "precision": 1.0,
+            "recall": 0.2,
+            "f1-score": 0.3333333333333333,
+            "support": 5.0
+          },
+          "No-Argument": {
+            "precision": 0.5555555555555556,
+            "recall": 1.0,
+            "f1-score": 0.7142857142857143,
+            "support": 5.0
+          },
+          "accuracy": 0.6,
+          "macro avg": {
+            "precision": 0.7777777777777778,
+            "recall": 0.6,
+            "f1-score": 0.5238095238095238,
+            "support": 10.0
+          },
+          "weighted avg": {
+            "precision": 0.7777777777777778,
+            "recall": 0.6,
+            "f1-score": 0.5238095238095238,
+            "support": 10.0
+          }
+        }
+      },
+      "macro_f1_original": 0.899,
+      "macro_f1_feger": 0.899,
+      "macro_f1_shuffle": 0.5238,
+      "delta_feger": 0.0,
+      "delta_shuffle": -0.3752,
+      "samples": [
+        {
+          "id": "ARGUMINSCI-train-265",
+          "sentence": "( 3 ) As a by-product, it is possible to use the above retargetting algorithm for enhancing motion capture data so that the errors in joint angles and end-effector positions are reduced.",
+          "true_label": "Argument",
+          "pred_original": "Argument",
+          "pred_feger": "Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "ARGUMINSCI-train-474",
+          "sentence": "As an articulated character moves between observed configurations, its elastic model should approximate the elastic models of the input poses.",
+          "true_label": "Argument",
+          "pred_original": "Argument",
+          "pred_feger": "Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "ARGUMINSCI-train-4",
+          "sentence": "The explicit representation provides our method with several advantages.",
+          "true_label": "Argument",
+          "pred_original": "Argument",
+          "pred_feger": "Argument",
+          "pred_shuffle": "Argument"
+        },
+        {
+          "id": "ARGUMINSCI-train-344",
+          "sentence": "This modified method only requires 3 scatter passes in the steps 3, 6, and 7.",
+          "true_label": "Argument",
+          "pred_original": "No-Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "ARGUMINSCI-train-88",
+          "sentence": "Studies have shown that the receptive fields of simple cells in the macaque cortex act as edge or line detectors, responding to oriented edges or lines in natural scenes \n19 , 35 , 10 .",
+          "true_label": "Argument",
+          "pred_original": "Argument",
+          "pred_feger": "Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "ARGUMINSCI-train-601",
+          "sentence": "1.0.",
+          "true_label": "No-Argument",
+          "pred_original": "No-Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "ARGUMINSCI-train-794",
+          "sentence": "ACM, New York, NY, USA.\n          A GRACHEV , A. A. AND S ARYCHEV , A. V. 2005.",
+          "true_label": "No-Argument",
+          "pred_original": "No-Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "ARGUMINSCI-train-616",
+          "sentence": "Figure 18 show the pre-processing and runtime simulation results for the cocktail dress.",
+          "true_label": "No-Argument",
+          "pred_original": "No-Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "ARGUMINSCI-train-513",
+          "sentence": "[q T , q  \u0307 T ] T , respectively.",
+          "true_label": "No-Argument",
+          "pred_original": "No-Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "ARGUMINSCI-train-799",
+          "sentence": "We have applied our framework to the problem of path synthesis.",
+          "true_label": "No-Argument",
+          "pred_original": "No-Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        }
+      ]
+    },
+    "FINARG": {
+      "n_samples": 10,
+      "reports": {
+        "original": {
+          "Argument": {
+            "precision": 0.5,
+            "recall": 0.4,
+            "f1-score": 0.4444444444444444,
+            "support": 5.0
+          },
+          "No-Argument": {
+            "precision": 0.5,
+            "recall": 0.6,
+            "f1-score": 0.5454545454545454,
+            "support": 5.0
+          },
+          "accuracy": 0.5,
+          "macro avg": {
+            "precision": 0.5,
+            "recall": 0.5,
+            "f1-score": 0.4949494949494949,
+            "support": 10.0
+          },
+          "weighted avg": {
+            "precision": 0.5,
+            "recall": 0.5,
+            "f1-score": 0.494949494949495,
+            "support": 10.0
+          }
+        },
+        "feger": {
+          "Argument": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1-score": 0.0,
+            "support": 5.0
+          },
+          "No-Argument": {
+            "precision": 0.5,
+            "recall": 1.0,
+            "f1-score": 0.6666666666666666,
+            "support": 5.0
+          },
+          "accuracy": 0.5,
+          "macro avg": {
+            "precision": 0.25,
+            "recall": 0.5,
+            "f1-score": 0.3333333333333333,
+            "support": 10.0
+          },
+          "weighted avg": {
+            "precision": 0.25,
+            "recall": 0.5,
+            "f1-score": 0.3333333333333333,
+            "support": 10.0
+          }
+        },
+        "shuffle": {
+          "Argument": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1-score": 0.0,
+            "support": 5.0
+          },
+          "No-Argument": {
+            "precision": 0.5,
+            "recall": 1.0,
+            "f1-score": 0.6666666666666666,
+            "support": 5.0
+          },
+          "accuracy": 0.5,
+          "macro avg": {
+            "precision": 0.25,
+            "recall": 0.5,
+            "f1-score": 0.3333333333333333,
+            "support": 10.0
+          },
+          "weighted avg": {
+            "precision": 0.25,
+            "recall": 0.5,
+            "f1-score": 0.3333333333333333,
+            "support": 10.0
+          }
+        }
+      },
+      "macro_f1_original": 0.4949,
+      "macro_f1_feger": 0.3333,
+      "macro_f1_shuffle": 0.3333,
+      "delta_feger": -0.1616,
+      "delta_shuffle": -0.1616,
+      "samples": [
+        {
+          "id": "FINARG-train-121",
+          "sentence": "But given the growth we have in the business, given the opportunity we have before us, we're very much in investment mode in terms of the infrastructure.",
+          "true_label": "Argument",
+          "pred_original": "Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "FINARG-train-231",
+          "sentence": "And so it\u2019s tough to find something in the numbers not to like.",
+          "true_label": "Argument",
+          "pred_original": "Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "FINARG-train-175",
+          "sentence": "We're obviously pleased with our overall level of growth in engagement.",
+          "true_label": "Argument",
+          "pred_original": "No-Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "FINARG-train-113",
+          "sentence": "And so you're just starting to see some of the impact from E5.",
+          "true_label": "Argument",
+          "pred_original": "No-Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "FINARG-train-342",
+          "sentence": "So we don't focus as much on the number and we direct you more to the supplemental revenue guidance that breaks out the component parts.",
+          "true_label": "Argument",
+          "pred_original": "No-Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "FINARG-train-568",
+          "sentence": "And so that part is clearly going on, and it could be what's behind the data.",
+          "true_label": "No-Argument",
+          "pred_original": "Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "FINARG-train-784",
+          "sentence": "I will just take the second one then you can go on.",
+          "true_label": "No-Argument",
+          "pred_original": "No-Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "FINARG-train-800",
+          "sentence": "We are maintaining our investment profile and plans there.",
+          "true_label": "No-Argument",
+          "pred_original": "No-Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "FINARG-train-946",
+          "sentence": "Jim, it's Tim.",
+          "true_label": "No-Argument",
+          "pred_original": "No-Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "FINARG-train-871",
+          "sentence": "And we have a lot of data where that's the advantage we have is that we see the viewing patterns, and we also see the sales patterns, so we can tie the two together and understand which video resonates with Prime members, which video doesn't, and make mid course corrections.",
+          "true_label": "No-Argument",
+          "pred_original": "Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        }
+      ]
+    },
+    "IAM": {
+      "n_samples": 10,
+      "reports": {
+        "original": {
+          "Argument": {
+            "precision": 0.6666666666666666,
+            "recall": 0.8,
+            "f1-score": 0.7272727272727273,
+            "support": 5.0
+          },
+          "No-Argument": {
+            "precision": 0.75,
+            "recall": 0.6,
+            "f1-score": 0.6666666666666666,
+            "support": 5.0
+          },
+          "accuracy": 0.7,
+          "macro avg": {
+            "precision": 0.7083333333333333,
+            "recall": 0.7,
+            "f1-score": 0.696969696969697,
+            "support": 10.0
+          },
+          "weighted avg": {
+            "precision": 0.7083333333333333,
+            "recall": 0.7,
+            "f1-score": 0.696969696969697,
+            "support": 10.0
+          }
+        },
+        "feger": {
+          "Argument": {
+            "precision": 0.75,
+            "recall": 0.6,
+            "f1-score": 0.6666666666666666,
+            "support": 5.0
+          },
+          "No-Argument": {
+            "precision": 0.6666666666666666,
+            "recall": 0.8,
+            "f1-score": 0.7272727272727273,
+            "support": 5.0
+          },
+          "accuracy": 0.7,
+          "macro avg": {
+            "precision": 0.7083333333333333,
+            "recall": 0.7,
+            "f1-score": 0.696969696969697,
+            "support": 10.0
+          },
+          "weighted avg": {
+            "precision": 0.7083333333333333,
+            "recall": 0.7,
+            "f1-score": 0.696969696969697,
+            "support": 10.0
+          }
+        },
+        "shuffle": {
+          "Argument": {
+            "precision": 0.6666666666666666,
+            "recall": 0.4,
+            "f1-score": 0.5,
+            "support": 5.0
+          },
+          "No-Argument": {
+            "precision": 0.5714285714285714,
+            "recall": 0.8,
+            "f1-score": 0.6666666666666666,
+            "support": 5.0
+          },
+          "accuracy": 0.6,
+          "macro avg": {
+            "precision": 0.6190476190476191,
+            "recall": 0.6000000000000001,
+            "f1-score": 0.5833333333333333,
+            "support": 10.0
+          },
+          "weighted avg": {
+            "precision": 0.619047619047619,
+            "recall": 0.6,
+            "f1-score": 0.5833333333333333,
+            "support": 10.0
+          }
+        }
+      },
+      "macro_f1_original": 0.697,
+      "macro_f1_feger": 0.697,
+      "macro_f1_shuffle": 0.5833,
+      "delta_feger": 0.0,
+      "delta_shuffle": -0.1136,
+      "samples": [
+        {
+          "id": "IAM-train-49",
+          "sentence": "Harvesting, processing and manufacturing products from wood carries the lowest environmental cost of any raw material.",
+          "true_label": "Argument",
+          "pred_original": "Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "IAM-train-275",
+          "sentence": "Others reject this position by drawing a distinction between human being and human person, arguing that while the fetus is innocent and biologically human, it is not a person with a right to life [ref].",
+          "true_label": "Argument",
+          "pred_original": "Argument",
+          "pred_feger": "Argument",
+          "pred_shuffle": "Argument"
+        },
+        {
+          "id": "IAM-train-134",
+          "sentence": "This might attract a new and bigger audience to experience the museum.",
+          "true_label": "Argument",
+          "pred_original": "No-Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "IAM-train-70",
+          "sentence": "Some governments around the world have legalized voluntary euthanasia but most commonly it is still considered to be criminal homicide.",
+          "true_label": "Argument",
+          "pred_original": "Argument",
+          "pred_feger": "Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "IAM-train-123",
+          "sentence": "Some critics see smoking bans as a violation on one\u2019s personal liberty.",
+          "true_label": "Argument",
+          "pred_original": "Argument",
+          "pred_feger": "Argument",
+          "pred_shuffle": "Argument"
+        },
+        {
+          "id": "IAM-train-990",
+          "sentence": "This can lead to depression and other self-esteem issues as well as decrease their satisfaction of life as they feel if their life is not exciting enough to put online it is not as good as their friends or family [ref].",
+          "true_label": "No-Argument",
+          "pred_original": "Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "Argument"
+        },
+        {
+          "id": "IAM-train-624",
+          "sentence": "In 2008 a proposal to ban all primates experiments in the EU has sparked a vigorous debate [ref].",
+          "true_label": "No-Argument",
+          "pred_original": "No-Argument",
+          "pred_feger": "Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "IAM-train-562",
+          "sentence": "Formal sex education occurs when schools or health care providers offer sex education.",
+          "true_label": "No-Argument",
+          "pred_original": "No-Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "IAM-train-678",
+          "sentence": "The proportion of hangings as suicides in 2005 among women aged 15\u201334 was 47.2 percent, having risen from 5.7 percent in 1968.",
+          "true_label": "No-Argument",
+          "pred_original": "No-Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "IAM-train-1010",
+          "sentence": "It\u2019s a huge part of our collective identity and our individual identity, and has a very powerful effect on how we think.",
+          "true_label": "No-Argument",
+          "pred_original": "Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        }
+      ]
+    },
+    "PE": {
+      "n_samples": 10,
+      "reports": {
+        "original": {
+          "Argument": {
+            "precision": 0.8333333333333334,
+            "recall": 1.0,
+            "f1-score": 0.9090909090909091,
+            "support": 5.0
+          },
+          "No-Argument": {
+            "precision": 1.0,
+            "recall": 0.8,
+            "f1-score": 0.8888888888888888,
+            "support": 5.0
+          },
+          "accuracy": 0.9,
+          "macro avg": {
+            "precision": 0.9166666666666667,
+            "recall": 0.9,
+            "f1-score": 0.898989898989899,
+            "support": 10.0
+          },
+          "weighted avg": {
+            "precision": 0.9166666666666667,
+            "recall": 0.9,
+            "f1-score": 0.898989898989899,
+            "support": 10.0
+          }
+        },
+        "feger": {
+          "Argument": {
+            "precision": 1.0,
+            "recall": 0.2,
+            "f1-score": 0.3333333333333333,
+            "support": 5.0
+          },
+          "No-Argument": {
+            "precision": 0.5555555555555556,
+            "recall": 1.0,
+            "f1-score": 0.7142857142857143,
+            "support": 5.0
+          },
+          "accuracy": 0.6,
+          "macro avg": {
+            "precision": 0.7777777777777778,
+            "recall": 0.6,
+            "f1-score": 0.5238095238095238,
+            "support": 10.0
+          },
+          "weighted avg": {
+            "precision": 0.7777777777777778,
+            "recall": 0.6,
+            "f1-score": 0.5238095238095238,
+            "support": 10.0
+          }
+        },
+        "shuffle": {
+          "Argument": {
+            "precision": 1.0,
+            "recall": 0.2,
+            "f1-score": 0.3333333333333333,
+            "support": 5.0
+          },
+          "No-Argument": {
+            "precision": 0.5555555555555556,
+            "recall": 1.0,
+            "f1-score": 0.7142857142857143,
+            "support": 5.0
+          },
+          "accuracy": 0.6,
+          "macro avg": {
+            "precision": 0.7777777777777778,
+            "recall": 0.6,
+            "f1-score": 0.5238095238095238,
+            "support": 10.0
+          },
+          "weighted avg": {
+            "precision": 0.7777777777777778,
+            "recall": 0.6,
+            "f1-score": 0.5238095238095238,
+            "support": 10.0
+          }
+        }
+      },
+      "macro_f1_original": 0.899,
+      "macro_f1_feger": 0.5238,
+      "macro_f1_shuffle": 0.5238,
+      "delta_feger": -0.3752,
+      "delta_shuffle": -0.3752,
+      "samples": [
+        {
+          "id": "PE-train-75",
+          "sentence": "In other words, if countries, especially the developing countries, are determined to take off, one of the key points governments should set on agenda is to educate more qualified future citizens through elementary education.",
+          "true_label": "Argument",
+          "pred_original": "Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "PE-train-74",
+          "sentence": "Secondly, it is obvious that in many aspects such as communication, trade, cooperation as well as transaction, it will be absolutely easier for the whole society to work together in one language only.",
+          "true_label": "Argument",
+          "pred_original": "Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "PE-train-412",
+          "sentence": "Therefore, I will conclude that technology indeed supports the preservation and promotion of traditional techniques and lifestyles.",
+          "true_label": "Argument",
+          "pred_original": "Argument",
+          "pred_feger": "Argument",
+          "pred_shuffle": "Argument"
+        },
+        {
+          "id": "PE-train-218",
+          "sentence": "Women nowadays are much more active, they may be successful businessmen, they join the political world, they become scientists and so on.",
+          "true_label": "Argument",
+          "pred_original": "Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "PE-train-243",
+          "sentence": "Another reason is that from part time jobs students can earn money, which can help their parents.",
+          "true_label": "Argument",
+          "pred_original": "Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "PE-train-620",
+          "sentence": "They can only input some key words and google it, and then there are numberless articles and websites related to it.",
+          "true_label": "No-Argument",
+          "pred_original": "No-Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "PE-train-616",
+          "sentence": "He can focus on certain companies which he thinks is worth it to invest, and then just waits for the not so high but constant income.",
+          "true_label": "No-Argument",
+          "pred_original": "No-Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "PE-train-953",
+          "sentence": "Also, it provides many advantages.",
+          "true_label": "No-Argument",
+          "pred_original": "No-Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "PE-train-513",
+          "sentence": "Much information as the Internet may provide, most of the sources are unjustified by experts.",
+          "true_label": "No-Argument",
+          "pred_original": "Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "PE-train-578",
+          "sentence": "In the past, seldom people have the chance to attend a collage.",
+          "true_label": "No-Argument",
+          "pred_original": "No-Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        }
+      ]
+    },
+    "SCIARK": {
+      "n_samples": 10,
+      "reports": {
+        "original": {
+          "Argument": {
+            "precision": 0.7142857142857143,
+            "recall": 1.0,
+            "f1-score": 0.8333333333333334,
+            "support": 5.0
+          },
+          "No-Argument": {
+            "precision": 1.0,
+            "recall": 0.6,
+            "f1-score": 0.75,
+            "support": 5.0
+          },
+          "accuracy": 0.8,
+          "macro avg": {
+            "precision": 0.8571428571428572,
+            "recall": 0.8,
+            "f1-score": 0.7916666666666667,
+            "support": 10.0
+          },
+          "weighted avg": {
+            "precision": 0.8571428571428571,
+            "recall": 0.8,
+            "f1-score": 0.7916666666666667,
+            "support": 10.0
+          }
+        },
+        "feger": {
+          "Argument": {
+            "precision": 0.6,
+            "recall": 0.6,
+            "f1-score": 0.6,
+            "support": 5.0
+          },
+          "No-Argument": {
+            "precision": 0.6,
+            "recall": 0.6,
+            "f1-score": 0.6,
+            "support": 5.0
+          },
+          "accuracy": 0.6,
+          "macro avg": {
+            "precision": 0.6,
+            "recall": 0.6,
+            "f1-score": 0.6,
+            "support": 10.0
+          },
+          "weighted avg": {
+            "precision": 0.6,
+            "recall": 0.6,
+            "f1-score": 0.6,
+            "support": 10.0
+          }
+        },
+        "shuffle": {
+          "Argument": {
+            "precision": 1.0,
+            "recall": 0.4,
+            "f1-score": 0.5714285714285714,
+            "support": 5.0
+          },
+          "No-Argument": {
+            "precision": 0.625,
+            "recall": 1.0,
+            "f1-score": 0.7692307692307693,
+            "support": 5.0
+          },
+          "accuracy": 0.7,
+          "macro avg": {
+            "precision": 0.8125,
+            "recall": 0.7,
+            "f1-score": 0.6703296703296704,
+            "support": 10.0
+          },
+          "weighted avg": {
+            "precision": 0.8125,
+            "recall": 0.7,
+            "f1-score": 0.6703296703296703,
+            "support": 10.0
+          }
+        }
+      },
+      "macro_f1_original": 0.7917,
+      "macro_f1_feger": 0.6,
+      "macro_f1_shuffle": 0.6703,
+      "delta_feger": -0.1917,
+      "delta_shuffle": -0.1213,
+      "samples": [
+        {
+          "id": "SCIARK-train-413",
+          "sentence": "We show a positive outcome in pain reduction and improved sexual function, self body image, and gender after psychosexual therapy and clitoral reconstruction.",
+          "true_label": "Argument",
+          "pred_original": "Argument",
+          "pred_feger": "Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "SCIARK-train-94",
+          "sentence": "GBD-2010 likely attributed substantially more deaths with partially specified causes to road injuries than is appropriate.",
+          "true_label": "Argument",
+          "pred_original": "Argument",
+          "pred_feger": "Argument",
+          "pred_shuffle": "Argument"
+        },
+        {
+          "id": "SCIARK-train-449",
+          "sentence": "Conclusion: There were connections between early conditions of life and the health of the elderly, and this might be an important tool for health care for both the individual and the community.",
+          "true_label": "Argument",
+          "pred_original": "Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "SCIARK-train-186",
+          "sentence": "Conclusions: This review presents evidence from LAC about the SRH unmet needs of WLHIV that must be addressed by decreasing institutional and structural barriers, facilitating services and reducing stigma, and discrimination among healthcare providers to improve access to SRHS based on human rights, so women independently of their HIV status can make their own reproductive decisions, free of violence and coercion.",
+          "true_label": "Argument",
+          "pred_original": "Argument",
+          "pred_feger": "Argument",
+          "pred_shuffle": "Argument"
+        },
+        {
+          "id": "SCIARK-train-235",
+          "sentence": "Conclusion: On an individual level personal assessments of health, well-being and joint pain are nevertheless unsteady even within the timeframe of two months.",
+          "true_label": "Argument",
+          "pred_original": "Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "SCIARK-train-745",
+          "sentence": "Title: Transforming rooftops into productive urban spaces in the Mediterranean.",
+          "true_label": "No-Argument",
+          "pred_original": "No-Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "SCIARK-train-816",
+          "sentence": "An indicator based model was developed assessing 11 potential impacts with relevance for the German spatial planning system.",
+          "true_label": "No-Argument",
+          "pred_original": "No-Argument",
+          "pred_feger": "Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "SCIARK-train-703",
+          "sentence": "A questionnaire was developed and tested, resulting in 23 items distributed across the following six areas: self-reliance; leisure time; being an outsider; general and home satisfaction; school satisfaction; and school environment.",
+          "true_label": "No-Argument",
+          "pred_original": "No-Argument",
+          "pred_feger": "Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "SCIARK-train-670",
+          "sentence": "\ufeffHealthcare utilization and costs for women with a history of intimate partner violence.",
+          "true_label": "No-Argument",
+          "pred_original": "Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "SCIARK-train-990",
+          "sentence": "However, concerning proportions of students in 2007 reported: binge drinking, experience of physical and sexual abuse, and witnessing violence in their homes.",
+          "true_label": "No-Argument",
+          "pred_original": "Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        }
+      ]
+    },
+    "USELEC": {
+      "n_samples": 10,
+      "reports": {
+        "original": {
+          "Argument": {
+            "precision": 1.0,
+            "recall": 0.6,
+            "f1-score": 0.75,
+            "support": 5.0
+          },
+          "No-Argument": {
+            "precision": 0.7142857142857143,
+            "recall": 1.0,
+            "f1-score": 0.8333333333333334,
+            "support": 5.0
+          },
+          "accuracy": 0.8,
+          "macro avg": {
+            "precision": 0.8571428571428572,
+            "recall": 0.8,
+            "f1-score": 0.7916666666666667,
+            "support": 10.0
+          },
+          "weighted avg": {
+            "precision": 0.8571428571428571,
+            "recall": 0.8,
+            "f1-score": 0.7916666666666667,
+            "support": 10.0
+          }
+        },
+        "feger": {
+          "Argument": {
+            "precision": 1.0,
+            "recall": 0.6,
+            "f1-score": 0.75,
+            "support": 5.0
+          },
+          "No-Argument": {
+            "precision": 0.7142857142857143,
+            "recall": 1.0,
+            "f1-score": 0.8333333333333334,
+            "support": 5.0
+          },
+          "accuracy": 0.8,
+          "macro avg": {
+            "precision": 0.8571428571428572,
+            "recall": 0.8,
+            "f1-score": 0.7916666666666667,
+            "support": 10.0
+          },
+          "weighted avg": {
+            "precision": 0.8571428571428571,
+            "recall": 0.8,
+            "f1-score": 0.7916666666666667,
+            "support": 10.0
+          }
+        },
+        "shuffle": {
+          "Argument": {
+            "precision": 1.0,
+            "recall": 0.4,
+            "f1-score": 0.5714285714285714,
+            "support": 5.0
+          },
+          "No-Argument": {
+            "precision": 0.625,
+            "recall": 1.0,
+            "f1-score": 0.7692307692307693,
+            "support": 5.0
+          },
+          "accuracy": 0.7,
+          "macro avg": {
+            "precision": 0.8125,
+            "recall": 0.7,
+            "f1-score": 0.6703296703296704,
+            "support": 10.0
+          },
+          "weighted avg": {
+            "precision": 0.8125,
+            "recall": 0.7,
+            "f1-score": 0.6703296703296703,
+            "support": 10.0
+          }
+        }
+      },
+      "macro_f1_original": 0.7917,
+      "macro_f1_feger": 0.7917,
+      "macro_f1_shuffle": 0.6703,
+      "delta_feger": 0.0,
+      "delta_shuffle": -0.1213,
+      "samples": [
+        {
+          "id": "USELEC-train-376",
+          "sentence": "But again, with some of these dictators who hate America and hate what we stand for, with our freedoms, our democracy, our tolerance, our respect for women's rights, those who would try to destroy what we stand for cannot be met with just sitting down on a presidential level as Barack Obama had said he would be willing to do.",
+          "true_label": "Argument",
+          "pred_original": "Argument",
+          "pred_feger": "Argument",
+          "pred_shuffle": "Argument"
+        },
+        {
+          "id": "USELEC-train-258",
+          "sentence": "I think that Senator Kennedy's policies and recommendations for the handling of the Castro regime are probably the most dangers- dangerously irresponsible recommendations that he's made during the course of this campaign.",
+          "true_label": "Argument",
+          "pred_original": "Argument",
+          "pred_feger": "Argument",
+          "pred_shuffle": "Argument"
+        },
+        {
+          "id": "USELEC-train-134",
+          "sentence": "With half of college kids graduating this year without a college -- excuse me, without a job.",
+          "true_label": "Argument",
+          "pred_original": "No-Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "USELEC-train-350",
+          "sentence": "There is more work to be done.",
+          "true_label": "Argument",
+          "pred_original": "No-Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "USELEC-train-488",
+          "sentence": "With the right policies -- prudent policies -- we can have both.",
+          "true_label": "Argument",
+          "pred_original": "Argument",
+          "pred_feger": "Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "USELEC-train-593",
+          "sentence": "He voted against that.",
+          "true_label": "No-Argument",
+          "pred_original": "No-Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "USELEC-train-582",
+          "sentence": "RYAN: In Syria?",
+          "true_label": "No-Argument",
+          "pred_original": "No-Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "USELEC-train-914",
+          "sentence": "So there's a great deal of cynicism out there.",
+          "true_label": "No-Argument",
+          "pred_original": "No-Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "USELEC-train-930",
+          "sentence": "And uh - these projections have been very carefully made.",
+          "true_label": "No-Argument",
+          "pred_original": "No-Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "USELEC-train-756",
+          "sentence": "And you talk about the bad situation in the auto industry.",
+          "true_label": "No-Argument",
+          "pred_original": "No-Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        }
+      ]
+    }
+  },
+  "overall": {
+    "mean_macro_f1_original": 0.6899,
+    "mean_macro_f1_feger": 0.5879,
+    "mean_macro_f1_shuffle": 0.5035,
+    "mean_delta_feger": -0.102,
+    "mean_delta_shuffle": -0.1863
+  }
+}
