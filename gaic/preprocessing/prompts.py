@@ -9,6 +9,7 @@ Synthesis rules:
 1. Distill the definition from the paper into clear, natural prose.
 2. Include what IS an argument AND what is NOT an argument.
 3. Write 3-10 sentences in a cohesive, flowing paragraph.
+4. Do NOT mention the dataset name or refer to "the dataset" or "this dataset" - write the definition generically.
 
 Do NOT include: dataset size, number of annotators, collection methodology, experimental results, model performance, comparisons to other datasets, or author opinions about related work.
 
@@ -35,6 +36,7 @@ Synthesis rules:
 2. Include examples from the guidelines if available.
 3. Write 3-10 sentences in a cohesive, flowing paragraph.
 4. Use your own words to create a clean summary — avoid copying quoted phrases verbatim.
+5. Do NOT mention the dataset name or refer to "the dataset" or "this dataset" - write the criteria generically.
 
 Do NOT include: annotator training procedures, inter-annotator agreement statistics, dataset logistics, file format descriptions, or references to other papers."""
 
