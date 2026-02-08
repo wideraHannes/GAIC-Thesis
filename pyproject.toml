@@ -6,12 +6,16 @@ readme = "README.md"
 requires-python = ">=3.13"
 dependencies = [
     "accelerate>=1.12.0",
+    "kreuzberg>=4.0.0",
     "loguru>=0.7.3",
     "matplotlib>=3.10.8",
     "numpy>=2.4.1",
     "openai>=2.16.0",
     "pandas>=2.3.3",
     "pip>=26.0",
+    "pydantic>=2.0.0",
+    "portkey-ai>=1.0.0",
+    "python-dotenv>=1.0.0",
     "scikit-learn>=1.8.0",
     "seaborn>=0.13.2",
     "spacy>=3.8.11",
@@ -20,7 +24,7 @@ dependencies = [
     "transformers>=5.0.0",
 ]
 [tool.setuptools]
-packages = ["gaic"]
+packages = ["gaic", "gaic.preprocessing", "config"]
 
 [tool.uv]
 package = true
