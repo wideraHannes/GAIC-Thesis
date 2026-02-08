@@ -145,7 +145,7 @@ def assemble_context(context: dict[str, str]) -> str:
 def sample_balanced(
     texts: dict, labels: dict, dataset: str, n: int
 ) -> list[tuple[str, str, str]]:
-    """Return list of (id, sentence, label) balanced across classes."""
+    """Return first n/2 Argument + first n/2 No-Argument samples (deterministic)."""
     samples = [
         (id_, text, labels[id_])
         for id_, text in texts.items()
@@ -154,9 +154,7 @@ def sample_balanced(
     args = [s for s in samples if s[2] == "Argument"]
     no_args = [s for s in samples if s[2] == "No-Argument"]
     k = n // 2
-    return random.sample(args, min(k, len(args))) + random.sample(
-        no_args, min(k, len(no_args))
-    )
+    return args[:k] + no_args[:k]
 
 
 # -- manipulation --
