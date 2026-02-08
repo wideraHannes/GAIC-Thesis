@@ -58,16 +58,88 @@ def dataset_from_id(id_: str) -> str:
     return id_.rsplit("-", 2)[0]
 
 
-def load_definition(dataset: str) -> str:
-    path = CONTEXT_DIR / dataset / "definition.md"
-    if path.exists():
-        return path.read_text().strip()
-    # fallback to dataset.json
+# Map of context source names to their file names, dataset.json fallback keys,
+# and the capability flag that must be true in dataset.json
+CONTEXT_SOURCES = {
+    "definition": {
+        "file": "definition.md",
+        "json_key": "definition",
+        "capability": "has_definition",
+    },
+    "guideline": {
+        "file": "guideline.md",
+        "json_key": "guideline",
+        "capability": "has_guidelines",
+    },
+}
+
+
+def _load_dataset_json(dataset: str) -> dict:
+    """Load and cache dataset.json for a given dataset."""
     json_path = CONTEXT_DIR / dataset / "dataset.json"
     if json_path.exists():
         with open(json_path) as f:
-            return json.load(f).get("definition", "")
-    return ""
+            return json.load(f)
+    return {}
+
+
+def load_context(dataset: str, sources: list[str]) -> dict[str, str]:
+    """Load requested context sources for a dataset.
+
+    Checks dataset.json capabilities to skip sources that aren't available
+    (e.g. has_guidelines: false). Returns a dict mapping source name -> content.
+    """
+    result = {}
+    dataset_json = _load_dataset_json(dataset)
+    capabilities = dataset_json.get("capabilities", {})
+
+    for source in sources:
+        spec = CONTEXT_SOURCES.get(source)
+        if spec is None:
+            # treat as a raw filename in the context dir
+            path = CONTEXT_DIR / dataset / source
+            if path.exists():
+                result[source] = path.read_text().strip()
+            else:
+                logger.warning(
+                    f"Unknown context source '{source}' for {dataset}, skipped"
+                )
+            continue
+
+        # check capability flag — skip if explicitly false
+        cap_key = spec["capability"]
+        if not capabilities.get(cap_key, True):
+            logger.info(f"Skipping '{source}' for {dataset} ({cap_key}=false)")
+            continue
+
+        # try the .md file first
+        md_path = CONTEXT_DIR / dataset / spec["file"]
+        if md_path.exists():
+            content = md_path.read_text().strip()
+            if content:
+                result[source] = content
+                continue
+
+        # fallback to dataset.json value
+        fallback = dataset_json.get(spec["json_key"], "")
+        if fallback:
+            result[source] = fallback
+
+    return result
+
+
+def assemble_context(context: dict[str, str]) -> str:
+    """Format loaded context sources into a single string for the prompt."""
+    if not context:
+        return ""
+    if len(context) == 1:
+        return next(iter(context.values()))
+    parts = []
+    labels = {"definition": "Definition", "guideline": "Annotation Guideline"}
+    for name, content in context.items():
+        label = labels.get(name, name.replace("_", " ").title())
+        parts.append(f"### {label}\n{content}")
+    return "\n\n".join(parts)
 
 
 def sample_balanced(
@@ -120,15 +192,20 @@ def make_client(cfg: dict) -> OpenAI:
             base_url=PORTKEY_GATEWAY_URL,
             api_key=os.environ["PORTKEY_API_KEY"],
         )
+    if provider == "together_ai":
+        return OpenAI(
+            base_url="https://api.together.xyz/v1",
+            api_key=os.environ["TOGETHER_API_KEY"],
+        )
     if provider == "openai":
         return OpenAI(api_key=cfg.get("api_key", ""))
     raise ValueError(f"Unknown provider: {provider}")
 
 
 def classify(
-    client: OpenAI, cfg: dict, prompts_cfg: dict, sentence: str, definition: str
+    client: OpenAI, cfg: dict, prompts_cfg: dict, sentence: str, context: str
 ) -> str:
-    user_prompt = prompts_cfg["user"].format(definition=definition, sentence=sentence)
+    user_prompt = prompts_cfg["user"].format(context=context, sentence=sentence)
     try:
         resp = client.chat.completions.create(
             model=cfg["model"],
@@ -157,7 +234,7 @@ def normalize_label(pred: str) -> str:
 # -- main experiment --
 
 
-def run(config: dict):
+def run(config: dict, config_path: Path | None = None):
     cfg_llm = config["llm"]
     cfg_prompts = config["prompts"]
     datasets = config["datasets"]["enabled"]
@@ -165,24 +242,33 @@ def run(config: dict):
     output_dir = PROJECT_ROOT / config["experiment"]["output_dir"]
     output_dir.mkdir(parents=True, exist_ok=True)
 
+    # context sources: default to ["definition"] for backward compat
+    context_sources = config.get("context", {}).get("sources", ["definition"])
+    logger.info(f"Context sources: {context_sources}")
+
     client = make_client(cfg_llm)
     texts, labels = load_data()
 
     results = {
         "timestamp": datetime.now().isoformat(),
+        "config_path": str(config_path) if config_path else None,
+        "config": config,
         "model": cfg_llm["model"],
         "sample_size": sample_size,
+        "context_sources": context_sources,
         "datasets": {},
     }
 
     for dataset in datasets:
         logger.info(f"--- {dataset} ---")
-        definition = load_definition(dataset)
+        context_parts = load_context(dataset, context_sources)
+        context_str = assemble_context(context_parts)
+        logger.info(f"Loaded context for {dataset}: {list(context_parts.keys())}")
         samples = sample_balanced(texts, labels, dataset, sample_size)
 
         # show prompt once so you can sanity-check
         example_prompt = cfg_prompts["user"].format(
-            definition=definition, sentence=samples[0][1]
+            context=context_str, sentence=samples[0][1]
         )
         logger.info(f"[SYSTEM]\n{cfg_prompts['system']}")
         logger.info(f"[USER]\n{example_prompt}")
@@ -208,7 +294,7 @@ def run(config: dict):
                     manipulated = fn(sentence)
                     record[f"sent_{name}"] = manipulated
                     futures[name] = pool.submit(
-                        classify, client, cfg_llm, cfg_prompts, manipulated, definition
+                        classify, client, cfg_llm, cfg_prompts, manipulated, context_str
                     )
 
                 for name, fut in futures.items():
@@ -287,7 +373,7 @@ def main():
     if not config_path.exists():
         logger.error(f"Config not found: {config_path}")
         return
-    run(load_config(config_path))
+    run(load_config(config_path), config_path=config_path)
 
 
 if __name__ == "__main__":

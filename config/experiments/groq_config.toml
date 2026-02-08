@@ -10,6 +10,9 @@ model = "llama-3.1-8b-instant"
 temperature = 0.0
 max_tokens = 5
 
+[context]
+sources = ["definition"]  # which context files to load: "definition", "guideline"
+
 [datasets]
 enabled = [
     "ABSTRCT",
@@ -25,10 +28,9 @@ enabled = [
 ]
 
 [prompts]
-system = """You are a binary text classifier. Your task is to classify sentences as either "Argument" or "No-Argument" based on a provided definition. Respond with exactly one label: Argument or No-Argument. Do not explain."""
+system = """You are a binary text classifier. Your task is to classify sentences as either "Argument" or "No-Argument" based on the provided context. Respond with exactly one label: Argument or No-Argument. Do not explain."""
 
-user = """Definition:
-{definition}
+user = """{context}
 
 Sentence:
 {sentence}
