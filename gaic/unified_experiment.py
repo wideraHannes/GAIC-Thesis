@@ -13,6 +13,7 @@ import json
 import random
 import sys
 import tomllib
+from concurrent.futures import ThreadPoolExecutor, as_completed
 from datetime import datetime
 from pathlib import Path
 
@@ -176,19 +177,28 @@ def run(config: dict):
         preds = {name: [] for name in MANIPULATIONS}
         sample_records = []
 
-        for sample_id, sentence, true_label in tqdm(samples, desc=dataset):
-            y_true.append(true_label)
-            record = {
-                "id": sample_id,
-                "sentence": sentence,
-                "true_label": true_label,
-            }
-            for name, fn in MANIPULATIONS.items():
-                manipulated = fn(sentence)
-                pred = classify(client, cfg_llm, cfg_prompts, manipulated, definition)
-                preds[name].append(pred)
-                record[f"pred_{name}"] = pred
-            sample_records.append(record)
+        with ThreadPoolExecutor(max_workers=len(MANIPULATIONS)) as pool:
+            for sample_id, sentence, true_label in tqdm(samples, desc=dataset):
+                y_true.append(true_label)
+                record = {
+                    "id": sample_id,
+                    "sentence": sentence,
+                    "true_label": true_label,
+                }
+
+                # fire all 3 manipulations in parallel
+                futures = {}
+                for name, fn in MANIPULATIONS.items():
+                    manipulated = fn(sentence)
+                    futures[name] = pool.submit(
+                        classify, client, cfg_llm, cfg_prompts, manipulated, definition
+                    )
+
+                for name, fut in futures.items():
+                    pred = fut.result()
+                    preds[name].append(pred)
+                    record[f"pred_{name}"] = pred
+                sample_records.append(record)
 
         # classification_report per variant
         reports = {}
