@@ -1,0 +1,1864 @@
+{
+  "timestamp": "2026-02-09T21:35:08.501406",
+  "config_path": "config/experiments/together_mistral-24B_config_full_30.toml",
+  "config": {
+    "experiment": {
+      "experiment_name": "full",
+      "sample_size": 30,
+      "output_dir": "experiments/unified_outputs"
+    },
+    "llm": {
+      "provider": "together_ai",
+      "model": "mistralai/Mistral-Small-24B-Instruct-2501",
+      "temperature": 0.0,
+      "max_tokens": 5
+    },
+    "context": {
+      "sources": [
+        "definition",
+        "guideline",
+        "document_context"
+      ]
+    },
+    "datasets": {
+      "enabled": [
+        "ABSTRCT",
+        "ARGUMINSCI",
+        "PE",
+        "USELEC"
+      ]
+    }
+  },
+  "prompts": {
+    "system": "## Role\nYou are a Dataset Annotator. Classify the input as \"Argument\" or \"No-Argument\".\nRespond with exactly one label. Do not explain.\n\n## Rules\n- Only classify as \"Argument\" if the sentence clearly matches the argument definition below.\n\n{context}",
+    "user": "{sentence}"
+  },
+  "model": "mistralai/Mistral-Small-24B-Instruct-2501",
+  "sample_size": 30,
+  "context_sources": [
+    "definition",
+    "guideline",
+    "document_context"
+  ],
+  "datasets": {
+    "ABSTRCT": {
+      "n_samples": 30,
+      "reports": {
+        "original": {
+          "Argument": {
+            "precision": 0.6666666666666666,
+            "recall": 0.6666666666666666,
+            "f1-score": 0.6666666666666666,
+            "support": 15.0
+          },
+          "No-Argument": {
+            "precision": 0.6666666666666666,
+            "recall": 0.6666666666666666,
+            "f1-score": 0.6666666666666666,
+            "support": 15.0
+          },
+          "accuracy": 0.6666666666666666,
+          "macro avg": {
+            "precision": 0.6666666666666666,
+            "recall": 0.6666666666666666,
+            "f1-score": 0.6666666666666666,
+            "support": 30.0
+          },
+          "weighted avg": {
+            "precision": 0.6666666666666666,
+            "recall": 0.6666666666666666,
+            "f1-score": 0.6666666666666666,
+            "support": 30.0
+          }
+        },
+        "feger": {
+          "Argument": {
+            "precision": 0.6,
+            "recall": 0.4,
+            "f1-score": 0.48,
+            "support": 15.0
+          },
+          "No-Argument": {
+            "precision": 0.55,
+            "recall": 0.7333333333333333,
+            "f1-score": 0.6285714285714286,
+            "support": 15.0
+          },
+          "accuracy": 0.5666666666666667,
+          "macro avg": {
+            "precision": 0.575,
+            "recall": 0.5666666666666667,
+            "f1-score": 0.5542857142857143,
+            "support": 30.0
+          },
+          "weighted avg": {
+            "precision": 0.575,
+            "recall": 0.5666666666666667,
+            "f1-score": 0.5542857142857142,
+            "support": 30.0
+          }
+        },
+        "shuffle": {
+          "Argument": {
+            "precision": 0.5,
+            "recall": 0.06666666666666667,
+            "f1-score": 0.11764705882352941,
+            "support": 15.0
+          },
+          "No-Argument": {
+            "precision": 0.5,
+            "recall": 0.9333333333333333,
+            "f1-score": 0.6511627906976745,
+            "support": 15.0
+          },
+          "accuracy": 0.5,
+          "macro avg": {
+            "precision": 0.5,
+            "recall": 0.5,
+            "f1-score": 0.38440492476060195,
+            "support": 30.0
+          },
+          "weighted avg": {
+            "precision": 0.5,
+            "recall": 0.5,
+            "f1-score": 0.38440492476060195,
+            "support": 30.0
+          }
+        }
+      },
+      "macro_f1_original": 0.6667,
+      "macro_f1_feger": 0.5543,
+      "macro_f1_shuffle": 0.3844,
+      "delta_feger": -0.1124,
+      "delta_shuffle": -0.2823,
+      "samples": [
+        {
+          "id": "ABSTRCT-train-1",
+          "sentence": "Both treatments were safe and well tolerated.",
+          "true_label": "Argument",
+          "document_context": "Decreases in IPSS were greater in degarelix than in goserelin-treated patients, differences being statistically significant in patients with baseline IPSS > 13 (-6.7 \u00b1 1.8 vs -4.0 \u00b1 1.0; P = 0.02).\nThe number of patients with an IPSS change of \u2265 3 over baseline was also significantly higher in patients treated with degarelix (61.0 vs 44.3%, P = 0.02).",
+          "sent_original": "Both treatments were safe and well tolerated.",
+          "sent_feger": "treatments safe tolerated",
+          "sent_shuffle": "safe tolerated. Both were treatments well and",
+          "pred_original": "No-Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "ABSTRCT-train-2",
+          "sentence": "The TAX 326 study shows that docetaxel-platinum regimens relieve symptoms and improve QoL in patients with advanced NSCLC.",
+          "true_label": "Argument",
+          "document_context": "DC-treated patients experienced improved pain relief compared with VC (P=0.033), whereas pain relief with DCb and VC was similar.\nPatients treated with either docetaxel regimen had more favorable changes in performance status (P=0.065 for DC and P<0.001 for DCb versus VC) and mean weight loss (0.06 kg, gain of 0.08 kg, and 2.27 kg for DC, DCb, and VC, respectively; P<0.001 for both DC versus VC and DCb versus VC).",
+          "sent_original": "The TAX 326 study shows that docetaxel-platinum regimens relieve symptoms and improve QoL in patients with advanced NSCLC.",
+          "sent_feger": "tax 326 study shows docetaxel platinum regimens relieve symptoms improve qol patients advanced nsclc",
+          "sent_shuffle": "symptoms TAX regimens and shows study QoL NSCLC. advanced relieve with 326 that improve docetaxel-platinum in patients The",
+          "pred_original": "Argument",
+          "pred_feger": "Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "ABSTRCT-train-3",
+          "sentence": "Docetaxel has shown activity in elderly patients with advanced non-small-cell lung cancer (NSCLC).",
+          "true_label": "Argument",
+          "document_context": "",
+          "sent_original": "Docetaxel has shown activity in elderly patients with advanced non-small-cell lung cancer (NSCLC).",
+          "sent_feger": "docetaxel shown activity elderly patients advanced non small cell lung cancer nsclc",
+          "sent_shuffle": "in advanced with patients has activity Docetaxel non-small-cell elderly cancer lung shown (NSCLC).",
+          "pred_original": "Argument",
+          "pred_feger": "Argument",
+          "pred_shuffle": "Argument"
+        },
+        {
+          "id": "ABSTRCT-train-4",
+          "sentence": "Targeted therapies may improve chemotherapy effectiveness without worsening toxicity.",
+          "true_label": "Argument",
+          "document_context": "Chemotherapy prolongs survival and improves quality of life (QOL) for good performance status (PS) patients with advanced non-small cell lung cancer (NSCLC).",
+          "sent_original": "Targeted therapies may improve chemotherapy effectiveness without worsening toxicity.",
+          "sent_feger": "targeted therapies improve chemotherapy effectiveness worsening toxicity",
+          "sent_shuffle": "may worsening Targeted improve toxicity. chemotherapy without effectiveness therapies",
+          "pred_original": "Argument",
+          "pred_feger": "Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "ABSTRCT-train-5",
+          "sentence": "The incidence of hepatotoxicity during IPT and ART was high.",
+          "true_label": "Argument",
+          "document_context": "Raised pretreatment AST/ALT (odds ratio [OR] 3.6, 95% confidence interval [CI]: 1.7 to 7.7) and hepatitis B surface antigen (HBsAg) seropositivity at baseline (OR 4.7, 95% CI: 1.7 to 12.9) were significantly associated with an increased risk of developing hepatotoxicity.\nParticipants with both raised AST/ALT and positive HBsAg had a higher risk (OR 19.9, 95% CI: 5.3 to 74.3) and earlier onset of hepatotoxicity than participants who did not have these conditions at baseline.",
+          "sent_original": "The incidence of hepatotoxicity during IPT and ART was high.",
+          "sent_feger": "incidence hepatotoxicity ipt art high",
+          "sent_shuffle": "and ART of high. IPT hepatotoxicity The during was incidence",
+          "pred_original": "Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "ABSTRCT-train-6",
+          "sentence": "The small sample size may have limited our ability to detect significant differences beyond 6 months of observation as well as additional significant differences in our study.",
+          "true_label": "Argument",
+          "document_context": "The same pattern between intervention and control patients was observed for scores on the PSS-H&N.\nPatients who performed prophylactic swallowing exercises had improved swallowing function at 3 and 6 months after CRT but not immediately after CRT or at 9 and 12 months after CRT.",
+          "sent_original": "The small sample size may have limited our ability to detect significant differences beyond 6 months of observation as well as additional significant differences in our study.",
+          "sent_feger": "small sample size limited ability detect significant differences 6 months observation additional significant differences study",
+          "sent_shuffle": "study. to size months have The small significant our additional differences ability 6 well may of detect sample significant in as beyond as differences limited observation our",
+          "pred_original": "No-Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "ABSTRCT-train-7",
+          "sentence": "Scapula-oriented exercise had beneficial effects on pain, quality of life and aspects of strength.",
+          "true_label": "Argument",
+          "document_context": "The scapula-oriented exercise group showed improvements in pain, physical function, social function, and global quality of life compared with baseline, whereas the general exercise group showed improved fatigue and range of motion.\nThe change in global quality of life (P = 0.067; effect size, 0.33) and strength of external rotation (P = 0.001; effect size, 0.55) were significantly greater in the scapula-oriented exercise group than in the general exercise and control group.",
+          "sent_original": "Scapula-oriented exercise had beneficial effects on pain, quality of life and aspects of strength.",
+          "sent_feger": "scapula oriented exercise beneficial effects pain quality life aspects strength",
+          "sent_shuffle": "on of had life Scapula-oriented exercise of and pain, beneficial aspects effects strength. quality",
+          "pred_original": "Argument",
+          "pred_feger": "Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "ABSTRCT-train-8",
+          "sentence": "Despite the early closure of the study and the lack of power of the comparison, it seems that ldLV5FU2 could be considered as an active, easier and less expensive option for the treatment of metastatic colorectal cancer compared to classic LV5FU2 or weekly HD-FU.",
+          "true_label": "Argument",
+          "document_context": "Progression-free survival (PFS) of the patients in the Tomudex arm was statistically lower compared to that of patients treated with LV5FU2 or ldLV5FU2 (combined group; p = 0.013, log rank test).\nIn conclusion, Tomudex is more toxic and yields shorter PFS than infusional 5FU.",
+          "sent_original": "Despite the early closure of the study and the lack of power of the comparison, it seems that ldLV5FU2 could be considered as an active, easier and less expensive option for the treatment of metastatic colorectal cancer compared to classic LV5FU2 or weekly HD-FU.",
+          "sent_feger": "early closure study lack power comparison ldlv5fu2 considered active easier expensive option treatment metastatic colorectal cancer compared classic lv5fu2 weekly hd fu",
+          "sent_shuffle": "the option the of Despite as treatment that ldLV5FU2 early easier colorectal it the compared of an the could active, closure considered less lack classic seems of and study LV5FU2 cancer expensive metastatic be to the and power or for weekly HD-FU. of comparison,",
+          "pred_original": "Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "ABSTRCT-train-9",
+          "sentence": "One-site fornix-based and 2-site limbus-based phacotrabeculectomy were similarly effective in lowering IOP and reducing the need for antiglaucoma medications over a 3-year follow-up period.",
+          "true_label": "Argument",
+          "document_context": "Operating time (in minutes) was less in the 1-site surgery group (P<0.0001).\nDay one postoperative IOP was higher in the 2-site group (P = 0.0.01).",
+          "sent_original": "One-site fornix-based and 2-site limbus-based phacotrabeculectomy were similarly effective in lowering IOP and reducing the need for antiglaucoma medications over a 3-year follow-up period.",
+          "sent_feger": "site fornix based 2 site limbus based phacotrabeculectomy similarly effective lowering iop reducing need antiglaucoma medications 3 year follow period",
+          "sent_shuffle": "antiglaucoma and a the reducing and One-site similarly period. limbus-based effective medications for need 2-site IOP were fornix-based over in follow-up lowering phacotrabeculectomy 3-year",
+          "pred_original": "Argument",
+          "pred_feger": "Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "ABSTRCT-train-10",
+          "sentence": "Treatment with PB+G increased the incidence of severe neutropenia and dyspnea, although the regimen generally was well tolerated.",
+          "true_label": "Argument",
+          "document_context": "Patients treated with PB experienced more improvement in total FACT-B (Functional Assessment of Cancer Therapy-Breast) (P = .021), FACT-B Social/Family Well-being (P = .041), and Breast Cancer-Additional Concerns (P = .008) scores than patients treated with PB+G.\nThe addition of gemcitabine to PB was not associated with a statistically significant improvement in ORR.",
+          "sent_original": "Treatment with PB+G increased the incidence of severe neutropenia and dyspnea, although the regimen generally was well tolerated.",
+          "sent_feger": "treatment pb+g increased incidence severe neutropenia dyspnea regimen generally tolerated",
+          "sent_shuffle": "Treatment neutropenia increased well dyspnea, of was and generally incidence regimen although the with severe the tolerated. PB+G",
+          "pred_original": "No-Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "ABSTRCT-train-11",
+          "sentence": "HDC has a negative impact on QOL even after treatment phase.",
+          "true_label": "Argument",
+          "document_context": "This negative impact tended to last longer in the HDC group, as for most of the QLQ-C30 scales, the QOL scores of HDC patients tend to improve at a slower rate than that of patients receiving standard chemotherapy.\nIn particular, physical functioning remains deteriorated 1 year after inclusion for HDC patients comparatively to conventional chemotherapy patients (85.99 vs. 76.65, P = 0.021), and the pain score was still higher in the HDC group at that time (28.32 vs. 15.97, P = 0.004).",
+          "sent_original": "HDC has a negative impact on QOL even after treatment phase.",
+          "sent_feger": "hdc negative impact qol treatment phase",
+          "sent_shuffle": "a QOL on after HDC treatment impact phase. has even negative",
+          "pred_original": "Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "ABSTRCT-train-12",
+          "sentence": "Compared with multiple-fraction radiotherapy, single-fraction radiotherapy provides equal palliation and quality of life and has lower medical and societal costs, at least in The Netherlands.",
+          "true_label": "Argument",
+          "document_context": "The estimated difference in total societal costs was larger, also in favor of the single-fraction schedule, but it was not statistically significant ($4700 versus $6453, difference = $1753, 95% CI on the difference = -$99 to $3604; P =.06).\nFor willingness-to-pay between $5000 and $40 000 per quality-adjusted life year, the single-fraction schedule was statistically significantly more cost-effective than the multiple-fraction schedule (P< or =.05).",
+          "sent_original": "Compared with multiple-fraction radiotherapy, single-fraction radiotherapy provides equal palliation and quality of life and has lower medical and societal costs, at least in The Netherlands.",
+          "sent_feger": "compared multiple fraction radiotherapy single fraction radiotherapy provides equal palliation quality life lower medical societal costs netherlands",
+          "sent_shuffle": "has of lower Compared and The societal Netherlands. radiotherapy, medical and multiple-fraction at least equal life and in provides quality single-fraction costs, palliation with radiotherapy",
+          "pred_original": "Argument",
+          "pred_feger": "Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "ABSTRCT-train-13",
+          "sentence": "At present, it does not seem cost-effective to introduce MMS on a large scale for both primary and recurrent BCC.",
+          "true_label": "Argument",
+          "document_context": "For primary BCC, the incremental cost-effectiveness ratio was 29,231 euros, while the ratio for recurrent BCC amounted to 8094 euros.\nThe acceptability curves showed that for these ratios, the probability of MMS being more cost-effective than surgical excision never reached 50%.",
+          "sent_original": "At present, it does not seem cost-effective to introduce MMS on a large scale for both primary and recurrent BCC.",
+          "sent_feger": "present cost effective introduce mms large scale primary recurrent bcc",
+          "sent_shuffle": "on cost-effective recurrent and MMS it At BCC. to does large a introduce primary present, seem both not for scale",
+          "pred_original": "Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "ABSTRCT-train-14",
+          "sentence": "Effects of HT on toxicities, treatment delay, QOL, and fatigue were not observed.",
+          "true_label": "Argument",
+          "document_context": "No between group differences were observed in QOL, treatment delay, or clinically-rated toxicities.\nHT may benefit cervical cancer patients by moderating effects of chemoradiation on depressed mood and cellular immunity.",
+          "sent_original": "Effects of HT on toxicities, treatment delay, QOL, and fatigue were not observed.",
+          "sent_feger": "effects ht toxicities treatment delay qol fatigue observed",
+          "sent_shuffle": "of QOL, were HT Effects treatment on not observed. toxicities, delay, fatigue and",
+          "pred_original": "No-Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "ABSTRCT-train-15",
+          "sentence": "This trial was undertaken to assess whether octreotide would lower insulin and IGF-1 levels and reduce risk of breast cancer recurrence.",
+          "true_label": "Argument",
+          "document_context": "Somatostatin analogs act directly on breast cancer cells and indirectly on insulin and insulin-like growth factor 1 (IGF-1) levels.",
+          "sent_original": "This trial was undertaken to assess whether octreotide would lower insulin and IGF-1 levels and reduce risk of breast cancer recurrence.",
+          "sent_feger": "trial undertaken assess octreotide lower insulin igf-1 levels reduce risk breast cancer recurrence",
+          "sent_shuffle": "cancer reduce recurrence. was and risk to would trial of lower insulin IGF-1 and breast octreotide undertaken This assess levels whether",
+          "pred_original": "No-Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "ABSTRCT-train-511",
+          "sentence": "Participants were enrolled in a randomized intervention trial to treat sexual dysfunction and completed outcome measures prior to randomization.",
+          "true_label": "No-Argument",
+          "document_context": "This study examined the characteristics of women enrolled in an intervention trial to treat sexual dysfunction, and explored the relationship between sexual functioning and psychological well-being.\nThere were 70 female posttreatment anal or rectal cancer survivors assessed as part of the current study.",
+          "sent_original": "Participants were enrolled in a randomized intervention trial to treat sexual dysfunction and completed outcome measures prior to randomization.",
+          "sent_feger": "participants enrolled randomized intervention trial treat sexual dysfunction completed outcome measures prior randomization",
+          "sent_shuffle": "enrolled were measures prior dysfunction trial in a completed to randomization. treat and randomized outcome intervention Participants sexual to",
+          "pred_original": "No-Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "ABSTRCT-train-512",
+          "sentence": "QoL:",
+          "true_label": "No-Argument",
+          "document_context": "There was no statistically significant difference in grade 3/4 neutropenia and thrombocytopenia between the four arms.\nNo difference was observed in hospitalization rate, blood transfusions, antibiotics administration and non-haematological toxicity.",
+          "sent_original": "QoL:",
+          "sent_feger": "qol",
+          "sent_shuffle": "QoL:",
+          "pred_original": "No-Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "ABSTRCT-train-513",
+          "sentence": "Prespecified outcomes were three genitourinary symptoms (bowel function tenderness, frequent urination, and erectile dysfunction [ED]) and measures of physical and emotional function.",
+          "true_label": "No-Argument",
+          "document_context": "Two-hundred seventeen of 425 therapeutic trial patients were eligible and registered to the HRQL study.\nPatients completed the SWOG Quality of Life Questionnaire (emotional, physical, social, and role function; general symptom status; treatment/disease-specific symptoms; and global HRQL [GHRQL]) at baseline, 6 weeks, 6 months, and annually for 5 years.",
+          "sent_original": "Prespecified outcomes were three genitourinary symptoms (bowel function tenderness, frequent urination, and erectile dysfunction [ED]) and measures of physical and emotional function.",
+          "sent_feger": "prespecified outcomes genitourinary symptoms bowel function tenderness frequent urination erectile dysfunction ed measures physical emotional function",
+          "sent_shuffle": "and were Prespecified urination, tenderness, (bowel frequent and dysfunction measures outcomes three emotional [ED]) genitourinary of erectile function. and symptoms function physical",
+          "pred_original": "No-Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "ABSTRCT-train-514",
+          "sentence": "At six oncology clinics, physicians (N=22) and nurses (N=23) enrolled patients (N=93) who were over 18 years of age, with cancer diagnoses, pain, and a life expectancy of at least 6 months.",
+          "true_label": "No-Argument",
+          "document_context": "Methods are needed to reduce professional time required while achieving sustained intervention effectiveness.\nIn a multisite, randomized controlled trial, this study tested a pain training method versus a nutrition control.",
+          "sent_original": "At six oncology clinics, physicians (N=22) and nurses (N=23) enrolled patients (N=93) who were over 18 years of age, with cancer diagnoses, pain, and a life expectancy of at least 6 months.",
+          "sent_feger": "oncology clinics physicians n=22 nurses n=23 enrolled patients n=93 18 years age cancer diagnoses pain life expectancy 6 months",
+          "sent_shuffle": "(N=23) physicians least of enrolled life oncology over pain, cancer who with years clinics, at expectancy At 6 a were months. and (N=22) age, nurses diagnoses, patients and of (N=93) six 18",
+          "pred_original": "No-Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "ABSTRCT-train-515",
+          "sentence": "Patients in both arms were assessed every 3 weeks.",
+          "true_label": "No-Argument",
+          "document_context": "They were excluded if they had symptomatic brain metastases or if they had previously been treated with paclitaxel.\nPatients were stratified by performance status and best response to cisplatin chemotherapy and were then randomized to treatment with docetaxel 100 mg/m(2) (49 patients) or 75 mg/m(2) (55 patients) or best supportive care.",
+          "sent_original": "Patients in both arms were assessed every 3 weeks.",
+          "sent_feger": "patients arms assessed 3 weeks",
+          "sent_shuffle": "every were both arms in assessed 3 weeks. Patients",
+          "pred_original": "No-Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "ABSTRCT-train-516",
+          "sentence": "Patients completed questionnaires before and after the visit and were interviewed by telephone at 2, 6, and 12 weeks.",
+          "true_label": "No-Argument",
+          "document_context": "We aimed to determine the effectiveness of a lay-administered tailored education and coaching (TEC) intervention (aimed at reducing pain misconceptions and enhancing self-efficacy for communicating with physicians) on cancer pain severity, pain-related impairment, and quality of life.\nCancer patients with baseline \"worst pain\" of \u22654 on a 0-10 scale or at least moderate functional impairment due to pain were randomly assigned to TEC or enhanced usual care (EUC) during a telephone interview conducted in advance of a planned oncology office visit (265 patients randomized to TEC or EUC; 258 completed at least one follow-up).",
+          "sent_original": "Patients completed questionnaires before and after the visit and were interviewed by telephone at 2, 6, and 12 weeks.",
+          "sent_feger": "patients completed questionnaires visit interviewed telephone 2 6 12 weeks",
+          "sent_shuffle": "questionnaires telephone and after weeks. 12 and and by 6, before visit were at Patients the completed 2, interviewed",
+          "pred_original": "No-Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "ABSTRCT-train-517",
+          "sentence": "The total short-term remission rate, the improvement rate of clinical syndrome and quality of life was 50.0%, 70.0% and 76.7% in the treatment group, and 43.3%, 46.7% and 50.0% in the control group, respectively, showing significant difference between the two groups (all P < 0.05).",
+          "true_label": "No-Argument",
+          "document_context": "All patients were treated with the same CTF regimen of chemotherapy for 21 days as one therapeutic cycle, while those in the treatment group were given SFI additionally in the meanwhite.\nThe therapeutic efficacy was evaluated after 2 cycles of treatment by observing the changes of short-term efficacy, TCM syndrome, quality of life and immune function, as well as the adverse reaction.",
+          "sent_original": "The total short-term remission rate, the improvement rate of clinical syndrome and quality of life was 50.0%, 70.0% and 76.7% in the treatment group, and 43.3%, 46.7% and 50.0% in the control group, respectively, showing significant difference between the two groups (all P < 0.05).",
+          "sent_feger": "total short term remission rate improvement rate clinical syndrome quality life 50.0 70.0 76.7 treatment group 43.3 46.7 50.0 control group respectively showing significant difference groups p < 0.05",
+          "sent_shuffle": "significant and The and difference the rate, respectively, between syndrome and P control group, showing the 43.3%, rate treatment 0.05). (all group, remission was and in two in 46.7% < short-term 76.7% total of the the improvement 50.0%, groups life clinical quality 70.0% 50.0% of",
+          "pred_original": "Argument",
+          "pred_feger": "Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "ABSTRCT-train-518",
+          "sentence": "Breast intensity-modulated radiation therapy (IMRT) is a technique that ensures a more homogeneous dose distribution.",
+          "true_label": "No-Argument",
+          "document_context": "Dermatitis is a frequent adverse effect of adjuvant breast radiotherapy.\nIt is more likely in full-breasted women and when the radiation is distributed nonhomogeneously in the breast.",
+          "sent_original": "Breast intensity-modulated radiation therapy (IMRT) is a technique that ensures a more homogeneous dose distribution.",
+          "sent_feger": "breast intensity modulated radiation therapy imrt technique ensures homogeneous dose distribution",
+          "sent_shuffle": "homogeneous (IMRT) that radiation a dose therapy Breast intensity-modulated a more ensures is distribution. technique",
+          "pred_original": "No-Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "ABSTRCT-train-519",
+          "sentence": "Acupuncture had the additional benefit of increased sex drive in some women, and most reported an improvement in their energy, clarity of thought, and sense of well-being.",
+          "true_label": "No-Argument",
+          "document_context": "By 2 weeks post-treatment, the venlafaxine group experienced significant increases in hot flashes, whereas hot flashes in the acupuncture group remained at low levels.\nThe venlafaxine group experienced 18 incidences of adverse effects (eg, nausea, dry mouth, dizziness, anxiety), whereas the acupuncture group experienced no negative adverse effects.",
+          "sent_original": "Acupuncture had the additional benefit of increased sex drive in some women, and most reported an improvement in their energy, clarity of thought, and sense of well-being.",
+          "sent_feger": "acupuncture additional benefit increased sex drive women reported improvement energy clarity thought sense",
+          "sent_shuffle": "women, an increased thought, had some drive clarity their of most and of benefit in the sense reported improvement in and sex energy, Acupuncture of well-being. additional",
+          "pred_original": "Argument",
+          "pred_feger": "Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "ABSTRCT-train-520",
+          "sentence": "The trial was designed to use one-sided tests of significance for power calculations, but is now reported with both one-sided and the traditional two-sided tests of significance.",
+          "true_label": "No-Argument",
+          "document_context": "Toxicity was evaluated by the Common Toxicity Criteria (CTC).\nTreatment-related quality of life was assessed by the Breast Chemotherapy Questionnaire (BCQ) before, during, and 4 months after treatment in 163 patients.",
+          "sent_original": "The trial was designed to use one-sided tests of significance for power calculations, but is now reported with both one-sided and the traditional two-sided tests of significance.",
+          "sent_feger": "trial designed use sided tests significance power calculations reported sided traditional sided tests significance",
+          "sent_shuffle": "of was trial with of designed to power but significance. two-sided is both reported the for now tests and The one-sided one-sided traditional tests use calculations, significance",
+          "pred_original": "No-Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "ABSTRCT-train-521",
+          "sentence": "The median survival in the patients receiving induction chemotherapy only was 8.9 months.",
+          "true_label": "No-Argument",
+          "document_context": "The median progression-free survival was 14 months.\nNo difference in the 1-year survival rate (70% vs. 66%) or median survival time (19.4 vs. 17.4 months) between the surgery and RT arms.",
+          "sent_original": "The median survival in the patients receiving induction chemotherapy only was 8.9 months.",
+          "sent_feger": "median survival patients receiving induction chemotherapy 8.9 months",
+          "sent_shuffle": "the patients 8.9 induction was The only median survival months. chemotherapy in receiving",
+          "pred_original": "Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "ABSTRCT-train-522",
+          "sentence": "The pectoral stretching program did not influence the outcomes measured because the symptoms reported by patients were not a consequence of contracture.",
+          "true_label": "No-Argument",
+          "document_context": "Breast symptoms increased for both groups during radiotherapy, without loss of strength or range of movement.\nThe incidence of lymphedema during the study was low for both groups and did not differ between groups.",
+          "sent_original": "The pectoral stretching program did not influence the outcomes measured because the symptoms reported by patients were not a consequence of contracture.",
+          "sent_feger": "pectoral stretching program influence outcomes measured symptoms reported patients consequence contracture",
+          "sent_shuffle": "patients of a not by outcomes The pectoral influence the stretching program not symptoms because did contracture. measured reported were the consequence",
+          "pred_original": "No-Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "ABSTRCT-train-523",
+          "sentence": "In addition, the long-term effectiveness was investigated.",
+          "true_label": "No-Argument",
+          "document_context": "A randomised controlled trial (RCT) demonstrated that cognitive behaviour therapy (CBT) for fatigue during curative cancer treatment was effective shortly after cancer treatment.\nThis study aimed to identify which patient characteristics predict fatigue improvement after CBT.",
+          "sent_original": "In addition, the long-term effectiveness was investigated.",
+          "sent_feger": "addition long term effectiveness investigated",
+          "sent_shuffle": "was addition, the long-term investigated. In effectiveness",
+          "pred_original": "No-Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "ABSTRCT-train-524",
+          "sentence": "The difference was more significant for docetaxel 75 mg/m(2) patients, compared with corresponding best supportive care patients (7.5 v 4.6 months; log-rank test, P =.010; 1-year survival, 37% v 11%; chi(2) test, P =.003).",
+          "true_label": "No-Argument",
+          "document_context": "Of 84 patients with measurable lesions, six (7. 1%) achieved partial responses (three patients at each dose level).\nTime to progression was longer for docetaxel patients than for best supportive care patients (10.6 v 6.7 weeks, respectively; P <.001), as was median survival (7.0 v 4.6 months; log-rank test, P =.047).",
+          "sent_original": "The difference was more significant for docetaxel 75 mg/m(2) patients, compared with corresponding best supportive care patients (7.5 v 4.6 months; log-rank test, P =.010; 1-year survival, 37% v 11%; chi(2) test, P =.003).",
+          "sent_feger": "difference significant docetaxel 75 mg m(2 patients compared corresponding best supportive care patients 7.5 v 4.6 months log rank test p = .010 1 year survival 37 11 chi(2 test p = .003",
+          "sent_shuffle": "patients months; 75 compared =.010; 11%; log-rank P care supportive more =.003). significant patients, 4.6 test, corresponding docetaxel v with test, 37% best mg/m(2) difference P v was (7.5 1-year for survival, chi(2) The",
+          "pred_original": "Argument",
+          "pred_feger": "Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "ABSTRCT-train-525",
+          "sentence": "Latanoprost 0.005% once daily reduced IOP more effectively than latanoprost 0.0015% twice daily (P < 0.001).",
+          "true_label": "No-Argument",
+          "document_context": "There was no statistically significant difference in the change in aqueous humour protein concentration from baseline between latanoprost and timolol groups (P = 0.08).\nNo statistically significant difference in conjunctival hyperemia between the two latanoprost regimens was found (P = 0.37).",
+          "sent_original": "Latanoprost 0.005% once daily reduced IOP more effectively than latanoprost 0.0015% twice daily (P < 0.001).",
+          "sent_feger": "latanoprost 0.005 daily reduced iop effectively latanoprost 0.0015 twice daily p < 0.001",
+          "sent_shuffle": "daily Latanoprost than once IOP < more effectively 0.001). daily reduced 0.005% latanoprost (P 0.0015% twice",
+          "pred_original": "Argument",
+          "pred_feger": "Argument",
+          "pred_shuffle": "Argument"
+        }
+      ]
+    },
+    "ARGUMINSCI": {
+      "n_samples": 30,
+      "reports": {
+        "original": {
+          "Argument": {
+            "precision": 0.8,
+            "recall": 0.8,
+            "f1-score": 0.8,
+            "support": 15.0
+          },
+          "No-Argument": {
+            "precision": 0.8,
+            "recall": 0.8,
+            "f1-score": 0.8,
+            "support": 15.0
+          },
+          "accuracy": 0.8,
+          "macro avg": {
+            "precision": 0.8,
+            "recall": 0.8,
+            "f1-score": 0.8,
+            "support": 30.0
+          },
+          "weighted avg": {
+            "precision": 0.8,
+            "recall": 0.8,
+            "f1-score": 0.8,
+            "support": 30.0
+          }
+        },
+        "feger": {
+          "Argument": {
+            "precision": 0.3333333333333333,
+            "recall": 0.06666666666666667,
+            "f1-score": 0.1111111111111111,
+            "support": 15.0
+          },
+          "No-Argument": {
+            "precision": 0.48148148148148145,
+            "recall": 0.8666666666666667,
+            "f1-score": 0.6190476190476191,
+            "support": 15.0
+          },
+          "accuracy": 0.4666666666666667,
+          "macro avg": {
+            "precision": 0.4074074074074074,
+            "recall": 0.4666666666666667,
+            "f1-score": 0.3650793650793651,
+            "support": 30.0
+          },
+          "weighted avg": {
+            "precision": 0.4074074074074074,
+            "recall": 0.4666666666666667,
+            "f1-score": 0.36507936507936506,
+            "support": 30.0
+          }
+        },
+        "shuffle": {
+          "Argument": {
+            "precision": 1.0,
+            "recall": 0.06666666666666667,
+            "f1-score": 0.125,
+            "support": 15.0
+          },
+          "No-Argument": {
+            "precision": 0.5172413793103449,
+            "recall": 1.0,
+            "f1-score": 0.6818181818181818,
+            "support": 15.0
+          },
+          "accuracy": 0.5333333333333333,
+          "macro avg": {
+            "precision": 0.7586206896551724,
+            "recall": 0.5333333333333333,
+            "f1-score": 0.4034090909090909,
+            "support": 30.0
+          },
+          "weighted avg": {
+            "precision": 0.7586206896551725,
+            "recall": 0.5333333333333333,
+            "f1-score": 0.4034090909090909,
+            "support": 30.0
+          }
+        }
+      },
+      "macro_f1_original": 0.8,
+      "macro_f1_feger": 0.3651,
+      "macro_f1_shuffle": 0.4034,
+      "delta_feger": -0.4349,
+      "delta_shuffle": -0.3966,
+      "samples": [
+        {
+          "id": "ARGUMINSCI-train-1",
+          "sentence": "The four selected fabrics span a large range of possible cloth behaviors.",
+          "true_label": "Argument",
+          "document_context": "To illustrate the fitting residuals more quantitatively, we show a force-displacement plot comparing a summary of the measured forces to the predictions of the fitted model and a vector-field plot illustrating the position error over the geometry of the fitted mesh (see caption for details).\nSimilar tables are shown for all cloth samples and several model variants in the supplementary document.",
+          "sent_original": "The four selected fabrics span a large range of possible cloth behaviors.",
+          "sent_feger": "selected fabrics span large range possible cloth behaviors",
+          "sent_shuffle": "possible four fabrics range selected The span behaviors. of large cloth a",
+          "pred_original": "Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "ARGUMINSCI-train-2",
+          "sentence": "In a nutshell, #12 is isotropic and very compliant in stretch and bending; #4 is also isotropic, very stiff in stretch but compliant in bending; #14 is stiff and quite isotropic in stretch, but extremely anisotropic in bending (with 33/1 stiffness ratio in weft and warp); and #18 is anisotropic both in stretch (with 10/1 stiffness ratio) and in bending (with 13/1 stiffness ratio).",
+          "true_label": "Argument",
+          "document_context": "Similar tables are shown for all cloth samples and several model variants in the supplementary document.\nThe four selected fabrics span a large range of possible cloth behaviors.",
+          "sent_original": "In a nutshell, #12 is isotropic and very compliant in stretch and bending; #4 is also isotropic, very stiff in stretch but compliant in bending; #14 is stiff and quite isotropic in stretch, but extremely anisotropic in bending (with 33/1 stiffness ratio in weft and warp); and #18 is anisotropic both in stretch (with 10/1 stiffness ratio) and in bending (with 13/1 stiffness ratio).",
+          "sent_feger": "nutshell 12 isotropic compliant stretch bending 4 isotropic stiff stretch compliant bending 14 stiff isotropic stretch extremely anisotropic bending 33/1 stiffness ratio weft warp 18 anisotropic stretch 10/1 stiffness ratio bending 13/1 stiffness ratio",
+          "sent_shuffle": "isotropic anisotropic In bending; and #12 nutshell, but compliant ratio). stretch #18 in warp); and isotropic bending bending; in compliant and but ratio) #14 stiffness #4 stretch both 10/1 ratio stiffness in stretch, isotropic, bending stiff is 33/1 stiff in very stiffness anisotropic and is stretch weft quite a in extremely and (with is also and (with 13/1 (with in very is in in",
+          "pred_original": "No-Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "ARGUMINSCI-train-3",
+          "sentence": "In addition, the animators often wish to create non-realistic motions that defy the laws of physics, a space where motion capture simply fails to provide any samples.",
+          "true_label": "Argument",
+          "document_context": "Gathering such a datataset is not only laborious, but it also requires that the captured family of motions is similar in all other respects (e.g. other landing points, initial and final state, overall style) \u2014 an aspect that is quite hard to reproduce by real actors.\nIn fact, the process of generating such parameterized motions is the most challenging aspect of data acquisition for video game production [Buc].",
+          "sent_original": "In addition, the animators often wish to create non-realistic motions that defy the laws of physics, a space where motion capture simply fails to provide any samples.",
+          "sent_feger": "addition animators wish create non realistic motions defy laws physics space motion capture simply fails provide samples",
+          "sent_shuffle": "provide create animators fails laws to space any In wish that addition, simply to defy where of non-realistic a often physics, motion samples. the capture the motions",
+          "pred_original": "Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "ARGUMINSCI-train-4",
+          "sentence": "The explicit representation provides our method with several advantages.",
+          "true_label": "Argument",
+          "document_context": "The vertices are shared between triangles, allowing for easy computation of smooth vertex normals and other common mesh operations.\nThe distance tree (see Section 6) provides a spatial index for the mesh.",
+          "sent_original": "The explicit representation provides our method with several advantages.",
+          "sent_feger": "explicit representation provides method advantages",
+          "sent_shuffle": "our advantages. The explicit several with method provides representation",
+          "pred_original": "Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "Argument"
+        },
+        {
+          "id": "ARGUMINSCI-train-5",
+          "sentence": "A motion graph is a directed graph where all edges correspond to clips of motion.",
+          "true_label": "Argument",
+          "document_context": "A clip of motion is defined as a regular sampling of the character\u2019s parameters, which consist of the position of the root joint and quaternions representing the orientations of each joint.\nWe\n        \n          Figure 2: Consider a motion graph built from two initial clips. (top) We can trivially\n        \n        insert a node to divide an initial clip into two smaller clips. (bottom) We can also insert a transition joining either two different initial clips or different parts of the same initial clip.\n        also allow clips (or, more generally, sets of frames) to be annotated with other information, such as descriptive labels (\u201cwalking,\u201d \u201ckarate\u201d) and constraint information (left heel must be planted on these frames).",
+          "sent_original": "A motion graph is a directed graph where all edges correspond to clips of motion.",
+          "sent_feger": "motion graph directed graph edges correspond clips motion",
+          "sent_shuffle": "to directed motion motion. graph clips A graph correspond where edges of is a all",
+          "pred_original": "Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "ARGUMINSCI-train-6",
+          "sentence": "The interpretation is following: the first matrix A \u22121 j transforms v to the position with joint j\u2019s coordinate system aligned to the world coordinate system.",
+          "true_label": "Argument",
+          "document_context": "Matrices F j are computed in a similar way as the absolute matrices, but including the actual rotation of each joint in the chain (we do not consider translating and scaling joints).\nThe most simple skin deformation algorithm computes v = F j A \u22121 j v where v is a vertex in the reference skin associated with joint j and v is its position in the deformed mesh.",
+          "sent_original": "The interpretation is following: the first matrix A \u22121 j transforms v to the position with joint j\u2019s coordinate system aligned to the world coordinate system.",
+          "sent_feger": "interpretation following matrix \u22121 j transforms v position joint j coordinate system aligned world coordinate system",
+          "sent_shuffle": "joint world The aligned coordinate matrix the \u22121 first system with following: to v system. the is transforms j coordinate position interpretation the to j\u2019s A",
+          "pred_original": "No-Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "ARGUMINSCI-train-7",
+          "sentence": "As long as the figure is not lying on its arms and the ground is relatively flat it will attempt to get up.",
+          "true_label": "Argument",
+          "document_context": "When lying face-down, the pre-conditions can be fairly relaxed.\nOur controller assumes that is has the time to change the state of the character to one from which it knows how to rise.",
+          "sent_original": "As long as the figure is not lying on its arms and the ground is relatively flat it will attempt to get up.",
+          "sent_feger": "long figure lying arms ground relatively flat attempt",
+          "sent_shuffle": "relatively As attempt ground as its arms and not flat lying to figure the long up. is will is get the on it",
+          "pred_original": "Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "ARGUMINSCI-train-8",
+          "sentence": "This prevents stretching of the cord, or other factors affecting the distance between the clip and the actuator, from affecting displacement accuracy.",
+          "true_label": "Argument",
+          "document_context": "The magnitudes are determined by the tension measurements, and the directions are determined by the observed directions of the cords.\nNote that the actuator positions themselves are not part of the output, since they are superseded by the displacements measured at the clips.",
+          "sent_original": "This prevents stretching of the cord, or other factors affecting the distance between the clip and the actuator, from affecting displacement accuracy.",
+          "sent_feger": "prevents stretching cord factors affecting distance clip actuator affecting displacement accuracy",
+          "sent_shuffle": "actuator, cord, the stretching distance clip accuracy. and prevents factors affecting or displacement between the the the of This from affecting other",
+          "pred_original": "Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "ARGUMINSCI-train-9",
+          "sentence": "However, this amount of memory is negligible, considering the number of different non-trivial joint sets.",
+          "true_label": "Argument",
+          "document_context": "Fortunately, this number is surprisingly small in practice, because the joint influences tend to be local (e.g. it is unlikely to find vertices influenced by both left and right wrist).\nThe additional memory needed for SBS is dominated by caching the computed centers of rotation.",
+          "sent_original": "However, this amount of memory is negligible, considering the number of different non-trivial joint sets.",
+          "sent_feger": "memory negligible considering number different non trivial joint sets",
+          "sent_shuffle": "However, memory of of sets. negligible, joint amount number non-trivial considering different this the is",
+          "pred_original": "Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "ARGUMINSCI-train-10",
+          "sentence": "Marching triangles requires significantly less computation time and fewer triangles, and produces higher-quality triangles than marching cubes.",
+          "true_label": "Argument",
+          "document_context": "However, this method appears to be prohibitively expensive for something which must run at every timestep.\nYet another alternative is marching triangles \n[Hilton et al. 1996]\n, which takes a surface-based rather than volume-based approach to contouring.",
+          "sent_original": "Marching triangles requires significantly less computation time and fewer triangles, and produces higher-quality triangles than marching cubes.",
+          "sent_feger": "marching triangles requires significantly computation time fewer triangles produces higher quality triangles marching cubes",
+          "sent_shuffle": "marching cubes. produces computation Marching triangles, triangles higher-quality fewer triangles and time than and less requires significantly",
+          "pred_original": "Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "ARGUMINSCI-train-11",
+          "sentence": "In our context, all the preceding expressions are equivalent, and any can be used to evaluate the advection of pairs of basis fields.",
+          "true_label": "Argument",
+          "document_context": "PRECOMPUTATION OF ADVECTION OPERATOR</H1>\n        The operator Adv(u, \u03c9) := curl (\u03c9 \u00d7 u) represents the advection of a fluid\u2019s vorticity by its velocity field.\nIt has many equivalent expressions, including the the Lie derivative L u \u03c9, or the JacobiLie bracket of vector fields \u2212[u, \u03c9], Adv(\u03a6 i , \u03c6 j ) := L \u03a6 i \u03c6 j = \u2212[\u03a6 i , \u03c6 j ] = curl (\u03c6 j \u00d7 \u03a6 i ).",
+          "sent_original": "In our context, all the preceding expressions are equivalent, and any can be used to evaluate the advection of pairs of basis fields.",
+          "sent_feger": "context preceding expressions equivalent evaluate advection pairs basis fields",
+          "sent_shuffle": "pairs any In to can the our basis fields. the equivalent, used preceding advection evaluate be are all context, of expressions of and",
+          "pred_original": "Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "ARGUMINSCI-train-12",
+          "sentence": "The accompanying video shows that results become worse when we decrease the number of the userdefined constraints.",
+          "true_label": "Argument",
+          "document_context": "We then compare the animations created by key frames that are spaced increasingly far apart in time.\nWe also compare the results by decreasing the number of key trajectories.",
+          "sent_original": "The accompanying video shows that results become worse when we decrease the number of the userdefined constraints.",
+          "sent_feger": "accompanying video shows results worse decrease number userdefined constraints",
+          "sent_shuffle": "results that the number decrease become constraints. The accompanying userdefined we shows worse the video when of",
+          "pred_original": "Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "ARGUMINSCI-train-13",
+          "sentence": "[ 3 ]\n describes the use of the Kawabata system of measurement for realistic determination of the in-plane shearing and out-of-plane bending forces in cloth.",
+          "true_label": "Argument",
+          "document_context": "As in the case of solids, close proximity or actual intersection of cloth with itself initiates contact handling.\n        44\n        SIGGRAPH 98, Orlando, July 19\u201324\n        C OMPUTER G RAPHICS Proceedings, Annual Conference Series, 1998\n      \n      \n        <H2>2.2 Energy and Forces</H2>\n        The most critical forces in the system are the internal cloth forces which impart much of the cloth\u2019s characteristic behavior.\nBreen et al.",
+          "sent_original": "[ 3 ]\n describes the use of the Kawabata system of measurement for realistic determination of the in-plane shearing and out-of-plane bending forces in cloth.",
+          "sent_feger": "3 describes use kawabata system measurement realistic determination plane shearing plane bending forces cloth",
+          "sent_shuffle": "in describes of of of 3 bending cloth. system in-plane [ the determination forces shearing and ] use for measurement the realistic out-of-plane the Kawabata",
+          "pred_original": "Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "ARGUMINSCI-train-14",
+          "sentence": "We define the resulting orientation image as an angle map, shown in Fig. 1 .",
+          "true_label": "Argument",
+          "document_context": "Details of computing the dominant orientation from the coefficients of filter bank response are given in Appendix I of Freeman and Adelson \n13 .\nWe convolve the image with the filter bank, compute the filter coefficient responses, blur the coefficients using a gaussian kernel, and compute the dominant orientation from these coefficients.",
+          "sent_original": "We define the resulting orientation image as an angle map, shown in Fig. 1 .",
+          "sent_feger": "define resulting orientation image angle map shown fig 1",
+          "sent_shuffle": "orientation define in We as angle shown an . resulting 1 map, the Fig. image",
+          "pred_original": "No-Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "ARGUMINSCI-train-15",
+          "sentence": "The system of equalities is based on the scheme adapted from the simultaneous resolution method for rigid N-body collisions proposed by Baraff \n[ 1 ].",
+          "true_label": "Argument",
+          "document_context": "To resolve collisions, we first divide the colliding particles into parts and build a system of linear equations based on the collision relationships between these parts.\nThen we solve the whole system using the law of N-body momentum conservation.",
+          "sent_original": "The system of equalities is based on the scheme adapted from the simultaneous resolution method for rigid N-body collisions proposed by Baraff \n[ 1 ].",
+          "sent_feger": "system equalities based scheme adapted simultaneous resolution method rigid n body collisions proposed baraff 1",
+          "sent_shuffle": "]. based collisions on 1 adapted proposed by simultaneous for from equalities N-body system rigid scheme Baraff of resolution method The [ is the the",
+          "pred_original": "Argument",
+          "pred_feger": "Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "ARGUMINSCI-train-511",
+          "sentence": "i , 0) ))",
+          "true_label": "No-Argument",
+          "document_context": "We discretize \u03b4 x i + and \u03b4 i x \u2212 using an upwind scheme to get\n        \n          \n        \n        \n          6\n          \u03b4 i x + \u2248 \u2212(\u03c1 i \u2212 \u03c1 i\u2212(1,0,0) )\u2206x\u2206T,\n        \n        \n          7\n          \u2212 \u03b4 i x \u2248 \u2212(\u03c1 i+(1,0,0) \u2212 \u03c1 i )\u2206x\u2206T.\n        \n        y + The mass change due to unit velocity along y and z axes, \u03b4 i , \u03b4 i y \u2212 , \u03b4 i z + , and \u03b4 i z \u2212 are computed similarly.\nThe maximum mass increase and mass decrease due to any unit velocity in each cell is:\n        \n          8\n          \u2206T | \u03c1| + i = \u2206x 1 2 (max(max(\u03b4 i x + , 0) 2 , min(\u03b4 i x \u2212 , 0) 2 ) +\n        \n        \n          9\n          y + 2 y \u2212 2 max(max(\u03b4 i , 0) , min(\u03b4 i , 0) ) +\n        \n        \n          10\n          z + 2 z \u2212 2 1 max(max(\u03b4 i , 0) , min(\u03b4",
+          "sent_original": "i , 0) ))",
+          "sent_feger": "0",
+          "sent_shuffle": "0) , )) i",
+          "pred_original": "No-Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "ARGUMINSCI-train-512",
+          "sentence": "i O .",
+          "true_label": "No-Argument",
+          "document_context": "The continuous penalty function g that Pinocchio tries to minimize is the sum of penalty functions over the bones plus an asymmetry penalty: where p S is the parent function for the unreduced skeleton (analogous to p R ).\nEach g i penalizes bones that do not fit inside the surface nicely, bones that are too short, and bones that are oriented differently from the given skeleton: g i = \u03b1 S g i S + \u03b1 L g i L + \u03b1 O g",
+          "sent_original": "i O .",
+          "sent_feger": "",
+          "sent_shuffle": ". i O",
+          "pred_original": "No-Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "ARGUMINSCI-train-513",
+          "sentence": "[q T , q  \u0307 T ] T , respectively.",
+          "true_label": "No-Argument",
+          "document_context": "To avoid this issue, we choose to perform the optimization in the original configuration space while imposing \u201csoft\u201d subspace constraints on both kinematic states and generalized forces.\nLet B u and B s denote the subspace matrices for generalized forces u and kinematic states s =",
+          "sent_original": "[q T , q  \u0307 T ] T , respectively.",
+          "sent_feger": "q t \u0307 t t respectively",
+          "sent_shuffle": "] , respectively. [q T T q , \u0307 T",
+          "pred_original": "No-Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "ARGUMINSCI-train-514",
+          "sentence": "We can, thus, use SPH-based approaches to approximate the boundary conditions stated in Sections 3.2, 3.3 and 3.4.\n          (a) (b)\n          \n            Figure 5: (a) Boundary particles on a triangle according to the seven point rule.",
+          "true_label": "No-Argument",
+          "document_context": "Analog to positions, the velocities of boundary particles are interpolated from the velocities of the triangle nodes.\nNow that we have replaced the triangulated surface by a set of particles, the problem of triangle-particle interaction reduces to particle-particle interaction.",
+          "sent_original": "We can, thus, use SPH-based approaches to approximate the boundary conditions stated in Sections 3.2, 3.3 and 3.4.\n          (a) (b)\n          \n            Figure 5: (a) Boundary particles on a triangle according to the seven point rule.",
+          "sent_feger": "use sph based approaches approximate boundary conditions stated sections 3.2 3.3 3.4 b figure 5 boundary particles triangle according seven point rule",
+          "sent_shuffle": "can, 5: (b) the Boundary conditions the Sections a point use (a) to approximate to according thus, seven Figure rule. on triangle stated particles (a) in and 3.4. boundary 3.3 SPH-based We 3.2, approaches",
+          "pred_original": "Argument",
+          "pred_feger": "Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "ARGUMINSCI-train-515",
+          "sentence": "H ARLOW , F., AND W ELCH , E. 1965.",
+          "true_label": "No-Argument",
+          "document_context": "Comput.\nStruct. 83, 6-7, 479\u2013490.",
+          "sent_original": "H ARLOW , F., AND W ELCH , E. 1965.",
+          "sent_feger": "h arlow f. w elch e. 1965",
+          "sent_shuffle": "F., ARLOW , 1965. ELCH AND , W H E.",
+          "pred_original": "No-Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "ARGUMINSCI-train-516",
+          "sentence": "The current velocity of body i in the body i frame is v i .",
+          "true_label": "No-Argument",
+          "document_context": "All partial derivatives are expressed in frame i. 2\n        \n          41\n          \u2202 \u2202 I q 0 \u2217 = ( s i I i \u2217 \u2212 I i \u2217 s i )\n        \n        \n          42\n          \u2202 \u2202 p q  \u0307 \u2217 0 = I \u2217 i s i\n        \n        \n          43\n          i \u2202 \u2202 p q 0 \u2217 = \u2202 \u2202 I q 0 \u2217 v i\u22121 i + s \u00d7p \u02c6 \u2217\n        \n        \n          43\n          i i i i\n        \n      \n      \n        2 When implementing these expressions, we found it essential to compare the numerical values of these derivatives to the identical derivatives obtained from an alternative technique such as numerical differentiation.\n        \u2202 \u2202 f q  \u0308 0 \u2217 i = \u2202 \u2202 p q  \u0307 \u2217 0 i (44) \u2202 \u2202 f q  \u0307 \u2217 0 i = \u2202 \u2202 p q \u2217 0 i +  \u0307 I i \u2217 s i + v i \u00d7 \u02c6 \u2202 \u2202 p q  \u0307 0 \u2217 i (45) \u2202 \u2202 f q \u2217 0 i = s i \u00d7f \u02c6 \u2217 i + \u2202 \u2202 I q \u2217 0 i a i\u22121 i + v i i\u22121 \u00d7(s \u02c6 i \u00d7p \u02c6 i \u2217 + \u2202 \u2202 I q \u2217 0 i v i\u22121 i )\n        \n          46\n          + ( s i  \u0307 I \u2217 i \u2212  \u0307 I \u2217 i s i )v i\u22121 i\n        \n        where\n        \n          47\n          v i i\u22121 = (X i\u22121 i v i\u22121 )\n        \n        \n          48\n          a i i\u22121 = (X i i\u22121 a i\u22121 )\n        \n      \n      \n        Appendix C: Changing the Effective Root\n        Suppose we wish to place the effective root of the character at the point on body i that is located at point r in body i coordinates.\nWe wish this point to have linear velocity b r,des and linear acceleration b  \u0307 r,des , expressed in the world coordinate frame.",
+          "sent_original": "The current velocity of body i in the body i frame is v i .",
+          "sent_feger": "current velocity body body frame",
+          "sent_shuffle": "current of frame The i i i velocity v body is . body in the",
+          "pred_original": "No-Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "ARGUMINSCI-train-517",
+          "sentence": "The second term pr f orcef ield represents the force field priors described in Equation (4).",
+          "true_label": "No-Argument",
+          "document_context": "According to Bayes\u2019 rule, we can decompose the probabilistic motion model pr(x) into the following three terms: pr(x) = pr(q 1 , q  \u0307 1 ) \u00b7 pr(u t |q t , q  \u0307 t ) \u00b7 pr(q t+1 , q  \u0307 t+1 |q t , q  \u0307 t , u t ) t pr init pr f orcef ield pr physics (5) where the first term pr init represents the probabilistic density function of the initial kinematic pose and velocity.\nIn our experiment, we model the initial kinematic priors pr init with Gaussian mixture models.",
+          "sent_original": "The second term pr f orcef ield represents the force field priors described in Equation (4).",
+          "sent_feger": "second term pr f orcef ield represents force field priors described equation 4",
+          "sent_shuffle": "pr the second ield force in f described represents priors orcef (4). term Equation The field",
+          "pred_original": "No-Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "ARGUMINSCI-train-518",
+          "sentence": "The cloth-to-joint relation enables us also to optimize collision detection by restricting the collision check to a small area around each vertex of the coarse mesh.",
+          "true_label": "No-Argument",
+          "document_context": "We first construct the cloth-to-joint relation by analyzing a presimulated sequence of the cloth to be animated.\nWe then reduce the number of vertices to be physically simulated by identifying the garment regions in which the shape follows that of the underlying skin.",
+          "sent_original": "The cloth-to-joint relation enables us also to optimize collision detection by restricting the collision check to a small area around each vertex of the coarse mesh.",
+          "sent_feger": "cloth joint relation enables optimize collision detection restricting collision check small area vertex coarse mesh",
+          "sent_shuffle": "coarse cloth-to-joint mesh. a area the us check enables relation collision around the optimize to The also to each by collision restricting of small vertex detection",
+          "pred_original": "Argument",
+          "pred_feger": "Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "ARGUMINSCI-train-519",
+          "sentence": "<Abstract>This paper shows how statistical motion priors can be combined seamlessly with physical constraints for human motion modeling and generation.",
+          "true_label": "No-Argument",
+          "document_context": "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"no\"?>\n<Document xmlns:gate=\"http://www.gate.ac.uk\" name=\"A20_M13_Physically-Valid_Statistical_Models_for_Human_Motion_Generation_CITATION_PURPOSE_M_v1.xml\">\n\n\n  \n    181cf968bd65a1734132d5df87565b60dfef6cd03a32fc7f0fdba0b5ac8d6d1a\n    3vtw\n    http://dx.doi.org/10.1145/1966394.1966398\n  \n  \n    \n      \n        <Title>Physically-Valid Statistical Models for Human Motion Generation</Title>\n      \n      Xiaolin Wei Jianyuan Min Texas A&amp;M University\n      \n        \n        Figure 1: Combining statistical motion priors and physical constraints for human motion generation: (a) walking with a heavy shoe; (b) resistance running; (c) stylized walking; (d) running\u2192walking\u2192jumping.",
+          "sent_original": "<Abstract>This paper shows how statistical motion priors can be combined seamlessly with physical constraints for human motion modeling and generation.",
+          "sent_feger": "< abstract paper shows statistical motion priors combined seamlessly physical constraints human motion modeling generation",
+          "sent_shuffle": "motion constraints seamlessly with generation. be priors motion <Abstract>This human physical how shows paper can modeling combined for statistical and",
+          "pred_original": "Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "ARGUMINSCI-train-520",
+          "sentence": "[21] N. Foster and R. Fedkiw.",
+          "true_label": "No-Argument",
+          "document_context": "In Proceedings of the 26th annual conference on Computer graphics and interactive techniques, pages 121\u2013128.\nACM Press/Addison-Wesley Publishing Co., 1999.",
+          "sent_original": "[21] N. Foster and R. Fedkiw.",
+          "sent_feger": "21 n. foster r. fedkiw",
+          "sent_shuffle": "N. Foster and R. [21] Fedkiw.",
+          "pred_original": "No-Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "ARGUMINSCI-train-521",
+          "sentence": "i i ,\u03b8),1) and extract the liquid surface as the 0.5 iso-surface of this modified density field.",
+          "true_label": "No-Argument",
+          "document_context": "In contrast, since \u03b3 &lt; 0.5 everywhere inside small scale features, blurring will still result in \u03b3 being small.\nWe then define \u03c1 i = min(max(\u03b3 \u03c1",
+          "sent_original": "i i ,\u03b8),1) and extract the liquid surface as the 0.5 iso-surface of this modified density field.",
+          "sent_feger": "\u03b8),1 extract liquid surface 0.5 iso surface modified density field",
+          "sent_shuffle": "0.5 i this surface ,\u03b8),1) extract density as field. and i modified iso-surface of liquid the the",
+          "pred_original": "No-Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "ARGUMINSCI-train-522",
+          "sentence": "[18] T. J. Chung.",
+          "true_label": "No-Argument",
+          "document_context": "Oxford Univ.\nPress, NY, 1998.",
+          "sent_original": "[18] T. J. Chung.",
+          "sent_feger": "18 t. j. chung",
+          "sent_shuffle": "J. Chung. [18] T.",
+          "pred_original": "No-Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "ARGUMINSCI-train-523",
+          "sentence": "Non-linear and anisotropic elastic soft tissue models for medical simulation.",
+          "true_label": "No-Argument",
+          "document_context": "Held in Boston, Massachusetts.\nP ICINBONO , G., D ELINGETTE , H., AND A YACHE , N. 2001.",
+          "sent_original": "Non-linear and anisotropic elastic soft tissue models for medical simulation.",
+          "sent_feger": "non linear anisotropic elastic soft tissue models medical simulation",
+          "sent_shuffle": "simulation. anisotropic models soft for and Non-linear tissue elastic medical",
+          "pred_original": "No-Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "ARGUMINSCI-train-524",
+          "sentence": "i v i\n        \n        where the second and fourth equations are the time derivatives of the first and third equations respectively.",
+          "true_label": "No-Argument",
+          "document_context": "Newton-Euler equations of motion.\nThe equations of motion of a serial multibody chain are compactly expressed in recursive form as follows:\n        \n          32\n          v i = X i i\u22121 v i\u22121 + s i q  \u0307 i\n        \n        \n          34\n          a i = X i\u22121 i a i\u22121 + s i q  \u0308 i + v i \u00d7s \u02c6 i q  \u0307 i p i = X i+1 i p i+1 + I i v i\n        \n        \n          35\n          f i = X i+1 i f i+1 + I i a i + v i \u00d7I \u02c6",
+          "sent_original": "i v i\n        \n        where the second and fourth equations are the time derivatives of the first and third equations respectively.",
+          "sent_feger": "v second fourth equations time derivatives equations respectively",
+          "sent_shuffle": "the of first i derivatives the and equations third i respectively. second the v and fourth time are where equations",
+          "pred_original": "No-Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "ARGUMINSCI-train-525",
+          "sentence": "Instead, we use a semi-Lagrangian method to advect field values.",
+          "true_label": "No-Argument",
+          "document_context": "This condition is enforced by adjusting the pressure field at each integration step.\nAdditionally, we do not use the first term of Equation (1) (the advection term) directly.",
+          "sent_original": "Instead, we use a semi-Lagrangian method to advect field values.",
+          "sent_feger": "instead use semi lagrangian method advect field values",
+          "sent_shuffle": "to Instead, a advect use semi-Lagrangian values. we method field",
+          "pred_original": "No-Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        }
+      ]
+    },
+    "PE": {
+      "n_samples": 30,
+      "reports": {
+        "original": {
+          "Argument": {
+            "precision": 0.5263157894736842,
+            "recall": 0.6666666666666666,
+            "f1-score": 0.5882352941176471,
+            "support": 15.0
+          },
+          "No-Argument": {
+            "precision": 0.5454545454545454,
+            "recall": 0.4,
+            "f1-score": 0.46153846153846156,
+            "support": 15.0
+          },
+          "accuracy": 0.5333333333333333,
+          "macro avg": {
+            "precision": 0.5358851674641147,
+            "recall": 0.5333333333333333,
+            "f1-score": 0.5248868778280543,
+            "support": 30.0
+          },
+          "weighted avg": {
+            "precision": 0.5358851674641147,
+            "recall": 0.5333333333333333,
+            "f1-score": 0.5248868778280543,
+            "support": 30.0
+          }
+        },
+        "feger": {
+          "Argument": {
+            "precision": 0.6,
+            "recall": 0.2,
+            "f1-score": 0.3,
+            "support": 15.0
+          },
+          "No-Argument": {
+            "precision": 0.52,
+            "recall": 0.8666666666666667,
+            "f1-score": 0.65,
+            "support": 15.0
+          },
+          "accuracy": 0.5333333333333333,
+          "macro avg": {
+            "precision": 0.56,
+            "recall": 0.5333333333333333,
+            "f1-score": 0.475,
+            "support": 30.0
+          },
+          "weighted avg": {
+            "precision": 0.56,
+            "recall": 0.5333333333333333,
+            "f1-score": 0.475,
+            "support": 30.0
+          }
+        },
+        "shuffle": {
+          "Argument": {
+            "precision": 1.0,
+            "recall": 0.13333333333333333,
+            "f1-score": 0.23529411764705882,
+            "support": 15.0
+          },
+          "No-Argument": {
+            "precision": 0.5357142857142857,
+            "recall": 1.0,
+            "f1-score": 0.6976744186046512,
+            "support": 15.0
+          },
+          "accuracy": 0.5666666666666667,
+          "macro avg": {
+            "precision": 0.7678571428571428,
+            "recall": 0.5666666666666667,
+            "f1-score": 0.466484268125855,
+            "support": 30.0
+          },
+          "weighted avg": {
+            "precision": 0.7678571428571428,
+            "recall": 0.5666666666666667,
+            "f1-score": 0.46648426812585503,
+            "support": 30.0
+          }
+        }
+      },
+      "macro_f1_original": 0.5249,
+      "macro_f1_feger": 0.475,
+      "macro_f1_shuffle": 0.4665,
+      "delta_feger": -0.0499,
+      "delta_shuffle": -0.0584,
+      "samples": [
+        {
+          "id": "PE-train-1",
+          "sentence": "Taking all into account, I think that living in the city is much better nowadays, because of the opportunities it gives.",
+          "true_label": "Argument",
+          "document_context": "However, in the countryside there are many places to rest, because of its location.\nMoreover, peaceful and close to the nature areas could help to avoid worries and sadness.",
+          "sent_original": "Taking all into account, I think that living in the city is much better nowadays, because of the opportunities it gives.",
+          "sent_feger": "taking account think living city better nowadays opportunities gives",
+          "sent_shuffle": "nowadays, think gives. of the city Taking is in account, I better living all that it because opportunities into the much",
+          "pred_original": "Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "PE-train-2",
+          "sentence": "Some people say that if humans stop using technology and lead a simple way of life then only we can save the environment.",
+          "true_label": "Argument",
+          "document_context": "Some individuals are of the opinion that if people live a simple life and do not use the things that technology has brought us then these problems can be solved whereas others opine that only technology can solve these problems.\nIn the following paragraphs, I intend to discuss both viewpoints.",
+          "sent_original": "Some people say that if humans stop using technology and lead a simple way of life then only we can save the environment.",
+          "sent_feger": "people humans stop technology lead simple way life save environment",
+          "sent_shuffle": "say that Some way a we life only using the and lead save can if environment. of humans then technology people simple stop",
+          "pred_original": "No-Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "Argument"
+        },
+        {
+          "id": "PE-train-3",
+          "sentence": "In conclusion, I personally disagree this this notion that we should replace classroom with online class.",
+          "true_label": "Argument",
+          "document_context": "If student do it by themselves, they might be hurt themselves.\nThis make students have healthier life which online class cannot provide.",
+          "sent_original": "In conclusion, I personally disagree this this notion that we should replace classroom with online class.",
+          "sent_feger": "conclusion personally disagree notion replace classroom online class",
+          "sent_shuffle": "should notion this with In personally classroom disagree replace that I we this conclusion, online class.",
+          "pred_original": "Argument",
+          "pred_feger": "Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "PE-train-4",
+          "sentence": "From my perspective, I agree with the view that students can acquire more benefits from the remote education.",
+          "true_label": "Argument",
+          "document_context": "Distance-learning cannot bring the benefits that traditional colleges offer\n \nWith the tremendous development in information technology, long-distance education enables people to study at home without going to school.\nWhether this teaching approach is more beneficial to pupils than the traditional way sparks off a heated debate.",
+          "sent_original": "From my perspective, I agree with the view that students can acquire more benefits from the remote education.",
+          "sent_feger": "perspective agree view students acquire benefits remote education",
+          "sent_shuffle": "that the view benefits remote From my from education. can students acquire agree the more perspective, I with",
+          "pred_original": "Argument",
+          "pred_feger": "Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "PE-train-5",
+          "sentence": "As a result, information from those sources is subject to question.",
+          "true_label": "Argument",
+          "document_context": "On the other hand, critics of this idea maintain that although the educational benefits that the Internet may yield are undeniable, there still remain certain shortcomings.\nMuch information as the Internet may provide, most of the sources are unjustified by experts.",
+          "sent_original": "As a result, information from those sources is subject to question.",
+          "sent_feger": "result information sources subject question",
+          "sent_shuffle": "subject those from question. As result, a to is information sources",
+          "pred_original": "Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "PE-train-6",
+          "sentence": "Secondly, watching television is a very passive action and should not be promoted by increasing periods spent on it.",
+          "true_label": "Argument",
+          "document_context": "Yet, monitors are unable to replace the appearance of educators since their knowledge and adaptability is priceless.\nTherefore, teacher cannot be switched with some unconscious screens.",
+          "sent_original": "Secondly, watching television is a very passive action and should not be promoted by increasing periods spent on it.",
+          "sent_feger": "secondly watching television passive action promoted increasing periods spent",
+          "sent_shuffle": "on passive television promoted by spent not a Secondly, and is increasing watching action it. periods should very be",
+          "pred_original": "Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "PE-train-7",
+          "sentence": "In addition, it should be to some extent paternalistic to prevent students from avoiding hurdles.",
+          "true_label": "Argument",
+          "document_context": "I think, however, students should study a broad range of subjects from literature to mathematics.\nI believe that tertiary education should make students prepare for specialization at university.",
+          "sent_original": "In addition, it should be to some extent paternalistic to prevent students from avoiding hurdles.",
+          "sent_feger": "addition extent paternalistic prevent students avoiding hurdles",
+          "sent_shuffle": "prevent be avoiding paternalistic extent it to students hurdles. some In should from addition, to",
+          "pred_original": "Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "PE-train-8",
+          "sentence": "Although renewable resources of energy are elements of the current and future energy strategy, as far as I'm concerned, these new forms of energy cannot soon replace fossil fuels such as gases, oil, and coal.",
+          "true_label": "Argument",
+          "document_context": "Fossil fuels will soon be replaced?",
+          "sent_original": "Although renewable resources of energy are elements of the current and future energy strategy, as far as I'm concerned, these new forms of energy cannot soon replace fossil fuels such as gases, oil, and coal.",
+          "sent_feger": "renewable resources energy elements current future energy strategy far concerned new forms energy soon replace fossil fuels gases oil coal",
+          "sent_shuffle": "and are as concerned, replace forms soon Although fossil gases, fuels future of new elements current such of cannot oil, of the resources as strategy, and energy renewable these coal. energy energy I'm as far",
+          "pred_original": "No-Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "PE-train-9",
+          "sentence": "Secondly, investing in roads and highways can broaden the area and allow more public transportation to work.",
+          "true_label": "Argument",
+          "document_context": "For example, in my country, buses are attributed to the cause of skyrocketing of accidents.\nEach year, Vietnam has approximately twelve thousand people die of accidents which is equivalent to the death toll of the tsunami in Japan.",
+          "sent_original": "Secondly, investing in roads and highways can broaden the area and allow more public transportation to work.",
+          "sent_feger": "secondly investing roads highways broaden area allow public transportation work",
+          "sent_shuffle": "can allow public transportation work. highways in and broaden the to roads investing more Secondly, area and",
+          "pred_original": "Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "PE-train-10",
+          "sentence": "As far as I am concerned, the importance of traditions should be valued and paid attention to.",
+          "true_label": "Argument",
+          "document_context": "Do you agree that the traditional skills will die out?\nWith the development of technology, whether or not it is still necessary to protect the traditional skills and lifestyles leads to a drastic controversy which is becoming a public concern, especially considering the significant impact taken by technology.",
+          "sent_original": "As far as I am concerned, the importance of traditions should be valued and paid attention to.",
+          "sent_feger": "far concerned importance traditions valued paid attention",
+          "sent_shuffle": "importance should valued traditions attention concerned, As paid to. and am I the as of be far",
+          "pred_original": "Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "PE-train-11",
+          "sentence": "First, computers through internet made our access to information easier.",
+          "true_label": "Argument",
+          "document_context": "While some people advocate for the idea that computers have made life more complex and stressful, others support the idea that computers have made life easier and more convenient.\nIn my point of view, computers brought convenience and easiness to our life since they enabled easier access to information and increased qualities of the communication.",
+          "sent_original": "First, computers through internet made our access to information easier.",
+          "sent_feger": "computers internet access information easier",
+          "sent_shuffle": "computers through First, internet easier. access to our made information",
+          "pred_original": "No-Argument",
+          "pred_feger": "Argument",
+          "pred_shuffle": "Argument"
+        },
+        {
+          "id": "PE-train-12",
+          "sentence": "I highly prefer living in a big city to living in countryside.",
+          "true_label": "Argument",
+          "document_context": "Big city vs small town",
+          "sent_original": "I highly prefer living in a big city to living in countryside.",
+          "sent_feger": "highly prefer living big city living countryside",
+          "sent_shuffle": "a prefer living big to living countryside. highly I in in city",
+          "pred_original": "Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "PE-train-13",
+          "sentence": "Therefore, a big city can offer me many more vacancies than a small town.",
+          "true_label": "Argument",
+          "document_context": "First of all, it will be easier for me to find an engineering job in the city.\nElectrical engineering deals with problems concerning electricity supply.",
+          "sent_original": "Therefore, a big city can offer me many more vacancies than a small town.",
+          "sent_feger": "big city offer vacancies small town",
+          "sent_shuffle": "can town. many city offer small more than Therefore, vacancies me a big a",
+          "pred_original": "Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "PE-train-14",
+          "sentence": "By way of conclusion, it is true that the development of the health care system helps people have a better life.",
+          "true_label": "Argument",
+          "document_context": "Although it is real in some aspects, I believe that the capital that spend on taking care the elderly is contributed by these people during their working time, so they are worth to have good care.\nThey have given their effort to the society so that young people, the governments have a responsibility to improve the Medicare system.",
+          "sent_original": "By way of conclusion, it is true that the development of the health care system helps people have a better life.",
+          "sent_feger": "way conclusion true development health care system helps people better life",
+          "sent_shuffle": "helps true the a conclusion, is people that of system have of development the By it care way better health life.",
+          "pred_original": "No-Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "PE-train-15",
+          "sentence": "Vacations are not only required by students but also by professionals and housekeepers.",
+          "true_label": "Argument",
+          "document_context": "I also used to spend my time on developing some recreational activity or learning some sports or game.\nDuring my all vacations, I used to miss my school due to which I used to restart my session with great enthusiasm of learning and scoring good marks in new quarter.",
+          "sent_original": "Vacations are not only required by students but also by professionals and housekeepers.",
+          "sent_feger": "vacations required students professionals housekeepers",
+          "sent_shuffle": "Vacations and only are by also but by required students professionals housekeepers. not",
+          "pred_original": "No-Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "PE-train-511",
+          "sentence": "In this new environment, parent should find friends coming from their same country so that they can socialize in a very familiar manner as feeling being home.",
+          "true_label": "No-Argument",
+          "document_context": "Secondly, it is crucial to keep one\u2019s identity for they need a connection back to their country as well as teach their children their value of origin.\nFor instance, children immigrated to a new country will face social troubles in school with new friends.",
+          "sent_original": "In this new environment, parent should find friends coming from their same country so that they can socialize in a very familiar manner as feeling being home.",
+          "sent_feger": "new environment parent find friends coming country socialize familiar manner feeling home",
+          "sent_shuffle": "country a socialize familiar friends can in home. very their same new manner feeling so environment, from as being find that they In this coming should parent",
+          "pred_original": "No-Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "PE-train-512",
+          "sentence": "Nowadays, unscrupulous paparazzi constantly follow celebrities just to take a photo while they are eating or training.",
+          "true_label": "No-Argument",
+          "document_context": "Thanks to the Internet, we can go online and have access to information from all over the world and therefore mass media don't need any more to keep informed people but their goal is to have enough readers or TV audience.\nAnother reason is that we live in a society where the most important thing is appearance and gossip.",
+          "sent_original": "Nowadays, unscrupulous paparazzi constantly follow celebrities just to take a photo while they are eating or training.",
+          "sent_feger": "nowadays unscrupulous paparazzi constantly follow celebrities photo eating training",
+          "sent_shuffle": "to constantly take they photo unscrupulous just follow paparazzi celebrities training. or Nowadays, are eating while a",
+          "pred_original": "Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "PE-train-513",
+          "sentence": "Much information as the Internet may provide, most of the sources are unjustified by experts.",
+          "true_label": "No-Argument",
+          "document_context": "Internet and computer also offer a more comprehensive access to knowledge, ranging from visual to aural stimuli, which make learning an ever enjoyable experience, especially for children.\nOn the other hand, critics of this idea maintain that although the educational benefits that the Internet may yield are undeniable, there still remain certain shortcomings.",
+          "sent_original": "Much information as the Internet may provide, most of the sources are unjustified by experts.",
+          "sent_feger": "information internet provide sources unjustified experts",
+          "sent_shuffle": "by Much of most unjustified Internet the as sources may are provide, information the experts.",
+          "pred_original": "Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "PE-train-514",
+          "sentence": "Teachers think that students get affected too as they can not clear their doubts in study topics instantly.",
+          "true_label": "No-Argument",
+          "document_context": "Many employers argue that once an employee works from isolation, he or she spends a lot of time in communication via phone or email with colleagues.\nThis harms an employee's deliverable.",
+          "sent_original": "Teachers think that students get affected too as they can not clear their doubts in study topics instantly.",
+          "sent_feger": "teachers think students affected clear doubts study topics instantly",
+          "sent_shuffle": "too students doubts affected study their instantly. in as Teachers can clear think they not topics get that",
+          "pred_original": "Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "PE-train-515",
+          "sentence": "You are watching football stars play the game with your own eyes and sharing your feelings with about 40,000 people at the stadium, such an excitement you can never have when you are watching it at home.",
+          "true_label": "No-Argument",
+          "document_context": "Before the match starts, thousands of fans gathering outside of the stadium with team flags, colorful outfits, sound of trumpets and rattles... everywhere.\nAs the game kicks off, the atmosphere inside the stadium is even more exciting.",
+          "sent_original": "You are watching football stars play the game with your own eyes and sharing your feelings with about 40,000 people at the stadium, such an excitement you can never have when you are watching it at home.",
+          "sent_feger": "watching football stars play game eyes sharing feelings 40,000 people stadium excitement watching home",
+          "sent_shuffle": "you football excitement and with the when eyes it at people home. your your feelings stadium, such have you You watching can an stars play with about never own game watching 40,000 the at are sharing are",
+          "pred_original": "No-Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "PE-train-516",
+          "sentence": "First of all, the predecessors' mistakes are the first thing that we should consider when learning about the past.",
+          "true_label": "No-Argument",
+          "document_context": "Success and knowledge\n\nMany people think that \"Past has nothing to do with present, as time never stops, the next generations are completely different from the predecessors\".\nAlthough it is true that life changes rapidly, there are many things in the past that we can learn about, such as mistakes, success and knowledge in many fields of study.",
+          "sent_original": "First of all, the predecessors' mistakes are the first thing that we should consider when learning about the past.",
+          "sent_feger": "predecessors mistakes thing consider learning past",
+          "sent_shuffle": "First thing the of consider past. are learning when mistakes predecessors' we the first that all, should the about",
+          "pred_original": "Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "PE-train-517",
+          "sentence": "Learning in classroom could provide more information to study.",
+          "true_label": "No-Argument",
+          "document_context": "Should replace normal classroom with online computer classes?\nThere are many advantages of distance learning, but it should not replace classroom learning.",
+          "sent_original": "Learning in classroom could provide more information to study.",
+          "sent_feger": "learning classroom provide information study",
+          "sent_shuffle": "Learning study. more classroom in to provide information could",
+          "pred_original": "No-Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "PE-train-518",
+          "sentence": "Unlike a professional, parents always support children and give them much social skill so they can communicate well with others and have good habit in life.",
+          "true_label": "No-Argument",
+          "document_context": "Third, it is clear that parents are ones who loves their children most and always take care of their children.\nThus, they tend to provide the best knowledge and advice from their experience for children.",
+          "sent_original": "Unlike a professional, parents always support children and give them much social skill so they can communicate well with others and have good habit in life.",
+          "sent_feger": "professional parents support children social skill communicate good habit life",
+          "sent_shuffle": "always them support others give communicate habit with children parents and Unlike a they in life. so much well skill good can have and professional, social",
+          "pred_original": "Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "PE-train-519",
+          "sentence": "Secondly, even though environmental damage is inevitable, it is not tourism to be blamed for.",
+          "true_label": "No-Argument",
+          "document_context": "It will, by all means, attract considerable attention which goes hand in hand with the enormous income for the local residents.\nIn other word, tourism helps divert the local economy to its right direction, which exploit the best out of its own potential.",
+          "sent_original": "Secondly, even though environmental damage is inevitable, it is not tourism to be blamed for.",
+          "sent_feger": "secondly environmental damage inevitable tourism blamed",
+          "sent_shuffle": "is though even Secondly, blamed to tourism it environmental damage not inevitable, for. is be",
+          "pred_original": "No-Argument",
+          "pred_feger": "Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "PE-train-520",
+          "sentence": "They are kept for security purposes in houses.",
+          "true_label": "No-Argument",
+          "document_context": "Likewise, other animals such as, horses, cattles and donkeys for farming, agriculture and as a mode of transportation.\nMany people keep pets like dogs and cats, trained them as service dogs and snuffing dogs which are very helpful to police force and even to some blind peoples.",
+          "sent_original": "They are kept for security purposes in houses.",
+          "sent_feger": "kept security purposes houses",
+          "sent_shuffle": "in houses. purposes kept are security for They",
+          "pred_original": "No-Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "PE-train-521",
+          "sentence": "Some students benefit a lot when they study with groups.",
+          "true_label": "No-Argument",
+          "document_context": "Some students prefer to study alone\n\nEveryone has their method to success in life.\nAt school or university, success depends on how we study.",
+          "sent_original": "Some students benefit a lot when they study with groups.",
+          "sent_feger": "students benefit lot study groups",
+          "sent_shuffle": "lot benefit groups. study students a when Some with they",
+          "pred_original": "Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "PE-train-522",
+          "sentence": "Working in team is a necessary skill that every individual must master for success.",
+          "true_label": "No-Argument",
+          "document_context": "Work in team or independently\n\nNowadays, as the world is getting smaller, we need to be able to cooperate.",
+          "sent_original": "Working in team is a necessary skill that every individual must master for success.",
+          "sent_feger": "working team necessary skill individual master success",
+          "sent_shuffle": "skill in that must every for team necessary success. master Working individual a is",
+          "pred_original": "Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "PE-train-523",
+          "sentence": "Computer is a modern device that is useful for human life.",
+          "true_label": "No-Argument",
+          "document_context": "Nowadays human activities are influenced by computer use",
+          "sent_original": "Computer is a modern device that is useful for human life.",
+          "sent_feger": "computer modern device useful human life",
+          "sent_shuffle": "a for is modern useful that Computer life. human device is",
+          "pred_original": "No-Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "PE-train-524",
+          "sentence": "If you are always facing excessive stress you cannot care for your beloved's.",
+          "true_label": "No-Argument",
+          "document_context": "After several weeks off his body was restored, now he has reduced the tempo of his lifestyle and is doing fine.\nIn addition, living your life at a slower pace increases your happiness.",
+          "sent_original": "If you are always facing excessive stress you cannot care for your beloved's.",
+          "sent_feger": "facing excessive stress care beloved",
+          "sent_shuffle": "always If for cannot stress are your you you excessive beloved's. facing care",
+          "pred_original": "Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "PE-train-525",
+          "sentence": "They still believe that in present time women must do such type of work only.",
+          "true_label": "No-Argument",
+          "document_context": "Contrastingly, in the past time, women worked at home and performed sophisticated work.\nThis factor is still affecting thinking of many people.",
+          "sent_original": "They still believe that in present time women must do such type of work only.",
+          "sent_feger": "believe present time women type work",
+          "sent_shuffle": "only. such They type women work still of in must that believe time present do",
+          "pred_original": "Argument",
+          "pred_feger": "Argument",
+          "pred_shuffle": "No-Argument"
+        }
+      ]
+    },
+    "USELEC": {
+      "n_samples": 30,
+      "reports": {
+        "original": {
+          "Argument": {
+            "precision": 0.7222222222222222,
+            "recall": 0.8666666666666667,
+            "f1-score": 0.7878787878787878,
+            "support": 15.0
+          },
+          "No-Argument": {
+            "precision": 0.8333333333333334,
+            "recall": 0.6666666666666666,
+            "f1-score": 0.7407407407407407,
+            "support": 15.0
+          },
+          "accuracy": 0.7666666666666667,
+          "macro avg": {
+            "precision": 0.7777777777777778,
+            "recall": 0.7666666666666666,
+            "f1-score": 0.7643097643097643,
+            "support": 30.0
+          },
+          "weighted avg": {
+            "precision": 0.7777777777777779,
+            "recall": 0.7666666666666667,
+            "f1-score": 0.7643097643097643,
+            "support": 30.0
+          }
+        },
+        "feger": {
+          "Argument": {
+            "precision": 1.0,
+            "recall": 0.3333333333333333,
+            "f1-score": 0.5,
+            "support": 15.0
+          },
+          "No-Argument": {
+            "precision": 0.6,
+            "recall": 1.0,
+            "f1-score": 0.75,
+            "support": 15.0
+          },
+          "accuracy": 0.6666666666666666,
+          "macro avg": {
+            "precision": 0.8,
+            "recall": 0.6666666666666666,
+            "f1-score": 0.625,
+            "support": 30.0
+          },
+          "weighted avg": {
+            "precision": 0.8,
+            "recall": 0.6666666666666666,
+            "f1-score": 0.625,
+            "support": 30.0
+          }
+        },
+        "shuffle": {
+          "Argument": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1-score": 0.0,
+            "support": 15.0
+          },
+          "No-Argument": {
+            "precision": 0.4827586206896552,
+            "recall": 0.9333333333333333,
+            "f1-score": 0.6363636363636364,
+            "support": 15.0
+          },
+          "accuracy": 0.4666666666666667,
+          "macro avg": {
+            "precision": 0.2413793103448276,
+            "recall": 0.4666666666666667,
+            "f1-score": 0.3181818181818182,
+            "support": 30.0
+          },
+          "weighted avg": {
+            "precision": 0.2413793103448276,
+            "recall": 0.4666666666666667,
+            "f1-score": 0.3181818181818182,
+            "support": 30.0
+          }
+        }
+      },
+      "macro_f1_original": 0.7643,
+      "macro_f1_feger": 0.625,
+      "macro_f1_shuffle": 0.3182,
+      "delta_feger": -0.1393,
+      "delta_shuffle": -0.4461,
+      "samples": [
+        {
+          "id": "USELEC-train-1",
+          "sentence": "I do not believe that we, the United States, should sell, give or otherwise transfer military hardware to the People's Republic of China, or any other Communist nation, such as the Soviet Union and the like.",
+          "true_label": "Argument",
+          "document_context": "VALERIANI: And sir, the military equipment for the mainland Chinese?\nFORD: There is no policy of this government to give to the People's Republic, or to sell to the People's Republic of China, military equipment.",
+          "sent_original": "I do not believe that we, the United States, should sell, give or otherwise transfer military hardware to the People's Republic of China, or any other Communist nation, such as the Soviet Union and the like.",
+          "sent_feger": "believe united states sell transfer military hardware people republic china communist nation soviet union like",
+          "sent_shuffle": "Union Communist States, United military other as we, of like. sell, that the should nation, any China, transfer believe do give Soviet or and the such People's I to otherwise Republic not or the the hardware",
+          "pred_original": "Argument",
+          "pred_feger": "Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "USELEC-train-2",
+          "sentence": "That costs the government $7,700 per family.",
+          "true_label": "Argument",
+          "document_context": "I want to remind people listening tonight that a plan is not a litany of complaints, and a plan is not to lay out programs that you can't pay for.\nHe just said he wants everybody to be able to buy in to the same plan that senators and congressmen get.",
+          "sent_original": "That costs the government $7,700 per family.",
+          "sent_feger": "costs government 7,700 family",
+          "sent_shuffle": "government That the per $7,700 costs family.",
+          "pred_original": "No-Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "USELEC-train-3",
+          "sentence": "He was wrong.",
+          "true_label": "Argument",
+          "document_context": "Perot's service in uniform and the service of every man and woman who ever served, including Admiral Crowe, who was your Chairman of the joint Chiefs and who's supporting me.\nBut when Joe McCarthy went around this country attacking people's patriotism he was wrong.",
+          "sent_original": "He was wrong.",
+          "sent_feger": "wrong",
+          "sent_shuffle": "was He wrong.",
+          "pred_original": "Argument",
+          "pred_feger": "Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "USELEC-train-4",
+          "sentence": "I think we should try to raise the fuel efficiency.",
+          "true_label": "Argument",
+          "document_context": "I have never said we should write it into law if there is evidence that that goal cannot be achieved.\nThe Natl Science Foundation did a study which said it would be difficult for us to reach fuel efficiency standards in excess of 37 miles per gallon by the year 2000.",
+          "sent_original": "I think we should try to raise the fuel efficiency.",
+          "sent_feger": "think try raise fuel efficiency",
+          "sent_shuffle": "try fuel to the we efficiency. should I think raise",
+          "pred_original": "Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "USELEC-train-5",
+          "sentence": "Number two, Governor Romney, before he knew the facts, before he even knew that our ambassador was killed, he was out making a political statement which was panned by the media around the world.",
+          "true_label": "Argument",
+          "document_context": "Number one, the -- this lecture on embassy security -- the congressman here cut embassy security in his budget by $300 million below what we asked for, number one.\nSo much for the embassy security piece.",
+          "sent_original": "Number two, Governor Romney, before he knew the facts, before he even knew that our ambassador was killed, he was out making a political statement which was panned by the media around the world.",
+          "sent_feger": "number governor romney knew facts knew ambassador killed making political statement panned media world",
+          "sent_shuffle": "the two, knew the was out Governor world. knew the that facts, before around even media was political which by Number before statement he he killed, was our Romney, he panned ambassador making a",
+          "pred_original": "Argument",
+          "pred_feger": "Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "USELEC-train-6",
+          "sentence": "And therefore, it seems to me that we should hold the lid, as we have, to the best of our ability so we can stimulate the private economy and get the jobs where the jobs are - five out of six in this economy.",
+          "true_label": "Argument",
+          "document_context": "And yet he condemns the vetoes that I have made that has - that have saved the taxpayer $9 billion and could have saved an additional $13 billion.\nNow he can't have it both ways.",
+          "sent_original": "And therefore, it seems to me that we should hold the lid, as we have, to the best of our ability so we can stimulate the private economy and get the jobs where the jobs are - five out of six in this economy.",
+          "sent_feger": "hold lid best ability stimulate private economy jobs jobs economy",
+          "sent_shuffle": "we seems the this to to we the the jobs out five of ability best are have, economy economy. lid, therefore, as - can and of the hold where our stimulate that so me private jobs get the it in should six And we",
+          "pred_original": "Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "USELEC-train-7",
+          "sentence": "And we'll continue to protect our borders.",
+          "true_label": "Argument",
+          "document_context": "He just doesn't understand how the borders work, evidently, to say that.\nThat is an outrageous claim.",
+          "sent_original": "And we'll continue to protect our borders.",
+          "sent_feger": "continue protect borders",
+          "sent_shuffle": "we'll continue our protect borders. And to",
+          "pred_original": "Argument",
+          "pred_feger": "Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "USELEC-train-8",
+          "sentence": "And at the end of all of that, not one shred of evidence was introduced that the unborn child was not alive.",
+          "true_label": "Argument",
+          "document_context": "I believe that until and unless someone can establish that the unborn child is not a living human being, then that child is already protected by the Constitution, which guarantees life, liberty, and the pursuit of happiness to all of us.\nAnd I think that this is what we should concentrate on, is trying -- I know there were weeks and weeks of testimony before a Senate committee, there were medical authorities, there were religious -- there were clerics there -- everyone talking about this matter of prolife.",
+          "sent_original": "And at the end of all of that, not one shred of evidence was introduced that the unborn child was not alive.",
+          "sent_feger": "end shred evidence introduced unborn child alive",
+          "sent_shuffle": "child that And one of not alive. the all at evidence unborn introduced of that, of end the was not was shred",
+          "pred_original": "Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "USELEC-train-9",
+          "sentence": "Very briefly, if a young couple making $50,000 a year saves $1,000, the government will put another $1,000 in that account.",
+          "true_label": "Argument",
+          "document_context": "A $3,000 tax credit for the cost -- well, actually for a family member who stays home with a parent or grandparent who is ill.\nAnd a very exciting tax credit program that I hope I'll have a chance to talk about later, Bernie, that encourages savings by people early in life and any time in life by having the federal government match savings for the 75 million Americans who make $100,000 or less up to $2,000 a year.",
+          "sent_original": "Very briefly, if a young couple making $50,000 a year saves $1,000, the government will put another $1,000 in that account.",
+          "sent_feger": "briefly young couple making 50,000 year saves 1,000 government 1,000 account",
+          "sent_shuffle": "$50,000 another saves a will account. briefly, a if the couple year $1,000 Very put young in that making government $1,000,",
+          "pred_original": "Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "USELEC-train-10",
+          "sentence": "They were first against the 9/11 Commission; then they were for it.",
+          "true_label": "Argument",
+          "document_context": "Now, flip-flops: They should know something about flip-flops.\nThey've seen a lot of it during their administration.",
+          "sent_original": "They were first against the 9/11 Commission; then they were for it.",
+          "sent_feger": "9/11 commission",
+          "sent_shuffle": "then the it. Commission; They 9/11 they against for were first were",
+          "pred_original": "Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "USELEC-train-11",
+          "sentence": "They seriously question whether or not there will be any system left for them.",
+          "true_label": "Argument",
+          "document_context": "And Governor Bush and I want to make absolutely certain that the first thing we do is guarantee the continuation of those payments, those benefits and keep those promises that were made.\nBut if you look down the road, you say you're 30 years old today, and I have two daughters about that age.",
+          "sent_original": "They seriously question whether or not there will be any system left for them.",
+          "sent_feger": "seriously question system left",
+          "sent_shuffle": "any them. left not whether for there or question They system be will seriously",
+          "pred_original": "Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "USELEC-train-12",
+          "sentence": "That was the right thing to do.",
+          "true_label": "Argument",
+          "document_context": "We -- we had to go into Pakistan.\nWe had to go in there to get Osama bin Laden.",
+          "sent_original": "That was the right thing to do.",
+          "sent_feger": "right thing",
+          "sent_shuffle": "right was to thing the do. That",
+          "pred_original": "Argument",
+          "pred_feger": "Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "USELEC-train-13",
+          "sentence": "But have no doubt, but have no doubt that the Iranians continue on the path to the acquisition of a nuclear weapon as we speak tonight.",
+          "true_label": "Argument",
+          "document_context": "The Iranians have a lousy government, so therefore their economy is lousy, even though they have significant oil revenues.\nSo I am convinced that together, we can, with the French, with the British, with the Germans and other countries, democracies around the world, we can affect Iranian behavior.",
+          "sent_original": "But have no doubt, but have no doubt that the Iranians continue on the path to the acquisition of a nuclear weapon as we speak tonight.",
+          "sent_feger": "doubt doubt iranians continue path acquisition nuclear weapon speak tonight",
+          "sent_shuffle": "path doubt, we Iranians but to that acquisition nuclear of tonight. continue the weapon have on no But the speak a have doubt as no the",
+          "pred_original": "Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "USELEC-train-14",
+          "sentence": "It's time for a new administration to deal with the energy problem.",
+          "true_label": "Argument",
+          "document_context": "This is a major problem facing America.\nThe administration did not deal with it.",
+          "sent_original": "It's time for a new administration to deal with the energy problem.",
+          "sent_feger": "time new administration deal energy problem",
+          "sent_shuffle": "a to the deal new time problem. for with It's administration energy",
+          "pred_original": "Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "USELEC-train-15",
+          "sentence": "This is America.",
+          "true_label": "Argument",
+          "document_context": "This is the United States of America.\nYou're not going to go without food and you're not going to go without medical care.",
+          "sent_original": "This is America.",
+          "sent_feger": "america",
+          "sent_shuffle": "America. is This",
+          "pred_original": "No-Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "USELEC-train-511",
+          "sentence": "(Laughter and applause) But--but--see, let me make it very clear.",
+          "true_label": "No-Argument",
+          "document_context": "We've got to collect the taxes to do it.\nIf there's a fairer way, I'm all ears (laughter) --aah.",
+          "sent_original": "(Laughter and applause) But--but--see, let me make it very clear.",
+          "sent_feger": "laughter applause let clear",
+          "sent_shuffle": "(Laughter it me very let applause) and But--but--see, make clear.",
+          "pred_original": "Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "USELEC-train-512",
+          "sentence": "Drug use doubled.",
+          "true_label": "No-Argument",
+          "document_context": "But it seems to me the record is clear.\nThe record is pretty clear in Arkansas, when you were governor.",
+          "sent_original": "Drug use doubled.",
+          "sent_feger": "drug use doubled",
+          "sent_shuffle": "Drug use doubled.",
+          "pred_original": "Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "Argument"
+        },
+        {
+          "id": "USELEC-train-513",
+          "sentence": "The Congress passed uh an enterprise zone after the Los Angeles riots five years ago.",
+          "true_label": "No-Argument",
+          "document_context": "GORE: Before I answer that specific question, let me say that we did put an empowerment zone in South Central, Los Angeles.\nIt is in the form of the largest community development financial institution ever created in the United States or in any other country and it is creating jobs in South Central, Los Angeles right now.",
+          "sent_original": "The Congress passed uh an enterprise zone after the Los Angeles riots five years ago.",
+          "sent_feger": "congress passed enterprise zone los angeles riots years ago",
+          "sent_shuffle": "passed enterprise the uh after Angeles ago. Congress five zone an years The Los riots",
+          "pred_original": "No-Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "USELEC-train-514",
+          "sentence": "The Soviets say we'll have a meeting when we think there can be progress and yet they left those talks.",
+          "true_label": "No-Argument",
+          "document_context": "Kohl, and others that have met with the leaders of the Soviet Union.\nBut that's quite different than meeting with the president of the United States.",
+          "sent_original": "The Soviets say we'll have a meeting when we think there can be progress and yet they left those talks.",
+          "sent_feger": "soviets meeting think progress left talks",
+          "sent_shuffle": "talks. when they The we'll yet meeting left we there say have and think can those be a Soviets progress",
+          "pred_original": "Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "USELEC-train-515",
+          "sentence": "Thank you so much.",
+          "true_label": "No-Argument",
+          "document_context": "I'll lead you in an open and honest way, and I ask for your vote.\nI'd like to be the next president of the United States to support and help this great nation and to make sure that we all together remain America as the hope of the earth.",
+          "sent_original": "Thank you so much.",
+          "sent_feger": "thank",
+          "sent_shuffle": "so much. Thank you",
+          "pred_original": "No-Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "USELEC-train-516",
+          "sentence": "And he said our troops would be occupiers in a bitterly hostile land.",
+          "true_label": "No-Argument",
+          "document_context": "You know, the president's father did not go into Iraq, into Baghdad, beyond Basra.\nAnd the reason he didn't is, he said -- he wrote in his book -- because there was no viable exit strategy.",
+          "sent_original": "And he said our troops would be occupiers in a bitterly hostile land.",
+          "sent_feger": "said troops occupiers bitterly hostile land",
+          "sent_shuffle": "he said a in troops land. And bitterly be occupiers would our hostile",
+          "pred_original": "Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "USELEC-train-517",
+          "sentence": "As a matter of fact, during this current year uh we are shipping Iran, or have contracted to ship to Iran, about seven and a half billion dollars worth of arms and also to Saudi Arabia, about seven and a half billion dollars worth of arms.",
+          "true_label": "No-Argument",
+          "document_context": "CARTER: Well, I'd like to go back just one moment to the previous question, where uh - Mr.\nFord, I think, confused the issue by trying to say that we are shipping Israel 40 percent of our aid.",
+          "sent_original": "As a matter of fact, during this current year uh we are shipping Iran, or have contracted to ship to Iran, about seven and a half billion dollars worth of arms and also to Saudi Arabia, about seven and a half billion dollars worth of arms.",
+          "sent_feger": "matter fact current year shipping iran contracted ship iran seven half billion dollars worth arms saudi arabia seven half billion dollars worth arms",
+          "sent_shuffle": "matter about Iran, to of during Arabia, arms. of billion a Saudi worth to have we current seven worth Iran, dollars a half ship arms and and fact, seven to are a of about this shipping As year billion uh contracted half and also or dollars",
+          "pred_original": "No-Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "USELEC-train-518",
+          "sentence": "And this is part of that liberal establishment, one of those liberal things that you just can't do.",
+          "true_label": "No-Argument",
+          "document_context": "You're not for school choice, you can't be for school choice, because this is that special interest money again.\nWhen you get 99.5 percent of the money, we don't know what happened to the other .5 percent, we're looking for it, somebody got it, but it all went to Democrats.",
+          "sent_original": "And this is part of that liberal establishment, one of those liberal things that you just can't do.",
+          "sent_feger": "liberal establishment liberal things",
+          "sent_shuffle": "those just you can't this that is of that liberal one of And things part establishment, do. liberal",
+          "pred_original": "Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "USELEC-train-519",
+          "sentence": "And a number of pages were excised by that agency head there, the man in charge, and he sent it on up here to CIA, where more pages were excised before it was printed.",
+          "true_label": "No-Argument",
+          "document_context": "And he drew up this manual.\nIt was turned over to the agency head of the CIA in Nicaragua to be printed.",
+          "sent_original": "And a number of pages were excised by that agency head there, the man in charge, and he sent it on up here to CIA, where more pages were excised before it was printed.",
+          "sent_feger": "number pages excised agency head man charge sent cia pages excised printed",
+          "sent_shuffle": "by that and there, head excised more man he before was on pages And to here charge, where agency sent the were it were it of up number printed. pages in excised a CIA,",
+          "pred_original": "No-Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "USELEC-train-520",
+          "sentence": "You see our five kids, all over this country, and their spouses.",
+          "true_label": "No-Argument",
+          "document_context": "And we said, hey, we've got to unleash the Bush kids.\nAnd so you saw ten grandchildren there jumping all over their grandfather at the convention.",
+          "sent_original": "You see our five kids, all over this country, and their spouses.",
+          "sent_feger": "kids country spouses",
+          "sent_shuffle": "kids, this You five country, spouses. and all see over our their",
+          "pred_original": "No-Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "USELEC-train-521",
+          "sentence": "You mentioned Haiti.",
+          "true_label": "No-Argument",
+          "document_context": "I'm worried about overcommitting our military around the world.\nI want to be judicious in its use.",
+          "sent_original": "You mentioned Haiti.",
+          "sent_feger": "mentioned haiti",
+          "sent_shuffle": "Haiti. You mentioned",
+          "pred_original": "No-Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "USELEC-train-522",
+          "sentence": "I am a graduate of the U.S.",
+          "true_label": "No-Argument",
+          "document_context": "I've got a little ways to go before I start doing that.\nBut I have uh - an adequate background, I believe.",
+          "sent_original": "I am a graduate of the U.S.",
+          "sent_feger": "graduate u.s.",
+          "sent_shuffle": "the am a graduate U.S. of I",
+          "pred_original": "No-Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "USELEC-train-523",
+          "sentence": "I don't think so.\"",
+          "true_label": "No-Argument",
+          "document_context": "WALLACE: It's her two minutes.\nCLINTON: He went on to say, \"Look at her.",
+          "sent_original": "I don't think so.\"",
+          "sent_feger": "think",
+          "sent_shuffle": "don't so.\" I think",
+          "pred_original": "No-Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "USELEC-train-524",
+          "sentence": "It holds down the prices of their goods.",
+          "true_label": "No-Argument",
+          "document_context": "We'll also make sure that we have trade relations with China that work for us.\nI've watched year in and year out as companies have shut down and people have lost their jobs because China has not played by the same rules, in part by holding down artificially the value of their currency.",
+          "sent_original": "It holds down the prices of their goods.",
+          "sent_feger": "holds prices goods",
+          "sent_shuffle": "of prices goods. their holds It the down",
+          "pred_original": "No-Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "USELEC-train-525",
+          "sentence": "BIDEN: Fill in the detail.",
+          "true_label": "No-Argument",
+          "document_context": "RYAN: We said here's the framework, let's work together to fill in the details.\nThat's exactly...",
+          "sent_original": "BIDEN: Fill in the detail.",
+          "sent_feger": "biden fill detail",
+          "sent_shuffle": "detail. Fill BIDEN: in the",
+          "pred_original": "No-Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        }
+      ]
+    }
+  },
+  "overall": {
+    "mean_macro_f1_original": 0.689,
+    "mean_macro_f1_feger": 0.5049,
+    "mean_macro_f1_shuffle": 0.3931,
+    "mean_delta_feger": -0.1841,
+    "mean_delta_shuffle": -0.2959
+  }
+}

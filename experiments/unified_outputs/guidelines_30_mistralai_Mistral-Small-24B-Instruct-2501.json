@@ -1,0 +1,1742 @@
+{
+  "timestamp": "2026-02-09T21:32:54.287373",
+  "config_path": "config/experiments/together_mistral-24B_config_guidelines_30.toml",
+  "config": {
+    "experiment": {
+      "experiment_name": "guidelines",
+      "sample_size": 30,
+      "output_dir": "experiments/unified_outputs"
+    },
+    "llm": {
+      "provider": "together_ai",
+      "model": "mistralai/Mistral-Small-24B-Instruct-2501",
+      "temperature": 0.0,
+      "max_tokens": 5
+    },
+    "context": {
+      "sources": [
+        "definition",
+        "guideline"
+      ]
+    },
+    "datasets": {
+      "enabled": [
+        "ABSTRCT",
+        "ARGUMINSCI",
+        "PE",
+        "USELEC"
+      ]
+    }
+  },
+  "prompts": {
+    "system": "## Role\nYou are a Dataset Annotator. Classify the input as \"Argument\" or \"No-Argument\".\nRespond with exactly one label. Do not explain.\n\n## Rules\n- Only classify as \"Argument\" if the sentence clearly matches the argument definition below.\n\n{context}",
+    "user": "{sentence}"
+  },
+  "model": "mistralai/Mistral-Small-24B-Instruct-2501",
+  "sample_size": 30,
+  "context_sources": [
+    "definition",
+    "guideline"
+  ],
+  "datasets": {
+    "ABSTRCT": {
+      "n_samples": 30,
+      "reports": {
+        "original": {
+          "Argument": {
+            "precision": 0.6470588235294118,
+            "recall": 0.7333333333333333,
+            "f1-score": 0.6875,
+            "support": 15.0
+          },
+          "No-Argument": {
+            "precision": 0.6923076923076923,
+            "recall": 0.6,
+            "f1-score": 0.6428571428571429,
+            "support": 15.0
+          },
+          "accuracy": 0.6666666666666666,
+          "macro avg": {
+            "precision": 0.6696832579185521,
+            "recall": 0.6666666666666666,
+            "f1-score": 0.6651785714285714,
+            "support": 30.0
+          },
+          "weighted avg": {
+            "precision": 0.669683257918552,
+            "recall": 0.6666666666666666,
+            "f1-score": 0.6651785714285715,
+            "support": 30.0
+          }
+        },
+        "feger": {
+          "Argument": {
+            "precision": 0.6363636363636364,
+            "recall": 0.4666666666666667,
+            "f1-score": 0.5384615384615384,
+            "support": 15.0
+          },
+          "No-Argument": {
+            "precision": 0.5789473684210527,
+            "recall": 0.7333333333333333,
+            "f1-score": 0.6470588235294118,
+            "support": 15.0
+          },
+          "accuracy": 0.6,
+          "macro avg": {
+            "precision": 0.6076555023923444,
+            "recall": 0.6,
+            "f1-score": 0.5927601809954751,
+            "support": 30.0
+          },
+          "weighted avg": {
+            "precision": 0.6076555023923444,
+            "recall": 0.6,
+            "f1-score": 0.5927601809954751,
+            "support": 30.0
+          }
+        },
+        "shuffle": {
+          "Argument": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1-score": 0.0,
+            "support": 15.0
+          },
+          "No-Argument": {
+            "precision": 0.4827586206896552,
+            "recall": 0.9333333333333333,
+            "f1-score": 0.6363636363636364,
+            "support": 15.0
+          },
+          "accuracy": 0.4666666666666667,
+          "macro avg": {
+            "precision": 0.2413793103448276,
+            "recall": 0.4666666666666667,
+            "f1-score": 0.3181818181818182,
+            "support": 30.0
+          },
+          "weighted avg": {
+            "precision": 0.2413793103448276,
+            "recall": 0.4666666666666667,
+            "f1-score": 0.3181818181818182,
+            "support": 30.0
+          }
+        }
+      },
+      "macro_f1_original": 0.6652,
+      "macro_f1_feger": 0.5928,
+      "macro_f1_shuffle": 0.3182,
+      "delta_feger": -0.0724,
+      "delta_shuffle": -0.347,
+      "samples": [
+        {
+          "id": "ABSTRCT-train-1",
+          "sentence": "Both treatments were safe and well tolerated.",
+          "true_label": "Argument",
+          "sent_original": "Both treatments were safe and well tolerated.",
+          "sent_feger": "treatments safe tolerated",
+          "sent_shuffle": "treatments and safe were well Both tolerated.",
+          "pred_original": "No-Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "ABSTRCT-train-2",
+          "sentence": "The TAX 326 study shows that docetaxel-platinum regimens relieve symptoms and improve QoL in patients with advanced NSCLC.",
+          "true_label": "Argument",
+          "sent_original": "The TAX 326 study shows that docetaxel-platinum regimens relieve symptoms and improve QoL in patients with advanced NSCLC.",
+          "sent_feger": "tax 326 study shows docetaxel platinum regimens relieve symptoms improve qol patients advanced nsclc",
+          "sent_shuffle": "advanced NSCLC. study that in patients improve symptoms with 326 shows and The docetaxel-platinum QoL regimens relieve TAX",
+          "pred_original": "Argument",
+          "pred_feger": "Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "ABSTRCT-train-3",
+          "sentence": "Docetaxel has shown activity in elderly patients with advanced non-small-cell lung cancer (NSCLC).",
+          "true_label": "Argument",
+          "sent_original": "Docetaxel has shown activity in elderly patients with advanced non-small-cell lung cancer (NSCLC).",
+          "sent_feger": "docetaxel shown activity elderly patients advanced non small cell lung cancer nsclc",
+          "sent_shuffle": "has lung elderly Docetaxel cancer shown with activity (NSCLC). advanced patients non-small-cell in",
+          "pred_original": "Argument",
+          "pred_feger": "Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "ABSTRCT-train-4",
+          "sentence": "Targeted therapies may improve chemotherapy effectiveness without worsening toxicity.",
+          "true_label": "Argument",
+          "sent_original": "Targeted therapies may improve chemotherapy effectiveness without worsening toxicity.",
+          "sent_feger": "targeted therapies improve chemotherapy effectiveness worsening toxicity",
+          "sent_shuffle": "effectiveness toxicity. Targeted may worsening therapies chemotherapy improve without",
+          "pred_original": "Argument",
+          "pred_feger": "Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "ABSTRCT-train-5",
+          "sentence": "The incidence of hepatotoxicity during IPT and ART was high.",
+          "true_label": "Argument",
+          "sent_original": "The incidence of hepatotoxicity during IPT and ART was high.",
+          "sent_feger": "incidence hepatotoxicity ipt art high",
+          "sent_shuffle": "The high. IPT of during was ART incidence and hepatotoxicity",
+          "pred_original": "Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "ABSTRCT-train-6",
+          "sentence": "The small sample size may have limited our ability to detect significant differences beyond 6 months of observation as well as additional significant differences in our study.",
+          "true_label": "Argument",
+          "sent_original": "The small sample size may have limited our ability to detect significant differences beyond 6 months of observation as well as additional significant differences in our study.",
+          "sent_feger": "small sample size limited ability detect significant differences 6 months observation additional significant differences study",
+          "sent_shuffle": "our 6 may additional significant differences detect limited ability our well beyond months study. in significant sample of to The have size as as observation differences small",
+          "pred_original": "No-Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "ABSTRCT-train-7",
+          "sentence": "Scapula-oriented exercise had beneficial effects on pain, quality of life and aspects of strength.",
+          "true_label": "Argument",
+          "sent_original": "Scapula-oriented exercise had beneficial effects on pain, quality of life and aspects of strength.",
+          "sent_feger": "scapula oriented exercise beneficial effects pain quality life aspects strength",
+          "sent_shuffle": "quality on life Scapula-oriented and effects strength. exercise of beneficial of aspects pain, had",
+          "pred_original": "Argument",
+          "pred_feger": "Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "ABSTRCT-train-8",
+          "sentence": "Despite the early closure of the study and the lack of power of the comparison, it seems that ldLV5FU2 could be considered as an active, easier and less expensive option for the treatment of metastatic colorectal cancer compared to classic LV5FU2 or weekly HD-FU.",
+          "true_label": "Argument",
+          "sent_original": "Despite the early closure of the study and the lack of power of the comparison, it seems that ldLV5FU2 could be considered as an active, easier and less expensive option for the treatment of metastatic colorectal cancer compared to classic LV5FU2 or weekly HD-FU.",
+          "sent_feger": "early closure study lack power comparison ldlv5fu2 considered active easier expensive option treatment metastatic colorectal cancer compared classic lv5fu2 weekly hd fu",
+          "sent_shuffle": "closure option LV5FU2 for of expensive easier an the lack of classic the the metastatic cancer early to of ldLV5FU2 weekly considered the the it less could compared and study and as power seems or of that be comparison, colorectal active, Despite treatment HD-FU.",
+          "pred_original": "Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "ABSTRCT-train-9",
+          "sentence": "One-site fornix-based and 2-site limbus-based phacotrabeculectomy were similarly effective in lowering IOP and reducing the need for antiglaucoma medications over a 3-year follow-up period.",
+          "true_label": "Argument",
+          "sent_original": "One-site fornix-based and 2-site limbus-based phacotrabeculectomy were similarly effective in lowering IOP and reducing the need for antiglaucoma medications over a 3-year follow-up period.",
+          "sent_feger": "site fornix based 2 site limbus based phacotrabeculectomy similarly effective lowering iop reducing need antiglaucoma medications 3 year follow period",
+          "sent_shuffle": "were 2-site and phacotrabeculectomy a for limbus-based the in and follow-up lowering antiglaucoma 3-year fornix-based similarly medications One-site IOP period. need effective reducing over",
+          "pred_original": "Argument",
+          "pred_feger": "Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "ABSTRCT-train-10",
+          "sentence": "Treatment with PB+G increased the incidence of severe neutropenia and dyspnea, although the regimen generally was well tolerated.",
+          "true_label": "Argument",
+          "sent_original": "Treatment with PB+G increased the incidence of severe neutropenia and dyspnea, although the regimen generally was well tolerated.",
+          "sent_feger": "treatment pb+g increased incidence severe neutropenia dyspnea regimen generally tolerated",
+          "sent_shuffle": "incidence tolerated. increased severe with and Treatment although well regimen dyspnea, was the PB+G neutropenia the of generally",
+          "pred_original": "Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "ABSTRCT-train-11",
+          "sentence": "HDC has a negative impact on QOL even after treatment phase.",
+          "true_label": "Argument",
+          "sent_original": "HDC has a negative impact on QOL even after treatment phase.",
+          "sent_feger": "hdc negative impact qol treatment phase",
+          "sent_shuffle": "negative after a phase. treatment has impact on QOL HDC even",
+          "pred_original": "Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "ABSTRCT-train-12",
+          "sentence": "Compared with multiple-fraction radiotherapy, single-fraction radiotherapy provides equal palliation and quality of life and has lower medical and societal costs, at least in The Netherlands.",
+          "true_label": "Argument",
+          "sent_original": "Compared with multiple-fraction radiotherapy, single-fraction radiotherapy provides equal palliation and quality of life and has lower medical and societal costs, at least in The Netherlands.",
+          "sent_feger": "compared multiple fraction radiotherapy single fraction radiotherapy provides equal palliation quality life lower medical societal costs netherlands",
+          "sent_shuffle": "The lower radiotherapy, equal costs, in radiotherapy and life Netherlands. societal and has single-fraction palliation at quality with Compared provides and of medical multiple-fraction least",
+          "pred_original": "Argument",
+          "pred_feger": "Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "ABSTRCT-train-13",
+          "sentence": "At present, it does not seem cost-effective to introduce MMS on a large scale for both primary and recurrent BCC.",
+          "true_label": "Argument",
+          "sent_original": "At present, it does not seem cost-effective to introduce MMS on a large scale for both primary and recurrent BCC.",
+          "sent_feger": "present cost effective introduce mms large scale primary recurrent bcc",
+          "sent_shuffle": "seem not cost-effective it large both to on a At for BCC. introduce and does MMS scale recurrent present, primary",
+          "pred_original": "Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "ABSTRCT-train-14",
+          "sentence": "Effects of HT on toxicities, treatment delay, QOL, and fatigue were not observed.",
+          "true_label": "Argument",
+          "sent_original": "Effects of HT on toxicities, treatment delay, QOL, and fatigue were not observed.",
+          "sent_feger": "effects ht toxicities treatment delay qol fatigue observed",
+          "sent_shuffle": "not of on observed. and HT Effects QOL, treatment fatigue toxicities, were delay,",
+          "pred_original": "No-Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "ABSTRCT-train-15",
+          "sentence": "This trial was undertaken to assess whether octreotide would lower insulin and IGF-1 levels and reduce risk of breast cancer recurrence.",
+          "true_label": "Argument",
+          "sent_original": "This trial was undertaken to assess whether octreotide would lower insulin and IGF-1 levels and reduce risk of breast cancer recurrence.",
+          "sent_feger": "trial undertaken assess octreotide lower insulin igf-1 levels reduce risk breast cancer recurrence",
+          "sent_shuffle": "levels to This and and risk would of cancer lower was IGF-1 assess trial undertaken breast recurrence. insulin octreotide reduce whether",
+          "pred_original": "No-Argument",
+          "pred_feger": "Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "ABSTRCT-train-511",
+          "sentence": "Participants were enrolled in a randomized intervention trial to treat sexual dysfunction and completed outcome measures prior to randomization.",
+          "true_label": "No-Argument",
+          "sent_original": "Participants were enrolled in a randomized intervention trial to treat sexual dysfunction and completed outcome measures prior to randomization.",
+          "sent_feger": "participants enrolled randomized intervention trial treat sexual dysfunction completed outcome measures prior randomization",
+          "sent_shuffle": "completed to measures enrolled were randomization. to randomized trial treat dysfunction outcome Participants and a intervention prior in sexual",
+          "pred_original": "No-Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "ABSTRCT-train-512",
+          "sentence": "QoL:",
+          "true_label": "No-Argument",
+          "sent_original": "QoL:",
+          "sent_feger": "qol",
+          "sent_shuffle": "QoL:",
+          "pred_original": "No-Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "ABSTRCT-train-513",
+          "sentence": "Prespecified outcomes were three genitourinary symptoms (bowel function tenderness, frequent urination, and erectile dysfunction [ED]) and measures of physical and emotional function.",
+          "true_label": "No-Argument",
+          "sent_original": "Prespecified outcomes were three genitourinary symptoms (bowel function tenderness, frequent urination, and erectile dysfunction [ED]) and measures of physical and emotional function.",
+          "sent_feger": "prespecified outcomes genitourinary symptoms bowel function tenderness frequent urination erectile dysfunction ed measures physical emotional function",
+          "sent_shuffle": "function tenderness, symptoms function. measures urination, outcomes three dysfunction Prespecified of and emotional erectile (bowel and physical frequent and were [ED]) genitourinary",
+          "pred_original": "No-Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "ABSTRCT-train-514",
+          "sentence": "At six oncology clinics, physicians (N=22) and nurses (N=23) enrolled patients (N=93) who were over 18 years of age, with cancer diagnoses, pain, and a life expectancy of at least 6 months.",
+          "true_label": "No-Argument",
+          "sent_original": "At six oncology clinics, physicians (N=22) and nurses (N=23) enrolled patients (N=93) who were over 18 years of age, with cancer diagnoses, pain, and a life expectancy of at least 6 months.",
+          "sent_feger": "oncology clinics physicians n=22 nurses n=23 enrolled patients n=93 18 years age cancer diagnoses pain life expectancy 6 months",
+          "sent_shuffle": "and clinics, (N=93) 18 (N=23) patients cancer life oncology (N=22) over nurses physicians enrolled 6 least who months. were pain, diagnoses, of with expectancy six years at At and a of age,",
+          "pred_original": "No-Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "ABSTRCT-train-515",
+          "sentence": "Patients in both arms were assessed every 3 weeks.",
+          "true_label": "No-Argument",
+          "sent_original": "Patients in both arms were assessed every 3 weeks.",
+          "sent_feger": "patients arms assessed 3 weeks",
+          "sent_shuffle": "arms were both assessed 3 in every Patients weeks.",
+          "pred_original": "No-Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "ABSTRCT-train-516",
+          "sentence": "Patients completed questionnaires before and after the visit and were interviewed by telephone at 2, 6, and 12 weeks.",
+          "true_label": "No-Argument",
+          "sent_original": "Patients completed questionnaires before and after the visit and were interviewed by telephone at 2, 6, and 12 weeks.",
+          "sent_feger": "patients completed questionnaires visit interviewed telephone 2 6 12 weeks",
+          "sent_shuffle": "6, by and the were after before telephone completed and 12 Patients and at interviewed 2, questionnaires visit weeks.",
+          "pred_original": "No-Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "ABSTRCT-train-517",
+          "sentence": "The total short-term remission rate, the improvement rate of clinical syndrome and quality of life was 50.0%, 70.0% and 76.7% in the treatment group, and 43.3%, 46.7% and 50.0% in the control group, respectively, showing significant difference between the two groups (all P < 0.05).",
+          "true_label": "No-Argument",
+          "sent_original": "The total short-term remission rate, the improvement rate of clinical syndrome and quality of life was 50.0%, 70.0% and 76.7% in the treatment group, and 43.3%, 46.7% and 50.0% in the control group, respectively, showing significant difference between the two groups (all P < 0.05).",
+          "sent_feger": "total short term remission rate improvement rate clinical syndrome quality life 50.0 70.0 76.7 treatment group 43.3 46.7 50.0 control group respectively showing significant difference groups p < 0.05",
+          "sent_shuffle": "43.3%, (all was of syndrome the rate remission and showing group, short-term significant < treatment and clinical rate, the total of and the in in and the 0.05). groups respectively, between difference quality The 76.7% life 50.0%, improvement two control 70.0% 46.7% group, 50.0% P",
+          "pred_original": "Argument",
+          "pred_feger": "Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "ABSTRCT-train-518",
+          "sentence": "Breast intensity-modulated radiation therapy (IMRT) is a technique that ensures a more homogeneous dose distribution.",
+          "true_label": "No-Argument",
+          "sent_original": "Breast intensity-modulated radiation therapy (IMRT) is a technique that ensures a more homogeneous dose distribution.",
+          "sent_feger": "breast intensity modulated radiation therapy imrt technique ensures homogeneous dose distribution",
+          "sent_shuffle": "a distribution. dose is intensity-modulated homogeneous ensures more radiation therapy technique Breast (IMRT) that a",
+          "pred_original": "No-Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "ABSTRCT-train-519",
+          "sentence": "Acupuncture had the additional benefit of increased sex drive in some women, and most reported an improvement in their energy, clarity of thought, and sense of well-being.",
+          "true_label": "No-Argument",
+          "sent_original": "Acupuncture had the additional benefit of increased sex drive in some women, and most reported an improvement in their energy, clarity of thought, and sense of well-being.",
+          "sent_feger": "acupuncture additional benefit increased sex drive women reported improvement energy clarity thought sense",
+          "sent_shuffle": "thought, had most some and of Acupuncture drive energy, in clarity benefit additional the increased an of sense sex of their in well-being. and women, improvement reported",
+          "pred_original": "Argument",
+          "pred_feger": "Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "ABSTRCT-train-520",
+          "sentence": "The trial was designed to use one-sided tests of significance for power calculations, but is now reported with both one-sided and the traditional two-sided tests of significance.",
+          "true_label": "No-Argument",
+          "sent_original": "The trial was designed to use one-sided tests of significance for power calculations, but is now reported with both one-sided and the traditional two-sided tests of significance.",
+          "sent_feger": "trial designed use sided tests significance power calculations reported sided traditional sided tests significance",
+          "sent_shuffle": "designed the both with of and now is but power significance two-sided The tests calculations, one-sided for reported to significance. use tests traditional trial of one-sided was",
+          "pred_original": "No-Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "ABSTRCT-train-521",
+          "sentence": "The median survival in the patients receiving induction chemotherapy only was 8.9 months.",
+          "true_label": "No-Argument",
+          "sent_original": "The median survival in the patients receiving induction chemotherapy only was 8.9 months.",
+          "sent_feger": "median survival patients receiving induction chemotherapy 8.9 months",
+          "sent_shuffle": "survival receiving median only was chemotherapy The patients the months. 8.9 in induction",
+          "pred_original": "Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "ABSTRCT-train-522",
+          "sentence": "The pectoral stretching program did not influence the outcomes measured because the symptoms reported by patients were not a consequence of contracture.",
+          "true_label": "No-Argument",
+          "sent_original": "The pectoral stretching program did not influence the outcomes measured because the symptoms reported by patients were not a consequence of contracture.",
+          "sent_feger": "pectoral stretching program influence outcomes measured symptoms reported patients consequence contracture",
+          "sent_shuffle": "outcomes patients did contracture. influence The measured symptoms of pectoral not not were reported because stretching consequence a the the by program",
+          "pred_original": "Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "ABSTRCT-train-523",
+          "sentence": "In addition, the long-term effectiveness was investigated.",
+          "true_label": "No-Argument",
+          "sent_original": "In addition, the long-term effectiveness was investigated.",
+          "sent_feger": "addition long term effectiveness investigated",
+          "sent_shuffle": "the was investigated. addition, In effectiveness long-term",
+          "pred_original": "No-Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "ABSTRCT-train-524",
+          "sentence": "The difference was more significant for docetaxel 75 mg/m(2) patients, compared with corresponding best supportive care patients (7.5 v 4.6 months; log-rank test, P =.010; 1-year survival, 37% v 11%; chi(2) test, P =.003).",
+          "true_label": "No-Argument",
+          "sent_original": "The difference was more significant for docetaxel 75 mg/m(2) patients, compared with corresponding best supportive care patients (7.5 v 4.6 months; log-rank test, P =.010; 1-year survival, 37% v 11%; chi(2) test, P =.003).",
+          "sent_feger": "difference significant docetaxel 75 mg m(2 patients compared corresponding best supportive care patients 7.5 v 4.6 months log rank test p = .010 1 year survival 37 11 chi(2 test p = .003",
+          "sent_shuffle": "11%; mg/m(2) test, (7.5 compared P patients, with 75 care more difference v survival, P log-rank 37% docetaxel v =.003). chi(2) best The months; for corresponding 4.6 1-year test, was significant patients =.010; supportive",
+          "pred_original": "Argument",
+          "pred_feger": "Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "ABSTRCT-train-525",
+          "sentence": "Latanoprost 0.005% once daily reduced IOP more effectively than latanoprost 0.0015% twice daily (P < 0.001).",
+          "true_label": "No-Argument",
+          "sent_original": "Latanoprost 0.005% once daily reduced IOP more effectively than latanoprost 0.0015% twice daily (P < 0.001).",
+          "sent_feger": "latanoprost 0.005 daily reduced iop effectively latanoprost 0.0015 twice daily p < 0.001",
+          "sent_shuffle": "latanoprost (P twice effectively 0.005% daily IOP once daily more than 0.0015% Latanoprost 0.001). < reduced",
+          "pred_original": "Argument",
+          "pred_feger": "Argument",
+          "pred_shuffle": "Argument"
+        }
+      ]
+    },
+    "ARGUMINSCI": {
+      "n_samples": 30,
+      "reports": {
+        "original": {
+          "Argument": {
+            "precision": 0.7142857142857143,
+            "recall": 0.3333333333333333,
+            "f1-score": 0.45454545454545453,
+            "support": 15.0
+          },
+          "No-Argument": {
+            "precision": 0.5652173913043478,
+            "recall": 0.8666666666666667,
+            "f1-score": 0.6842105263157895,
+            "support": 15.0
+          },
+          "accuracy": 0.6,
+          "macro avg": {
+            "precision": 0.639751552795031,
+            "recall": 0.6,
+            "f1-score": 0.569377990430622,
+            "support": 30.0
+          },
+          "weighted avg": {
+            "precision": 0.6397515527950312,
+            "recall": 0.6,
+            "f1-score": 0.5693779904306221,
+            "support": 30.0
+          }
+        },
+        "feger": {
+          "Argument": {
+            "precision": 1.0,
+            "recall": 0.3333333333333333,
+            "f1-score": 0.5,
+            "support": 15.0
+          },
+          "No-Argument": {
+            "precision": 0.6,
+            "recall": 1.0,
+            "f1-score": 0.75,
+            "support": 15.0
+          },
+          "accuracy": 0.6666666666666666,
+          "macro avg": {
+            "precision": 0.8,
+            "recall": 0.6666666666666666,
+            "f1-score": 0.625,
+            "support": 30.0
+          },
+          "weighted avg": {
+            "precision": 0.8,
+            "recall": 0.6666666666666666,
+            "f1-score": 0.625,
+            "support": 30.0
+          }
+        },
+        "shuffle": {
+          "Argument": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1-score": 0.0,
+            "support": 15.0
+          },
+          "No-Argument": {
+            "precision": 0.5,
+            "recall": 1.0,
+            "f1-score": 0.6666666666666666,
+            "support": 15.0
+          },
+          "accuracy": 0.5,
+          "macro avg": {
+            "precision": 0.25,
+            "recall": 0.5,
+            "f1-score": 0.3333333333333333,
+            "support": 30.0
+          },
+          "weighted avg": {
+            "precision": 0.25,
+            "recall": 0.5,
+            "f1-score": 0.3333333333333333,
+            "support": 30.0
+          }
+        }
+      },
+      "macro_f1_original": 0.5694,
+      "macro_f1_feger": 0.625,
+      "macro_f1_shuffle": 0.3333,
+      "delta_feger": 0.0556,
+      "delta_shuffle": -0.236,
+      "samples": [
+        {
+          "id": "ARGUMINSCI-train-1",
+          "sentence": "The four selected fabrics span a large range of possible cloth behaviors.",
+          "true_label": "Argument",
+          "sent_original": "The four selected fabrics span a large range of possible cloth behaviors.",
+          "sent_feger": "selected fabrics span large range possible cloth behaviors",
+          "sent_shuffle": "of The fabrics large cloth range a four behaviors. possible selected span",
+          "pred_original": "No-Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "ARGUMINSCI-train-2",
+          "sentence": "In a nutshell, #12 is isotropic and very compliant in stretch and bending; #4 is also isotropic, very stiff in stretch but compliant in bending; #14 is stiff and quite isotropic in stretch, but extremely anisotropic in bending (with 33/1 stiffness ratio in weft and warp); and #18 is anisotropic both in stretch (with 10/1 stiffness ratio) and in bending (with 13/1 stiffness ratio).",
+          "true_label": "Argument",
+          "sent_original": "In a nutshell, #12 is isotropic and very compliant in stretch and bending; #4 is also isotropic, very stiff in stretch but compliant in bending; #14 is stiff and quite isotropic in stretch, but extremely anisotropic in bending (with 33/1 stiffness ratio in weft and warp); and #18 is anisotropic both in stretch (with 10/1 stiffness ratio) and in bending (with 13/1 stiffness ratio).",
+          "sent_feger": "nutshell 12 isotropic compliant stretch bending 4 isotropic stiff stretch compliant bending 14 stiff isotropic stretch extremely anisotropic bending 33/1 stiffness ratio weft warp 18 anisotropic stretch 10/1 stiffness ratio bending 13/1 stiffness ratio",
+          "sent_shuffle": "is 33/1 is in in and but (with ratio) in bending; very but and a 13/1 #4 ratio weft (with and anisotropic stiffness stiff in compliant in isotropic nutshell, In stiffness and in and in 10/1 extremely stretch compliant very stiff warp); stretch also #18 bending anisotropic and (with is isotropic in bending isotropic, #14 both stretch stiffness ratio). bending; stretch, quite is #12",
+          "pred_original": "No-Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "ARGUMINSCI-train-3",
+          "sentence": "In addition, the animators often wish to create non-realistic motions that defy the laws of physics, a space where motion capture simply fails to provide any samples.",
+          "true_label": "Argument",
+          "sent_original": "In addition, the animators often wish to create non-realistic motions that defy the laws of physics, a space where motion capture simply fails to provide any samples.",
+          "sent_feger": "addition animators wish create non realistic motions defy laws physics space motion capture simply fails provide samples",
+          "sent_shuffle": "animators provide motions motion where capture space wish simply laws to create that addition, of any physics, samples. In defy a to often non-realistic the fails the",
+          "pred_original": "Argument",
+          "pred_feger": "Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "ARGUMINSCI-train-4",
+          "sentence": "The explicit representation provides our method with several advantages.",
+          "true_label": "Argument",
+          "sent_original": "The explicit representation provides our method with several advantages.",
+          "sent_feger": "explicit representation provides method advantages",
+          "sent_shuffle": "method with explicit our representation The several provides advantages.",
+          "pred_original": "Argument",
+          "pred_feger": "Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "ARGUMINSCI-train-5",
+          "sentence": "A motion graph is a directed graph where all edges correspond to clips of motion.",
+          "true_label": "Argument",
+          "sent_original": "A motion graph is a directed graph where all edges correspond to clips of motion.",
+          "sent_feger": "motion graph directed graph edges correspond clips motion",
+          "sent_shuffle": "to A where directed motion motion. is graph graph all a correspond edges of clips",
+          "pred_original": "No-Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "ARGUMINSCI-train-6",
+          "sentence": "The interpretation is following: the first matrix A \u22121 j transforms v to the position with joint j\u2019s coordinate system aligned to the world coordinate system.",
+          "true_label": "Argument",
+          "sent_original": "The interpretation is following: the first matrix A \u22121 j transforms v to the position with joint j\u2019s coordinate system aligned to the world coordinate system.",
+          "sent_feger": "interpretation following matrix \u22121 j transforms v position joint j coordinate system aligned world coordinate system",
+          "sent_shuffle": "j matrix v first interpretation the transforms coordinate \u22121 to position A system world j\u2019s system. coordinate following: with the joint the is to aligned The",
+          "pred_original": "No-Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "ARGUMINSCI-train-7",
+          "sentence": "As long as the figure is not lying on its arms and the ground is relatively flat it will attempt to get up.",
+          "true_label": "Argument",
+          "sent_original": "As long as the figure is not lying on its arms and the ground is relatively flat it will attempt to get up.",
+          "sent_feger": "long figure lying arms ground relatively flat attempt",
+          "sent_shuffle": "is arms the the get flat its figure long attempt is lying up. not on it ground and will relatively As as to",
+          "pred_original": "No-Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "ARGUMINSCI-train-8",
+          "sentence": "This prevents stretching of the cord, or other factors affecting the distance between the clip and the actuator, from affecting displacement accuracy.",
+          "true_label": "Argument",
+          "sent_original": "This prevents stretching of the cord, or other factors affecting the distance between the clip and the actuator, from affecting displacement accuracy.",
+          "sent_feger": "prevents stretching cord factors affecting distance clip actuator affecting displacement accuracy",
+          "sent_shuffle": "stretching affecting other accuracy. the actuator, prevents or from of and the clip affecting between cord, distance the factors This the displacement",
+          "pred_original": "No-Argument",
+          "pred_feger": "Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "ARGUMINSCI-train-9",
+          "sentence": "However, this amount of memory is negligible, considering the number of different non-trivial joint sets.",
+          "true_label": "Argument",
+          "sent_original": "However, this amount of memory is negligible, considering the number of different non-trivial joint sets.",
+          "sent_feger": "memory negligible considering number different non trivial joint sets",
+          "sent_shuffle": "sets. is of amount different However, non-trivial memory the this joint negligible, considering of number",
+          "pred_original": "No-Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "ARGUMINSCI-train-10",
+          "sentence": "Marching triangles requires significantly less computation time and fewer triangles, and produces higher-quality triangles than marching cubes.",
+          "true_label": "Argument",
+          "sent_original": "Marching triangles requires significantly less computation time and fewer triangles, and produces higher-quality triangles than marching cubes.",
+          "sent_feger": "marching triangles requires significantly computation time fewer triangles produces higher quality triangles marching cubes",
+          "sent_shuffle": "marching computation higher-quality triangles requires triangles triangles, time than less and cubes. Marching and produces fewer significantly",
+          "pred_original": "Argument",
+          "pred_feger": "Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "ARGUMINSCI-train-11",
+          "sentence": "In our context, all the preceding expressions are equivalent, and any can be used to evaluate the advection of pairs of basis fields.",
+          "true_label": "Argument",
+          "sent_original": "In our context, all the preceding expressions are equivalent, and any can be used to evaluate the advection of pairs of basis fields.",
+          "sent_feger": "context preceding expressions equivalent evaluate advection pairs basis fields",
+          "sent_shuffle": "In be advection fields. preceding our pairs equivalent, expressions of can and to all evaluate of the the used context, are any basis",
+          "pred_original": "Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "ARGUMINSCI-train-12",
+          "sentence": "The accompanying video shows that results become worse when we decrease the number of the userdefined constraints.",
+          "true_label": "Argument",
+          "sent_original": "The accompanying video shows that results become worse when we decrease the number of the userdefined constraints.",
+          "sent_feger": "accompanying video shows results worse decrease number userdefined constraints",
+          "sent_shuffle": "worse we The that video when decrease number constraints. accompanying userdefined the shows results the become of",
+          "pred_original": "Argument",
+          "pred_feger": "Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "ARGUMINSCI-train-13",
+          "sentence": "[ 3 ]\n describes the use of the Kawabata system of measurement for realistic determination of the in-plane shearing and out-of-plane bending forces in cloth.",
+          "true_label": "Argument",
+          "sent_original": "[ 3 ]\n describes the use of the Kawabata system of measurement for realistic determination of the in-plane shearing and out-of-plane bending forces in cloth.",
+          "sent_feger": "3 describes use kawabata system measurement realistic determination plane shearing plane bending forces cloth",
+          "sent_shuffle": "the determination and ] shearing [ in-plane in of measurement for bending of describes the the system use Kawabata of 3 out-of-plane realistic cloth. forces",
+          "pred_original": "No-Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "ARGUMINSCI-train-14",
+          "sentence": "We define the resulting orientation image as an angle map, shown in Fig. 1 .",
+          "true_label": "Argument",
+          "sent_original": "We define the resulting orientation image as an angle map, shown in Fig. 1 .",
+          "sent_feger": "define resulting orientation image angle map shown fig 1",
+          "sent_shuffle": ". as shown map, in Fig. an We define resulting the 1 angle orientation image",
+          "pred_original": "No-Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "ARGUMINSCI-train-15",
+          "sentence": "The system of equalities is based on the scheme adapted from the simultaneous resolution method for rigid N-body collisions proposed by Baraff \n[ 1 ].",
+          "true_label": "Argument",
+          "sent_original": "The system of equalities is based on the scheme adapted from the simultaneous resolution method for rigid N-body collisions proposed by Baraff \n[ 1 ].",
+          "sent_feger": "system equalities based scheme adapted simultaneous resolution method rigid n body collisions proposed baraff 1",
+          "sent_shuffle": "scheme the N-body ]. for of The Baraff is by rigid collisions system equalities 1 adapted resolution [ from method simultaneous proposed the on based",
+          "pred_original": "No-Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "ARGUMINSCI-train-511",
+          "sentence": "i , 0) ))",
+          "true_label": "No-Argument",
+          "sent_original": "i , 0) ))",
+          "sent_feger": "0",
+          "sent_shuffle": ", i )) 0)",
+          "pred_original": "No-Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "ARGUMINSCI-train-512",
+          "sentence": "i O .",
+          "true_label": "No-Argument",
+          "sent_original": "i O .",
+          "sent_feger": "",
+          "sent_shuffle": ". O i",
+          "pred_original": "No-Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "ARGUMINSCI-train-513",
+          "sentence": "[q T , q  \u0307 T ] T , respectively.",
+          "true_label": "No-Argument",
+          "sent_original": "[q T , q  \u0307 T ] T , respectively.",
+          "sent_feger": "q t \u0307 t t respectively",
+          "sent_shuffle": "respectively. , T T , [q T \u0307 ] q",
+          "pred_original": "No-Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "ARGUMINSCI-train-514",
+          "sentence": "We can, thus, use SPH-based approaches to approximate the boundary conditions stated in Sections 3.2, 3.3 and 3.4.\n          (a) (b)\n          \n            Figure 5: (a) Boundary particles on a triangle according to the seven point rule.",
+          "true_label": "No-Argument",
+          "sent_original": "We can, thus, use SPH-based approaches to approximate the boundary conditions stated in Sections 3.2, 3.3 and 3.4.\n          (a) (b)\n          \n            Figure 5: (a) Boundary particles on a triangle according to the seven point rule.",
+          "sent_feger": "use sph based approaches approximate boundary conditions stated sections 3.2 3.3 3.4 b figure 5 boundary particles triangle according seven point rule",
+          "sent_shuffle": "on in and approximate stated 3.3 can, (a) the point 5: 3.2, seven (b) to according boundary use particles Sections (a) approaches We triangle 3.4. to a rule. conditions thus, Figure Boundary the SPH-based",
+          "pred_original": "No-Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "ARGUMINSCI-train-515",
+          "sentence": "H ARLOW , F., AND W ELCH , E. 1965.",
+          "true_label": "No-Argument",
+          "sent_original": "H ARLOW , F., AND W ELCH , E. 1965.",
+          "sent_feger": "h arlow f. w elch e. 1965",
+          "sent_shuffle": ", 1965. H AND W ARLOW , ELCH E. F.,",
+          "pred_original": "No-Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "ARGUMINSCI-train-516",
+          "sentence": "The current velocity of body i in the body i frame is v i .",
+          "true_label": "No-Argument",
+          "sent_original": "The current velocity of body i in the body i frame is v i .",
+          "sent_feger": "current velocity body body frame",
+          "sent_shuffle": "i the of i is body body i . in The v velocity current frame",
+          "pred_original": "No-Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "ARGUMINSCI-train-517",
+          "sentence": "The second term pr f orcef ield represents the force field priors described in Equation (4).",
+          "true_label": "No-Argument",
+          "sent_original": "The second term pr f orcef ield represents the force field priors described in Equation (4).",
+          "sent_feger": "second term pr f orcef ield represents force field priors described equation 4",
+          "sent_shuffle": "priors in second field described the (4). orcef term represents ield f The Equation pr force",
+          "pred_original": "No-Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "ARGUMINSCI-train-518",
+          "sentence": "The cloth-to-joint relation enables us also to optimize collision detection by restricting the collision check to a small area around each vertex of the coarse mesh.",
+          "true_label": "No-Argument",
+          "sent_original": "The cloth-to-joint relation enables us also to optimize collision detection by restricting the collision check to a small area around each vertex of the coarse mesh.",
+          "sent_feger": "cloth joint relation enables optimize collision detection restricting collision check small area vertex coarse mesh",
+          "sent_shuffle": "by cloth-to-joint around vertex restricting check detection collision collision coarse area the relation also to a to the mesh. optimize enables The small each us of",
+          "pred_original": "Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "ARGUMINSCI-train-519",
+          "sentence": "<Abstract>This paper shows how statistical motion priors can be combined seamlessly with physical constraints for human motion modeling and generation.",
+          "true_label": "No-Argument",
+          "sent_original": "<Abstract>This paper shows how statistical motion priors can be combined seamlessly with physical constraints for human motion modeling and generation.",
+          "sent_feger": "< abstract paper shows statistical motion priors combined seamlessly physical constraints human motion modeling generation",
+          "sent_shuffle": "motion generation. can for <Abstract>This priors with combined and how paper motion modeling statistical physical human seamlessly be shows constraints",
+          "pred_original": "Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "ARGUMINSCI-train-520",
+          "sentence": "[21] N. Foster and R. Fedkiw.",
+          "true_label": "No-Argument",
+          "sent_original": "[21] N. Foster and R. Fedkiw.",
+          "sent_feger": "21 n. foster r. fedkiw",
+          "sent_shuffle": "[21] Foster Fedkiw. and N. R.",
+          "pred_original": "No-Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "ARGUMINSCI-train-521",
+          "sentence": "i i ,\u03b8),1) and extract the liquid surface as the 0.5 iso-surface of this modified density field.",
+          "true_label": "No-Argument",
+          "sent_original": "i i ,\u03b8),1) and extract the liquid surface as the 0.5 iso-surface of this modified density field.",
+          "sent_feger": "\u03b8),1 extract liquid surface 0.5 iso surface modified density field",
+          "sent_shuffle": "i extract surface i liquid as density this the iso-surface and modified field. ,\u03b8),1) the of 0.5",
+          "pred_original": "No-Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "ARGUMINSCI-train-522",
+          "sentence": "[18] T. J. Chung.",
+          "true_label": "No-Argument",
+          "sent_original": "[18] T. J. Chung.",
+          "sent_feger": "18 t. j. chung",
+          "sent_shuffle": "T. [18] Chung. J.",
+          "pred_original": "No-Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "ARGUMINSCI-train-523",
+          "sentence": "Non-linear and anisotropic elastic soft tissue models for medical simulation.",
+          "true_label": "No-Argument",
+          "sent_original": "Non-linear and anisotropic elastic soft tissue models for medical simulation.",
+          "sent_feger": "non linear anisotropic elastic soft tissue models medical simulation",
+          "sent_shuffle": "elastic and soft simulation. medical for tissue anisotropic models Non-linear",
+          "pred_original": "No-Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "ARGUMINSCI-train-524",
+          "sentence": "i v i\n        \n        where the second and fourth equations are the time derivatives of the first and third equations respectively.",
+          "true_label": "No-Argument",
+          "sent_original": "i v i\n        \n        where the second and fourth equations are the time derivatives of the first and third equations respectively.",
+          "sent_feger": "v second fourth equations time derivatives equations respectively",
+          "sent_shuffle": "the and the i where first third equations derivatives i time of the second v and fourth respectively. are equations",
+          "pred_original": "No-Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "ARGUMINSCI-train-525",
+          "sentence": "Instead, we use a semi-Lagrangian method to advect field values.",
+          "true_label": "No-Argument",
+          "sent_original": "Instead, we use a semi-Lagrangian method to advect field values.",
+          "sent_feger": "instead use semi lagrangian method advect field values",
+          "sent_shuffle": "semi-Lagrangian we Instead, a to use field advect values. method",
+          "pred_original": "No-Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        }
+      ]
+    },
+    "PE": {
+      "n_samples": 30,
+      "reports": {
+        "original": {
+          "Argument": {
+            "precision": 0.6923076923076923,
+            "recall": 0.6,
+            "f1-score": 0.6428571428571429,
+            "support": 15.0
+          },
+          "No-Argument": {
+            "precision": 0.6470588235294118,
+            "recall": 0.7333333333333333,
+            "f1-score": 0.6875,
+            "support": 15.0
+          },
+          "accuracy": 0.6666666666666666,
+          "macro avg": {
+            "precision": 0.6696832579185521,
+            "recall": 0.6666666666666666,
+            "f1-score": 0.6651785714285714,
+            "support": 30.0
+          },
+          "weighted avg": {
+            "precision": 0.669683257918552,
+            "recall": 0.6666666666666666,
+            "f1-score": 0.6651785714285715,
+            "support": 30.0
+          }
+        },
+        "feger": {
+          "Argument": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1-score": 0.0,
+            "support": 15.0
+          },
+          "No-Argument": {
+            "precision": 0.4827586206896552,
+            "recall": 0.9333333333333333,
+            "f1-score": 0.6363636363636364,
+            "support": 15.0
+          },
+          "accuracy": 0.4666666666666667,
+          "macro avg": {
+            "precision": 0.2413793103448276,
+            "recall": 0.4666666666666667,
+            "f1-score": 0.3181818181818182,
+            "support": 30.0
+          },
+          "weighted avg": {
+            "precision": 0.2413793103448276,
+            "recall": 0.4666666666666667,
+            "f1-score": 0.3181818181818182,
+            "support": 30.0
+          }
+        },
+        "shuffle": {
+          "Argument": {
+            "precision": 1.0,
+            "recall": 0.06666666666666667,
+            "f1-score": 0.125,
+            "support": 15.0
+          },
+          "No-Argument": {
+            "precision": 0.5172413793103449,
+            "recall": 1.0,
+            "f1-score": 0.6818181818181818,
+            "support": 15.0
+          },
+          "accuracy": 0.5333333333333333,
+          "macro avg": {
+            "precision": 0.7586206896551724,
+            "recall": 0.5333333333333333,
+            "f1-score": 0.4034090909090909,
+            "support": 30.0
+          },
+          "weighted avg": {
+            "precision": 0.7586206896551725,
+            "recall": 0.5333333333333333,
+            "f1-score": 0.4034090909090909,
+            "support": 30.0
+          }
+        }
+      },
+      "macro_f1_original": 0.6652,
+      "macro_f1_feger": 0.3182,
+      "macro_f1_shuffle": 0.4034,
+      "delta_feger": -0.347,
+      "delta_shuffle": -0.2618,
+      "samples": [
+        {
+          "id": "PE-train-1",
+          "sentence": "Taking all into account, I think that living in the city is much better nowadays, because of the opportunities it gives.",
+          "true_label": "Argument",
+          "sent_original": "Taking all into account, I think that living in the city is much better nowadays, because of the opportunities it gives.",
+          "sent_feger": "taking account think living city better nowadays opportunities gives",
+          "sent_shuffle": "nowadays, in because think living I city the better account, it is Taking the opportunities that much of gives. into all",
+          "pred_original": "Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "PE-train-2",
+          "sentence": "Some people say that if humans stop using technology and lead a simple way of life then only we can save the environment.",
+          "true_label": "Argument",
+          "sent_original": "Some people say that if humans stop using technology and lead a simple way of life then only we can save the environment.",
+          "sent_feger": "people humans stop technology lead simple way life save environment",
+          "sent_shuffle": "using the save way then environment. technology Some only and that of stop if people simple can life humans say lead a we",
+          "pred_original": "No-Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "PE-train-3",
+          "sentence": "In conclusion, I personally disagree this this notion that we should replace classroom with online class.",
+          "true_label": "Argument",
+          "sent_original": "In conclusion, I personally disagree this this notion that we should replace classroom with online class.",
+          "sent_feger": "conclusion personally disagree notion replace classroom online class",
+          "sent_shuffle": "this class. replace conclusion, that with In we personally this online classroom I should disagree notion",
+          "pred_original": "Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "Argument"
+        },
+        {
+          "id": "PE-train-4",
+          "sentence": "From my perspective, I agree with the view that students can acquire more benefits from the remote education.",
+          "true_label": "Argument",
+          "sent_original": "From my perspective, I agree with the view that students can acquire more benefits from the remote education.",
+          "sent_feger": "perspective agree view students acquire benefits remote education",
+          "sent_shuffle": "the education. I remote my more with can the view perspective, benefits acquire agree students from that From",
+          "pred_original": "Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "PE-train-5",
+          "sentence": "As a result, information from those sources is subject to question.",
+          "true_label": "Argument",
+          "sent_original": "As a result, information from those sources is subject to question.",
+          "sent_feger": "result information sources subject question",
+          "sent_shuffle": "As those subject a to information result, sources question. is from",
+          "pred_original": "No-Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "PE-train-6",
+          "sentence": "Secondly, watching television is a very passive action and should not be promoted by increasing periods spent on it.",
+          "true_label": "Argument",
+          "sent_original": "Secondly, watching television is a very passive action and should not be promoted by increasing periods spent on it.",
+          "sent_feger": "secondly watching television passive action promoted increasing periods spent",
+          "sent_shuffle": "watching and spent action by increasing a television be promoted it. Secondly, very periods is on should not passive",
+          "pred_original": "Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "PE-train-7",
+          "sentence": "In addition, it should be to some extent paternalistic to prevent students from avoiding hurdles.",
+          "true_label": "Argument",
+          "sent_original": "In addition, it should be to some extent paternalistic to prevent students from avoiding hurdles.",
+          "sent_feger": "addition extent paternalistic prevent students avoiding hurdles",
+          "sent_shuffle": "be prevent paternalistic In students addition, avoiding extent to to should some it from hurdles.",
+          "pred_original": "Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "PE-train-8",
+          "sentence": "Although renewable resources of energy are elements of the current and future energy strategy, as far as I'm concerned, these new forms of energy cannot soon replace fossil fuels such as gases, oil, and coal.",
+          "true_label": "Argument",
+          "sent_original": "Although renewable resources of energy are elements of the current and future energy strategy, as far as I'm concerned, these new forms of energy cannot soon replace fossil fuels such as gases, oil, and coal.",
+          "sent_feger": "renewable resources energy elements current future energy strategy far concerned new forms energy soon replace fossil fuels gases oil coal",
+          "sent_shuffle": "far Although new of fossil forms fuels renewable elements as as are energy such strategy, current and replace future of cannot oil, resources coal. I'm gases, and soon as these the energy concerned, of energy",
+          "pred_original": "Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "PE-train-9",
+          "sentence": "Secondly, investing in roads and highways can broaden the area and allow more public transportation to work.",
+          "true_label": "Argument",
+          "sent_original": "Secondly, investing in roads and highways can broaden the area and allow more public transportation to work.",
+          "sent_feger": "secondly investing roads highways broaden area allow public transportation work",
+          "sent_shuffle": "the more public allow broaden highways to and transportation area can Secondly, roads and work. in investing",
+          "pred_original": "Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "PE-train-10",
+          "sentence": "As far as I am concerned, the importance of traditions should be valued and paid attention to.",
+          "true_label": "Argument",
+          "sent_original": "As far as I am concerned, the importance of traditions should be valued and paid attention to.",
+          "sent_feger": "far concerned importance traditions valued paid attention",
+          "sent_shuffle": "attention the of and As traditions I importance valued as should be to. am concerned, far paid",
+          "pred_original": "Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "PE-train-11",
+          "sentence": "First, computers through internet made our access to information easier.",
+          "true_label": "Argument",
+          "sent_original": "First, computers through internet made our access to information easier.",
+          "sent_feger": "computers internet access information easier",
+          "sent_shuffle": "easier. through information our to First, internet computers made access",
+          "pred_original": "No-Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "PE-train-12",
+          "sentence": "I highly prefer living in a big city to living in countryside.",
+          "true_label": "Argument",
+          "sent_original": "I highly prefer living in a big city to living in countryside.",
+          "sent_feger": "highly prefer living big city living countryside",
+          "sent_shuffle": "to highly big countryside. in prefer living in city a I living",
+          "pred_original": "No-Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "PE-train-13",
+          "sentence": "Therefore, a big city can offer me many more vacancies than a small town.",
+          "true_label": "Argument",
+          "sent_original": "Therefore, a big city can offer me many more vacancies than a small town.",
+          "sent_feger": "big city offer vacancies small town",
+          "sent_shuffle": "city vacancies offer Therefore, big a can many a small more me town. than",
+          "pred_original": "Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "PE-train-14",
+          "sentence": "By way of conclusion, it is true that the development of the health care system helps people have a better life.",
+          "true_label": "Argument",
+          "sent_original": "By way of conclusion, it is true that the development of the health care system helps people have a better life.",
+          "sent_feger": "way conclusion true development health care system helps people better life",
+          "sent_shuffle": "life. of true care people that of helps conclusion, way the have health is better development a the system By it",
+          "pred_original": "No-Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "PE-train-15",
+          "sentence": "Vacations are not only required by students but also by professionals and housekeepers.",
+          "true_label": "Argument",
+          "sent_original": "Vacations are not only required by students but also by professionals and housekeepers.",
+          "sent_feger": "vacations required students professionals housekeepers",
+          "sent_shuffle": "professionals also by Vacations are required not by housekeepers. only but and students",
+          "pred_original": "No-Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "PE-train-511",
+          "sentence": "In this new environment, parent should find friends coming from their same country so that they can socialize in a very familiar manner as feeling being home.",
+          "true_label": "No-Argument",
+          "sent_original": "In this new environment, parent should find friends coming from their same country so that they can socialize in a very familiar manner as feeling being home.",
+          "sent_feger": "new environment parent find friends coming country socialize familiar manner feeling home",
+          "sent_shuffle": "so familiar country environment, this their a coming can being find as In socialize from very same that should parent manner in friends home. feeling they new",
+          "pred_original": "No-Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "PE-train-512",
+          "sentence": "Nowadays, unscrupulous paparazzi constantly follow celebrities just to take a photo while they are eating or training.",
+          "true_label": "No-Argument",
+          "sent_original": "Nowadays, unscrupulous paparazzi constantly follow celebrities just to take a photo while they are eating or training.",
+          "sent_feger": "nowadays unscrupulous paparazzi constantly follow celebrities photo eating training",
+          "sent_shuffle": "a take unscrupulous eating to or just Nowadays, constantly they paparazzi while follow celebrities photo training. are",
+          "pred_original": "No-Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "PE-train-513",
+          "sentence": "Much information as the Internet may provide, most of the sources are unjustified by experts.",
+          "true_label": "No-Argument",
+          "sent_original": "Much information as the Internet may provide, most of the sources are unjustified by experts.",
+          "sent_feger": "information internet provide sources unjustified experts",
+          "sent_shuffle": "the provide, unjustified as most are Much sources by information of experts. Internet the may",
+          "pred_original": "No-Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "PE-train-514",
+          "sentence": "Teachers think that students get affected too as they can not clear their doubts in study topics instantly.",
+          "true_label": "No-Argument",
+          "sent_original": "Teachers think that students get affected too as they can not clear their doubts in study topics instantly.",
+          "sent_feger": "teachers think students affected clear doubts study topics instantly",
+          "sent_shuffle": "Teachers get not as instantly. that think study too topics students their can doubts affected they in clear",
+          "pred_original": "Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "PE-train-515",
+          "sentence": "You are watching football stars play the game with your own eyes and sharing your feelings with about 40,000 people at the stadium, such an excitement you can never have when you are watching it at home.",
+          "true_label": "No-Argument",
+          "sent_original": "You are watching football stars play the game with your own eyes and sharing your feelings with about 40,000 people at the stadium, such an excitement you can never have when you are watching it at home.",
+          "sent_feger": "watching football stars play game eyes sharing feelings 40,000 people stadium excitement watching home",
+          "sent_shuffle": "an eyes 40,000 your are the You have never sharing feelings football excitement you the it people game you and stars watching at play with such your at about home. own are can watching stadium, with when",
+          "pred_original": "No-Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "PE-train-516",
+          "sentence": "First of all, the predecessors' mistakes are the first thing that we should consider when learning about the past.",
+          "true_label": "No-Argument",
+          "sent_original": "First of all, the predecessors' mistakes are the first thing that we should consider when learning about the past.",
+          "sent_feger": "predecessors mistakes thing consider learning past",
+          "sent_shuffle": "about past. that learning when the all, thing should are predecessors' the we the first First mistakes consider of",
+          "pred_original": "No-Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "PE-train-517",
+          "sentence": "Learning in classroom could provide more information to study.",
+          "true_label": "No-Argument",
+          "sent_original": "Learning in classroom could provide more information to study.",
+          "sent_feger": "learning classroom provide information study",
+          "sent_shuffle": "study. classroom Learning could to in provide more information",
+          "pred_original": "No-Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "PE-train-518",
+          "sentence": "Unlike a professional, parents always support children and give them much social skill so they can communicate well with others and have good habit in life.",
+          "true_label": "No-Argument",
+          "sent_original": "Unlike a professional, parents always support children and give them much social skill so they can communicate well with others and have good habit in life.",
+          "sent_feger": "professional parents support children social skill communicate good habit life",
+          "sent_shuffle": "skill so good always much support a give parents with others they in well life. professional, Unlike them children habit social and can have communicate and",
+          "pred_original": "No-Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "PE-train-519",
+          "sentence": "Secondly, even though environmental damage is inevitable, it is not tourism to be blamed for.",
+          "true_label": "No-Argument",
+          "sent_original": "Secondly, even though environmental damage is inevitable, it is not tourism to be blamed for.",
+          "sent_feger": "secondly environmental damage inevitable tourism blamed",
+          "sent_shuffle": "to environmental inevitable, is be not for. is though tourism damage it Secondly, even blamed",
+          "pred_original": "No-Argument",
+          "pred_feger": "Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "PE-train-520",
+          "sentence": "They are kept for security purposes in houses.",
+          "true_label": "No-Argument",
+          "sent_original": "They are kept for security purposes in houses.",
+          "sent_feger": "kept security purposes houses",
+          "sent_shuffle": "security are purposes for kept in They houses.",
+          "pred_original": "No-Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "PE-train-521",
+          "sentence": "Some students benefit a lot when they study with groups.",
+          "true_label": "No-Argument",
+          "sent_original": "Some students benefit a lot when they study with groups.",
+          "sent_feger": "students benefit lot study groups",
+          "sent_shuffle": "study lot with groups. benefit Some a when they students",
+          "pred_original": "Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "PE-train-522",
+          "sentence": "Working in team is a necessary skill that every individual must master for success.",
+          "true_label": "No-Argument",
+          "sent_original": "Working in team is a necessary skill that every individual must master for success.",
+          "sent_feger": "working team necessary skill individual master success",
+          "sent_shuffle": "success. for in skill a necessary team every Working is individual master must that",
+          "pred_original": "No-Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "PE-train-523",
+          "sentence": "Computer is a modern device that is useful for human life.",
+          "true_label": "No-Argument",
+          "sent_original": "Computer is a modern device that is useful for human life.",
+          "sent_feger": "computer modern device useful human life",
+          "sent_shuffle": "modern for Computer useful device a human is that life. is",
+          "pred_original": "No-Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "PE-train-524",
+          "sentence": "If you are always facing excessive stress you cannot care for your beloved's.",
+          "true_label": "No-Argument",
+          "sent_original": "If you are always facing excessive stress you cannot care for your beloved's.",
+          "sent_feger": "facing excessive stress care beloved",
+          "sent_shuffle": "you excessive you If beloved's. cannot stress always are care your facing for",
+          "pred_original": "Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "PE-train-525",
+          "sentence": "They still believe that in present time women must do such type of work only.",
+          "true_label": "No-Argument",
+          "sent_original": "They still believe that in present time women must do such type of work only.",
+          "sent_feger": "believe present time women type work",
+          "sent_shuffle": "that women of time only. present believe still They must work do type such in",
+          "pred_original": "Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        }
+      ]
+    },
+    "USELEC": {
+      "n_samples": 30,
+      "reports": {
+        "original": {
+          "Argument": {
+            "precision": 0.8181818181818182,
+            "recall": 0.6,
+            "f1-score": 0.6923076923076923,
+            "support": 15.0
+          },
+          "No-Argument": {
+            "precision": 0.6842105263157895,
+            "recall": 0.8666666666666667,
+            "f1-score": 0.7647058823529411,
+            "support": 15.0
+          },
+          "accuracy": 0.7333333333333333,
+          "macro avg": {
+            "precision": 0.7511961722488039,
+            "recall": 0.7333333333333334,
+            "f1-score": 0.7285067873303167,
+            "support": 30.0
+          },
+          "weighted avg": {
+            "precision": 0.7511961722488039,
+            "recall": 0.7333333333333333,
+            "f1-score": 0.7285067873303167,
+            "support": 30.0
+          }
+        },
+        "feger": {
+          "Argument": {
+            "precision": 1.0,
+            "recall": 0.06666666666666667,
+            "f1-score": 0.125,
+            "support": 15.0
+          },
+          "No-Argument": {
+            "precision": 0.5172413793103449,
+            "recall": 1.0,
+            "f1-score": 0.6818181818181818,
+            "support": 15.0
+          },
+          "accuracy": 0.5333333333333333,
+          "macro avg": {
+            "precision": 0.7586206896551724,
+            "recall": 0.5333333333333333,
+            "f1-score": 0.4034090909090909,
+            "support": 30.0
+          },
+          "weighted avg": {
+            "precision": 0.7586206896551725,
+            "recall": 0.5333333333333333,
+            "f1-score": 0.4034090909090909,
+            "support": 30.0
+          }
+        },
+        "shuffle": {
+          "Argument": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1-score": 0.0,
+            "support": 15.0
+          },
+          "No-Argument": {
+            "precision": 0.5,
+            "recall": 1.0,
+            "f1-score": 0.6666666666666666,
+            "support": 15.0
+          },
+          "accuracy": 0.5,
+          "macro avg": {
+            "precision": 0.25,
+            "recall": 0.5,
+            "f1-score": 0.3333333333333333,
+            "support": 30.0
+          },
+          "weighted avg": {
+            "precision": 0.25,
+            "recall": 0.5,
+            "f1-score": 0.3333333333333333,
+            "support": 30.0
+          }
+        }
+      },
+      "macro_f1_original": 0.7285,
+      "macro_f1_feger": 0.4034,
+      "macro_f1_shuffle": 0.3333,
+      "delta_feger": -0.3251,
+      "delta_shuffle": -0.3952,
+      "samples": [
+        {
+          "id": "USELEC-train-1",
+          "sentence": "I do not believe that we, the United States, should sell, give or otherwise transfer military hardware to the People's Republic of China, or any other Communist nation, such as the Soviet Union and the like.",
+          "true_label": "Argument",
+          "sent_original": "I do not believe that we, the United States, should sell, give or otherwise transfer military hardware to the People's Republic of China, or any other Communist nation, such as the Soviet Union and the like.",
+          "sent_feger": "believe united states sell transfer military hardware people republic china communist nation soviet union like",
+          "sent_shuffle": "and military otherwise should not as or Republic nation, sell, the the other any of the Union or do to such transfer give hardware like. Communist People's States, the United Soviet believe China, that I we,",
+          "pred_original": "Argument",
+          "pred_feger": "Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "USELEC-train-2",
+          "sentence": "That costs the government $7,700 per family.",
+          "true_label": "Argument",
+          "sent_original": "That costs the government $7,700 per family.",
+          "sent_feger": "costs government 7,700 family",
+          "sent_shuffle": "the per costs government $7,700 That family.",
+          "pred_original": "No-Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "USELEC-train-3",
+          "sentence": "He was wrong.",
+          "true_label": "Argument",
+          "sent_original": "He was wrong.",
+          "sent_feger": "wrong",
+          "sent_shuffle": "was He wrong.",
+          "pred_original": "Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "USELEC-train-4",
+          "sentence": "I think we should try to raise the fuel efficiency.",
+          "true_label": "Argument",
+          "sent_original": "I think we should try to raise the fuel efficiency.",
+          "sent_feger": "think try raise fuel efficiency",
+          "sent_shuffle": "to raise think try fuel the I efficiency. should we",
+          "pred_original": "Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "USELEC-train-5",
+          "sentence": "Number two, Governor Romney, before he knew the facts, before he even knew that our ambassador was killed, he was out making a political statement which was panned by the media around the world.",
+          "true_label": "Argument",
+          "sent_original": "Number two, Governor Romney, before he knew the facts, before he even knew that our ambassador was killed, he was out making a political statement which was panned by the media around the world.",
+          "sent_feger": "number governor romney knew facts knew ambassador killed making political statement panned media world",
+          "sent_shuffle": "ambassador political was killed, a around Romney, out our which he by world. two, was making facts, that he knew he Governor the was media statement even before panned the before the knew Number",
+          "pred_original": "Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "USELEC-train-6",
+          "sentence": "And therefore, it seems to me that we should hold the lid, as we have, to the best of our ability so we can stimulate the private economy and get the jobs where the jobs are - five out of six in this economy.",
+          "true_label": "Argument",
+          "sent_original": "And therefore, it seems to me that we should hold the lid, as we have, to the best of our ability so we can stimulate the private economy and get the jobs where the jobs are - five out of six in this economy.",
+          "sent_feger": "hold lid best ability stimulate private economy jobs jobs economy",
+          "sent_shuffle": "this can it we where seems of to our five the ability And are to therefore, the best get as - jobs jobs so the private the we stimulate six of we should in that have, lid, economy. hold me the economy out and",
+          "pred_original": "Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "USELEC-train-7",
+          "sentence": "And we'll continue to protect our borders.",
+          "true_label": "Argument",
+          "sent_original": "And we'll continue to protect our borders.",
+          "sent_feger": "continue protect borders",
+          "sent_shuffle": "borders. our protect continue we'll And to",
+          "pred_original": "Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "USELEC-train-8",
+          "sentence": "And at the end of all of that, not one shred of evidence was introduced that the unborn child was not alive.",
+          "true_label": "Argument",
+          "sent_original": "And at the end of all of that, not one shred of evidence was introduced that the unborn child was not alive.",
+          "sent_feger": "end shred evidence introduced unborn child alive",
+          "sent_shuffle": "child of was the evidence shred of that introduced not of was unborn end not at And alive. the one all that,",
+          "pred_original": "No-Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "USELEC-train-9",
+          "sentence": "Very briefly, if a young couple making $50,000 a year saves $1,000, the government will put another $1,000 in that account.",
+          "true_label": "Argument",
+          "sent_original": "Very briefly, if a young couple making $50,000 a year saves $1,000, the government will put another $1,000 in that account.",
+          "sent_feger": "briefly young couple making 50,000 year saves 1,000 government 1,000 account",
+          "sent_shuffle": "put saves if $50,000 account. Very the in $1,000, young couple another will a year a making briefly, that government $1,000",
+          "pred_original": "No-Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "USELEC-train-10",
+          "sentence": "They were first against the 9/11 Commission; then they were for it.",
+          "true_label": "Argument",
+          "sent_original": "They were first against the 9/11 Commission; then they were for it.",
+          "sent_feger": "9/11 commission",
+          "sent_shuffle": "were the it. against were They then 9/11 they Commission; for first",
+          "pred_original": "No-Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "USELEC-train-11",
+          "sentence": "They seriously question whether or not there will be any system left for them.",
+          "true_label": "Argument",
+          "sent_original": "They seriously question whether or not there will be any system left for them.",
+          "sent_feger": "seriously question system left",
+          "sent_shuffle": "any whether will them. system seriously question They left or be there for not",
+          "pred_original": "No-Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "USELEC-train-12",
+          "sentence": "That was the right thing to do.",
+          "true_label": "Argument",
+          "sent_original": "That was the right thing to do.",
+          "sent_feger": "right thing",
+          "sent_shuffle": "was do. That right to the thing",
+          "pred_original": "Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "USELEC-train-13",
+          "sentence": "But have no doubt, but have no doubt that the Iranians continue on the path to the acquisition of a nuclear weapon as we speak tonight.",
+          "true_label": "Argument",
+          "sent_original": "But have no doubt, but have no doubt that the Iranians continue on the path to the acquisition of a nuclear weapon as we speak tonight.",
+          "sent_feger": "doubt doubt iranians continue path acquisition nuclear weapon speak tonight",
+          "sent_shuffle": "doubt the But doubt, but path continue to no weapon the have that on no tonight. nuclear we of have speak a Iranians acquisition as the",
+          "pred_original": "Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "USELEC-train-14",
+          "sentence": "It's time for a new administration to deal with the energy problem.",
+          "true_label": "Argument",
+          "sent_original": "It's time for a new administration to deal with the energy problem.",
+          "sent_feger": "time new administration deal energy problem",
+          "sent_shuffle": "It's administration to energy with for new time the deal a problem.",
+          "pred_original": "Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "USELEC-train-15",
+          "sentence": "This is America.",
+          "true_label": "Argument",
+          "sent_original": "This is America.",
+          "sent_feger": "america",
+          "sent_shuffle": "This America. is",
+          "pred_original": "No-Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "USELEC-train-511",
+          "sentence": "(Laughter and applause) But--but--see, let me make it very clear.",
+          "true_label": "No-Argument",
+          "sent_original": "(Laughter and applause) But--but--see, let me make it very clear.",
+          "sent_feger": "laughter applause let clear",
+          "sent_shuffle": "But--but--see, let clear. and very it (Laughter make applause) me",
+          "pred_original": "No-Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "USELEC-train-512",
+          "sentence": "Drug use doubled.",
+          "true_label": "No-Argument",
+          "sent_original": "Drug use doubled.",
+          "sent_feger": "drug use doubled",
+          "sent_shuffle": "Drug doubled. use",
+          "pred_original": "No-Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "USELEC-train-513",
+          "sentence": "The Congress passed uh an enterprise zone after the Los Angeles riots five years ago.",
+          "true_label": "No-Argument",
+          "sent_original": "The Congress passed uh an enterprise zone after the Los Angeles riots five years ago.",
+          "sent_feger": "congress passed enterprise zone los angeles riots years ago",
+          "sent_shuffle": "Angeles Los The uh after passed years enterprise five an zone the ago. Congress riots",
+          "pred_original": "No-Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "USELEC-train-514",
+          "sentence": "The Soviets say we'll have a meeting when we think there can be progress and yet they left those talks.",
+          "true_label": "No-Argument",
+          "sent_original": "The Soviets say we'll have a meeting when we think there can be progress and yet they left those talks.",
+          "sent_feger": "soviets meeting think progress left talks",
+          "sent_shuffle": "say meeting can be yet Soviets progress The have a we think talks. those left we'll and when they there",
+          "pred_original": "No-Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "USELEC-train-515",
+          "sentence": "Thank you so much.",
+          "true_label": "No-Argument",
+          "sent_original": "Thank you so much.",
+          "sent_feger": "thank",
+          "sent_shuffle": "you Thank much. so",
+          "pred_original": "No-Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "USELEC-train-516",
+          "sentence": "And he said our troops would be occupiers in a bitterly hostile land.",
+          "true_label": "No-Argument",
+          "sent_original": "And he said our troops would be occupiers in a bitterly hostile land.",
+          "sent_feger": "said troops occupiers bitterly hostile land",
+          "sent_shuffle": "said would hostile And a he in be occupiers our bitterly troops land.",
+          "pred_original": "Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "USELEC-train-517",
+          "sentence": "As a matter of fact, during this current year uh we are shipping Iran, or have contracted to ship to Iran, about seven and a half billion dollars worth of arms and also to Saudi Arabia, about seven and a half billion dollars worth of arms.",
+          "true_label": "No-Argument",
+          "sent_original": "As a matter of fact, during this current year uh we are shipping Iran, or have contracted to ship to Iran, about seven and a half billion dollars worth of arms and also to Saudi Arabia, about seven and a half billion dollars worth of arms.",
+          "sent_feger": "matter fact current year shipping iran contracted ship iran seven half billion dollars worth arms saudi arabia seven half billion dollars worth arms",
+          "sent_shuffle": "billion to we matter are a current seven and arms. worth Arabia, dollars half year to a uh shipping about and during of ship worth also a or Saudi fact, dollars As contracted billion seven of this half to and of have Iran, Iran, arms about",
+          "pred_original": "No-Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "USELEC-train-518",
+          "sentence": "And this is part of that liberal establishment, one of those liberal things that you just can't do.",
+          "true_label": "No-Argument",
+          "sent_original": "And this is part of that liberal establishment, one of those liberal things that you just can't do.",
+          "sent_feger": "liberal establishment liberal things",
+          "sent_shuffle": "things this just of can't one establishment, that of is And that you liberal liberal do. part those",
+          "pred_original": "Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "USELEC-train-519",
+          "sentence": "And a number of pages were excised by that agency head there, the man in charge, and he sent it on up here to CIA, where more pages were excised before it was printed.",
+          "true_label": "No-Argument",
+          "sent_original": "And a number of pages were excised by that agency head there, the man in charge, and he sent it on up here to CIA, where more pages were excised before it was printed.",
+          "sent_feger": "number pages excised agency head man charge sent cia pages excised printed",
+          "sent_shuffle": "excised And were where in pages to by was on there, number agency and CIA, printed. he were it excised here more of head that before pages a the charge, up man it sent",
+          "pred_original": "No-Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "USELEC-train-520",
+          "sentence": "You see our five kids, all over this country, and their spouses.",
+          "true_label": "No-Argument",
+          "sent_original": "You see our five kids, all over this country, and their spouses.",
+          "sent_feger": "kids country spouses",
+          "sent_shuffle": "their our kids, over and country, this see You spouses. five all",
+          "pred_original": "No-Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "USELEC-train-521",
+          "sentence": "You mentioned Haiti.",
+          "true_label": "No-Argument",
+          "sent_original": "You mentioned Haiti.",
+          "sent_feger": "mentioned haiti",
+          "sent_shuffle": "You mentioned Haiti.",
+          "pred_original": "No-Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "USELEC-train-522",
+          "sentence": "I am a graduate of the U.S.",
+          "true_label": "No-Argument",
+          "sent_original": "I am a graduate of the U.S.",
+          "sent_feger": "graduate u.s.",
+          "sent_shuffle": "am I U.S. a graduate of the",
+          "pred_original": "No-Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "USELEC-train-523",
+          "sentence": "I don't think so.\"",
+          "true_label": "No-Argument",
+          "sent_original": "I don't think so.\"",
+          "sent_feger": "think",
+          "sent_shuffle": "I don't so.\" think",
+          "pred_original": "No-Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "USELEC-train-524",
+          "sentence": "It holds down the prices of their goods.",
+          "true_label": "No-Argument",
+          "sent_original": "It holds down the prices of their goods.",
+          "sent_feger": "holds prices goods",
+          "sent_shuffle": "holds their down of It prices goods. the",
+          "pred_original": "No-Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "USELEC-train-525",
+          "sentence": "BIDEN: Fill in the detail.",
+          "true_label": "No-Argument",
+          "sent_original": "BIDEN: Fill in the detail.",
+          "sent_feger": "biden fill detail",
+          "sent_shuffle": "the BIDEN: Fill detail. in",
+          "pred_original": "No-Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        }
+      ]
+    }
+  },
+  "overall": {
+    "mean_macro_f1_original": 0.6571,
+    "mean_macro_f1_feger": 0.4849,
+    "mean_macro_f1_shuffle": 0.347,
+    "mean_delta_feger": -0.1722,
+    "mean_delta_shuffle": -0.31
+  }
+}
