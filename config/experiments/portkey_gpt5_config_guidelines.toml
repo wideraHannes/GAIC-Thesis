@@ -26,10 +26,3 @@ enabled = [
     "SCIARK",
     "USELEC",
 ]
-
-[prompts]
-system = """You are a binary text classifier. Your task is to classify sentences as either "Argument" or "No-Argument". Respond with exactly one label: Argument or No-Argument. Do not explain.
-
-{context}"""
-
-user = """{sentence}"""

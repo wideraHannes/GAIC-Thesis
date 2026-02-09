@@ -132,13 +132,11 @@ def assemble_context(context: dict[str, str]) -> str:
     """Format loaded context sources into a single string for the prompt."""
     if not context:
         return ""
-    if len(context) == 1:
-        return next(iter(context.values()))
     parts = []
-    labels = {"definition": "Definition", "guideline": "Annotation Guideline"}
+    labels = {"definition": "Argument Definition", "guideline": "Annotation Guideline"}
     for name, content in context.items():
         label = labels.get(name, name.replace("_", " ").title())
-        parts.append(f"### {label}\n{content}")
+        parts.append(f"## {label}\n{content}")
     return "\n\n".join(parts)
 
 
@@ -173,6 +171,16 @@ MANIPULATIONS = {
 }
 
 
+# -- prompts --
+
+SYSTEM_PROMPT = """## Role
+You are a binary text classifier. Your task is to classify sentences as either "Argument" or "No-Argument". Respond with exactly one label: Argument or No-Argument. Do not explain.
+
+{context}"""
+
+USER_PROMPT = "{sentence}"
+
+
 # -- classification --
 
 
@@ -200,11 +208,9 @@ def make_client(cfg: dict) -> OpenAI:
     raise ValueError(f"Unknown provider: {provider}")
 
 
-def classify(
-    client: OpenAI, cfg: dict, prompts_cfg: dict, sentence: str, context: str
-) -> str:
-    system_prompt = prompts_cfg["system"].format(context=context)
-    user_prompt = prompts_cfg["user"].format(sentence=sentence)
+def classify(client: OpenAI, cfg: dict, sentence: str, context: str) -> str:
+    system_prompt = SYSTEM_PROMPT.format(context=context)
+    user_prompt = USER_PROMPT.format(sentence=sentence)
     try:
         resp = client.chat.completions.create(
             model=cfg["model"],
@@ -235,7 +241,6 @@ def normalize_label(pred: str) -> str:
 
 def run(config: dict, config_path: Path | None = None):
     cfg_llm = config["llm"]
-    cfg_prompts = config["prompts"]
     datasets = config["datasets"]["enabled"]
     sample_size = config["experiment"]["sample_size"]
     output_dir = PROJECT_ROOT / config["experiment"]["output_dir"]
@@ -252,6 +257,10 @@ def run(config: dict, config_path: Path | None = None):
         "timestamp": datetime.now().isoformat(),
         "config_path": str(config_path) if config_path else None,
         "config": config,
+        "prompts": {
+            "system": SYSTEM_PROMPT,
+            "user": USER_PROMPT,
+        },
         "model": cfg_llm["model"],
         "sample_size": sample_size,
         "context_sources": context_sources,
@@ -266,8 +275,8 @@ def run(config: dict, config_path: Path | None = None):
         samples = sample_balanced(texts, labels, dataset, sample_size)
 
         # show prompt once so you can sanity-check
-        example_system = cfg_prompts["system"].format(context=context_str)
-        example_user = cfg_prompts["user"].format(sentence=samples[0][1])
+        example_system = SYSTEM_PROMPT.format(context=context_str)
+        example_user = USER_PROMPT.format(sentence=samples[0][1])
         logger.info(f"[SYSTEM]\n{example_system}")
         logger.info(f"[USER]\n{example_user}")
         logger.info("-" * 40)
@@ -292,7 +301,7 @@ def run(config: dict, config_path: Path | None = None):
                     manipulated = fn(sentence)
                     record[f"sent_{name}"] = manipulated
                     futures[name] = pool.submit(
-                        classify, client, cfg_llm, cfg_prompts, manipulated, context_str
+                        classify, client, cfg_llm, manipulated, context_str
                     )
 
                 for name, fut in futures.items():
