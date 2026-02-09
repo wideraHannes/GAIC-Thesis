@@ -2,12 +2,13 @@
 # This config enables document context (preceding sentences) in addition to definition and guideline
 
 [experiment]
-sample_size = 10  # balanced Argument / No-Argument per dataset
+experiment_name = "full"
+sample_size = 30  # balanced Argument / No-Argument per dataset
 output_dir = "experiments/unified_outputs"
 
 [llm]
-provider = "ollama"
-model = "llama3.1:8b"
+provider = "portkey"
+model = "@azure-openai-foundry/gpt-4.1"
 temperature = 0.0
 max_tokens = 5
 

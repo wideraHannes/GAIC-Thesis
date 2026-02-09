@@ -1,6 +1,7 @@
 # GAIC Experiment Configuration — Portkey (GPT-4.1 via Azure OpenAI Foundry)
 
 [experiment]
+experiment_name = "guidelines"
 sample_size = 30  # balanced Argument / No-Argument per dataset
 output_dir = "experiments/unified_outputs"
 
@@ -14,15 +15,10 @@ max_tokens = 5
 sources = ["definition", "guideline"]  # which context files to load: "definition", "guideline"
 
 [datasets]
+# Only datasets with available guidelines
 enabled = [
     "ABSTRCT",
-    "ACQUA",
-    "AEC",
-    "AFS",
     "ARGUMINSCI",
-    "FINARG",
-    "IAM",
     "PE",
-    "SCIARK",
     "USELEC",
 ]

@@ -1,6 +1,7 @@
 # GAIC Experiment Configuration — Portkey (GPT-4.1 via Azure OpenAI Foundry)
 
 [experiment]
+experiment_name = "baseline"
 sample_size = 30  # balanced Argument / No-Argument per dataset
 output_dir = "experiments/unified_outputs"
 

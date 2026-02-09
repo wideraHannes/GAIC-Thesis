@@ -15,15 +15,10 @@ api_key = ""  # only needed for openai
 sources = ["definition", "guideline"]  # which context files to load: "definition", "guideline"
 
 [datasets]
+# Only datasets with available guidelines
 enabled = [
     "ABSTRCT",
-    "ACQUA",
-    "AEC",
-    "AFS",
     "ARGUMINSCI",
-    "FINARG",
-    "IAM",
     "PE",
-    "SCIARK",
     "USELEC",
 ]

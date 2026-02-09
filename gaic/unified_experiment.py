@@ -277,6 +277,7 @@ def run(config: dict, config_path: Path | None = None):
     cfg_llm = config["llm"]
     datasets = config["datasets"]["enabled"]
     sample_size = config["experiment"]["sample_size"]
+    experiment_name = config["experiment"].get("experiment_name", "experiment")
     output_dir = PROJECT_ROOT / config["experiment"]["output_dir"]
     output_dir.mkdir(parents=True, exist_ok=True)
 
@@ -421,9 +422,8 @@ def run(config: dict, config_path: Path | None = None):
         }
 
     # save
-    ts = datetime.now().strftime("%Y%m%d_%H%M%S")
-    safe_model = cfg_llm["model"].replace("/", "_").replace(":", "_").replace("@", "")
-    out_path = output_dir / f"manipulation_{safe_model}_{ts}.json"
+    safe_model = cfg_llm["model"].replace("/", "_").replace(":", "_").replace("@", "").replace(".", "_")
+    out_path = output_dir / f"{experiment_name}_{sample_size}_{safe_model}.json"
     with open(out_path, "w") as f:
         json.dump(results, f, indent=2)
     logger.info(f"Results saved to {out_path}")
