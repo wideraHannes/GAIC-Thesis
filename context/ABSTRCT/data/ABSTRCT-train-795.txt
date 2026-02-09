@@ -1,0 +1,2 @@
+There will be a detectable increase in overall survival (OS) using preoperative (PRE) as opposed to perioperative (PERI) chemotherapy in resectable StageI-II non-small-cell lung cancer (NSCLC).
+This multicenter, open-label, randomised trial with a 2×2 factorial design first compared two chemotherapy strategies (PRE versus PERI), then two chemotherapy regimens (gemcitabine-cisplatin [GP] versus paclitaxel-carboplatin [TC]).

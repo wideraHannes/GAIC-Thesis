@@ -1,0 +1,2 @@
+Univariate associations were detected between well being and exposure to rural adversity (greater drought-related worry, lower perceived service and support availability, greater number of years living in the current district).
+Multivariate analysis (n = 2,462) accounted for 41% of the variance in well-being scores.

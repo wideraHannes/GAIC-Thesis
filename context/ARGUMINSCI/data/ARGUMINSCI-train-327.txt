@@ -1,0 +1,2 @@
+Extending physicsbased optimization to a full human figure, however, has presented a significant challenge mainly due to the nonlinearity of the dynamic constraints, and sensitivity to the starting point of the optimization.
+The dependency on the initial point has been somewhat alleviated by starting out with the captured motion sequence.

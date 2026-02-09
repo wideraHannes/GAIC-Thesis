@@ -1,0 +1,2 @@
+In this paper we use folding to refer to local phenomena such as wrinkles around a knee and occlusion to refer to large scale effects such as one limb blocking the view of another.
+Folds and occlusion are common, especially when dealing with real garments such as pants where limbs block interior views and cloth collects around joints.

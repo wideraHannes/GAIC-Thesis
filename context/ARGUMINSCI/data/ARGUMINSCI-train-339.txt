@@ -1,0 +1,2 @@
+Then one Bone_CP each is inserted on the opposite sides of the Joint_CP ( Figure 1a ).
+Both Bone_CPs have floating positions along the two neighbouring bones, its position being constrained by the angle between the two bones.

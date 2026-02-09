@@ -1,0 +1,3 @@
+Animating lava flows.
+In Graphics Interface, pages 203–210, 1999.
+          [13] Matthias Mller, David Charypar, and Markus Gross.

@@ -1,0 +1,2 @@
+One common solution to this problem is motion capture.
+However, while motion capture is a reliable way of acquiring realistic human motion, by itself it is a technique for reproducing motion.

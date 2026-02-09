@@ -1,0 +1,2 @@
+To make our demonstration even more interesting, we chain our jumping motion end to end, such that it continuously loops upon itself.
+This is done by blending the second flight stage of the first motion, q a (d a1 , d a2 ), into the first flight stage of the second motion,q b (d b1 , d b2 ).

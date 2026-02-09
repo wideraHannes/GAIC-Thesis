@@ -1,0 +1,6 @@
+One time step calculation takes 36.3 seconds, and one rendered frame such as at the top of figure 7 takes 4.7 seconds to render.
+        
+        
+          <H2>5.3 Example 3 Periodic Boundary Conditions in Action</H2>
+          In figure 8 , “magical blood” is created by a simulation driven by a random forcing function in the temperature equation, defined by one of the input images.
+Using the circular rendering option and a periodic simulation domain creates a seamless texture mapping with the appearance of blood emanating from the center of the bowl.

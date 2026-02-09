@@ -1,0 +1,2 @@
+J: For joint constraints, we compute the squared distance between the position of the constraint and the position of the constrained joint at the time of the constraint and sum the squared distance between the two.
+To determine the configuration of the body at the time at which the constraint applies, we must assemble the motion sequence up to the time of the constraint; in fact, most of the required information such as the required transformation between start and end of each cut is already available in the dataset.

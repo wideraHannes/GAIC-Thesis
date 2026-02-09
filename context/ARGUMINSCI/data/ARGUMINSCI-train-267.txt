@@ -1,0 +1,2 @@
+Our interaction model simulates repulsion, adhesion and friction near the fluid-solid interface.
+The smoothness of the force fields is important for the stability of the simulation.

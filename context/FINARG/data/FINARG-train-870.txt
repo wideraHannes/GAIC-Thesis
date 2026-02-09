@@ -1,0 +1,2 @@
+Even the customer examples I gave, they were littered with example after example.
+For example, in FinServ, some very Tier 1 trading applications now using some of our capabilities in service fabric, which is really a PaaS service, which allows you to manage microservices with low latency and high scale, that's a place where we are seeing in fact activity, whether it's game development or trading applications.

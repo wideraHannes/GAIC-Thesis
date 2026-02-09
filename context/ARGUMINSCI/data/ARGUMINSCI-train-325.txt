@@ -1,0 +1,6 @@
+Some positive steps in this direction are evident, however.
+Examples include an integrated repertoire of motor controllers for biomechanically animated fish 
+[ 30 ], a methodology for controller design and integration applicable to simple figures 
+[ 32 ], a demonstration of successful integration for selected diving and gymnastic motions 
+[ 35 ], and adapting a controller designed for one character to work on another character 
+[ 17 ].

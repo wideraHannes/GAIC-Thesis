@@ -1,0 +1,2 @@
+For example, one might want the character to walk along the first half of the path and sneak down the rest.
+The necessary modifications to accomplish this are simple.

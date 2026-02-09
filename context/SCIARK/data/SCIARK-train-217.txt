@@ -1,0 +1,2 @@
+The test-retest evaluation supported the stability of the measure.
+McDonald's omega was 0.84, and known-groups validity test indicated good construct validity.

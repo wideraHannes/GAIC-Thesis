@@ -1,0 +1,35 @@
+This only confirmed our choice of QLERP.
+Hand
+                   Woman
+                   Creature
+                
+              
+              
+                
+                   LBS time
+                   3.28
+                   3.59
+                   9.0
+                
+                
+                   SBS time
+                   4.43
+                   4.54
+                   11.37
+                
+                
+                   SVD executions
+                   38
+                   37
+                   56
+                
+              
+            
+          
+          Hand Woman Creature LBS time 3.28 3.59 9.0 SBS time 4.43 4.54 11.37 SVD executions 38 37 56
+          Table 2: First two rows: run-time of LBS and SBS algorithms in milliseconds; last row: number of SVD executions
+        
+      
+      
+        <H2>5.1 Conclusion and Future Work</H2>
+        The proposed skin deformation system is by no means perfect; it cannot compete with complex, layered models.

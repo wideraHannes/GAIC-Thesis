@@ -1,0 +1,2 @@
+For instance, a situation of having a colder fluid on top of a hotter fluid is not necessarily an unstable arrangement, due to the stratified hydrostatic pressure in the atmosphere.
+This concept is defined in most meteorology texts [ 3 ].

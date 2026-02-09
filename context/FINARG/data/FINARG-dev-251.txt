@@ -1,0 +1,2 @@
+And the uniqueness of Windows comes because we don’t think of these services and their application end points as apps, but fundamentally core to the Windows experience.
+So we are building them natively into windows.

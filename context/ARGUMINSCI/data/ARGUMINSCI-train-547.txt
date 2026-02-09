@@ -1,0 +1,2 @@
+To define a specific method, we must choose a projection operator.
+In the method we refer to as SAP, we write the projection of the unconstrained point onto the constraint manifold as x n+1 0 + δ x n+1 , so that the projected point extremizes the objective function W ( δ x n+1 , λ n+1 ) = 1 ( δ x n+1 ) T M( δ x n+1 ) + C(x n+1 ) T λ n+1 , 2h 2 with respect to the free variables δ x n+1 and λ n+1 .

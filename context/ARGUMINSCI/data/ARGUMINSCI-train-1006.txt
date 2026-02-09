@@ -1,0 +1,3 @@
+In the case where the SSD transform is nearsingular, the solved d i can be much large than other d k , which can result in poorly posed interpolation.
+To address this case, we further modify the objective function as
+        f (y i ) = v i +w i −SKINNING i (v r +d i ) 2 + λ w i 2 + μ d

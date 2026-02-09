@@ -1,0 +1,2 @@
+Therefore, we can express the output motion as vector function q(d 1 , d 2 ), whenever d 1 and d 2 are within the bounds of the sample space.
+To make our demonstration even more interesting, we chain our jumping motion end to end, such that it continuously loops upon itself.

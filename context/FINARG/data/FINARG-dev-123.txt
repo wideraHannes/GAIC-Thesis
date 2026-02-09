@@ -1,0 +1,2 @@
+Then, on top of it, we even have modernization of apps that is accelerating.
+And that drives a lot of the higher level services, in particular our data services as well as our AI services when AI services are essentially compute, but what happens is all this compute then requires storage and data, and that’s another place where we see increasing acceleration.

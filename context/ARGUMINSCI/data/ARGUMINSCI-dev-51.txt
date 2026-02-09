@@ -1,0 +1,2 @@
+Once the curve is selected and the plug-in activated, the curves become the skeleton for the skin mesh.
+Internally, the curve cluster is bound to the joint skeleton so that any movement of the joints affects the curvature of the curve.

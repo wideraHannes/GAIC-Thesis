@@ -1,0 +1,2 @@
+For example, we can use a small set of key frames and foot contacts to generate normal walking, climbing over an obstacle, a baby walking, and mickey-mouse style walking.
+Figure 5 shows sample frames of the results.

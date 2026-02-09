@@ -1,0 +1,18 @@
+In conjunction with ex-
+        4. 5. 6.
+        
+          
+        
+        10. 11.
+        
+          
+        
+        12.
+        15.
+        
+          
+          
+        
+        16.
+        isting techniques, it allows a user to go from a static mesh to an animated character quickly and effortlessly.
+We have shown that using this method, Pinocchio can animate a wide range of characters.

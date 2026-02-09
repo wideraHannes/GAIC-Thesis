@@ -1,0 +1,2 @@
+In the placebo group, the mean liver volume increased 1.6%, from 4689 mL (95% CI: 613-8765 mL) to 4895 mL (95% CI: 739-9053 mL) (P < .01).
+Post hoc stratification for patients with ADPKD or PCLD revealed similar changes in liver volume, with statistically significant differences in patients given lanreotide (P < .01 for both diseases).

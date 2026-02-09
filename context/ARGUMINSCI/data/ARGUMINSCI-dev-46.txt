@@ -1,0 +1,2 @@
+All the experiments were run on a 2.5GHz dual core computer with 3GB of RAM.
+Initialization.

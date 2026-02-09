@@ -1,0 +1,2 @@
+However, physical constraints alone are insufficient to model natural-looking human movement because a motion can be physically correct without appearing natural.
+In the next section, we discuss how to learn force field functions from prerecorded motion data to constrain the human motion to lie in the space of natural appearance.

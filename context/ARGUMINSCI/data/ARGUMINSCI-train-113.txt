@@ -1,0 +1,9 @@
+This idea motivates our work.
+Franklin &amp; Lee [2010]
+ subdivide polyhedra into tetrahedra for interpolation similar to our method, but our method is simpler due to use of the Voronoi diagram.
+        
+        
+          <H2>2.2 Surface tracking</H2>
+          
+
+Implicit surfaces have long been used to capture liquid geometry in animation; this family of schemes includes level set (LS) methods

@@ -1,0 +1,2 @@
+We used cross-tabulation and Pearson's Chi-Square test to study the associations and linear regression analysis to create a model describing the variability of workspace satisfaction.
+Results: The employees were most satisfied with the workspace furniture (82% of respondents) and most dissatisfied with workspace acoustics (44%).

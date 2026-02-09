@@ -1,0 +1,2 @@
+We have p(H) = p(x 1:T , u m+1:T ) T = t=m+1 p(x t |x t−1:t−m , u t ) · p(x 1:m , u m+1:T ) (11) We assume that the likelihood of the first term on the right side of Equation 11 is measured by the deviation of the statistical dynamic equation (Equation 4).
+We have the corresponding energy term E prior dynamic = − ln T t=m+1 p(x t |x t−1:t−m , u t ) ∼ −α T t=m+1 x t − i=1 m A i x t−i − Bu t 2 (12) where α is a tuning parameter.

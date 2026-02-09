@@ -1,0 +1,7 @@
+We also thank the anonymous reviewers for their many helpful comments and suggestions.
+      
+      
+        <H1>REFERENCES</H1>
+        
+          A RIKAN , O. 2005.
+Pixie: Photorealistic renderer.

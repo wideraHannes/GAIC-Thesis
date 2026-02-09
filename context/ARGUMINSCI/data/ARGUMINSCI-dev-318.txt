@@ -1,0 +1,7 @@
+We survey some relevant work from geometric mechanics, computational fluid dynamics (CFD) and the computer graphics literature.
+        
+          <H2>2.1 Geometric Mechanics</H2>
+          Euler’s equations describing the dynamics of a rotating rigid body date from the 18th century.
+In 1901, 
+Poincaré [1901]
+ showed that by considering various group manifolds as the configuration space, Euler’s equation could apply generally to a class of physical systems.

@@ -1,0 +1,2 @@
+AM was associated with higher rates of acute nausea (P = .03), vomiting (P = .007), cardiovascular toxicity (P = .0001), and infection or febrile neutropenia (P = .03).
+The rate of >/= grade 3 esophagitis was 30% with AM versus 34% without AM (P = .9).

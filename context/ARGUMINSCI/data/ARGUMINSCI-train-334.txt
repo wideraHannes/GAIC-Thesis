@@ -1,0 +1,2 @@
+The Setup We represent the penalty function f as a linear combination of k “basis” penalty functions: f (v) = P k i=1 γ i b i (v).
+Pinocchio uses k = 9 basis penalty functions constructed by hand.

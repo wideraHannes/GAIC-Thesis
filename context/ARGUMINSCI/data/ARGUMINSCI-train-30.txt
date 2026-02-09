@@ -1,0 +1,2 @@
+Both methods, in contrast to ours, focus on static computational grids and are restricted to smaller differences in particle size.
+Although Cartesian grids are widely used, they are limited in their flexibility to adapt to a simulation setup.

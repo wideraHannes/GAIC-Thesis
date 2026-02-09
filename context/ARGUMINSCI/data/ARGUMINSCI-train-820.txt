@@ -1,0 +1,2 @@
+We retain the first m frames of this graph walk and use the final retained node as a starting point for another search.
+This process continues until a complete graph walk is generated.

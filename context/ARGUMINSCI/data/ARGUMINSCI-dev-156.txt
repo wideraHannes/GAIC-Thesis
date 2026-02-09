@@ -1,0 +1,6 @@
+The scalar pressure p and the density ρ are stored at cell centers following [MMTD07].
+      
+      
+        <H2>3.2.
+Time integration</H2>
+        Our time integration scheme is summarized in Algorithm 1.

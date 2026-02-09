@@ -1,0 +1,3 @@
+Teichmann and Teller [1998] extract a skeleton by simplifying the Voronoi skeleton with a small amount of user assistance.
+Liu et al. [2003]
+ use repulsive force fields to find a skeleton.

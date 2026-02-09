@@ -1,0 +1,2 @@
+Laplacian eigenfunctions have a correspondence with spatial scales of vorticity, allowing basis coefficients to be interpreted as a discrete spectrum of vorticity.
+The right of the spectrum corresponds to larger magnitudes of eigenvalues and smaller scale vortices.

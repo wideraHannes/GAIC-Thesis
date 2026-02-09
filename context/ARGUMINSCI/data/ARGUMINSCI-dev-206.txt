@@ -1,0 +1,18 @@
+Lee (Editors)
+      
+        <Title>Mass-Conserving Eulerian Liquid Simulation</Title>
+      
+      
+        
+          Nuttapong Chentanez
+          1
+          2
+        
+        
+          Matthias Müller
+          1
+        
+      
+      1 NVIDIA Research 2 Chulalongkorn University
+      <Abstract>We present a GPU friendly, Eulerian, free surface fluid simulation method that conserves mass locally and globally without the use of Lagrangian components.
+Local mass conservation prevents small scale details of the free surface from disappearing, a problem that plagues many previous approaches, while global mass conservation ensures that the total volume of the liquid does not decrease over time.

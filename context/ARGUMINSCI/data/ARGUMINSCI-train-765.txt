@@ -1,0 +1,2 @@
+Note that the matrix V j and the singular values combine to gives the coordinates of our observed displacements in the eigendisplacement basis.
+We denote u ˆ jk the eigendisplacement i of vertex i in the basis of support j with importance k where k goes from 1 (the principal component) up to |P j |.

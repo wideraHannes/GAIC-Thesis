@@ -1,0 +1,2 @@
+In Computer Graphics, pages 129–136.
+ACM SIGGRAPH, 1995.

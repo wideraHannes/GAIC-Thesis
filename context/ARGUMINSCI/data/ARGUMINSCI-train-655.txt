@@ -1,0 +1,2 @@
+On the left is a lighter bunny which is tossed about by the force of the cannons and also affects the motion of the smoke.
+On the right is a heavier bunny that drops quickly to the ground.

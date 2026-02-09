@@ -1,0 +1,2 @@
+Figure 3 shows a typical result.
+To make our transition model more compact, we find all the local minima of this error function, thereby extracting the “sweet spots” at which transitions are locally the most opportune.

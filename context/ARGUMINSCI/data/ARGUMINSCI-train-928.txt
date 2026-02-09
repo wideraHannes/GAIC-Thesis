@@ -1,0 +1,2 @@
+A.
+M. van Overveld, A Technique for Motion Specification in Computer Animation, Visual Computer, vol. 6 (1990), p. 106-116.

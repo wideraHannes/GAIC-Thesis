@@ -1,0 +1,6 @@
+Our accurate surface tension model captures capillary waves even on relatively low resolution meshes.
+From left to right: A cube in zero gravity begins to collapse due to surface tension, inverts to become an octahedron, and continues to oscillate rapidly before settling down to a sphere.
+        
+        
+          <H2>4.1 Surface Tension</H2>
+          To incorporate surface tension, we follow Enright et al. [2003] in setting the free surface pressure p fs = p air + γκ fs , where p air is the constant air pressure, γ is the surface tension coefficient and κ fs is the mean curvature of the surface.

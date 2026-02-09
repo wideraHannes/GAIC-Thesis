@@ -1,0 +1,2 @@
+In the gait produced by the controller that minimizes this objective (min act), activations from the GAS/SOL are significantly lowered, while activations from VAS are increased.
+While the total amount of activations is reduced, the resulting gait walks in a crouch and relies heavily on the knee.

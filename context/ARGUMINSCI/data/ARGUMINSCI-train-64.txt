@@ -1,0 +1,2 @@
+In Sec. 4, we discuss numerical methods to solve both equations of motion.
+For fluids we focus on particle based methods such as SPH for which this term can be omitted.

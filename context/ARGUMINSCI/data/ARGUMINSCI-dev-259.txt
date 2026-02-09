@@ -1,0 +1,2 @@
+Fluid Animation with Explicit Surface Meshes and Boundary-Only Dynamics.
+Master’s thesis, University of British Columbia.

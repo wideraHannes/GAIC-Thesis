@@ -1,0 +1,3 @@
+We contribute to the existing literature by the disaggregation of renewable energy sources (hydropower, geothermal, and biomass), by the consideration of time and frequency through wavelet techniques and the time-varying Granger causality test recently proposed by Shi et al.
+(2018).
+Based on monthly data, wavelet results show a positive co-movement between industrial production and biomass energy consumption at low frequencies, meaning in the long term only.

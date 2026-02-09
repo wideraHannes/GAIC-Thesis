@@ -1,0 +1,2 @@
+When cloth contacts a solid, we lock the particle onto the surface, if the relative tangential velocity is low.
+We monitor the constraint force, and if the tangential force exceeds some fraction of the normal force, we allow the particle to slide on the surface.

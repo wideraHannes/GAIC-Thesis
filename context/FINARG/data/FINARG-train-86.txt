@@ -1,0 +1,2 @@
+The other areas, course, the entire toolchain of what's happening with Visual Studio to continuous integration, to continuous deployment, and that's a place where we have a very, very differentiated solution for developers and developer productivity, which in some sense you can think of as like the Office 365 for developers.
+But that's all part of Azure.

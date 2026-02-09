@@ -1,0 +1,3 @@
+F., B ODENHEIMER B.: Verbs and adverbs: Multidimensional motion interpolation.
+IEEE Computer Graphics &amp; Applications 18, 5 (Sept. – Oct. 1998).
+          [RGBC96] R OSE C., G UENTER B., B ODENHEIMER B., C OHEN M.: Efficient generation of motion transitions using spacetime constraints.

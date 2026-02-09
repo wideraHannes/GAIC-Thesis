@@ -1,0 +1,3 @@
+CVPR (2008). 3, 4
+          [BFA02] B RIDSON R., F EDKIW R., A NDERSON J.: Robust treatment of collisions, contact and friction for cloth animation.
+In Proc.

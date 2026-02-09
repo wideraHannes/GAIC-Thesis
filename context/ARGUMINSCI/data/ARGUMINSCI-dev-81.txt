@@ -1,0 +1,5 @@
+Most edits shown in the accompanying video clips were done in less than 1 minute.
+The optimization process for each motion took on the order of 2 to 4 minutes to fully converge on a 2Ghz Pentium 4 machine (see Table 1 ).
+      
+      
+        <H2>5.1.

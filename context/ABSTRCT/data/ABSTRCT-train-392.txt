@@ -1,0 +1,2 @@
+Total costs per patient were higher for GJJ compared to stent placement (euro12433 vs. euro8819, P = 0.049).
+The incremental cost-effectiveness ratio of GJJ compared to stent placement was euro164 per extra day with a gastric outlet obstruction scoring system (GOOSS) >or=2 adjusted for survival.

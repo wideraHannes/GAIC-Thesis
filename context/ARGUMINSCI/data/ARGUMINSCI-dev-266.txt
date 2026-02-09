@@ -1,0 +1,5 @@
+Figure 6: We can use multiple “checkpoints” in a motion.
+In this figure, the motion is required to pass through the arrow (body constraint) in the middle on the way from the right arrow to the left.
+            
+             y( f ) =       0 − 0 2 1 ∗ 2 1 ( ∗ f ( −d+s f s −d+s s ) 2 ) 2 + 2 ∗ ( f −d+s s ) − 2 d d f f − ≤ &gt; &lt; s d d f ≤ + − ≤ f s s d &lt; + d s
+            as the smoothing function that gives the amount of displacement for every frame f , where d is the frame of the discontinuity and s if the smoothing window size (in our case 30).

@@ -1,0 +1,3 @@
+Additionally, these prior methods used Lagrangian meshes with largely fixed topology, and so they would have encountered “tangling” difficulties, such as inverting elements, for large amounts of plastic flow.
+Another, rather interesting, approach to combining solid and fluid behaviors appears in 
+[Nixon and Lobb, 2002].

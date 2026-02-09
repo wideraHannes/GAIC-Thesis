@@ -1,0 +1,4 @@
+Finally, in some cases the pre-conditions are computed by manual experimentation.
+For example a simple balance controller based on an inverted pendulum model 
+[ 12 ]
+ has intrinsic stability that can tolerate small disturbances.

@@ -1,0 +1,2 @@
+All of the above advantages translate directly into a fast running time.
+For example, we demonstrate results similar to those in Breen et al.

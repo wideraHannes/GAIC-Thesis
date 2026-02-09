@@ -1,0 +1,2 @@
+Letting d(j) be the distance from vertex j to the nearest bone, Pinocchio uses H jj = c/d(j) 2 if the shortest line segment from the vertex to the bone is contained in the character volume and H jj = 0 if it is not.
+It uses the precomputed distance field to determine whether a line segment is entirely contained in the character volume.

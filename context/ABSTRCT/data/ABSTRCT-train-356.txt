@@ -1,0 +1,2 @@
+The median overall survival (OS) was 34.1 and 30.7 months in Arms A and B, respectively (HR 0.98; 95% CI 0.81-1.18, P = 0.82).
+In multivariate analysis, baseline neutrophil (P < 0.001), baseline platelet counts (P < 0.001) and the difference between white blood cell (WBC) and neutrophil count (P = 0.009) had a significant adverse prognostic value.

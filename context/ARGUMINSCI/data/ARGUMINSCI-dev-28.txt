@@ -1,0 +1,2 @@
+The term −∇C(x) T λ may be viewed as the constraint-maintaining force, where the factors −∇C(x) T and λ determine the direction and scaling for the force, respectively. ∇C(x) is a rectangular matrix whose dimensions are m × 3n.
+For simulation, we must discretize (3) and (4) in time using one of various schemes, each with benefits and drawbacks.

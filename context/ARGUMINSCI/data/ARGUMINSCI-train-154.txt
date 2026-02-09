@@ -1,0 +1,2 @@
+This is essentially the A* algorithm on the tree of possible embeddings.
+To speed up the process and conserve memory, if a partial embedding has a very high lower bound, it is rejected immediately and not inserted into the queue.

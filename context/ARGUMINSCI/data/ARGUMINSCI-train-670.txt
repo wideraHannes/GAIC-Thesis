@@ -1,0 +1,2 @@
+Anticipating section 5.2, we find it expedient simply to leave this term out, thereby restoring symmetry.
+This simplification is clearly not physically justifiable, but we have not observed any ill effects from this omission.

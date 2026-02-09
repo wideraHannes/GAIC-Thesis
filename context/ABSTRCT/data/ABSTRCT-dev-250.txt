@@ -1,0 +1,2 @@
+Other outcome measures were mean IOP, number of glaucoma medications, and complications.
+After a mean follow-up of 12.3 months, Kaplan-Meier survival analysis showed a probability of success of 59% at 18 months for the MMC group and 61% for the control group when the first criterion for success was used (IOP between 6 and 21 mmHg).

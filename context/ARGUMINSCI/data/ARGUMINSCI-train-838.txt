@@ -1,0 +1,21 @@
+ISSN 01782789.
+A FORMULATION DETAILS
+        In order to present a solution to equation 4 we first give the explicit expressions for A( , f (x, y)) and A (h, , f (x , y )) respectively
+        
+          6
+          2 2 ∂f ∂f A( , f (x, y)) = 1+ + dx dy ∂x ∂y
+        
+        and 2 2 ∂f ∂f A (h, , f (x , y )) = 1+h 2 +h 2 dx dy ∂x ∂y (7)
+        To evaluate the integral in equation 7, we perform a change of integration variables as follows
+        
+          8
+          x = T −1 x y y
+        
+        By applying this change of variables to equation 7 (refer to equation 2 for a , b , d ), we obtain
+        A (h, , f (x , y )) 2 2 2 ∂ = 1+ h a f ∂x
+        
+          9
+          1/2 2 2 ∂ ∂ 1 +h b +d f dx dy ∂x ∂y a d
+        
+        ≡ I(h, a , b , d ) dx dy
+        Now let us perform a series expansion of equation 9 in the transformation parameters and the modulation factor.

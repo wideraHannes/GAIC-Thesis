@@ -1,0 +1,2 @@
+There are two limitations of our approach: an appropriate database must be available and the user cannot specify such dynamic constraints as ground reaction forces or character mass.
+The main focus of this paper has been an exploration of the use of prior knowledge in motion capture data to generate natural motion that best satisfies user-defined constraints.

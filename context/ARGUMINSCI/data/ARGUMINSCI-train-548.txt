@@ -1,0 +1,2 @@
+Smoothed particles: A new paradigm for animating highly deformable bodies.
+In Proceedings of Computer Animation and Simulation 1996.

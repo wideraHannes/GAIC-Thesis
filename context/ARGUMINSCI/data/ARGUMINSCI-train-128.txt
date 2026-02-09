@@ -1,0 +1,2 @@
+However, they used a two-level structure rather than a full octree.
+They also used semi-Lagrangian methods to update their level-set function.

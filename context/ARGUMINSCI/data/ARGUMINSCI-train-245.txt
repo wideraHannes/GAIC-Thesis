@@ -1,0 +1,3 @@
+Improving the skeleton driven deformation</H1>
+        The skeleton-driven deformation (SDD), a classical method for the basic skin deformation is perhaps the most widely used technique in 3D character animation.
+This method works first by assigning a set of joints with weights to each vertex in the character.

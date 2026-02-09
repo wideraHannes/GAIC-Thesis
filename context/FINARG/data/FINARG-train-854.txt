@@ -1,0 +1,2 @@
+And that will be a constant battle between, again, growth, geographic expansion in AWS and also efficiencies to limit how much we actually need.
+I think we're also getting much better at adding capacity faster, so there's less need to build it 6 to 12 months in advance, I would say.

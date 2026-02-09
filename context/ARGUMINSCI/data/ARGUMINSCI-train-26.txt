@@ -1,0 +1,7 @@
+This allows for a flexible system, where simulations can be run with a specific flow situation and final element in mind, such as
+          
+            
+            Figure 3: Reactionary elements created by simple transformations.
+          
+          rising smoke.
+Artists choose rendering parameters later, e.g. to alter final timing or to animate contour levels that make the smoke slowly dissipate.

@@ -1,0 +1,2 @@
+As discussed earlier, we use on average a smaller number of weights.
+This leads to a smaller number of summation terms needed for the calculation of the deformed skin points (see Equation (3)).

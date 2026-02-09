@@ -1,0 +1,2 @@
+This article describes the development and validation of a new scale, comprised only of positively worded items relating to different aspects of positive mental health: the Warwick-Edinburgh Mental Well-Being Scale (WEMWBS).
+Methods: WEMWBS was developed by an expert panel drawing on current academic literature, qualitative research with focus groups, and psychometric testing of an existing scale.

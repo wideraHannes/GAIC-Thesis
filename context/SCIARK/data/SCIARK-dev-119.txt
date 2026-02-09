@@ -1,0 +1,3 @@
+Analysing the correlation of female resp.
+male LE with GII separately, shows even a stronger, moderate correlation coefficient of 0.418 (women) and 0.430 (men) (see Appendix).
+Conclusions

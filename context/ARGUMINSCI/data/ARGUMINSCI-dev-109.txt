@@ -1,0 +1,18 @@
+The parameter τ controls the maximum difference in density between two adjacent cells, which we set to 0.4 as in [MMTD07].
+This yields the following density correction:
+        
+          15
+          | + ≥
+        
+        
+          15
+          ∆ρ i = w i (ρ) ∆T | ρ| i − if if w w i (ρ) (ρ) &lt; 0 0 .
+        
+        i i ρ can then be sharpened by updating the density of each cell using
+        
+          16
+          ρ ← ρ + ∆ρ .
+        
+        
+          16
+          i i

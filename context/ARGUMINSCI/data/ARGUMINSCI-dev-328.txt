@@ -1,0 +1,2 @@
+An overview of spatial notation is given in Appendix A, and terms are summarized here for reference.
+D Degrees of freedom of the articulated figure q i Scalar position of link i, from motion curves (DOF i) q  ̇ i Scalar velocity of link i, from motion curves q  ̈ i Scalar acceleration of link i, from motion curves X i j Spatial transform from frame i to frame j X 0 i Spatial transform from frame i to world frame s i Joint axis of link i (frame i) v i Local velocity of link i (frame i) v i Global velocity of link i (frame i) a i Local acceleration of link i (frame i)

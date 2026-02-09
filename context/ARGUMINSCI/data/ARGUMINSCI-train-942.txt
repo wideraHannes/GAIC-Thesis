@@ -1,0 +1,2 @@
+For the formulation of the objective function, we concatenate in vectors the positions, x n , and the net forces, F n , of free cloth nodes at all frames, as well as the forces, F c , applied by the cords on the clips.
+Due to equilibrium, the net force on the clips, produced by cord forces, gravity, and forces from fixed cloth nodes, must be zero.

@@ -1,0 +1,2 @@
+Pose control is based on cyclic or acyclic finite state machines with time transitions between the states.
+Each state of the controller can be static or depend on feedback parameters.

@@ -1,0 +1,3 @@
+Finally, their method assumes that the input motion can be presegmented analogously to the examples, which is achieved in their work by observing sign changes in velocity.
+One could extend this approach for rhythmic motions using the automated approach of Kim et al. 
+[ KPS03 ].

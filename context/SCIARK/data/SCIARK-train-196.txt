@@ -1,0 +1,2 @@
+A series of thermal conductivity measurements in snow pit observations done in Alaska provided useful information for constructing the relationship.
+The one-dimensional snow dynamics model, SNOWPACK, simulated the evolution of the snowpack and compared observations between all sites.

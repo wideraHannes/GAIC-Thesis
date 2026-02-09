@@ -1,0 +1,2 @@
+It's a database that's on-premise that can be tiered with the cloud.
+A single table can be extended to the cloud.

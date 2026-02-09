@@ -1,0 +1,7 @@
+Reconst External Fields † (ms) (cached)† (closed form) Forces ††† (Mb) (ms) (ms) †† (ms)
+        O(T N ) ≈ O(N ) O(T N ) O(T N ) O(T N
+        )
+        )
+        66 18 26 141 37 56 267 70 105 443 125 172 18 30 37 67 n/a 70 126 125 216 O(T N ) O(N 3 ) O(T N ) O(T N 26 20 10 52 42 20 13 3.5 5 22 26 7 10 43 52 15 20 88 105 39 41 172 26 8 10 22 52 17 19 43 105 40 39 90 210 130 87 174
+        The supplemental videos demonstrate simulations performed on a variety of domains with varying basis dimensionality.
+A comparison to the stable fluids algorithm is included as a rough qualitative validation.

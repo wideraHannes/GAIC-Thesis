@@ -1,0 +1,2 @@
+In this research, methods for assessing environmental impacts with mechanical properties concurrently for design of non-reinforced concrete are presented.
+Tools for assessing environmental impacts based on the volume of material needed as defined by several material properties and design parameters, such as required moment of inertia and cross-sectional area, are investigated.

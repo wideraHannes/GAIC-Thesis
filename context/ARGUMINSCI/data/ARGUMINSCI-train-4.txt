@@ -1,0 +1,2 @@
+The vertices are shared between triangles, allowing for easy computation of smooth vertex normals and other common mesh operations.
+The distance tree (see Section 6) provides a spatial index for the mesh.

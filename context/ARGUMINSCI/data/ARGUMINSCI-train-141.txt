@@ -1,0 +1,4 @@
+Yet another alternative is marching triangles 
+[Hilton et al. 1996]
+, which takes a surface-based rather than volume-based approach to contouring.
+Marching triangles requires significantly less computation time and fewer triangles, and produces higher-quality triangles than marching cubes.

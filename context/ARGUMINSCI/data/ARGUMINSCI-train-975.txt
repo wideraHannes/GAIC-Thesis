@@ -1,0 +1,2 @@
+Dark areas indicate regions of small error and bright areas correspond to large errors.
+Note that the space is fairly noisy.

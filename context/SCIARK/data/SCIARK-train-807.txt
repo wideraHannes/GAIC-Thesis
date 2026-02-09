@@ -1,0 +1,2 @@
+This paper examines different scenarios to ascertain roadmaps for universal energy access in unmet African electricity market.
+This was achieved by developing the Africa Electricity Access (AFELA) model, using system dynamics.

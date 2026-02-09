@@ -1,0 +1,8 @@
+A finite difference technique for simulating unsteady viscoelastic free surface flows.
+Journal of Non-Newtonian Fluid Mechanics 106, 61–106.
+        
+        5
+        ACM SIGGRAPH 2004, Los Angels, CA, August, 8–12, 2004
+        
+          
+          Figure 7:

@@ -1,0 +1,3 @@
+Unfortunately, enforcing length-preserving constraints with SHAKE fails for four common geometric configurations, which we refer to as (Q1)–(Q4) and depict in Figure 2 .
+This figure is a reproduction from [Barth et al. 1994]
+, which discusses these drawbacks in SHAKE but does not offer a solution.

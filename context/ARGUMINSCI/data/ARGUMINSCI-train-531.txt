@@ -1,0 +1,2 @@
+Ideally we would use a multiresolution fluid simulation, like the octree method of Losasso et al. [2004].
+We plan to incorporate a multiresolution fluid simulator as part of our future work.

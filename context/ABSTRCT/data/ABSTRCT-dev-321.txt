@@ -1,0 +1,2 @@
+Ninety-four patients received PB, and 93 received paclitaxel/bevacizumab/gemcitabine (PB+G).
+The ORRs were 48.9% (95% confidence interval [CI], 38.5%-59.5%) and 58.7% (95% CI, 47.9%-68.9%; P = .117) with PB and PB+G, respectively.

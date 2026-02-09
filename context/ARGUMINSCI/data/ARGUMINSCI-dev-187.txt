@@ -1,0 +1,5 @@
+ByungMoon Kim &amp; Yingjie Liu &amp; Ignacio Llamas &amp; Jarek Rossignac / FlowFixer: Using BFECC for Fluid Simulation
+        5.
+Results
+        
+          Figure 6: The far left image shows an air bubble placed in olive oil at time zero.

@@ -1,0 +1,2 @@
+Second, we outline the issue of rerooting.
+Implementing any inverse dynamics algorithm requires selecting a character root.

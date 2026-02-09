@@ -1,0 +1,2 @@
+We learn the statistical model for each individual behavior and use it to generate individual behavior based on user-defined constraints.
+Two kinds of constraints were used to generate most of the examples in this paper: key-frame constraints and key-trajectory constraints.

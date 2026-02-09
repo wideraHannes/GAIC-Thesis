@@ -1,0 +1,2 @@
+To correct for variations in direct illumination, we remove the luminosity component from our color modelling.
+We do not correct for indirect illumination.

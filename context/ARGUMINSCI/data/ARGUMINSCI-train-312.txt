@@ -1,0 +1,2 @@
+This approach takes care of the second requirement, but results in a large set of eigenmodes with relatively small contributions for many eigenmodes, because all the common first deformation modes (such as stretch, shear, . . . ) are represented in each of the U i .
+Instead, similar to [Barbic and James 2005], we can construct a low-dimensional motion subspace by applying mass-PCA.

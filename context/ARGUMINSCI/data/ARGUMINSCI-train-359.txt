@@ -1,0 +1,2 @@
+Local deformations can be similarly achieved by changing the force densities.
+For example, reducing the force density of the network increases the size of the bulge effect as shown in Figure 3(d) .

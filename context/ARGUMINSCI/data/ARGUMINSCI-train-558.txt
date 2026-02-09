@@ -1,0 +1,2 @@
+Force field function modeling.
+We automatically extract force field priors from prerecorded motion data (Section 5).

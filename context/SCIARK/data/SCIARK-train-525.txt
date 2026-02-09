@@ -1,0 +1,2 @@
+Based on a bottom-up framework with survey data and official statistics, this paper examines the changes of aggregate residential carbon intensity, and analyzes its driving factors from an end-use perspective over the period of 1996-2008.
+The Adaptive Weighting Divisia with rolling base year index specification is applied to identify the quantitative effects of driving components and their further decomposing results of end-use activities.

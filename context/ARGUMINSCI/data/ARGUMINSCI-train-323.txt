@@ -1,0 +1,2 @@
+In the animated arm model, we are only concerned with the muscles producing major influence on the skin.
+The deformation of the forearm is complex but relatively unnoticeable.

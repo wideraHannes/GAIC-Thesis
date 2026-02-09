@@ -1,0 +1,2 @@
+In particular, the phase function of a granular material is affected by both the absorptivity and the external and internal structure of the grains, from the millimeter scale down to the wavelength scale.
+Our results also confirm that the macroscopic roughness parameter, as defined by Hapke, is to first order correlated with the absorptivity of the particles, through multiple scattering effects, and thus mostly corresponds to a measurement of the particles shadowing.

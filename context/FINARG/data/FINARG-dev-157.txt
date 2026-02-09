@@ -1,0 +1,2 @@
+And in our case the vision also we have for distributed cloud infrastructure is just that, it is distributed.
+So we don't think of our server as a legacy business.

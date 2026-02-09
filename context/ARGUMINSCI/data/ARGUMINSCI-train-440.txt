@@ -1,0 +1,2 @@
+If the constraint direction, −∇C(x) T , is evaluated at the beginning of the timestep, x n , as in SHAKE, then no scaling, λ , of the constraint direction yields a satisfied end-of-timestep constraint, C(x n+1 ) = 0.
+Numerically, for (Q2)–(Q4) this observation manifests as a singular Jacobian in Newton’s method.

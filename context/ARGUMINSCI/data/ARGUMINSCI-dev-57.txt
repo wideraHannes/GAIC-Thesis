@@ -1,0 +1,6 @@
+Mass-PCA combines and compacts the U i , retaining only k most significant modes.
+Finally, we explicitly add morph target deformations x 0 i to the eigenbasis and and guarantee massorthogonality of the final basis U.
+      
+      
+        <H1>5 Results</H1>
+        By using pose-space efficient polynomial interpolation to achieve pose-dependent behavior, we are able to demonstrate rich nonlinear deformation effects at relatively small extra cost compared to simple simulation of linear or semi-non-linear materials.

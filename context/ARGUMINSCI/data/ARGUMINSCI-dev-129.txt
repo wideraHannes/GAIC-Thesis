@@ -1,0 +1,2 @@
+Our virtual actors, which will be described shortly, are dynamic articulated objects implemented as Systems within DANCE .
+An actuator is a generic concept that includes anything that can exert forces or, in general, interact in any way with systems or other actuators.

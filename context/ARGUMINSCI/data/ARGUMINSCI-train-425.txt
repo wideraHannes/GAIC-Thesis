@@ -1,0 +1,3 @@
+Our basic approach — detecting transitions, constructing a graph, and using graph search techniques to find sequences satisfying user demands — has been applied previously to other problems.
+Schödl et al. [2000]
+ developed a similar method for synthesizing seamless streams of video from example footage and driving these streams according to high-level user input.

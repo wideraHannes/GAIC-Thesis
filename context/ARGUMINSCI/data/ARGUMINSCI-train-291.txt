@@ -1,0 +1,3 @@
+Rendering of complex physical deformation models for character animation remains a significant hurdle for interactive applications, but one that has been largely overcome for off-line animation.
+Currently, most real time character animation, e.g., for video games, is done using a very common linear transform blending technique called (among other things) Skeletal-Subspace Deformation (SSD) 
+[Magnenat-Thalmann et al. 1988].

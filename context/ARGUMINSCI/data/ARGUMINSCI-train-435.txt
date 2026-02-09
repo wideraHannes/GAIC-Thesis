@@ -1,0 +1,2 @@
+A different issue is how to deal with the inside of (rigid) objects.
+The method to set boundary conditions as described above does not account for the interior of objects.

@@ -1,0 +1,2 @@
+We then investigate the question of determining pre-conditions in Section 4.
+Section 5 describes the articulated figure models and the software system we use to implement the control framework.

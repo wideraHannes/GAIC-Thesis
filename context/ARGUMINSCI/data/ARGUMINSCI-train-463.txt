@@ -1,0 +1,2 @@
+A popular dexterity measure is min = max , where min and max are the minimum and maximum, respectively, among the singular values of the Jacobian.
+In this case, smaller K 1 and K 2 should be used if the dexterity measure turns out to be small.

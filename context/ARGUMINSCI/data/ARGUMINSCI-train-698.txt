@@ -1,0 +1,2 @@
+Such artifacts are a form of aliasing and can be reduced by jittering the grid each timestep.
+Most of the examples in this article used grids which were slightly larger than the simulation domain.

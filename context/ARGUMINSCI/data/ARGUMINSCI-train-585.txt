@@ -1,0 +1,2 @@
+The implementation also supports collision detection and response, which were disabled for these tests.
+An object-oriented framework written in C++ integrate all these technologies into a single application allowing simulation of cloth objects of any shape with specified parameters.

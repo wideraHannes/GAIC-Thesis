@@ -1,0 +1,6 @@
+Figure 5: A synthetic character walks along a trajectory from mouse input.
+The spacing of the points indicates the speed.
+        
+      
+      
+        <H2>6.2.

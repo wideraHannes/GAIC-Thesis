@@ -1,0 +1,2 @@
+Further runtime and resolution details for our simulations can be found in Table 1 .
+Discussion We found our discretization (Section 3) beneficial in a number of ways.

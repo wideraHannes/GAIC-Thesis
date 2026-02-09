@@ -1,0 +1,2 @@
+Unlike previous work focusing on specific athletic movements, our methodology is to begin with a core set of simple actions, including balancing, small steps, falling reactions, recovery from falls, standing up from a chair, and others.
+In the present paper, we do not cover in any appreciable detail the design of individual controllers to effect such basic actions. 1 Rather, our contribution here is a framework for composing individual controllers, however they may be designed, into more capable control systems for dynamic characters.

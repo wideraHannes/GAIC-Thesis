@@ -1,0 +1,3 @@
+Title:Ammonia volatilization from synthetic fertilizers and its mitigation strategies: A global synthesis
+Abstract:Ammonia (NH3) volatilization is a major pathway of nitrogen (N) loss in agricultural systems worldwide, and is conducive to low fertilizer N use efficiency, environmental and health issues, and indirect nitrous oxide emission.
+While mitigating NH3 volatilization is urgently needed, a quantitative synthesis is lacking to evaluate the effectiveness of mitigation strategies for NH3 volatilization from synthetic fertilizers applied in agricultural systems.

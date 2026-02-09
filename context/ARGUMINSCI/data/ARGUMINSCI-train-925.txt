@@ -1,0 +1,2 @@
+Next we fit the parameters of our underlying skinning model using this sampled data.
+We wish to obtain a good sampling of the character’s skin deformations to fit our underlying model with.

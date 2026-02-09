@@ -1,0 +1,2 @@
+This requirement can be simply stated: in addition to remaining divergence free, the fluid velocity at an object’s boundary should be equal to the normal component of the boundary’s velocity.
+This satisfies the free-slip condition when the object is at rest, and equates normal components of the fluid and boundary velocity when the object is in motion.

@@ -1,0 +1,6 @@
+Acknowledgement</H1>
+        This work was supported by the NSF under the ITR Digital clay grant 0121663.
+        c The Eurographics Association 2005.
+ByungMoon Kim &amp; Yingjie Liu &amp; Ignacio Llamas &amp; Jarek Rossignac / FlowFixer: Using BFECC for Fluid Simulation
+        
+          Figure 7: Simulation of a sinking cup.

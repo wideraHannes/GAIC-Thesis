@@ -1,0 +1,2 @@
+The highest emissions scenario considered in the AR4 (scenario A1FI) was not examined with complex general circulation models (GCMs) in the AR4, and similarly the uncertainties in climate–carbon-cycle feedbacks were not included in the main set of GCMs.
+Consequently, the projections of warming for A1FI and/or with different strengths of carbon-cycle feedbacks are often not included in a wider discussion of the AR4 conclusions.

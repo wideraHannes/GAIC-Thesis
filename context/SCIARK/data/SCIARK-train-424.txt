@@ -1,0 +1,2 @@
+The value of the method is demonstrated on a case from Turkey, and a comparative analysis.
+This approach constitutes a novelty by proposing a numerical model for SDGs that combines AHP and COPRAS in a HFL environment with group decision-making for the first time.

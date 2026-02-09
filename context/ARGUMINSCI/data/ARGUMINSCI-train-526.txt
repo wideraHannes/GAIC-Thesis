@@ -1,0 +1,3 @@
+The kinematics and kinetics of the running pattern of two-, four and
+          FUNGE, J., TU, X., AND TERZOPOULOS, D. 1999.
+Cognitive modeling: Knowledge, reasoning and planning for intelligent characters.

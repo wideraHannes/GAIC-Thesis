@@ -1,0 +1,11 @@
+Coulomb’s model dictates that the linear reaction force must fall within a friction cone oriented along the contact normal with angular half-width tan −1 μ , where μ is the coefficient of friction.
+The inequality constraint for the linear aggregate force is therefore
+        
+          4
+          cos −1 N · a f 0 a &lt; tan −1 μ
+        
+        
+          4
+          |f 0 |
+        
+        where N is the unit contact normal.

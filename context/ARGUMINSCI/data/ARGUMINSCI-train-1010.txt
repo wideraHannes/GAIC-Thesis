@@ -1,0 +1,2 @@
+Note that we only include the computationally more expensive steps here, and not the re-meshing (which is done in intervals).
+Figure 9: The time required for our re-meshing and particle merging &amp; splitting computations over time for Figure 3 .

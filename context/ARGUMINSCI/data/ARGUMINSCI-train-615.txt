@@ -1,0 +1,7 @@
+Aggregate equations — force.
+Compute:
+        
+          40
+          I  ̇ i ∗ = X i i+1  ̇ I ∗ i+1 X i i+1 + ( s i I i ∗ − I i ∗ s i ) q  ̇ i f ∗ i = X i i+1 f i+1 ∗ + s i q  ̇ i ×p ˆ ∗ i + I ∗ i s i q  ̈ i +  ̇ I ∗ i s i q  ̇ i
+        
+        where f ∗ 0 is the aggregate force applied to the entire body, equal to f 0 computed previously.

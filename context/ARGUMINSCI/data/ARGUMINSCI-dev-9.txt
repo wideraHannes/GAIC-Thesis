@@ -1,0 +1,2 @@
+As a result, we store all the variables required to calculate WPSD, PSD, and SSD in six texture maps: T v , T n , T w1 , T w2 , T d , and T x .
+The values in the texture maps are stored in the texture memory at setup time, since they are not changed during the deformation process.

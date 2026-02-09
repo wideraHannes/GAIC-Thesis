@@ -1,0 +1,6 @@
+When the surface is heavily curved only small portions of the surface are visible before the cloth curves out of view.
+In subsequent sections we adopt the following strategy: maximize information obtained from marker color and eliminate the information needed from neighbors.
+        parametric domain
+        
+          <H2>3.1 Entropy as an Analytical Tool</H2>
+          We optimize our correspondence technique by analyzing the information provided by different cues.

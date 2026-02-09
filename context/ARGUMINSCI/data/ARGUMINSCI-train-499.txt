@@ -1,0 +1,2 @@
+Additional potential uses in this vein include texture synthesis and non-photorealistic rendering.
+Improvements to our Method.

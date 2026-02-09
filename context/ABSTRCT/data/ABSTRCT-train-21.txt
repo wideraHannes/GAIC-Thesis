@@ -1,0 +1,2 @@
+Multivariable repeated measures modeling demonstrated that treatment arm, time point, age, and tamoxifen use were significantly associated with symptom severity (all P values < .002).
+Amenorrhea rates differed significantly by treatment arm, with the AT arm having the lowest rate.

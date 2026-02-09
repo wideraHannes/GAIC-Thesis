@@ -1,0 +1,3 @@
+While ray marching produces nice results we think they might be improved using the method described in 
+[Heckbert, 1987].
+Some of our examples suffer from noticeable volume loss.

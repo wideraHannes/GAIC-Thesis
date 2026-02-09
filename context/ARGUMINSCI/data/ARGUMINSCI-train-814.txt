@@ -1,0 +1,12 @@
+Formally, the ( j + 1) th step of fast projection, x j+1 = x j + δ x j+1 , extremizes the objective function
+        W ( δ x j+1 , δ λ j+1 ) = 2h 1 2 ( δ x j+1 ) T M( δ x j+1 ) + C(x j+1 ) T δ λ j+1 ,
+        with respect to the step increment, δ x j+1 , and the auxiliary variable δ λ j+1 .
+Expanding the constraint to first order, we obtain a quadratic objective function, whose stationary equations with respect to δ x j+1 and δ λ j+1 are
+        C(x j+1 ) = C(x j + δ x j+1 ) ≈ C(x j ) + ∇C(x j ) δ x j+1 ,
+        
+          5
+          δ x j+1 = −h 2 M −1 ∇C(x j ) T δ λ j+1 ,
+        
+        
+          6
+          ∇C(x j )

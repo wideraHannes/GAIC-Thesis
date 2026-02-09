@@ -1,0 +1,3 @@
+This involves evaluating the function f y at each of the grid points, making use of the solution vector in a stencil of grid points surrounding the grid point being evaluated.
+First and second derivative terms are replaced by their fourth order finite difference approximations, which can be found in 
+[ 1 ].

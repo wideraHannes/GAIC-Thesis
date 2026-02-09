@@ -1,0 +1,2 @@
+We present numerical evidence supporting the observation that a constraint-based method is inherently well-suited to operate in the quasi-inextensible regime.
+In contrast, for this regime spring-based methods are known to experience a range of difficulties, leading to the adoption of various strain limiting

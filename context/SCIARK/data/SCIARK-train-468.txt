@@ -1,0 +1,2 @@
+The CO 2 emissions intensity is 1.93 kg/kWh for super-C, 1.69 kg/kWh for USC, 1.59 kg/kWh for USC + replacement and 1.29 kg/kWh for IGCC + CCS.
+The CO 2 emissions intensity was 1.95 kg/kWh in 2010, which had decreased 5.5% compared with the level in 2005.

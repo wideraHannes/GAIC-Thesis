@@ -1,0 +1,2 @@
+Variability of biome reflectance directional signatures as seen by POLDER
+Abstract: Reflectance measurements acquired with the spaceborne POLDER instrument are used to analyze the variability of land surface directional signatures as a function of vegetation cover type.

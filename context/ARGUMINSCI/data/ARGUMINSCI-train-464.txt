@@ -1,0 +1,2 @@
+As far as most mechanical networks are concerned, the relationship between the equilibrium state and the acting forces is non-linear.
+Shape change cannot be trivially related to the magnitude and direction of the external forces.

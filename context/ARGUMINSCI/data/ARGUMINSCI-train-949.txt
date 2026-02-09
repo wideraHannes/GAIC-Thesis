@@ -1,0 +1,5 @@
+Miguel et al. / Data-Driven Estimation of Cloth Simulation Models
+        
+          
+          Figure 7: Fitting results for Sample #12 with the Soft Constraints model.
+Top to bottom; Stretch-X, Simple shear, Bend-X, Corner pull, Complex shear.

@@ -1,0 +1,2 @@
+Fig. 3 shows this merging process.
+After merging, we still possibly have more than two CCs.

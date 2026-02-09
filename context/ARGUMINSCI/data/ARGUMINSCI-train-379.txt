@@ -1,0 +1,2 @@
+For revolute joints, we can easily compute the distance, r, by comparing the joint angles directly.
+For joints with more than one rotational degree of freedom, we compute distance as the angle in the axis-angle representation of the joint’s rotation matrix.

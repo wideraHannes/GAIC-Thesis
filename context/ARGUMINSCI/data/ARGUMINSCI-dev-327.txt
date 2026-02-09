@@ -1,0 +1,2 @@
+However, without force field priors, the modified motion could be unnatural because there are many ways to adjust a motion so that physical laws are satisfied, and yet only a subset of motions are natural-looking.
+With force field priors, our system pushes the modified motions towards regions of high probability density in order to be consistent with force field priors.

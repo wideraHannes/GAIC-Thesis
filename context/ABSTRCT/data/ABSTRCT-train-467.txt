@@ -1,0 +1,2 @@
+Fludarabine was consistently a better treatment than ChOP, except in the unlikely case of high utility weights attributed to toxicity and low utility weights attributed to treatment.
+Nevertheless, from a clinical point of view, differences between ChOP and fludarabine were moderate or event slight (mean difference in TWIST of 1.45 months).

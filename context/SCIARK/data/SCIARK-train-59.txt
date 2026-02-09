@@ -1,0 +1,2 @@
+Lack of spousal support (not currently married) resulted to increase in under-five mortality (Chad- Hazard Ratio [HR] = 1.11, 95%CI = 0.97-1.25; DR Congo- HR = 1.24, 95%CI = 1.11-1.40; Mali- HR = 2.43, 95%CI = 1.63-3.64; Niger- HR = 1.59, 95%CI = 1.24-2.03; Zimbabwe- HR = 1.33, 95%CI = 1.06-1.67).
+Delivery by caesarean section was significantly associated with under-five mortality (Chad- HR = 1.32, 95%CI = 1.00-1.77; DR Congo- HR = 1.20, 95%CI = 1.01-1.43; Mali- HR = 1.42, 95%CI = 1.08-1.85; Niger- HR = 1.43, 95%CI = 1.06-1.92; Zimbabwe- HR = 1.49, 95%CI = 1.03-2.15).

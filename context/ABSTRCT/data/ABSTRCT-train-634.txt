@@ -1,0 +1,2 @@
+This non-inferiority design trial aimed to determine whether the combination of gemcitabine and carboplatin (GC) results in similar survival but is less toxic with better quality of life.
+Previously untreated patients with SCLC with extensive disease or limited stage with poor prognostic factors were randomly assigned to six 3-weekly cycles of GC or PE. 241 patients (121 GC, 120 PE) were recruited, of which 216 (90%) had died.

@@ -1,0 +1,6 @@
+Moreover, we can use the techniques described at the end of Section 4.2 to add randomness to the generated motion.
+      
+      
+        <H1>6 Discussion</H1>
+        In this paper we have presented a framework for generating realistic, controllable motion through a database of motion capture.
+Our approach involves automatically constructing a graph that encapsulates connections among different pieces of motion in the database and then searching this graph for motions that satisfy user constraints.

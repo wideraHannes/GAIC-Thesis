@@ -1,0 +1,2 @@
+Suppose we are running a two-dimensional simulation on a recttal angular texture domain map of variable, physical x dimensions , with initial L x condition by L z .
+Define x x; a horizonz; 0 = x=L z x; x and z; 0 a vertical = z=L z texture .

@@ -1,0 +1,3 @@
+ACM Transactions on Graphics 2(2), pages 91–108, 1983.
+          [9] Mathieu Desbrun and Marie-Paule Cani.
+Smoothed particles: A new paradigm for animating highly deformable bodies.

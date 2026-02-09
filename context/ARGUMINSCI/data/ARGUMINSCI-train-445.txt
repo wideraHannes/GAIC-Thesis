@@ -1,0 +1,2 @@
+We demonstrate that their approach can easily be applied to transfer information between two arbitrary, topologically unrelated meshes, which is required to achieve more general evolution of the simulation domain from step to step.
+Finally, we need to quickly and reliably generate a new tetrahedral mesh for each time step that suits the current simulation conditions, such as conformance to boundaries and obstacles as well as any desired refinement.

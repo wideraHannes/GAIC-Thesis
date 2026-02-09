@@ -1,0 +1,2 @@
+The first paper by Lyócsa and Molnár applies heterogeneous autoregressive (HAR) models to high-frequency data to predict the one-day forward volatilities of two strategically linked commodities, gold and silver.
+They provide evidence that it is difficult to beat benchmark models using univariate models and that a much better strategy is to average the forecasts from many models.

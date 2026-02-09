@@ -1,0 +1,2 @@
+The first equation states that the velocity field should be incompressible while the second one describes the evolution of a velocity field over time.
+The first term on the right hand side reflects the change of velocity due to advection, while the second expression accounts for any external force f and acceleration caused by the local pressure gradient ∇p and by viscous drag depending on ν.

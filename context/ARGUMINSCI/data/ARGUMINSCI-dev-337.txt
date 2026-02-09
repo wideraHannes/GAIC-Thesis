@@ -1,0 +1,3 @@
+One clear aspect for improvement is to adopt a more physically-accurate simulation engine 
+[Sherman et al. 2011], as ODE “emphasizes speed and stability over physical accuracy” [Smith 2006].
+More accurate simulations and detailed models present additional computational challenges both in simulation speed and in parameter optimization, but are crucial for potential scientific and medical applications.

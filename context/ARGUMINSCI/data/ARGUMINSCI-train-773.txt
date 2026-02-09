@@ -1,0 +1,2 @@
+The structure of the paper is as follows: in the next section, we summarize the previous work concerning real-time skin deformation and sketch our solution.
+In section 3, we analyze the problems of the LBS algorithm.

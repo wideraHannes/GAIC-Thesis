@@ -1,0 +1,3 @@
+SIAM Journal of Scientific Computing 17, 2 (March 1996).
+          [CMT04] C ARLSON M., M UCHA P.
+J., T URK G.: Rigid fluid: Animating the interplay between rigid bodies and fluid.

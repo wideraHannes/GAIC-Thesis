@@ -1,0 +1,3 @@
+This leads to the idea of turning redistancing off near the interface to keep good φ values there.
+The conditions to turn off redistancing is provided in [DL03]
+, where the significant enhancement were shown for the Zalesak’s problem.

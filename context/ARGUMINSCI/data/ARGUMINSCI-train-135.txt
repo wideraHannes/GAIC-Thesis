@@ -1,0 +1,2 @@
+The constraint techniques we use on individual particles work just as well for collections of particles; thus, we could handle cloth/cloth intersections using the technique described in section 5, but the cost is potentially large.
+For that reason, we have chosen to deal with cloth/cloth contacts using penalty forces: whenever a particle is near a cloth triangle or is detected to have passed through a cloth triangle, we add a stiff spring with damping to pull the particle back to the correct side of the triangle.

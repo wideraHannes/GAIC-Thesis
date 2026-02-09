@@ -1,0 +1,2 @@
+As noted in Section 3.3, the use of linear blends to create transitions can cause artifacts, the most common of which is feet that slide when they ought to be planted.
+However, every graph walk is automatically annotated with constraint information (such as that the foot must be planted).

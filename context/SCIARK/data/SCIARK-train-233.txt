@@ -1,0 +1,2 @@
+For each country and country typology the prevalence of fair/poor health by gender was calculated and prevalence ratios (PR, women compared to men) and 95% confidence intervals (CI) were computed.
+Multilevel robust Poisson regression models were fitted.Women had poorer self-perceived health than men in countries with traditional family policies (PR=1.13, 95%CI: 1.07-1.21 in Traditional-Central and PR=1.27, 95%CI: 1.19-1.35 in Traditional-Southern) and in Contradictory countries (PR=1.08, 95%CI: 1.05-1.11).

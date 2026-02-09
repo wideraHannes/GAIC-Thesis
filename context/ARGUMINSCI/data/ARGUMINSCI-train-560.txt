@@ -1,0 +1,2 @@
+This simulation was run on a 400 by 300 grid, with periodic sides.
+Figure 1 shows the temperature distribution at the start of the simulation and at two later times.

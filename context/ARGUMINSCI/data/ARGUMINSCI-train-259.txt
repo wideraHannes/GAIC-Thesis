@@ -1,0 +1,5 @@
+We implemented this method using the algorithm described in 
+[ PRE 92 ]
+, but preliminary experiments have shown very deceptive results, and the gain of accuracy did not compensate the large calculations required for each iteration, whereas increased instability problems did not allow time steps much larger than those used for good accuracy with backward Euler.
+We did not consider in our tests the methods aimed toward simplifications which might highly approximate and degrade the dynamic behavior of deformable models, such as implicit integration with precomputed inverse matrices [ DES 99 ]
+ which involves high simplification and linrarization of the Hessian matrix and which also becomes very unpractical for large matrix sizes (the inverse of a sparse matrix is not necessarily sparse).

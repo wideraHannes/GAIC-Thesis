@@ -1,0 +1,2 @@
+Specifically, we have tested stretching on new samples of rayon/spandex knit (#12.2) and cotton denim (#14.2), and shearing on new samples of cotton satin (#4.2) and wool/cotton blend (#18.2).
+The force-displacement plots of the real cloth samples, shown in the supplementary document, indicate very similar behavior between fitting and test samples for #12 and #14, and a larger disparity for #4 and #18.

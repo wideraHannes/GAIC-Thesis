@@ -1,0 +1,3 @@
+Incremental Parameter Fitting</H2>
+        The nonlinearity of cloth deformation, together with the complex interplay of various deformation components in the resulting forces and positions, make the optimization problem above extremely complex in the general case, prone to falling in local minima and sensitive to initialization values.
+However, we largely alleviate these issues with the design of the five isolated deformation measurements described in Section 3.2, which allow us to separately fit stiffness curves for the six deformation components described in Section 4.1, following an incremental parameter fitting procedure.

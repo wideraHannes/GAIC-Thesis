@@ -1,0 +1,2 @@
+We recorded the following pair-wise mean difference in change in IBDQ-B score between groups: nurse versus booklet 4·12 (95% CI 0·04-8·19; p=0·04), gastroenterologist versus booklet 5·47 (1·14-9·81; p=0·01).
+Outcomes in the nurse group were not inferior to outcomes in the gastroenterologist group (mean difference 1·36, one sided 95% CI -1·48).

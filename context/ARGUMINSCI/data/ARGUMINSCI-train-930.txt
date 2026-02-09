@@ -1,0 +1,7 @@
+Surfaces can of course be interpolated by allowing different combinations of the same basis functions in different dimensions, i.e., vector valued w k .
+The distance can be generalized to Mahalanobis distance (effectively rotating and stretching the basis function) 
+[ 4 ].
+      
+      
+        <H2>3.3 Energy Functionals and Non-Convex Methods</H2>
+        Various visual reconstruction schemes can be adapted for scattered data interpolation.

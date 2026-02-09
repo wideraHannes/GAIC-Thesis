@@ -1,0 +1,2 @@
+Kruskal-Wallis was used to compare QOL scores.
+One hundred thirty-one patients (45 women and 86 men, mean age 58.7) participated in the clinical trial.

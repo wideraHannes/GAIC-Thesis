@@ -1,0 +1,2 @@
+Asymptomatic Corrected QT interval (QTC) prolongation was observed in eight vandetanib patients.
+Median progression-free survival for vandetanib and placebo was 2.7 and 2.8 months, respectively (hazard ratio [HR], 1.01; 80% CI, 0.75 to 1.36; one-sided P = .51).

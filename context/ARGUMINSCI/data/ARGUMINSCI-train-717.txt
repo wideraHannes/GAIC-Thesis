@@ -1,0 +1,2 @@
+It significantly reduces the dimensionality of the motion from the space of x 1:T to the space of the initial state x 1:m and the control input u m+1:T .
+The second term on the right side of Equation 11 computes the prior for the initial state, x 1:m , and control input, u m+1:T .

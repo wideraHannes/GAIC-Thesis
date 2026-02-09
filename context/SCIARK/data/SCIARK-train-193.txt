@@ -1,0 +1,2 @@
+The extent to which today's hydrologic models can usefully ingest such massive data volumes is unclear.
+Nor is it clear whether this deluge of data will be usefully exploited, either because the measurements are superfluous, inconsistent, not accurate enough, or simply because we lack the capacity to process and analyse them.

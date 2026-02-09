@@ -1,0 +1,2 @@
+Methods: Using data from 2016 and 2018 for 189 countries from the World Bank Women, Business, and the Law database, we used factor analysis to assess the dimensionality of the LoVI.
+We examined the distribution of the LoVI across countries and regions, and the relationship of national rankings on the LoVI with those for other indicators from the United Nations, Demographic and Health Surveys, and World Factbook.

@@ -1,0 +1,2 @@
+We anticipate that typical graph searches will be restricted to one or two subgraphs, and so we expect that the search will remain practical even for larger graphs.
+We conclude with a brief discussion of future work.

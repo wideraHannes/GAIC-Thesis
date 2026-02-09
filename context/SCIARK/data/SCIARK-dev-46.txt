@@ -1,0 +1,2 @@
+Structural validation tests were done for the proposed model.
+The methodology is proposed, then the integrated empirical study and system dynamics model are completed.

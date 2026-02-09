@@ -1,0 +1,8 @@
+This formulation captures the tendency to rotate the shoulder backwards and inwards while bending the elbow.
+The scale constant and the desired elbow angle are among the parameters set by optimization, as described in the next section.
+        
+      
+      
+        <H1>5 Optimization</H1>
+        The control algorithm specified in Section 4 has a large number of parameters, which we set by optimization 
+[Wang et al. 2010].

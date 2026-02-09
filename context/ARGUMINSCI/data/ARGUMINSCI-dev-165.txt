@@ -1,0 +1,5 @@
+The problem of loss of liquid mass and momentum has also been addressed by proposing elaborate advection methods such as BFECC [KLLR05], modified MacCormack ∗ 
+[SFK 08], derivatives advection 
+[KSK08] and conservative semi-Lagrangian advection 
+[LGF11], [LAF11].
+As an alternative to level-set, the fluid domain can be tracked with a Volume-of-Fluid (VOF) approach

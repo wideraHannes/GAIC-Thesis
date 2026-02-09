@@ -1,0 +1,2 @@
+Contrary the perception of the implicit model iteration being slow because of the linear system resolution it involves, the inverse Euler iteration often proves to be faster than the explicit Runge-Kutta method of higher order, if an adequate approximate linear system resolution is implemented.
+A limited number of Conjugate Gradient iterations seems suitable for this.

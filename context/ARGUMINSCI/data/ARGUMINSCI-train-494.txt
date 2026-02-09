@@ -1,0 +1,2 @@
+While solid, each particle was connected to a fixed set of neighbors using elastic springs.
+As the material would become more fluid-like, the springs would weaken, and eventually disappear.

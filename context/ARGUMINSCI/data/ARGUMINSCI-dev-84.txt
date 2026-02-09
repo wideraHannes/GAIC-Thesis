@@ -1,0 +1,2 @@
+The underlying meshing is triangular, making clothing modelling easier.
+More importantly, its input parameters are independent of meshing, so that parameters recovered on one mesh (the test swatch) can safely be transferred to another (the skirt).

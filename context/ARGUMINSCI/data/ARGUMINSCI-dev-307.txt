@@ -1,0 +1,2 @@
+The direction of the lift force, which is perpendicular to v i,rel and lies in the plane spanned by v i,rel and n i , is given by u i = ( n i × v i,rel ) × v i,rel .
+Then the lift force is calculated as F i,L = 1 2 C L ρ|v

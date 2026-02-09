@@ -1,0 +1,2 @@
+After adjusting for respondents' gender, caregivers reported worse mental health than non-caregivers (odds ratio (OR) = 1.35, 95% confidence interval (CI) = 1.31-1.39 for >15 days poor mental health in the past month) but better general health (OR = 0.96, 95%CI = 0.94-0.98 for fair or poor health).
+Men caregivers reported somewhat worse overall health than non-caregivers (OR = 1.09, 95%CI = 1.05-1.13) whereas women reported better overall health.

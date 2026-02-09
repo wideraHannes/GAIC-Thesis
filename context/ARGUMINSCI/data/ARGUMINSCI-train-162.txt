@@ -1,0 +1,2 @@
+In addition to character poses created by 3D artists, we also wish to efficiently render deformation behaviour computed using physically-based and reality-based deformable models.
+Such models have been widely used

@@ -1,0 +1,3 @@
+As a result, they must use coarse-to-fine iterations of their dynamic programming algorithm to gain the temporal consistency that is intrinsic to our segment-based approach.
+Other related methods based on motion capture clip rearrangement include work by Kovar et al. 
+[ KGP02 ], Lee et al. [ LCR ∗ 02 ], and Arikan and Forsyth

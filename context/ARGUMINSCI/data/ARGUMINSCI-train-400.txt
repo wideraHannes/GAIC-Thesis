@@ -1,0 +1,2 @@
+As a matter of simulation accuracy, both Midpoint and Runge-Kutta seem to preserve accuracy correctly within their range of numerical stability.
+While the implicit Euler method seems stable for any K value, its accuracy is however very degraded by high K values and reduced numbers of Conjugate Gradient iterations.

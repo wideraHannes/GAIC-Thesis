@@ -1,0 +1,2 @@
+We also need to be able to direct characters who can perform multiple actions, rather than those who are only capable of walking around.
+This paper presents a method for synthesizing streams of motions based on a corpus of captured movement while preserving the quality of the original data.

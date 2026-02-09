@@ -1,0 +1,2 @@
+Figure d) shows our EigenSkin hand example being animated using a CyberGlove.
+The hand model shown here consists of 55,904 triangles and is drawn using display lists with a GeForce3 vertex program.

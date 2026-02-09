@@ -1,0 +1,2 @@
+Smoothed standardized mortality ratios (SMRs) for suicide for each neighborhood were also estimated and their association with neighborhood characteristics was investigated using the Bayesian hierarchical spatial model.
+The pattern of suicide rate was different among men and women; men showed higher standardized mortality rates.

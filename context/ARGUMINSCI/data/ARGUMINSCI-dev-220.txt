@@ -1,0 +1,2 @@
+This means that, for each pair of nodes in the graph, there is a matrix representing the weights of edges between the nodes.
+The i, j’th entry in this matrix represents the weight for a cut from the i’th frame in the first sequence to the j’th frame in the second sequence.

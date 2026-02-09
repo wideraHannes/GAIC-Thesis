@@ -1,0 +1,2 @@
+Matrices F j are computed in a similar way as the absolute matrices, but including the actual rotation of each joint in the chain (we do not consider translating and scaling joints).
+The most simple skin deformation algorithm computes v = F j A −1 j v where v is a vertex in the reference skin associated with joint j and v is its position in the deformed mesh.

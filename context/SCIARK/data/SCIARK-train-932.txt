@@ -1,0 +1,2 @@
+However, this indicator treats capital goods as final products rather than part of the production process.
+In this paper, we introduce the capital-augmented material footprint (CAMF), a new indicator of material use that includes all the materials embedded in capital goods.

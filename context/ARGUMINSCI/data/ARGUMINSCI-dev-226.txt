@@ -1,0 +1,4 @@
+This model divides the scene into parallelepiped cells.
+There are two common approaches to discretising the continuous velocity field defined in space: one can either choose the midpoint of a cell 
+[Sta99] or its six faces 
+[FM96] to define the field.

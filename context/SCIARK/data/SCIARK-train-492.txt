@@ -1,0 +1,2 @@
+Using datasets of observed climatology and simulated fields according to a global warming scenario, IS92a (CO-AGCM developed by CCSR/NIES) as boundary conditions for our ecosystem model, we conducted present-day and global warming experiments and compared their results.
+Model results in the global warming experiment show increases in vertical stratification due to rising temperatures.

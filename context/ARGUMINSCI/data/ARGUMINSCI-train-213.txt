@@ -1,0 +1,6 @@
+Pre-simulated sequences obtained by the cloth simulator of Volino et al 
+[21] were used in our preprocessing.
+        
+          <H2>7.1.
+Variety of clothes</H2>
+          We used our framework to different types of clothes, as shown on the demonstration video. • The “evening” dress ( Figure 14 ) is chosen to demonstrate our wrinkle interpolator on large garment regions. • The “cocktail” dress ( Figure 18 ) is a relatively complex model; the bottom is composed of two layers of tissues and has folds made of large number of vertices, inducing many self collisions.

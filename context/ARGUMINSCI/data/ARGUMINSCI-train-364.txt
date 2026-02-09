@@ -1,0 +1,2 @@
+The dependence between joints that have not been embedded can be ignored to obtain a lower bound on f .
+More precisely, f can be written as: r r f (v 1 , . . . , v r ) = X f i (v i , v p R (i) ) + X f D (v 1 , . . . , v i ). i=2 i=2 A lower bound when the first k joints are embedded is then: k k X f i (v i , v p R (i) ) + X f D (v 1 , . . . , v i ) + i=2 i=2 + X min f i (v i , v p R (i) ) v i ∈V

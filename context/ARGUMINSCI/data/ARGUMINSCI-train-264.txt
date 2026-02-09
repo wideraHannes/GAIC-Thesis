@@ -1,0 +1,2 @@
+The 3D location of a region is determined by intersecting rays through the corresponding observations in the image set ( figure 4 ).
+Reconstruction is done independently on a frame by frame basis and the resulting data is smoothed and interpolated.

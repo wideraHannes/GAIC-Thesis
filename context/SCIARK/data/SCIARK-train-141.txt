@@ -1,0 +1,2 @@
+As well as describing the background to the work and the design of the new software, this thesis describes validation studies that were carried out to verify the accuracy of the results produced by the package.
+A simulation-based case study was also carried out to demonstrate the features offered by the new platform in which a smart domestic energy control system including photovoltaic generation, hot water storage and battery storage was developed.

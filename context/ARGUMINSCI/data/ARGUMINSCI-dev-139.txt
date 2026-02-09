@@ -1,0 +1,8 @@
+For the cloth toss sequence, we chose the simpler approach: iteratively refine the entire sequence.
+          solution ?
+MeshIK
+        
+        
+          <H2>5.3 Smoothing</H2>
+          We introduce flexibility preserving smoothing – a method similar to anisotropic diffusion 
+[Perona and Malik 1990] that smoothes near-rigid movement without effecting flexible deformation.

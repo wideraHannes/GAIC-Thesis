@@ -1,0 +1,2 @@
+More specifically, each of the u m F , u m L , and u m θ laws have one, two, and three parameters, respectively.
+There are 56 parameters in total (30 stance, 26 swing) for the MTU control laws.

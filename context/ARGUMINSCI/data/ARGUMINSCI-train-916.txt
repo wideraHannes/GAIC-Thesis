@@ -1,0 +1,2 @@
+Our cloth was printed by a digital mail order fabric printing service.
+On a P4 2.4 GHz machine, acquisition takes roughly 6 minutes and mesh processing 2 minutes per frame.

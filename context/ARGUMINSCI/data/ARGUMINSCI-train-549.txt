@@ -1,0 +1,2 @@
+Real time simulation of elastokinematic models.
+In ICRA2002: IEEE International Conference on Robotics and Automation.

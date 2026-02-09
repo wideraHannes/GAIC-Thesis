@@ -1,0 +1,3 @@
+Following Wang et al. [2010]
+, the target features for the ankle and hip joints in the coronal plane are the global foot and pelvis orientations, respectively.
+The coronal swing hip target angles follow the same feedback law as θ h .

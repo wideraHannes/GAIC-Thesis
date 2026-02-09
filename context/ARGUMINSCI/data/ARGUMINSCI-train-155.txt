@@ -1,0 +1,2 @@
+We tried a simpler solution: when intersections occurred, rather than wait for a scheduled constraint or a penalty force to eliminate the intersection, we simply altered the positions of the cloth particles, effecting an instantaneous (and discontinuous) change in position.
+While this would be problematic when using a multi-step differential equation solver which expects continuity (such as a RungeKutta method), it should not interfere with a one-step solver such as the backward Euler method.

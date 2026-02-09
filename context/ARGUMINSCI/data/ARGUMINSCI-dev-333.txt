@@ -1,0 +1,2 @@
+The stability properties of the CIR scheme are excellent.
+Each new value φ(x, t n+1 ) is a single interpolated value of φ at time t n , so unconditional stability is guaranteed in any norm where the interpolation does not increase norms.

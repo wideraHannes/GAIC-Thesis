@@ -1,0 +1,2 @@
+Note that our results show the lowest average standard score for all speeds.
+Evaluation of objective.

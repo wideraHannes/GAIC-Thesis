@@ -1,0 +1,2 @@
+The magnitudes are determined by the tension measurements, and the directions are determined by the observed directions of the cords.
+Note that the actuator positions themselves are not part of the output, since they are superseded by the displacements measured at the clips.

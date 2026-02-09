@@ -1,0 +1,4 @@
+Then
+        the matrix T (7) can be interpreted as a transformation from K to the world coordinate system.
+By analogy, the inverse matrix T −1 = 0 I T −r 1 c
+        represents the transformation from the world coordinate system to K.

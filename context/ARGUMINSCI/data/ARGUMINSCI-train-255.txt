@@ -1,0 +1,2 @@
+Much of the cloth is in contact with the floor and unobservable – yielding fewer bits of strain.
+In addition, the camera images were not output in a linear color space, reducing the number of color bits.

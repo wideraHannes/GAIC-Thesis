@@ -1,0 +1,2 @@
+Imagine, for example, creating a transition between a run and a backflip.
+In real life this would require several seconds for an athlete to perform, and the transition motion looks little like the motions it connects.

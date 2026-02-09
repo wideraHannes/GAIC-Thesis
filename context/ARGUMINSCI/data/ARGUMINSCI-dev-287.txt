@@ -1,0 +1,2 @@
+Velocity advection transports the velocity field along the velocity itself.
+This step is always needed in nonsteady flow simulation based on Navier-Stokes equation.

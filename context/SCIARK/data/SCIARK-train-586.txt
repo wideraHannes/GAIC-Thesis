@@ -1,0 +1,3 @@
+Title:Climate-driven polar motion: 2003-2015
+Abstract: Earth's spin axis has been wandering along the Greenwich meridian since about 2000, representing a 75° eastward shift from its long-term drift direction.
+The past 115 years have seen unequivocal evidence for a quasi-decadal periodicity, and these motions persist throughout the recent record of pole position, in spite of the new drift direction.

@@ -1,0 +1,2 @@
+While the shear and bend force stiffness coefficients depend on the material being simulated, the stretch coefficient is essentially the same (large) value for all simulations. (Of course, if stretchy cloth is specifically called for, the stretch coefficient can be made smaller.) Complementing the above three internal forces are three damping forces.
+In section 5, we formulate damping forces that subdue any oscillations having to do with, respectively, stretching, shearing, and bending motions of the cloth.

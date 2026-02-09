@@ -1,0 +1,2 @@
+Satya Nadella: Thanks for the question.
+So the decision logic was driven primarily by what I would say is the increased competitiveness of SQL Server.

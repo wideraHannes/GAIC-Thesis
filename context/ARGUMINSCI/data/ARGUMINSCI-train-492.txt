@@ -1,0 +1,4 @@
+The likelihood that it will take a step in a direction that is not locally optimal is a function of the temperature ( Fig. 5 ).
+We chose to use the continuous simulated annealing method presented in Press et al. 
+28
+ , which combines the Metropolis algorithm with the downhill simplex method for continuous n-variable optimization.

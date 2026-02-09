@@ -1,0 +1,2 @@
+After t is processed, they are discarded.
+In this step, positions and velocities are interpolated from the triangle nodes for each boundary particle.

@@ -1,0 +1,2 @@
+Transitions are clips designed such that they can seamlessly connect two segments of original data.
+By introducing nodes within the initial clips and inserting transition clips between otherwise disconnected nodes, we can create a wellconnected structure with a wide range of possible graph walks (see Figure 2 ).

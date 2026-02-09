@@ -1,0 +1,7 @@
+The algorithm can then populate the dynamic space of motions by simple interpolation, effectively parameterizing the space of realistic motions.
+We show how this framework can be used to produce an effective interface for rapid creation of dynamic animations, as well as to drive the dynamic motion of a character in real-time.</Abstract>
+	Categories and Subject Descriptors (according to ACM CCS) : I.3.7 [Computer Graphics]: Three-Dimensional Graphics and Realism-Animation  
+    
+    
+      
+        <H1>1.

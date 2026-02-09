@@ -1,0 +1,2 @@
+Animation of humanlike characters: Dynamic motion ltering with a physically plausible contact model.
+In Yale Workshop on Adaptive and Learning Systems.

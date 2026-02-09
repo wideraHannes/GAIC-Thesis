@@ -1,0 +1,4 @@
+Motion editing and optimization</H2>
+        In this section we discuss the process of editing motions using our system.
+As in [LP02]
+ we model motion as an optimal dynamic process with a set of realistic constraints.

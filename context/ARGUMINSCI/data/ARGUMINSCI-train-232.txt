@@ -1,0 +1,2 @@
+Typical temporal smoothing is dangerous because fast non-rigid movements can easily become physically implausible when blurred over time.
+However, because fast non-rigid regions of the cloth are complex, small temporal errors are often difficult to notice.

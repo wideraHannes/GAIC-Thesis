@@ -1,0 +1,2 @@
+In many cases, it's Dynamics 365.
+Any IoT project on Azure leads to a Dynamics field service project in most instances.

@@ -1,0 +1,6 @@
+Limiting the amount of stretch also has the practical benefit of reducing the search space of our general algorithm, which we will now describe.
+        c The Eurographics Association 2004.
+Hsu, Gentry, and Popović / Example-Based Control of Human Motion
+        1 2 3 4 5 1 3 4 1 5 4
+        
+          Figure 3: A good interpretation may not account for the continuity of the target (middle).

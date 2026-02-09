@@ -1,0 +1,2 @@
+For simplicity of the discussion, we consider only two wrinkle patterns, though the methodology is developed for multiple patterns.
+The wrinkle patterns chosen are orthogonal to each other as shown in Figure 8 .

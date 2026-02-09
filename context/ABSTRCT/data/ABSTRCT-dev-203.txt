@@ -1,0 +1,2 @@
+Mean depression scores fell from 6.7 to 3.6 in the intervention group, compared with 6.1 to 5.4 in the control group [F((1,83)) = 14.7, P < 0.05].
+A similar change was seen for mean anxiety scores: intervention 11.1 to 8.2, control 9.6 to 9.3 [F((1,84)) = 17.8, P < 0.05].

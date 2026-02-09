@@ -1,0 +1,2 @@
+Considering the strengths of the stochastic frontier approach and the features of grain production, an integrated WF-SFA method combining water footprint assessment and the stochastic frontier approach is proposed in this work.
+In the method, the green, blue and grey water footprints of grain production are calculated.

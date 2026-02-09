@@ -1,0 +1,2 @@
+Brian T.
+Olsavsky: And on your AWS footprint question, so we ended the quarter with 33 Availability Zones in 12 geographic regions, and we have five – 11 more Availability Zones opening in the next year.

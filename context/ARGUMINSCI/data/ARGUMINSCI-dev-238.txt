@@ -1,0 +1,3 @@
+Runtime computations</H2>
+          The real-time computation of global cloth movements is obtained with a mass-spring system together with the collision response and post-correction described above.
+The runtime computation of the coarse mesh is obtained in the following order: • Mass-spring computation ( Figure 6 ) • Post-correction ( Figure 9 ) • Collision response on hulls ( Figure 11 ) • Collision response on floating garments ( Figure 12 ) Note that the collision response on floating garments comes last to ensure collision avoidance between cloth and body.

@@ -1,0 +1,2 @@
+Mullen et al. [MMTD07] modify it to conserve mass by summing up the mass change due to this update across all cells.
+Then they distribute a fraction of the total mass change back to each cell based on a local area measure.

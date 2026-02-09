@@ -1,0 +1,6 @@
+These coordinates are computed to interpolate between observed displacements, as shown below.
+Note that Equation 2 provides a powerful model for shape deformation (see, in particular, 
+[James and Pai 2002a]).
+        
+        
+          <H2>2.4 Interpolating Eigendisplacement Coordinates</H2>

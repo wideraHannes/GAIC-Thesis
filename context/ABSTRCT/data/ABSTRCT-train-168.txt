@@ -1,0 +1,2 @@
+There was no evidence of a difference seen between groups for either activity (adjusted difference =-0.4, 95% confidence interval CI -1.0 to 0.2, p = 0.17) or profile scores (adjusted difference = -0.4, 95% CI -0.9 to 0.1, p = 0.13) using this trial design, although post hoc power calculations suggests that 65-175 would be needed per group to detect differences of this magnitude with sufficient precision.
+Clinically relevant improvements in symptoms and mood disturbance were seen for both groups over the study period.

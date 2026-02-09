@@ -1,0 +1,4 @@
+Using thermodynamics to improve the resource efficiency indicator GDP/DMC
+Abstract
+This paper analyzes the drawbacks of using the lead indicator Gross Domestic Product divided by Domestic Material Consumption (GDP/DMC) proposed by the European Commission as part of the Resource Efficiency Roadmap.
+As an alternative, we propose to assess mineral resource efficiency through exergy replacement costs instead of using mass terms.

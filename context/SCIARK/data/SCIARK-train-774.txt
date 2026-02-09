@@ -1,0 +1,2 @@
+The granular samples are also carefully characterized by optical and SEM techniques in order to link these scattering variations with the grains’ physical properties.
+Results show that the scattering properties are wavelength-dependent and can vary significantly over the VIS–NIR spectral range.

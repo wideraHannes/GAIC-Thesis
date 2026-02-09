@@ -1,0 +1,12 @@
+Figure 6: Arbitrary poses deformed by WPSD on GPU
+        
+      
+      
+        <H1>Acknowledgments</H1>
+        This research has been funded by the Integrated Media System Center/USC, and Samsung Electronics.
+We wish to thank KyungKook Park, Changki Min, and Tim Foley for discussions about GPUs, and the anonymous reviewers for their sincere comments.
+      
+      
+        <H1>References</H1>
+                
+          [ACP02] ALLEN B., CURLESS B., POPOVI  ́ c; Z.: Articulated body deformation from range scan data.

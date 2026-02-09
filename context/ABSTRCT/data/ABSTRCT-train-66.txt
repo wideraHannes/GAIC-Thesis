@@ -1,0 +1,2 @@
+Overall survival for vandetanib was 10.6 versus 11.9 months for placebo (HR, 1.43; 80% CI, 1.00 to 2.05; one-sided P = 0.9).
+In planned subgroup analyses, a significant interaction was noted (P = .01): limited-stage vandetanib patients had longer overall survival (HR, 0.45; one-sided P = .07) and extensive-stage vandetanib patients shorter survival compared with placebo (HR, 2.27; one-sided P = .996).

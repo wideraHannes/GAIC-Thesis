@@ -1,0 +1,2 @@
+Rendering, texture mapping, and a variety of other applications are all very straightforward.
+Second, we have an implicit representation.

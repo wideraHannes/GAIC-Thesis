@@ -1,0 +1,5 @@
+In this section, we will describe the concept of dynamic morph targets, and explain how they can be used to simulate a pose-dependent elastic model that is fast enough for real-time applications.
+        
+          <H2>3.1 Dynamic Morph Targets</H2>
+          Dynamic morph targets define pose-specific soft skin behavior.
+More formally, they are pairs of elastic models E i and poses s i , i.e. pairs {E i , s i } of elastic models in pose space.

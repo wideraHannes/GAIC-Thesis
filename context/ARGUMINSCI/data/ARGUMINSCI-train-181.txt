@@ -1,0 +1,3 @@
+A more involved approach would be automatically building a tetrahedral mesh around the embedded skeleton and applying the dynamic deformation method of 
+Capell et al. [2002].
+Combining retargetting with joint limits should eliminate some artifacts in the motion.

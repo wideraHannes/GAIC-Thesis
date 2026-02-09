@@ -1,0 +1,2 @@
+Synthesis of complex dynamic character motion from simple animations.
+In ACM Transactions on Graphics.

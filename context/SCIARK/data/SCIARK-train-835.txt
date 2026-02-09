@@ -1,0 +1,2 @@
+This score is shown to take a particularly simple form in the context of CTCs and to quantify the resolution of a climate variable by the classifications.
+The sampling uncertainty of the skill can be estimated by means of nonparametric bootstrap resampling.

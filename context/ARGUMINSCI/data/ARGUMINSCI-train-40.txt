@@ -1,0 +1,2 @@
+Our implementation, described in [ VOL 00 ] does not explicitly construct the matrix of the system to be resolved by the Conjugate Gradient, but computes “on the fly” the product of this matrix with vectors when needed by the Conjugate Gradient algorithm.
+This gives a very efficient implementation when using a low number of Conjugate Gradient iterations (no heavy preprocessing for building the matrix), which is often sufficient for most applications.

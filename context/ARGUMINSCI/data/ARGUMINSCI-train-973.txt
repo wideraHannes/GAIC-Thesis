@@ -1,0 +1,9 @@
+Finally we present results and applications of our technique.
+      ∗ {amohr, gleicher}@cs.wisc.edu , http://www.cs.wisc.edu/graphics
+      ∗
+      1
+      To appear at SIGGRAPH 2003
+      
+        <H2>1.1 System Overview</H2>
+        Building a skin with our system involves two major steps.
+We begin with a character rigged in an animation package such as Maya.

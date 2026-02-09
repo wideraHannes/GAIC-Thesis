@@ -1,0 +1,2 @@
+The model with seven correlated factors fit the data well, although the varying degrees of inter-factor correlations suggested grouping of similar factors.
+The hierarchical measurement structure, with seven first-order factors organized under two second-order factors of physical health and mental health functioning, demonstrated a good fit with the data (χ2(367) = 694.05, p < 0.001; root mean square error of approximation = 0.05; comparative fit index = 0.95) and a meaningful pattern.

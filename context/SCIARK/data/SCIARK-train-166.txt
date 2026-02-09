@@ -1,0 +1,2 @@
+Electrical and thermal loads for Vail’s mountain operations were used to analyze three DG technologies; combined heat and power (CHP), photovoltaics (PV), and horizontal axis wind turbines.
+Technologies were chosen based on a resource assessment as well as input from site managers and analyzed using the Hybrid Optimization Model for Electric Renewables (HOMER).

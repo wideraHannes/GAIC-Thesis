@@ -1,0 +1,2 @@
+One of the main findings is that emissions control may prevent the “strong” tail-effect from arising, at least under some conditions such as bounded temperature increases, low risk aversion, low damage costs, and bounded utility function.
+More specifically, the fat-tailed risk with respect to a climate parameter does not necessarily lead to an unbounded carbon tax.

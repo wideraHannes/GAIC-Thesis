@@ -1,0 +1,5 @@
+Thus, regardless of simulation size, we treat all forces as part of the implicit formulation.
+Even for extremely stiff systems, numerical stability has not been an issue for our simulator.
+      
+        <H2>1.1 Specific Contributions</H2>
+        Much of the performance of our system stems from the development of an implicit integration formulation that handles contact and geometric constraints in a direct fashion.

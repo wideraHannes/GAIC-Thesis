@@ -1,0 +1,2 @@
+Climate controls on the terrestrial water balance: Influence of aridity on the basin characteristics parameter in the Budyko framework
+Abstract: The terrestrial water balance can be represented by the ratio of evapotranspiration to precipitation, which is expressed as a function of the aridity index (ϕ) and the basin characteristics parameter (n) in the Budyko framework.

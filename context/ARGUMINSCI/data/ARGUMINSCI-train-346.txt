@@ -1,0 +1,3 @@
+Draping Speed</H2>
+        Draping is another context of simulation, where only the final static equilibrium state of the mechanical system is to be computed.
+Here, the interest is to converge to the equilibrium state as quickly as possible, with minimum computation charge.

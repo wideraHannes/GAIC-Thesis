@@ -1,0 +1,4 @@
+However, this method appears to be prohibitively expensive for something which must run at every timestep.
+Yet another alternative is marching triangles 
+[Hilton et al. 1996]
+, which takes a surface-based rather than volume-based approach to contouring.

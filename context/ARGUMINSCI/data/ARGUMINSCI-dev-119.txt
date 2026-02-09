@@ -1,0 +1,2 @@
+Calculation times are given for simulation time steps.
+Simulation time steps and simulation time between final frames are roughly equal, for comparison purposes, using the following logic: According to equation 15, if a Mach number of 0.4 is used and the largest possible stable time step is used, then the fluid speed will travel the distance of about one grid point per time step.

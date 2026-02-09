@@ -1,0 +1,2 @@
+We have PaaS services in infrastructure like EMS that have SaaS-like margins, and then of course we have SaaS services in Office 365.
+So I think the mix of our gross, or rather that mix will define our long-term gross margin and operating margin for our cloud services.

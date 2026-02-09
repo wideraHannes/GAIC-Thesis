@@ -1,0 +1,2 @@
+Such conditions tend to define square regions within the space defined by the parameters involved.
+Despite their simple form, such pre-conditions can generally work well as is demonstrated by the intricacy of the animation produced.

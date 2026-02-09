@@ -1,0 +1,2 @@
+The algorithm introduced in the subsequent sections removes the need for such layered fix-it approaches and permits direct specification of the desired deformations.
+Figure 3: The forearm in the ‘twist’ pose, as in turning a door handle, computed by SSD.

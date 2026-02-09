@@ -1,0 +1,2 @@
+For this purpose, first, the relationship between CH4 concentration and environmental variables such as land surface temperature (LST), normalized difference vegetation index (NDVI), air temperature, and humidity was determined.
+The results showed that CH4 concentration changes gradually with latitude and longitude across Iran.

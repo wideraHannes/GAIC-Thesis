@@ -1,0 +1,2 @@
+As recorded in Figure 3 , the first iteration of the fast projection method eliminates first-order error.
+The remaining iterations perturb F only to higher-order (often decreasing the error further).

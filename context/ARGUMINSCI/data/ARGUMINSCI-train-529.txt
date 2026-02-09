@@ -1,0 +1,2 @@
+The cloth sample starts flat on a table and we capture the rest pose without applied tensile forces.
+This initial frame serves to compute the geometry of the cloth without any occlusion from clips.

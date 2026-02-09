@@ -1,0 +1,2 @@
+A dynamic solution to the inverse kinematic problem for redundant manipulators.
+In Proceedings of the 1987 IEEE International Conference on Robotics and Automation, pages 1081–1087.

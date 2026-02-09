@@ -1,0 +1,2 @@
+Decoupling the timesteps of the fluid simulator and surface tracker, so that the surface tracker runs only once per frame, is an interesting area of future work.
+In Figure 10 we show the behavior when a thick viscoelastic fluid is allowed to flow off a shelf into a basin.

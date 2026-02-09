@@ -1,0 +1,2 @@
+Instead of filling in missing data, motion editing must solve the converse problem of preserving the original data while still satisfying animator-imposed constraints.
+There is no need for keyframing of any kind because the motion already starts in a good initial state.

@@ -1,0 +1,2 @@
+They provide empirical evidence from commodity futures to indicate the existence of significant mean-reversion together with high peak and fat tails for the distribution of spread residuals.
+In consequence, they use an Ornstein–Uhlenbeck process with the noise term driven by a Levy process with generalized hyperbolic distributed marginals.

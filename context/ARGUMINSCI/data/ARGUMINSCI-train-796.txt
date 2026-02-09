@@ -1,0 +1,4 @@
+We, therefore, evaluate how the database influences the final motion and how increasing or decreasing the number of user-defined constraints influences the final animation.
+We also compare alternative techniques for generating animation from user-defined constraints such as linear interpolation, trajectory-based inverse kinematics, and inverse kinematics in a PCA subspace.
+      
+        <H1>2 Background</H1>

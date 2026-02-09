@@ -1,0 +1,2 @@
+The main difficulty is defining a fold function that can simulate all kinds of wrinkle patterns.
+Moreover, determining the location and shape of wrinkles is left to CG artists.

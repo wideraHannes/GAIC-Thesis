@@ -1,0 +1,2 @@
+Finally, correct constraint-release behavior between cloth and solid objects is difficult to achieve using a reduced coordinate formulation.
+Considering all of this, we immediately rejected this method of constraints.

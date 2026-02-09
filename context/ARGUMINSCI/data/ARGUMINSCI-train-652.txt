@@ -1,0 +1,2 @@
+Essentially, we are having trouble because we are resampling the surface at every timestep.
+However, if we know something about the property we are tracking, we may be able to “clean up” the blurred signal.

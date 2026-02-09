@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Document xmlns:gate="http://www.gate.ac.uk" name="A35_C05_Comparing_Efficiency_of_Integration_Methods_for_Cloth_Simulation_CITATION_PURPOSE_M_v1.xml">
+
+
+  
+    e79cad0be8cbaa83cdd2505dfac81c0aa8006deb94e7d79b107c7f822f0bd2f1
+    3wy0
+    http://dx.doi.org/10.1109/cgi.2001.934683
+  
+  
+    
+      
+        <Title>Comparing Efficiency of Integration Methods for Cloth Simulation</Title>
+      
+      
+        
+          Pascal VOLINO
+        
+        
+          Nadia MAGNENAT-THALMANN MIRALab
+        
+        
+          C.U.I.
+University of Geneva CH
+        
+        
+          Switzerland
+        
+      
+      Web:

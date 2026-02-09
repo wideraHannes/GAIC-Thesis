@@ -1,0 +1,2 @@
+Note that for p i that are not inside of the liquid, we set w i = 0.
+In line with the traditional ghost fluid method, we define p G uniquely for each tetrahedron.

@@ -1,0 +1,2 @@
+The sequence for the 3D skeleton model presented in Fig. 1 involves controllers whose pre-conditions are provided analytically by the designer.
+Such conditions tend to define square regions within the space defined by the parameters involved.

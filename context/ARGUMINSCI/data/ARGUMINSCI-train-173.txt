@@ -1,0 +1,2 @@
+In the experiment shown in Fig. 10 , we turned on fracture of the Finite Element mesh.
+Now, the vessel is torn open when the elastic stresses caused by blood pressure exceed the material threshold.

@@ -1,0 +1,3 @@
+One example is the squared distance between the position of the constraint and the actual position of the body at the time of the constraint.
+Example soft constraints include:
+          1.

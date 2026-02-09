@@ -1,0 +1,2 @@
+For instance, in the following example of fleece waving, we choose the parameters from experiment 2.
+Error: Exp 1 Error: Exp 2 Total Error Pars: Exp 1 4257.2 10913.5 15170.7 Pars: Exp 2 4566.2 7144.3 11710.5 This approach seems to produce plausible results with skirts and other validation experiments.

@@ -1,0 +1,2 @@
+Physical parameter modifications reduce the Southern Ocean cloud phase and shortwave radiation biases in CAM5 and illustrate the power of the CALIPSO observations as an observational constraint.
+The results also highlight the importance of using a regime-based, as opposed to a geographic-based, model evaluation approach.

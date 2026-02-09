@@ -1,0 +1,2 @@
+We also use Granger causality based on the bootstrap ARDL approach to identify causal relationships between variables.
+Empirical analysis results show only a few cointegration relationships between variables exist.

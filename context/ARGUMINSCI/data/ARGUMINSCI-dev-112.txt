@@ -1,0 +1,7 @@
+Node 4 is a sink and 5 is a dead end.
+        
+      
+      
+        <H2>3.4 Pruning The Graph</H2>
+        In its current state there are no guarantees that the graph can synthesize motion indefinitely, since there may be nodes (called dead ends) that are not part of any cycle (see Figure 4 ).
+Once such a node is entered there is a bound on how much additional motion can be generated.

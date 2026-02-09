@@ -1,0 +1,2 @@
+Moreover, jerky motion is prevented since the next configuration is dependent on the previous configuration in inverse rate control.
+As will be shown in later experiments, the high frequency details of the original motion, which carries important characteristics of the motion, are also well preserved by our algorithm.

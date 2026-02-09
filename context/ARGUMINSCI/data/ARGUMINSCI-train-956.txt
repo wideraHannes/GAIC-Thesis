@@ -1,0 +1,2 @@
+For examples including external forces (such as buoyancy or moving obstacles), the cost of projecting the forces on to the basis is noted.
+This cost is proportional to the mesh resolution and the number of basis fields.

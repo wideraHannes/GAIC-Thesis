@@ -1,0 +1,2 @@
+Eligible patients who had previously completed four cycles of platinum-based chemotherapy were randomised 1:1 to receive erlotinib 150 mg/day or placebo until disease progression, unacceptable toxicity or death.
+Patient HRQoL was assessed using the Functional Assessment of Cancer Therapy-Lung questionnaire, in terms of time to symptom progression (TSP), time to deterioration (TTD) in Trial Outcome Index (TOI) and TTD.

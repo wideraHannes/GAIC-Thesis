@@ -1,0 +1,2 @@
+There were significant predictors for the mean effect on c-IMT z-score.
+In a full-model logistic regression, significant risk factors for an increase in IMT of ≥1.5 z-scores were carotid-femoral PWV (odds ratio: 1.119, confidence interval: 1.018, 1.230, p = 0.020 < 0.05) at first measurement.

@@ -1,0 +1,3 @@
+Gupta and Narasimhan represented fluid velocity in a basis of Legendre polynomials allowing analytic evaluation of differential operators 
+[Gupta and Narasimhan 2007].
+However, only boxboundary conditions were considered and the velocity basis fields are not strictly divergence free hence requiring a pressure projection step to enforce incompressibility.

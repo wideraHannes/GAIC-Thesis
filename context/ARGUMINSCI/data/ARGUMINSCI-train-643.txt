@@ -1,0 +1,2 @@
+As shown in Figure 7 , the eigendisplacement approximations of the hand model produce a clear improvement over the traditional SSD algorithm.
+Even with only five leading eigendisplacements, the EigenSkin approximation is essentially indistinguishable from the original FEM model.

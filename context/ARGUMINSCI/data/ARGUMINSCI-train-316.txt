@@ -1,0 +1,2 @@
+For bending, no forces are available, and we evaluate the position residual as well as profiles of sample curves orthogonal to the support plane.
+The fitting residual is similar for all fabrics, but distinctly higher for the Springs model.

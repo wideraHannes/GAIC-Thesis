@@ -1,0 +1,2 @@
+Section 5 discusses how our OMR can be used to reduce measurement errors in restoring captured motion.
+Section 6 shows the results obtained by our technique, and finally the conclusion follows.

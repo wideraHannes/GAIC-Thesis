@@ -1,0 +1,9 @@
+The remaining iterations perturb F only to higher-order (often decreasing the error further).
+        -4 3.5 x 10 error 2.5 after after last first iteration iteration F vertex 1.5 per 0.5 0.0 0 0.2 0.4 0.6 0.8 1 simulation time
+        
+          Figure 3: Effect of fast projection on the residual.
+Using the ballet dancer sequence, at each timestep (horizontal axis) we measured the residual, F (vertical axis), after the first and last iterations of fast projection (dashed-red and solid-blue curves, respectively).
+        
+        2 10 40 Fast Projection Implicit Spring (seconds) (seconds) 30 1 10 20 time time 10 0 10 0 10 1 10 0 10 -1 20 40 60 80 allowed strain (%) number of vertices (a) (b)
+        
+          Figure 4: Performance of fast projection vs. implicit springs.

@@ -1,0 +1,9 @@
+It then transfers a motion to the character using online motion retargetting 
+[Choi and Ko 2000] to eliminate footskate by constraining the feet trajectories of the character to the feet trajectories of the given motion.
+      1
+      To appear in the ACM SIGGRAPH conference proceedings
+      
+        <H1>2 Related Work</H1>
+        Character Animation Most prior research in character animation, especially in 3D, has focused on professional animators; very little work is targeted at novice users.
+Recent exceptions include Motion Doodles 
+[Thorne et al. 2004] as well as the work of Igarashi et al. on spatial keyframing [2005b] and as-rigid-as-possible shape manipulation [2005a].

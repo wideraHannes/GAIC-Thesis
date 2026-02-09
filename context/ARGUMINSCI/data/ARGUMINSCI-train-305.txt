@@ -1,0 +1,2 @@
+Models for human motion must also meet a particularly high standard, given our familiarity with what the results should look like.
+Not surprisingly, a divide-and-conquer strategy is evident in most approaches, focusing efforts on reproducing particular motions in order to yield a tractable problem and to allow for comparative analysis.

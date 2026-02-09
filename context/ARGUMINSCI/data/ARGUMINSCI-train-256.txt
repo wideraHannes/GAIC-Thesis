@@ -1,0 +1,2 @@
+Far from the data the weights will be approximately the same, d(∞) ˆ = w ∞ d k /w ∞ 1 = d k /N , i.e. the interpolated surface converges to the average of the data values.
+A serious drawback for some applications is that the derivative of the surface is zero at the data points ( Figure 4 ).

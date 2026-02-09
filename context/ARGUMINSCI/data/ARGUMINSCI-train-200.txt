@@ -1,0 +1,4 @@
+Simulation 
+1–3
+ refers to the use of a mathematical model to automatically recreate the physical reality on computers.
+A simulation method lets the animator easily create certain effect which could be otherwise almost an impossible mission with manual manipulations.

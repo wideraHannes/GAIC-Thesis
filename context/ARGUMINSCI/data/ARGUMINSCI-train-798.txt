@@ -1,0 +1,2 @@
+We just apply the simplified SSD to v x r to obtain v I x p : v Inp x = (v 0x + d x ) cos θ − (v 0y + d y ) sin θ and v Inp y = (v 0x + d x ) sin θ + (v 0y + d y ) cos θ .
+Similarly, we compute the tangent of α I p : tan α I p = − v v Inp Inp x y − − v v SSD SSD x y = − d x sin θ + d y cos θ = − tan( β + θ ) d x cos θ

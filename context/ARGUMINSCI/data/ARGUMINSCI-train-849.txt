@@ -1,0 +1,2 @@
+Thus, regardless of simulation size, we treat all forces as part of the implicit formulation.
+Even for extremely stiff systems, numerical stability has not been an issue for our simulator.

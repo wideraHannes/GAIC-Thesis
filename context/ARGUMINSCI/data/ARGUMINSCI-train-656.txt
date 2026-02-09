@@ -1,0 +1,10 @@
+Let P(s i ) be a 3 × n matrix of positions of n joints for s i in torso coordinate frame.
+Equation 2 gives us the difference in joint position and body velocity.
+        
+          2
+          D s i ,t j = [(P(s i ) − P(t j )) (|T (s i )| − |T (t j )|) (|R(s i )| − |R(t j )|) ]
+        
+        We then define the normalizing matrices O and L in equation 3 and 4.
+        
+          3
+          O = max s,i (|D s T i ,s i D s

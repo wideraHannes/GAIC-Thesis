@@ -1,0 +1,2 @@
+A second, less obvious implication of the smaller linear system is that it effectively prevents artifacts known as locking.
+These artifacts are commonly observed in finite element methods for problems in elasticity.

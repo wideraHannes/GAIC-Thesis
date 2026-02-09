@@ -1,0 +1,2 @@
+If you think about the journey that the company has really been on for the last couple of years, it's moving from reactively dealing with issues that our community flags.
+Perhaps if someone sees some content that's problematic, they used to tell us about it and then we'd go look at it to now, increasingly, we're building AI systems and we have tens of thousands of people who are doing more proactive review of content that could be potentially problematic.

@@ -1,0 +1,9 @@
+More recently, 
+Agrachev et al. [2005]
+ used vorticity Laplacian eigenfunctions to prove theorems in the mathematical control literature.
+This paper was our inspiration for investigating a Laplacian eigenfunction representation of vorticity as a practical means of fluid simulation in computer graphics applications.
+        
+        
+          <H2>2.2 Computational Fluid Dynamics</H2>
+          In the 1950’s, Silberman presented a fluid simulation algorithm for the earth’s atmosphere in a basis of spherical harmonics, which are Laplacian eigenfunctions on the surface of a sphere 
+[Silberman 1954].

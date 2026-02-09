@@ -1,0 +1,2 @@
+The function is represented using a combination of particles and values defined on a second rectilinear grid.
+The particles and grid values evolve based on the motion of the fluid.

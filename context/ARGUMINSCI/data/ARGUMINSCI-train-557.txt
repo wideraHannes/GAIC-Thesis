@@ -1,0 +1,2 @@
+If we let n 1 and n 2 denote the unit normals of the two triangles and let e be a unit vector parallel to the common edge, the angle θ between the two faces is defined by the relations sin θ = (n 1 × n 2 ) · e and cos θ = n 1 · n 2 .
+We define a condition for bending by writing simply C(x) = θ which results in a force that counters bending. 5

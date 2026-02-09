@@ -1,0 +1,2 @@
+Thus, a nonzero velocity could be mistakenly assigned to cells lying inside an object.
+To avoid this situation, the path of the wind flow is checked for object intersection, whereby the collision detection of the cloth simulation system provides a simple method to deal with this issue [MKE03]. 4.2 Particle Tracing on Wind Fields Here we combine the idea of creating wind fields by predefined flow primitives with particle tracing in given flow fields.

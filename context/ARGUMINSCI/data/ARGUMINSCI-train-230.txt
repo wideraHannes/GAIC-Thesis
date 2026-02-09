@@ -1,0 +1,10 @@
+The force f arising from the energy acts only in the direction ∂C(x)/∂x, and so should the damping force.
+Additionally, the damping force should depend on the component of the system’s velocity in the ∂C(x)/∂x direction; in other words, the damping strength should depend on (∂C(x)/∂x) T x = C(x).  ̇ Putting this together, we propose that the damping force d associated with a condition C have the form
+        
+          11
+          d = −k d ∂C(x) ∂x C(x).  ̇
+        
+        ∂C(x) This neatly parallels the fact that f = −k s ∂x C(x).
+        47
+        SIGGRAPH 98, Orlando, July 19–24
+        C OMPUTER G RAPHICS Proceedings, Annual Conference Series, 1998

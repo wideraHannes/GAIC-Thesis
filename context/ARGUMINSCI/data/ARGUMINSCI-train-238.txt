@@ -1,0 +1,3 @@
+Example based motion synthesis draws on an analogy with texture synthesis where a new texture (or motion) that looks like an example texture (or motion example) needs to be synthesized 
+[Efros and Leung 1999; Heeger and Bergen 1995].
+Pullen and Bregler used this approach to create cyclic motions by sampling motion signals in a “signal pyramid” [2000].

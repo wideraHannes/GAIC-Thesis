@@ -1,0 +1,2 @@
+I couldn't be happier with it.
+The developer tools around ARKit and AR in general that I went through earlier, lots of interest there, lots of interest from the Watch App Store, to the Catalyst that will be released with macOS Catalina, which allows developers quickly to port a iOS app to the Mac.

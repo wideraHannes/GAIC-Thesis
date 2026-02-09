@@ -1,0 +1,2 @@
+Like similar motion clip rearrangement techniques, we can propagate constraints by example.
+In other words, each example instance can be annotated with constraints that can be transferred to the target motion.

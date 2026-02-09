@@ -1,0 +1,4 @@
+Introduction</H1>
+      
+      Authoring human motion is difficult for computer animators, as humans are exceptionally sensitive to the slightest of errors.
+This process involves an animator providing a control specification which is mapped to a target motion by some means.

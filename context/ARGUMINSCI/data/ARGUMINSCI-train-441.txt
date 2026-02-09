@@ -1,0 +1,2 @@
+In an IZ, we first check whether it has CCs from rigid bodies.
+In case we do not find any CCs from rigid bodies, the collisions in that IZ are categorized as cloth-cloth collisions.

@@ -1,0 +1,2 @@
+The developed framework was demonstrated through a case study conducted for an average multi-unit residential buildings (MURB) located in British Columbia, Canada.
+The results indicated that under the defined stakeholder priorities and constraints, ground source heat pumps and solar photovoltaics (PV) are the optimal energy choices for MURB, and the optimal energy system combination supplied 44% of the building's energy demand through RE.

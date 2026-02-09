@@ -1,0 +1,2 @@
+Unfortunately these methods still are subject, in complex regions, to a resolution limited by the voxel grid.
+Another approach is to work strictly on the triangle mesh itself, using “mesh surgery” for repairs.

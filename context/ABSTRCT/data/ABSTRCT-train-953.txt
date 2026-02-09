@@ -1,0 +1,2 @@
+The results were analyzed using a linear mixed-effects model.
+Toxicity of HDC has a strong negative impact on patients' QOL during the treatment phase.

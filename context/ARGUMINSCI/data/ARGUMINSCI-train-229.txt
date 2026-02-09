@@ -1,0 +1,2 @@
+An alternative is the semi-Lagrangian style integration, i.e., φ n+1 = φ n (x − w∆ τ ) + sgn( φ n )∆ τ , where x is the location of each grid point.
+Hence, φ n (x − w∆ τ ) is the φ value of previous location.

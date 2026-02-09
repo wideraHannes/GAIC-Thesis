@@ -1,0 +1,4 @@
+Procedural and physically based synthesis methods have been developed for a few activities such as walking 
+[Multon et al. 1999; Sun and Metaxas 2001] and running 
+[Hodgins et al. 1995; Bruderlin and Calvert 1996].
+While techniques such as these can generate flexible motion paths, the current range of movement styles is limited.

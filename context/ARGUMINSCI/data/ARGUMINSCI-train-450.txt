@@ -1,0 +1,7 @@
+Because MeshIK does not use velocity information, the resulting animation appears damped.
+        
+      
+      
+        <H1>7 Discussion</H1>
+        We have brought cloth capture from constrained laboratory examples to real settings by providing robust methods for dealing with occlusion and folding.
+Like human motion capture, this tool requires significant engineering effort.

@@ -1,0 +1,3 @@
+Jojic and Huang fit parameters of a particlebased cloth model to fit a range scan of real cloth in a static rest configuration, draped over a sphere 
+21 .
+More challenging still, they attacked the problem of measuring the 3D geometry of an object from the resting shape of a piece of cloth draped over it, a problem that we do not consider in this paper.

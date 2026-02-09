@@ -1,0 +1,2 @@
+We define the pose descriptor s ∈ R 6k , where k is the number of joints.
+Each joint contributes 6 components to s, namely the 6-dof representation of its parent-relative coordinate frame.

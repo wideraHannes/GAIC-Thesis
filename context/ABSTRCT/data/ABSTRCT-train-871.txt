@@ -1,0 +1,2 @@
+Outcome measures included the functional assessment of cancer therapy-general (FACT-G), linear analog self-assessment (LASA), and profile of mood states (POMS) at baseline and weeks 4, 27, and 52.
+Kruskal-Wallis was used to compare QOL scores.

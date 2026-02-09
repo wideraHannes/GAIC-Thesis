@@ -1,0 +1,2 @@
+The average performance ratio (PR) of the plant is 86.56% and corresponding capacity utilisation factor (CUF) is 20.12% with final yield of 1984.1 h.
+The performance parameters obtained through the software was found to be in close match with the measured values.

@@ -1,0 +1,2 @@
+Figure 8: Enforcing inextensibility using fast projection yields lively motion with detailed wrinkles and folds.
+Frames from ballet and runway sequences simulated using fast projection.

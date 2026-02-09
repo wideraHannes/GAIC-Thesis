@@ -1,0 +1,2 @@
+K. 2007.
+Construction and optimal search of interpolated motion graphs.

@@ -1,0 +1,2 @@
+Based on individual contributions tabulated in the Fifth Assessment Report of the Intergovernmental Panel on Climate Change, this estimate closes the twentieth-century sea-level budget.
+Our analysis, which combines tide gauge records with physics-based and model-derived geometries of the various contributing signals, also indicates that GMSL rose at a rate of 3.0 ± 0.7 millimetres per year between 1993 and 2010, consistent with prior estimates from tide gauge records.

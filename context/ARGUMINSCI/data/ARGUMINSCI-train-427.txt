@@ -1,0 +1,2 @@
+Balestrino et al [1], Tsai and Orin [15], and Sciavicco and Siciliano [14, 13] proposed the closed-loop inverse kinematics (CLIK) scheme based on Jacobian pseudoinverse.
+CLIK leads to zero steady state error which means that the error is exponentially convergent to zero for a fixed target position.

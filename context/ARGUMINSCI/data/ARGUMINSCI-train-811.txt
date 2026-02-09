@@ -1,0 +1,13 @@
+In most cases, one curve is sufficient.
+        
+      
+      
+        <H1>Curve Skeleton Motion Synthesis</H1>
+        
+          <H2>Representation</H2>
+          In our method, the parameter t on the curve plays an important role in the deformation.
+We use B-splines to represent the curve skeleton.
+        
+        
+          <H2>Local Frame Def|nition</H2>
+          Similar to the joint-based skeleton, each point on the curve in a curve skeleton has a local frame (similar to a Frenet frame) defining the space transformation sampled at that point.

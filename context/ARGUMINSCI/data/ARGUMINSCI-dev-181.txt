@@ -1,0 +1,4 @@
+Shearing is captured using an approximate picture-frame experiment 
+[Cul79]
+, where four long clips fix the cloth boundaries and shear stress is applied as the cords pull on opposite corners ( Figure 4 , 3rd column).
+To isolate bending deformation we slowly push the flat cloth sample off the edge of a table and measure its shape as it bends under its own weight ( Figure 4 , 4th column), for both weft and warp directions.

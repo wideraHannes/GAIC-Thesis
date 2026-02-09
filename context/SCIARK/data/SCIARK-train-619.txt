@@ -1,0 +1,2 @@
+To implement this system, it is crucial to have real-time information on vehicle positions, other public transit supply, traffic and environmental conditions.
+Therefore, a distributed sensor network monitoring the environment is a fundamental component of the project.

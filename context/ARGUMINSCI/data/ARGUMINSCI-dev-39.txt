@@ -1,0 +1,2 @@
+Given the enormous challenge of building controllers capable of large repertoires of dynamic human-like motion, it is inevitable that the work presented in this paper is incomplete in many ways.
+Published control methods for 3D walking, running, and stair climbing make obvious candidates for integration into our system.

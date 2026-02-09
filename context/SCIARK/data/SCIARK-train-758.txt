@@ -1,0 +1,3 @@
+Title: Urban Climate Map System for Dutch spatial planning
+Abstract: Facing climate change and global warming, outdoor climatic environment is an important consideration factor for planners and policy makers because improving it can greatly contribute to achieve citizen's thermal comfort and create a better urban living quality for adaptation.
+Thus, the climatic information must be assessed systematically and applied strategically into the planning process.

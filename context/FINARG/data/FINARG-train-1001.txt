@@ -1,0 +1,2 @@
+And given that, we want to have these leading indicators showing up in our dashboard not are static reports and Power BI is this rich canvas for us to be able to, one, visualize data as well as ask natural language questions.
+I look at my own usage of one note in Surface.

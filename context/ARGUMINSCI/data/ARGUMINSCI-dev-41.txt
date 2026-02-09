@@ -1,0 +1,2 @@
+We demonstrated the usability of our method in an interactive simulation environment with several scenes.
+A difficulty in connection with the interactive simulation of fluids is the extraction and rendering of a plausible fluid surface in real time.

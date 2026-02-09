@@ -1,0 +1,2 @@
+To pull the optimized solution away from these unstable regions, we include a pseudo balance objective.
+The objective we use attempts to minimize the squared distance between the COM, C(t) of model in the first time-step, t 0 , and last timestep, t f , of the initial and final ground stages of the motion.

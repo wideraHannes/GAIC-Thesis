@@ -1,0 +1,2 @@
+The 30 items in 15 subscales of the QLQ-C30 include global health status wherein higher scores (range, 0-100) indicate better HRQOL.
+This analysis included a protocol-specified time to definitive deterioration (TDD) analysis at a 5% decrease in HRQOL versus baseline, with no subsequent increase above this threshold.

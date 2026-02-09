@@ -1,0 +1,2 @@
+I think overall, what we're seeing is continued momentum, if you think about even our overall approach has been to have a view of an architecture that is grounded in our customers’ needs.
+So we always believe that in distributed computing, you need a cloud and an edge.

@@ -1,0 +1,2 @@
+E.: Marching cubes: A high resolution 3d surface construction algorithm. (August 1987), 163–169. 7 [LGF11] L M., G J.
+T., F R.: An unconditionally stable fully conservative semi-lagrangian method. (April 2011), 2857–2879. 2, 3, 4 [LR09] L B., R E.: Real-time fluid simulation using discrete sine/cosine transforms.

@@ -1,0 +1,2 @@
+In the case of our hand model, however, we only have approximately half a dozen pose perturbations for each joint degree of freedom (for a total of approximately 120 poses).
+This justifies our use of interpolation basis functions since the total cost of constructing and evaluating the RBF interpolant for half a dozen poses is negligible.

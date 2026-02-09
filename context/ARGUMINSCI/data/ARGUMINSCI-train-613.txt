@@ -1,0 +1,5 @@
+Because the fluid is incompressible, the velocity field within the fluid volume is subject to the constraint that
+          
+            2
+            T u =0 .
+This condition is enforced by adjusting the pressure field at each integration step.

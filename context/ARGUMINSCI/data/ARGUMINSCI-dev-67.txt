@@ -1,0 +1,3 @@
+The motion data can also be post processed to fix problems such as feet sliding on the ground or some constraints not being satisfied 
+[Gleicher 1998; Lee and Shin 1999; Popovic 1999; Rose et al. 1996].
+This usually involves optimization of a suitable displacement function on the motion signal.

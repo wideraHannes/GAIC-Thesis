@@ -1,0 +1,2 @@
+Particlebased simulation of fluids.
+Eurographics, 22(3):401–410, 2003.

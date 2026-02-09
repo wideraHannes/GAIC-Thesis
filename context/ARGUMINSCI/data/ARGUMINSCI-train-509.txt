@@ -1,0 +1,8 @@
+The Finite Element mesh fractures due to pressure forces in the blood stream.
+          
+        
+      
+      
+        <H1>7 Conclusion</H1>
+        We have presented a new method for the simulation of interactions of deformable solids with fluids.
+Our interaction model simulates repulsion, adhesion and friction near the fluid-solid interface.

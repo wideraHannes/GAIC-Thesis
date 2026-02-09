@@ -1,0 +1,2 @@
+The location and orientation of the cords attached to the clips (which reveal the direction of the applied force) are also tracked.
+Each output frame of a measurement session contains: • The configuration of the cloth sample, represented as a deformed mesh with 10K regularly sampled vertices.

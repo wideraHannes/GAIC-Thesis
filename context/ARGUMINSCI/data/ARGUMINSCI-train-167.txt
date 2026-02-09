@@ -1,0 +1,3 @@
+The basic idea is to use the pre-simulated results as examples and find the error-minimizing skin data through optimization.
+An optimization approach, such as the one presented by Mohr et al 
+[15], could be adopted here.

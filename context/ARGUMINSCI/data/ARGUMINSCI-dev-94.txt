@@ -1,0 +1,2 @@
+While for many cases this produces results that look very good, under some situations artifacts can be created because enforcing one of the conditions in general will break a previously enforced one.
+Examples of such artifacts might be fluid leaking through solid boundaries or poor performance in piston-like situations.

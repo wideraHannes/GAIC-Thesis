@@ -1,0 +1,2 @@
+Specifically, the unit root test, cointegration test, vector error-correction model, impulse response function analysis, and Granger causality test are employed for the estimations.
+The empirical results indicate that there is a long-term and stable equilibrium relationship between gross domestic product per capita, foreign direct investment per capita, and renewable energy consumption per capita.

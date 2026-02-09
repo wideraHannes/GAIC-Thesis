@@ -1,0 +1,2 @@
+PFS was significantly prolonged in the erlotinib treatment arm, both overall (hazard ratio [HR]: 0.57; p=0.0067) and in patients with EGFR IHC-positive disease (HR=0.50; p=0.0057).
+There was a trend towards an increase in OS, which reached statistical significance in the EGFR IHC-positive subgroup (p=0.0233).

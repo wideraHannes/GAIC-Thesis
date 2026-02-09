@@ -1,0 +1,2 @@
+Amy Hood: And to your overall commercial progress margin question.
+You're right, the fundamental driver is when I look forward into next year, I expect each service just like it did this year to really see gross margin improvement, whether that service is LinkedIn or Dynamics or Office 365, Azure per user or Azure IaaS in PaaS, but what you'll see is a revenue mix shift, right, that will offset that to Azure IaaS and PaaS.

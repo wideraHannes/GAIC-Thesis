@@ -1,0 +1,2 @@
+On average, the results shown in the video contain 3-30 motion pieces cut from the original motions.
+This framework is completely automatic.

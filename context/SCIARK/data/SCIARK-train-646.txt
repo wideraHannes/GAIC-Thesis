@@ -1,0 +1,2 @@
+We used GRADE to create a 'Summary of findings' table and we assessed risk of bias for the one included study.
+Main results: We included one pilot cluster-RCT that recruited a total of 21 psychiatrists and 97 patients.

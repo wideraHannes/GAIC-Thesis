@@ -1,0 +1,2 @@
+Primary endpoints: maximum tolerated dose, RR, duration of response, symptom improvement, toxicity and QoL.
+Secondary endpoint: overall survival (OS).

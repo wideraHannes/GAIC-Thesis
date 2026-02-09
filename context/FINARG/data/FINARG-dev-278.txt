@@ -1,0 +1,2 @@
+We've seen lots of consecutive quarters of growth in our higher-level services but we're now seeing some good scale.
+I, for the first time, talked about Cosmos DB.

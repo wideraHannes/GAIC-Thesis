@@ -1,0 +1,2 @@
+Note that these two conditions imply that unconstrained particles have r i close to zero, while completely constrained particles have v i = z i .
+Thus in the case when no particles are constrained, our modified CG method should produce the same result as the regular CG method.

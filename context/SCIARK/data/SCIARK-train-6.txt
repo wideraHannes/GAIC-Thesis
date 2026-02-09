@@ -1,0 +1,2 @@
+In the first stage, we apply the Data Envelopment Analysis (DEA) technique to annual panel data from 2000 to 2006 to assess provincial industrial energy efficiency, taking into consideration the minimization of energy consumption and the effects of undesirable outputs.
+In the second stage, we study the determinants of energy efficiency by selecting four independent variables including the marketization index, GDP per capita, industrial R&D investment per capita and coal consumption percentage and performing random effects tobit regressions at country and regional levels.

@@ -1,0 +1,2 @@
+Thus we have a total of five measurements per cloth sample that will be used for parameter fitting (two stretch, one shear, and two bending).
+We also capture two sequences with more complex deformation ( Figure 5 ) for validation after parameter fitting.

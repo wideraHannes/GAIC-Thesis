@@ -1,0 +1,3 @@
+EVALUATING ADVECTION IN CLOSED FORM FOR 2-D DOMAIN</H1>
+        We evaluate the advection operator for pairs of basis functions defined on a 2-D rectangular domain, defined in Eqs. 3 and 2.
+We evaluate Adv(Φ i , φ j ) = curl (φ j × Φ i ) recalling that i, j are vector wave numbers

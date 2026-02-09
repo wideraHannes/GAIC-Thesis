@@ -1,0 +1,6 @@
+The groundbreaking work of 
+Losasso et al. [2004]
+ introduced an octree for spatial adaptivity, but it suffers from spurious flows at T-junctions.
+Finite volume methods 
+[Batty et al. 2010]
+ repair these spatial artifacts at the expense of solving a significantly larger system of equations and sacrificing computational stability near poorly-shaped elements.

@@ -1,0 +1,2 @@
+The relationship between a skeleton and the skin shape is highly non-linear.
+The problems of joint-based skeleton skinning mentioned above, in essence arises from under-sampling.

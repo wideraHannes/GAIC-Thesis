@@ -1,0 +1,8 @@
+Although the procedure described above takes O(nb) time in the worst case (where n is the number of points, and b is the final number of spheres inserted), worst case behavior is rarely seen because most points are processed while there is a small number of large
+          
+            
+            
+            Figure 4: Constructed Graph Figure 5: The original and reduced quadruped skeleton
+          
+          spheres.
+In fact, this step typically takes less than 1% of the time of the entire algorithm.

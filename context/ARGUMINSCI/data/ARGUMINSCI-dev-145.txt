@@ -1,0 +1,2 @@
+Calculation time between time steps is 19.8 seconds, which include the texture mapping calculations.
+Render time for frames such as figure 1 is 3.16 seconds per frame.

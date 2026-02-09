@@ -1,0 +1,39 @@
+All partial derivatives are expressed in frame i. 2
+        
+          41
+          ∂ ∂ I q 0 ∗ = ( s i I i ∗ − I i ∗ s i )
+        
+        
+          42
+          ∂ ∂ p q  ̇ ∗ 0 = I ∗ i s i
+        
+        
+          43
+          i ∂ ∂ p q 0 ∗ = ∂ ∂ I q 0 ∗ v i−1 i + s ×p ˆ ∗
+        
+        
+          43
+          i i i i
+        
+      
+      
+        2 When implementing these expressions, we found it essential to compare the numerical values of these derivatives to the identical derivatives obtained from an alternative technique such as numerical differentiation.
+        ∂ ∂ f q  ̈ 0 ∗ i = ∂ ∂ p q  ̇ ∗ 0 i (44) ∂ ∂ f q  ̇ ∗ 0 i = ∂ ∂ p q ∗ 0 i +  ̇ I i ∗ s i + v i × ˆ ∂ ∂ p q  ̇ 0 ∗ i (45) ∂ ∂ f q ∗ 0 i = s i ×f ˆ ∗ i + ∂ ∂ I q ∗ 0 i a i−1 i + v i i−1 ×(s ˆ i ×p ˆ i ∗ + ∂ ∂ I q ∗ 0 i v i−1 i )
+        
+          46
+          + ( s i  ̇ I ∗ i −  ̇ I ∗ i s i )v i−1 i
+        
+        where
+        
+          47
+          v i i−1 = (X i−1 i v i−1 )
+        
+        
+          48
+          a i i−1 = (X i i−1 a i−1 )
+        
+      
+      
+        Appendix C: Changing the Effective Root
+        Suppose we wish to place the effective root of the character at the point on body i that is located at point r in body i coordinates.
+We wish this point to have linear velocity b r,des and linear acceleration b  ̇ r,des , expressed in the world coordinate frame.

@@ -1,0 +1,2 @@
+Sometimes, we may want to advect a colored image, which may be considered as colored smoke.
+We call this process image advection.

@@ -1,0 +1,2 @@
+Each optimization often took from ten to thirty minutes to converge without code optimization (for details, see Table 1 ).
+All the experiments were run on a 2.5GHz dual core computer with 3GB of RAM.

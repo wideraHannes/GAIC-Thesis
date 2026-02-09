@@ -1,0 +1,2 @@
+We first construct the cloth-to-joint relation by analyzing a presimulated sequence of the cloth to be animated.
+We then reduce the number of vertices to be physically simulated by identifying the garment regions in which the shape follows that of the underlying skin.

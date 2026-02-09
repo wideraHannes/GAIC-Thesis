@@ -1,0 +1,2 @@
+Since only the second joint is rotating, we simplify SSD as a rotation transformation ignoring other issues such as accumulating effects from the first joint: ⎛ ⎞ cos θ sin θ 0 SSD θ = ⎝ − sin θ cos θ 0 ⎠ . 0 0 1 where θ is the rotation angle of the second joint.
+Then for the vertex v r = [v 0x , v 0y ], SSD θ (v r ) transforms v from rest pose to [v SSD x , v SSD y ] =

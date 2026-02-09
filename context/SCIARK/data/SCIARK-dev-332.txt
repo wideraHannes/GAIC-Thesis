@@ -1,0 +1,2 @@
+The association between MMR and socioeconomic contextual conditions at municipal and departmental level was assessed using a multilevel Poisson regression model.
+Results:                    The MMR in the Colombian municipalities was associated significantly with the multidimensional poverty (relative ratio of MMR: 3.52; CI 95%: 1.09-11.38).

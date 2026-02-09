@@ -1,0 +1,3 @@
+The hand was moved into various poses by applying position constraints to vertices adjacent to the rigid bones, and computing the resulting tissue deformation using geometrically nonlinear static finite element analyses 
+[Zienkiewicz 1977] with (a modified version of) the CalculiX program [Dhondt and Wittig].
+Approximately half a dozen poses were computed for each joint degree of freedom to estimate the locally supported joint eigendisplacements, and 25 additional poses were computed for validation.

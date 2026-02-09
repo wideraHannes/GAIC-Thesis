@@ -1,0 +1,2 @@
+Our solution, termed pose space deformation, provides a uniform and expressive approach to both facial skin deformation and skeleton-driven deformation.
+It addresses the previously mentioned drawbacks of shape interpolation and SSD while retaining the simplicity and performance associated with these techniques.

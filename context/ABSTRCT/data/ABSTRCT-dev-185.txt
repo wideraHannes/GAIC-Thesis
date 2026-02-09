@@ -1,0 +1,2 @@
+Generalised estimating equation modelling determined time (baseline [5 weeks PS], mid-intervention [6 months PS], post-intervention [12 months PS]), group (FtF, Tel, Usual Care [UC]) and time-by-group effects. 194 women representative of the breast cancer population were randomised to the FtF (n = 67), Tel (n = 67) and UC (n = 60) groups.
+There were significant (p < 0.05) interaction effects on QoL, fitness and fatigue with differences being observed between the treatment groups and the UC group.

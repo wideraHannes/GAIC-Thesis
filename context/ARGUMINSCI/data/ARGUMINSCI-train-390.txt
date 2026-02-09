@@ -1,0 +1,10 @@
+Related deformation topics include a morphable model for face synthesis 
+[Blanz and Vetter 1999], modal analysis for dynamic vibrations 
+[Pentland and Williams July 1989 ; James and Pai 2002a], decomposition of static deformations 
+[Bookstein 1989], and recognition applications in computer vision, e.g., face recognition 
+[Turk and Pentland 1991].
+        
+        
+          <H2>1.2 Our Contribution</H2>
+          We introduce a method for extending SSD that enhances its range of modeling capabilities at very little cost, and in a manner optimized for real time graphics hardware.
+EigenSkin constitutes an error-optimal set of eigenbases for approximating the original deformation model, for a given amount of per-vertex displacement memory.

@@ -1,0 +1,2 @@
+We examined the distribution of the LoVI across countries and regions, and the relationship of national rankings on the LoVI with those for other indicators from the United Nations, Demographic and Health Surveys, and World Factbook.
+Results: A single LoVI factor showed good model fit in the factor analysis.

@@ -1,0 +1,2 @@
+Patients completed the European Organisation for Research and Treatment of Cancer QLQ-C30 before treatment, within 3 days before the second and the fourth chemotherapy cycle, and 3 weeks after completion of chemotherapy.
+Previously reported data showed that patients undergoing TC or PT did not differ in progression-free survival and overall survival.

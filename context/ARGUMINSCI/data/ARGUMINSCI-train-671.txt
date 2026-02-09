@@ -1,0 +1,2 @@
+To this end, the control of dynamic, anthropomorphic figures subject to gravity and contact forces remains a difficult open problem.
+We propose a framework for composing controllers in order to enhance the motor abilities of such figures.

@@ -1,0 +1,4 @@
+This simple example shows a dynamic bulging effect that can only be achieved with dynamic morph targets.
+        
+        rotation.
+We define distance between two poses to be the inner product of the difference of its descriptors.

@@ -1,0 +1,2 @@
+Due to explicit integration methods very small step sizes had to be used.
+To enable faster simulations, a solution with an unconditionally stable solver was introduced by Stam

@@ -1,0 +1,4 @@
+Results
+        
+          Figure 6: The far left image shows an air bubble placed in olive oil at time zero.
+The next three images are first order semi-Lagrangian implementation of level set advection.

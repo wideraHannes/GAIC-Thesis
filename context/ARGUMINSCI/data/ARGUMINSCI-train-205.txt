@@ -1,0 +1,2 @@
+Though the ghost fluid method on regular samples does detect some differences in surface height, this actually exacerbates the problem because noisy sub-mesh details will appear to the simulator as rapid discontinuous changes in surface position over time, inducing noisy responses in the fluid velocity.
+Topology Mismatch: Another visible artifact of using mismatched surface and simulation resolutions is topological inconsistencies.

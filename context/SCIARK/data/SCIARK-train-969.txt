@@ -1,0 +1,2 @@
+Average annual percentage change (AAPC) with the corresponding 95% confidence interval (CI) was computed for trend using the joinpoint regression analysis.
+RESULTS: Total 33,930 (24,016 men and 9914 women) suicide deaths occurred in Serbia during the observed period, with the average annual age-standardized mortality rate being 12.7 per 100,000 inhabitants (19.5 per 100,000 in men and 6.7 per 100,000 in women).

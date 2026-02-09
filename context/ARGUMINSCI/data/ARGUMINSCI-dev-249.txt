@@ -1,0 +1,2 @@
+Our goal is find a complete graph walk w that minimizes f .
+To give the user control over what sorts of motions should be considered in the search, we allow restrictions on what edges may be appended to a given walk w.

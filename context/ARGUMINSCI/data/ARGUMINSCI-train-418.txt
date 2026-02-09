@@ -1,0 +1,2 @@
+If γ j &lt; γ i , the flow happens in the opposite direction.
+This process is repeated 1 to 7 times per time step.

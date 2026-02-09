@@ -1,0 +1,2 @@
+We never had that kind of a management footprint.
+We now have the ability to have one control plane for IT for all the devices, identity management, device management, data protection.

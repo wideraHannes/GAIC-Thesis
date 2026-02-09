@@ -1,0 +1,2 @@
+The artist also assigns a falloff (Gaussian σ), either as a symmetric radius across all controls or to each control individually (axis stretched falloff).
+Define δ(pose).

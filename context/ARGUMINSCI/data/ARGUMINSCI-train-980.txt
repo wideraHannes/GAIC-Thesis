@@ -1,0 +1,5 @@
+The simulation is performed on a 960 by 321 grid, with the rendering aspect ratio adjusted to make the shapes look taller and thinner than the actual simulation, which would otherwise promote rising plumes with essentially round circulation patterns.
+One time step calculation takes 36.3 seconds, and one rendered frame such as at the top of figure 7 takes 4.7 seconds to render.
+        
+        
+          <H2>5.3 Example 3 Periodic Boundary Conditions in Action</H2>

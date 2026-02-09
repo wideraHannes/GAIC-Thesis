@@ -1,0 +1,2 @@
+And the reality is these modern workloads in fact lose it all.
+So it's not like I just build and Azure Sphere application.

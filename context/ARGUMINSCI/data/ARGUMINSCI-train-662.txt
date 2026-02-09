@@ -1,0 +1,4 @@
+This controller is based on an inverted pendulum model 
+[ 12 ]
+, using the ankles to control the body sway.
+Despite the fact that the body of the character is not as rigid as the inverted pendulum hypothesis suggests, the approximation works well in practice.

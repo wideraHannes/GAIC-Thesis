@@ -1,0 +1,2 @@
+This approach gives a wide range of flexibility and control, but is a tedious process with realistic limits on the complexity that can be achieved.
+At the other extreme, there are many advantages to numerically solving the full equations of motion for fluids, usually referred to as the Navier-Stokes equations, to create an- imations of fluid behavior.

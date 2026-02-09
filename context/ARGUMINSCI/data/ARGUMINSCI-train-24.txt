@@ -1,0 +1,9 @@
+We show that qualities such as squash-and-stretch that are expected from physically based optimization result from our approach.
+Our animation system is particularly useful for synthesizing highly dynamic motions, and we show examples of swinging and leaping motions for characters having from 7 to 22 degrees of freedom.</Abstract>
+	  CR Categories: I.3.7 [Computer Graphics]: Three-Dimensional Graphics and Realism—Animation G.1.6 [Numerical Analysis]: Optimization—Constrained Optimizatio Keywords: animation, physically based animation
+      
+        
+          Providence
+        
+        
+          RI

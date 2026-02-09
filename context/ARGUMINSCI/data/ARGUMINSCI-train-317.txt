@@ -1,0 +1,2 @@
+But while capturing can provide accurate deformation data, parameter fitting remains very difficult without explicit control over boundary conditions, in particular loading forces.
+Closer to our work is the recent approach of Wang et al.

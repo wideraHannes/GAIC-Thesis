@@ -1,0 +1,2 @@
+Let me talk about this in two or even a couple of components, because when you think about Windows 10, what we've seen over the past couple of years is, you're right, a very strong enterprise deployment cycle and real pull for that product inside enterprises, because of the security value prop of the product itself.
+When you see that deployment for security reasons, an externality of that is people often choose to upgrade machines in that process.

@@ -1,0 +1,2 @@
+To obtain an upper bound of the maximal difference in the angle, we consider the extremal case with θ = π /2, depicted in Figure 4 .
+The angle α (t) on the picture can be computed by atan, and β (t) by simple linear interpolation of the right angle, which yields the difference function t π d(t) = α (t) − β (t) = atan − t 1 − t 2 It remains to find the extremes of d(t) on the interval 0, 1 .

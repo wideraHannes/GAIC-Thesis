@@ -1,0 +1,2 @@
+The system also provides fast turn around time.
+Fourth order accuracy allows animators to use coarser grids, thus saving time.

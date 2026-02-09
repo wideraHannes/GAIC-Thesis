@@ -1,0 +1,3 @@
+Let us denote by K the coordinate system with origin in r c and identical basis vectors as the world coordinate system.
+Then
+        the matrix T (7) can be interpreted as a transformation from K to the world coordinate system.

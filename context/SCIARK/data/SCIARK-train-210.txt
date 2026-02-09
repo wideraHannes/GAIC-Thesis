@@ -1,0 +1,2 @@
+Models with dynamic atmosphere do not follow this simple relation.
+There are indications that in four out of five models equatorial wind-stress anomalies amplify the tropical Pacific thermocline deepening.

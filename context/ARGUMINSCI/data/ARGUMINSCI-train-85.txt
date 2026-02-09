@@ -1,0 +1,2 @@
+For maximum fidelity at the face centroids, we also replace the normal component of the averaged full velocity with the exact normal component already stored at the face.
+Simple and efficient barycentric interpolations can then be applied on the resulting smaller tetrahedra.

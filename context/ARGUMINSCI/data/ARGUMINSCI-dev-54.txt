@@ -1,0 +1,7 @@
+We also optimized for a 4.0 m/s running controller tolerant of 50 N, 0.4 s pushes, as shown in the video.
+        
+      
+      
+        <H1>7 Discussion</H1>
+        We have presented a biologically-motivated control parameterization that can be used to automatically generate 3D human-like walking and running controllers of different speeds.
+Controllers are optimized to satisfy a set of high-level task terms while minimizing an effort term based on modeling the rate of metabolic energy expenditure.

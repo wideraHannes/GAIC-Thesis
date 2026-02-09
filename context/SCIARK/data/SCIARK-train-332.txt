@@ -1,0 +1,2 @@
+Our model predicts the optimal working conditions of the energy harvesting including initial velocity and jet size, as well as the key performance factors including efficiency, generated target voltage, and power density.
+The results show that by using maximally charged droplets, an appropriate size and initial velocity of microjet, the system efficiency can be over 90%, at a generated voltage below 1 kV and a power density of at least 100 W/m2.

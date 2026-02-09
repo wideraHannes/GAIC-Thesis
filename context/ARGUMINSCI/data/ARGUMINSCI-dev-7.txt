@@ -1,0 +1,2 @@
+A slower rise to the surface caused visual artifacts.
+We tried a simpler solution: when intersections occurred, rather than wait for a scheduled constraint or a penalty force to eliminate the intersection, we simply altered the positions of the cloth particles, effecting an instantaneous (and discontinuous) change in position.

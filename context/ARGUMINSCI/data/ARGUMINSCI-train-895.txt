@@ -1,0 +1,2 @@
+For an incompressible fluid, the velocity field is divergence free (Eq. (3)).
+Comparison of the right hand side of the two equations of motion (1) and (2) reveals, that the Eulerian description makes the additional convection term v · ∇v necessary.

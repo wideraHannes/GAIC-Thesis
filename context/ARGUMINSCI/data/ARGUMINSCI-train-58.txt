@@ -1,0 +1,2 @@
+Bottom: in the parametric domain, this distance restricts the possible identities of B to the green region.
+The distance from A to B along the surface can be no shorter than the shortest distance in 3D.

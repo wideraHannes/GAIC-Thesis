@@ -1,0 +1,2 @@
+Dynamic real-time deformations using space &amp; time adaptive sampling.
+In Proceedings of the 28th Annual Conference on Computer Graphics and Interactive Techniques, SIGGRAPH ’01.

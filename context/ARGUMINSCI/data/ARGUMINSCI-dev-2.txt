@@ -1,0 +1,2 @@
+Some of the images in Figure 2 show similar behavior that occurs when cubes of different materials are dropped onto a hard surface.
+The examples with high yield strain, i.e. large γ, behave like deformable solids and bounce.

@@ -1,0 +1,2 @@
+An autonomous human agent should be able to balance, standing naturally in place.
+Should loss of balance occur, the character ought to react naturally either with a restoring motion or with a protective falling behavior depending on which action is appropriate in each case.

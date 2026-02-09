@@ -1,0 +1,2 @@
+In fact, the mis-definition of the actual decision maker’s attitude biases the simulation of its future decisions and produces a general underestimation of the system performance.
+The analysis of the dynamic evolution of the decision maker’s preferences further confirms the potentially strong impact of changing robustness definition on the decision-making outcomes.

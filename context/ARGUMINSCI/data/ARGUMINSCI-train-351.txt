@@ -1,0 +1,2 @@
+The motion to be synthesized is therefore represented as a sequence of system states and control inputs H = (x 1 , ..., x T , ..., u m+1 , ..., u T ).
+The system allows the user to specify various forms of kinematic constraints E = {e j |j = 1, ..., J} throughout the motion or at isolated points in the motion.

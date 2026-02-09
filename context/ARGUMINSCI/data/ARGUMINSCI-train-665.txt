@@ -1,0 +1,2 @@
+Diagonalized StVK.
+The membrane deformation is defined using the Green-Lagrange strain tensor, a formulation introduced to computer graphics by Terzopoulos et al.

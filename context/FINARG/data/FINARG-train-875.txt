@@ -1,0 +1,2 @@
+So I think that that's where the synergies lie, because AI starts with having a data estate that can really bring data from all of your applications, silos in some sense, together so that you can start doing, building that analytical power that you can then visualize and put in the hands of people using Power BI or run an AI model that does some prediction that you can deploy in your system, whether it's forecasting, sales lead scoring, what have you.
+So that workflow, we have every layer of it.

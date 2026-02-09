@@ -1,0 +1,6 @@
+An average render time for distortions such as those depicted in figure 2 is 9.8 seconds per frame.
+        
+        
+          <H2>5.2 Example 2 Constant Heat Flux from Below</H2>
+          The second example simulates heat being introduced at the bottom of the domain creating “magical smoke” (see figure 7 ).
+The initial temperature distribution is a random noise pattern with an overall average temperature which is essentially constant except in a narrow layer near the bottom, where it is hotter.

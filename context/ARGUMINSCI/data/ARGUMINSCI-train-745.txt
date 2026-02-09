@@ -1,0 +1,2 @@
+With the initialized joint poses q t 0 , t = 1, ..., T , we dropped off the constraint term as well as the initial prior term, and optimized the joint torques τ as well as contact forces λ using the force field prior term and the physics term.
+In this step, we evaluated the force field priors in terms of joint torques and contact forces: E f orcef ield (τ, λ) =

@@ -1,0 +1,2 @@
+While the joint skeleton is a discrete centre line representation of an object, the curve skeleton offers a continuous skeletal representation.
+Thus a character will have two skeletons: the ordinary joint skeleton and a curve skeleton.

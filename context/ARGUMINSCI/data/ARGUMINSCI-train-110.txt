@@ -1,0 +1,2 @@
+This is described in more detail in Section 3.3.
+The interpolation of polynomial coefficients yields the interpolation of force values R(u, s) at all possible deformation values u.

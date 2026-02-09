@@ -1,0 +1,2 @@
+We measure the weights of all cloth samples as well as the clips (see Table 1 ) and use these values in the optimization process.
+Forces are applied to the clips by fine wire cords that are pulled to defined displacements by eight linear actuators, and the tension in the cords is monitored by miniature load cells located at the actuator ends (see Figure 2).

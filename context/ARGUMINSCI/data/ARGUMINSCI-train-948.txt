@@ -1,0 +1,7 @@
+This issue does not arise in our application, however, since the animator decides where in the parameter space to sculpt a pose (effectively deciding the basis function placement).
+The falloff σ is also specified explicitly by the animator, as described below.
+        δ = f interp (configuration)
+      
+      
+        <H2>4.1 Algorithm Summary</H2>
+        The steps in a pose space deformation (PSD) algorithm will now be described consecutively.

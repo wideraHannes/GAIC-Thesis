@@ -1,0 +1,10 @@
+This presents an obvious solution: we simply modify the top row of equation (4) to
+        
+          17
+          x i = h(v 0i + v i ) + y i
+        
+        where y i is an arbitrary correction term of our choice, introduced solely to move a particle to a desired location during the backward Euler step.
+Having modified the top row of equation (4), we must follow this change through: using equation (17) and repeating the derivation of section 3 and the symmetric transform from section 5 yields the modified symmetric system
+        
+          18
+          M − h ∂v ∂f − h 2 ∂x ∂f v = h f 0 + h ∂x ∂f v 0 +

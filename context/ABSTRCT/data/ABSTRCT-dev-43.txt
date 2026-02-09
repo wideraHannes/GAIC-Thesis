@@ -1,0 +1,2 @@
+Median OS was 49.5 for the TCG arm and 51.5 months for the TC arm (HR, 1.05; 95% CI, 0.91 to 1.20; P = .5106).
+The addition of gemcitabine to carboplatin plus paclitaxel increased treatment burden, reduced PFS time, and did not improve OS in patients with advanced epithelial ovarian cancer.

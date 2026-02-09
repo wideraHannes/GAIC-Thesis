@@ -1,0 +1,2 @@
+Then, for each deformation component, we model stress as a function σ i = k i (ε i )ε i , with a strain-dependent stiffness k i encoded using Hermite splines.
+We enforce non-negative constraints on the stiffness values at control points.

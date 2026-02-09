@@ -1,0 +1,7 @@
+Estimation of the error when reducing the number of pre-simulated frames.
+          
+        
+      
+      
+        <H1>8.
+Conclusion</H1>

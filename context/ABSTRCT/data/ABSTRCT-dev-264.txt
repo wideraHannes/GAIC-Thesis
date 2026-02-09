@@ -1,0 +1,2 @@
+End points included progression-free survival (PFS), response rate (RR), and response duration (RD), quality of life (QOL), toxicity, and overall survival (OS).
+A planned interim analysis failed to detect an RR difference more than 5%.

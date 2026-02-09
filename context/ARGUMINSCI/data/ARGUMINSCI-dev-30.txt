@@ -1,0 +1,6 @@
+For example, Autodesk Maya 7 assigns weights based solely on the vertex proximity to the bone, ignoring the mesh structure, which results in serious artifacts when the mesh intersects the Voronoi diagram faces between logically distant bones.
+      
+      
+        <H1>3 Skeleton Embedding</H1>
+        Skeleton embedding resizes and positions the given skeleton to fit inside the character.
+This can be formulated as an optimization problem: “compute the joint positions such that the resulting skeleton fits inside the character as nicely as possible and looks like the given skeleton as much as possible.” For a skeleton with s joints (by “joints,” we mean vertices of the skeleton tree, including leaves), this is a 3s-dimensional problem with a complicated objective function.

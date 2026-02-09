@@ -1,0 +1,2 @@
+Also it is incurred at a convenient time – during setup (as a pose is saved) rather than during synthesis.
+For synthesis, the basis function φ(x) can be implemented by interpolated table lookup and the sqrt required in the Euclidean distance can be composed with φ(x) in the table.

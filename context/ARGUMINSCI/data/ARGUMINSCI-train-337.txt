@@ -1,0 +1,2 @@
+Our goal in many of the other examples was to highlight the ability to track thin sheets, whereas surface tension would break these sheets into droplets.
+Moreover, explicit surface tension schemes, such as the ghost-fluid-based method used in this paper, 3 suffer from a stringent O(∆x 2 ) time step restriction for stability, which is particularly costly when small scale capillary waves are not erroneously damped out.

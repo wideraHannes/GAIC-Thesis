@@ -1,0 +1,4 @@
+We find the feasible solution of the linear inequality system, while trying to minimize the energy we introduce into the simulation artificially.
+If an IZ has cyclic colliding relationships between CCs, we have N or more linear inequalities such that
+            (3)
+            where the notations are as in eq. 1.

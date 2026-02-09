@@ -1,0 +1,2 @@
+Adapting simulated behaviors for new characters.
+Proceedings of SIGGRAPH 97, pages 153–162, August 1997.

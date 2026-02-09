@@ -1,0 +1,2 @@
+As a testbed of our techniques, we are developing a physicallysimulated animated character capable of a large repertoire of motor skills.
+An obvious application of such a character is the creation of a virtual stuntperson: the dynamic nature of typical stunts makes them dangerous to perform, but also makes them an attractive candidate for the use of physics-based animation.

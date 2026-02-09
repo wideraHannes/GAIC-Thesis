@@ -1,0 +1,2 @@
+So the way we think about our overall investment, I think of this as a systems investment because at the scale at which we operate, the Intelligent Cloud and the intelligent edge infrastructure, which you all track as Azure, you got to remember it's the core platform that's powering everything from our gaming ambitions to what we are doing with Microsoft 365, to what we are doing with Dynamics 365 and of course, our third-party business in Azure.
+So that's the core platform.

@@ -1,0 +1,4 @@
+Reference [ 5 ]
+ details a technique of efficient muscle shape deformation using the anatomical skin deformation technique.
+Reference [ 5 ]
+ resorts to the creation of a muscle model, which is categorized into two layers: an action line and a surface mesh.

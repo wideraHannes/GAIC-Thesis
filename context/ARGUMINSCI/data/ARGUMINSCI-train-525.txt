@@ -1,0 +1,2 @@
+This condition is enforced by adjusting the pressure field at each integration step.
+Additionally, we do not use the first term of Equation (1) (the advection term) directly.

@@ -1,0 +1,7 @@
+To simplify notation, we will define x 0 = x(t 0 ) and v 0 = v(t 0 ).
+We also define x = x(t 0 + h) − x(t 0 ) and v = v(t 0 + h) − v(t 0 ).
+        45
+        SIGGRAPH 98, Orlando, July 19–24
+        C OMPUTER G RAPHICS Proceedings, Annual Conference Series, 1998
+        The explicit forward Euler method applied to equation (3) approximates x and v as x v = h M v −1 0 f 0
+        where the force f 0 is defined by f 0 = f(x 0 , v 0 ).

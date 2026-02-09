@@ -1,0 +1,2 @@
+Another case is when the ratio of surface area to volume is large.
+In this case, there are large regions with ρ &lt; 0.5 that do not contribute to the volume because the 0.5 iso-contour is empty.

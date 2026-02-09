@@ -1,0 +1,2 @@
+Unfortunately, we found that implicit integration introduced damping which could not be eliminated by optimizing cloth parameters.
+We had more success in matching realistic cloth motions by using higher-order explicit methods.

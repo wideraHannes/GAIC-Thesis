@@ -1,0 +1,2 @@
+For the same reason, Pinocchio filters out the sampled points that are too close to the character surface (within 2τ ).
+Wade discusses a similar condition in Chapter 4 of his thesis [2000].

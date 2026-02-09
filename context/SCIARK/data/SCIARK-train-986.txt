@@ -1,0 +1,2 @@
+Rate ratios with 95 % CI were calculated to compare the change in rates of maternal death as per ICD-MM relative to the old classification system.
+Results:                    There was a decrease in the maternal death rate between 2003-05 and 2011-13 (rate ratio (RR) 0.65; 95 % CI 0.54-0.77 comparing 2003-5 with 2011-13; p = 0.005 for trend over time).

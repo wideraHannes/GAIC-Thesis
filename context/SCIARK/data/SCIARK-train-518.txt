@@ -1,0 +1,2 @@
+The innovation of the paper is not only to compare between developed and developing countries but also between industrialized countries and non-industrialized ones by integrating some dummy variables into the models.
+The empirical results demonstrate that trade and energy consumption (renewable or non-renewable) have a mutually reinforcing linear relationship.

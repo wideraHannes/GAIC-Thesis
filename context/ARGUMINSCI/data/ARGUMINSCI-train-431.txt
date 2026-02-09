@@ -1,0 +1,5 @@
+Recent techniques have extended skinning to mesh deformations 
+[James and Twigg 2005], motion capture data without a predefined skeleton 
+[Park and Hodgins 2006], or interactive models 
+[Der et al. 2006].
+Unlike shape interpolation and other data-driven methods, SSD does not permit direct sculpting or control.

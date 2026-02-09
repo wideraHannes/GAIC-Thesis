@@ -1,0 +1,2 @@
+High system overall CHP efficiencies around 50% are achievable with such a system.
+The proposed system has been modelled using Cycle-Tempo software®.

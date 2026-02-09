@@ -1,0 +1,2 @@
+To compute interaction forces in step 5 we iterate over all the boundary particles of a triangle.
+For each fluid particle within the interaction radius of the boundary particle, we compute the interaction forces as described in Sec. 4 and distribute them among the fluid particle and the triangle nodes according to Eqns. (20) and (21).

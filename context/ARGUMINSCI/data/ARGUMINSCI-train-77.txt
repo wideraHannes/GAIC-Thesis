@@ -1,0 +1,2 @@
+The captured data itself is for a specific person in performing specific motion.
+Whenever the data needs to be reused, it has to be retar- getted to account for the differences in the anthropometry and motion.

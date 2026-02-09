@@ -1,0 +1,4 @@
+We optimize control parameters and the initial state using Covariance Matrix Adaptation (CMA) 
+[Hansen 2006], with stepsize σ = 0.005 and 50 samples per iteration.
+The optimization aims to maximize the following return function: T R (w) = r(s t ) − w e J effort . t=1 Here r is a scalar reward function of the current state s t , J effort measures the effort of the synthesized motion, and w e is set to 0.004 divided by the mass of the model, motivated by 
+Wang et al. [2010].

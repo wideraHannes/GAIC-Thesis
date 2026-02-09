@@ -1,0 +1,2 @@
+Furthermore, we use the distance tree we have already built to guide the marching cubes, avoiding the need to build a second structure to determine the topology of the new mesh.
+Near the surface, our distance tree is refined to the maximum level and looks like a uniform grid.

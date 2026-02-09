@@ -1,0 +1,2 @@
+In this paper, a dynamic material flow analysis is used to explore the impact of combined mitigation strategies on both new and existing buildings capable of reducing embodied and operational emissions in the English domestic housing stock.
+The results show that progress in the use of low carbon materials in construction and the deployment of zero-carbon buildings at scale would not be enough to deliver a reduction of building emissions of the scale required nationally (–66% from current levels by 2050).

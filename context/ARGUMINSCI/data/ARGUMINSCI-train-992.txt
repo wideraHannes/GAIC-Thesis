@@ -1,0 +1,2 @@
+F. 2001.
+Artistdirected inverse-kinematics using radial basis function interpolation.

@@ -1,0 +1,2 @@
+The study employed response surface regressions, structural break cumulative sum (CUSUM) test based on recursive residuals and ordinary least squares (OLS) residuals for parameter stability en route to estimating the autoregressive distributed lag (ARDL) regression.
+The environmental Kuznets curve (EKC) hypothesis is valid in South Africa with an extreme point of ZAR 56,114 which occurred in 2011.

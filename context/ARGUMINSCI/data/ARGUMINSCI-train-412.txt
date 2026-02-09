@@ -1,0 +1,2 @@
+The first concentrates on physically accurate computations using a semi-Lagrangian approach to solve the Navier-Stokes equations, the second model incorporates a particle tracing method for global wind fields.
+As illustrated in the previous section both methods produce realistic looking results which are capable of enhancing the realism of computer animations.

@@ -1,0 +1,2 @@
+These properties allow the behaviours of skin and anatomic tissues, e.g. muscle groups, to be mimicked intuitively in computer animation and to be computed rapidly.
+What needs pointing out is although there is a similarity between a bar-net and a mass–spring model, they have substantially different behaviours.

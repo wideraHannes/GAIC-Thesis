@@ -1,0 +1,5 @@
+Karen Liu, &amp; Zoran Popović / Momentum-based Parameterization of Dynamic Character Motion
+      
+        <H1>2.
+Related work</H1>
+        Recent research in computer animation focused on techniques for remapping existing data to given specifications of a new scenario.

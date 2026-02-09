@@ -1,0 +1,2 @@
+Various postprocessing techniques can be then be applied to smooth and adjust the desired target motion.
+Our approach is evaluated on two applications.

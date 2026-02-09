@@ -1,0 +1,2 @@
+Analog to positions, the velocities of boundary particles are interpolated from the velocities of the triangle nodes.
+Now that we have replaced the triangulated surface by a set of particles, the problem of triangle-particle interaction reduces to particle-particle interaction.

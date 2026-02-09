@@ -1,0 +1,2 @@
+For instance, in the following example of fleece waving, we choose the parameters from experiment 2.
+Error: Exp 1 Error:

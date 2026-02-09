@@ -1,0 +1,4 @@
+The density field is post-processed with
+        
+        the method proposed in this paper to enhance sub-grid details.
+Adding additional divergence is important because in our case, ρ &gt; 1 results in visual volume loss.

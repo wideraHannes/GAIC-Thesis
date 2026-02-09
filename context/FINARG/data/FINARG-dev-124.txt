@@ -1,0 +1,2 @@
+Finally, on the GDPR trend, that's just based on what we're expecting given that you're having to bring people through these consent flows, and we have been modeling it and expect there would be a flat to down impact on MAU and DAU.
+It's very early in our rollout, but nothing inconsistent with what we've been modeling.

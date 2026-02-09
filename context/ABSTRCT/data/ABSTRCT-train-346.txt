@@ -1,0 +1,2 @@
+Sentinel nodes were found in 95% of the SNBM group (29% positive) and 93% of the RAC group (25% positive).
+SNB had sensitivity 94.5%, false-negative rate 5.5%, and negative predictive value 98%.

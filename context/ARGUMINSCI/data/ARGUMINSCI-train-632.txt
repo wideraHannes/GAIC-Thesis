@@ -1,0 +1,3 @@
+To enforce the regularity of coarse mesh, which is one condition for obtaining efficient deformation with the mass-spring system 
+[21], we consider two following components. • Minimizing the "shape factor": Square Root (Surface Area)/Contour Length.
+The objective is to obtain "well-shaped patches", patches that have a circular shape.

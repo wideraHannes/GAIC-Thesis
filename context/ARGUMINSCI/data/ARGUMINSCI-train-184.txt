@@ -1,0 +1,2 @@
+To demonstrate that our technique can be used on more than just simple arms and legs, Figure 9 shows a rigged upper body and its approximation by our system.
+This figure also shows this character in new poses from an animation sequence, demonstrating that our resulting skins generalize well to new poses.

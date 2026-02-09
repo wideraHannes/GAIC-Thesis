@@ -1,0 +1,2 @@
+Little work has been done to capture garments with folds and scenes with occlusion.
+In this paper we use folding to refer to local phenomena such as wrinkles around a knee and occlusion to refer to large scale effects such as one limb blocking the view of another.

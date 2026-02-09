@@ -1,0 +1,2 @@
+Using microcosms of simplified soil communities, we investigated the net and interactive effects of amoebal bacterivory, soil aggregate structure, agricultural management (till vs. no-till), and temperature on C and N dynamics during a 24 day-incubation.
+The respiration temperature sensitivity (Q10) was much more variable for the simplified communities than natural communities, illustrating the challenge in using low-diversity systems to predict such a complex and emergent property.

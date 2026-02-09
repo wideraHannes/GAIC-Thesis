@@ -1,0 +1,2 @@
+Equation 8 is implicit: to compute   n we need to know in turn the requires value of the e 1 value n .
+But of computing x des 1 n , which e 1 n is by not Equation available 9 until   n is known.

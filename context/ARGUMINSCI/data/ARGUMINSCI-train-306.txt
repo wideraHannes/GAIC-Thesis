@@ -1,0 +1,3 @@
+Lagrange Multipliers
+        We could introduce additional constraint forces—that is, Lagrange multipliers—into our system to satisfy the constraints.
+This involves augmenting the linear system of equation (6) with extra variables (the multipliers) and extra equations (the constraint conditions).

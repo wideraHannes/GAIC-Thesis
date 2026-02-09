@@ -1,0 +1,2 @@
+A widely used method for detecting cloth collisions is to put small repellent proximity forces between the cloth surface and the rigid or cloth surface [ 4 , 14 , 3 ] while the actual collisions are tested with pairs of particle-face or face-face of the current positions.
+When objects are moving fast, however, these preventive proximity forces cannot prevent collisions since a particle can pass through the proximity violation region during one integration time step.

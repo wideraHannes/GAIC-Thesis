@@ -1,0 +1,2 @@
+The pre-conditions of the fall controller are defined in accordance with those of the balance controller.
+Situations that are beyond the capabilities of the latter should be handled by the fall controller.

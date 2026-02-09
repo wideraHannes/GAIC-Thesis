@@ -1,0 +1,2 @@
+The resulting motion is a crude approximation of the final result, but provides a good initial state for the spacetime optimization.
+The animator can also change the height of the trajectory in a flight stage by interactively shaping a visualization of the trajectory.

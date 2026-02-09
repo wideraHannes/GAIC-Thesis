@@ -1,0 +1,2 @@
+In this section, we address this problem via manual and automatic approaches.
+The manual approach allows designers to incorporate their knowledge within controllers, whereas the automatic approach is based on machine learning techniques.

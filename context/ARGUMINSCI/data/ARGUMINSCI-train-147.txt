@@ -1,0 +1,3 @@
+Bottom-left: A turbulent 3-D flow in a cubic domain.
+Bottom-right: Initializing an inviscid simulation with basis functions that are spatially symmetric produces a perpetual symmetric flow.
+        precomputation times and storage for the basis fields.

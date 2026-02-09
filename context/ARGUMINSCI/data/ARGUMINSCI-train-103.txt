@@ -1,0 +1,2 @@
+One of the primary advantages of this method is that it enables tracking surface characteristics, such as color or texture coordinates.
+These properties can be easily stored directly on the polygonal mesh and efficiently mapped onto the new surface during semi-Lagrangian advection.

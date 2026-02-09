@@ -1,0 +1,2 @@
+These are pretty big technical projects.
+We want to make it so that the infrastructure that these services are built on is the most secure and most reliable and fastest and most widely available of any of the major messaging platforms out there, we think that that’s the foundation to build a successful private platform on.

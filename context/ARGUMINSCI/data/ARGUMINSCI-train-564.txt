@@ -1,0 +1,2 @@
+We can interpret these roots from the SAP view as follows: C(x n+1 ) = 0 corresponds to finding some point on the constraint manifold.
+C(x n+1 ) = 0 with F( δ x n+1 , λ n+1 ) = 0 corresponds to finding the closest point on the constraint manifold.

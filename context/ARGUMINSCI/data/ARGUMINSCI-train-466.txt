@@ -1,0 +1,2 @@
+The embedded (ghost fluid) free surface condition uses signed distance estimates at pressure samples to estimate the surface position; these are now located at Voronoi sites rather than tetrahedra circumcenters, but the method is otherwise unchanged ( figure 3(c) ).
+A slight improvement can be achieved by casting rays to find the exact position of the surface mesh between pressure samples.

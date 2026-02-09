@@ -1,0 +1,4 @@
+ISSN 0730-0301 (Proceedings of ACM SIGGRAPH 2002).
+          [PCLS05] PRATSCHER M., COLEMAN P., LASZLO J., SINGH K.: Outside-in anatomy based character rigging.
+In SCA ’05: Proceedings of the 2005 ACM SIGGRAPH/Eurographics symposium on Computer animation (New York, NY, USA, 2005), ACM Press, pp. 329–338.
+          [PF05] PHARR M., FERNANDO R.: GPU Gems 2; Programming Techniques for HighPerformance Graphics and General-Purpose Computation.

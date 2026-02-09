@@ -1,0 +1,3 @@
+Our metric captures the complex dynamics of cloth motion and also helps to distinguish between different fabrics.
+Researchers in computational neurobiology hypothesize that the human perceptual system is sensitive to moving edges in video 
+11 , 12 , 36 .

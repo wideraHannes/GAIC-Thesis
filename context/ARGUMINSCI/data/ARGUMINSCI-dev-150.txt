@@ -1,0 +1,6 @@
+We can now easily describe the internal forces acting on the cloth, by just writing condition functions.
+Forces and their derivatives are easily derived using equations (7) and (8).
+      
+      
+        <H2>4.2 Stretch Forces</H2>
+        Recall that every cloth particle has a changing position x i in world space, and a fixed plane coordinate (u i , v i ).

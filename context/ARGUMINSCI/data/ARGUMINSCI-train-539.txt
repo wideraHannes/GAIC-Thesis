@@ -1,0 +1,2 @@
+The δ values for the deformed vertices are computed (again in the local coordinate system) and they are saved in a database together with their corresponding location in a pose space. (At the boundary of several surface patches there may be shared vertices that need to be coincident to maintain surface continuity.
+Unlike some SSD implementations interpolation in pose space by definition cannot separate such vertices).

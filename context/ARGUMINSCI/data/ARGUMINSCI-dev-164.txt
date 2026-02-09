@@ -1,0 +1,2 @@
+These two goals are in tension: small markers are less discriminative.
+In addition, we cannot increase camera resolution without bound because camera bandwidth becomes very expensive.

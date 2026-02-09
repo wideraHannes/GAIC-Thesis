@@ -1,0 +1,4 @@
+Popović and Witkin [1999]
+ have shown that significant changes to motion capture data can be made by optimizing with a physically based objective function when the character is reduced to the degrees of freedom most important for the task.
+When physics does not dominate the motion, kinematic techniques can give the animator interactive control for motion editing (e.g., 
+[Gleicher 1997] [Lee and Shin 1999] [Arikan and Forsyth 2002]).

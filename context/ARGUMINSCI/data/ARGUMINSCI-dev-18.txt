@@ -1,0 +1,2 @@
+After each implicit step, we treat the resulting x as a proposed change in the cloth’s state, and examine the stretch terms (section 4.2) for each triangle in the newly proposed state.
+If any triangle undergoes a drastic change in its stretch (in either the u or v direction) we discard the proposed state, reduce the step size, and try again.

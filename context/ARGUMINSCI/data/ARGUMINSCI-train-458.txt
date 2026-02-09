@@ -1,0 +1,2 @@
+In addition the cost of the animation software must be considered (for example, the Maya API implements a run-time type interpretation system on all operations).
+The cost of the inverse operation is not critical, however, since it is a one time “setup” cost, and the compute time is insignificant compared to the human time required to sculpt the desired deformations.

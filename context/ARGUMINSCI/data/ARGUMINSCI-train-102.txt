@@ -1,0 +1,2 @@
+Another direction of research performs fluid simulations based on arbitrary elements.
+Clausen et al. [2013] and Misztal et al.

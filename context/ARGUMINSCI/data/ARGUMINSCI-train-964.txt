@@ -1,0 +1,3 @@
+Related work</H1>
+        Recent research in computer animation focused on techniques for remapping existing data to given specifications of a new scenario.
+In this paper, we build on the research in both physicsand interpolation-based motion editing methods.

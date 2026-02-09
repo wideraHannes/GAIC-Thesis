@@ -1,0 +1,3 @@
+Strain Metrics</H2>
+        Most elastic cloth models separate membrane (i.e., stretch and shear) and bending deformation energies.
+In both cases, deformation energy density can be described by the product of strain (ε) and stress (σ), i.e., W = 2 1 σ · ε.

@@ -1,0 +1,9 @@
+Copyright # 2007 John Wiley &amp; Sons, Ltd.
+Received: 14 May 2007; Accepted: 15 May 2007</Abstract>
+	Keywords: 15 May 2007 Keywords: character animation; skin deformation; physically based animation; barnetwork form finding
+    
+    
+      
+        <H1>Introduction</H1>
+      
+      Skin deformation resulting from the movement of characters, such as humans and animals, is one of the most interesting and challenging topics in computer animation.

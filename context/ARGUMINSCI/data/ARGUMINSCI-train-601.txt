@@ -1,0 +1,8 @@
+Skeletal subspace deformation (SSD)</H2>
+        SSD [MTLT88] is based on the weighted blending of an affine transformation of each joint by equation 2.
+        
+          2
+          n joint v a = S(v 0 ) = ( ∑ w j T j )v 0 j=1
+        
+        where n joint is the number of joints, v a is a vertex in an arbitrary pose p a , v 0 is a vertex in the rest pose, and w j is a joint weight that defines the contribution of joint j’s transformations to the current vertex.
+The weight w j can be assigned by the artist to control deformation and usually ∑ n j=1 joint (w j ) =

@@ -1,0 +1,2 @@
+Dietary intake (protein, energy, fiber) assessed at baseline and at 4, 8, and 12 weeks after starting radiotherapy.
+Repeated-measures analysis of variance done on an intention to treat basis.

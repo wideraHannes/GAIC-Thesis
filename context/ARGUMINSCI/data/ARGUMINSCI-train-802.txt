@@ -1,0 +1,3 @@
+In our context, all the preceding expressions are equivalent, and any can be used to evaluate the advection of pairs of basis fields.
+For domains admitting closed form expressions for Laplacian eigenfunctions, the evaluation can be performed symbolically and is hence
+        for i, j = 1 to N do p = Adv(φ i , Φ j ) // Project the result onto finite basis for k = 1 to N do C k [i, j] = Proj(p, φ k )

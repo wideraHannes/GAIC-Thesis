@@ -1,0 +1,2 @@
+Pressure Equation: Because of the lengthy derivation, the pressure equation is presented as is.
+In summary, conservation of mass is expressed in the compressible equations by the mathematical statement that changes in density for a parcel of fluid are the result of divergence in the velocity field.

@@ -1,0 +1,2 @@
+C ARR , J., B EATSON , R., C HERRIE , J., M ITCHELL , T., F RIGHT , W., M C C ALLUM , B., AND E VANS , T. 2001.
+Reconstruction and representation of 3d objects with radial basis functions.

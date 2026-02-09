@@ -1,0 +1,2 @@
+Desbrun, P.Schröder, A.
+Barr, "Interactive Animation of Structured Deformable Objects", Proceedings of Graphics Interface, 1999.

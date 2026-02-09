@@ -1,0 +1,3 @@
+Thomaszewski, and M.
+Wacker WSI/GRIS University of Tübingen Sand 14, D-72076 Tübingen, Germany {keckeisen, kimmerle, wacker}@gris.uni-tuebingen.de b.thomaszewski@t-online.de
+      <Abstract>In this paper we show how to incorporate effects of wind fields in cloth animations.

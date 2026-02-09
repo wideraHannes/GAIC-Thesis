@@ -1,0 +1,2 @@
+The solution to the linear least squares problem requires solving a system Ak = b, where the size of A is given by the number of unknown stiffness values, |k|.
+In our test examples, this number was always below 10, and we solved the linear systems using LDL factorization.

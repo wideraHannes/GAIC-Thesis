@@ -1,0 +1,2 @@
+Accordingly, dynamics equations are often not satisfied precisely.
+In our formulation, we assume Newtonian dynamics equations are disturbed by Gaussian noise of a standard deviation of σ physics : pr physics ∝ pr(q t |q t , q  ̇ t , u t ) ∝ exp − M ( q t ) q  ̈ t +C( q t , q  ̇ 2σ t )+h( 2 q t )−τ t − f c ( q t ,λ t )

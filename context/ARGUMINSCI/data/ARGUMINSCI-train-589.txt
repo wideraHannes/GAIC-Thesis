@@ -1,0 +1,2 @@
+Forward trace the velocity field to add the weights (1 − β j ) to A for all cells j where β j &lt; 1 by distributing them among the A k j , where k are the cells reached by forward tracing and tri-linear interpolation as before, i.e.
+A k j += (1 − β j )w + jk .

@@ -1,0 +1,2 @@
+For the fluid faces, z ∗ is found by applying all terms of Equation (1) except the pressure term.
+For the fluid-rigid faces, z ∗ is found using a rigid body simulator without pressure forces applied.

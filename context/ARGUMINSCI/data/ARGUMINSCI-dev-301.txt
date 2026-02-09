@@ -1,0 +1,3 @@
+SIGGRAPH 85 Tutorial Notes, ACM, 1985.
+          [4] C.
+Bishop, Neural Networks for Pattern Recognition, Oxford: Clarendon, 1995.

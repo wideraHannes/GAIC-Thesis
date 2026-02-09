@@ -1,0 +1,2 @@
+Table 1 summarizes the percentage success rates (rightmost columns) of learned pre-conditions for a variety of controllers that we use later in our demonstrations.
+To compute accuracy rates, we trained the SVM and NN pre-condition learning algorithms using randomly sampled observations collected from each of the controllers.

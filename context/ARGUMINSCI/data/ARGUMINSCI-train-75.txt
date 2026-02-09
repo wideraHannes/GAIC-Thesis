@@ -1,0 +1,2 @@
+In our system, we used 60-100 football motions that have a strong bias towards motions that run forward.
+However, as the attached video suggest, the randomized search has no problem finding rare motions that turn back to satisfy the constraints.

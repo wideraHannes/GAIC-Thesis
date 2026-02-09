@@ -1,0 +1,3 @@
+ACM Transactions on Graphics 21, 3 (July 2002), 501–508. 2
+          [PG96] P ERLIN K., G OLDBERG A.: Improv: A system for scripting interactive actors in virtual worlds.
+In Computer Graphics (Proceedings of SIGGRAPH 96) (Aug. 1996), Annual Conference Series, ACM SIGGRAPH, pp. 205–216.

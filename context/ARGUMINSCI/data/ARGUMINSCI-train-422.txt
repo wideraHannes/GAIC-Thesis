@@ -1,0 +1,2 @@
+Fig. 4 shows two different colliding directions between two collision clusters CC1 and CC2; one by the average face normal and the other by connecting centers of masses.
+We handle a CC as a sphere mass where the diameter of the sphere reflects the minimum proximity region.

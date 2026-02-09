@@ -1,0 +1,30 @@
+As demonstrated in Table 1 , our method keeps γ in a similar range to that of 
+[LAF11], while 
+[LGF11]
+ has a much larger range, resulting in visible compressibility artifacts.
+Method
+                   Minimum γ
+                   Maximum γ
+                
+              
+              
+                
+                   Our Method
+                   0.627
+                   2.403
+                
+                
+                   [LAF11]
+                   0.627
+                   2.502
+                
+                
+                   [LGF11]
+                   0.271
+                   9.793
+                
+              
+            
+          
+          Method Minimum γ Maximum γ Our Method 0.627 2.403 [LAF11] 0.627 2.502 [LGF11] 0.271 9.793
+          Table 1: Minimum and maximum γ of our method, LAF11 and LGF11 for the situation of Figure 2 .

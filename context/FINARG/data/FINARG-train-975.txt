@@ -1,0 +1,2 @@
+I mean to put it very concretely, take something like Azure Active Directory.
+That's probably the best manifestation of the virtuous cycle that we see in any of the cloud adoption that we have, right.

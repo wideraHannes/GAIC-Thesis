@@ -1,0 +1,2 @@
+To learn indirect mappings, we adopt a memory-based approach which implicitly encodes the desired mapping using a database of semantically meaningful example instances.
+These instances store segments of synchronized control and target motion, which provide examples of how the mapping should be applied to input control motions.

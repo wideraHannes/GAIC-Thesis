@@ -1,0 +1,5 @@
+It is our hope that if a large number of researchers contribute controllers the character can eventually be used as a virtual stuntperson.
+          
+            <H3>6.2.1 Kip move</H3>
+            The kip is an athletic motion often seen in martial arts films and is depicted in Fig. 9 .
+The controller is based on a pose controller whose pre-conditions include a variation of supine positions.

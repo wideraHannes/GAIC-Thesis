@@ -1,0 +1,2 @@
+The estimated median overall survival times for RS + WBRT and S + WBRT patients were 6.2 and 2.8 months, respectively (hazard ratio 0.53, 95% confidence interval 0.20-1.43, P = 0.20).
+Corresponding median failure-free survival times were 3.1 and 1.7 months (P = 0.20).

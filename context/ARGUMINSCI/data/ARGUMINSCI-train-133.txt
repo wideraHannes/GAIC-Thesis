@@ -1,0 +1,4 @@
+Despite this, most character animation in interactive applications, such as video games, is based on a geometric skeletal deformation technique commonly referred to as linear blending, or matrix palette skinning, or Skeletal-Subspace Deformation (SSD), in which vertex locations are weighted averages of points in several coordinate frames (see 
+[Magnenat-Thalmann et al. 1988; Magnenat-Thalmann and Thalmann 1991]).
+One alternative is to store a large database of character poses, and interpolate between them 
+[Maestri 1999].

@@ -1,0 +1,11 @@
+To remove ambiguities, we would like to constrain the generated motion to lie in the space of natural human motions by imposing a prior on the generated motion:
+          
+            10
+            E prior = − ln p(H)
+          
+          
+            10
+            = − ln p(x 1:T , u m+1:T )
+          
+          Based on the statistical dynamic equation (Equation 4), the current system state x t only depends on the previous system states x t−m:t−1 and the current control input u t .
+We have p(H) = p(x 1:T , u m+1:T ) T = t=m+1 p(x t |x t−1:t−m , u t ) · p(x 1:m , u m+1:T ) (11) We assume that the likelihood of the first term on the right side of Equation 11 is measured by the deviation of the statistical dynamic equation (Equation 4).

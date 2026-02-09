@@ -1,0 +1,2 @@
+This in particular is a problem for applications that require motion to be synthesized dynamically, such as interactive environments.
+Our goal is to retain the realism of motion capture while also giving a user the ability to control and direct a character.

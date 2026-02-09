@@ -1,0 +1,2 @@
+First, the recent regulatory initiatives like GDPR and now CCPA have impacted, and we expect they'll continue to impact our ability to use such signals.
+Secondly, mobile operating systems and browser providers such as Apple and Google have announced product changes and future plans that will limit our ability to use those signals.

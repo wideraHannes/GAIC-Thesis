@@ -1,0 +1,2 @@
+Moreover, as our goal is to have as few input models E i as possible, RBFs are suited because they work well with sparse input data sets.
+RBFs extend easily to high dimensional domains, enabling the capture of multi-joint coupling effects.

@@ -1,0 +1,2 @@
+Methods: The data were derived from the Finnish Regional Health and Well-being Study (ATH) collected by postal and Internet-based questionnaires in 2014–2015.
+The random sample was selected from the Finnish National Population Register.

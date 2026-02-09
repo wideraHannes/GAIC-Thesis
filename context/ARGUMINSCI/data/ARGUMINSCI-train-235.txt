@@ -1,0 +1,4 @@
+The simultaneous collision handling method, proposed by Baraff 
+[ 1 ]
+, resolves multiple rigid body collisions by solving a system of linear inequalities, where the system of linear inequalities is based on the colliding relationships between rigid objects.
+As we treat CCs as mass balls, we adapt this approach for the cloth after collision body If collision, N i before is resolution the number collision, given problem. v i of , , and colliding we have v A i + CC is to bodies, the is find considered velocity v v i + i , for is the of all as the velocity i a 1 body. same i of body N the .

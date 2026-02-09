@@ -1,0 +1,2 @@
+Other technologies like inverse kinematics, forward kinematics, motion capture etc. are built on this hierarchical system of joints.
+It is plain to see why the joint-based skeleton system is thoroughly integrated into the current production pipeline in animation.

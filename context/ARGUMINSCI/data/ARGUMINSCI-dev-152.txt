@@ -1,0 +1,2 @@
+It is also observed that despite overheads in computing aggregate intermediate terms, the linear time method shows a computational advantage with as few as 5 degrees of freedom. 4.5 The Cost of a Linear Time Algorithm One obvious question is why has this technique of rewriting the recursion for fast computation not been explored in the robotics community?
+One possible reason is that there is a cost to this approach that may be higher for robotics applications than for graphics applications.

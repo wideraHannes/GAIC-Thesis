@@ -1,0 +1,2 @@
+For example, we can adapt a forward leaping movement, to a collection of leaping movement in different directions including a backward leap, or a 360 ◦ leaping spin.
+Using our motion editing framework, we show how a family of dynamic movements can be synthesized based on the animator’s needs for interactive control.

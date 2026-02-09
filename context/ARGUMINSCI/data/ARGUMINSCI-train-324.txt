@@ -1,0 +1,2 @@
+Second, the Kawabata system does not measure dynamic cloth parameters, e.g. air drag or damping, which are of key importance for moving cloth.
+One promising approach for modeling cloth parameters is to automatically search for parameters that match real, observed cloth.

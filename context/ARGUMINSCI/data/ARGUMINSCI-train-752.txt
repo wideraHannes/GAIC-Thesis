@@ -1,0 +1,5 @@
+Taking the bottom row of equation (5) and substituting x = h(v 0 + v) yields v = hM −1 f 0 + ∂x ∂f h(v 0 + v) + ∂v ∂f v .
+Letting I denote the identity matrix, and regrouping, we obtain
+        
+          6
+          I − hM −1 ∂v ∂f − h 2 M −1 ∂x ∂f v = hM −1 f 0 +

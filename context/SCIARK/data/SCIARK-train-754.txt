@@ -1,0 +1,2 @@
+We fitted 5 multivariable binomial multilevel logistic regression models using the MLWin 3.03 module in Stata.
+The estimation algorithms adopted was the first order marginal quasi-likelihood linearisation using the iterative generalised least squares.

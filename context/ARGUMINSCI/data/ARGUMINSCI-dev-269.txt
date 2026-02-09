@@ -1,0 +1,2 @@
+These equations show that the mean function for the testing output is a linear combination of the training output z, and the weight of each input is directly related to the correlation between the testing input Y ∗ and the training input Y .
+Meanwhile, the uncertainty for every predictive output (i.e. covariance function) is also estimated.

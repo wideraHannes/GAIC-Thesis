@@ -1,0 +1,2 @@
+In instrumental variable analysis estimating effects among the subgroup of participants who attended any GLI visits, the effect of GLI attendance was 2.30% weight loss at six months (95% CI, 0.30-4.30%; P = 0.02), and 2.07% weight loss at 12 months (95% CI, 0.25-3.88%; P = 0.02).
+We detected no significant blood pressure or cholesterol effects.

@@ -1,0 +1,2 @@
+Hence, given a wind flow represented by a velocity field in the scene we calculate the forces which are exerted on the simulated objects.
+In this section, we briefly describe the model we use to compute the effective aerodynamic forces such as wind force and air resistance, mainly following

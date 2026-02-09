@@ -1,0 +1,5 @@
+The computation of the ghost fluid ρ values is independent of the right-hand side b, so we will restrict the discussion to the left hand side.
+We denote the components of the local symmetric 4 × 4 matrix on the left hand side with:  λ 1 α β γ 
+        
+          10
+          α λ 2 a b 

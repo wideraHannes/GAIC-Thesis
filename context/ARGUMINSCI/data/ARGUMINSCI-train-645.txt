@@ -1,0 +1,7 @@
+After defining the displacement of each pose, the displacement at an arbitrary pose can be calculated by RBF (Radial Basis Function) 
+[LCF00] or normalized radial basis function 
+[KM04] interpolation of the example poses’ displacements.
+The displacement d a of a vertex in an arbitrary pose p a can be calculated as n pose
+        
+          4
+          d a = D(p a ) =

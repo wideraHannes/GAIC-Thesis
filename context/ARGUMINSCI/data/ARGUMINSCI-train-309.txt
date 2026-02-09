@@ -1,0 +1,2 @@
+The waving motion of fabrics in simulation is affected by their dynamic parameters.
+We see from the accompanying videos that real fabrics exhibit a wide range of interesting motions.

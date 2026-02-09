@@ -1,0 +1,6 @@
+Using frame coherency to reduce computation cost has been explored by Zhang et al 
+[23].
+In this work, we propose a data-driven collision detection method; we use the pre-simulated sequence to localize the collision checks to neighboring cloth regions that have high probability to collide.
+        
+        
+          <H2>2.3.

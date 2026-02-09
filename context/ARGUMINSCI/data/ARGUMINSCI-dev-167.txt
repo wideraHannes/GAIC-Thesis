@@ -1,0 +1,8 @@
+Such models have been used in facial animation 
+[Waters 1987; Lee et al. 1995; Sifakis et al. 2005], simulation of the human hand 
+[Sueda et al. 2008], neck 
+[Lee and Terzopoulos 2006], torso 
+[Zordan et al. 2006], and the complete upper body 
+[Lee et al. 2009].
+Hase et al. [2003]
+ optimize a CPG-based (central pattern generator) locomotion controller [Taga 1995] for 3D musculoskeletal models without tendon or activation dynamics, but their results were not compared to human kinematic and dynamic gait patterns.

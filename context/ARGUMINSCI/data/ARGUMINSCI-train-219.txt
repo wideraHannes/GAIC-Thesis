@@ -1,0 +1,2 @@
+The equations of motion cannot be solved analytically, except in simplified situations, and therefore need to be solved numerically.
+Numerical integration methods for systems of equations predate the modern computer as well, and John von Neumann envisioned using the computer to solve the equations of motion for weather prediction in the 1940’s.

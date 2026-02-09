@@ -1,0 +1,2 @@
+Data from RAcE baseline and endline household surveys, Demographic and Health Surveys, and routine health service data were used in each LiST model.
+The models yielded estimated change in under-five mortality rates, and estimated number of lives saved per year by malaria, pneumonia and diarrhea treatment.

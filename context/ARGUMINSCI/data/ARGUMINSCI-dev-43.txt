@@ -1,0 +1,2 @@
+A force field with discontinuous first derivatives, in turn, yields artifacts such as the so called cooking of particles in concave regions and reduced stability of the simulation.
+The source of the discontinuity in the first derivatives is the minimum operator in Eqn. (8).

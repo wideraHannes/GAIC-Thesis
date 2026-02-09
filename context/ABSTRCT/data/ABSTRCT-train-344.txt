@@ -1,0 +1,2 @@
+Patients on Arm B reported a clinically significant decline in QOL between baseline and week 9/10 (.71 s.d.), and a significantly lower level of QOL than Arm A (p = 0.01).
+As hypothesized, Bcl-2 levels decreased with CRA/IFN therapy only in Arm B (p = 0.03).

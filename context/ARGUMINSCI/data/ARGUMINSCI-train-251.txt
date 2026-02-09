@@ -1,0 +1,7 @@
+To model repulsion and adhesion, we use the following traction function
+          
+            15
+            τ ra (r) = k (h−r) h 4 2 −(h−r r 0 (2h−r 0 ) 2 0 (h−r) ) 2 if r &lt; h , 0 otherwise
+          
+          where h is the interaction range and k controls the stiffness of the interaction.
+The traction has an order four repulsion term and an order two attraction term.

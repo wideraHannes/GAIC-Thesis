@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Document xmlns:gate="http://www.gate.ac.uk" name="A37_C07_Efficient_Simulation_of_Inextensible_Cloth_CITATION_PURPOSE_M_v1.xml">
+
+
+  
+    5dea618cb3c2811ff0b2ff5618860302e73237c3b57391624fcf5c334257b987
+    3wy5
+    http://dx.doi.org/10.1145/1276377.1276438
+  
+  
+    
+      
+        <Title>Efficient Simulation of Inextensible Cloth</Title>
+      
+      
+        
+          Rony Goldenthal
+        
+        
+          David Harmon 1 Raanan Fattal 3 Michel Bercovier 2 Eitan Grinspun 1 1 Columbia University 2 The Hebrew University of Jerusalem 3 University of California
+          2
+        
+        
+          Berkeley
+        
+      
+      <Abstract>Many textiles do not noticeably stretch under their own weight.

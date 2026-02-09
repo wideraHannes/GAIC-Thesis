@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Document xmlns:gate="http://www.gate.ac.uk" name="A13_M04_Efficient_Synthesis_of_Physically_Valid_Human_Motion_CITATION_PURPOSE_M_v1.xml">
+
+
+  
+    288136cc9d1dd213791844a2dd13ea24b67dc361a31dd70f4929a4beb6fc1883
+    3vta
+    http://dx.doi.org/10.1145/882262.882286
+  
+  
+    
+      To appear in the ACM SIGGRAPH 2003 conference proceedings
+      
+        <Title>Efficient Synthesis of Physically Valid Human Motion</Title>
+      
+      Anthony C.
+Fang Department of Computer Science Brown University ∗
+      <Abstract>

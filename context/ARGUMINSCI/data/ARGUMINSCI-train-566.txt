@@ -1,0 +1,2 @@
+The noise term is drawn from N (0, σ 2 ).
+For convenience, the inputs are stacked into a d×N matrix Y = [y 1 , y 2 , ..., y N ] and the outputs are stacked into a N -dimensional vector z = [z 1 , z 2 , ..., z N ].

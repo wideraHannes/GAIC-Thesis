@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Document xmlns:gate="http://www.gate.ac.uk" name="A20_M13_Physically-Valid_Statistical_Models_for_Human_Motion_Generation_CITATION_PURPOSE_M_v1.xml">
+
+
+  
+    181cf968bd65a1734132d5df87565b60dfef6cd03a32fc7f0fdba0b5ac8d6d1a
+    3vtw
+    http://dx.doi.org/10.1145/1966394.1966398
+  
+  
+    
+      
+        <Title>Physically-Valid Statistical Models for Human Motion Generation</Title>
+      
+      Xiaolin Wei Jianyuan Min Texas A&amp;M University
+      
+        
+        Figure 1: Combining statistical motion priors and physical constraints for human motion generation: (a) walking with a heavy shoe; (b) resistance running; (c) stylized walking; (d) running→walking→jumping.

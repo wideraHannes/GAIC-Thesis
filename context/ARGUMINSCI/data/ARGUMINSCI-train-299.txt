@@ -1,0 +1,7 @@
+Reeves 
+[ 8 ]
+ introduced particle systems as a technique for modeling fuzzy objects twenty years ago, a variety of special purpose, partice based fluid simulation techniques have been developed in the field of computer graphics.
+Desbrun and Cani 
+[ 9 ] where among the first to use Smoothed Particle Hydrodynamics (SPH) 
+[ 10 ]
+ to derive interaction forces for particle systems.

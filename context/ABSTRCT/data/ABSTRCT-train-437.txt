@@ -1,0 +1,2 @@
+Both measures were responsive; out of 24 changes over time, 19 were in the expected direction for the linear analogue self-assessment scale (p < or = 0.05 for 9 of 19) and 17 for the adjective checklist (p < or = 0.05 for 10 of 17).
+The linear analogue self-assessment scale was less but significantly efficient for detection of treatment effects, with relative efficiency estimates ranging from 0.16 to 2.45 and a median of 0.66 among the comparisons with relatively stable estimates (/t/ > or = 1.0) and more efficient for recurrence than the adjective checklist.

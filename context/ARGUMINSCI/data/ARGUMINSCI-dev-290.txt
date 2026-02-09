@@ -1,0 +1,4 @@
+Yeuhi Abe, C.
+Karen Liu, &amp; Zoran Popović / Momentum-based Parameterization of Dynamic Character Motion
+        
+          Figure 3: Left: Line motion family that varies the translation of a ground stage along a line.

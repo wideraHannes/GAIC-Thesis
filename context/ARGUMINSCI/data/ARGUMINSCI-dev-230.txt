@@ -1,0 +1,8 @@
+With this objective function and our linear time algorithm for computing the constraint Jacobian, we are able to show that physically based optimization can be performed for a 22 degree of freedom character at interactive speeds.
+        2
+        To appear in the ACM SIGGRAPH 2003 conference proceedings
+      
+      
+        <H1>4 Efficient Physics Constraints</H1>
+        Constraints that enforce physical validity can be formulated as linear equality or inequality constraints on aggregate force.
+The aggregate force is a representation of all external forces and torques (excluding gravity) that would have to be applied to the character root to explain the character’s motion.

@@ -1,0 +1,5 @@
+We refer the reader to the texts 
+[Fung, 1965], [Han and Reddy, 1999], and 
+[ Bird et al., 1987 ]
+ for detailed descriptions of several different models for viscoelastic and elastoplastic materials.
+The general approaches we use for introducing elastic forces into the Navier-Stokes equations, and integrating and advecting strain are not completely novel.

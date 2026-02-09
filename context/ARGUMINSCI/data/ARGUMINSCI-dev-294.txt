@@ -1,0 +1,2 @@
+The graph walk is complete when P is sufficiently long.
+A simple way to determine P is to project the root onto the floor at each frame, forming a piecewise linear curve 1 .

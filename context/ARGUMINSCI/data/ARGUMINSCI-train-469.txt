@@ -1,0 +1,2 @@
+While specific methods exist to automate this segmentation for the cases of dance and walk, a more general method is desirable.
+For this, we could begin with a few manually segmented examples and grow the set of example instances by iterative application of our algorithm.

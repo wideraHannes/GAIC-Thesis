@@ -1,0 +1,2 @@
+Mean time to improvement was 39.7 weeks (95% confidence interval [CI], 22.4 to 57.0 weeks) for HBO-treated patients versus 67.9 weeks (95 CI, 48.4 to 87.5 weeks) for controls (P = .03, log-rank test).
+However, complete gingival healing occurred in only 14 of 25 HBO-treated patients (52%) versus 7 of 21 controls (33.3%; P = .203, χ(2) test), and time to healing was 59 weeks (95% CI, 42.8% to 75.8%) for HBO-treated patients versus 70 weeks (95 CI, 52.2% to 88.36%) for controls (P = .32, log-rank test).

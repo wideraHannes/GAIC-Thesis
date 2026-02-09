@@ -1,0 +1,2 @@
+Progression-free survival (PFS) of the patients in the Tomudex arm was statistically lower compared to that of patients treated with LV5FU2 or ldLV5FU2 (combined group; p = 0.013, log rank test).
+In conclusion, Tomudex is more toxic and yields shorter PFS than infusional 5FU.

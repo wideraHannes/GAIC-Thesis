@@ -1,0 +1,2 @@
+In heavily folded regions, often neighboring markers on the image do not neighbor on the surface of the cloth.
+As such, these regions are not going to match.

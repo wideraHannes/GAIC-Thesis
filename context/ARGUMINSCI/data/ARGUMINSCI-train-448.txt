@@ -1,0 +1,3 @@
+Since we do not compute internal torques for joints, scaling and convergence issues are less critical in our optimization framework.
+Our physics-based motion editing approach is based on the momentum constraints introduced by Liu and Popović 
+[LP02].

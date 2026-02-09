@@ -1,0 +1,4 @@
+Liu and Popović [2002]
+ show that some dynamic effects can be preserved by enforcing patterns of linear and angular momentum, which does not require computation of dynamic parameters such as contact forces and joint torques.
+We add to this body of work the insight that it is possible to incorporate constraints on physics as efficiently as constraints on kinematic parameters and an O(D) algorithm for computing first derivatives of a broad range of physics constraints for improved performance in a optimization context.
+        free parameters x in numerical optimizer x initial motion out h, C objectives x dh/dx constraints dC/dx view / edit problem desc.

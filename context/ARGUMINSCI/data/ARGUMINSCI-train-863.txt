@@ -1,0 +1,2 @@
+For notational convenience, we choose Adv(·, ·) to represent the advection term, which is defined as Adv(u, ω) := curl (ω × u).
+We perform Galerkin projection of the Navier-Stokes equations onto a Laplacian eigenfunction basis by substituting the expansions ω = i ω i φ i , u = j ω j Φ j and ω  ̇ = k ω  ̇ k φ k into Eq. 6 and rearranging terms through linearity of operators N N N ω  ̇ k φ k = ω i ω j Adv(Φ i , φ j ) + ν ∆ω i φ i + curl (f ). k i j i We discuss each right hand term separately.

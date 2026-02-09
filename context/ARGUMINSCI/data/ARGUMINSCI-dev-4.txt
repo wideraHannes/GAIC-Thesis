@@ -1,0 +1,2 @@
+All our methods achieve real-time performance due to efficient pose-space interpolation of low-complexity linear elastic forces and modal reduction of either linear or semi-nonlinear StVK forces.
+Comparing our method with the performance of single (pose-independent) elastic models, it is clear from Table 1 that our method has only a marginal extra cost, due to efficient polynomial interpolation of the dynamic morph target models.

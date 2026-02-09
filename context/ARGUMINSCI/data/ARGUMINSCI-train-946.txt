@@ -1,0 +1,2 @@
+The training data sets for stylized walking included normal walking and ten distinct walking styles.
+The system constructed a single motion model from the training data sets and used it to generate various forms of stylized walking such as “sneaky” walking and “proud” walking (Figure 1(c)).

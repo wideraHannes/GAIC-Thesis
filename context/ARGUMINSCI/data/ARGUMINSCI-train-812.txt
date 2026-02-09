@@ -1,0 +1,2 @@
+E NRIGHT , D., F EDKIW , R., F ERZIGER , J., AND M ITCHELL , I. 2002a.
+A hybrid particle level set method for improved interface capturing.

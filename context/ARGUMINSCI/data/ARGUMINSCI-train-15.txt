@@ -1,0 +1,2 @@
+To resolve collisions, we first divide the colliding particles into parts and build a system of linear equations based on the collision relationships between these parts.
+Then we solve the whole system using the law of N-body momentum conservation.

@@ -1,0 +1,2 @@
+However, since the joint weights can be pre-calculated, we can reduce the number of sample poses needed in real-time PSD computation.
+PCA (Principal Component Analysis) of pose space can yield an orthogonal basis called “ Eigendisplacement ” [KJP02].

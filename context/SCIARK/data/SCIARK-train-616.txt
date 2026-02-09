@@ -1,0 +1,3 @@
+Effect of production system and farming strategy on greenhouse gas emissions from commercial dairy farms in a life cycle approach
+Abstract: This paper documents and illustrates a model to estimate the greenhouse gas (GHG) emissions and land use on commercial dairy farms.
+Furthermore, a method of allocating total farm emissions into meat and milk products was developed and, finally, potential mitigation options at farm scale were identified.

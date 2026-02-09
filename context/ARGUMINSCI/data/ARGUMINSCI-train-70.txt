@@ -1,0 +1,3 @@
+More recently, Liu and her colleagues [2005]
+ introduced a novel optimization framework— Nonlinear Inverse Optimization—for optimizing appropriate parameters of the objective function from a small set of motion examples and then used the estimated parameters to synthesize a new locomotion.
+Our work also uses a trajectory optimization framework but replaces the physical dynamic model with a statistical dynamic model computed from a motion capture database.

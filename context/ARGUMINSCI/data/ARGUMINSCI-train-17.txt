@@ -1,0 +1,2 @@
+At each stage, the number of recovered bits must stay above the marker complexity (11.6 bits for our pants).
+We are able to obtain significantly more information per unit cloth surface area than previous work.

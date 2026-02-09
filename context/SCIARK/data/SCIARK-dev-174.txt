@@ -1,0 +1,3 @@
+In addition, no previous study has: analysed a sample from a large single cohort; used the recently released Illumina EPIC array (which assesses ~850,000 CpG loci); adjusted methylation data and phenotype for smoking history, or used both prevalent and incident COPD electronic health record data.
+Added value of this study
+To our knowledge, this is the largest single cohort epigenome-wide association study (EWAS) of respiratory function and COPD to date (N=3,791).

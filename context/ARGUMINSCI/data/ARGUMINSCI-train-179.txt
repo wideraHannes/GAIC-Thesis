@@ -1,0 +1,2 @@
+Although these do not aim to discover control by example, they have nevertheless provided inspiration for our work.
+An additional distinction is that these methods do not use continuous control from human performance and focus on sparser specifications such as keyframes and nontemporal paths.

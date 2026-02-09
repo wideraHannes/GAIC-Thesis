@@ -1,0 +1,2 @@
+The vectors τ , f c , and f e represent joint torques, contact forces, and external forces, respectively.
+The vector u represent the generalized forces, which can be either calculated from kinematic data or resultant forces of join torques, contact forces, and external forces.

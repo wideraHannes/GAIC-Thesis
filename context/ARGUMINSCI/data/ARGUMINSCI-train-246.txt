@@ -1,0 +1,5 @@
+From this definition, a more accurate pose distance is obtained and it generates better skinning in arbitrary poses, especially when the poses are far from the examples.
+Figure 1 shows result of three different skinning methods, but we entrust the detail comparison between quality of each algorithm to their original papers [MTLT88,LCF00,KM04].
+      
+      
+        <H1>4.

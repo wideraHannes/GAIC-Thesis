@@ -1,0 +1,2 @@
+The Wilcoxon rank sum test was used to compare summary scores between the two interventions.
+Of 168 survey responders, 60.7% had BT (9.5% randomly assigned) and 39.3% had RP (9.5% randomly assigned).

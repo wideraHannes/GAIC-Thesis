@@ -1,0 +1,3 @@
+Euler (Per CG iter.) 16 μs 2.5 μs
+        The most important fact to note is that the application of the Backward Euler method with a reduced number of Conjugate Gradient iterations compares very well with the traditional explicit methods.
+With one iteration only, it is barely worse than the very simple explicit Midpoint method.

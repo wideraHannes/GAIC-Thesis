@@ -1,0 +1,4 @@
+Our method provides the ability to sculpt the dynamic morph targets directly and produces a dynamic model that is not restricted to a given animation; our model can be plugged into any simulated environment and be subject to external forces.
+Modal reduction has proven useful to increase performance in posespace deformation methods 
+[Kry et al. 2002] as well as in physically based methods 
+[Hauser et al. 2003; Choi and Ko 2005].

@@ -1,0 +1,3 @@
+Similar to [Chai and Hodgins 2007]
+, the system allows the user to specify various forms of kinematic constraints throughout the motion or at isolated points in the motion.
+Typically, the user can define a sparse set of key frames as well as contact constraints to generate a desired animation.

@@ -1,0 +1,3 @@
+Accurate collision response on polygonal meshes.
+In Computer Animation 2000, pages 154–163, May 2000.
+          40.

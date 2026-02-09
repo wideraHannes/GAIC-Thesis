@@ -1,0 +1,2 @@
+Depending on the number of eigendisplacements used, the weighted eigendisplacement vector accumulations are about as costly as the weighted transform matrix-vector multiplyaccumulate operations.
+Current vertex programs limit per vertex data to 16 4-tuples of floats.

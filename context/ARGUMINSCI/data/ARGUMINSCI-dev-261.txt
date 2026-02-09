@@ -1,0 +1,2 @@
+We could try to advect the mesh points through the flow field, but would quickly encounter significant topological difficulties.
+Instead, we avoid topological issues by updating the surface using an implicit representation.

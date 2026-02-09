@@ -1,0 +1,2 @@
+This approximation was experimentally evaluated using side view IR imagery of temperature fields beneath an evaporative surface.
+The analytical approximation reveals dependency of thermal decay depth on the magnitude of evaporative flux which was also sensitive to convection and radiation intensity.

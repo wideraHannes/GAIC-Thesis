@@ -1,0 +1,2 @@
+When the optimization does not converge, we can usually trace it back to the problem setup.
+Sometimes it is due to overconstrained equations (setup error).

@@ -1,0 +1,2 @@
+To make this motion appear more natural, we would need to consider proper timing for the running stride, a more accurate foot model, torques at some of the joints, and perhaps also aspects of style that are not driven by physics or energy.
+Complexity in the number of degrees of freedom of the character is not the only concern in physically based optimization.

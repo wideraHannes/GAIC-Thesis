@@ -1,0 +1,2 @@
+We would also like to add edges between spheres that do not intersect if that edge is well inside the surface and if that edge is “essential.” For example, the neck and left shoulder spheres of the character in Figure 3 are disjoint, but there should still be an edge between them.
+The precise condition Pinocchio uses is that the distance from any point of the edge to the surface must be at least half of the radius of the smaller sphere, and the closest sphere centers to the midpoint of the edge must be the edge endpoints.

@@ -1,0 +1,2 @@
+To this end, the study employs two dynamic panel data estimation techniques: (i) panel generalized method of moments in which slope coefficients are not allowed to vary, and (ii) the dynamic common correlated effects estimator in which heterogeneity and cross-sectional dependence is taken into consideration.
+The results obtained from the both estimators indicate that an increase in renewable energy consumption leads to a decrease in income inequality.

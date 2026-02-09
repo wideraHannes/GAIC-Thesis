@@ -1,0 +1,2 @@
+However, even decomposing E into sparse energy functions is not enough.
+Energy functions are an undesirable starting point because sensible damping functions cannot be derived from energy functions.

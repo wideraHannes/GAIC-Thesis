@@ -1,0 +1,2 @@
+While simple to implement, this approach suffers from poor convergence since each displacement may stretch other incident springs.
+Therefore, Provot’s method is used in cases where tight tolerances are not required, e.g.,

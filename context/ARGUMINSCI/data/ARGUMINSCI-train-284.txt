@@ -1,0 +1,2 @@
+In the appendix A, we give one natural cost function C(s i ,t j ) for edge weights.
+We now have: (P st ) i j = C(s ∞ i ,t j ) otherwise. if there is an edge from s i to t j The cost function explained in section A causes the P matrices to have non-infinite entries to form nearly elliptical groups ( figure 2 ).

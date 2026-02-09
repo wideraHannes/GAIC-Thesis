@@ -1,0 +1,8 @@
+The noisy training outputs z and the test output z ∗ are jointly Gaussian:
+        K(Y ∗ , Y ∗ ) K(Y ∗ , Y ) pr(z ∗ , z|Y ∗ , Y ) = N (0, K(Y, Y ∗ ) K(Y, Y ) + σ n 2 I ) (14) Since z is known, this Gaussian can be conditioned on z to obtain the predictive distribution for z ∗ :
+        
+          15
+          pr(z ∗ |z, Y ∗ , Y ) = N (μ, Σ),
+        
+        where μ = K(Y ∗ , Y )[K(Y, Y ) + σ n 2 I] −1 z, Σ = K(Y ∗ , Y ∗ ) − K(Y ∗ , Y )[K(Y, Y ) + σ n 2 I] −1 K(Y, Y ∗ ). (16) A Gaussian process is fully described by its mean and covariance functions.
+These equations show that the mean function for the testing output is a linear combination of the training output z, and the weight of each input is directly related to the correlation between the testing input Y ∗ and the training input Y .

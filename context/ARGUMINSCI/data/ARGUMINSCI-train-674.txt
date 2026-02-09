@@ -1,0 +1,2 @@
+Each sequence becomes a node; there is an edge between nodes for every frame in one sequence that can be spliced to a frame in another sequence or itself.
+A valid path in this graph represents a collection of splices between sequences, as the middle shows.

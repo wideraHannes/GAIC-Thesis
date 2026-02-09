@@ -1,0 +1,2 @@
+Lewis JP, Cordner M, Fong N.
+Pose Space Deformation: a unified approach to shape interpolation and skeleton driven deformation.

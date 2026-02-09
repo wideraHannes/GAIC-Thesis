@@ -1,0 +1,2 @@
+By selecting modes with non-zero or large eigenvalues only, we reduce the dimension of s and define a mapping to the reduced pose descriptor s = U T s s.
+We replace s by s both in the preprocessing stage to solve Eqn. (3) and at runtime for Eqn.

@@ -1,0 +1,5 @@
+Optimal control techniques, introduced to the graphics community by 
+Brotman and Netravali [1988], have been used with success by 
+Pandy and Anderson [2000]
+ for simulating human lower body motions such as optimal height jumping and walking.
+Running times were far from interactive, but show that optimization techniques can produce realistic motion for systems of human-level complexity.

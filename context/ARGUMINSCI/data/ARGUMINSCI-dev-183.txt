@@ -1,0 +1,2 @@
+The second term pr f orcef ield represents the force field priors described in Equation (4).
+The third term pr physics measures how well the generated motion satisfies the physical constraints.

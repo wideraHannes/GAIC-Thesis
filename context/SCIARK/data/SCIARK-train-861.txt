@@ -1,0 +1,2 @@
+The predictive value of anxiety and depression for alcohol relapse was analyzed by logistic and linear regression in both genders.
+Results: Females had higher levels of anxiety and depression than males both at admission and after discharge.

@@ -1,0 +1,2 @@
+For render times, the quote is for producing 640 by 480 images.
+Figure 7: top) Temperature field. middle)

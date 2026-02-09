@@ -1,0 +1,4 @@
+In combination with a suitable method to discretize the problem at hand, they allow for very flexible computational grids.
+One example is the work of Klingner et al. 
+[Klingner et al. 2006]
+ which demonstrated the use of a Stable Fluids based solver for tetrahedral grids conforming to object boundaries.

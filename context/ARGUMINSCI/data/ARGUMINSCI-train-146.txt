@@ -1,0 +1,2 @@
+Any controller that can answer these queries may be added to a pool of controllers managed by a supervisor controller whose goal is to resolve more complex control tasks.
+An important technical contribution within our controller composition framework is an explicit model of pre-conditions.

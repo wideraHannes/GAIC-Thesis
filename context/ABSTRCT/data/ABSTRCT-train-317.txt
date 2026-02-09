@@ -1,0 +1,2 @@
+Although the IOP-lowering effect during the study was slightly larger with latanoprost, this difference was clinically small and the noninferiority of tafluprost to latanoprost over all diurnal IOP measurements was shown with anova and almost reached with ancova (upper limits of the 95% confidence intervals 1.38 and 1.52 for the overall period, respectively).
+The noninferiority limit was 1.5 mmHg.

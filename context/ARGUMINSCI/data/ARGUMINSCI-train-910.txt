@@ -1,0 +1,2 @@
+Instead, we can use texture memory to send data to the fragment program.
+Information needed in the fragment program is packed into texture maps and stored into texture memory.

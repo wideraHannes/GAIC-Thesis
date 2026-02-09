@@ -1,0 +1,2 @@
+Most bicyclist/motorcyclists were not wearing helmets (70.0%, 245/350) and 51.1% of motor vehicle passengers (758/1483) were not restrained.
+Compared to motor vehicle passengers, pedestrians (adjusted OR 2.38, 95% CI 1.41-3.99), bicyclists (adjusted OR 2.12, 95% CI 1.04-4.32) and motorcyclists (adjusted OR 6.09, 95% CI 2.04-18.24) were more likely to sustain severe injuries.

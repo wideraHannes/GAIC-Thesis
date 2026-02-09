@@ -1,0 +1,3 @@
+A case study analysis is conducted for a sample cluster of 3 building sand 3 electric vehicles, located in a Mediterranean city (Naples, Italy) with the aim at conducting the proof of concept.
+Simulation results show that the proposed V2B2 scheme enhances the match between the on-site renewable generation and the whole system demand, i.e.
+buildings and electric vehicles’ needs, by reducing the grid operation and boosting the system economic convenience.

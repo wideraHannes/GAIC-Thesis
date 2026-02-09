@@ -1,0 +1,7 @@
+E.g., Figure 1 showcases a simulation where smallest and largest cells differ by a factor of 128.
+In all of the examples in this paper, the sizing function is defined as a combination of five different metrics:
+        
+          15
+          S(x) = max ( d(x), V (x, min(κ liquid (x), κ solid (x), e(x)) )
+        
+        where x is the position of a point in space, and d(x) encodes the depth of the liquid by returning the absolute level set value of the liquid surface.

@@ -1,0 +1,7 @@
+We extend the model to learn an efficient and low-dimensional representation of human motion and use it to generate an animation that achieves the goal specified by the user.
+        
+      
+      
+        <H1>3 Overview</H1>
+        The key idea behind our approach is that motion priors learned from prerecorded motion data can be used to create natural human motion that matches constraints specified by the user.
+The combination of the motion prior and the user’s constraints provides sufficient information to produce motion with a natural appearance.

@@ -1,0 +1,2 @@
+This justifies our use of interpolation basis functions since the total cost of constructing and evaluating the RBF interpolant for half a dozen poses is negligible.
+The interpolated eigendisplacement coordinates for a new pose are computed as α  ̃ jk = ∑ λ q jk φ (r jq ) q∈P j where r jq is the distance of joint j in the new pose from its setting in pose q, and the λ q jk for q ∈ P j are given by the solution to the linear system, α jk p = ∑ λ q jk φ (r p jq ), for p ∈ P j . q∈P j

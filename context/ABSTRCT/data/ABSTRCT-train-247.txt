@@ -1,0 +1,2 @@
+The ICUR for epoetin-alfa treatment was pounds 8,851 per QALY, with a 99% probability of a positive net benefit in QALYs (net benefit = 0.4805 years of perfect life) and a 94% probability of being acceptable using a threshold ICUR of pounds 30,000/QALY.
+The main cost drivers distinguishing epoetin-alfa from placebo were the costs of drug and patient care due to increased survival.

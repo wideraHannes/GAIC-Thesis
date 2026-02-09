@@ -1,0 +1,2 @@
+Patients receiving concomitant and maintenance temozolomide + radiotherapy had significantly improved overall survival.
+The hazard ratio was 0.63 (95% confidence interval, 0.52-0.75; log-rank, P < 0.0001).

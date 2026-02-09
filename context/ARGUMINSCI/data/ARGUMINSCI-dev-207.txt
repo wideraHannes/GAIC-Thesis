@@ -1,0 +1,3 @@
+In Rendering Techniques 2002: 13th Eurographics Workshop on Rendering (June 2002), pp. 233–246. 8
+          [Hut73] H UTCHINSON A.: Labanotation: The System of Analyzing and Recording Movement, third ed.
+Routledge, New York, 1973.

@@ -1,0 +1,2 @@
+Patients younger than 85years old, with a renal clearance of 30-60ml/min/1.73m2, who were candidates for PCI for all clinical indications except for primary PCI, were allocated 1:1 to RIPC or to standard therapy.
+The primary endpoint was incidence of CIN.

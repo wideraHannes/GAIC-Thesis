@@ -1,0 +1,4 @@
+Integration Methods</H1>
+      
+      The choice of the adequate integration method has to be carried out using various considerations related to the kind of problem to be simulated.
+Among those considerations, there are: * The size of the problem, mostly related to the number of particles used to describe the mechanical system. * The desired accuracy, which reflects the allowable numerical tolerance between the computed solution and the theoretical evolution expected from the mechanical model. * The simulation context, which can either be an extensive computation of the motion along time requiring accurate evaluation of all the dynamical factors, or a simple relaxation process where the simulation has to converge to the static rest state as quickly as possible. *

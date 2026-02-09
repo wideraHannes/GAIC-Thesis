@@ -1,0 +1,2 @@
+Extended free-form deformation: a sculpturing tool for 3D geometric modeling.
+In Proceedings of the 17th Annual Conference on Computer Graphics and Interactive Techniques, SIGGRAPH ’90 (Dallas, TX, USA).

@@ -1,0 +1,2 @@
+Pre-conditions are a set of conditions over the state of the character and the environment.
+If these conditions are met then the controller can operate and possibly enable the character to satisfy the post-conditions.

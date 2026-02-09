@@ -1,0 +1,2 @@
+An extreme example of this situation is the passive swing of a multilink chain.
+Minimizing accelerations while maintaining physics constraints would produce a result that was valid for the body as a whole but would require non-zero torques at the joints—no whipping motion would be seen.

@@ -1,0 +1,5 @@
+In addition, we show that a single physically valid statistical model is sufficient to create physically realistic animation for a wide range of style variations within a particular human action such as “sneaky” walking (Figure 1(c)) or transitions between heterogeneous human actions such as running→walking→jumping ( Figure 1(d) ).
+We evaluate the performance of our model by comparing with ground truth data as well as alternative techniques.
+      
+        <H1>2 Background</H1>
+        We introduce a physically valid statistical motion model that combines physical laws and statistical motion priors and use it to create physically realistic animation that achieves the goals specified by the user.

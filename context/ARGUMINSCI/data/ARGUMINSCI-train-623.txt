@@ -1,0 +1,2 @@
+We perform optimization on two trials for each fabric; the results are shown in Fig. 8 and Fig. 9 .
+The two trials have different separation distances between the top corners.

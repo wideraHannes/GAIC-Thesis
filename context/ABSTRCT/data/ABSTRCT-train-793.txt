@@ -1,0 +1,2 @@
+Objective response rates were 66.7% for patients in the high-dose group and 64.4% for patients in the AT arm (P = .82).
+In an intent-to-treat analysis, there were no significant differences between the two treatments in median time to progression (HDCT, 11.1 months; AT, 10.6 months; P = .67), duration of response (HDCT, 13.9 months; AT, 14.3 months; P = .98), and overall survival (HDCT, 26.9 months; AT, 23.4 months; P = .60).

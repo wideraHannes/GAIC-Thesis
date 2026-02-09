@@ -1,0 +1,2 @@
+Extensive research has been carried out on different types of fuel cells, including direct alcohol fuel cells, proton exchange membrane fuel cells, solid oxide fuel cells, hydrogen fuel cells, alkaline fuel cells, and phosphoric acid fuel cells for increased power generation [1,2].
+Although these fuel cells have a high operating efficiency, this benefit is somewhat offset by (i) the limited viability and expense of catalysts, (ii) corrosive electrolytes, and (ii) high operating temperatures.

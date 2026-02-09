@@ -1,0 +1,2 @@
+The black curve is the actual position of the center of mass on each frame.
+Image 3 shows motion formed by having the character switch from walking to sneaking halfway down the path.

@@ -1,0 +1,5 @@
+One important recent contribution is SIMBICON 
+[Yin et al. 2007], a remarkably robust 3D humanoid locomotion controller based on the balance control of Raibert and Hodgins [1991].
+A num- ber of projects have since focused on expanding the controller repertoire for simulated bipeds 
+[Jain et al. 2009; Coros et al. 2010; de Lasa et al. 2010] and on locomotion in complex environments 
+[Mordatch et al. 2010; Wu and Popović 2010].

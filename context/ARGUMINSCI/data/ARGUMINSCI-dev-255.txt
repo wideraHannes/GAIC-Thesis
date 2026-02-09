@@ -1,0 +1,2 @@
+Ensuring temporal coherence and avoiding visual artifacts due to the use of regular grids can also be problematic.
+The shortcomings of implicit schemes have spurred interest in explicit methods, i.e. “front tracking”

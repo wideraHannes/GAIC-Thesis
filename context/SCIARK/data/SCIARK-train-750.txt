@@ -1,0 +1,2 @@
+The limitation of the study is that the health dimension ‘maternal mortality ratio’ is part of the GII.
+The maternal mortality ratio itself affects the LE of women in the direction that higher maternal mortality ratios lead to lower life expectancies for women and thus to a reduction of the GGLE.

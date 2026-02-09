@@ -1,0 +1,11 @@
+Observe that for appropriate values of α and γ the viscoelastic fluid actually bounces.
+        
+        
+          <H2>4.1 Governing Equations</H2>
+          Behavior of the viscoelastic fluid is governed by a modified version of the Navier-Stokes equations that includes an additional term for elastic stress.
+At any point in the fluid the fluid’s acceleration is determined by
+          
+            1
+            ∂u = − u T u − p + μ v T u + μ e T + f ∂t ρ ρ ρ ρ
+          
+          where u is the fluid’s velocity at a point in space, p its pressure, ρ its density, μ v its coefficient of viscosity, μ e its elastic modulus, the elastic strain tensor at that point in space, and f includes any other forces such as gravity or vorticity confinement.

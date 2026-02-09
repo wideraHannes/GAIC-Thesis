@@ -1,0 +1,2 @@
+In secondary analyses not adjusted for multiple comparisons, HIGH was superior to STAN for the SF-36 physical component summary (P = .04), SF-36 bodily pain (P = .02), and endocrine symptoms (P = .02).
+COMB was superior to STAN for endocrine symptoms (P = .009) and superior to STAN (P < .001) and HIGH (P < .001) for muscular strength.

@@ -1,0 +1,2 @@
+Artdefo, accurate real time deformable objects.
+In Computer Graphics Proceedings, Annual Conference Series, pages 65–72.

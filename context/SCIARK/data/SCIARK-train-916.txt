@@ -1,0 +1,2 @@
+It is shown that the KH-vSVR outperforms its counterparts in terms of statistical accuracy and trading efficiency, while the leverage strategy is found to be successful.
+Yang et al.

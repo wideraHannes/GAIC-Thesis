@@ -1,0 +1,2 @@
+In addition, the animators often wish to create non-realistic motions that defy the laws of physics, a space where motion capture simply fails to provide any samples.
+We take the approach to acquiring similar motions is to adapt a single motion sequence several times to synthesize a family of motions that preserve physics constraints.

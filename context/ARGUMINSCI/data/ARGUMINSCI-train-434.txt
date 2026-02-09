@@ -1,0 +1,4 @@
+T d consist of eight T d j storing displacements of each pose j.
+        in the texture maps.
+In general, the distribution of skinning effects in an articulated body is local to several joints 
+[MMT97,KJP02], even in a region as complicated as a hand.

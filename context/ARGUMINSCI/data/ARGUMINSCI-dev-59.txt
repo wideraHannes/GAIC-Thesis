@@ -1,0 +1,5 @@
+We simulated such algorithm using accurate resolution on an accordingly approximated constant matrix, and we found that these approximations produced more simulation errors (on dynamic behavior of wrinkles and motion damping particularly) than producing a quick and rough linear system solution using a reduced number of Conjugate Gradient iterations with an accurate matrix.
+Even more drastic simplifications [ KAN 00 ] reduce the matrices to their diagonal component.
+      
+      
+        <H2>2.2.

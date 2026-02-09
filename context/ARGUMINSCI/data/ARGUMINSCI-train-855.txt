@@ -1,0 +1,3 @@
+Multi-weight enveloping: leastsquares approximation techniques for skin animation.
+In SCA’02: Proceedings of the 2002 ACM SIGGRAPH/Eurographics symposium on Computer animation, 2002; 129–138.
+          10.

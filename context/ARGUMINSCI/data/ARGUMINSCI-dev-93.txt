@@ -1,0 +1,2 @@
+In particular, the elegant formulation on rectangular domains could make it useful for medical image registration.
+Additionally, the availability of closed form expressions and flexibility in choosing the basis dimension make it an accurate and tractable model for optimization methods.

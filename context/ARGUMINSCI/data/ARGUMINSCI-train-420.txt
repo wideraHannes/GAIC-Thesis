@@ -1,0 +1,2 @@
+In order to allow deformations to be produced quickly and intuitively, we have devised a set of properties that an ‘ideal’ bar-net should satisfy, which make intuitive shape control and fast computation possible.
+To deform the skin surface of a character, we couple a bar-net with a low-res mesh, called the control mesh, which links with the skin surface.

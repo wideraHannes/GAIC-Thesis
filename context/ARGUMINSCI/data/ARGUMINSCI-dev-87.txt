@@ -1,0 +1,2 @@
+Theoretically, we know that such a small region with purely free-surface boundary conditions will yield zero internal forces, so we simply detect individual FLIP particles that have no neighbors within six times their radius, remove them from the pressure solve, and accelerate them with gravity instead.
+When these particles eventually enter the neighborhood of other particles at some point in the future, we resume treating them like fluid by returning them to the pressure solve.

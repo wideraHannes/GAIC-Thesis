@@ -1,0 +1,2 @@
+The data of the per-protocol set showed that HBeAg seroconversion rate at week 72 was 30.75% in the trial group and 27.14% in the control group with a rate difference of 3.61% (95% CI -3.87% to 11.09%, P = 0.3436). 95% CI met the non-inferiority criteria, and the trial group was non-inferior to the control group.
+The two groups had similar incidence rates of adverse events, serious adverse events, and common adverse events.

@@ -1,0 +1,2 @@
+We do not correct for indirect illumination.
+Each marker in the printed pattern has a randomly chosen color, subject to the constraint that neighboring marker colors must be dissimilar.

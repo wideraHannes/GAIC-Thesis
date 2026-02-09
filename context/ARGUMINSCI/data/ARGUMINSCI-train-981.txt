@@ -1,0 +1,2 @@
+Dynamic Simulation of Non-penetrating Rigid Bodies.
+PhD thesis, Cornell University, May 1992.

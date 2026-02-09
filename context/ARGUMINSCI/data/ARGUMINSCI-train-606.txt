@@ -1,0 +1,2 @@
+The resulting finite dimensional form of the equations describes the time evolution of the basis coefficients.
+We precompute the non-linear advection terms between pairs of basis functions and store the result as structure coefficients in a set of matrices.

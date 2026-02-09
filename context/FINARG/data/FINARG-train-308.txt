@@ -1,0 +1,2 @@
+And we started some early small tests around f8 last year where with some ecommerce services made it so that people who were buying things could follow up with the business and get customer support and buy more things.
+And we went through this process of integrating that and making sure that it’s integrated with all these system well.

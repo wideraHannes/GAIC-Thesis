@@ -1,0 +1,2 @@
+Stratification factors included chemotherapy cycle length, screening hemoglobin (<10 g/dL vs. ≥10 g/dL), and tumor type (lung/gynecological vs. other nonmyeloid malignancies).
+The primary endpoint was change in hemoglobin from baseline to Week 13.

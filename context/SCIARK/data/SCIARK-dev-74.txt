@@ -1,0 +1,2 @@
+The empirical evidence indicates that households still rely on traditional fuel types, especially in the rural areas of Turkey.
+For the model comparison, the ordered response models outperform the unordered response models in one of the three scenarios.

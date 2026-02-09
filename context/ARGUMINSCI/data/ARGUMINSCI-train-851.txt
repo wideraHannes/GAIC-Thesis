@@ -1,0 +1,2 @@
+First, because computations require our basis to be finite, this ordered structure provides a principle by which to select the finite set.
+In choosing to truncate the spectrum at some finite N , the error we incur is well defined: we lose the ability to simulate vortices smaller than a given scale.

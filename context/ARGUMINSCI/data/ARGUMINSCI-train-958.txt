@@ -1,0 +1,5 @@
+Since C(x)  ̇ = (∂C(x)/∂x) T v, we have ∂ C(x)  ̇ ∂ ∂C(x) T ∂C(x) = v = . ∂v ∂v ∂x ∂x Using this fact, we can write ∂v ∂d i j = −k d ∂C(x) ∂x i ∂ C(x) ∂v  ̇ j T = −k d ∂C(x) ∂x i ∂C(x) ∂x j T .
+In this case, the result is symmetrical without dropping any terms.
+      
+      
+        <H1>5 Constraints</H1>

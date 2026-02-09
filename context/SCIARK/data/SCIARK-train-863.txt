@@ -1,0 +1,3 @@
+We then conduct a bootstrap ARDL test developed by McNown et al.
+(2018) to investigate the existence of cointegration.
+We also use Granger causality based on the bootstrap ARDL approach to identify causal relationships between variables.

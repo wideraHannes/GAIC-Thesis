@@ -1,0 +1,3 @@
+In this light, it is not surprising that for finely-discretized quasi-inextensible fabrics, iterative constraint enforcement requires a prohibitive number of iterations (see §5).
+Global enforcement In contrast to iterative constraint enforcement, 
+House et al.

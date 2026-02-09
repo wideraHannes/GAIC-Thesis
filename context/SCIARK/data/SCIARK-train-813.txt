@@ -1,0 +1,2 @@
+Methods: We used a sample of 841 children (age 10.2 ± 0.3 years; BMI 18.0 ± 3.0; 50% boys) from the Active Smarter Kids study, who provided valid data on accelerometry (ActiGraph GT3X+) and several indices of metabolic health (aerobic fitness, abdominal fatness, insulin sensitivity, lipid metabolism, blood pressure) that were used to create a composite metabolic health score.
+We created 16 physical activity variables covering the whole intensity spectrum (from 0-100 to ≥ 8000 counts per minute) and used multivariate pattern analysis to analyze the data.

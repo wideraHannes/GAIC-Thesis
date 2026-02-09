@@ -1,0 +1,6 @@
+This method is proven to be second order accurate both in space and time 
+[DL03, DL04].
+        c The Eurographics Association 2005.
+ByungMoon Kim &amp; Yingjie Liu &amp; Ignacio Llamas &amp; Jarek Rossignac / FlowFixer: Using BFECC for Fluid Simulation
+        
+          Figure 1: On the right column, a highly dynamic behavior of water interaction with air, air bubbles, and solid is made possible by the two-phase formulation and the BFECCbased reduction of the dissipation in the velocity advection step.

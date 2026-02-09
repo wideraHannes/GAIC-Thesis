@@ -1,0 +1,2 @@
+However, there is a distinction in scale and different methods are required to solve each problem.
+When a surface is heavily folded, contiguous visible regions are often small and oddly shaped.

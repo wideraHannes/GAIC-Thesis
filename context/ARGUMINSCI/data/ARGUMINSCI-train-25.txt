@@ -1,0 +1,2 @@
+To handle this, we temporarily place an extra vertex at the face centroid, and use it to triangulate the face.
+We then use signed distance estimates at the vertices to compute each sub-triangle’s partial area, and sum them to determine the partial area for the complete face.

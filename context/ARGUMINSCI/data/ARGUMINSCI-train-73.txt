@@ -1,0 +1,2 @@
+Occasionally, this can also lead to an overly strong weight for such particles during the velocity mapping, resulting in momentum artifacts.
+Our adaptive numerical viscosity in Eq. (14) can also exhibit dangerously small damping values for very fine resolutions, so we clamped the blending coefficient to a minimum value of 0.1 in Figure 1 .

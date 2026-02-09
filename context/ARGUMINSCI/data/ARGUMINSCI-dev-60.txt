@@ -1,0 +1,2 @@
+This requires placing the skeleton joints inside the character and specifying which parts of the surface are attached to which bone.
+The tedium of this process makes simple character animation more difficult than it could be.

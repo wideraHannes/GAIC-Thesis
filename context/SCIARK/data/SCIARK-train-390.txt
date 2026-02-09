@@ -1,0 +1,2 @@
+Results: HAP was associated with mortality among children aged under-five (OR = 1.30, 95%CI = 1.18-1.43, P < 0.001) and was more strongly associated in sub-group analyses of post-neonatal mortality (OR = 1.42, 95%CI = 1.19-1.71, P < 0.001) and child mortality (OR = 1.42, 95%CI = 1.05-1.91, P = 0.021) than neonatal mortality (OR = 1.23, 95%CI = 1.09-1.39, P = 0.001).
+The association was stronger for households in rural areas and for households without a separate kitchen using polluting fuel, and in women who had never breastfed for all age-groups.

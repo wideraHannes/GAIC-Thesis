@@ -1,0 +1,2 @@
+Hence, we expect the result to factor perfectly into a linear combination of vorticity basis functions.
+For simulation, our basis must necessarily be finite dimensional.

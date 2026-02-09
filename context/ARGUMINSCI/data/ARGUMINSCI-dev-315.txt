@@ -1,0 +1,2 @@
+The resulting algorithm can be seen in Algorithm 1.
+In the beginning of each step (line 2), we typically compute the level-set for the current particle configuration as described in Section 5.

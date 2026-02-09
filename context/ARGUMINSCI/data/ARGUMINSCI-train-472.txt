@@ -1,0 +1,2 @@
+The entire process, however, relies on the availability of semantically segmented examples.
+For our evaluations, we were able to perform this segmentation manually by tapping a key in response to the rhythm of music or the gait pattern of a walk cycle.

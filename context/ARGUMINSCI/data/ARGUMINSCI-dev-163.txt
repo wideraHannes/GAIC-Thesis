@@ -1,0 +1,4 @@
+The FBO (Frame Buffer Object) extension 
+[Gre05]
+ supports rendering into an attached texture.
+This saves memory and time, since there is no copy operation from frame buffer to texture buffer.

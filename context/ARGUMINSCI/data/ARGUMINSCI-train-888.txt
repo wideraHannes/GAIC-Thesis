@@ -1,0 +1,11 @@
+To find the modal basis vectors U i , we solve the following symmetric generalized eigenproblem (for a small number k of eigenvectors)
+        
+          8
+          0 K(x )U i = MU i Λ i ,
+        
+        
+          8
+          i
+        
+         . . &lt; λ k i .
+The stiffness matrix K = ∂R(x)

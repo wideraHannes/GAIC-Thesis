@@ -1,0 +1,3 @@
+Boundaries of moving obstacles are handled only approximately and could benefit from alternate methods.
+We have presented a fast and stable integration scheme; however, additional time integrators could be explored, particularly symmetric integrators to allow time reversibility as was achieved in 
+[Mullen et al. 2009].

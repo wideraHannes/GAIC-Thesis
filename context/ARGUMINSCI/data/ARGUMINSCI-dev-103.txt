@@ -1,0 +1,2 @@
+First, let us state what serves as an input to the algorithm.
+We start with a user defined wrinkle pattern, which is given in the form of a texture and an initial undeformed triangular mesh in 3D space.

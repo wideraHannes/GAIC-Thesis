@@ -1,0 +1,2 @@
+The solvent concentration, 30 wt% under the condition of 313 K temperature at 0.1 MPa pressure, was taken for solvent systems.
+The results were interpreted by the Radial Distribution Function analysis.

@@ -1,0 +1,13 @@
+Rows 1, 4, and 6 are initial motions.
+Details on the experiments are given in the text of Section 6.
+        
+        6
+        To appear in the ACM SIGGRAPH 2003 conference proceedings
+        Swing Setup Information DOF 7 (5 rotational, 2 translational) 2D/3D 2D Number of variables 105 Implicit constraints Hand contact during swing Feet contact during landing Swing time 0.9s, Flight time 0.6s, 0.8s Explicit constraints Initial COM velocity zero Fixed final pose, final joint velocity zero Number of iterations 650 Time per iteration 0.04s Total time 0.43min
+        
+          Figure 7: All setup information for the swing example.
+        
+      
+      
+        <H1>6 Results</H1>
+        Optimal Motions.

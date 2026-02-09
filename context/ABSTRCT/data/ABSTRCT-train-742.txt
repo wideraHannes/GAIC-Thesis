@@ -1,0 +1,2 @@
+At baseline and three follow-up points, 101 of 125 women completed a depression symptom measure.
+We used these data in a Cox proportional hazards analysis to examine whether decreasing depression symptoms over the first year of the study (the length of the intervention) would be associated with longer survival.

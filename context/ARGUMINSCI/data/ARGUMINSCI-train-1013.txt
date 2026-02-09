@@ -1,0 +1,2 @@
+This innovative method produces meshes which conform to domains of arbitrary topology quickly and reliably.
+Also, it allows for the local edge length of the tetrahedra to be specified arbitrarily throughout space, which allows us to easily perform adaptive mesh refinement from step to step.

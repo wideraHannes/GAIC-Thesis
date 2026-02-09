@@ -1,0 +1,2 @@
+For example, rental bicycle system has been introduced in several European countries.
+This system is that at the corner of each district, the rental bicycles are placed and the people can ride it to the other districts with a small fee.

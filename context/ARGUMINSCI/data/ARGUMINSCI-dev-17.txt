@@ -1,0 +1,6 @@
+We choose a certain pose as a reference, and express the deformation of all other poses by adding the difference between rest configurations, ∆u.
+The addition of this term simply modifies the coefficients of the force polynomials, which can then be safely interpolated, as all deformations are expressed w.r.t. a consistent configuration.
+          „ ∂R(u, s) « D(u, u,  ̇ s) = αM + β u.  ̇ ∂u
+        
+        
+          <H2>3.3 Interpolating Force Polynomials in Pose Space</H2>

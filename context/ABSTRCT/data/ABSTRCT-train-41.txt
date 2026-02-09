@@ -1,0 +1,2 @@
+The difference between treatments in mean IOP change at 3 months was -0.04 mmHg [95% confidence interval (CI) -0.85, 0.77] in Study 1, and -0.57 mmHg (95% CI -1.31, 0.16) in Study 2.
+The probability that the true difference lay between -1.5 and 1.5 mmHg, the predefined bounds for equivalence, was >0.950 in both studies.

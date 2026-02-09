@@ -1,0 +1,4 @@
+This approach is a generalization of the 2D method described in 
+[Gerritsma, 1996]
+, and they describe its merits in detail.
+We use a particle-level-set method for tracking the fluid’s free surface as described in

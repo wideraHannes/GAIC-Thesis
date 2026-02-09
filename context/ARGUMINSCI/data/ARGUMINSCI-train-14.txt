@@ -1,0 +1,3 @@
+Details of computing the dominant orientation from the coefficients of filter bank response are given in Appendix I of Freeman and Adelson 
+13 .
+We convolve the image with the filter bank, compute the filter coefficient responses, blur the coefficients using a gaussian kernel, and compute the dominant orientation from these coefficients.

@@ -1,0 +1,2 @@
+This paper explores the influence of various fossil energy price changes on renewable energy stock returns using a network approach.
+Specifically, a positive and negative returns network and value-at-risk (VaR) network are constructed separately for identifying the asymmetric and extreme information spillover.

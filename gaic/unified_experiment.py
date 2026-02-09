@@ -71,6 +71,10 @@ CONTEXT_SOURCES = {
         "json_key": "guideline",
         "capability": "has_guidelines",
     },
+    "document_context": {
+        "capability": "has_document_context",
+        "per_sample": True,  # Loaded per sample, not per dataset
+    },
 }
 
 
@@ -88,6 +92,8 @@ def load_context(dataset: str, sources: list[str]) -> dict[str, str]:
 
     Checks dataset.json capabilities to skip sources that aren't available
     (e.g. has_guidelines: false). Returns a dict mapping source name -> content.
+
+    Note: document_context is per-sample, so it returns empty string and must be loaded separately.
     """
     result = {}
     dataset_json = _load_dataset_json(dataset)
@@ -112,32 +118,56 @@ def load_context(dataset: str, sources: list[str]) -> dict[str, str]:
             logger.info(f"Skipping '{source}' for {dataset} ({cap_key}=false)")
             continue
 
+        # Skip per-sample sources (loaded separately in the loop)
+        if spec.get("per_sample", False):
+            logger.info(f"'{source}' is per-sample, will load during classification")
+            continue
+
         # try the .md file first
-        md_path = CONTEXT_DIR / dataset / spec["file"]
-        if md_path.exists():
+        md_path = CONTEXT_DIR / dataset / spec.get("file")
+        if md_path and md_path.exists():
             content = md_path.read_text().strip()
             if content:
                 result[source] = content
                 continue
 
         # fallback to dataset.json value
-        fallback = dataset_json.get(spec["json_key"], "")
+        fallback = dataset_json.get(spec.get("json_key", ""), "")
         if fallback:
             result[source] = fallback
 
     return result
 
 
-def assemble_context(context: dict[str, str]) -> str:
+def load_document_context(dataset: str, sample_id: str) -> str:
+    """Load document context (preceding sentences) for a specific sample."""
+    context_file = CONTEXT_DIR / dataset / "data" / f"{sample_id}.txt"
+    if context_file.exists():
+        return context_file.read_text().strip()
+    return ""
+
+
+def assemble_context(context: dict[str, str], document_context: str = "") -> str:
     """Format loaded context sources into a single string for the prompt."""
-    if not context:
-        return ""
     parts = []
-    labels = {"definition": "Argument Definition", "guideline": "Annotation Guideline"}
+    labels = {
+        "definition": "Argument Definition",
+        "guideline": "Annotation Guideline",
+        "document_context": "Document Context (Preceding Sentences)",
+    }
+
+    # Add dataset-level context first
     for name, content in context.items():
-        label = labels.get(name, name.replace("_", " ").title())
-        parts.append(f"## {label}\n{content}")
-    return "\n\n".join(parts)
+        if content:
+            label = labels.get(name, name.replace("_", " ").title())
+            parts.append(f"## {label}\n{content}")
+
+    # Add document context if provided
+    if document_context:
+        label = labels["document_context"]
+        parts.append(f"## {label}\n{document_context}")
+
+    return "\n\n".join(parts) if parts else ""
 
 
 def sample_balanced(
@@ -271,15 +301,26 @@ def run(config: dict, config_path: Path | None = None):
         "datasets": {},
     }
 
+    # Check if document context is requested
+    use_doc_context = "document_context" in context_sources
+
     for dataset in datasets:
         logger.info(f"--- {dataset} ---")
         context_parts = load_context(dataset, context_sources)
-        context_str = assemble_context(context_parts)
+        base_context_str = assemble_context(context_parts)
         logger.info(f"Loaded context for {dataset}: {list(context_parts.keys())}")
+        if use_doc_context:
+            logger.info("Document context enabled (per-sample loading)")
         samples = sample_balanced(texts, labels, dataset, sample_size)
 
         # show prompt once so you can sanity-check
-        example_system = SYSTEM_PROMPT.format(context=context_str)
+        # (if doc context enabled, show example with first sample's context)
+        if use_doc_context:
+            example_doc_ctx = load_document_context(dataset, samples[0][0])
+            example_context = assemble_context(context_parts, example_doc_ctx)
+        else:
+            example_context = base_context_str
+        example_system = SYSTEM_PROMPT.format(context=example_context)
         example_user = USER_PROMPT.format(sentence=samples[0][1])
         logger.info(f"[SYSTEM]\n{example_system}")
         logger.info(f"[USER]\n{example_user}")
@@ -299,13 +340,22 @@ def run(config: dict, config_path: Path | None = None):
                     "true_label": true_label,
                 }
 
+                # Load document context for this sample if enabled
+                doc_context = ""
+                if use_doc_context:
+                    doc_context = load_document_context(dataset, sample_id)
+                    record["document_context"] = doc_context
+
+                # Assemble full context for this sample
+                full_context = assemble_context(context_parts, doc_context)
+
                 # fire all 3 manipulations in parallel
                 futures = {}
                 for name, fn in MANIPULATIONS.items():
                     manipulated = fn(sentence)
                     record[f"sent_{name}"] = manipulated
                     futures[name] = pool.submit(
-                        classify, client, cfg_llm, manipulated, context_str
+                        classify, client, cfg_llm, manipulated, full_context
                     )
 
                 for name, fut in futures.items():

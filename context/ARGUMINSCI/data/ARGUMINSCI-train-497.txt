@@ -1,0 +1,2 @@
+Therefore, stable results can be achieved with little effort from the artist and poses can then be added incrementally to areas of the posespace where the behavior is not satisfactory.
+The effect of the number of poses on the run-time performance of the algorithm is very small as it doesn’t affect the number of degrees of freedom in the simulation (see comparison 6 vs. 9 shoulder DMTs in Table 1 ).

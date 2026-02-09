@@ -1,0 +1,2 @@
+With the quest for realism, more physically based and CPU intensive computation models have emerged, notably the multi-layered anatomy-based approach.
+However, in addition to the computational cost, it is undesirable to require the animator to model many muscles before the skin shape is developed.

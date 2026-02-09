@@ -1,0 +1,4 @@
+External forces can be incorporated by projecting curl (f ) on the vorticity basis, to obtain coefficients f i =
+        
+          Fig. 6.
+A basis of Laplacian eigenfunctions is orthogonal, hence surfaces of constant energy are spheres in coefficient space.

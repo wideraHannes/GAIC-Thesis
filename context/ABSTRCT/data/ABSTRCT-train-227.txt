@@ -1,0 +1,2 @@
+However, we reported a response rate of 43.1 and 38.6%, respectively, in MVP and MVC arm (P=0.59) and a median survival of 10.2 and 7.2 months, respectively, for cisplatin and carboplatin arm (P=0.39).
+The carboplatin containing regimen (MVC) has a significant better toxicity profile than the cisplatin containing (MVP) regimen as proven both by the EORTC questionnaires and by the WHO toxicity data reported by physicians.

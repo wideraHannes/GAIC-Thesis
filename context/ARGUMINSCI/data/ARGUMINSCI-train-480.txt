@@ -1,0 +1,2 @@
+In a Newton-Euler inverse dynamics formulation, rerooting is typically done by changing parent / child relationships, which requires inverting joint angles and transforms at each joint and altering the flow of dynamic terms from leaves to root.
+Both of these changes complicate the problem description presented to the optimizer.

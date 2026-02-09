@@ -1,0 +1,2 @@
+The advantage of complete-linkage clustering over other methods (such as k-means) is that it explicitly limits the distance of any two instances in a cluster by a user-defined threshold.
+After clusters are formed, a representative instance is chosen at random from each cluster to remain in the database, and all other instances are discarded.

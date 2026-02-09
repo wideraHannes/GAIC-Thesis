@@ -1,0 +1,2 @@
+Motion capture assisted animation: Texturing and synthesis.
+In Proceedings of ACM SIGGRAPH 2002, Annual Conference Series, ACM SIGGRAPH.

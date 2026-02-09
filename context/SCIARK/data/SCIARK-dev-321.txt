@@ -1,0 +1,2 @@
+We used a causal diagram and multivariable logistic mixed models to assess the influence of covariates at individual, regional and national levels.
+Results

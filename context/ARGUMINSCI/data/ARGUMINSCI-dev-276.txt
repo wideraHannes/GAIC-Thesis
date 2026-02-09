@@ -1,0 +1,2 @@
+But the minimizing process will introduce more cost.
+This cost depends on the size of deformed character, parameters of minimization methods (Powell) such as convergence precision, and the number of example poses.

@@ -1,0 +1,6 @@
+A difficulty in connection with the interactive simulation of fluids is the extraction and rendering of a plausible fluid surface in real time.
+Thus, ongoing work focusses on fast algorithms for surface reconstruction.
+      
+      
+        <H1>Acknowledgements</H1>
+        This project was funded by the Swiss National Commission for Technology and Innovation (KTI) project no.

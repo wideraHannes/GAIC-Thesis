@@ -1,0 +1,6 @@
+Muscle deformation: (a) Muscle deformation at the elbow during twist and bend.
+The action line deformed under the curve skeleton movement; (b) skin deformation for the actions in (a); (c) muscle deformation around the neck; (d) Shows the corresponding skin deformation.
+        
+      
+      
+        <H1>

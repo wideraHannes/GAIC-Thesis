@@ -1,0 +1,2 @@
+The continuous penalty function g that Pinocchio tries to minimize is the sum of penalty functions over the bones plus an asymmetry penalty: where p S is the parent function for the unreduced skeleton (analogous to p R ).
+Each g i penalizes bones that do not fit inside the surface nicely, bones that are too short, and bones that are oriented differently from the given skeleton: g i = α S g i S + α L g i L + α O g i O .

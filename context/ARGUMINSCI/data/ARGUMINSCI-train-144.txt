@@ -1,0 +1,2 @@
+Suppose L contains an error e.
+Then the first two forward and backward steps will produce error 2e, i.e., φ  ̄ = φ n + 2e.

@@ -1,0 +1,2 @@
+Runge-Kutta requires more than 500 iterations for performing the simulation without instability, with the maximum allowed time step t = 0 . 0 0 1 s , which in fact corresponds to the maximum value of K coefficient experimented in the previous section.
+The backward Euler method is robust enough to handle the problem without instability for any time step.

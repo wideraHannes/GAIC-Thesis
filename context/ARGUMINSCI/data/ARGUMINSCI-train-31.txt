@@ -1,0 +1,2 @@
+We do not want to handle closely located CCs separately since it might instantly introduce instabilities to the system by allowing closely located CCs to have different velocities.
+However, there is an exception.

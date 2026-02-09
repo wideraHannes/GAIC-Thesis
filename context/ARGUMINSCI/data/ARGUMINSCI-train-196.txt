@@ -1,0 +1,2 @@
+Sample #12 is nearly linear in the test deformation range, while all other three fabrics exhibit nonlinearity.
+Interestingly, nonlinearity may arise in some deformation modes but not in others, with no clear pattern.

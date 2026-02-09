@@ -1,0 +1,4 @@
+If the inherent texture of the cloth is not sufficiently random, it is printed with a wavelet noise pat∗ tern 
+[ AIH 08 ]
+ to provide texture that can be used for stereo reconstruction and tracking.
+The pattern is printed with a flatbed inkjet printer and does not have a noticeable effect on the material behavior.

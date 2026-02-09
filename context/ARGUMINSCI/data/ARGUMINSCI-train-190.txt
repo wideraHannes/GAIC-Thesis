@@ -1,0 +1,3 @@
+Therefore, the divergence of each cell in the grid has to be projected to zero using the Helmholtz-Hodge decomposition 
+[Sta03].
+The major advantage of Navier-Stokes based approaches consists in the fact that the evolution of the wind flow over time is calculated.

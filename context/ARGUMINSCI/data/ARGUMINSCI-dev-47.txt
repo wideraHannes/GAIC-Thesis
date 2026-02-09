@@ -1,0 +1,2 @@
+In our implementation, the expected performance consists of expressions similar to those of the pre-conditions È .
+In particular if the controller successfully completes its task in the time interval Ø 1⁄2 , Ø 3⁄4 , then  ́ Ø 1⁄2 μ 3⁄4È and  ́ Ø 3⁄4 μ 3⁄4Ç .

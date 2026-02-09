@@ -1,0 +1,2 @@
+Note that we perform them only every ten simulation steps.
+Figure 7: A simulation of detailed flow through a complex obstacle.

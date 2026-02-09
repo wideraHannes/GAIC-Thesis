@@ -1,0 +1,8 @@
+Computing ∂ p 0 / ∂ q i requires O(D) time and results in an O(D 2 ) algorithm for computing the momentum Jacobian.
+        
+        
+          <H2>4.1 Notation</H2>
+          Our argument and implementation is constructed around a NewtonEuler formulation of inverse dynamics.
+We use spatial notation as in 
+Featherstone [1987]
+ for conciseness.

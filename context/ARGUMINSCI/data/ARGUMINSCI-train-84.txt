@@ -1,0 +1,3 @@
+In [ Bonito et al., 2003 ]
+ a combination of rectilinear grids and finite elements are used with a volume-of-fluid method to model three-dimensional fluids with elastic properties.
+They do not include plasticity and they store all quantities at cell centers.

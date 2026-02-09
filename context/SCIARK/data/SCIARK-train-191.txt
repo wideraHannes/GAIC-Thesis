@@ -1,0 +1,2 @@
+Using macro TFP data from a recently developed dataset in the Penn World Table, we test this hypothesis by directly examining the nature of the relationship between annual temperature shocks and TFP growth rates in the period 1960–2006.
+The results show a negative relationship only exists in poor countries, where a 1 °C annual increase in temperature decreases TFP growth rates by about 1.1–1.8 percentage points, whereas the impact is indistinguishable from zero in rich countries.

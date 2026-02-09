@@ -1,0 +1,7 @@
+A single smearing uses one static flow field and a time range for the integration, provided by the user.
+Each output pixel receives its color from the colors visited along a flow integration path passing through the output pixel between the two specified times.
+        
+      
+      
+        <H1>5 Examples</H1>
+        The example times quoted below are for a single processor SGI O2 with R10K floating point chip and processor chip.

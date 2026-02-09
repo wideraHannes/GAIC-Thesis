@@ -1,0 +1,6 @@
+Empirically, we conclude that the two methods have similar convergence behavior.
+Result in section 8 indicate that the running time is close to O(n 1.5 ), which is what unmodified CG would be expected to deliver on this sort of problem [ 14 ].
+      
+      
+        <H2>5.4 Determining the Constraint Forces</H2>
+        For contact constraints (between cloth and solid objects) we need to know what the actual force of constraint is, in order to determine when to terminate a constraint.

@@ -1,0 +1,2 @@
+Title: A marginal abatement cost curve for material efficiency accounting for uncertainty
+Abstract: Comparing costs of measures to mitigate greenhouse gas is challenging as there are many competing notions of costs, and uncertainties associated with cost estimates.

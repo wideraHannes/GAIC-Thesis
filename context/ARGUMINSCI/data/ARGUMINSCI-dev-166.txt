@@ -1,0 +1,4 @@
+We show how their basic ideas can be embedded in a 3D humanoid model and extended to running.
+Similar 2D models have been used for gait prediction 
+[Ackermann and van den Bogert 2010], and to generate human-like responses to disturbances 
+[Murai and Yamane 2011].

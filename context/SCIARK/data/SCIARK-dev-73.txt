@@ -1,0 +1,2 @@
+Using Dumitrescu and Hurlin (2012) Granger non-causality in heterogeneous panel, results show long-run bidirectional causal relationships among renewable energy consumption, economic growth and other growth determinants.
+Based on these results, we infer that the exploitation of renewable energy sources in the EU-28 countries is a reliable pathway toward environmental pollution mitigation.

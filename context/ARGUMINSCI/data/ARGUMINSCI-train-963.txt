@@ -1,0 +1,2 @@
+Rapid shape acquisition using color structured light and multi-pass dynamic programming.
+In Proc.

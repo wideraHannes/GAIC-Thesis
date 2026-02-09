@@ -1,0 +1,2 @@
+This step is followed by normalization of independent variables to check their impact.
+Finally, multiple linear regression model for electricity and Lasso regression models for chilled water estimations are developed.

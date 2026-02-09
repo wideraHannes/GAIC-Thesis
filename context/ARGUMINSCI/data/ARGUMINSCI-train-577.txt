@@ -1,0 +1,2 @@
+As shown in Figure 5 the lower body consists of pelvis, upper leg, lower leg, foot, and toes, and they are connected at the hip, knee, ankle, and ball joints.
+The total degree of freedom of the lower body is 8 3 + 6 = 30 . (All the joints were modeled by 3-DOF joints, and the base has extra 6 DOFs.) The destination character was about 60% scaled down from the source character with non-uniform proportions.

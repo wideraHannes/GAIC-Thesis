@@ -1,0 +1,4 @@
+The process is repeated three times, in both weft and warp directions separately.
+Shearing is captured using an approximate picture-frame experiment 
+[Cul79]
+, where four long clips fix the cloth boundaries and shear stress is applied as the cords pull on opposite corners ( Figure 4 , 3rd column).

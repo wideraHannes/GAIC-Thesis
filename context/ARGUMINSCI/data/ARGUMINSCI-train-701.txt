@@ -1,0 +1,2 @@
+We use this property in Section 4 to accurately model viscous energy decay.
+It could also be used to initialize or arbitrarily change a fluid’s turbulent spectrum.

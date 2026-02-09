@@ -1,0 +1,2 @@
+We then compare the animations created by key frames that are spaced increasingly far apart in time.
+We also compare the results by decreasing the number of key trajectories.

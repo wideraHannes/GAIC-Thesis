@@ -1,0 +1,2 @@
+Meshless animation of fracturing solids.
+ACM Trans.

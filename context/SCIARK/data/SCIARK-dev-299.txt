@@ -1,0 +1,3 @@
+It is shown that the KH-vSVR outperforms its counterparts in terms of statistical accuracy and trading efficiency, while the leverage strategy is found to be successful.
+Yang et al.
+propose two types of dummy variables for an interval regression model to assess the impact of economic shocks/crises on an interval time series (ITS), e.g.

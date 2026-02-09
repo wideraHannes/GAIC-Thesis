@@ -1,0 +1,2 @@
+We automatically determine the dimensions of subspaces by keeping 95% of the original energy.
+Subspace learning not only reduces the memory space for GP modeling but also significantly speeds up the learning and evaluation process of GP models.

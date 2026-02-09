@@ -1,0 +1,2 @@
+In January 1996, after 155 patients had been randomly assigned from a projected intake of 365 patients, an independent Data Monitoring Committee examined the interim results.
+Survival was determined by the Kaplan-Meier method, and the logrank test was used to compare treatments.

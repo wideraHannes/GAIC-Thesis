@@ -1,0 +1,2 @@
+Interpolation can produce substantial errors (see Figure 3 ) which are compounded over time.
+In fact, this interpolation error is one of the most significant drawbacks to semi-Lagrangian methods in general.

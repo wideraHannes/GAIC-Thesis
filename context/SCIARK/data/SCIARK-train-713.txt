@@ -1,0 +1,2 @@
+The data was analysed using Cox regression analyses, and adjusted for calendar year, gender, urbanicity, co-abuse, other psychiatric diagnosis, parental substance abuse, psychiatric history, immigration and socioeconomic status.
+Results: A diagnosis of substance abuse increased the overall risk of developing schizophrenia [hazard ratio (HR) 6.04, 95% confidence interval (CI) 5.84-6.26].

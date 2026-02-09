@@ -1,0 +1,2 @@
+Once this is done, the poses are sampled regularly at k times.
+This sampling can be very simple to obtain from the user’s perspective—in our case, users must simply invoke a script we have implemented in Maya.

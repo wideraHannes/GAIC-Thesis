@@ -1,0 +1,4 @@
+More nuanced objectives can be learned from inverse optimization 
+[Liu et al. 2005]
+, but are dependent on training data.
+Our use of biologically-based actuators enables the estimation of metabolic energy expenditure based on the internal state of the MTUs

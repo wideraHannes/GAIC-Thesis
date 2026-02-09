@@ -1,0 +1,2 @@
+The difference between core compute in-store versus the premium layers can be significant and we’ve had improvements across all of them.
+So, the real question on how and where should the Azure gross margin be is about sort of the ultimate mix of those.

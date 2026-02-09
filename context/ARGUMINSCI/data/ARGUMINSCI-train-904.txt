@@ -1,0 +1,2 @@
+Although singular cases are rare (one example is a joint with 180 o rotation and equal 2 1 , 2 1 weights on the two joint frames, which is an unrealistic case of selfintersection), it is possible to handle these cases with a small rearrangement of the inverse PSD approach.
+We reformulate the problem as f (y i ) = v i + w i − SKINNING i (v r + d i ) 2 + λ w i 2 where y i is a concatenated vector y i = [d i , w i ]

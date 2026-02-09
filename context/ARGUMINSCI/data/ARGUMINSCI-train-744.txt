@@ -1,0 +1,2 @@
+Sculpt.
+The artist first positions some set of pose controls and then sculpts a deformation for that pose.

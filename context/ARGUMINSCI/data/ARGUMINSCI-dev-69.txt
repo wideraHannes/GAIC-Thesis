@@ -1,0 +1,6 @@
+Similarly, we show garments (shirts, pants, skirts) exhibiting complex wrinkling and folding behavior on both key-framed and motion-captured characters.
+Representative running times include a long skirt with 4,530 nodes (8,844 triangles) on a dancing character at a cost of 10 seconds per frame, and a shirt with 6,450 nodes (12,654 triangles) with a cost varying between 8 to 14 seconds per frame, depending on the underlying character’s motion.
+      
+      
+        <H2>1.2 Previous Work</H2>
+        Terzopoulos et al.

@@ -1,0 +1,2 @@
+We introduce dynamic morph targets, the equivalent in dynamic simulation to the geometric morph targets in (quasi-static) modeling.
+Dynamic morph targets define the pose-dependent physical state of soft objects, including surface deformation and elastic and inertial properties.

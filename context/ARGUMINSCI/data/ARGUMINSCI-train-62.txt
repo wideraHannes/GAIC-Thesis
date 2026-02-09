@@ -1,0 +1,4 @@
+In this way we can track surface properties on the actual surface as we build the surface, so we do not incur any significant additional cost.
+Previous methods, such as the one proposed by 
+Rassmussen et al. [2004]
+, have been limited to tracking properties in the volume near the surface and interpolating them to the surface.

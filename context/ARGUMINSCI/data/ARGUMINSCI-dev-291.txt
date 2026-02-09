@@ -1,0 +1,2 @@
+Fast projection starts at x n+1 0 , and takes a sequence of steps, δ x n+1 j , j = 1, 2, . . ., toward the constraint manifold, with each step as short as possible.
+A step of fast projection Projection onto the constraint manifold occurs at a fixed instant in time.

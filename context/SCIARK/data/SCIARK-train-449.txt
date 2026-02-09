@@ -1,0 +1,2 @@
+In the final model, the significant variables in the initial model were included, plus relation between rural origin and the number of diseases.
+Cohorts, gender, education, and the number of diseases were still significant factors when individuals had rural origin, but were not associated with the outcome if their origin was urban.

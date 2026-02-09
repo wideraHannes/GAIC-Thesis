@@ -1,0 +1,3 @@
+We focus on the interpolation of rotations – the linear interpolation of the translation part of C j i matrices is all right.
+An established interpolation of two rotations is spherical linear interpolation (SLERP) 
+[Shoemake 1985].

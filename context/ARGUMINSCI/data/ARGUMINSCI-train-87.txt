@@ -1,0 +1,2 @@
+Current vertex programs limit per vertex data to 16 4-tuples of floats.
+In our implementation we impose a limit of 10 eigendisplacements per vertex (or 5 eigendisplacements and 5 normal corrections), which still leaves room for texture coordinates after specifying the vertex position, normal, colour, and bone weights.

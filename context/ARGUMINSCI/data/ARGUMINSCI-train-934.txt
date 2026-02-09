@@ -1,0 +1,2 @@
+The exception was initial control points for the character root in the first example, which were set to create the overall body rotation required for the backflip.
+To automatically compute initial motion in a constrained pose, all joints are set at zero angle, the character is in a vertical posture, and the relevant end effector is placed at a user-specified point (e.g. hand at a specific point on the monkey bars).

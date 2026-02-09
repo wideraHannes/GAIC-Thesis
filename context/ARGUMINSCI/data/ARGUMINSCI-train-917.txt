@@ -1,0 +1,2 @@
+While such vertex-parallel computation is often done on the GPU vertex processors, further parallelism can potentially be obtained by using the fragment processors.
+In this paper, we develop a parallel deformation method using the GPU fragment processors.

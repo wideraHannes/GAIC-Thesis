@@ -1,0 +1,3 @@
+Generating garment details</H1>
+        So far we have shown the first part of our simulation, that is, the coarse level simulation.
+We continue now to describe the second part of the simulation, by which detailed cloth shape such as wrinkles or folds are depicted.

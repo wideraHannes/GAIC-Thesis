@@ -1,0 +1,2 @@
+We can't have any test of race.
+It must be a test of a man.

@@ -1,0 +1,3 @@
+The final animation can be synthesized by linearly blending RBF functions with the solved weights.
+Related research efforts have improved the speed and power of example-based skinning. [ 2 ]
+ incorporate linear elements into RBF to produce constant changes between examples. [ 3 ] precompute principal components of the deformation influences for individual kinematic joints instead of storing displacements for key poses, thereby enabling realtime rendering large nonlinear finite element models of human hands.

@@ -1,0 +1,2 @@
+Both the individual sources and the electricity mix over the past 10 years are considered.
+The following sources present in the electricity mix are evaluated: coal, oil, natural gas, biogas, biomass, wind, solar photovoltaics (PV) and hydropower.

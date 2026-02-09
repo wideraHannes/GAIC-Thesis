@@ -1,0 +1,2 @@
+Figure 5: Test of dissipation and diffusion with image advection problem on a rotating vector field (800×800 grid, CFL = 6.29). (b) is the top center portion of the original image (a). (c) is obtained by rotating it 360 degree using the first order semi-Lagrangian scheme, where one can see large amount of dissipation, diffusion, shrinkage of image and position error.
+These are significantly improved in (d) where BFECC is used.

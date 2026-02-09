@@ -1,0 +1,2 @@
+In its simplest form, a support vector machine finds the hyperplane that separates the p i ’s from the q i ’s and is as far away from them as possible.
+More precisely, if Γ is a k-dimensional vector with Γ = 1, the classification margin of the best hyperplane normal to Γ is 1 2 ` min n i=1 Γ T q i − max m i=1 Γ T p i  ́ .

@@ -1,0 +1,2 @@
+In this paper we propose several methods to preserve volume both globally and locally using the information stored in the density field.
+Ideally, the surface density has the form of a step function at the liquid-air interface.

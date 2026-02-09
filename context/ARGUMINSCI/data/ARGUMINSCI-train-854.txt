@@ -1,0 +1,2 @@
+Our system can automatically deduce these relationships and reduce them to only a few significant modes.
+At runtime, given a(s) from Eqn. (2), we can compute the elastic ∂R(u,s) forces R(u, s) and their Jacobian for implicit integration ∂u of Eqn.

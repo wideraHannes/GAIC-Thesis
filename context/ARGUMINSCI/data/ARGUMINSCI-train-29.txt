@@ -1,0 +1,2 @@
+We get consistent estimates for parameters that have lower variability (e.g., bend, stretch).
+Parameters with high variability are estimated poorly, because their values do not contribute sufficiently to the error.

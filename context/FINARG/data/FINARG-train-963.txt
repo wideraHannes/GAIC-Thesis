@@ -1,0 +1,2 @@
+This is all the things that are coming in SQL 2016 and we're excited about that.
+When it comes to the cloud itself, we have a PaaS service with SQL, which is very unique in terms of SQL Azure.

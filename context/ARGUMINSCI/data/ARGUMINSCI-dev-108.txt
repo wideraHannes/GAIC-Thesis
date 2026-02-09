@@ -1,0 +1,4 @@
+Both [Terzopoulos and Fleischer, 1988a] and [Terzopoulos and Fleischer, 1988b]
+ describe transition to plastic flow based on von Mises’s yield condition, and [O’Brien et al., 2002]
+ used a similar plasticity model for ductile fracture behavior.
+We use the same yield condition of von Mises, but we do not assume that plastic flow occurs instantaneously.

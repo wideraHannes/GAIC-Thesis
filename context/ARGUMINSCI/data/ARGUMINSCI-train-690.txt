@@ -1,0 +1,2 @@
+We have found M and T matrices empirically by trying different choices.
+Unfortunately, defining a universal cost metric is a hard problem.

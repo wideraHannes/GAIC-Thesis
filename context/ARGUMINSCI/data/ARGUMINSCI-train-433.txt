@@ -1,0 +1,2 @@
+Figure 7: toad: a sequence of animated frames. left: PSD; right: inverse PSD.
+Figure 8: toad: closeup of circled part from figure 9 . left: PSD; right: inverse PSD.

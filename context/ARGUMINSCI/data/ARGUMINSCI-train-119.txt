@@ -1,0 +1,4 @@
+Very recently, James et al. 
+[10]
+ resented such an approach, where physics-based deformation and collision detection are both handled in a unified framework.
+By blending of pre-computed orbits rather than using a mass-spring system, previous unseen results could be achieved, such as garments with stiff mechanical properties in real-time.

@@ -1,0 +1,7 @@
+Forces are rendered as red vectors with magnitudes proportional to their values (in Newtons).
+        
+      
+      
+        <H2>3.2.
+Measurements</H2>
+        The set of deformations to measure is motivated by the goals of the parameter fitting stage (Section 5): to fit model parameters for stretch, shear and bending that best describe the cloth, and to validate the parameter fits by comparing against other measurements.

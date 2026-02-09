@@ -1,0 +1,2 @@
+Pyrolysis is the degradation of macromolecular materials with heat in the absence of oxygen, and gasification is a process that converts biomass or fossil fuel based carbonaceous materials into carbon monoxide (CO), hydrogen (H2), carbon dioxide (CO2) and possibly hydrocarbon molecules such as methane (CH4).
+They have both applied and analytical aspects.

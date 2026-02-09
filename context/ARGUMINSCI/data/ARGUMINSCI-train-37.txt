@@ -1,0 +1,5 @@
+Representing vorticity using Laplacian eigenfunctions dates back at least to 
+Yudovich [1963]
+, who used this method to prove existence and uniqueness theorems for the two dimensional NavierStokes equations.
+More recently, 
+Agrachev et al.

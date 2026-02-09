@@ -1,0 +1,2 @@
+One hundred seventy-six eligible patients with advanced melanoma were randomized to receive CT (cisplatin and dacarbazine with or without carmustine every 21 days) or bioCT comprising the same CT regimen followed by low-dose subcutaneous IL-2 for 8 days and IFN alpha-2b three times a week, both for six cycles.
+At a median follow-up of 18 (CT) and 16 (bioCT) months, median OS was 9.5 versus 11.0 months (P =.51), respectively.

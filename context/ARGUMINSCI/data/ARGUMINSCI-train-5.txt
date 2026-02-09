@@ -1,0 +1,7 @@
+A clip of motion is defined as a regular sampling of the character’s parameters, which consist of the position of the root joint and quaternions representing the orientations of each joint.
+We
+        
+          Figure 2: Consider a motion graph built from two initial clips. (top) We can trivially
+        
+        insert a node to divide an initial clip into two smaller clips. (bottom) We can also insert a transition joining either two different initial clips or different parts of the same initial clip.
+        also allow clips (or, more generally, sets of frames) to be annotated with other information, such as descriptive labels (“walking,” “karate”) and constraint information (left heel must be planted on these frames).

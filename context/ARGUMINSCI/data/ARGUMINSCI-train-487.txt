@@ -1,0 +1,2 @@
+The dynamic properties of both models, such as mass and moments of inertia, are taken from the biomechanics literature and correspond to a fullyfleshed adult male.
+The models are equipped with natural limits both on the motion of the joints and the strength of their muscles.

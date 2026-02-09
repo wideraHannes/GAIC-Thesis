@@ -1,0 +1,2 @@
+Rather than using an Eulerian grid or Lagrangian elements, we represent vorticity and velocity using a basis of global functions defined over the entire simulation domain.
+We show that choosing Laplacian eigenfunctions for this basis provides benefits, including correspondence with spatial scales of vorticity and precise energy control at each scale.

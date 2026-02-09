@@ -1,0 +1,2 @@
+When lying face-down, the pre-conditions can be fairly relaxed.
+Our controller assumes that is has the time to change the state of the character to one from which it knows how to rise.

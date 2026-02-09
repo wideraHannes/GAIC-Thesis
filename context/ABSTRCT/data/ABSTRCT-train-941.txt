@@ -1,0 +1,2 @@
+Randomisation was done in blocks of 12-20 participants, stratifying by age (younger than 50 years, 50 years or older), and was done with a computer-generated sequence.
+The trial statistician and researchers collecting outcome measures were masked to group allocation.

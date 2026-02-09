@@ -1,0 +1,2 @@
+In addition to using the bottom of the spectrum to capture the large scale motion, one may choose additional modes from much higher parts of the spectrum to incorporate smaller scales.
+This demonstrates the benefit of a basis that exhibits a spectrum of scales.

@@ -1,0 +1,2 @@
+Only the individual controllers can detect whether they are operating normally or whether failure is imminent.
+Failure in our case means that the controller cannot meet its post-conditions Ç .

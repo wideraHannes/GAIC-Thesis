@@ -1,0 +1,2 @@
+A Cox Proportional Hazards model was used to identify the risk factors and key socio-demographic correlates of under-five mortality leveraging the longitudinal structure of the population cohort.
+Results: Child mortality rates declined by 80 per cent from 2000 to 2014, from >140 per 1,000 persons in years 2001-2003 to 20 per 1,000 persons in the year 2014.

@@ -1,0 +1,2 @@
+Any optimization technique that makes use of local derivatives has potential problems with local minima.
+Our experience, however, was that as long as an expected motion sequence could be thought of as motion about some neutral position, then when the character was started in that neutral position there was no problem descending toward the expected minimum.

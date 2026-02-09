@@ -1,0 +1,2 @@
+Different characters with different deformations may require a different set of additional joints.
+However, once some set of these joints is determined, the skin may be solved using our fitting algorithm without change.

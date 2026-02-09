@@ -1,0 +1,2 @@
+Our method is similar in this respect.
+However, in contrast to DFFEM, for some simple domains Laplacian eigenfunctions do not require a discrete mesh.

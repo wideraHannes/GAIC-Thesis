@@ -1,0 +1,2 @@
+During the search, we need to find paths close to optimal solutions but do not require exact extrema, because they are too hard to find.
+This motivates a random search.

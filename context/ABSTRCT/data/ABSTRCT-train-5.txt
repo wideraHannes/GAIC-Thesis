@@ -1,0 +1,2 @@
+Raised pretreatment AST/ALT (odds ratio [OR] 3.6, 95% confidence interval [CI]: 1.7 to 7.7) and hepatitis B surface antigen (HBsAg) seropositivity at baseline (OR 4.7, 95% CI: 1.7 to 12.9) were significantly associated with an increased risk of developing hepatotoxicity.
+Participants with both raised AST/ALT and positive HBsAg had a higher risk (OR 19.9, 95% CI: 5.3 to 74.3) and earlier onset of hepatotoxicity than participants who did not have these conditions at baseline.

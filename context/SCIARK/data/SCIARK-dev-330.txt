@@ -1,0 +1,2 @@
+The precipitation change varies from −24 to 34%.
+The model R2 values are 0.67 and 0.75, while NSE values are 0.63 and 0.74 during calibration (1984–1993) and validation periods (1994–2001), respectively.

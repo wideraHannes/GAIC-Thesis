@@ -1,0 +1,3 @@
+Scope of the Study</H2>
+        We shall restrict our consideration to three different methods which explore the range of these classes, and which seem to fit the best the requirements set for cloth simulation problems, in terms of implementation simplicity and efficiency for particle systems using large numbers of particles that interact sparsely and with a constant topology.
+The methods that we consider for this application are: * The explicit Midpoint method, which is a simple low-order explicit method.

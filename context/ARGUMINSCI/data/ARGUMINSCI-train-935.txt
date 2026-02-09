@@ -1,0 +1,2 @@
+Platt, H.
+Barr, "Elastically Deformable Models", Computer Graphics (SIGGRAPH’97 proceedings), Addison-Wesley, 21, pp 205-214, 1987.

@@ -1,0 +1,2 @@
+In practice, we compute the local convex hull by finding the two outermost planes tangent to a set of three spheres.
+We efficiently compute the distance to these planes by analytically solving the polynomial system: ax 1 +by 1 +cz 1 +d = r 1 , ax 2 +by 2 +cz 2 +d = r 2 , ax 3 + by 3 + cz 3 +

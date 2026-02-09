@@ -1,0 +1,2 @@
+We optimized on the first 50 frames of the sequence.
+The initial values and final values of the optimized parameters for two trials are reported in Table 3 .

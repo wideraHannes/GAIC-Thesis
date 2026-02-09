@@ -1,0 +1,12 @@
+For many simple domains, functions satisfying Eq. 1 have closed form expressions, which are available for example in the physics literature where they describe the magnetic fields of electromagnetic resonators 
+[Cheng 1999].
+For instance, on a π × π square domain, Laplacian eigenfunctions satisfying Eq. 1 have the closed form expressions 1 Φ k = k 1 2 + k 2 2 (k 2 sin(k 1 x) cos(k 2 y)a x
+        
+          2
+          −k
+        
+        
+          2
+          1 cos(k 1 x) sin(k 2 y)a y ) ,
+        
+        where k = (k 1 , k 2 ) ∈ Z 2 is a tuple of integers known as the vector wave number.

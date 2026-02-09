@@ -1,0 +1,6 @@
+More rendering options described below are available in the compositor.
+        
+        
+          <H2>4.4 Rendering Simulations</H2>
+          The compositor is a graph-based system (DAG) where rendering operations are “nodes” in the graph.
+Temperature Contours: Two image generation nodes are provided in the compositor for rendering the temperature field, with temperature being mapped in a linear fashion to transparency.

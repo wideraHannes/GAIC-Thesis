@@ -1,0 +1,2 @@
+Essentially, as a requirement for someone to operate a VPN, they have to have a license from the government there.
+Earlier this year, they began a renewed effort to enforce that policy, and we were required by the government to remove some of the VPN apps from the App Store that don't meet these new regulations.

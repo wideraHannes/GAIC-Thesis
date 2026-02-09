@@ -1,0 +1,2 @@
+The interpolation is combined with least square fitting so that the characteristics of the original joint angle data is preserved in the resulting motion.
+The OMR algorithm described in the previous section can be used to reduce measurement errors in restoring the captured motion.

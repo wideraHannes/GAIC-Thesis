@@ -1,0 +1,3 @@
+The analysis stressed the following:
+LCA of renewable energy technologies has to include a detailed analysis of the use phase to assess the benefits that arise from the energy produced by the system during its useful life and to obtain reliable and high-quality LCA results.
+The use phase is responsible of about 70–90% of the energetic and environmental impacts of the plant life cycle.

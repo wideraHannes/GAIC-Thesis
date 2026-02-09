@@ -1,0 +1,2 @@
+We modeled the shape of the association between PM2.5 and nonaccidental mortality using data from 41 cohorts from 16 countries—the Global Exposure Mortality Model (GEMM).
+We then constructed GEMMs for five specific causes of death examined by the global burden of disease (GBD).

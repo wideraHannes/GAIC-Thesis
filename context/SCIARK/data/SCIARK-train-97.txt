@@ -1,0 +1,2 @@
+Third, we provide the optimal consumption rate with different starting wealth balances.
+We observe that optimal consumption rates are not proportional to initial wealth due to the Age Pension payment.

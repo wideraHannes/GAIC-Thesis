@@ -1,0 +1,2 @@
+The coarse mesh is used to deduce the gross behavior of the cloth in a data-driven manner, based on the input pre-simulated sequence.
+A number of optimization strategies are adopted: The two following sections describe a preprocessing that constructs and segments a coarse mesh representation into different region types.

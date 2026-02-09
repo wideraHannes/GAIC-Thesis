@@ -1,0 +1,5 @@
+Of course, the Jacobian will have many zeroes where the joint angle and the end-effector have no relation such as left elbow joint and right hand.
+In inverse rate control, the above conflict of the spine angles is resolved during the computation of the pseudo inverse of the Jacobian.
+          joint9 joint6 joint4 joint5 joint10 joint7 joint3 joint2 joint11 joint8 joint1 left hand(end-effector1) right hand(end-effector2) waist(root)
+          
+            Figure 2.

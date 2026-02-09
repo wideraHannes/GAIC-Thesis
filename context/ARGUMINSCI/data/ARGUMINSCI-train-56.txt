@@ -1,0 +1,2 @@
+The controllers designed for sitting or balanced standing will retain control until intervention by a user (or by a higher level planner) forces a desired transition.
+Thus, when the 2D character is balanced a user-driven process must choose among the next plausible actions, namely one of sit, walk, or dive (see Fig. 4 ).

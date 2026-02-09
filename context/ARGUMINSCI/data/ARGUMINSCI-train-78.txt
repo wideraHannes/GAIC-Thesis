@@ -1,0 +1,2 @@
+Unrolling the recursion to collect terms for ∂ p 0 / ∂ q i requires O(D) time.
+There are D terms q i , and this approach will lead to an O(D 2 ) computation for the momentum Jacobian.

@@ -1,0 +1,3 @@
+This seed is used to generate a family of motion sequences that parameterize the dynamic space.
+Lee and Shin presented a multi-level B-spline representation by which they transform existing motion to satisfy desired constraints adaptively through direct manipulation 
+[LS99].

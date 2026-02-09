@@ -1,0 +1,2 @@
+An IZ is a separable colliding area.
+Fig. 1 shows a cross section view of a collision situation where three cases of IZs are shown by dotted circles.

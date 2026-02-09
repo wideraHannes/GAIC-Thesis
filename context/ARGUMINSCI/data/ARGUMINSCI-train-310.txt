@@ -1,0 +1,3 @@
+Rose et al. [1996]
+ presented a more complex method for creating transitions that preserved kinematic constraints and basic dynamic properties.
+Our main application of motion graphs is to control a character’s locomotion.

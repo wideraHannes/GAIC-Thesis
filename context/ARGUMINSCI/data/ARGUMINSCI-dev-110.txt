@@ -1,0 +1,8 @@
+Instead, we use a semi-Lagrangian method to advect field values.
+We refer the reader to 
+[Stam, 1999] and [Foster and Fedkiw, 2001]
+ for a discussion on efficiently modeling the above equations.
+        
+        
+          <H2>4.2 Elastic, Plastic, and Total Strain</H2>
+          The fourth term of Equation (1) computes acceleration due to elastic forces and it requires knowing the elastic strain throughout the fluid.

@@ -1,0 +1,2 @@
+One is, overall the need to get on the latest and greatest database technology just because of what is the increasing need for compute and data at the edge is what's driving a lot of the conversations on SQL Server.
+Interesting enough, we have a lot of requirements around edge devices even, so that you can have databases with compute so that you can really have what is needed at the edge, that’s sort of one conversation.

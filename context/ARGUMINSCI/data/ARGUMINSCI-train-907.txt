@@ -1,0 +1,2 @@
+Free-form deformations with lattices of arbitrary topology.
+In Proceedings of the 23rd Annual Conference on Computer Graphics and Interactive Techniques, SIGGRAPH ’96.

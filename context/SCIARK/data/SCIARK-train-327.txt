@@ -1,0 +1,2 @@
+The initialization procedure for soil moisture in the climate model is identified as a key element exerting a primary control on the simulated amounts of grid cell runoff and, consequently, on the simulated river discharge.
+The soil moisture initialization has only a limited influence on the simulated precipitation pattern.

@@ -1,0 +1,8 @@
+In this section we will first discuss other surface tracking methods and then discuss related work and the mathematical foundation for several of the individual components of our method.
+        
+          <H2>2.1 Previous Surface Tracking Methods</H2>
+          Because surface tracking arises in a variety of contexts, the topic has received a significant amount of attention.
+Even in the limited context of fluid animation, there has been a great deal of excellent work on simulating fluids with free surfaces, including 
+Foster and Metaxas [1996], Foster and Fedkiw [2001], Enright et al. [2002b], Carlson et al. [2002, 2004], 
+Losasso et al. [2004], Goktekin et al. [2004], Hong and Kim [2005], Wang et al. [2005], Guendelman et al. [2005], and 
+Zhu and Bridson [2005].

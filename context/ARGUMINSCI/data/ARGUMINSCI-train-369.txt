@@ -1,0 +1,8 @@
+The fitted models are then evaluated by comparison to measured deformations with motions very different from those used for fitting.</Abstract>
+    
+    
+      
+        <H1>1.
+Introduction</H1>
+      
+      Today’s cloth simulators for animation, visual effects, games, and apparel design can mimic real cloth to a high degree of fidelity.

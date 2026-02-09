@@ -1,0 +1,2 @@
+To actuate these muscles, we define biologically-motivated control functions that map the current state of the body (joint angles, muscle fiber lengths, etc.) to excitation signals.
+The parameters of these functions are optimized to yield gaits that move the character forward without falling down.

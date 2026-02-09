@@ -1,0 +1,2 @@
+The primary end points for QOL analysis were time to deterioration of three common lung cancer symptoms: cough, dyspnea, and pain.
+Survival was significantly longer (hazard ratio, 0.70; P < .0001) in the erlotinib arm.

@@ -1,0 +1,2 @@
+But as I said, I think the key things that we think about is differentiation of Azure at each level because that's what is super important for us as we compete in this marketplace and more importantly double down on areas of differentiation we have.
+So the first thing is on the infrastructure side itself with the combination of the edge and the cloud I believe between Azure Stack and Azure as well as inclusive of our servers, we have the best crowd platform for what is going to be hybrid computing and we'll continue to push on that, so you'll see growth.

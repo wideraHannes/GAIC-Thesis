@@ -1,0 +1,2 @@
+However, these boundaries are in fact the unknowns we wish to determine and thus we must resort to a more uniform sampling strategy.
+Unfortunately, the high dimensionality of the state-space precludes regular sampling.

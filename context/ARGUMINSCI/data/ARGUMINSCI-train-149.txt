@@ -1,0 +1,2 @@
+In order to perform even distribution of twisting, we provide the animator with the freedom to control how the curve twists by manipulating the distribution curve.
+The distribution curve ( Figure 3a ) is very much like the animation curves in Maya.

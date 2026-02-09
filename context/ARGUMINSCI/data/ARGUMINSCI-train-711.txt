@@ -1,0 +1,2 @@
+We make three main contributions: we improve the color pattern and matching procedure to get more information per marker, we introduce strain constraints to simplify correspondence and we create a data driven hole filling technique that splices previously captured cloth into the mesh.
+As a result, our system is capable of capturing a full range of motion with folding and occlusion.

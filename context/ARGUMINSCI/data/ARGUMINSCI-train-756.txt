@@ -1,0 +1,3 @@
+The same could be done for additional geometries, such as a 2-D disk or a spherical surface.
+Also, different boundary conditions (for example, a wrap-around boundary condition) remain to be considered, which could prove useful for tilings of fluid simulation domains 
+[Wicke et al. 2009].

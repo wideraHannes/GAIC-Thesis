@@ -1,0 +1,6 @@
+We would like to thank Electronic Arts for supplying us with the motion data.
+      
+      
+        <H1>A Appendix: Similarity Metric</H1>
+        We define the torso coordinate frame to be the one where the body stands centered at origin on the xz plane and looks towards the positive z axis.
+Any point p in the torso coordinate frame can be transformed to the global coordinate frame by T (s i ) + R(s i ) · p , where T (s i ) is the 3 × 1 translation of the torso and R(s i ) is the 3 × 1 rotation of the torso and R(s i ) represents the rotation matrix associated with the rotation.

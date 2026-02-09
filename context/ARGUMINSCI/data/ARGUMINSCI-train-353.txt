@@ -1,0 +1,7 @@
+Initially, we learned this threshold from labelled data, but we found that changing it by several orders of magnitude had little effect on our results.
+Subsequently, we use the value 10 −5(N+1) where N is the number of neighbors.
+        
+      
+      
+        <H1>5 Mesh Processing</H1>
+        In the acquisition process, occlusion inevitably creates holes in the reconstructed mesh ( figure 8 ).

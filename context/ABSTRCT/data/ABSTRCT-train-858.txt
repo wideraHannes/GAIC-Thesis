@@ -1,0 +1,2 @@
+Kaplan-Meier survival with success defined as intraocular pressure (IOP) > 5 mmHg and < 22 mmHg and at least 20% reduction from preoperative IOP (with or without antiglaucoma medications) and without loss of light perception.
+Secondary outcome measures included intraocular pressure, visual acuity, number of glaucoma medications, and surgical complications.

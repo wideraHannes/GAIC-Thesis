@@ -1,0 +1,2 @@
+Endpoints included MD Anderson Symptom Inventory-Head and Neck (MDASI-HN) and Functional Assessment of Cancer Therapy-Head and Neck (FACT-NH) scores, along with clinical assessment and DNA concentration of OPS.
+There were no statistically significant differences in patients' QOL outcomes over the study period.

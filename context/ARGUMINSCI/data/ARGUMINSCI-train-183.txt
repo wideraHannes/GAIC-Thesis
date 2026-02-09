@@ -1,0 +1,2 @@
+These materials elastically resist deformation up to a certain point after which they begin to flow.
+In fact, even materials that are clearly solids behave this way: they act elastically over some regime and then begin to flow plastically (or perhaps fracture).

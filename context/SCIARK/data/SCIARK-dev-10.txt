@@ -1,0 +1,2 @@
+The sensitivity of the tool was 96.6% and specificity 11.8%.
+The positive predictive value and accuracy were 13.7% and 22.5% respectively.

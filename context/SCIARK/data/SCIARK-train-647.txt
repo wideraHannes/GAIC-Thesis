@@ -1,0 +1,2 @@
+Chi-squared test for linear trend was used to examine the significance of change in rates over time.
+Results:                    Out of the total 311 deaths of reproductive aged women during the study period, 72 (23.2%) died during pregnancy or within 42 days of delivery.

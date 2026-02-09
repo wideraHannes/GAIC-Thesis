@@ -1,0 +1,2 @@
+Buoyancy: Some systems of equations make an assumption that the fluid has the same density everywhere, which simplifies the equation set at the expense of not modeling buoyancy effects.
+The equations being used here do not make that assumption and buoyancyeffects dominate the dynamics in most of the examples presented.

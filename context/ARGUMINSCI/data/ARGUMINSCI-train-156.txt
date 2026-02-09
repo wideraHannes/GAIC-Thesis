@@ -1,0 +1,23 @@
+Nuttapong Chentanez &amp; Matthias Müller
+        
+          4
+          δ x i + = ( · (ρ[1, 0, 0] T )∆T )dV,
+        
+        
+          5
+          C i − δ i x = ( · (ρ[−1, 0, 0] T )∆T )dV, C i
+        
+        where ∆T is the fictitious time step, which we set to 3 times that of the simulation time step in all of our examples.
+We discretize δ x i + and δ i x − using an upwind scheme to get
+        
+          
+        
+        
+          6
+          δ i x + ≈ −(ρ i − ρ i−(1,0,0) )∆x∆T,
+        
+        
+          7
+          − δ i x ≈ −(ρ i+(1,0,0) − ρ i )∆x∆T.
+        
+        y + The mass change due to unit velocity along y and z axes, δ i , δ i y

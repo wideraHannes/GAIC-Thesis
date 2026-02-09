@@ -1,0 +1,3 @@
+With proper care, VOF can be made mass conserving.
+However, despite several improvements in subsequent works such 
+[PP04], [AGDJ08], reconstructing surface normal and curvature from VOF is still difficult.

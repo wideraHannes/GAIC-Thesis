@@ -1,0 +1,2 @@
+Once the compactness measures for all joints are computed for a vertex, the smallest k are chosen as the influence set for that vertex.
+It may be tempting to use a threshold scheme to choose influence sets but we have found this problematic.

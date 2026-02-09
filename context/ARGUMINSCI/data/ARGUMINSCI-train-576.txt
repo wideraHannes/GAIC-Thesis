@@ -1,0 +1,3 @@
+Journal of Algorithms, 1995.
+          [8] Jonathan Richard Shewchuk.
+Triangle: Engineering a 2D Quality Mesh Generator and Delaunay Triangulator.

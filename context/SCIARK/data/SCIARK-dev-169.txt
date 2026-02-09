@@ -1,0 +1,2 @@
+The analysis is pursued using the Global Multi-regional MARKAL model (GMM), a perfect foresight “bottom-up” model of the global energy system with a detailed representation of alternative fuel chains, linked to the Model for the Assessment of Greenhouse Gas Induced Climate Change (MAGICC).
+The analysis shows that biofuels are limited by the regional availability of low-cost biomass, but can be important for meeting mild climate policy targets.

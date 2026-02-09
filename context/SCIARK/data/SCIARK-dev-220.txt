@@ -1,0 +1,2 @@
+Primary energy sources for hydrogen production
+The cost of hydrogen from water electrolysis is estimated, assuming that the electricity was produced from solar, hydro-, fossil, or nuclear power.

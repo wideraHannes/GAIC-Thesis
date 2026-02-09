@@ -1,0 +1,2 @@
+Intra-class correlation coefficients between answers at different points are often much smaller than 0.5.
+Results were similar in all subgroups analysed (men vs. women; patients receiving biologics vs. those not receiving biologics; disease duration ≤3 years vs. 4 to 10 years vs. ≥11 years).

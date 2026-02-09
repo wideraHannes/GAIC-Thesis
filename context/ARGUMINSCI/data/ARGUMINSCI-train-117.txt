@@ -1,0 +1,2 @@
+Figure 2 illustrates how the musculotendon model interacts with the controller and the simulator.
+The controller outputs neural excitation signals (u), which are converted to muscle activations (a).

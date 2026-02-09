@@ -1,0 +1,6 @@
+The first is to select a start for the search at random.
+The second is retain the r best graph walks at the end of each iteration of the search and randomly pick among the ones whose error is within some tolerance of the best solution.
+      
+      
+        <H2>4.3 Deciding What To Ask For</H2>
+        Since the motion extracted from the graph is determined by the function g, it is worth considering what sorts of functions are likely to produce desirable results.

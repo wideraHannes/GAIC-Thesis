@@ -1,0 +1,2 @@
+Although any estimation scheme based on the old values can not completely eliminate the era ror higher caused order by the estimation nonlinearity for e 1 of n f 1 than , it can e 1 n be , reduced 1 , and with consequently can give better tracking performance.
+We found that the estimation rule described below gives satisfactory results.

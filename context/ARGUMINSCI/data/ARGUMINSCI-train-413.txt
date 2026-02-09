@@ -1,0 +1,2 @@
+The most egregious deformation problems of linear blend skinning are solved by our approach.
+Figures 3 and 4 show how our system can fix collapsing twists by adding just a single extra joint.

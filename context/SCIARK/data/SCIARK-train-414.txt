@@ -1,0 +1,2 @@
+Results: Higher national gender inequality, as measured by the gender inequality index, was significantly associated with a higher likelihood of suicide ideation in both girls and boys (odds ratio: 1.38 p-value: 0.015), but for girls and both sexes this was only after adjusting for selection bias due to secondary school enrolment (as well as GDP/capita).
+Interaction models showed that this association was stronger in boys than in girls.

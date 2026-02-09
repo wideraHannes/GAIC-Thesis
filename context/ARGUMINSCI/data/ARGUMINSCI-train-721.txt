@@ -1,0 +1,3 @@
+Interactive control</H2>
+        One advantage of our motion generation algorithm is that it provides for a wide range of physically plausible animations in real-time.
+To demonstrate the full benefit of this approach, we have created a video game interface where the user controls the trajectory of a jumping character with a multi-directional control pad

@@ -1,0 +1,2 @@
+In this demonstration we wish to control the horizontal translation vectors of the first and second jumps, d 1 and d 2 , respectively.
+First we generate a motion family by varying both the first and last ground stages along a 3x3 grid.

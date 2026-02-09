@@ -1,0 +1,2 @@
+First, their method assumes no spatial dependencies between the control (keyframed curves) and the target (textured motion).
+Second, there is no enforcement of motion continuity, other than a heuristic for consecutively observed segments.

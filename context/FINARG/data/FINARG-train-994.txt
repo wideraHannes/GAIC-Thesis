@@ -1,0 +1,2 @@
+Hood: And I would add, in addition to the number of regions which Satya is talking about, it's also the capacity inside a region.
+Much of our spend is, as you note, on some of the infrastructure to put in place when you pick a location.

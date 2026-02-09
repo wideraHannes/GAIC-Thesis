@@ -1,0 +1,2 @@
+In the past we participated, but a lot of Tier 1 workloads were not on Microsoft stack, whereas now, a lot of Tier 1 workloads are in fact increasingly on Microsoft cloud.
+And so to me, that represents a qualitative change, and so the type of dialogue we have, whether it's with an auto company or a financial services company or a retail company, is much deeper, much broader.

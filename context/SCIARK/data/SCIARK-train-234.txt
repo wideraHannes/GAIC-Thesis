@@ -1,0 +1,2 @@
+Cumulative effect estimates for 0-10 days were larger than estimates for single-day lags.
+Cumulative effect estimates for 0-30 days were essentially zero for nonaccidental and circulatory deaths but remained elevated for respiratory and cancer deaths.

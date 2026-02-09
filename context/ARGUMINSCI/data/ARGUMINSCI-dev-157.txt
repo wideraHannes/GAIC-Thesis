@@ -1,0 +1,5 @@
+Here the θ n are a set of barycentric coordinate coefficients such that θ 1 +θ 2 +θ 3 = 1, and a tilde superscript denotes a value interpolated with the barycentric weights.
+Substituting Eq.8 into Eq.6 yields
+        
+          9
+          w n = θ n φ G / φ  ̃ L .

@@ -1,0 +1,7 @@
+In other words, we introduce an additional objective function term, E b (Q) = (C(t 0 ) − )) 2 , for the initial and final ground
+      
+      
+        C(t
+        f
+        stage, and E b (Q) = (C orig (t m ) − C(t m )) 2 for each interior ground stages.
+We find that the correct weight of these objectives do not vary much from motion to motion and, in fact, as long as the weight is well scaled w.r.t.

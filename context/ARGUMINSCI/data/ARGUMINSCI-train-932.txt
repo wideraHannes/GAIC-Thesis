@@ -1,0 +1,2 @@
+Style machines.
+In Proceedings of ACM ACM SIGGRAPH 2000.

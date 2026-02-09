@@ -1,0 +1,9 @@
+Hsu, Gentry, and Popović / Example-Based Control of Human Motion
+        Control Target
+        
+          Figure 1: Segmentation of Lindy Hop motion into two-beat rhythm units.
+        
+      
+      
+        <H1>3.
+Database Construction</H1>

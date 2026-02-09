@@ -1,0 +1,2 @@
+Because our algorithm enables rapid convergence by presenting a good initial state of the optimization, the user can efficiently generate a large number of realistic motions from a single input motion.
+The algorithm can then populate the dynamic space of motions by simple interpolation, effectively parameterizing the space of realistic motions.

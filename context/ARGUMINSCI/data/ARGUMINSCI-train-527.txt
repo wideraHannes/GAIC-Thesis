@@ -1,0 +1,2 @@
+In the first and second pass, per-vertex deformation is calculated in the fragment program and the results are stored in texture maps using the FBO (Frame Buffer Object) extension [Gre05].
+These texture maps are bound to the geometry of the rest pose with their texture coordinates.

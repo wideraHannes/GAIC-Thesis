@@ -1,0 +1,2 @@
+Second, the method must provide an easy way to compute the local coordinate system for each skin vertex.
+This is necessary as we want to compute the deformation of the cloth surface in relation to the skin surface.

@@ -1,0 +1,2 @@
+Note that a full sampling of the initial configuration with a regular grid would have required approximately 6 million particles.
+Our measurements show that the run-time of our method has a strong linear relationship to the number of particles, and thus the visual complexity of the simulation.

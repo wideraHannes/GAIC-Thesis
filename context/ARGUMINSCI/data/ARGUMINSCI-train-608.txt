@@ -1,0 +1,3 @@
+We use the standard staggered grid 
+[FSJ01].
+Suppose all terms in (1) except for − ρ 1 ∇P are treated and let the velocity obtained so far be

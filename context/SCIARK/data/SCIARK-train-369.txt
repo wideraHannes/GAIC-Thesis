@@ -1,0 +1,2 @@
+Median hospital stay was 6 days (range 1-182).
+Conclusion:                    Pediatric trauma is becoming a cause of increasing concern, especially in the developing countries.

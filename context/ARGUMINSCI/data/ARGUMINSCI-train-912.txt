@@ -1,0 +1,3 @@
+Some researchers call this quantity the force density.
+Using this stiffness parameter, we found the force density method 31 satisfies the above-defined properties. y An added advantage is that it is also able to solve the
+        y In the interest of space, in this paper we do not give the detailed proofs that the force-density form finding method satisfies our specified properties.

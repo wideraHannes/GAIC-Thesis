@@ -1,0 +1,2 @@
+Dynamic control can provide solutions based on simplified assumptions about human motion.
+However, the result tends to look quite mechanical.

@@ -1,0 +1,2 @@
+Today, that whole model is that people can post what they want and then a person can flag it, and then our systems will look at it.
+But increasingly as we move into the future, we're going to be able to proactively take down some negative content.

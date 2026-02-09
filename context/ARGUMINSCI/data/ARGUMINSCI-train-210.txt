@@ -1,0 +1,2 @@
+For discrete domains, it can be approximated numerically on a mesh as described in Section 8.
+For every pair of basis functions we evaluate the advection operator and express the result in the finite φ k basis.

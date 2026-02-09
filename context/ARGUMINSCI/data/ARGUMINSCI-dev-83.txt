@@ -1,0 +1,3 @@
+GP and its invariants (e.g., GPLVM) have recently been applied to modeling kinematic motion for many problems in computer animation, including nonlinear dimensionality reduction for human poses [Grochow et al. 2004], motion interpolation [Mukai and Kuriyama 2005], motion editing [Ikemoto et al. 2009], and motion synthesis [Ye and Liu 2010].
+In particular, Ikemoto and her colleagues [2009]
+ learned the kinematic mapping from pose information of the source motion to pose and acceleration information of the target motion and applied them to transferring a new source motion into a target motion.

@@ -1,0 +1,8 @@
+As the twist approaches 180 ◦ the arm collapses.
+          
+        
+        
+          <H3>2.3.3 Unified Approaches</H3>
+          Several published algorithms and commercial packages combine aspects of skeleton-driven deformation and shape interpolation in ways that anticipate our approach.
+In the pioneering work of Burtnyk and Wein, two dimensional characters were animated using a polygonal rubber sheet that afforded both skeletal and local deformation control 
+[ 6 ].

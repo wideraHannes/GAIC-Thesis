@@ -1,0 +1,2 @@
+Apart from simulation time, the large triangle count increases the rendering time and the cost significantly.
+In order to avoid these, one can increase fineness of triangles only in the potential regions where wrinkling might occur.

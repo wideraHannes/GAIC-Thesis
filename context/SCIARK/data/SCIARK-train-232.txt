@@ -1,0 +1,2 @@
+With the exception of a flexibility score 6, MMR was lower when higher than zero.
+This may indicate the role of other country- specific effects.

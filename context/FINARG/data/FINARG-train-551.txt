@@ -1,0 +1,2 @@
+And so, on the AWS side, we've got investment going on around the world, certainly additional servers to support the strong growth we have.
+And some of the expense for things like data centers or new regions can be a little lumpy, and we've mentioned a couple of new regions we're working on throughout the world.

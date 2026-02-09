@@ -1,0 +1,2 @@
+In computer graphics, a variety of techniques have been proposed to model liquids and deformable objects at interactive rates.
+As important as the plausible animation of these substances is the fast and stable modeling of their interaction.

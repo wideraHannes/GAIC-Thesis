@@ -1,0 +1,2 @@
+The reason for that is that the hypothetical equilibrium state is derived from the knowledge of the Hessian matrix, which relates the firstorder evolution of the forces as the deformations change.
+Nonlinearity causes this matrix to change between the successive iterations, and this evaluation to be inaccurate, despite high system resolution accuracy that can be reached with numerous Conjugate Gradient iterations.

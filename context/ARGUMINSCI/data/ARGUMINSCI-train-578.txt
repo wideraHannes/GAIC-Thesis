@@ -1,0 +1,2 @@
+Scaling is necessary to put greater weight on the more important low-frequency modes, which would otherwise be masked by highfrequency modes.
+In case the eigenmodes in different poses show large variance, we can adapt the normalization factor such that the eigenvectors are normalized across morph targets, by replacing the scaling factor by λ λ i 1 i λ i . k j Finally, to make the basis aware of the morph targets, we add m − 1 rest pose deformations {x 0 p |i = 2, . . .

@@ -1,0 +1,8 @@
+This lets us write x 1 = w u u 1 + w v v 1 and x 2 = w u u 2 + w v v 2 .
+Solving for w u and w v yields
+        46
+        SIGGRAPH 98, Orlando, July 19–24
+        C OMPUTER G RAPHICS Proceedings, Annual Conference Series, 1998
+        
+          9
+          −1 (w u w v ) =

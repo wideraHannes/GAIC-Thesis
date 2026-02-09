@@ -1,0 +1,10 @@
+This demonstration provides for the first time a clear theoretical reason why inverse operation is required.
+We formulate editing geometry in rest pose as an optimization problem and propose a unified framework which can be implemented on high-end commercial packages while allowing any proprietary skinning operators to be incorporated.
+      
+      
+        <H1>3 Skeleton Sub-Space Deformation</H1>
+        6 5 4 3 2 1 0
+        
+          
+        
+        0 1 2 3 4 5 6 7 8 (a).

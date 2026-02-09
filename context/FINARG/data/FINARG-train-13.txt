@@ -1,0 +1,2 @@
+It helps us identify content that might be offensive or graphic that might violate the policies of Facebook so we can flag that and review that better.
+So that's the main thread of the AI work we're doing is trying to understand conversational and linguistic context and computer vision, photographic and video signals to understand what's going on there.

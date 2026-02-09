@@ -1,0 +1,2 @@
+While this viewpoint is valid, in practice it is perhaps excessively general, for example, a skeleton is merely learned rather than being an intrinsic part of the model.
+While employed at Industrial Light and Magic the first author of the present paper developed a system that attempted to blend shape interpolation and SSD algorithms; a small portion of it remains in use in their well known Caricature animation system.

@@ -1,0 +1,5 @@
+The octree is built recursively from the root cell C 0 by the following splitting criterion:
+          
+            13
+            Split every cell where |ψ n+1 | is larger than the edge length.
+Thus we apply Criterion (13) as if ψ n+1 were a distance function.

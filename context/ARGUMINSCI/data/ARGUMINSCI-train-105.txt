@@ -1,0 +1,2 @@
+In our situation, the function form is not explicit, and the computing burden increases with the number of example poses increases.
+We will adopt Powell’s method as the solution to this minimization problem.

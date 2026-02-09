@@ -1,0 +1,2 @@
+While this works for simple objects this approach is not feasible at all with deformable objects like textiles.
+Another more serious drawback of this model for our application consists in the lack of interaction with objects.

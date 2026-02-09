@@ -1,0 +1,3 @@
+However, Herbert’s ‘fetal pose’ morph target 3 was authored with a stiff belly.
+Our method (bottom right) shows the more desired behavior.
+        model, we qualitatively compare simulations with different elastic models.

@@ -1,0 +1,2 @@
+Legendre fluids: a unified framework for analytic reduced space modeling and rendering of participating media.
+In Proceedings of the 2007 ACM SIGGRAPH/Eurographics symposium on Computer animation.

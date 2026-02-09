@@ -1,0 +1,2 @@
+Physics-based dynamics modeling.
+Our motion model considers both Newtonian dynamics and contact mechanics for a full-body human figure.

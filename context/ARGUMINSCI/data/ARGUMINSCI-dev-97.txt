@@ -1,0 +1,2 @@
+Conservation of Mass, Momentum, Energy: The system of five equations and five unknowns is used to express conservation of mass, conservation of the 3 components of momentum, and conservation of energy.
+Along with the equation of state, which is an equation for one thermodynamic quantity as a function of two others, this forms a complete description of the fluid, i.e. the velocity and thermodynamic state of the fluid at any point.

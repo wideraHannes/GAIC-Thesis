@@ -1,0 +1,2 @@
+Median progression-free survival time in the TC arm (17.2 months, 95% CI = 15.2 to 19.3 months) and the PT arm (19.1 months, 95% CI = 16.7 to 21.5 months) were also not statistically significantly different; the same was true of median overall survival time (43.3 months, 95% CI = 37.2 to 47.8 months versus 44.1 months, 95% CI = 40.2 to 49.4 months, for the TC and PT arms, respectively).
+The TC regimen was associated with a higher frequency of hematologic toxicity, but a lower frequency of gastrointestinal and neurologic toxicity, than the PT regimen.

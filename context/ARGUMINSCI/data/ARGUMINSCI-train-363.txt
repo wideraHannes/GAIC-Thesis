@@ -1,0 +1,2 @@
+This can lead to overfitting, which MWE must take measures to avoid.
+In contrast, since the number of weights per vertex in one of our skins remains relatively small (1 per influencing joint) and our extra joints are explicitly designed to be very different from existing joints, our technique requires no special provisions to avoid overfitting.

@@ -1,0 +1,2 @@
+Obviously, as the character moves from one pose to the other, the internal forces change continuously but highly non-linearly.
+In other words, elastic forces form a non-linear smooth field in pose-space.

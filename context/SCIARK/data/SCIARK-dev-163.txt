@@ -1,0 +1,2 @@
+Our measurements were made using series from a regional climate model and the corresponding real data from a network of sensors from meteorological stations existing in the analyzed region.
+The results show that our approach can correctly discriminate the data either as real or as simulated, even when statistical tests fail.

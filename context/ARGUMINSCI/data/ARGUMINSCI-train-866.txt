@@ -1,0 +1,2 @@
+This is not acceptable.
+In order to remedy this problem, here on the curve skeleton we define two extra attributes, twist angle and twist distribution.

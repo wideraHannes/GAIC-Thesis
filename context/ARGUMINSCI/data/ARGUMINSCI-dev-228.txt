@@ -1,0 +1,3 @@
+The missing portion is the rigging: motion transfer has been addressed in prior work 
+[Gleicher 2001].
+Our algorithm consists of two main steps: skeleton embedding and skin attachment.

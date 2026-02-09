@@ -1,0 +1,2 @@
+Notice that cells that are completely solid (V = 0) have ρ = 0.
+We then extrapolate ρ from cells that have V &gt; 0 to adjacent cells with V = 0

@@ -1,0 +1,2 @@
+P ERLIN , K., AND G OLDBERG , A. 1996.
+Improv: A system for scripting interactive actors in virtual worlds.

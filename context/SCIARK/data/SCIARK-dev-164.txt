@@ -1,0 +1,3 @@
+This is sometimes erroneously written as A1F1, with number 1 instead of letter I.)
+This paper presents simulations of climate change with an ensemble of GCMs driven by the A1FI scenario, and also assesses the implications of carbon-cycle feedbacks for the climate-change projections.
+Using these GCM projections along with simple climate-model projections, including uncertainties in carbon-cycle feedbacks, and also comparing against other model projections from the IPCC, our best estimate is that the A1FI emissions scenario would lead to a warming of 4°C relative to pre-industrial during the 2070s.

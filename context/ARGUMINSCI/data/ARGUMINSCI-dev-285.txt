@@ -1,0 +1,2 @@
+For each marker, we construct a covariate neighborhood (a fitted ellipse) and vote for links to the three closest markers with similar covariate neighborhoods.
+This measures distances appropriately in parts of the scene where the cloth is receding from view and discourages links between markers with wildly different tilts.

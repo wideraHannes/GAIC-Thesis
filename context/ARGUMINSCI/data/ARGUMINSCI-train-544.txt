@@ -1,0 +1,2 @@
+Directable animation of elastic objects.
+Proc. of ACM SIGGRAPH/Eurographics Symposium on Computer Animation.

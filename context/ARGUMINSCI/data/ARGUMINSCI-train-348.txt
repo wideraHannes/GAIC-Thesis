@@ -1,0 +1,3 @@
+This allows other CG characters to be animated with the same motions, leading to realistic, “human looking” motions for use in movies or games.
+The biggest drawbacks of motion capture are:
+      1.

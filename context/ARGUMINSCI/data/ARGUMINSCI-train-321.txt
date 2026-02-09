@@ -1,0 +1,2 @@
+Generally, skinning can be categorized into algorithmic, physically-based, and example-based methods.
+Although widely used, simple algorithmic skinning schemes cannot capture the complexity and subtlety of real skin deformation, and revised approaches will be required to increase character animation realism.

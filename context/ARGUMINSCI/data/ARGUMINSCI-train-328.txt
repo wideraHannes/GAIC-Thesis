@@ -1,0 +1,2 @@
+The basic idea of the particle tracing method is to trace wind particles through a field w = i w i defined by linear superposition of wind sources corresponding to flow primitives with respective velocity fields w i .
+The field w does not account for lee effects caused by objects in the flow.

@@ -1,0 +1,2 @@
+Energy and CO2eq emission payback times and the energy return ratio of the system were calculated.
+For all the analysed configurations they ranged from 4 to 6 years.

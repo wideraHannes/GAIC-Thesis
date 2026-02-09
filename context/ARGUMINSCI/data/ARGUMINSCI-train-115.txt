@@ -1,0 +1,2 @@
+Figure 4: Shepard’s interpolant operating on a set of colinear points.
+The derivative is zero at the data points, and the curve extrapolates to the average of the data values.

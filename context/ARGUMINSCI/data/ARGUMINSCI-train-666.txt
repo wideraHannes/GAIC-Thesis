@@ -1,0 +1,7 @@
+A wide variety of rendering styles increases the expressive power of scene elements and their interpretation.
+      
+      
+        <H1>3 The Model</H1>
+        The equation set used was derived for a meteorology application, the study of clouds 
+[ 10 , 18 ].
+The equation set presented in section 3.2 is a simplification of that system which meets the needs discussed in section 2 in a variety of ways discussed throughout.

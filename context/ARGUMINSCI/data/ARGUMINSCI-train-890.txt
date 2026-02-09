@@ -1,0 +1,2 @@
+As will be shown in later experiments, the high frequency details of the original motion, which carries important characteristics of the motion, are also well preserved by our algorithm.
+Figure 1 shows the on-line retargetting process schematically.

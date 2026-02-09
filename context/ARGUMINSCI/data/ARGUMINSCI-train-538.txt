@@ -1,0 +1,2 @@
+The method we describe in this paper models the exchange of momentum between Lagrangian particle-based fluid models and solids represented by polygonal meshes.
+To model the solid-fluid interaction we use virtual boundary particles.

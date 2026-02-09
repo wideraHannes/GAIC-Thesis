@@ -1,0 +1,10 @@
+Our composition framework promises to enable the community of physics-based animation practitioners to easily exchange motor controllers and integrate them into dynamic characters.</Abstract>
+	Keywords: Computer Animation, Character Animation, PhysicsBased Animation Control, Physics-Based Modeling CR Categories: I.3.7 [Computer Graphics]: Three-Dimensional Graphics and Realism—Animation; I.6.8 [Simulation and Modeling]: Types of Simulation—Animation  
+    
+    
+      0 To appear in the Proceedings of SIGGRAPH 2001 (Los Angeles, CA, August 12–17, 2001).
+In Computer Graphics Proceedings, Annual Conference Series, 2001, ACM SIGGRAPH, in press.
+      
+        <H1>1 Introduction</H1>
+      
+      Despite the considerable history of progress in animating virtual humans [ 3 , 7 ], physics-based animated characters with a large repertoire of motor skills have so far been elusive.

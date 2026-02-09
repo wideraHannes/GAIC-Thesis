@@ -1,0 +1,2 @@
+An inviscid fluid preserves kinetic energy, and should trace out a path on such a sphere.
+We choose a fast explicit integrator (such as forward Euler or Runge-Kutta method) to first perform an unconstrained timestep, followed by renormalization to enforce the energy constraint as depicted in Figure 6 .

@@ -1,0 +1,3 @@
+SIGGRAPH), pages 121–128, 1999.
+          [Sta01] Jos Stam.
+A simple fluid solver based on the FFT.

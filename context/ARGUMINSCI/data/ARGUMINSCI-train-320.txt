@@ -1,0 +1,3 @@
+Similarly a sculpted pose that represents the simultaneous activation of several parameters (e.g. happy but surprised, or smiling with a wink) can simply be saved at the appropriate location in the pose space.
+Psychological research has shown that human facial expressions are largely described by two “emotional” axes 
+[ 30 ] ( Figure 6 ); this two-dimensional space would be a convenient high-level pose space for controlling facial animation.

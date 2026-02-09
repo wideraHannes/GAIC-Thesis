@@ -1,0 +1,2 @@
+Turbulent Wind Fields for Gaseous Phenomena.
+In Computer Graphics, pages 369–376.

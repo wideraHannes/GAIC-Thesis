@@ -1,0 +1,2 @@
+It is then stretched to the bottom left corner (Stage 2).
+Comes back to the neutral position (Stage 3) and finally in Stage 4, stretches to the bottom right corner.

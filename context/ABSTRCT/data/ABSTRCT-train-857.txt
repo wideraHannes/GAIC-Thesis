@@ -1,0 +1,2 @@
+After a mean follow-up of 12.3 months, Kaplan-Meier survival analysis showed a probability of success of 59% at 18 months for the MMC group and 61% for the control group when the first criterion for success was used (IOP between 6 and 21 mmHg).
+When an IOP reduction of at least 30% was used as the criterion to define success, the Kaplan-Meier survival analysis demonstrated a probability of success at 18 months of 62% for the MMC group and 67% for the control group.

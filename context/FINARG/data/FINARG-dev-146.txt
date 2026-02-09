@@ -1,0 +1,2 @@
+They worked with one of our FMPs, StitcherAds, and they created custom audiences who viewed specific itineraries by date.
+So they look for people that at a certain date have used specific itineraries and then created Dynamic Ads which showed the available cruises and pricing and had a Book Now button.

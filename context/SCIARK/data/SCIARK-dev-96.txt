@@ -1,0 +1,2 @@
+This paper investigates redesign of the diesel generator to achieve variable speed operation.
+A suitable design basis is developed, with laboratory testing used to validate unit performance, ahead of economic evaluation.

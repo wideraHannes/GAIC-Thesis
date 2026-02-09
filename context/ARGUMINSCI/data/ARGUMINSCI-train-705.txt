@@ -1,0 +1,3 @@
+Optimization Problem</H2>
+        For each different cloth sample, we have created a simulated replica with the same mass, uniformly distributed, and the same 100mm square geometry, discretized with a regular 25 × 25-node mesh, connected either with springs or with quadrilaterals split into triangles, depending on the model.
+In each measurement sequence, a different set of nodes is fixed to rigid bodies representing the clips.

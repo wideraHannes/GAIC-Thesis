@@ -1,0 +1,5 @@
+They added space-adaptivity in 
+[ 11 ].
+Later, Stora et al. 
+[ 12 ]
+ used a similar particle based model to animate lava flows.

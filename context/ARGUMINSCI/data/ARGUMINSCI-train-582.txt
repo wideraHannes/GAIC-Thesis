@@ -1,0 +1,5 @@
+Differentiating equation (11), we obtain
+        
+          12
+          ∂x ∂d i j = −k d ∂C(x) ∂x i ∂ C(x) ∂x  ̇ j T + ∂ ∂x C(x) i ∂x j C(x)  ̇ .
+Note that ∂d/∂x is not a second derivative of some function as was the case in equation (8) so we cannot expect ∂d/∂x to be symmetrical.

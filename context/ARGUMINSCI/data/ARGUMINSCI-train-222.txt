@@ -1,0 +1,3 @@
+An overview of the automatic motion planning can be found in 
+[Latombe 1999; O’Rourke 1998].
+Generating motion largely follows two threads: using examples and using controllers.

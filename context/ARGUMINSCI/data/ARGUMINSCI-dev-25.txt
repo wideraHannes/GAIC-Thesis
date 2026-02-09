@@ -1,0 +1,3 @@
+This first order approximation is identical to 
+[ SSK05 ] and higher order formulations can be found in [ ABS96 , SAB ∗ 99 ].
+Obviously, if ρ is constant, we have the pressure projection ∆t ρ ∇ 2 P = ∇ · u introduced in [ Sta99 ].

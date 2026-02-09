@@ -1,0 +1,2 @@
+In bivariate analyses, health insurance and annual household income were both strongly associated with use of nearly all examined health care services (P values <.01).
+Using multivariable analysis, increased annual household income did not significantly increase the likelihood of uninsured compared with insured adults receiving recommended health care services for cancer prevention, cardiovascular risk reduction, or diabetes management (P values >.05).

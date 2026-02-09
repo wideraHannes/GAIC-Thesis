@@ -1,0 +1,2 @@
+Therefore, if we encounter another vertex assigned to the same set of joints j 1 , . . . , j n , we can re-use the center of rotation computed formerly (cached).
+Moreover, if there is only one, or two neighboring joints that influence the vertex, we can determine the center of rotation precisely (as indicated in the beginning of this section) and omit the SVD computation at all.

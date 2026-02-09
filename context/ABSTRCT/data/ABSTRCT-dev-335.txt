@@ -1,0 +1,2 @@
+Patients were randomized to standard (systolic, 130-140 mm Hg) or intensive (systolic, <125 mm Hg) BP targets, to be achieved through medication changes.
+Cerebral perfusion was measured using arterial spin labeling; the primary end point was change in global perfusion between baseline and 3 months, compared between treatment groups by analysis of variance.

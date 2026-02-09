@@ -1,0 +1,2 @@
+These measurement-based approaches establish a valuable link between simulation and real-world behavior, but they rely on experiments that isolate individual deforma∗ tion modes.
+As an alternative, Bhat et al. [ BTH 03 ] (and recently Kunitomo et al.

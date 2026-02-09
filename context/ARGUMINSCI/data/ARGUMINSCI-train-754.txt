@@ -1,0 +1,2 @@
+Also, let u 1 = u j − u i , while u 2 = u k − u i and similarly for v 1 and v 2 .
+We approximate w(u, v) as a linear function over each triangle; this is equivalent to saying that w u and w v are constant over each triangle.

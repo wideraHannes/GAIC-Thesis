@@ -1,0 +1,5 @@
+Meanwhile, the uncertainty for every predictive output (i.e. covariance function) is also estimated.
+In this paper, we choose the squared exponential function as our kernel function:
+        
+          17
+          k(y, y ) = σ f 2 exp −( 1 (y − y ) T W (y − y ))

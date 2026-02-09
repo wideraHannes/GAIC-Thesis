@@ -1,0 +1,2 @@
+Pose space deformation is a shallow, purely kinematic approach to deformation (i.e. without reference to underlying forces, mass, volume), and it has consequent disadvantages.
+In particular, accuracy is reliant on the modeler/animator rather than being guaranteed by the simulation.

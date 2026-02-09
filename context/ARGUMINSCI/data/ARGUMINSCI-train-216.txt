@@ -1,0 +1,5 @@
+Thus, choosing a more restrictive basis for pressure, as in 
+[Irving et al. 2007], or explicitly removing high-frequency information from the pressure 
+[Misztal et al. 2010]
+, reduces the chance of locking.
+Our method, by construction, has more degrees of freedom for representing velocity fields than pressure fields.

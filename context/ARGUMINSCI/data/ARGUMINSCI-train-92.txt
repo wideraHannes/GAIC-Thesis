@@ -1,0 +1,11 @@
+As × ˆ with is the momentum, cross product this operator form results for spatial in an expresvectors sion for the force Jacobian that requires O(D 2 ) time to compute.
+For fast computation, we instead take the time derivative of Equation 14, which results in
+        
+          18
+          f ∗ = X i i+1 f i+1 ∗ + v ×p ˆ ∗ + I ∗ a +  ̇ I ∗ v
+        
+        
+          18
+          i i i i i i i
+        
+        This equation has the properties we are looking for.

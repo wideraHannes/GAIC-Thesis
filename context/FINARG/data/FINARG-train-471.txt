@@ -1,0 +1,2 @@
+It's the same case with Schneider Electric or ABB or any one of the customers we are working with because they all are taking some of their assets and converting them into SaaS applications on Azure.
+And that's something that we will in fact have distribution agreements with.

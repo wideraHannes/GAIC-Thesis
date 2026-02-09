@@ -1,0 +1,2 @@
+Strasser.
+A fast, flexible particle-system model for cloth draping.

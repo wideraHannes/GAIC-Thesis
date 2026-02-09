@@ -1,0 +1,2 @@
+The analysis in figure 6 shows that we can set N = 3 at the start and continue until N = 0.
+Because the identity of the marker is overspecified, there are few mistakes.

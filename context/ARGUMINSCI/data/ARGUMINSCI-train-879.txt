@@ -1,0 +1,2 @@
+When marching cubes encounters an edge whose vertices have different signs, we find a point which evaluates to zero for each composite function.
+The final mesh vertex is an average of these two points.

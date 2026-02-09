@@ -1,0 +1,4 @@
+These constraints are either specified directly in the original motions or generated as in Section 3.3, depending on whether the frame is original data or a transition.
+These constraints may be satisfied using a variety of methods, such as 
+[Gleicher 1998] or 
+[Lee and Shin 1999].

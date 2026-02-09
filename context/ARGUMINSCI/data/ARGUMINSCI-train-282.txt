@@ -1,0 +1,2 @@
+Building anatomically accurate physical models for facial animation or whole-body motion remains challenging.
+There are two limitations of our approach: an appropriate database must be available and the user cannot specify such dynamic constraints as ground reaction forces or character mass.

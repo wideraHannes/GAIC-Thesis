@@ -1,0 +1,2 @@
+However, we demonstrate in our evaluations that it can compute results significantly faster than input motion can be recorded, thus making it suitable for rapid-feedback motion authoring applications.
+We believe that segmental approaches like ours hold great promise for real-time performance-driven animation, and consider it a promising area of future research.

@@ -1,0 +1,2 @@
+This yields reasonable bone weights which change smoothly over the mesh.
+Filtering may be required to force each bone’s weights to zero at the edges of its influence to prevent discontinuities.

@@ -1,0 +1,3 @@
+Furthermore, theoretical performance scaling is less critical for the applications we consider and we show that visually detailed simulations are attainable at low cost.
+Divergence free finite element methods (DFFEM) employ bases of discrete divergence free velocity fields to solve fluid equations in a space that satisfies mass continuity a priori 
+[Gustafson and Hartman 1983].

@@ -1,0 +1,2 @@
+The first full embedding extracted is guaranteed to be the optimal one.
+This is essentially the A* algorithm on the tree of possible embeddings.

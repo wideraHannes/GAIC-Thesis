@@ -1,0 +1,2 @@
+Let the edge between the triangles be between particles i and j, and define u = u i − u j and v = v i − v j .
+The stiffness weighting for this edge should simply be k u ( u) 2 + k v ( v) 2 . ( u) 2 + ( v) 2

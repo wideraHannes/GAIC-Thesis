@@ -1,0 +1,2 @@
+Here we model a range of sea-level rise scenarios to assess the responses of water tables across the diverse topography and climates of the California coast.
+With 1 m of sea-level rise, areas flooded from below are predicted to expand ~50–130 m inland, and low-lying coastal communities such as those around San Francisco Bay are most at risk.

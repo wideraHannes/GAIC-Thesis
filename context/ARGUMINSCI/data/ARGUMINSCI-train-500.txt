@@ -1,0 +1,7 @@
+Skinning using free form lattices [ 8 ], [ 9 ] or NURBS curves [ 10 ] instead of skeletons to drive character surface are also common practices in the entertainment production.
+Our framework implements existing PSD theory and the distinction is that we insert an optimization module into the PSD pipeline by applying a unified inverse approach assuming the knowledge of basic skinning is unavailable.
+        2
+      
+      
+        <H2>2.1 Our Contribution</H2>
+        We provide detailed reasons why and how the inverse operation can improve the results.

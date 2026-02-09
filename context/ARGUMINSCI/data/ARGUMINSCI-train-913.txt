@@ -1,0 +1,6 @@
+Results and Discussion</H1>
+        We measure and validate the proposed real-time cloth simulation method along three criteria: the variety of clothes to be simulated, the computation speed and the range of body motion in the pre-simulated cloth sequence.
+Pre-simulated sequences obtained by the cloth simulator of Volino et al 
+[21] were used in our preprocessing.
+        
+          <H2>7.1.

@@ -1,0 +1,5 @@
+The task terms are based on 
+Wang et al. [2010] and are defined in the supplemental material.
+Note that unlike in previous work, we did not need to include human-like speed to step-length ratio and minimal angular momentum about the COM as task terms.
+        
+          <H2>5.1 Effort Term</H2>

@@ -1,0 +1,2 @@
+The i th frame of the graph walk, w i , is at some arc length s(w i ) from the start of P .
+We define the corresponding point on P as the point at the same arc length, P(s(w i )).

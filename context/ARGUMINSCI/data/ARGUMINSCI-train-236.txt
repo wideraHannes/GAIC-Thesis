@@ -1,0 +1,2 @@
+We do this by solving an optimization problem, leveraging that the cloth is at static equilibrium at the measured configurations.
+In principle all parameters of a cloth model can be fit to a sufficiently rich single deformation sequence, but this can result in a problem fraught with local minima.

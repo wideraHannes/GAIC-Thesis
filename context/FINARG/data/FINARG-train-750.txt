@@ -1,0 +1,2 @@
+Wonder if you could talk just sort of high level and strategically about applications and enterprise applications in Azure, and how you kind of see the synergy potentially coming out between those, especially when you think about Azure AI and all the services, or kind of the question is, how important or how critical are applications like the growth that we're seeing in Dynamics, et cetera?
+Satya Nadella:

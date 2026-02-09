@@ -1,0 +1,2 @@
+Next, we describe in detail the strain metrics for the individual deformation components in the selected models.
+Note that not all force models define the quantities below explicitly as strains, as they often rely on the resolution of the discretization, or they differ simply by scale factors that can be embedded in the stiffness k i .

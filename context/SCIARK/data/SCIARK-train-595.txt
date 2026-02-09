@@ -1,0 +1,2 @@
+Individual independent variables were gender, age, immigrant status, educational level, partner status and employment status.
+The main contextual independent variable was a modification of Korpi's typology of family policy models (Dual-earner, Traditional-Central, Traditional-Southern, Market-oriented and Contradictory).

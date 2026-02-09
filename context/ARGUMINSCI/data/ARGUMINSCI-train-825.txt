@@ -1,0 +1,2 @@
+Hierarchical Techniques in Collision Detection for Cloth Animation.
+Journal of WSCG, 11(2):322–329, 2003.

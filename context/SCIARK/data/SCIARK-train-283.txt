@@ -1,0 +1,3 @@
+The age–BMI-adjusted PSA model performed as well as an age-adjusted model based on National Institute for Health and Care Excellence (NICE) guidelines at detecting prostate cancer.
+Conclusions
+Age and BMI were associated with small changes in PSA.

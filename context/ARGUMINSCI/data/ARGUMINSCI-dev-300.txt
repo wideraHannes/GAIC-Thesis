@@ -1,0 +1,2 @@
+E., C H.
+E.: Marching cubes: A high resolution 3d surface construction algorithm. (August 1987), 163–169. 7

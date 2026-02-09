@@ -1,0 +1,2 @@
+Skin deformation can happen around the joints where its surface bends and also in places where the underlying anatomic structure, such as muscles, pushes and pulling the skin surface.
+Using above defined bar-net properties, deformations are achieved by applying virtual forces to the appropriate free nodes of the control mesh.

@@ -1,0 +1,3 @@
+Using GII scores and GGLE data we computed Pearson’s correlation coefficient and created a scatter plot.
+Results
+In EU 28 Member States, on average the GGLE is 5.4 years in 2015.

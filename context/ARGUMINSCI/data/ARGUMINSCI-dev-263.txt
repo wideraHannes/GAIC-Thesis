@@ -1,0 +1,2 @@
+Modeling and deformation of the human body using an anatomically-based approach.
+In Proceedings of the Computer Animation, CA (June 08–10, 1998).

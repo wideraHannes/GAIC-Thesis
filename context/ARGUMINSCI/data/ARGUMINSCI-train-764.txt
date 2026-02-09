@@ -1,0 +1,2 @@
+To evaluate our final level set value, we compute the minimum signed distance from a query point to all nearby convex hulls.
+We evaluate the level set on each of the vertices of our adaptive BCC mesh, and we extract a triangle mesh using a marching tetrahedra algorithm.

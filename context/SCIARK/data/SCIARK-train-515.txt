@@ -1,0 +1,2 @@
+By using panel ordinary least squares and fixed-effect panel quantile regression (PQR), we find that the impact of the decisive factors of  emissions are heterogeneous across different quantiles.
+Specifically, EE reduces  emissions across all quantiles, but the mitigation effect is strongest at the 90th quantile.

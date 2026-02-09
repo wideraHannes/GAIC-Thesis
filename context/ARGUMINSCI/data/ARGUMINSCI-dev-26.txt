@@ -1,0 +1,2 @@
+This integration has been carried out in the form of a 3DStudio Max plugin (Fig.6), running on a 500 MHz PentiumIII PC.
+We have simulated a 2000 Polygon garment made of the cotton material described in Section 3.

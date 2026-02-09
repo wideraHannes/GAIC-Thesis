@@ -1,0 +1,2 @@
+There are many interesting avenues for future work.
+First, the approach could be extended to simulating other physics-based models such as hair and fluid.

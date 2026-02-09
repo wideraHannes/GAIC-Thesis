@@ -1,0 +1,2 @@
+This is exactly what happens in the ”candywrapper” problem: the single point the skin collapses to is a result of transformation by a singular matrix.
+A similar defect is visible also in the proximity of the singular configuration.

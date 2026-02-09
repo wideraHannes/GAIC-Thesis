@@ -1,0 +1,15 @@
+Compute:
+        
+          37
+          I ∗ i = X i+1 I ∗ i+1 X i+1 i + I i
+        
+        
+          37
+          i
+        
+        
+          38
+          p i ∗ = X i+1 i p i+1 ∗ + I i ∗ s i q  ̇ i
+        
+        where body inertias and momenta propagate from the leaf to the base.
+I ∗ 0

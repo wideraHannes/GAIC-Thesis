@@ -1,0 +1,2 @@
+Results: Models including the CIHI grouper (239 conditions) and ACG system had similar performance in most cost categories and slightly better fit than Charlson Comorbidity Index (CCI) and Elixhauser Comorbidity Index (ECI).
+Adding a dummy variable for nonusers in the models for CCI and ECI increased R values slightly.

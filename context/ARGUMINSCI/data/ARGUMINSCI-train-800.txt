@@ -1,0 +1,2 @@
+Using this deformation transformation and the already computed wrinkling coefficients, we compute the modulation factors.
+These modulation factors are used to compute a modulation map which modulates the wrinkle pattern.

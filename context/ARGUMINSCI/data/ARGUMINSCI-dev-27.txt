@@ -1,0 +1,6 @@
+Finally, the use of reduced eigenbasis representations for highdimensional models has a long history in science, with foundations on Principal Component Analysis and Karhunen-Loeve theory 
+[Jolliffe 1986; Hyvarinen et al. 2001].
+Related deformation topics include a morphable model for face synthesis 
+[Blanz and Vetter 1999], modal analysis for dynamic vibrations 
+[Pentland and Williams July 1989 ; James and Pai 2002a], decomposition of static deformations 
+[Bookstein 1989], and recognition applications in computer vision, e.g., face recognition

@@ -1,0 +1,2 @@
+And what we want to make sure as a company is to cover all of that landscape with a very rich data platform.
+So if you look at what we're doing, the length and breadth of our ambition as well our delivery today, everything from what SQL itself is doing, we have now all in-memory workloads for OLTP, BI, data warehousing built in.

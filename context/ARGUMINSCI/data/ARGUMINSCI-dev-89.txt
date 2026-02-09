@@ -1,0 +1,2 @@
+Different fabrics also exhibit different types of motion for the same input excitation.
+We designed the waving motion to roughly match the types of motion occurring in real garments such as skirts.

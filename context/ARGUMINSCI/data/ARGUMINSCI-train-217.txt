@@ -1,0 +1,6 @@
+A valid path in this graph represents a collection of splices between sequences, as the middle shows.
+We now synthesize constrained motion sequences by searching appropriate paths in this graph using a randomized search method.
+          
+        
+        
+          <H2>3.2 Constraints</H2>

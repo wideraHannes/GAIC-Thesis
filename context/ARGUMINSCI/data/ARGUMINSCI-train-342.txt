@@ -1,0 +1,7 @@
+Introduction</H1>
+      
+      The correct choice of the simulation method and its implementation is a very important issue in the design of an efficient cloth simulation system.
+Among the available methods, there are finite elements methods 
+[ EIS 96 ], continuum mechanics 
+[ TER 87 ] or particle systems 
+[ BRE 94 ].

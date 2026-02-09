@@ -1,0 +1,3 @@
+For larger systems, we planned to use the iterative, sparsity-exploiting CG method, which immediately presents us with a problem: equation (14) is not a symmetric linear system. (For that matter, neither is equation (6) unless all particles have the same mass.) CG methods, however, require symmetric matrices. 6 We could apply a CG method to the unsymmetric matrix of equation (14) by use of the “normal equations”; but this involves multiplying the matrix of equation (14) with its transpose which doubles the cost of each iteration while squaring the condition number of the system [ 14 ]
+—a less than desirable plan.
+We decided that using a CG method to solve the unsymmetric problem was not acceptable.

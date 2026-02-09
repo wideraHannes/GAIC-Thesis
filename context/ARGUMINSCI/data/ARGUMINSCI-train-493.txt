@@ -1,0 +1,2 @@
+Our approach generates target motion segments that are amenable to simple blending.
+Finally, their method assumes that the input motion can be presegmented analogously to the examples, which is achieved in their work by observing sign changes in velocity.

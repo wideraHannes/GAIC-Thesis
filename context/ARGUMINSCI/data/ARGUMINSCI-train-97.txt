@@ -1,0 +1,6 @@
+In section 5, we compare the results and discuss possible enhancements.
+      
+        <H1>2 Related Work</H1>
+      
+      An early contribution concerning the animation of deformable objects is [Magnenat-Thalmann et al. 1988], which considers the movement of a human hand.
+First 3D characters used in numerous computer games were animated by simple, often unpublished algorithms.

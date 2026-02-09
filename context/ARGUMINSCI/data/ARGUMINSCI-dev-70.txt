@@ -1,0 +1,2 @@
+We believe that segmental approaches like ours hold great promise for real-time performance-driven animation, and consider it a promising area of future research.
+To preserve spatial dependencies in mappings, we apply rigid transformations to optimally align control segments with input control motions.

@@ -1,0 +1,2 @@
+Unlike these methods, we make use of a non-conforming grid with Body-Centered Cubic (BCC) lattices.
+These meshes were also used by Chentanez et al. [2007] and by Batty et al.

@@ -1,0 +1,6 @@
+The idea to use a curve skeleton side by side with the traditional joint skeleton is conceptually simple and functionally efficient giving realistic skin deformations even under extreme mesh duress.
+Our curve skeleton technique takes full advantage of the nonlinearity of the skeleton-skin relationship.
+        
+      
+      
+        <H1>

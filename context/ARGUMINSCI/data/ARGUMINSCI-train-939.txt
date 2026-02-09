@@ -1,0 +1,2 @@
+The desired transition points are indicated by where the curve changes color.
+Note that the character both fits the path accurately and switches to the appropriate motion type close to the desired location.

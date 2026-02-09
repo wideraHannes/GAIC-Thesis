@@ -1,0 +1,2 @@
+I mean, when we even make our CapEx decisions, which is one of the drivers of margin, we think of first of all, first party equals third party.
+A lot of what we do even in Windows, mostly people don't recognize it, but one of the most important services we run is Windows Update as a cloud service.

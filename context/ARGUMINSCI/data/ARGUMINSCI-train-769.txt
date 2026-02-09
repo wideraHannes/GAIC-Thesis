@@ -1,0 +1,2 @@
+Q2 ∇C(x n+1 j ) and ∇C(x n ) T are both full-rank, yet SHAKE fails since ∇C(x n+1 j )M −1 ∇C(x n ) T is singular; FP uses ∇C(x n+1 j )M −1 ∇C(x n+1 j ) T , and ICD uses ∇C(x n+1 j )D∇C(x n+1 j ) T , where D is a symmetric full-rank matrix; in both cases this product is not singular.
+Q3 ICD and FP may fail if ∇C(x n+1 j ) is rank-deficient; for sufficiently small timestep, h, this case is always avoidable.

@@ -1,0 +1,3 @@
+Eurographics ’94 Conference issue.
+          [13] Pascal Volino, Nadia Magnenat Thalmann, Shen Jianhua, and Daniel Thalmann.
+An Evolving System for Simulating Clothes on Virtual Actors.

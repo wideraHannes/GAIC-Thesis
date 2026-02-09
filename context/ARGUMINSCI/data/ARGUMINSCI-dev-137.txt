@@ -1,0 +1,2 @@
+The fluid velocity is divergence free and the rigid body velocity is rigid. 3.
+The linear and angular momentum of the combined system is conserved.

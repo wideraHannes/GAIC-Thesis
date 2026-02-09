@@ -1,0 +1,4 @@
+We considered adapting an approximate graph matching algorithm, like 
+[Gold and Rangarajan 1996]
+, which would work much faster and enable more complicated reduced skeletons.
+However, computing the exact optimum simplified penalty function design and debugging.

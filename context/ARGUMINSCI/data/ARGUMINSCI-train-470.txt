@@ -1,0 +1,2 @@
+The user can manipulate the force on each node to tune the deformation interactively.
+One can also change the force densities to make the network firmer or softer.

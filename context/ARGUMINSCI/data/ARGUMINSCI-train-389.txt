@@ -1,0 +1,6 @@
+Hence, three curves are generated, two curves starting from the central link to the two limbs linkage (in the example) and one curve linking the two links.
+        
+        
+          <H2>Cross Linkage (Joint With Four Links)</H2>
+          In the neck area, a cross exists in the joint chain.
+Although it appears to have four links, we only need to generate two curves for the curve skeleton, as seen in Figure 1(c) .

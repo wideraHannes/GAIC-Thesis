@@ -1,0 +1,2 @@
+Patients were grouped into risk strata by RRS.
+Relationships between RRS and both survival and clinical worsening-free survival were examined by Kaplan-Meier and Cox proportional hazards analyses.

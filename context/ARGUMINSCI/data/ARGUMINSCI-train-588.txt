@@ -1,0 +1,2 @@
+To address these problems, we prune the graph such that, starting from any edge, it is possible to generate arbitrarily long streams of motion of the same type such that as much of the database as possible is used.
+This is done as follows.

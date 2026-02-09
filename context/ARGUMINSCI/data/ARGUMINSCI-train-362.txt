@@ -1,0 +1,2 @@
+Its most popular representative, known generally as the skeletal animation, is based on simple but versatile structure.
+It consists of joints, given by their position and orientation.

@@ -1,0 +1,2 @@
+Left: a frame from a simulation using approximately 43000 uniformly sized tetrahedra.
+Right: the same frame using approximately 32000 tetrahedra refined near areas of high vorticity and smoke density.

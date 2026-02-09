@@ -1,0 +1,2 @@
+The rows in the middle show the progress of interpolation between C j 1 to C j 2 .
+The only difference between the two columns in Figure 3 is in the choice of the center of rotation.

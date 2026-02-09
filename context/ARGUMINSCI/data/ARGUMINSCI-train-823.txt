@@ -1,0 +1,2 @@
+D EBUNNE , G., D ESBRUN , M., B ARR , A., AND C ANI , M.-P. 2001.
+Dynamic RealTime Deformations Using Space and Time Adaptive Sampling.

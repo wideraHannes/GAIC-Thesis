@@ -1,0 +1,2 @@
+Re-compute the γ i from the updated A. 11.
+Evaluate ρ n+1 = Aρ n .

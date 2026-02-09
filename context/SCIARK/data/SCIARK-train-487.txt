@@ -1,0 +1,2 @@
+However, the extent to which the limitations of tide gauge analyses have affected estimates of the GMSL rate of change is unclear.
+Here we revisit estimates of twentieth-century GMSL rise using probabilistic techniques and find a rate of GMSL rise from 1901 to 1990 of 1.2 ± 0.2 millimetres per year (90% confidence interval).

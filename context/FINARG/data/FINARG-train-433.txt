@@ -1,0 +1,2 @@
+And then the workloads that they want to put, which are Tier 1 workloads in Azure.
+It's very similar to what happened even in the client server era, but of course the starting points and how this progresses is very different.

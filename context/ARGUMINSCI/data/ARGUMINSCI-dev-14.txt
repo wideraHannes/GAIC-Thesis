@@ -1,0 +1,4 @@
+Recently, Premoze et al. 
+[ 14 ]
+ introduced the Moving-Particle SemiImplicit (MPS) method to computer graphics for the simulation of fluids.
+As a mesh-free method, it is closely related to SPH but in contrast to standard SPH, it allows the simulation of incompressible fluids.

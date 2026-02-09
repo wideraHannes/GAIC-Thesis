@@ -1,0 +1,2 @@
+Spatially distributed information on ventilation, air quality and thermal situation in the study area was generated using the CAMPUS framework, which is a set of climate analysis and evaluation tools suitable for planning purposes.
+Finally, urban planning strategies concerning ventilation, air quality and thermal situation were suggested, and planning measures for implementing the planning strategies were recommended.

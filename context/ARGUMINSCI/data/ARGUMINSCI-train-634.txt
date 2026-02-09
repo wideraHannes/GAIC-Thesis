@@ -1,0 +1,4 @@
+In this case, maximum BCC mesh resolutions from 8 to 1024 cells were used, leading to strong horizontal grading along the surface.
+      
+      <Abstract>We introduce a new method for efficiently simulating liquid with extreme amounts of spatial adaptivity.
+Our method combines several key components to drastically speed up the simulation of largescale fluid phenomena: We leverage an alternative Eulerian tetrahedral mesh discretization to significantly reduce the complexity of the pressure solve while increasing the robustness with respect to element quality and removing the possibility of locking.

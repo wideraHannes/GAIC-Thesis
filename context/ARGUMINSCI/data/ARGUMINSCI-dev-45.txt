@@ -1,0 +1,2 @@
+This leads us to the problem of computing the eigendisplacement coordinates for arbitrary configurations.
+Radial basis functions [Powell 1987] (RBF) are a common choice for interpolating scattered data, and have been used by Lewis et al. [Lewis et al. 2000] for pose space deformation and by Sloan et al.

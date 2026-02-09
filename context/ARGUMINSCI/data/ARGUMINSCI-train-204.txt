@@ -1,0 +1,2 @@
+Our measurement setup offers very accurate control over membrane deformations, but the bending tests require manual intervention and are thus less precise.
+Furthermore, the bending tests are most accurate for samples with straight edges, but some cloth materials (in particular knit) tend to curl up at free boundaries.

@@ -1,0 +1,2 @@
+In total, the data of 260 patients were analysed.
+Delirium occurred in 31 patients (11.9%), and there was no significant difference between the incidence of delirium in the intervention group and the usual-care group (9.4% vs. 14.3%, OR: 0.63, 95% CI: 0.29-1.35).

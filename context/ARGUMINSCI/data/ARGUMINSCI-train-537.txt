@@ -1,0 +1,5 @@
+We assume that both the initial state, x 1:m , and the control input, u t , are independent and identically distributed.
+The energy term for the second term on the right side of Equation 11 can be simplified as follows:
+          
+            
+            Figure 4: The horizontal axis shows the iteration number and the vertical axis shows the value of the objective function for wholebody optimization The three colored curves show the evolution of the objective function values with three different initial guesses.

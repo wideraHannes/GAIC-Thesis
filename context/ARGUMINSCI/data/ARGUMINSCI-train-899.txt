@@ -1,0 +1,2 @@
+Our method can be used directly as a means of dimensionality reduction through choice of the basis dimension N , but it differs from current approaches in many respects.
+We choose an appropriate velocity basis a priori instead of relying on observation of an existing fluid simulator.

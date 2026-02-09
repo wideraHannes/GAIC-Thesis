@@ -1,0 +1,5 @@
+This motivates a random search.
+We used the following search strategy:
+          3
+          To appear in the ACM SIGGRAPH conference proceedings
+          1.

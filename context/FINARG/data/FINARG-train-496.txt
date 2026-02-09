@@ -1,0 +1,2 @@
+You had already talked about the AI and machine learning applications with respect to Messenger and bots, but I was wondering what are some of the more nascent initiatives where you're applying machine learning, or maybe where we might see those investments manifest themselves in the user experience over the next few years?
+Mark Elliot Zuckerberg: So the biggest thing that we're focused on with artificial intelligence is building computer services that have better perception than people, so the basic human senses like seeing, hearing, language, core things that we do.

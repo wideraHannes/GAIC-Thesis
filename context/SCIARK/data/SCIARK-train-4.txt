@@ -1,0 +1,2 @@
+Their results are presented in paper eight.
+Using the proposed interval framework, they focus on the impact of the subprime mortgage crisis in the commodity market as a case study based on the ITS of monthly crude oil future price data.

@@ -1,0 +1,2 @@
+One of the other things also is a huge benefit for us is, because our cloud, our public cloud runs on our software assets, our software asset gets packaged up as our servers.
+In fact, I think of our servers as the edge of our cloud.

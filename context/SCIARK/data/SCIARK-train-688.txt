@@ -1,0 +1,2 @@
+We conducted weighted conditional logistic regression to assess the association between selected factors and mortality status.
+Result: The odds of death was found to be significantly lower among children of mothers whose educational status was grade nine or above (Adjusted odds ratio (AOR) of 0.34(0.16-0.72)).

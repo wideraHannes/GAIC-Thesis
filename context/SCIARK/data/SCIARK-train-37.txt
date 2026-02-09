@@ -1,0 +1,2 @@
+The indicator set also supports the design of well-suited energy policies by allowing to take into account, on an informed basis, more of the multiple impacts of energy efficiency.
+For example, our analysis of the effect of energy savings for the period 2000 to 2015 in Germany shows GHG savings of about 158 MtCO2eq., about 30,000 avoided deaths due to less air pollution, a reduction of Germany's import dependency by 5.8 percentage points and a growth of GDP by around 0.3% per year for the period 2010 to 2015) as a consequence of improved energy efficiency.

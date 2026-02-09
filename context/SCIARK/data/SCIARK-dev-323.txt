@@ -1,0 +1,2 @@
+Here I show that the models reproduce not only the influence of El Niño-Southern Oscillation on drought over land, but also the observed global mean aridity trend from 1923 to 2010.
+Regional differences in observed and model-simulated aridity changes result mainly from natural variations in tropical sea surface temperatures that are often not captured by the coupled models.

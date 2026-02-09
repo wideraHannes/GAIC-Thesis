@@ -1,0 +1,2 @@
+Second, g should be no more restrictive than necessary, in order to give the search algorithm more goals to seek.
+Note the tradeoff here — guiding the search toward a particular result must be balanced against unduly preventing it from considering all available options.

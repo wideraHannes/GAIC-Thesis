@@ -1,0 +1,2 @@
+The cloth simulation process has two stages: * The garment assembly stage, where the patterns are pulled together and seamed around the body.
+This is a draping problem involving to obtain a rest position of the garment as quickly as possible. * The garment animation stage, where the motion of the garment is computed as the body is animated.

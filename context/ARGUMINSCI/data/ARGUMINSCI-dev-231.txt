@@ -1,0 +1,2 @@
+We evaluated the performance of the subspace optimization technique using the same set of animation constraints, including the start and end poses as well as trajectories of the head and two feet.
+The accompanying video shows that subspace optimization produces uncoordinated human movements.

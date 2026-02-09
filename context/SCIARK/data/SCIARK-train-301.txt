@@ -1,0 +1,2 @@
+The data is Eurobarometer 2011.
+The sample is limited to respondents aged 18-65.

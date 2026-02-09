@@ -1,0 +1,2 @@
+We have six bookstores right now, and we have announced another six.
+The Amazon Go is in beta in Seattle, and while that's not large and only one site, we're excited about the potential there and the use of the technologies of computer vision, sensor fusion and deep learning.

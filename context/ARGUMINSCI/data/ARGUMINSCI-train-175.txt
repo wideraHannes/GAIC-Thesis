@@ -1,0 +1,2 @@
+So although we could use an existing skeleton extraction algorithm and embed our skeleton into the extracted one, the results would likely be undesirable.
+For example, the legs of the character in Figure 1 would be too short if a skeleton extraction algorithm were used.

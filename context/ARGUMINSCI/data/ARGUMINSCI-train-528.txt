@@ -1,0 +1,2 @@
+We find this to be needlessly stiff; worse, near the rest state, the force gradient—a quadratic function of position—is quite small, which partially negates the advantage implicit integration has in exploiting knowledge of the force gradient.
+A quadratic model for energy is, numerically, a better choice.) We apply this stretch/compression measure to a triangle as follows.

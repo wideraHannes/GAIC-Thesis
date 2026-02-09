@@ -1,0 +1,2 @@
+It is not desirable to create many examples and train the system.
+Our approach builds upon the existing system using the curve skeleton for a continuous sampling of the skin surface thereby facilitating skin deformations devoid of geometry artifacts.

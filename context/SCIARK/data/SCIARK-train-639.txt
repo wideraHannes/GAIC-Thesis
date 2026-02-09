@@ -1,0 +1,2 @@
+OBJECTIVE: To measure time trends and sex differences in suicide mortality among US youths using age and birth cohort (age-cohort)-adjusted rates.
+DESIGN, SETTING, AND PARTICIPANTS: This population-based multiyear cross-sectional study of US youths aged 10 to 19 years was a secondary analysis of the suicide data for January 1, 1999, to December 31, 2017, derived from the Wide-Ranging Online Data for Epidemiologic Research, a database prepared by the US Centers for Disease Control and Prevention to promote research.

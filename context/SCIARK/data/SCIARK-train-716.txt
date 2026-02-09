@@ -1,0 +1,2 @@
+Of these 29, seven were testable in an independent population sample: all seven showed consistent direction of effect between the two samples and three showed replication (p&lt;0.007 [0.05/7 CpG sites tested]).
+Our results suggest that adjustment of both the phenotypic and the DNA methylation probe data for smoking history, which has not been carried out in previous studies, reduces the confounding effects of smoking, identifies larger numbers of associations, and reduces the heterogeneity of effects across smoking strata.

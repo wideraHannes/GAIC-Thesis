@@ -1,0 +1,2 @@
+It requires two mechanical derivations per iteration and returns a second-order accurate solution relative to the time step.
+It also requires two storages of the state vector.

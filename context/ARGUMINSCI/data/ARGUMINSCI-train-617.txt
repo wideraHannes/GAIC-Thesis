@@ -1,0 +1,2 @@
+These include the contact points between the character and the ground, as well as the normal of the ground and the amount of friction at the contact points.
+In the following we denote conditions (generally indicated by the letter ) on the environment parameters as .

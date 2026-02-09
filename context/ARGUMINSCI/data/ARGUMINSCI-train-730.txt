@@ -1,0 +1,2 @@
+The only issue is to place each piece in the correct location and orientation.
+In other words, each frame must be transformed by an appropriate 2D rigid transformation.

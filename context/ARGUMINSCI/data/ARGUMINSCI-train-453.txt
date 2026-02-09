@@ -1,0 +1,3 @@
+As a result, many methods assume that mappings are described by parametric probabilistic models 
+[Bra99, DB01, DYP03, JP99].
+An advantage of these techniques is their ability to generalize to a variety of inputs.

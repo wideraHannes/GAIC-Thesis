@@ -1,0 +1,2 @@
+The reflectance directional signatures are quantified by the three parameters of a modified version of the Ross–Li reflectance model.
+The variability of the estimated parameters with respect to the seven MODIS biome classes was found to be higher within the classes than between classes, with the exception of the desert targets that show more isotropic reflectances.

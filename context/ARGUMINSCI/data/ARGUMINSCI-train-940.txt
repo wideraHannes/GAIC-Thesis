@@ -1,0 +1,2 @@
+In this experiment, the pelvis was chosen as the base and two hands were chosen as the endeffectors.
+Three 6-DOF sensors were used to capture those positions and orientations.

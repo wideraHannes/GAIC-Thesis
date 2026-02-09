@@ -1,0 +1,2 @@
+However, intraoperative blood loss and postoperative hospital stay were not significantly different (Student t-test).
+Also, the Kaplan-Meier survival curves of these two groups were not significantly different by log-rank test (p=0.286).

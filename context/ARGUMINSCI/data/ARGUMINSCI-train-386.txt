@@ -1,0 +1,2 @@
+Smaller gain (e.g.
+K 1 = K 2 = 0 : 1 I ) will produce sluggish tracking, but produces smooth motion.

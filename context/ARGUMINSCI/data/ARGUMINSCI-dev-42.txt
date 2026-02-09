@@ -1,0 +1,2 @@
+This is particularly true for drastic linearisations as for example used in [ DES 99 ].
+Knowledge of the expected state changes between successive time steps are required to perform this approximation correctly.

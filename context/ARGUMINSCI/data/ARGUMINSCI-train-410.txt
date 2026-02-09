@@ -1,0 +1,2 @@
+For example, the character should not attempt to continue a walking gait if it has lost its balance and it is falling.
+In our implementation, the expected performance consists of expressions similar to those of the pre-conditions È .

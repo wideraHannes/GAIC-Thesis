@@ -1,0 +1,3 @@
+In general, the distribution of skinning effects in an articulated body is local to several joints 
+[MMT97,KJP02], even in a region as complicated as a hand.
+For example, deformations arising from the PIP (Proximal Interphalangeal) joint of index finger do not propagate to the other fingers, and deformation on the middle phalanx of index finger is only affected by the movement of PIP and DIP(Distal phalanx) joints.

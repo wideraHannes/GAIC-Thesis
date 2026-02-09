@@ -1,0 +1,2 @@
+Until such evidence is available, changes in the water cycle on land-a key diagnostic criterion of the effects of climate change and variability-remain uncertain.
+Here we provide a data-driven estimate of global land evapotranspiration from 1982 to 2008, compiled using a global monitoring network, meteorological and remote-sensing observations, and a machine-learning algorithm.

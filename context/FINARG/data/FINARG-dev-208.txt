@@ -1,0 +1,2 @@
+The other thing that I am also sort of excited about when it comes to Office 365 is for the first time, we're opening up Office 365 not just as a end-user and a enterprise tool in the service, but as a developer platform.
+In its own right, we think of Office as perhaps one of the most strategic developer assets we have and with the Microsoft Graph API and what we see as activity around it, we think about the platform effects of that as also being very key.

@@ -1,0 +1,2 @@
+We found that MeshIK ([Sumner et al. 2005]), a tool originally developed for mesh posing and animation, is appropriate for filling holes in cloth.
+In fact, MeshIK is well-suited to cloth data and we use it to bind reconstruction of our pants to motion capture data.

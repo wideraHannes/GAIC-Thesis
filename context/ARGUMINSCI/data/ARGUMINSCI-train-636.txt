@@ -1,0 +1,2 @@
+The walk footage was transcribed manually according to the gait cycle.
+More specifically, a segmentation point was manually placed at each footplant.

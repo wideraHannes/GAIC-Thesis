@@ -1,0 +1,9 @@
+It is represented by a polygon that surrounds the foot or feet that are in contact with the ground at any given time.
+Supervising controller At every time step: if( no active_controller ) Controller for all controllers i =1: N if( controller[i].can_handle() == true) { Preconditions PostConditions put controller[i] into candidates end if Expected Performance end for active_controller = arbitrate(candidates) else status = active_controller.getStatus() endif
+          
+            Figure 2: Controller selection and arbitration during simulation.
+          
+        
+        
+          <H2>3.2 Pre-Conditions</H2>
+          In general, pre-conditions are relationships and constraints involving several different parameters.

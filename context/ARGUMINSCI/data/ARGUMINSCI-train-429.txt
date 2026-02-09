@@ -1,0 +1,5 @@
+Reference [ 26 ]
+ is one such example.
+Robotics research has made remarkable progress in the successful design of a variety of legged robots 
+[ 28 ] and, more recently, bipedal robots with anthropomorphic aspirations 
+[ 23 ].

@@ -1,0 +1,4 @@
+The biggest drawbacks of motion capture are:
+      1.
+Most motion capture systems are very expensive to use, because the process is time consuming for actors and technicians and motion data tends not to be re-used.
+      2.

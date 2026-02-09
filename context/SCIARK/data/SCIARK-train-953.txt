@@ -1,0 +1,2 @@
+Poisson regression was used to estimate adjusted rate ratios (aRRs) and 95% confidence intervals (CIs) for 1) HNC versus non-HNC sites (the other 19 cancer sites combined), and 2) HNC versus each individual cancer site.
+Models were stratified by sex, controlling for race, marital status, age, year, and stage at diagnosis.

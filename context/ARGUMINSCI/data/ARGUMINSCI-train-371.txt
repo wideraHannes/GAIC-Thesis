@@ -1,0 +1,2 @@
+While methods have been proposed to address this and have been effectively employed by the motion picture industry [Lewis et al. 2000], due to memory and graphics hardware constraints nearly all video game character animation is still done using traditional SSD.
+In this paper, we present a practical technique which overcomes all aforementioned SSD problems, and can be achieved using a memory-efficient linear correction to the traditional SSD method.

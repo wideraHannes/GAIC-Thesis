@@ -1,0 +1,2 @@
+Their advection method is unconditionally stable and fully conservative.
+With this approach, the overall mass defined by the surface density is conserved.

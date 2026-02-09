@@ -1,0 +1,2 @@
+Finally, we tried to estimate our simulator’s performance as a function of n, the number of cloth particles.
+We ran the simulation in figure 1 with cloth resolutions of 500, 899, 2,602 (shown in figure 1 ) and 7,359 particles.

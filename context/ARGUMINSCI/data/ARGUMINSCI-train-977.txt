@@ -1,0 +1,2 @@
+Vetterling.
+Numerical Recipes: The Art of Scientific  Computing, chapter 10.9, pages 444–455.

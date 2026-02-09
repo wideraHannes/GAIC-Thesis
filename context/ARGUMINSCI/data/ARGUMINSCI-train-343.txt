@@ -1,0 +1,2 @@
+The degrees of freedom to be optimized are contained in Q G, where Q is the set of joint angles through time describing the motion and G is the set of the control points controlling the momentum splines.
+In the initial state of the optimization, Q is a good initial guess at the target motion formed by linearly interpolating the original motion between user specified translations and orientations, and G contains the pre-fit momentum coefficients.

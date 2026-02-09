@@ -1,0 +1,6 @@
+Force magnitudes can get amplified – at most by a factor of 8/7 – at the triangle center.
+However, this error did not cause any artifacts or stability problems in our simulations.
+        
+      
+      
+        <H1>5 Implementation</H1>

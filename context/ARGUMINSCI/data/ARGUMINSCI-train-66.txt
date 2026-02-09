@@ -1,0 +1,11 @@
+Since the arising wind velocities are clearly below the speed of sound, compressibility effects are negligible, and the wind is modelled as an incompressible constant density fluid.
+This notably simplifies the numerical approximation, and the incompressible Navier-Stokes equations can be written in a compact vector notation as
+        
+          4.1
+          ∇ · u = 0,
+        
+        
+          4.2
+          ∂u = −(u · ∇)u − 1 ∇p + ν∇ 2 u + f . ∂t ρ
+        
+        Here, u describes the (three-dimensional) velocity field, ν is the kinematic viscosity of the fluid, ρ its density, p the pressure in the wind field, and f accounts for external forces.

@@ -1,0 +1,7 @@
+We denote the dot product of two vectors v 1 , v 2 as (v 1 , v 2 ) and the norm v 1 as a shortcut for (v 1 , v 1 ).
+      
+      
+        <H1>3 Linear Blend Skinning</H1>
+        The input to LBS consists of a polygonal mesh representing the digital skin, a skeleton, and vertex weights for every vertex of the skin.
+The polygonal mesh and the skeleton are designed in a reference position, e.g. virtual characters are often posed in the da Vinci posture 
+[Steed 2002].

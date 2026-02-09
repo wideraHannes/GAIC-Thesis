@@ -1,0 +1,2 @@
+The paper addresses this research gap and introduces a numerical decision-support method for identifying the most suitable renewable energy source (RES).
+RES selection according to SDGs can be a challenge for decision makers.

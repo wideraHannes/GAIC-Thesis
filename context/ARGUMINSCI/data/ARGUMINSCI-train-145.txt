@@ -1,0 +1,2 @@
+Our basic approach — detecting transitions, constructing a graph, and using graph search techniques to find sequences satisfying user demands — has been applied previously to other problems.
+Schödl et al.

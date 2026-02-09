@@ -1,0 +1,2 @@
+The drug was discontinued at 8 weeks if hemoglobin improvement was < 1.0 g/dL.
+The study was terminated early (n = 27, G1 = 13, G2 = 14) when 4/14 (28.5%) subjects in G2 developed thrombotic events (deep vein thrombosis [DVT] in 1; DVT plus pulmonary embolism [PE] in 1; DVT plus PE 1 month after drug discontinuation in 1; and brachial vein thrombosis with infected Mediport in 1).

@@ -1,0 +1,2 @@
+Patients treated with PB experienced more improvement in total FACT-B (Functional Assessment of Cancer Therapy-Breast) (P = .021), FACT-B Social/Family Well-being (P = .041), and Breast Cancer-Additional Concerns (P = .008) scores than patients treated with PB+G.
+The addition of gemcitabine to PB was not associated with a statistically significant improvement in ORR.

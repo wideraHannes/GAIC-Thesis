@@ -1,0 +1,7 @@
+For each particle i that C depends on,
+        
+          7
+          f i = − ∂E ∂x C i = −k ∂C(x) ∂x i C(x);
+        
+        all the other elements of f are zero.
+Similarly, the derivative of f is also sparse.

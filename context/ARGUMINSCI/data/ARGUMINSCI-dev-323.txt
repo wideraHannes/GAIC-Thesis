@@ -1,0 +1,3 @@
+This technique is widely used for interactive applications.
+An excellent description of this method is found in 
+Lewis et al. [2000].

@@ -1,0 +1,6 @@
+In fact, for small meshes (upto a hundred polygons) the modulation of wrinkle pattern can be real time (20 fps).
+Figure 14: Wrinkling patterns for the garment
+        
+      
+      
+        <H1>6 CONCLUSION AND

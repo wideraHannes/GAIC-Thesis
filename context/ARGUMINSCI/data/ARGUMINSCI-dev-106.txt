@@ -1,0 +1,2 @@
+These sampling points can be interpreted as boundary particles, which are placed and weighted according to the chosen Gauss quadrature rule.
+The weighted summation of their potentials approximates the convolution of the potential over the domain of the boundary triangle in an optimal way.

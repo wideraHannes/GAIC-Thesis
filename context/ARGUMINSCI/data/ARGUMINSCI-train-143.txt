@@ -1,0 +1,2 @@
+Individual controllers return an integer confidence/suitability score when queried in order to bid on becoming the active controller.
+In our implementation, controllers that can perform a sensible action given the current state of the character return an integer in the range 1⁄2 1⁄21⁄4 , while those that can handle the current state as well as guarantee a transition to the desired state, return an integer in the range 1⁄21⁄4 3⁄41⁄4 .

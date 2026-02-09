@@ -1,0 +1,2 @@
+So that’s what hopefully gives you a flavor for the IP that we have.
+And then one linchpin that we have between, in fact, our SaaS services, as well as Azure is Azure active trajectory.

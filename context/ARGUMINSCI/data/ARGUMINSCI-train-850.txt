@@ -1,0 +1,2 @@
+Perhaps more importantly, controllers relying on hand-tuned trajectories cannot be easily used to investigate how the control strategies change with respect to new constraints.
+For example, how would the character’s motion style change given a physical disability?

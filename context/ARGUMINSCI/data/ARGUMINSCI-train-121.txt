@@ -1,0 +1,2 @@
+Contact mechanics.
+During ground contact, the feet can only push but not pull on the ground.

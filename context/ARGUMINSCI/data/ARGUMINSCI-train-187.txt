@@ -1,0 +1,2 @@
+Knowledge of the expected state changes between successive time steps are required to perform this approximation correctly.
+With nonlinear mechanical behavior, one solution is to take the steepest parts of the curves as derivatives, whereas for the element orientation problem, isotropic derivatives considering force evolution equally in any directions may be considered.

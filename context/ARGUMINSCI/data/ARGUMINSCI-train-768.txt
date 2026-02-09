@@ -1,0 +1,2 @@
+They found solutions by performing optimizations on the reduced character model.
+More recently, editing motion capture data based on spacetime optimization has become a popular strategy for producing realistic character animations

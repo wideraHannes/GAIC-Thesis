@@ -1,0 +1,2 @@
+Suppose we treat the character volume as an insulated heat-conducting body and force the temperature of bone i to be 1 while keeping the temperature of all of the other bones at 0.
+Then we can take the equilibrium temperature at each vertex on the surface as the weight of bone i at that vertex.

@@ -1,0 +1,4 @@
+The entry at (i, j) contains the error for making a transition from the i th frame of the first motion to the j th frame of
+        
+        the second.
+White values correspond to lower errors and black values to higher errors.

@@ -1,0 +1,2 @@
+While Pullen and Bregler’s method was shown to be an effective solution for the chosen application of texturing keyframed motion, its applicability to our problem is limited by several factors.
+First, their method assumes no spatial dependencies between the control (keyframed curves) and the target (textured motion).

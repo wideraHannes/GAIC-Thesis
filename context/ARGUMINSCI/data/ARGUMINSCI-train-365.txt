@@ -1,0 +1,2 @@
+We also believe that the work on collision hulls is promising.
+The current mesh model of collision hulls could be replaced by implicit surfaces or voxel maps.

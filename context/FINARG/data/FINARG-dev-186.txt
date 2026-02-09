@@ -1,0 +1,2 @@
+We also see that there is a typical spending curve for our customers.
+When they start transacting on the Store, they start at a certain level and they tend over time to get more familiar with the Store and they start to spend more.

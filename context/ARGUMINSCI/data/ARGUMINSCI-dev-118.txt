@@ -1,0 +1,12 @@
+For the interaction potential of a parti-
+          cle p with a single triangle t we get
+          
+            12
+            U (p, t) = U (p − x)dx x∈t
+          
+          
+            13
+            ≈ A w i U (p − x i ), i
+          
+          where A is the surface area of t, x i the sampling points and w i their weights according to a chosen quadrature rule.
+We use the seven point rule which has convergence order O(L 6 ) with respect to the triangle size L. (see Fig. 5(a) and Tab. 1).

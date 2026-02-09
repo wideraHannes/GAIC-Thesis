@@ -1,0 +1,2 @@
+Breast cancer patients were registered within 6 weeks after surgery.
+After medical treatment, they completed baseline measures and were randomly assigned to standard National Cancer Institute print material (CTL); standard print material and peer-modeling videotape (VID); or standard print material, videotape, two sessions with a trained cancer educator, and informational workbook (EDU).

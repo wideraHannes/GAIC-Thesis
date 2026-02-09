@@ -1,0 +1,3 @@
+PRECOMPUTATION OF ADVECTION OPERATOR</H1>
+        The operator Adv(u, ω) := curl (ω × u) represents the advection of a fluid’s vorticity by its velocity field.
+It has many equivalent expressions, including the the Lie derivative L u ω, or the JacobiLie bracket of vector fields −[u, ω], Adv(Φ i , φ j ) := L Φ i φ j = −[Φ i , φ j ] = curl (φ j × Φ i ).

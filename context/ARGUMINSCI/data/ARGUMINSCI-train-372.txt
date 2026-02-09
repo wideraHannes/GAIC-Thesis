@@ -1,0 +1,2 @@
+Since simultaneous resolution does not blindly resolve a collision without considering neighboring collisions within an IZ, we do not introduce any new collisions while resolving a collision.
+The collision resolution module receives collision information as a set of IZs as described in Sec. 2.2.

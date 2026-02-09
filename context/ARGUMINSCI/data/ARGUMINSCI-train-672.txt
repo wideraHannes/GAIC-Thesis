@@ -1,0 +1,5 @@
+We use u s = (u s , v s , w s ) for the solid velocity and V i for the fraction of non-solid matter, i.e. fluid and f f f air in cell i.
+The scalars V i+( 1 ,0,0) , V i+(0, 1 ,0) , and V i+(0,0, 1 ) 2 2 2 represent the fraction of non-solid area of the positive x, y, and z faces respectively.
+        
+          18
+          δ x i + ≈−(ρ i V i+

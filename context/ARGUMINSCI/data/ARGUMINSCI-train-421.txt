@@ -1,0 +1,2 @@
+It initially inverts almost completely into an octahedron (the geometric dual of a cube), and continues to oscillate for many subsequent frames.
+To illustrate the benefits of our sampling approach in the context of surface tension, we launch an identical simulation using the same time steps on a regular mesh.

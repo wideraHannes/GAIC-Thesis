@@ -1,0 +1,2 @@
+Direct manipulation of free-form deformations.
+In Proceedings of the 19th Annual Conference on Computer Graphics and Interactive Techniques, SIGGRAPH ’92, Thomas JJ (ed.).

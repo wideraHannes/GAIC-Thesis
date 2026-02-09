@@ -1,0 +1,4 @@
+This example indicates that reducing velocity dissipation could be important in simulating fluid and rigid body interaction.
+We implement the rigid fluid method 
+[CMT04]
+ to simulate rigid body and fluid interaction in Fig. 1 and 7.

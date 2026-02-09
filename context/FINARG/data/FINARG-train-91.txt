@@ -1,0 +1,2 @@
+So as the business gets bigger and we do bigger and larger deals and some of them are on-prem and some of them are in Azure, you're going to see volatility frankly in both of those.
+But what I try to do is think about the impact of all the key data points which is how did we do in-quarter, how did we do on the unearned revenue on the balance sheet and how did we do in overall bookings.

@@ -1,0 +1,2 @@
+Similarly, we compute the tangent of α I p : tan α I p = − v v Inp Inp x y − − v v SSD SSD x y = − d x sin θ + d y cos θ = − tan( β + θ ) d x cos θ − d y sin θ where tan β = d y = d 2y .
+Then we can see α I p = d x d 2x −( θ + β ), which is linearly proportional to the pose rotation θ .

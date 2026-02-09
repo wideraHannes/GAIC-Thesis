@@ -1,0 +1,12 @@
+To handle the most general case, let’s suppose that p 1..3 are all liquid pressure values.
+Once we have a value for p G , we can compute a pressure gradient for the tetrahedron and update the velocity at its center with:
+        
+          7
+          u ˆ new = u ˆ ∗ − ∆t [ ] p G p 1 p 2 p 3 T ρ
+        
+        In order to do this we need to compute the coefficients w n . p G can be rewritten in terms of a barycentric interpolation of the three values in the liquid as:
+        
+          8
+          p G = p L φ G / φ  ̃ L
+        
+        with φ  ̃ L = θ 1 φ 1 + θ 2 φ 2 + θ 3 φ 3 , and p L = θ 1 p 1 + θ 2 p 2 + θ 3 p 3 .

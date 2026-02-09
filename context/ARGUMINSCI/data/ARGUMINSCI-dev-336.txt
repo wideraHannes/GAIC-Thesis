@@ -1,0 +1,2 @@
+This has uses in image analysis and shape deformation.
+We plan to consider how the unique properties of our method could be exploited in these fields.

@@ -1,0 +1,2 @@
+We let the user control the landing and take-off positions along an evenly spaced grid to generate a set of parameterized motions.
+Since the interpolation can be performed in real-time, we are able to generate a jumping motion with arbitrary takeoff and landing positions within the parameterized space in an interactive fashion.

@@ -1,0 +1,2 @@
+The retargetted motion with the above task set is shown in the video clip #2.
+The tracking error of the swing foot was negligible and thus the produced motion was smooth at the step boundaries.

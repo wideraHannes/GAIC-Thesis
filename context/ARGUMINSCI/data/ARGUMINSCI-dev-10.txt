@@ -1,0 +1,7 @@
+The direction of the lift force, which is perpendicular to v i,rel and lies in the plane spanned by v i,rel and n i , is given by u i = ( n i × v i,rel ) × v i,rel .
+Then the lift force is calculated as F i,L = 1 2 C L ρ|v i,rel | 2 A cos θ · u i , where C L is the lift force coefficient, and θ is the angle between v i,rel and the actual face.
+        4.
+      
+      
+        <H1>WIND FIELD MODELS</H1>
+        In this section we describe two different wind field models and show how they can be used to model wind effects on textiles.

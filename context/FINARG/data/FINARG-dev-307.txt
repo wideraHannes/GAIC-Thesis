@@ -1,0 +1,2 @@
+We have defect reduction and process improvements are probably something we've always done and worked on, both to lower our cost but also to improve the customer experience and also the seller and vendor experience.
+We're using software and algorithms to make decisions rather than people, which we think it's more efficient and scales better and will be more accurate, especially as we insert machine learning into the decisions.

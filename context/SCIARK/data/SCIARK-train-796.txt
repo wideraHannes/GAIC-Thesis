@@ -1,0 +1,2 @@
+Here, we focus on the choice of RCM and the effect of increasing horizontal resolution.
+A comparison of HIRHAM4 output to seven similar RCMs showed that for precipitation the HIRHAM4 model is as representative as any of the RCMs in the ensemble.

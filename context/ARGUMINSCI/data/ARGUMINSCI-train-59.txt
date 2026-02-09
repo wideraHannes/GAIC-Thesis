@@ -1,0 +1,2 @@
+A vast literature exists on how to solve these equations numerically.
+CFD are applied in this field for engineering tasks with a high degree of quality requirements.

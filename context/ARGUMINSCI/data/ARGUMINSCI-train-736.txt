@@ -1,0 +1,2 @@
+Definitions.
+A pose is defined as the configuration of any pose controls (joints or abstract manipulators) that have changed from their default values.

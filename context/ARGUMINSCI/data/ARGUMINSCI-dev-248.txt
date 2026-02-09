@@ -1,0 +1,2 @@
+This is, in turn, analogous to minimizing the energy function E(x, y) = (p c − h(q(x, y,t c ))) 2 , which can be solved efficiently by a simple gradient descent method.
+The gradients are computed using finite differences.

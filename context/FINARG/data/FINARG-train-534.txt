@@ -1,0 +1,2 @@
+It's going to open up a much greater diversity of use cases, not only making it so that use cases like facemasks or style transfers that we already have, you're now going to have thousands of options instead of just 10 or 20 at a time.
+But there are also going to be all these new kinds of things that we're not even building today that developers will be able to experiment with.

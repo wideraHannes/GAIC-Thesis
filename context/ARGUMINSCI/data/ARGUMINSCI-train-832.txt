@@ -1,0 +1,2 @@
+Right: The user interactively controls the direction the character jumps with a multi-directional control pad.
+Figure 7: The timeline of this animation goes from left to right.

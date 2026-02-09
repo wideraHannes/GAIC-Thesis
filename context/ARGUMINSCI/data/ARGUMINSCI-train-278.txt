@@ -1,0 +1,6 @@
+The introduction of the level set method to fluid animation in 
+[ FF01 ]
+ allowed realistic simulation of fluids with complex free surfaces.
+The problem left here was the volume loss in the level set method and the solution, known as the particle level set method, proposed subsequently in 
+[ EMF02 ]
+, turned out to be very successful in volume preservation.

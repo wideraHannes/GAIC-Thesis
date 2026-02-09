@@ -1,0 +1,14 @@
+On the other hand, our method in the middle column shows deformations consistent with morph target (Fig. (a)), even after application of modal reduction for efficiency (right column).
+        
+          
+        
+      
+      
+        (c)
+        Extrapolation to new shoulder poses:
+      
+      
+        Our method also extrapolates to non-input poses.
+Figure 5: Shoulder Rig Simulation
+        
+        skinning weights and a set of morph targets are sufficient to simulate complex co-articulation effects.

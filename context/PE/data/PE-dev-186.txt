@@ -1,0 +1,2 @@
+First, the core of group working is "consensus".
+It's the idea that everyone’s opinion accounts.

@@ -1,0 +1,2 @@
+The second difference is that, when evaluating φ at points near the surface, we do not interpolate values stored on a grid.
+Instead, we compute exact distance values.

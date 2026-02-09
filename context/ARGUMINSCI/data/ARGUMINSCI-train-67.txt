@@ -1,0 +1,2 @@
+Another limitation is that they do not react to perturbations (e.g., external forces) or changes in physical quantities such as masses and inertias of human bodies.
+Physics-based motion models could overcome the limitations of statistical motion models by applying physics to modeling human movement.

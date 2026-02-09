@@ -1,0 +1,2 @@
+Randomization to intensive SBP control was associated with greater risk of an SAE involving hypotension (hazard ratio (HR) = 1.67, 95% confidence interval (CI) = 1.21-2.32, P = .002), and possibly syncope (HR = 1.32, 95% CI = 0.98-1.79, P = .07), but not falls (HR = 0.98, 95% CI = 0.75-1.29, P = .90).
+Risk of all three outcomes was higher for participants with chronic kidney disease or frailty.

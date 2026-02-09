@@ -1,0 +1,8 @@
+In 2D, Voronoi faces are simply line segments, so solid weights are just fractions of segment lengths.
+In 3D, Voronoi faces are convex polygons, so determining non-solid weights involves computing polygon areas.
+        
+      
+      
+        <H1>4 Embedded Boundaries on Voronoi Meshes</H1>
+        We use finite volumes on a Voronoi mesh for the pressure projection step, similar to 
+Sin et al. [2009].

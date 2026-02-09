@@ -1,0 +1,2 @@
+However, the resolution of the underlying grid imposes a severe limit on the smallest representable feature, beyond which geometry either vanishes (LS, SLC) or artificially coalesces into grid-scale “flotsam and jetsam” (VOF).
+Ensuring temporal coherence and avoiding visual artifacts due to the use of regular grids can also be problematic.

@@ -1,0 +1,64 @@
+We define the force acting on
+          4
+          
+            
+              
+                
+                  
+                     Point
+                     Barycentric coordinates
+                     Weights
+                  
+                  
+                     1
+                     (1/3, (a, 1/3, 1/3)
+                     9/40
+                  
+                
+                
+                  
+                     2
+                     b, b)
+                     e
+                  
+                  
+                     3
+                     (b, (b, a, b)
+                     e
+                  
+                  
+                     4
+                     (c, b, a)
+                     e
+                  
+                  
+                     5
+                     d, d)
+                     f
+                  
+                  
+                     6
+                     (d, (d, c, d)
+                     f
+                  
+                  
+                     7
+                     d, c)
+                     f
+                  
+                
+              
+            
+            Point Barycentric coordinates Weights 1 (1/3, 1/3, 1/3) 9/40 2 (a, b, b) e 3 (b, a, b) e 4 (b, b, a) e 5 (c, d, d) f 6 (d, c, d) f 7 (d, d, c) f
+            Table 1: Barycentric coordinates and weights of the seven point Gauss quadrature rule for triangles, where a = 0.05971587, b = 0.47014206, √ c = 0.79742699, d = 0.10128651, √ e = (155 + 15)/1200 and f = (155 − 15)/1200.
+          
+          particle p due to triangle t by the convolution
+          
+            14
+            f ra (p, t) = τ ra (|p − x|) dx. x∈t
+          
+          The traction τ ra is dependent on the distance of the surface element from the particle p and has unit force per area in order to yield a force when integrated over the triangle.
+To model repulsion and adhesion, we use the following traction function
+          
+            15
+            τ ra (r) = k (h−r) h 4 2 −(h−r r 0 (2h−r 0 ) 2 0 (h−r) )

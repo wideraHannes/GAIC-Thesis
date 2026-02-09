@@ -1,0 +1,2 @@
+The proposed system is based on the use of low-emission small vehicles following flexible routes, which will be adapted in real time so to satisfy the customer requests, considering traffic congestion and availability of other transport services.
+The user will require the ride through a mobile application, which gives his/her location, and the system will provide the service considering all users' requests, vehicle availability, intermodal opportunities and traffic congestion.

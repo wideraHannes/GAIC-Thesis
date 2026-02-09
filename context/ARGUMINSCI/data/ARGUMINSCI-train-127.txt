@@ -1,0 +1,2 @@
+If a grid point is in a solid we set the corresponding weight to zero and re-normalize the weights.
+We use values of D between 1.1 to 3.1 in all of our examples.

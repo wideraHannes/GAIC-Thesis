@@ -1,0 +1,2 @@
+For each point on the curve, we still need a twist distribution to define how the curve twists along its path.
+Normally it is not evenly distributed as can be seen from the twist of a forearm.

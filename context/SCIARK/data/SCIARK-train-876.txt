@@ -1,0 +1,2 @@
+In contrast, during the dry season the corresponding odds were reduced for kerosene (OR 1.23; CI: 0.77, 1.95), coal and charcoal (OR 1.35; CI: 1.06, 1.72) and lower-grade biomass fuels (OR 1.07; CI: 0.69, 1.66) but increased for wood (OR 1.32; CI: 1.04, 1.66).
+Cooking location also emerged as a season-dependent statistically significant (p = 0.0070) determinant of ALRI, in particular cooking indoors without a separate kitchen during the rainy season (OR 1.80; CI: 1.30, 2.50).

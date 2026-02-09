@@ -1,0 +1,2 @@
+Because you think about the number of SaaS -- the number of business applications that were built on SQL Server I feel that that's an architecture that can support both what they want to do on the edge, but as well as on the cloud.
+Amy Hood: And on the contextualizing opportunity, the reason I said it's not the primary driver is because of that vast, vast majority of our server business is annuity based.

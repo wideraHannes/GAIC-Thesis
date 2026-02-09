@@ -1,0 +1,2 @@
+To this end, we augment the jointactuated humanoid model with a set of Hill-type musculotendon units (MTUs).
+These musculotendon units generate torques for the most important degrees-of-freedom (DOFs) during locomotion— the sagittal plane hip, knee, and ankle DOFs.

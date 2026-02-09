@@ -1,0 +1,2 @@
+Forty patients on Arm A and 19 on Arm B received at least one treatment.
+Patients on Arms A and B had median survivals of 31.4 and 25.3 weeks, 12-month survivals of 29% and 24%, and 18-month survivals of 18% and 8%, respectively.

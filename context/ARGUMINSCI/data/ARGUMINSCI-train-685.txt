@@ -1,0 +1,2 @@
+The largest challenge is that captured cloth meshes contain only points on the cloth surface, so we do not know joint locations.
+Instead, we insert proxy points for knee and hip joints in each of our basis meshes.

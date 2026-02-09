@@ -1,0 +1,2 @@
+I mean I think you have to sort of look at all the use cases.
+In fact as I said, a lot of the Azure use case, I think you referenced this, have been non-zero-sum because our people started building their mobile back end, web back end using Big Data not workloads we have.

@@ -1,0 +1,2 @@
+At each timestep, the morphogens were advected along with the surface and then allowed to react.
+In Figure 9 we show the result of running the sphere through the flow field for several revolutions to highlight the behavior generated when the surface thins below the resolution of the octree’s finest level.

@@ -1,0 +1,3 @@
+Most real-time skinning work, e.g. [Kry et al. 2002; Wang et al. 2007]
+, has focused on improving on LBS by inferring the character articulation from multiple example meshes.
+However, such techniques are unsuitable for our problem because we only have a single mesh.

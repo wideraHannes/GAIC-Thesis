@@ -1,0 +1,3 @@
+For our mesh generator we selected the approach described in 
+[ Alliez et al., 2005 ].
+This innovative method produces meshes which conform to domains of arbitrary topology quickly and reliably.

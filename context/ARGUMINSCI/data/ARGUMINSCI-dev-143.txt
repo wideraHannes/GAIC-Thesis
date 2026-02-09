@@ -1,0 +1,3 @@
+Bottom) Volume rendering, showing many sub-grid details not visible in the surface rendering.
+        does not happen in practice because the divergence free velocity field prevents the liquid from expanding significantly.
+An alternative to our sharpening method is to perform antidiffusion step

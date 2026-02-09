@@ -1,0 +1,2 @@
+Tools for assessing environmental impacts based on the volume of material needed as defined by several material properties and design parameters, such as required moment of inertia and cross-sectional area, are investigated.
+The indices for comparison developed in this research are applied to a database containing 190 concrete mixtures with varying constituents both with and without Supplementary Cementitious Materials (SCMs).

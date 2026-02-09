@@ -1,0 +1,2 @@
+For key-frame constraints, the user defined a sparse set of walking constraints and used them to generate walking motion from the priors learned from a number of different databases.
+We compare the results for a database of general locomotion, running, hopping, jumping and walking.

@@ -1,0 +1,2 @@
+By taking advantage of the details of our method, we can very efficiently achieve limited smoothing in two ways.
+First, we can define a second composite function to be the combination of path tracing backward in time followed by the evaluation of a high-order polynomial interpolant of the distances at the vertices of the octree.

@@ -1,0 +1,3 @@
+Consider a partner dance scenario in which an animator wishes to con-
+      trol a follower using the captured motion of a leader.
+The mapping from leader to follower motion must minimally encode a significant amount of knowledge about the structure of the dance; this knowledge, unfortunately, would be out of reach to an animator who is not a skilled dancer.

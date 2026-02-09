@@ -1,0 +1,3 @@
+In turn, controllers from Wang et al. [2010]
+ generated larger amounts of ankle torque by optimizing for a human-like torque ratio, but did not come close to matching the shapes of human torque data.
+Note that our work does not exhibit unnatural torque spikes due to state switching that are present in the previous works.

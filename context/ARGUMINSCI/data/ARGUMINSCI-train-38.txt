@@ -1,0 +1,2 @@
+We model the force field priors using Gaussian process models because GP can efficiently capture nonlinear properties of the force fields and its learning process involves very few manual tuning parameters.
+However, Gaussian process needs to retain all of the training data to make predictions and therefore its computational demands grow as the square and cube respectively of the number of training examples.

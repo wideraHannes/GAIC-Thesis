@@ -1,0 +1,9 @@
+This property of Delaunay meshes motivates our storage scheme at circumcenters because the gradient estimate is equivalent to the gradient of a piecewise linear function that interpolates the circumcenter values.
+            821
+            ACM SIGGRAPH 2006, Boston, MA, July 30–August 3, 2006
+            Current step
+          
+          
+            <H3>3.1.2 Velocity Interpolation</H3>
+            The staggered scheme stores only the component of velocity in the face normal direction.
+For both the semi-Lagrangian step and to advect smoke particles for rendering, a full velocity vector must be found at arbitrary positions in the mesh.

@@ -1,0 +1,2 @@
+Overall, model simulations tended to underestimate the density and overestimate the thermal conductivity, and failed to foster the relationship evident in the observations from the current and previous research.
+The causes for the deficiency were analyzed and discussed, regarding a low density of the new snow layer and a slow compaction rate.

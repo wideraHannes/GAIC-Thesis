@@ -1,0 +1,2 @@
+After the retargetting, the sharp corner of the trajectory was well preserved.
+In general, our OMR preserves the high frequency content of the motion quite well, since inverse rate control is directed by Jacobian values.

@@ -1,0 +1,2 @@
+To illustrate the fitting residuals more quantitatively, we show a force-displacement plot comparing a summary of the measured forces to the predictions of the fitted model and a vector-field plot illustrating the position error over the geometry of the fitted mesh (see caption for details).
+Similar tables are shown for all cloth samples and several model variants in the supplementary document.

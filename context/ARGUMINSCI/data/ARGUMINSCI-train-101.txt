@@ -1,0 +1,2 @@
+Common simulation complaints include long computation times, significant parameter tweaking and tangling.
+In contrast, capture is relatively quick (our code is 8 minutes per frame in MATLAB); parameters are set by selecting the type of cloth [Bhat et al. 2003] and tangling is relatively uncommon.

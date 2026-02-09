@@ -1,0 +1,2 @@
+Two scenarios were modeled other than the "baseline": the first one evaluating the optimal portfolio of energy conversion and storage technologies, and a second one achieving the same goal only using batteries.
+Both scenarios proved to be a viable solution to exploit the excess of electricity production from the PV plants in the district only through local self-consumption.

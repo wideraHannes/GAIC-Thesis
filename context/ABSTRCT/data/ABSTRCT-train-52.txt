@@ -1,0 +1,2 @@
+The apnea-hypopnea index was significantly reduced in all three treatment arms, most prominently by AZT plus CPAP (RM-ANOVA P = .003).
+The reduction of venous bicarbonate concentration following AZT was correlated with the change of apnea-hypopnea index (r = 0.66, P = .013).

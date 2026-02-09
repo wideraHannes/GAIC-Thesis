@@ -1,0 +1,2 @@
+Baseline global health status scores were found to be similar between treatment groups (64.7 vs 65.3).
+The median TDD in HRQOL was 8.3 months with EVE + EXE versus 5.8 months with PBO + EXE (hazard ratio, 0.74; P = .0084).

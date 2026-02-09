@@ -1,0 +1,2 @@
+Simulation results (biomass consumption, gasification efficiency, rated gas flow, calorific value, gas composition, etc.) are compared with a real gasification technology.
+The product gas obtained has a low heating value (4.8–5.0 MJ Nm−3) and the CHP system provides 30 kWe and 60 kWth.

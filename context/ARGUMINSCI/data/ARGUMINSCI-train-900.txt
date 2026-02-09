@@ -1,0 +1,2 @@
+Since p ∗ q is a unit quaternion, we can express it as p ∗ q = cos θ + u sin θ for some axis of rotation u.
+If we substitute this into equation (5), we obtain sin((1 − t) θ ) +

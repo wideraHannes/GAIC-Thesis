@@ -1,0 +1,2 @@
+While current phenology models are able to capture inter-annual variation in the timing of vegetation spring onset, their spatiotemporal performances are not well understood.
+Using green-up dates derived from MODIS, we test 9 phenological models that predict the timing of grassland spring onset via commonly available climatological variables.

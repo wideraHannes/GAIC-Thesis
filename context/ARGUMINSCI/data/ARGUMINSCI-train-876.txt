@@ -1,0 +1,2 @@
+If the rigid CCs in an IZ are all moving, we handle particles as a bundle as long as particles are in the vicinity of moving rigid CCs.
+We find the x and the velocity V rigid of a moving rigid CC, where V rigid is defined as the translational velocity of the center of mass of the moving rigid CC.

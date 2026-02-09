@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Document xmlns:gate="http://www.gate.ac.uk" name="A05_S06_Building_Effcient,_Accurate_Character_Skins_from_Examples_CITATION_PURPOSE_M_v1.xml">
+
+
+  
+    4d7508619e6c2edec7350f85a067113fef474375b28592cf953cecd2f37b95ff
+    3wx9
+    http://dx.doi.org/10.1145/1201775.882308
+  
+  
+    
+      To appear at SIGGRAPH 2003
+      
+        <Title>Building Efficient, Accurate Character Skins from Examples</Title>
+      
+      
+        
+          Alex Mohr ∗ Michael Gleicher University of Wisconsin
+        
+        
+          Madison
+        
+      
+      
+        
+        Figure 1: Several still frames of our character from Figure 9 in a new animation sequence.

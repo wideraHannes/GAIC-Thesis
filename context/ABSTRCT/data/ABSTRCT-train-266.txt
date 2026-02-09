@@ -1,0 +1,2 @@
+The FDA reviewed raw data in electronic format from a randomized controlled clinical trial comparing erlotinib with placebo in patients with locally advanced or metastatic NSCLC after failure of at least one prior chemotherapy regimen.
+Patients were randomized in a 2:1 ratio (erlotinib, n = 488 and placebo, n = 243).

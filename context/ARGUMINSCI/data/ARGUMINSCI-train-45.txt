@@ -1,0 +1,2 @@
+In the present context, since the skeleton is a curve, distribution and deformation can be linked with the tangent angle at a given number of curve points around the joints.
+As fat is largely incompressible, when a joint bends, flesh between the adjacent bones will be squeezed, producing bulges immediately near the joint and at the sides.

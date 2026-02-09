@@ -1,0 +1,2 @@
+However, since our simulator proceeds in discrete steps, collisions resulting in a reasonably substantial interpenetration depth can occur between one step and the next.
+Clearly, this situation needs to be remedied.

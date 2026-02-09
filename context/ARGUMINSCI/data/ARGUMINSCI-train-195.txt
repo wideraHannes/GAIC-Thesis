@@ -1,0 +1,4 @@
+Grzeszczuk and his colleagues[1998]
+ developed a neural network approximation of dynamics based on simulated data and use it to animate dynamic models such as fish and lunar landers.
+Urtasun and her colleagues[2006]
+ learned linear motion models from pre-aligned motion data via Principal Component Analysis (PCA) and used them to track 3D human body movements from video by performing nonlinear optimization over a small sliding temporal window.

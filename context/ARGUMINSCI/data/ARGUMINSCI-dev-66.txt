@@ -1,0 +1,2 @@
+The motion databases that we used were unorganized except that we excluded football warming up and tackling motions unless they were desired ( figure 9 ).
+The randomized search scales linearly as a function of the database size with a very small constant.

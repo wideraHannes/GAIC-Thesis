@@ -1,0 +1,2 @@
+On the other hand, PSD allows one to sculpt intermediate expressions (half-smile) and situate them half-way along the relevant (full-smile) axis.
+Similarly a sculpted pose that represents the simultaneous activation of several parameters (e.g. happy but surprised, or smiling with a wink) can simply be saved at the appropriate location in the pose space.

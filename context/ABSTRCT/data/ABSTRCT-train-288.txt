@@ -1,0 +1,2 @@
+Mean durations of follow-up were 20.0 months for Ahmed eyes and 22.9 months for Baerveldt eyes.
+Cumulative successes in the Ahmed group were 0.73 at 1 year and 0.62 at 2 years, whereas cumulative successes in the Baerveldt group were 0.92 at 1 year and 0.85 at 2 years (Kaplan-Meier survival functions: P = 0.03, log rank test).

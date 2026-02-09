@@ -1,0 +1,2 @@
+Our basis is orthogonal allowing kinetic energy to be calculated as a sum of squared coefficients.
+Additionally, orthogonality implies that surfaces of constant energy in the Euclidean space of coefficients are spheres.

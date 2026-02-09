@@ -1,0 +1,2 @@
+This method keeps ρ i ≤ V i in most cells near solid boundary and guarantees ρ i = 0 inside the solid.
+We use S = 1 in all of our examples.

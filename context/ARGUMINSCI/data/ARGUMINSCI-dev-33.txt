@@ -1,0 +1,2 @@
+The gait resulting from torque minimization exhibits too much knee flexion during the swing phase and too much dorsiflexion before heel-strike.
+Closer examination reveals 1 Wang et al. [2009; 2010] provided comparisons against the global thigh and foot orientation which, unlike the hip and angle ankles, do not capture the relative orientations of the body links.

@@ -1,0 +1,2 @@
+Our dynamic programming algorithm uses segments of motion along with an objective function that accounts for both the quality of control interpretation and the continuity of the target motion to generate visually and semantically correct motions.
+The semantic accuracy of the generated motion was evaluated in the setting of partner dance, where the follower’s motion is generated from the leader’s motion.

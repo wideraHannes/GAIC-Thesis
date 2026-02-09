@@ -1,0 +1,2 @@
+The damping forces do not dissipate energy due to other modes of motion.
+Additional forces include air-drag, gravity, and user-generated generated mouse-forces (for interactive simulations).

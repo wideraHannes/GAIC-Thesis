@@ -1,0 +1,8 @@
+Although the process is shown for displacements, it applies similarly to the construction of linear normal corrections, allowing EigenSkin to correct SSD for both shape and shading.
+        
+          <H2>2.1 Notation: SSD and Bone Weights</H2>
+          Let B be the set of all bone indices, and denote the bones affecting vertex i by the subset of indices B i ⊂ B.
+For a given skeletal configuration, with bone transforms {T b } b∈B , the position of the i th vertex after SSD is
+          
+            1
+            v  ̃ i = ∑

@@ -1,0 +1,2 @@
+Instead, a family of methods, known as level-set methods, has been developed for surface tracking.
+These methods represent the surface implicitly as the zero set of a scalar field defined over the problem domain.

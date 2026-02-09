@@ -1,0 +1,2 @@
+Median PFS was 17.8 months for the TCG arm and 19.3 months for the TC arm (hazard ratio [HR], 1.18; 95% CI, 1.06 to 1.32; P = .0044).
+Median OS was 49.5 for the TCG arm and 51.5 months for the TC arm (HR, 1.05; 95% CI, 0.91 to 1.20; P = .5106).

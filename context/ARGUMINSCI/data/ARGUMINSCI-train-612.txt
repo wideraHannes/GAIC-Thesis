@@ -1,0 +1,2 @@
+Intrinsically, the problem of finding inverse kinematic solution of multiple constraints doesn’t require any weight or priority assignment: if all the end-effector constraints can be met, then it should be possible without considering weights or assigning priorities to each end-effector constraint.
+Compared with Zhao and Badler’s algorithm, Jacobian based inverse rate control gives a quite simple and intuitive solution to the problem.

@@ -1,0 +1,2 @@
+If the original motion characteristics are severely lost during motion retargetting, the technique loses its merit over the above pure computation approaches.
+The problem we try to solve in this paper can be summarized as: ( 1 ) finding in real-time the motion retargetted to a new character that has different anthropometric proportions, and ( 2 ) at the same time, preserving the features of the original motion during the retargetting.

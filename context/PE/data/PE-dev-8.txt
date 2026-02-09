@@ -1,0 +1,2 @@
+Methods which their ancestors used in the past will be displayed again for new generations.
+After that, they might create somethings that are useful for life.

@@ -1,0 +1,2 @@
+G m and H m are free positive parameters and {} ± means only positive or negative values (0 otherwise).
+The positive length feedback effectively models a stretch reflex, which activates the muscle when the fiber is stretched beyond a fixed length.

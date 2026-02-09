@@ -1,0 +1,2 @@
+The queries will work across both the tiering.
+And so to me, the innovative work we're doing is what I would characterize as the future of true distributed computing, which is it will remain distributed.

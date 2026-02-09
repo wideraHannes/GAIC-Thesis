@@ -1,0 +1,4 @@
+For example, the sequential quadratic programming algorithm used in 
+[Witkin and Kass 1988]
+ makes use of first derivatives of the constraints (the constraint Jacobian) and both first and second derivatives of the objective function (the Jacobian and the Hessian).
+This paper describes how a broad range of physics constraints can be expressed based on aggregate forces and torques applied to the character, and how expressing physics constraints in this way allows us to compute the constraint Jacobian in linear time (Section 4).

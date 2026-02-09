@@ -1,0 +1,2 @@
+I mean, especially on the database side is one place where I would say from a year-over-year worth of progress, whether it's just Azure database by itself.
+I mean that service with full compatibility with SQL Server is a fantastic value proposition for our customers who have huge estates whether it's the Data Warehouse that's become very, very competitive, the Data Lake.

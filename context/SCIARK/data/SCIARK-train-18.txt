@@ -1,0 +1,2 @@
+These variables show increases in RMS errors that are comparable to observational standard deviations.
+The coupled model simulations are taken from the end of 300 year control runs without flux “corrections” at the ocean-atmosphere interface.

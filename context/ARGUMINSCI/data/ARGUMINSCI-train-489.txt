@@ -1,0 +1,3 @@
+Again, the main challenge here is obtaining the highest possible realism while maintaining acceptable computation load, in order to meet the real-time requirements.
+As recognized in earlier works [9] [13]
+, wrinkles can be efficiently animated with a geometric method as they are geometric in nature.

@@ -1,0 +1,2 @@
+The blending of rigid shapes is inconsistent with regions of the body that are bending under the action of an underlying skeleton, however.
+Of course the key shapes could be deformed to the moving articulated figure using some other algorithm, but this defeats the purpose of proposing shape interpolation as the means of obtaining the deformation in question.

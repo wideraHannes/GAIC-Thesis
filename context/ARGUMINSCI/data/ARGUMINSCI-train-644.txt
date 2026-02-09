@@ -1,0 +1,2 @@
+In this case, we define the modulation factor to be one. 4.
+The modulation factor varies significantly across triangles.

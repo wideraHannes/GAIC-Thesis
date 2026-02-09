@@ -1,0 +1,2 @@
+We use dynamic programming to select a sequence that balances the quality of interpretation with the continuity of the induced target motion.
+Various postprocessing techniques can be then be applied to smooth and adjust the desired target motion.

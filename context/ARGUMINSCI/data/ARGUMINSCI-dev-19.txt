@@ -1,0 +1,3 @@
+V(vertex), N(normal), W(weight), J(joint index), and D(displacement) represent each texel (RGB(A)) value of the related texture.
+T d consist of eight T d j storing displacements of each pose j.
+        in the texture maps.

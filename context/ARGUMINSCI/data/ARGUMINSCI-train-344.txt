@@ -1,0 +1,2 @@
+These two steps can be done concurrently. 8.
+Apply diffusion as in the original approach.

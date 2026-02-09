@@ -1,0 +1,2 @@
+Bayesian Networks are constructed to demonstrate how insurers can assess the product viability from a climate perspective, using past observations and simulations of future climate.
+Sensitivity analyses illustrate the dependence of pricing decisions on both the choice of information, and the method for incorporating such data.

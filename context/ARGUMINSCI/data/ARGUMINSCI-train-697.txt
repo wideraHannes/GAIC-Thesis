@@ -1,0 +1,15 @@
+Bargteil et al.
+        
+        
+          <H2>6.3 Building a Distance Tree to Resolve</H2>
+          ψ
+          When building a new octree at the beginning of each timestep, we are essentially trying to resolve our approximation
+          
+            12
+            ψ n+1 (x) = φ n (x − ( t)v(x n−1/2 , t n ))
+          
+          to the signed-distance function φ n+1 (x).
+The octree is built recursively from the root cell C 0 by the following splitting criterion:
+          
+            13
+            Split every cell where |ψ n+1 | is larger than the edge length.

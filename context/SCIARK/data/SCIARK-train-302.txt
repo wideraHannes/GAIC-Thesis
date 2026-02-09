@@ -1,0 +1,2 @@
+In the tested range, slightly detrimental effect of HES on brake thermal efficiency (BTE) and brake specific fuel consumption (BSFC) is observed.
+Comparision of NO and NO2 emissions is done to understand the non-thermal influence of H2 on the NOx emissions.

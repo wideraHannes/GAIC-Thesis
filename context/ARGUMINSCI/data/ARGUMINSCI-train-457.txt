@@ -1,0 +1,2 @@
+We noticed that our new surface creation routine is essential for maintaining detailed simulations in the presence of accurate freesurface boundary conditions.
+One major benefit of our method is that it can easily create perfectly flat surfaces from a mixture of differently-sized particles.

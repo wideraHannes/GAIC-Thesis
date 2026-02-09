@@ -1,0 +1,12 @@
+Second, g should be no more restrictive than necessary, in order to give the search algorithm more goals to seek.
+Note the tradeoff here — guiding the search toward a particular result must be balanced against unduly preventing it from considering all available options.
+        6
+        To appear in Proceedings of SIGGRAPH ’02
+        
+          
+          Figure 5: The above motion was generated using the search algorithm discussed in
+        
+      
+      
+        <H1>5 Path Synthesis</H1>
+        We have cast motion extraction as an optimization problem, and we have given some reasons why the formulation of this optimization can be difficult.

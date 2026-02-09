@@ -1,0 +1,2 @@
+Blowing in the wind.
+In Proc. of SIGGRAPH Symposium on Computer Animation 2003, pages 75– 85.

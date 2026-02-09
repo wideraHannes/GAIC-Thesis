@@ -1,0 +1,2 @@
+We use a standard problem formulation—iteratively adjust character motion to meet animator constraints and minimize an objective function.
+Our approach is based on restricting the definition of this optimization problem to constraints and objective functions that can be differentiated in time linear in the degrees of freedom of the character.

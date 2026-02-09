@@ -1,0 +1,2 @@
+As Herbert jumps off a diving board and flips through different poses, we show the advantage of our pose-dependent model from an artistic viewpoint.
+With single elastic models, the belly is flabby and skinny throughout the entire simulation.

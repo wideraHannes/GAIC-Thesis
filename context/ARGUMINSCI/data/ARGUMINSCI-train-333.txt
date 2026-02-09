@@ -1,0 +1,2 @@
+The global coherence is also achieved from the effort to exploit the redundancy of the system in resembling the original motion.
+The local coherence of the motion comes from the fact that the adjacent frames are inter-related by the inverse rate control.

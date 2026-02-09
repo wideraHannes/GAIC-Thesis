@@ -1,0 +1,7 @@
+Bend Damp Stretch Damp Shear Damp Error 2e-07 10 10 179.026 3.98337e-07 3.67932 4.56238 104.747 2.08755e-07 1.95807 10.6535 104.502 2.56854e-07 7.08276 9.25576 103.501 3.14821e-07 5.47909 1.06559 103.243 2.3997e-07 8.38981 11.9167 103.849 21.11 &gt;100 &gt;100
+        50 50 45 45 40 40 35 35 30 30 Variability 25 Variability 25 20 20 15 15 10 10 5 5 0 0 1 2 3 4 5 6 7 8 9 1 2 3 4 5 6 7 8 9 Parameters Parameters
+        c The Eurographics Association 2003.
+Bhat et al. / Estimating Cloth Simulation Parameters from Video
+        
+          
+          Figure 12: Showing the improvement in shape match after optimization.

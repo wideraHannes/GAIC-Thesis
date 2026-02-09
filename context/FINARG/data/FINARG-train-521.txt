@@ -1,0 +1,2 @@
+Mark Zuckerberg: Sure.
+So on safety, I think given the volume of content that people share, if you want to have any hope of doing it in real time, the only hope is building AI systems that can either identify things and handle them proactively or at the very least, flag them for a lot of people who work for us who can then look at them rather than waiting for people in our community to flag those after they've already seen them.

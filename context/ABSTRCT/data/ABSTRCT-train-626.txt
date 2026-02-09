@@ -1,0 +1,2 @@
+Relationships between RRS and both survival and clinical worsening-free survival were examined by Kaplan-Meier and Cox proportional hazards analyses.
+Overall, 237 patients completed CHEST-1 and entered CHEST-2.

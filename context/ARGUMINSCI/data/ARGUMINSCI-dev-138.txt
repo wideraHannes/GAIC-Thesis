@@ -1,0 +1,2 @@
+Surface tension was only used for examples in subsections 7.2 and 7.3.
+Our goal in many of the other examples was to highlight the ability to track thin sheets, whereas surface tension would break these sheets into droplets.

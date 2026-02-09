@@ -1,0 +1,5 @@
+For example, 
+[JEH02]
+ uses semi-Lagrangian advection of dye to visualize the vector field. [Wei04]
+ applied level set method to advect dye without diffusion.
+Only one dye color is allowed and the dye cannot be diffused at all.

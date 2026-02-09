@@ -1,0 +1,2 @@
+We pre-multiply this difference with the gradient mask, which helps to emphasize the differences in fold regions over planar regions ( Fig. 2 ).
+We sum the error across all frames to compute the overall error across the entire sequence.

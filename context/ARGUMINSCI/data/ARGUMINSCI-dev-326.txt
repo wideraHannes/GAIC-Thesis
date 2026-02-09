@@ -1,0 +1,2 @@
+However we can resolve this case by maintaining the barycentric relationship between cloth surfaces and the newly introduced colliding entities.
+Apparently, in the worst case, this involves repetitious processes as we may introduce other new collisions when we resolve the current collisions.

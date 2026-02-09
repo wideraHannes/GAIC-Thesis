@@ -1,0 +1,3 @@
+Experiments</H1>
+        We designed a few simple experiments to capture the dynamics of the different types of fabrics and the air/cloth interaction.
+The experiments are easy to perform, capture, and repeat; yet they demonstrate the complex dynamics of cloth motion.

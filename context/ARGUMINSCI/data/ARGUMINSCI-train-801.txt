@@ -1,0 +1,2 @@
+Contrariwise, if C is not at the finest level of the octree or if there are no triangles in the concentric triple of C, then x is not near the surface and we do not require an exact distance.
+An approximation with the correct sign is sufficient.

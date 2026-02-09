@@ -1,0 +1,81 @@
+The running times were, respectively, 0.23 seconds/frame, 0.46 seconds/frame, 2.23 seconds/frame, and 10.3 seconds/frame.
+This is slightly better than O(n 1.5 ) performance, which is in line with the convergence rates of the conjugate gradient method [ 14 ] for systems such as equation (18).
+        51
+        SIGGRAPH 98, Orlando, July 19–24
+        C OMPUTER G RAPHICS Proceedings, Annual Conference Series, 1998
+        
+          
+            
+              
+                
+                  
+                   figure
+                   no. vertices/no. triangles
+                   time/frame
+                
+              
+              
+                
+                  
+                  
+                   cloth solid
+                   (CPU sec.)
+                
+                
+                   1
+                  
+                   2,602/4,9442 322/640
+                   2.23
+                
+                
+                   2
+                  
+                   2,602/4,9442 322/640
+                   3.06
+                
+                
+                   3
+                  
+                   6,450/12,654 9,941/18,110
+                   7.32
+                
+                
+                   4
+                   (shirt)
+                   6,450/12,654 9,941/18,110
+                   14.5
+                
+                
+                  
+                   (pants)
+                   8,757/17,352 9,941/18,110
+                   38.5
+                
+                
+                   5
+                   (skirt)
+                   2,153/4,020 7,630/14,008
+                   3.68
+                
+                
+                  
+                   (blouse)
+                   5,108/10,016 7,630/14,008
+                   16.7
+                
+                
+                   6
+                   (skirt)
+                   4,530/8,844 7,630/14,008
+                   10.2
+                
+                
+                  
+                   (blouse)
+                   5,188/10,194 7,630/14,008
+                   16.6
+                
+              
+            
+          
+          figure no. vertices/no. triangles time/frame cloth solid (CPU sec.) 1 2,602/4,9442 322/640 2.23 2 2,602/4,9442 322/640 3.06 3 6,450/12,654 9,941/18,110 7.32 4 (shirt) 6,450/12,654 9,941/18,110 14.5 (pants) 8,757/17,352 9,941/18,110 38.5 5 (skirt) 2,153/4,020 7,630/14,008 3.68 (blouse) 5,108/10,016 7,630/14,008 16.7 6 (skirt) 4,530/8,844 7,630/14,008 10.2 (blouse) 5,188/10,194 7,630/14,008

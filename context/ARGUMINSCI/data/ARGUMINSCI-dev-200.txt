@@ -1,0 +1,2 @@
+That is, the motion data captured at 30Hz was fed to the OMR system with the same sampling rate using a timer.
+At this sampling rate, not a single frame was lost even with the visualization included.

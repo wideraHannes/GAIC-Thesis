@@ -1,0 +1,3 @@
+The plantarflexors (GAS and SOL) are largely responsible for forward propulsion in normal walking 
+[Liu et al. 2008].
+We found that weakening the GAS and SOL to a quarter of their original strength, while keeping all other objectives identical (target speed 1.25 m/s), results in a mild crouch gait characterized by excessive knee flexion (see accompanying video).

@@ -1,0 +1,2 @@
+The hazard ratio of 0.37 (95% CI, 0.14-0.96) demonstrated an advantage of escitalopram (P = .04).
+Patients undergoing radiotherapy as the initial modality were significantly more likely to develop depression than those undergoing surgery (radiotherapy compared with surgery group; hazard ratio, 3.6; 95% CI, 1.38-9.40; P = .009).

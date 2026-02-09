@@ -1,0 +1,2 @@
+For very small test systems, we solved equation (14) using a direct method (Gaussian elimination) without any problems.
+For larger systems, we planned to use the iterative, sparsity-exploiting CG method, which immediately presents us with a problem: equation (14) is not a symmetric linear system. (For that matter, neither is equation (6) unless all particles have the same mass.)

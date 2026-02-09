@@ -1,0 +1,7 @@
+Figure 2: The ‘collapsing elbow’ in action, c.f.
+Figure 1 .
+          
+        
+        
+          <H3>2.3.2 Skeleton-Subspace Deformation</H3>
+          This simple algorithm has been repeatedly conceived and appears in commercial software packages under several rather uninformative names such as skinning, enveloping, etc.

@@ -1,0 +1,2 @@
+From the dynamic study described above, implicit methods should be quite strong on this point, as they do not suffer from numerical instability, and allow large time steps to be used at the expense of dynamic accuracy which can here be neglected.
+The Draping Test For this test, we let an initially horizontal fabric square, attached along one of its edges, fall by its own weight (Fig.4).

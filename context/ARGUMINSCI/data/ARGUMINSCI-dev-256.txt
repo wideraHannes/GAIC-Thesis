@@ -1,0 +1,2 @@
+Twodimensional simulation of gaseous phenomena using vortex particles.
+In In Proceedings of the 6th Eurographics Workshop on Computer Animation and Simulation.

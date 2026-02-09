@@ -1,0 +1,2 @@
+According to Bayes’ rule, we can decompose the probabilistic motion model pr(x) into the following three terms: pr(x) = pr(q 1 , q  ̇ 1 ) · pr(u t |q t , q  ̇ t ) · pr(q t+1 , q  ̇ t+1 |q t , q  ̇ t , u t ) t pr init pr f orcef ield pr physics (5) where the first term pr init represents the probabilistic density function of the initial kinematic pose and velocity.
+In our experiment, we model the initial kinematic priors pr init with Gaussian mixture models.

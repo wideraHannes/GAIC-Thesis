@@ -1,0 +1,2 @@
+The threshold analyses showed that, whatever the utility weights, the mean Q-TWIST was always greater with ChOP or fludarabine as compared to CAP.
+Fludarabine was consistently a better treatment than ChOP, except in the unlikely case of high utility weights attributed to toxicity and low utility weights attributed to treatment.

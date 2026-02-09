@@ -1,0 +1,2 @@
+Since u is determined using the wind particles, every point p that could not be reached by any wind particle will hold zero velocity even if w may hold a nonzero velocity.
+Thus, this method solves the problems described in section 4.2.1.

@@ -1,0 +1,7 @@
+The rigid body accelerations can be computed by creating a matrix R that is multiplied by a vector of the pressures that surround a rigid body.
+R can be formed by a series of matrix multiplications:
+          
+            6
+             b 1  R =  . . .  M 0 −1 I −1 0 A 1 b T 1 ··· A k b T k b k
+          
+          where b i = n T i | (r i × n i ) T , n i is the normal of the ith face, r i is the vector from the rigid objects center of mass to position of the ith face, and A i is the area of that face.

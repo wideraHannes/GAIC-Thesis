@@ -1,0 +1,4 @@
+Sussman and Puckett 
+[SP00]
+ proposes coupled Level Set and Volume-ofFluid (CLVOF) which track the fluid interface with both representations, where VOF is used for re-initializing the Level Set.
+The surface can then be extracted from the Level Set.

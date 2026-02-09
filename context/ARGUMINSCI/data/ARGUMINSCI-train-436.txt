@@ -1,0 +1,2 @@
+The particles can be visualized directly, or can be used to define an implicit representation using blobbies or moving least-squares methods.
+Premo ze et al.

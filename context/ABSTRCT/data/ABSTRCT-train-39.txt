@@ -1,0 +1,2 @@
+Response rates (RRs) for PC, VC, GC, and TC were 29.1%, 25.9%, 22.3%, and 23.4%, respectively.
+The arms were comparable with respect to toxicity except for leucopenia, neutropenia, infection, and alopecia.

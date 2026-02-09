@@ -1,0 +1,3 @@
+These three factors are the same as those used for octree refinement in 
+[Losasso et al., 2004].
+The overall goal of the sizing field is to focus computational effort in the most visually important parts of the scene, that is, near closed boundaries, where the velocity field varies most, and where smoke is visible.

@@ -1,0 +1,2 @@
+At each visit, local and systemic side-effects that occurred during the treatment period were recorded.
+Student's t-test was used to compare the differences between IOP values.

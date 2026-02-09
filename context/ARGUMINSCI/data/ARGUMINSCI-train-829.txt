@@ -1,0 +1,5 @@
+The implicit backward Euler method appears similar at first: x and v are approximated by
+        
+          4
+          v x = h M −1 f(x 0 v + 0 + x, v v 0 + v) .
+The difference in the two methods is that the forward method’s step is based solely on conditions at time t 0 while the backward method’s step is written in terms of conditions at the terminus of the step itself. 4 The forward method requires only an evaluation of the function f but the backward method requires that we solve for values of x and v that satisfy equation (4).

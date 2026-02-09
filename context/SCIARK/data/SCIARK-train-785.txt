@@ -1,0 +1,2 @@
+Decisions of energy allocation, power generation and facility expansion within a multi-facility, multi-option, and multi-period context were obtained.
+Tradeoffs among system cost, climate change impact, system reliability and resilience were analyzed.

@@ -1,0 +1,2 @@
+Anyway, it is possible to define the rotation center as the point whose transformations by associated matrices are as close as possible.
+This minimizes the drift and works even if the vertex is assigned to n joints j 1 , . . . , j n .

@@ -1,0 +1,8 @@
+We summarize above operations as:
+        4
+        
+          4
+          v i t = v i + d i = SSD i (v r ) + d i
+        
+        where vr means the rest position of v and SSD i (∗) represents the equation 1.
+The “forward PSD” approach then concludes by interpolating d i as a function of pose.

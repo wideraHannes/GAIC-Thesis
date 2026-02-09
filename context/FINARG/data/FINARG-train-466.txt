@@ -1,0 +1,2 @@
+There's a lot of compute that goes behind, things like feed ranking and ads ranking.
+We think there is good ROI to putting more servers behind things like choosing the right ad for the right impression opportunity that we have.

@@ -1,0 +1,4 @@
+Constructing the simulation mesh in this way allows us to place samples anywhere in the computational domain; we exploit this by choosing samples that accurately capture the geometry and topology of the liquid surface.
+When combined with highresolution explicit surface tracking this allows us to simulate nearly arbitrarily thin features, while eliminating noise and other artifacts that arise when there is a resolution mismatch between the simulation and the surface—and allowing a precise inclusion of surface tension based directly on and at the same resolution as the surface mesh.</Abstract>
+    
+CR Categories: I.3.7

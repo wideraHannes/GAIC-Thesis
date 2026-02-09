@@ -1,0 +1,5 @@
+Miguel et al. / Data-Driven Estimation of Cloth Simulation Models
+      
+        <H1>2.
+Prior Work</H1>
+        Cloth simulation has a comparatively long history in computer graphics.

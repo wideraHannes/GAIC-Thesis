@@ -1,0 +1,2 @@
+An example of how our implicit representation accommodates merging surfaces.
+The red grid points trace back through the velocity field to points inside the surface.

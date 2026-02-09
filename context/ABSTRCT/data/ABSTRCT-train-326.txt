@@ -1,0 +1,2 @@
+Compared with patients in the TC arm, patients in the TC-Top arm had more grade 3-4 hematologic toxic effects (requiring more supportive care) and more grade 3-4 infections (5.1% versus 2.7%; P = .034) but did not have a statistically significant increase in febrile neutropenia (3.3% versus 3.1%; P = .80).
+Among patients who had measurable disease (TC, n = 147; TC-Top, n = 145), overall (i.e., complete or partial) response was 69.0% (95% CI = 61.4% to 76.5%) in the TC-Top arm and 76.2% (95% CI = 69.3% to 83.1%) in the TC arm (P = .166).

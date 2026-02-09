@@ -1,0 +1,2 @@
+This paper quantifies the environmental impacts of electricity generation from three MHP case studies (15–140 kW) in the water industry, using a life cycle assessment approach.
+Environmental burdens were calculated per kWh electricity generated over nominal turbine operational lifespans.

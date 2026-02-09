@@ -1,0 +1,2 @@
+The study utilized a dynamic heterogeneous estimation technique with a panel data from 1990 to 2017 in 47 Sub-Saharan African countries.
+Our adopted empirical framework made it possible to account for heterogeneity, a situation that may be prevalent in countries with varied economic and environmental policies.

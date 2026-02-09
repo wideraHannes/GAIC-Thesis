@@ -1,0 +1,4 @@
+To enable faster simulations, a solution with an unconditionally stable solver was introduced by Stam 
+[Sta99 ] and further extended in 
+[ FSJ01 ; Sta01 ; Sta03 ].
+Modelling interaction of fluids with solid objects has been investigated by Takahashi et al.

@@ -1,0 +1,2 @@
+In a trained SVM, the sign of the decision function  ́ Ü μ represents the class assigned to a test data point Ü .
+In our application, a properly trained SVM predicts if a controller will succeed (  ́ Ü μ 1⁄4 ) or fail (  ́ Ü μ 1⁄4 ) on a given state Ü of the dynamic character.

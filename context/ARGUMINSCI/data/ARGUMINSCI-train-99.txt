@@ -1,0 +1,4 @@
+The objective function is the time integral of the signal displacement between the source and destination motion. i.e.
+         ( 1 )
+        Since the whole interval has to be integrated to find the optimal solution, the method is intrinsically an off-line process.
+The global method as above can correlate frames back and forth within the whole duration and thus generally produces more smooth results compared to the local method such as our OMR technique.

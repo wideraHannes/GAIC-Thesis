@@ -1,0 +1,2 @@
+The infrastructure team has done an outstanding job in driving good efficiencies through things like the Open Compute Project, which allows us to leverage an open-source strategy to lower our costs on server and other expensive hardware.
+It's been a great strategy for us.

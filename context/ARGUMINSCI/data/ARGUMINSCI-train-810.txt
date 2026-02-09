@@ -1,0 +1,2 @@
+The static test give a good estimate for the static stiffness and bend parameters.
+In the waving test, one of the top corners of the fabric is fixed and the other corner is moved back and forth ( Fig. 7 ).

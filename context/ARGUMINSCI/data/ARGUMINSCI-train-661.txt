@@ -1,0 +1,2 @@
+For the upper body and the non-sagittal DOFs in the lower body, we optimize the PDcontrol parameters (spring-damper constants, target angle, balance feedback) for all joints except for arms, where only a target elbow angle and a swing scale parameter are optimized (Section 4.4).
+When combined with 33 free parameters describing the initial state of the simulation, 124 parameters (w) fully define a simulated motion {s 1 . . . s

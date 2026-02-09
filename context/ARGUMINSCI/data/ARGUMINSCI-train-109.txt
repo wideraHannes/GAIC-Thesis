@@ -1,0 +1,2 @@
+The semantic accuracy of the generated motion was evaluated in the setting of partner dance, where the follower’s motion is generated from the leader’s motion.
+The algorithm generated semantically correct partner motion even from test sequences of leader motions that did not appear in the training set.

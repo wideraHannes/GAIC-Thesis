@@ -1,0 +1,2 @@
+Boundary sampling: For every boundary triangle with possible interaction partners, boundary particles are generated. 5.
+Interaction computation: For every interaction pair, composed of a boundary particle and a fluid particle, forces are computed and applied to related triangles and fluid particles.

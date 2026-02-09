@@ -1,0 +1,9 @@
+Received: 10 April 2006; Revised: 2 May 2006; Accepted: 10 May 2006 </Abstract>
+Keywords: skeleton; curve-skeleton; deformation
+    
+    
+      
+        <H1>Introduction</H1>
+      
+      A realistic and visually accurate character animation necessitates proper skin deformation of the character models.
+Skin deformation owes a large part to proper rigging of the characters.

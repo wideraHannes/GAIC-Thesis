@@ -1,0 +1,2 @@
+When the algorithm encountered a pattern that was not in the database (one of 14 such patterns shown in Table 1 ), it was able to correctly reconstruct the novel sequence by rearranging the two-beat segments.
+Of the 91 patterns (21 unique) in our three test dances, the synthetic dancer matched the pattern of the actual dancer in all but 5 cases, one of which is shown in Figure 6.

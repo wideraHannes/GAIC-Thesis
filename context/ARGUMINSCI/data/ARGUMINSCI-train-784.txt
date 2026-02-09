@@ -1,0 +1,2 @@
+The dynamic skin behavior is identical for the straight joint (a relaxed muscle), because the elastic properties of the first morph target are identical for (b) and (c).
+But, for the bent joint, the force clearly causes more skin deformation in (b).

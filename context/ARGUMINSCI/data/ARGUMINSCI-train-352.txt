@@ -1,0 +1,2 @@
+This simply requires finding an R matrix that correctly computes face accelerations due to pressure.
+For example, one could easily alter R such that the body was constrained to just rotate about the origin by replacing b i in Equation (6) with b i = (r i × n i ) T and using only the I −1 block for the center matrix.

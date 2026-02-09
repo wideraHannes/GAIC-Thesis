@@ -1,0 +1,2 @@
+Given almost any structured pattern, we can detect regions by increasing N until I &gt; log 2 (M) bits.
+However, larger marker regions have the disadvantage that curvature can cause local occlusions and prevent observation of the entire region.

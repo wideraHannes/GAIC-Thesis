@@ -1,0 +1,2 @@
+Soft articulated characters with fast contact handling.
+Computer Graphics Forum 26, 3, 243–253.

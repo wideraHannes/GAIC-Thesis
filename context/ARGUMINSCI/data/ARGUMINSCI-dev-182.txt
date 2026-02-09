@@ -1,0 +1,13 @@
+A serious drawback for some applications is that the derivative of the surface is zero at the data points ( Figure 4 ).
+      
+      
+        <H2>3.2 Radial Basis Functions</H2>
+        Radial basis functions 
+[ 28 , 29 ]
+ have become a popular choice for scattered interpolation.
+The interpolant is a linear combination of nonlinear functions of distance from the data points:
+        
+          1
+          N d(x) ˆ = w k φ( x − x k ) k
+        
+        If N values of d are available then the weights can be easily solved by a linear system; this can be derived either by least squares fit or by subspace projection.

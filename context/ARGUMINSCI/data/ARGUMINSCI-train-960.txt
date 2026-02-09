@@ -1,0 +1,3 @@
+ACM SIGGRAPH/Eurographics SCA (2003), pp. 37–51. 2
+          [BW98] B ARAFF D., W ITKIN A.: Large steps in cloth simulation.
+In Proc. of ACM SIGGRAPH (1998), pp. 43–54. 2, 5

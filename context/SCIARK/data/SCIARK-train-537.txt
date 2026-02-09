@@ -1,0 +1,3 @@
+Life cycle environmental balance and greenhouse gas mitigation potential of micro-hydropower energy recovery in the water industry
+Abstract: Micro-hydropower (MHP) presents new opportunities to generate electricity from within existing water infrastructure.
+This paper quantifies the environmental impacts of electricity generation from three MHP case studies (15–140 kW) in the water industry, using a life cycle assessment approach.

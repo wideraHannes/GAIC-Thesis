@@ -1,0 +1,2 @@
+The characteristic deformations of all the morph targets have to be well represented. 3.
+The input deformations of each of the dynamic morph targets have to be well represented in the reduced space, otherwise the sculpted deformations can’t be simulated.

@@ -1,0 +1,2 @@
+An important benefit of this design choice is the ability to use segments, rather than frames, as the primitive unit of motion.
+This allows for explicit preservation of higherlevel motion semantics.

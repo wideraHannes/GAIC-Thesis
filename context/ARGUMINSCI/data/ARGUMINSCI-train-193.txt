@@ -1,0 +1,2 @@
+In this paper, we explore four forms of advection encountered in fluid simulation: velocity, smoke density, image and level set advections.
+Velocity advection transports the velocity field along the velocity itself.

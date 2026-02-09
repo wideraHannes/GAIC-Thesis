@@ -1,0 +1,2 @@
+A very classic scenario would be I’ll take a SQL database application, bring it to the Cloud and then build a new mobile back end using the same data.
+So reuse of code, reuse of data, so you would use some amount if iOS infrastructure and then past consumption.

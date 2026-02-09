@@ -1,0 +1,3 @@
+These methods combine motion capture data and dynamic simulation to retain human-like details from the data while presenting interaction with the environment.
+These methods produce motions that do not deviate significantly from the input motion, relying on the existence of captured motion that is similar to what the user intends to do.
+        c The Eurographics Association 2004.

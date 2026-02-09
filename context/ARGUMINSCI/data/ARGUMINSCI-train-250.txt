@@ -1,0 +1,2 @@
+Similarly, a false assignment of region 3 into region 2 would result in the garment crossing the legs.
+In practice, values of 0.5 cm and 4.0 cm are used to identify tight regions and floating regions, respectively.

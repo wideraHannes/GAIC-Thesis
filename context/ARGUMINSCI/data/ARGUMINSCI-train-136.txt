@@ -1,0 +1,2 @@
+Third, semi-Lagrangian advection gives us a mapping between surfaces at adjacent timesteps.
+This mapping allows us to accurately track surface properties on the actual surface at negligible complexity and cost.

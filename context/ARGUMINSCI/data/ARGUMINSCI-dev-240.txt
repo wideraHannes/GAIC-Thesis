@@ -1,0 +1,2 @@
+Figure 7 shows the two patterns animated according to deformation.
+Note that for lower left triangles in Stage 2 of the animation, both wrinkle patterns get blended.

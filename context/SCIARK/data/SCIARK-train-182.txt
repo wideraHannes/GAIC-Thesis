@@ -1,0 +1,2 @@
+The allocation problem that the analysis is faced with is addressed by applying seven different approaches: namely sub-division (two variants), partitioning based on physical causalities and on economic relationships and the principles of system expansion (three variants).
+Depending on the approach, the NREU for glucose production ranges from 6.8 to 9.3 MJ/kg glucose dry solids (ds) and the GHG emissions from 0.7 to 1.1 kg CO2 eq./kg glucose ds.

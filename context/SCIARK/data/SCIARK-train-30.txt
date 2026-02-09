@@ -1,0 +1,2 @@
+Using propensity score matching, matching participants based on their SES, we also consistently found evidence of the relationship.
+Finally, using fixed-effects regression which takes account of all time-invariant factors (which include multiple aspects of SES) even if unobserved, we also found no attenuation of the relationship.

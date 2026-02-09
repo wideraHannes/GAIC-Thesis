@@ -1,0 +1,2 @@
+Then we find the closest particle to each midpoint and store the squared distance as a weight ω i .
+The new particle’s position is equal to the weighted average of all nearby midpoints: x new = ω i m i / ω i .

@@ -1,0 +1,2 @@
+Every server product of ours has cloud enrollment right, whether it be SQL, whether it be Windows Server, and you'll see that increasingly, even in this next wave of servers.
+But we also think of in fact our servers as the edge of our cloud.

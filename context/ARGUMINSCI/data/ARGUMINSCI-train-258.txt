@@ -1,0 +1,4 @@
+Targeting a similar direction as our work, 
+Hong et al. [2009] and Ando et al. [2012]
+ have demonstrated methods to adapt the resolution of FLIP particles in a simulation.
+Both methods, in contrast to ours, focus on static computational grids and are restricted to smaller differences in particle size.

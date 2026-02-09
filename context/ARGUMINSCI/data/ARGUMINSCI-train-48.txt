@@ -1,0 +1,3 @@
+Decades of research in computer animation have explored two distinctive approaches for human motion modeling: statistical motion
+      modeling and physics-based motion modeling.
+Despite the efforts, accurate modeling of human motion remains a challenging task.

@@ -1,0 +1,2 @@
+No statistical significance was found in case fatality rate by the SDM.
+The SDM also presented the best model fitness relative to other models.

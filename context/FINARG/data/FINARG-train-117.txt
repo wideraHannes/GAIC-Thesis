@@ -1,0 +1,2 @@
+Of course if you are – were using as a large enterprise Exchange and you moved to Office 365 you moved to using Exchange Online; same thing is true for SharePoint.
+But again take all the other things I described, power BI , Dell and the list goes on, take eDiscovery; even for the largest of enterprise these were things that had low penetration or low deployment.

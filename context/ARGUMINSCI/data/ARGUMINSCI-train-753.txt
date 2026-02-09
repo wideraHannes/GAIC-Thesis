@@ -1,0 +1,2 @@
+An overview of our method.
+At each timestep we begin with an explicit surface representation, from which we can build a signed-distance function (a) and a velocity field given by the fluid simulator (b).

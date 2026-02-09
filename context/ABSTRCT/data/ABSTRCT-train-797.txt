@@ -1,0 +1,2 @@
+Median PFS was 2.3 months for each arm (HR, 1.004; 95% CI, 0.841 to 1.199).
+ORR, stable disease, median OS, were 4.4% versus 5.5%, 36.0% versus 39.6%, 6.7 versus 7.2 months (HR, 0.973; 95% CI, 0.805 to 1.176), respectively.

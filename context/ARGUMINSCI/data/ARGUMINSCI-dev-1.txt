@@ -1,0 +1,2 @@
+The base element of this simulation is a triangle of the mesh describing the surface, and the elasticity laws are computed as interactions between the three vertices of a triangle reflecting all the mechanical behavior curves which, for this study, are restricted to be linear. * A simplified spring-mass model which represents an approximated equivalent elasticity model using linear viscoelastic springs connecting the particle couples describing each edge of the surface mesh.
+This model is one of the simplest that a cloth simulation application would use.

@@ -1,0 +1,2 @@
+Therefore, [MMTD07] apply a sharpening filter at each time step which conserves mass globally but not locally.
+We propose a new sharpening method which conserves mass both locally and globally.

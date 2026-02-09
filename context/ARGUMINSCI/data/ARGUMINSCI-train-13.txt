@@ -1,0 +1,9 @@
+As in the case of solids, close proximity or actual intersection of cloth with itself initiates contact handling.
+        44
+        SIGGRAPH 98, Orlando, July 19–24
+        C OMPUTER G RAPHICS Proceedings, Annual Conference Series, 1998
+      
+      
+        <H2>2.2 Energy and Forces</H2>
+        The most critical forces in the system are the internal cloth forces which impart much of the cloth’s characteristic behavior.
+Breen et al.

@@ -1,0 +1,3 @@
+The optimization aims to maximize the following return function: T R (w) = r(s t ) − w e J effort . t=1 Here r is a scalar reward function of the current state s t , J effort measures the effort of the synthesized motion, and w e is set to 0.004 divided by the mass of the model, motivated by 
+Wang et al. [2010].
+The reward is defined as the negative sum of a number of task terms (i.e., r(s t ) = − i K i

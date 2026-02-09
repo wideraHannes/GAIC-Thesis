@@ -1,0 +1,2 @@
+We conducted a secondary data analysis by the dataset from a double-blind randomized controlled trial in China from 2006 to 2009 that was conducted to investigate the effects of multiple micronutrient supplements on adverse pregnancy outcomes when provided to pregnant women with no/mild anemia.
+We used logistic regression to estimate the adjusted odds ratio and 95% confidence interval and test for effect modification.

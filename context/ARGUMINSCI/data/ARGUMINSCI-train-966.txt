@@ -1,0 +1,4 @@
+The CLIK scheme including the secondary task based on Jacobian transpose is given by
+           ( 15 )
+          where e 2 = x 2 , x des 2 . x des 2 is the actual result of the secondary task that tries to realize the given goal x 2 .
+It is proven that e 2 is ultimately bounded within a certain range and the tracking error for the primary task is not affected by the second term of Equation 15 [13].

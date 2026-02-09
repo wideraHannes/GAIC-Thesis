@@ -1,0 +1,8 @@
+Right) Volumetric rendering showing intricate detail of the density field.
+      
+      
+        <H1>2.
+Related Work</H1>
+        3D Eulerian liquid simulation was introduced to computer graphics by Foster and Metaxas 
+[FM96]
+ who used a finite difference approach to solve the governing equations.

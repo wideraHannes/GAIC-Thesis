@@ -1,0 +1,2 @@
+Recalling that the total penalty of an embedding v is Γ T b(v), we can think of the maximum margin Γ as the one that best distinguishes between the best “bad” embedding and the worst “good” embedding in the training set.
+In our case, however, we do not need to classify embeddings, but rather find a Γ such that the embedding with the lowest penalty f (v) = Γ T b(v) is likely to be good.

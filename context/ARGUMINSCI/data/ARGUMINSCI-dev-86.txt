@@ -1,0 +1,2 @@
+An alternative to VOF is to track a smeared-out surface density and keep it relatively sharp with a sharpening operation.
+This method was introduced to computer graphics by Mullen et al. [MMTD07].

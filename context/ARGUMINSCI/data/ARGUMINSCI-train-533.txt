@@ -1,0 +1,2 @@
+The Figure 17 shows the effect of using motion of different durations (expressed in number of frames) with same joint angle ranges.
+With less than 70 pre-simulated frames, the real-time simulation loses its quality.

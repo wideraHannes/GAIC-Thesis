@@ -1,0 +1,2 @@
+Methods:                    Data on suicides and hospitalised para-suicides that occurred in the state of Illinois from 1990 to 1997 were combined.
+Total number of episodes for each suicide method was estimated as the sum of the number of suicides and the number of para-suicides for that method.

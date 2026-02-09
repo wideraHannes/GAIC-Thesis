@@ -1,0 +1,5 @@
+Previous Work</H1>
+        
+          <H2>2.1.
+Numerical solvers</H2>
+          Probably the most common technique for simulating the physical properties of clothes is the particle system.

@@ -1,0 +1,12 @@
+Formally, this parameterized surface area is given by Using this notation the requirement of area conservation on a per triangle basis is expressed by the following equation
+          A( , f (x, y)) = A ( , f (x , y ))
+          A (h, , f (x , y )) ≡ A ( , hf (x , y ))
+          
+            4
+            A( , f (x, y)) = A (h, , f (x , y ))
+          
+          This is an equation for h, which we call modulation factor.
+In Appendix A, we present an approximate solution to this equation that yields
+          
+            5
+            1 h = 1− (C 1 (a −1) + C 2 b + C 3 (d −1))

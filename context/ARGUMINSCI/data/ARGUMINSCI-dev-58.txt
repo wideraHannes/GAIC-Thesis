@@ -1,0 +1,2 @@
+Depending on the weight assignment, their algorithm can fail to find an inverse kinematic solution even if all the constraints can be actually met.
+Intrinsically, the problem of finding inverse kinematic solution of multiple constraints doesn’t require any weight or priority assignment: if all the end-effector constraints can be met, then it should be possible without considering weights or assigning priorities to each end-effector constraint.

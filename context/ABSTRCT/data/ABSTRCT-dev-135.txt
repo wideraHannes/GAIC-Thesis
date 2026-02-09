@@ -1,0 +1,2 @@
+There was no difference in OS (p=0.992).
+Median survival and 6-month survival were 61, 86, 88 and 97 days and 29%, 33%, 21% and 26% for arms A, B, C, and D, respectively.

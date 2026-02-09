@@ -1,0 +1,2 @@
+Comparing efficiency of integration methods for cloth simulation.
+Computer Graphics International, 265–274.

@@ -1,0 +1,2 @@
+Instead of computing the gradient, we robustly compute the variability of the param∂p eters, defined as ∂E .
+To compute the variability, we perturb each parameter of the simulator individually up to ±0.20% of its value, compute the error and fit a quadratic to the data ( Fig. 4 ).

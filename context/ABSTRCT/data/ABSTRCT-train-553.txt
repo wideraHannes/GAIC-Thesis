@@ -1,0 +1,2 @@
+Cerebral perfusion was measured using arterial spin labeling; the primary end point was change in global perfusion between baseline and 3 months, compared between treatment groups by analysis of variance.
+Linear regression compared change in perfusion against change in BP.

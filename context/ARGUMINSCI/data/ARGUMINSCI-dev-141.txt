@@ -1,0 +1,2 @@
+Whereas the chest seems to collapse for single elastic models, it bulges more realistically with our method.
+The shoulder model has 4899 degrees of freedom.

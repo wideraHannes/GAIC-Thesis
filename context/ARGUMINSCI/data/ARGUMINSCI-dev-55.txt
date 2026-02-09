@@ -1,0 +1,2 @@
+Finally, the method tends to produce very smooth surfaces with very little detail, which is desirable in some, but not all, applications.
+Despite these drawbacks, the particle level-set methods have been very successful and represent a significant step forward in the area of surface tracking for liquid simulations. 2.1.4 Semi-Lagrangian Contouring.

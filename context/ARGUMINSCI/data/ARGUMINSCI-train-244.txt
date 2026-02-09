@@ -1,0 +1,2 @@
+In this paper, we show how statistical modeling techniques can be combined with physics-based modeling techniques to address the limitations of both techniques.
+Physical motion models and statistical motion models are complementary to each other as they capture different aspects of human movements.

@@ -1,0 +1,2 @@
+We calculated the frequencies for specific injury mechanisms, injury severity scores (ISS), and in-hospital outcomes of severe injuries (death, urgent resuscitation and emergent surgery).
+We performed a multivariate logistic regression to determine risk factors associated with severe injury.

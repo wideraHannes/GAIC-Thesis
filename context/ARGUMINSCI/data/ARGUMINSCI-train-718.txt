@@ -1,0 +1,2 @@
+This method is very easy to implement and yields very plausible and nicely looking results.
+A simple approach to generate complex air flows is to define a wind field by mathematical functions which assign to each point in space a unique velocity value.

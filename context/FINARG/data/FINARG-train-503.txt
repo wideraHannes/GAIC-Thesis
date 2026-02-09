@@ -1,0 +1,2 @@
+A lot of what we do even in Windows, mostly people don't recognize it, but one of the most important services we run is Windows Update as a cloud service.
+And so we have a lot of value that is across the board cloud services, whether it's Xbox Live, Windows Update, Office 365, Dynamics 365, and of course all of the Azure services.

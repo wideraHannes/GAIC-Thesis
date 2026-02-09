@@ -1,0 +1,2 @@
+Free-form deformation of solid geometric models.
+In Proceedings of SIGGRAPH 86, Annual Conference Series, ACM SIGGRAPH, 151–160.

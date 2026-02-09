@@ -1,0 +1,2 @@
+Using the proposed curve skeleton, we can realistically deform not only the skin directly (as explained earlier), but also the muscles, in a unified manner.
+Effectively, each action line is deformed by a curve skeleton, and the action line in turn deforms the muscle.

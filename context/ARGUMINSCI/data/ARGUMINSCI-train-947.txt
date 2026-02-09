@@ -1,0 +1,2 @@
+YAMANE, K., AND NAKAMURA, Y. 2000.
+Dynamics lter concept and implementation of on-line motion generator for human gures.

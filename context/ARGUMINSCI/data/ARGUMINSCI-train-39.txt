@@ -1,0 +1,2 @@
+Approximate Medial Surface Pinocchio uses the adaptive distance field to compute a sample of points approximately on the medial surface ( Figure 2 ).
+The medial surface is the set of C 1 discontinuities of the distance field.

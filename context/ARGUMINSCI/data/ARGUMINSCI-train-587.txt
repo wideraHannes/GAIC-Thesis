@@ -1,0 +1,2 @@
+Albrecht I, Haber J, Seidel H.
+Construction and animation of anatomically based human hand models.

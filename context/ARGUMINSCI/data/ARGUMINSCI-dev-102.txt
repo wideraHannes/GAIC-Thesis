@@ -1,0 +1,2 @@
+It comes by many names, all relating to the same algorithm: linear blend skinning (LBS), skeleton subspace deformation, vertex blending, enveloping, or simply skinning.
+Basically, this algorithm blends between rigidly transformed vertices using vertex weights, which denote the amount of influence of individual joints.

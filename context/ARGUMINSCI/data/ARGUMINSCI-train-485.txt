@@ -1,0 +1,2 @@
+Fortunately, the center of rotation depends only on the transformations of the joints j 1 , . . . , j n and not the vertex itself.
+Therefore, if we encounter another vertex assigned to the same set of joints j 1 , . . .

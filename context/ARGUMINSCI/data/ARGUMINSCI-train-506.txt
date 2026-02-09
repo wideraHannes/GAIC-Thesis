@@ -1,0 +1,2 @@
+The wrinkle pattern is gray scale texture image defining the bump map.
+The user defines an overall normalization factor for the texture to map wrinkle pattern to wrinkle function.

@@ -1,0 +1,2 @@
+Comparison to ground truth.
+Supplemental figures indicate that our kinematic patterns generally agree with data over a range of speeds and especially at lower speeds.

@@ -1,0 +1,2 @@
+From the algorithmic point of view, the technique reduces a level of complexity in the skinning and deformation.
+By layering the curve skeleton on top of the existing joint skeleton, we allow the animator to work conventionally (as in a joint-based system) and yet receive good results.

@@ -1,0 +1,3 @@
+The result are of similar visual quality.
+        4.
+Evaluate ρ n+1 from ρ n and γ from γ by backward tracing and tri-linear interpolation from cells l but this time scale the weights by max(1,β γ i l ) , i.e. ρ n+1 i += ∑ l max(1,β γ i l ) w − li ρ n l ) 5.

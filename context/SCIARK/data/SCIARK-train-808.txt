@@ -1,0 +1,2 @@
+QoL was assessed by the Functional Assessment of Cancer Therapy-Breast (FACT-B) at baseline and 6, 12, and 18 months later.
+Finite mixture modeling was used to determine QoL trajectories of the trial outcome index (TOI; a composite of physical well-being, functional well-being, and breast cancer-specific subscales) and emotional and social/family well-being subscales.

@@ -1,0 +1,2 @@
+Consider a point p b on the boundary of a deformable object in the scene.
+Let u(p b ) be the corresponding wind velocity at that point and n be its normal.

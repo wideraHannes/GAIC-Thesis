@@ -1,0 +1,8 @@
+In Wilhelms and Van Gelder [ 36 ]
+ several classes of muscles are algorithmically modeled with attention to volume conservation; skin is a spring mesh anchored to underlying tissue or bone in appropriate areas.
+Scheepers et. al. [ 31 ]
+ produced convincing representations of muscles as well as preliminary but promising skin deformation.
+      
+      
+        <H2>2.3 Common Practice</H2>
+        In recent years character animation has moved beyond being a research topic and sophisticated deforming characters routinely appear in films and on television.

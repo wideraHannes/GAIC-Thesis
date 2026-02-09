@@ -1,0 +1,3 @@
+Therefore, we consider macroscopic models for both, solids and fluids.
+Materials, which are homogeneous at the macroscopic level, can mathematically be described as a continuum 
+[ 18 ].

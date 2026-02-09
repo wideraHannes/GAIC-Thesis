@@ -1,0 +1,2 @@
+Satya Nadella: Yeah, I mean I think the usage number is the one that, Raimo, that we talked about, which is doubling of compute, doubling of storage.
+We talked about the growth of our EMS, which is a higher level service.

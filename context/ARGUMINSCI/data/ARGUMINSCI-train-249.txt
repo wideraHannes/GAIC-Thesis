@@ -1,0 +1,3 @@
+Then we solve the whole system using the law of N-body momentum conservation.
+The system of equalities is based on the scheme adapted from the simultaneous resolution method for rigid N-body collisions proposed by Baraff 
+[ 1 ].

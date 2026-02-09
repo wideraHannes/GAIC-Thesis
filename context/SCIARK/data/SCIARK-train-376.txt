@@ -1,0 +1,2 @@
+Here, using historical data to bias-correct CMIP5 projections, we show an increase in dryland expansion rate resulting in the drylands covering half of the global land surface by the end of this century.
+Dryland area, projected under representative concentration pathways (RCPs) RCP8.5 and RCP4.5, will increase by 23% and 11%, respectively, relative to 1961–1990 baseline, equalling 56% and 50%, respectively, of total land surface.

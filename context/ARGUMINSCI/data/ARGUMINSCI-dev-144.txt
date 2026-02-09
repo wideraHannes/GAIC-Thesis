@@ -1,0 +1,8 @@
+CR Categories: I.3.5 [Computer Graphics]: Computational Geometry and Object Modeling—Physically based modeling; I.3.7 [Computer Graphics]: Three-Dimensional Graphics and Realism—Animation; I.6.8 [Simulation and Modeling]: Types of Simulation—Animation.  
+    
+    
+      
+        <H1>1 Introduction</H1>
+      
+      In this paper we describe a technique for animating the behavior of materials, such as the one shown in Figure 1 , that exhibit a combination of both fluid and solid characteristics.
+Often referred to as viscoelastic fluids, these materials initially respond to strain elastically like a solid, but when subjected to increasingly large stresses they flow like a fluid.

@@ -1,0 +1,2 @@
+Since the path is sampled at the coarse level, a graph search can also be performed between the constraint nodes.
+At every iteration we check if the proposed mutation deletes a motion piece that has a hard constraint in it.

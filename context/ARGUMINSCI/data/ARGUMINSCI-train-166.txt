@@ -1,0 +1,2 @@
+Purely data-driven methods are an attractive choice for control purposes, as the input shapes provide guide examples of desired deformations.
+In its most essential form, one simply interpolates between character poses in a large database

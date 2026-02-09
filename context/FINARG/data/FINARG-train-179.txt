@@ -1,0 +1,2 @@
+And that's -- everything is already very tightly integrated kind of below the surface, in a way that people using these apps may not feel.
+But I think that the push for the next few years is we think that in running a company, I want to make it so it's not just the back end engineers when they improve something, it improves everything.

@@ -1,0 +1,5 @@
+Bhat et al. / Estimating Cloth Simulation Parameters from Video
+        
+          
+          Figure 12: Showing the improvement in shape match after optimization.
+The top row compares a video frame of fleece with simulation before optimization.

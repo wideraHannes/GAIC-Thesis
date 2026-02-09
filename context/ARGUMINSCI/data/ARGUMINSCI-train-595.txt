@@ -1,0 +1,2 @@
+VV, No.
+N, Article XXX, Publication date: Month YYYY.

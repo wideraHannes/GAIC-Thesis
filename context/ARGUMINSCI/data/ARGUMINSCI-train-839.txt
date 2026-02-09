@@ -1,0 +1,2 @@
+These four equations represent the intersection of three hyperplanes and a hypercylinder in 4D {a, b, c, d} space.
+We solve this system analytically by first finding the line of common intersection of the first three equations, and then intersecting this line with the cylinder represented by the final equation.

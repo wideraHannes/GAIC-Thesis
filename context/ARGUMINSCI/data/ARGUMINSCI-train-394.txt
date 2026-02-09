@@ -1,0 +1,3 @@
+Bærentzen and Christensen [2002]
+ built a sculpting system using a level-set surface representation which could be manipulated by a user with a variety of sculpting tools.
+Like us, they used adaptive grid structures to store the scalar field.

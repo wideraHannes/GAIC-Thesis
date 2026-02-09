@@ -1,0 +1,2 @@
+Gemcitabine (G) is standard therapy for pancreatic cancer.
+Enzastaurin (E) inhibits PKCβ and PI3K/AKT signaling pathways with a dose-dependent effect on growth of pancreatic carcinoma xenografts.

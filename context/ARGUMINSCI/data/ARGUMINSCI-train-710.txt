@@ -1,0 +1,2 @@
+But the pelvis motion showed non-uniform speed along the direction of progression (anterior-posterior), which wasn’t observable in the source motion.
+So we constrained the transverse plane motion of the pelvis.

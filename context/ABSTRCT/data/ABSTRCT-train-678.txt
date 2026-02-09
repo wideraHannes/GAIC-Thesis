@@ -1,0 +1,2 @@
+Clinical response was defined as complete response (CR), partial response (PR), or stable disease (SD).
+Efficacy was assessed after the completion of 3 treatment cycles; 28.9% of patients (22 of 76 patients) responded (no CRs, 1 PR, and 21 SDs).

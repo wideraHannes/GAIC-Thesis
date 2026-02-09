@@ -1,0 +1,6 @@
+However, such an optimization would be complicated to apply in our unstructured setting.
+In contrast to these methods, our approach for surface creation computes the union of convex hulls around triplets of particles, which leads to a smooth and closed surface around a collection of arbitrarily sized particles.
+      
+      
+        <H1>3 Fluid Solver</H1>
+        The aim of our method is to solve the Navier-Stokes equations, which for incompressible, Newtonian, inviscid flows can be written as ρDu/

@@ -1,0 +1,4 @@
+Figure 6: We can use multiple “checkpoints” in a motion.
+In this figure, the motion is required to pass through the arrow (body constraint) in the middle on the way from the right arrow to the left.
+            
+             y( f ) =       0

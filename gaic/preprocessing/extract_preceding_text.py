@@ -2,7 +2,7 @@
 
 For datasets with document context (ABSTRCT, ARGUMINSCI, FINARG, PE, SCIARK, USELEC),
 this script extracts the 2 sentences immediately preceding each argumentative sentence
-and writes them to context/{DATASET}/data/preceding.jsonl.
+and writes them to individual files: context/{DATASET}/data/{ID}.txt
 
 Usage:
     uv run python gaic/preprocessing/extract_preceding_text.py
@@ -56,9 +56,16 @@ def get_preceding_sentences(doc_text: str, target: str, n: int = 2) -> list[str]
 # ---------------------------------------------------------------------------
 
 
-def extract_preceding_sentences_for_dataset(dataset: str) -> list[dict]:
-    """Load all train+dev samples for a dataset and extract preceding sentences."""
-    entries = []
+def extract_preceding_sentences_for_dataset(dataset: str, output_dir: Path) -> int:
+    """Load all train+dev samples for a dataset and extract preceding sentences.
+
+    Writes each sample's preceding text to context/{dataset}/data/{id}.txt
+    Returns the count of successfully processed samples.
+    """
+    data_dir = output_dir / "data"
+    data_dir.mkdir(exist_ok=True, parents=True)
+
+    total_count = 0
     for split in ("train", "dev"):
         jsonl_path = GAIC_DATA_DIR / f"{split}.jsonl"
         if not jsonl_path.exists():
@@ -86,33 +93,24 @@ def extract_preceding_sentences_for_dataset(dataset: str) -> list[dict]:
 
                 doc_text = doc_path.read_text()
                 preceding = get_preceding_sentences(doc_text, item["sentence"])
-                entries.append(
-                    {"id": item["id"], "split": split, "preceding": preceding}
-                )
+
+                # Write to individual file: context/{dataset}/data/{id}.txt
+                output_file = data_dir / f"{item['id']}.txt"
+                with open(output_file, "w") as f_out:
+                    f_out.write("\n".join(preceding))
+
                 count += 1
 
         logger.info(f"    Extracted preceding sentences for {count} samples")
+        total_count += count
 
-    return entries
+    return total_count
 
 
-def write_preceding_data(output_dir: Path, entries: list[dict]) -> None:
-    """Write preceding sentence data to context/{DATASET}/data/preceding.jsonl."""
-    data_dir = output_dir / "data"
-    data_dir.mkdir(exist_ok=True, parents=True)
-
-    output_path = data_dir / "preceding.jsonl"
-    with open(output_path, "w") as f:
-        for entry in entries:
-            f.write(json.dumps(entry) + "\n")
-
-    logger.info(
-        f"  Written {len(entries)} entries to {output_path.relative_to(CONTEXT_DIR.parent)}"
-    )
 
 
 def process_dataset(dataset: str) -> dict:
-    """Process a single dataset: extract preceding sentences and write output.
+    """Process a single dataset: extract preceding sentences and write to individual files.
 
     Returns a status dict with 'dataset', 'status' ('OK'/'FAIL'), 'count', and 'error' (if any).
     """
@@ -121,17 +119,16 @@ def process_dataset(dataset: str) -> dict:
     output_dir.mkdir(parents=True, exist_ok=True)
 
     try:
-        entries = extract_preceding_sentences_for_dataset(dataset)
-        if not entries:
+        count = extract_preceding_sentences_for_dataset(dataset, output_dir)
+        if count == 0:
             logger.warning(f"  No entries found for {dataset}")
             return {"dataset": dataset, "status": "OK", "count": 0, "error": None}
 
-        write_preceding_data(output_dir, entries)
-        logger.info(f"  {dataset}: OK ({len(entries)} samples)")
+        logger.info(f"  {dataset}: OK ({count} samples)")
         return {
             "dataset": dataset,
             "status": "OK",
-            "count": len(entries),
+            "count": count,
             "error": None,
         }
 

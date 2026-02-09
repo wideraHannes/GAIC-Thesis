@@ -1,0 +1,2 @@
+While our pattern is composed of tesselated triangles ( figure 5 ), any shape that tiles the plane will work (squares and hexagons are also natural choices).
+To maximize the density of reconstructed points, we print the smallest markers that we can reliably detect.

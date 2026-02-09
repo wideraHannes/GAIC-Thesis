@@ -1,0 +1,2 @@
+A number of our examples were also rendered with a glass shader (using water’s index of refraction) for comparison to previous methods and real fluids, and to demonstrate how the method can be used to generate realistic results.
+Our colored and textured examples illustrate how easily a variety of properties may be attached to the surface.

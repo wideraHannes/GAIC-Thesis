@@ -1,0 +1,4 @@
+INTRODUCTION</H1>
+      
+      The fundamental problem of tracking a surface as it is advected by some velocity field arises frequently in applications such as surface reconstruction, image segmentation, and fluid simulation.
+Unfortunately, the na ̈ ive approach of simply advecting the vertices of a polygonal mesh, or other explicit representation of the surface, quickly encounters problems such as tangling and self-intersection.

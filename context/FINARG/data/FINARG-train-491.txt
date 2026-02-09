@@ -1,0 +1,2 @@
+And going back to the encryption point from before, we think that there's an opportunity to, when you're going to go message someone over a phone number network, have that primarily go over WhatsApp and be end-to-end encrypted rather than go over SMS where it's unencrypted and less secure.
+So I can give you a few more examples like that, but I guess the way that I'm thinking about this is that there's a handful of cases that people are telling us that they want to be able to integrate and communicate more easily across the networks.

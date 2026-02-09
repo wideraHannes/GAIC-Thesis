@@ -1,0 +1,5 @@
+With less than 70 pre-simulated frames, the real-time simulation loses its quality.
+          100 cm in error 10 Simulation 6.34 0 0.2 0.4 0.6 0.8 1 1.2 1.4 1.6 Joint angle range of the pre-simulated sequence Ratio of Joint angle range of the real-time sequence
+          
+            Figure 16.
+Estimation of the error when reducing the range of body motion in the pre-simulated sequence.

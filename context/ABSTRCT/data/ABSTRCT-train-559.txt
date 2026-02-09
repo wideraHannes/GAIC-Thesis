@@ -1,0 +1,2 @@
+RRS was calculated post hoc for baseline and Week 16 of CHEST-1 and Week 12 of CHEST-2, based on 9 evaluable elements.
+Patients were grouped into risk strata by RRS.

@@ -1,0 +1,3 @@
+In our approach we store a 3component velocity vector at the barycenter of a cell and pressure values at each node.
+        where V denotes a matrix containing the V i as diagonal entries.
+The [ ] T [ ] matrix-matrix multiplication results in a square n × n matrix, which is symmetric and positive definite.

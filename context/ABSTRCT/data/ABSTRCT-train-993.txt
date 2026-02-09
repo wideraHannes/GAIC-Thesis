@@ -1,0 +1,2 @@
+The Medical Outcomes Trust Short-Form 36 Survey was used to measure quality of life before and after the intervention.
+Significance was set at alpha < or = 0.01.

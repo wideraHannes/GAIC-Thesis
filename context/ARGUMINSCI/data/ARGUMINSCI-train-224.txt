@@ -1,0 +1,2 @@
+One can assign each shape in PSD to a separate dimension, exactly as with SI.
+On the other hand, PSD allows one to sculpt intermediate expressions (half-smile) and situate them half-way along the relevant (full-smile) axis.

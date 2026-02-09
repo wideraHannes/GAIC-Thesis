@@ -1,0 +1,2 @@
+Method:                    The analysis used surveillance data extracted from the Kersa HDSS database for the duration of 2008 to 2014.
+Data on maternal deaths and live births during the seven year period were used to determine the maternal mortality ratio in the study.

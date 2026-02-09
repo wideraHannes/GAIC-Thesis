@@ -1,0 +1,2 @@
+The final multivariate model for response selected DFI (P=0.009), multiple sites of visceral disease (P=0.037) and dyspnoea (P=<0.001) using forward selection, but model instability was indicated by the inclusion of fatigue and emotional function in the final model when backward selection was used.
+In addition to known clinical factors, patient-assessed QL variables appear to be prognostic for survival and response to chemotherapy in women with advanced breast cancer.

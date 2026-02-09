@@ -1,0 +1,2 @@
+The difference in PFS between three and four cycles is -1.0% (80% confidence limit [CL], -3.8%, +1.8%).
+Equivalence for three versus four cycles is claimed because both the upper and lower bounds of the 80% CL are less than 5%.

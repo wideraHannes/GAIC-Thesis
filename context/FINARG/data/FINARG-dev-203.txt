@@ -1,0 +1,2 @@
+Satya Nadella: Thanks, Keith, for those questions, so let me start on the first one.
+You're absolutely right that one of the phenomena now is that pretty much anyone who is a customer of Azure is also in some form an ISV, and that's no longer just limited to people who are "in the classic tech industry" or the software business.

@@ -1,0 +1,7 @@
+The deformed vertex position at some skeletal configuration c, v c is computed as
+        
+          1
+          n v c = ∑ w i M i,c M i,d −1 v d i=1
+        
+        where w i are the weights (usually affine or convex), v d is the dresspose location of some vertex v, M i,c is the transformation matrix associated with the ith joint in configuration c and M i,d −1 is the inverse of the dress-pose matrix associated with the ith influence. (Taken together, M i,d −1 v d represents the location of v d in the local coordinate frame of the ith influence.) Note that a deformed vertex position in the dress pose configuration c = d is the same as the provided dress pose vertex ( v d = v d ) if the weights are affine.
+This skinning algorithm is notorious for its failings.

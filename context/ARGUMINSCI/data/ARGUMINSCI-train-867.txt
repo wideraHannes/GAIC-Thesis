@@ -1,0 +1,3 @@
+However, rather than applying boundary conditions as they describe, we adapt the embedded boundary methods of 
+Batty et al. [2010] to Voronoi meshes.
+Conveniently, the duality/orthogonality relationship between Voronoi and Delaunay meshes lets the accuracy benefits of the method carry over.

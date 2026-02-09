@@ -1,0 +1,4 @@
+We use the automated calibration technique in 
+[White and Forsyth 2005], but any standard calibration will work ([Zhang 2002] and [Bouguet 2005]
+ are good choices).
+In the pants sequences, we used seven lights totalling 1550 Watts to illuminate the scene.

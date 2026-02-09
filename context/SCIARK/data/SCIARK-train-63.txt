@@ -1,0 +1,2 @@
+A limited number of standard BRDFs (typically 5 in the red and near infrared) capture most of the variability of the directional reflectance measurements, supporting the idea that different land surfaces have similar directional signatures.
+Over vegetation targets, they are characterized by a strong increase toward backscattering and much smaller variations in forward directions.

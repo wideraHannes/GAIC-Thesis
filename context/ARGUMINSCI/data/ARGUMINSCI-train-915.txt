@@ -1,0 +1,7 @@
+Figure 5: The 2D version of our surface creation algorithm takes a pair of particles (top left) and computes their convex hull (bottom left).
+In 3D, we convert three nearby particles (top right) into a convex hull (bottom right) consisting of spherical (orange), conic (dark blue), and planar (light blue) segments.
+        
+      
+      
+        <H1>6 Implementation</H1>
+        At this point we have described all of the components of our simulator.

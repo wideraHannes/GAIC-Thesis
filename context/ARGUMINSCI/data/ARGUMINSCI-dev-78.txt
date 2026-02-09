@@ -1,0 +1,4 @@
+Examples of such artifacts might be fluid leaking through solid boundaries or poor performance in piston-like situations.
+Our implementation differs from 
+[Carlson et al., 2004]
+ in a couple of ways, but most significantly we enforce these conditions simultaneously within the mass conservation step.

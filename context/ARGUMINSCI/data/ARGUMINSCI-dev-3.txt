@@ -1,0 +1,2 @@
+In fact, artists sometimes do this by hand to help avoid wrist collapses.
+More generally, we observe that any deformation effect could be obtained by adding joints that deform appropriately to capture that deformation effect.

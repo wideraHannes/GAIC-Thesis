@@ -1,0 +1,2 @@
+Composable Controller for Physics-based Character Animation.
+PhD thesis, Univeristy of Toronto, DCS, Toronto,Canada, 2001.

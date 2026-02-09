@@ -1,0 +1,2 @@
+Among 667 women with a median follow-up of 7.9 years, 220 events occurred-108 with TAM-OCT and 112 with TAM.
+Adjusted hazard ratios (HRs; TAM-OCT to TAM) were 0.93 for EFS (95% CI, 0.71 to 1.22; P = .62), 0.84 for RFS (95% CI, 0.59 to 1.18; P = .31), and 0.97 for OS (95% CI, 0.69 to 1.37; P = .86).

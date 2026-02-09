@@ -1,0 +1,2 @@
+We introduce dynamic morph targets, i.e. predefined and possibly artist-authored physical descriptors of skin deformations and elastic material properties.
+Dynamic morph targets rely on three key contributions: • A pose-space method for interpolation of simple elastic deformation models that allows the artist to author complex nonlinear deformation behavior.

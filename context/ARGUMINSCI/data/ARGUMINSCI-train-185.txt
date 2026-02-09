@@ -1,0 +1,5 @@
+In order to avoid a singular matrix A, the number of poses should be greater or equal to the number of overall DOF (Degree Of Freedom) of the joint vector (each joint has 3 DOF), and the sample poses should be sufficiently different.
+James et al. used a similar approach to estimate vertex weights in each joint [JT05] and we demonstrate their efforts in our skinning method.
+      
+      
+        <H1>5.

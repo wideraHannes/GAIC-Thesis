@@ -1,0 +1,2 @@
+The construction of the reduction basis U will be discussed in Section 4.
+The reduced equations of motion Eqn. (4) can be solved using a reduced implicit Newmark Solver, employing the aforementioned internal forces and tangent stiffness matrices evaluated at each time step.

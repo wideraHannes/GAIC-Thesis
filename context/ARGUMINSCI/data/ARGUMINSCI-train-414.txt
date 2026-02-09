@@ -1,0 +1,2 @@
+The deformation of the triangle can be described by a general 4D homogeneous coordinate transformation.
+However, the rotational and translational parts of the transformation are irrelevant to the derivation of the algorithm.

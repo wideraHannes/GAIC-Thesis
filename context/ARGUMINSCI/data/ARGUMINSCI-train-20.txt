@@ -1,0 +1,2 @@
+For the bending measurement sequences (see Figure 4 ), we fix all cloth nodes above the edge of the table.
+The measured pulling forces of the cords are applied as point forces on the rigid bodies at known locations, with known magnitudes and orientations.

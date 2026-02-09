@@ -1,0 +1,2 @@
+For a long sequence of animation (e.g., Figure 5 ), we need to decompose the entire optimization into a number of spacetime windows, over which subproblems can be formulated and solved using efficient nonlinear optimization techniques.
+In the future, we plan to explore alternative techniques to address the local minimum problem.

@@ -1,0 +1,7 @@
+As will be detailed in Section 6, we precompute these terms and the vorticity basis coefficients of the result are stored in a set of matrices C k .
+After equating coefficients, the contribution of the self advection term can be written as N N
+        
+          7
+          ω  ̇ k = ω i ω j C k [i, j], i j
+        
+        summarized in matrix form as ω  ̇ k = w T C k w, where C k are precomputed matrices and w is the column vector of basis coefficients [ω 1 ω 2 . . .

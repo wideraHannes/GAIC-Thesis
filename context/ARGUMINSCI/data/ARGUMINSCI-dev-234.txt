@@ -1,0 +1,10 @@
+Then the interpolation of homogeneous matrices with respect to the center of rotation r c can be written as
+        
+          8
+          T q(W ; T −1 C j 1 T, . . . , T −1 C j n T )T −1
+        
+        Note that the shift of the center of rotation does not influence the interpolated rotation – it manifests only in the translation part.
+The desired transformation of vertex v is v = T q(W ; T −1 C j 1 T, . . . , T −1 C j n T )T −1 v
+        
+          9
+          n = Q(v − r c ) + ∑ w i C j i r c i=1

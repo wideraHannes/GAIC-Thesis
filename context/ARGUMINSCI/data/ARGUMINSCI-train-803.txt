@@ -1,0 +1,2 @@
+Real cloth has very little in-plane deformation as most of the deformations come from buckling.
+For the coarse mesh, setting high metric (in-plane deformation) stiffnesses will not work properly.

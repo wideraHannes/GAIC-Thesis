@@ -1,0 +1,2 @@
+In this example, the force densities are kept unchanged.
+The gradually changed forces on the control mesh are bound to the elbow rotation angle, which produce both the bulge effect and compensate for the volume loss that the traditional smooth skinning method suffers.

@@ -1,0 +1,2 @@
+A biogeochemical model DNDC successfully captured the magnitudes and patterns of N2O emissions observed at an urban turfgrass system at the Richland Creek Watershed in Nashville, TN.
+The model was then used to study the long-term (i.e. 75 years) impacts of lawn management practice (LMP) on soil organic carbon sequestration rate (dSOC), soil N2O emissions, and net Global Warming Potentials (net GWPs).

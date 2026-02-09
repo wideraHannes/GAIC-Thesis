@@ -1,0 +1,6 @@
+This problem can be negligible when the integration time step is very small, so we rarely have those pass-through cases.
+However since implicit integration methods [ 3 , 5 , 7 ] have been used times for as cloth large simulations, as to meet the the frame time step rate has of 30 become 1 sec/frame. 
+larger, Consesomequently this penetration problem is no longer negligible, so we use the swept volume approach 
+[ 13 , 8 ] which will be described in the next section.
+      
+        <H1>3 Collision Resolutions</H1>

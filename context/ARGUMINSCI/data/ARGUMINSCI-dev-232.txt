@@ -1,0 +1,3 @@
+For fluid faces, the pressure accelerates the velocity proportional to the gradient of the pressure while for prescribed faces, the pressure does not effect the fluid.
+For a more complete discussion of fluid/prescribed-velocity mass conservation see 
+[Fedkiw et al., 2001].

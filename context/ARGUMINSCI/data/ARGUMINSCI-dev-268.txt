@@ -1,0 +1,2 @@
+Replace a sequence by selecting two edges e i and e i+ j where 0 ≤ j ≤ n − i, deleting all the edges between them in the path and connecting the unconnected pieces of the path using one or two edges in the top level graph G (if possible).
+Since in the summarized graph, there are relatively fewer edges, we can quickly find edges that connect the two unconnected nodes by checking all the edges that go out from toMotion(e

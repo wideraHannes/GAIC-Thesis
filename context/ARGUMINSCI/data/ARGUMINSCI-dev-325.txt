@@ -1,0 +1,3 @@
+One difficulty with level-set methods is that they generally require very high-order conservation-law solvers, though fast semi-Lagrangian methods have been shown to work in some cases 
+[Strain 1999b; Enright et al. 2005].
+The most significant drawback to using level-set methods to track liquid surfaces is their tendency to lose volume in underresolved, high-curvature regions.

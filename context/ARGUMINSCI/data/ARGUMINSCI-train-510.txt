@@ -1,0 +1,3 @@
+The clips are produced, using rapid prototyping, with embedded codes 
+[Fia05] that allow us to determine their identity, position, and orientation automatically.
+The area of cloth occluded by the clips is used to automatically determine which cloth vertices are clamped by each clip and will therefore be constrained to it in the simulator.

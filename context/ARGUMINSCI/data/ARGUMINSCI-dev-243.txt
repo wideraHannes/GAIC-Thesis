@@ -1,0 +1,12 @@
+Right: the resulting simulation mesh.
+Obstacle faces are colored green.
+          822
+          Computer Graphics Proceedings, Annual Conference Series, 2006
+          
+            
+            Figure 3:
+          
+          from x, we instead formulate it as follows:
+          
+            5
+            μ(x) =

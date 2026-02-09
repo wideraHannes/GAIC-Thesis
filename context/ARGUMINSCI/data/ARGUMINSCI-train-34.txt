@@ -1,0 +1,4 @@
+We would like to find the best vertices and weights that minimize the least-squares difference between the skin and the examples at all the example skeleton configurations.
+That is
+        n 2 min ∑ v e i − v e i i=1
+        for all examples where v e i is the input vertex position from the ith example and v e i is the deformed vertex computed by the skinning model at the ith example configuration. n v e = ∑ w i M i,e M i,d −1 v d i=1

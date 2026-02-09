@@ -1,0 +1,2 @@
+In this paper, we present an automated method to build character skins that are fast to compute and compactly represented from a set of examples.
+This technique allows artists to use any skin authoring tools they like while producing characters that meet the performance demands and work with the computation models used in interactive systems.

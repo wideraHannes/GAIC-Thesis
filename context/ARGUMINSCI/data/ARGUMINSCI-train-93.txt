@@ -1,0 +1,2 @@
+This whole process is not only computationally expensive but also we have to consider the possibility that the resolution of a collision can create new multiple collisions, which we have to employ another strategy to resolve.
+In the desynchronized staggered collision method, we identify groups of collisions, and redefine the integration front-end by allowing time desynchronization.

@@ -1,0 +1,2 @@
+Also, the tetrahedral mesh is only temporarily used for the pressure solver, so no information is transferred from one time step to the next by storing it on the grid.
+Thus, we do not worry about re-sampling data when computing a new tetrahedral mesh.

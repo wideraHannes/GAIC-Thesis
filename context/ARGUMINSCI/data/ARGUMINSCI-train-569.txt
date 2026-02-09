@@ -1,0 +1,2 @@
+We measure strain before the collision reaction pass.
+For the strain limiting algorithms (both Jacobi and Gauss-Siedel), we iterate until strain is in the permissible range.

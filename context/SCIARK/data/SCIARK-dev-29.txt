@@ -1,0 +1,2 @@
+Logistic regression analyses showed that women who reported physical, psychological, and sexual violence, respectively, had 3.94 times, 10.50 times, and 2.21 times the odds of reporting thoughts of suicide, whereas the odds that women who reported physical, psychological, and sexual violence would report sleep disruption were 4.82 times higher, 4.44 times higher, and 2.50 times higher, respectively.
+However, only physical and psychological violence predicted the odds of FP.

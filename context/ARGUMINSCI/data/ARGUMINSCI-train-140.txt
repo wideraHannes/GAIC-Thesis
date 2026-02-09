@@ -1,0 +1,2 @@
+We call the resultant graph a collision graph.
+When the collision graph of an IZ has a loop, we call the collisions in the IZ cyclic.

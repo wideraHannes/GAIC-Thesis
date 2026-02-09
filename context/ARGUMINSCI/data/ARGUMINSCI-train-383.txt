@@ -1,0 +1,2 @@
+Explicit integration was used.
+Carignan et al. recognized the need for damping functions which do not penalize rigidbody motions of the cloth (as simple viscous damping does) and they added a force which damps cloth stretch and shear (but not bend).

@@ -1,0 +1,2 @@
+Contact-aware Nonlinear Control of Dynamic Characters.
+ACM Transactions on Graphics. 28(3): Article No. 81.

@@ -1,0 +1,3 @@
+Finally, we demonstrated that the inclusion of DNA methylation data improves COPD risk prediction over established clinical variables alone in two independent datasets.
+Implications of all the available evidence
+There is now accumulating evidence that DNA methylation in peripheral blood is associated with respiratory function and COPD.

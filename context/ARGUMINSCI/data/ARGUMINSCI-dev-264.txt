@@ -1,0 +1,2 @@
+Therefore, e 1 n should be estimated.
+Below we show that any estimation based on the old values (at n , 1 , n , 2 , : : : ) requires K 1 to be I for the best tracking performance.

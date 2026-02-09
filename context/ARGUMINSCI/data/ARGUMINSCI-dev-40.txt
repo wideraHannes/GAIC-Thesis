@@ -1,0 +1,2 @@
+Our simulators are automatically produced by SD/FAST from description files.
+They use Kane’s method for computing articulated dynamics and a fourth order explicit Runge-Kutta time integrator for numerically simulating the motions.

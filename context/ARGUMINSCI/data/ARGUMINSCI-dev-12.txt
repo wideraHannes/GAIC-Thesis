@@ -1,0 +1,10 @@
+When the collision graph of an IZ has a loop, we call the collisions in the IZ cyclic.
+When N bodies are colliding without having any cyclic collision, we can build a system of N , 1 linear equations based on the changes of relative velocities of each colliding pair, such as
+          
+            1
+            v i;j + = , C e v i;j ,
+          
+          and pair where CC after CC j collision, before i is the collision, i th and CC, C e v v is i;j i;j , + an is is elastic the the relative relative coefficient. velocity velocity of of the the same CC i In addition, the law of N-body momentum conservation says,
+          
+            2
+            m 1 v 1 + + m 2 v 2 + + + m N v N + = m 1 v 1 ,

@@ -1,0 +1,2 @@
+Exploratory analyses were performed on a data set from a previous study.
+Patients were randomly assigned to intervention (regular completion of European Organisation for Research and Treatment of Cancer Quality of Life Questionnaire-Core 30 and Hospital Anxiety and Depression Scale with feedback to oncologists), attention-control (completion of same questionnaires without feedback), and control (standard care) arms.

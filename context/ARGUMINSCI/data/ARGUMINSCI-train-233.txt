@@ -1,0 +1,2 @@
+Thus the challenging part of the work is to find the associated curve segment, and assign the weighting parameter for each curve segment—skin binding.
+There is a lot of work 16 associated with the traditional joint-based method, like the containment-binding algorithm, point-to-line mapping, Delaunay tetrahedralization.

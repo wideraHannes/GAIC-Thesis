@@ -1,0 +1,2 @@
+The orthogonality of the basis functions and their correspondence to a spectrum of vorticity scales enables energy control at varying turbulent scales.
+We have used this property to enforce stability of integrators and simulate physical viscosity.

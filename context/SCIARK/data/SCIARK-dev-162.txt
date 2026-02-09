@@ -1,0 +1,2 @@
+These papers make important contributions in terms of new methodology, techniques, commodity classes, econometrics and risk management tools.
+The first paper by Lyócsa and Molnár applies heterogeneous autoregressive (HAR) models to high-frequency data to predict the one-day forward volatilities of two strategically linked commodities, gold and silver.

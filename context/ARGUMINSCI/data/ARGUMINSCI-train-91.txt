@@ -1,0 +1,2 @@
+Cloth-cloth collision resolution is a special case of deformable N-body collision resolution.
+To solve deformable N-body collision resolutions, we propose a new collision resolution method which gives a visually reasonable response by ensuring the conservation of N-body momentums.

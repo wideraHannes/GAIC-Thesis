@@ -1,0 +1,20 @@
+The system of equations jp
+          
+            
+            
+            
+          
+          
+            
+          
+          #0 ( σ 0 ≈ 0.093) #1 ( σ 1 ≈
+          
+            Figure 5: Eigendisplacements and singular values, σ , for thumb carpal-metacarpal joint in left-right order of importance.
+XYZ components of displacement are represented using an RGB colour correspondence.
+          
+          is square, and invertible provided P j does not contain two observations with identical joint settings.
+        
+        
+          <H2>2.5 EigenSkin Vertex Programming</H2>
+          Modern vertex programming hardware (e.g., [Lindholm et al. 2001]
+) is ideally suited to performing the per-vertex weighted linear superposition of eigendisplacements (contained in the large brackets of Equation 2) performed prior to the SSD weighted transformation.

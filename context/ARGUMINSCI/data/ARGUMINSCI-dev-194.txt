@@ -1,0 +1,2 @@
+We deal with these discontinuities using a form of localized smoothing.
+At the top left, a discontinuous orientation signal, with its discontinuity shown at the top right.

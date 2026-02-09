@@ -1,0 +1,6 @@
+We chose to focus on generating human-like locomotion in a straight line and on flat ground.
+A natural extension is to investigate whether our control parameterization and effort term can be combined with the popular task-space controllers 
+[Coros et al. 2010; de Lasa et al. 2010; Wu and Popović 2010] and higher-level planning 
+[Coros et al. 2009; Mordatch et al. 2010] to create humanlike motions on uneven terrains 
+[Wu and Popović 2010] or obstacle courses 
+[Mordatch et al. 2010; Ye and Liu 2010]—scenarios that have only been addressed using purely joint-actuated characters.

@@ -1,0 +1,3 @@
+The dimensions of the generalized forces (u) were 8, 10, and 7 respectively.
+We adopted sparse approximation strategies for Gaussian process modeling 
+[Quinonero-Candela and Rasmussen 2005].

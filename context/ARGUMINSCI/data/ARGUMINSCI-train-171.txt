@@ -1,0 +1,2 @@
+These methods track the characteristics of the fluid flow with Lagrangian particles, which are then used to fix the level-set solution, essentially increasing the effective resolution of the method.
+Recently, these methods have been extended to work with octrees

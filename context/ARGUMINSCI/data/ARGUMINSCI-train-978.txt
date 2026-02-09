@@ -1,0 +1,6 @@
+A nice solution described in [ EBE 00 ], which makes sense when efficiency relies on the use of a constant Hessian matrix, is to perform the implicit resolution on a linear constant approximation, and to simulate the nonlinear and variable component, unlikely to cause stiffness problems, using an explicit method.
+      
+      
+        <H2>3.5.
+Real Case Simulation</H2>
+        In order to test the efficiency of our model in the context of garment animation, the algorithms have been integrated in a 3D design framework allowing the management of complex garment objects in interaction with animated virtual characters.

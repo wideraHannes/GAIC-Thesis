@@ -1,0 +1,2 @@
+Poisson regression was conducted to estimate the impact of each additional year of early marriage on the total number of births women have, controlling for selected sociodemographic characteristics.
+Counterfactual analyses were carried out to estimate the reduction in the number of children that women would have over their lifetime in the absence of child marriage.

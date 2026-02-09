@@ -1,0 +1,4 @@
+Journal of Computational Physics 114, 1 (1994), 146–159.
+          [Sta99] S TAM J.: Stable fluids.
+In SIGGRAPH (1999), ACM, pp. 121–128.
+          [TFK ∗ 03]

@@ -1,0 +1,5 @@
+We denote the balance conditions as  ́ Ë μ .
+A Ê  ́ target Õ Ø μ , which state Õ can Ø , or be in provided general a by target the region user. of the state space
+          Pre-conditions consist of unions of instances of the above conditions and are denoted
+          (1)
+          The determination of pre-conditions is crucial to the success of our composition framework and will be examined in detail in Section 4.

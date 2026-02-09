@@ -1,0 +1,4 @@
+For segmenting and animating simple 3D models of characters and inanimate objects, 
+Anderson et al. [2000] fit voxel-based volumetric templates to the data.
+Skinning Almost any system for mesh deformation (whether surface based [Lipman et al. 2005; Yu et al. 2004] or volume based [Zhou et al. 2005]
+) can be adapted for skeleton-based deformation.

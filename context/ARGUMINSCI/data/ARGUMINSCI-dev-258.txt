@@ -1,0 +1,4 @@
+Keyframe motion optimization by relaxing speed and
+          timing.
+In 6th Eurographics Workshop on Animation and Simulation.
+          from simple animations.

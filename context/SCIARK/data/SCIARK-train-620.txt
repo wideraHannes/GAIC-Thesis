@@ -1,0 +1,2 @@
+Economic and famine conditions were also significant for cohort B (2006).
+Multivariate Poisson regression was used with prevalence ratio as an element of comparison.

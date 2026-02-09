@@ -1,0 +1,2 @@
+Stegun.
+Handbook of Mathematical Functions, With Formulas, Graphs, and Mathematical Tables.

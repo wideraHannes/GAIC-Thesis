@@ -1,0 +1,4 @@
+Most of the work has been focused on human models, making use of human anatomy specifics, e.g. 
+[Moccozet et al. 2004].
+For segmenting and animating simple 3D models of characters and inanimate objects, 
+Anderson et al.

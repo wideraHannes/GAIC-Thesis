@@ -1,0 +1,3 @@
+The combination of i matrices Mi with their blending weight w i is given by: ∑ w i log( M i ) M SSD = ⊕ w i ⋅ M i = e i i In the remainder of this paper, we denote the function that returns the SDD matrix of the vertex P by SDD P (), SDD P () taking the joint angles of the skeleton as input.
+The SDD position of P is simply given by M SDD .X P,Dress , X P,Dress being the position of P at initial character pose (see 
+[15] for further details on SDD).

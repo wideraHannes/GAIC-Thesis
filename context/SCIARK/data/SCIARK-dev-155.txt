@@ -1,0 +1,2 @@
+The proposed framework is composed of four modules: (1) a database which collates the economic, operational, and environmental data; (2) elucidation of policy which devises the policy for the simulation model; (3) a preliminary analysis which makes predictions for consumption, supply, and prices; and (4) a simulation model.
+After the validity of the proposed framework is demonstrated, a series of planned Florida renewable energy policies are implemented into our framework as a case study.

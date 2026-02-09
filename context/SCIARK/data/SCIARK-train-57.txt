@@ -1,0 +1,2 @@
+For the purpose of predicting energy consumption owing to climate change, we used weather data that represents 2054.
+The equipment power density was the most important factor for electricity consumption and temperature was the most important one for chilled water consumption.

@@ -1,0 +1,2 @@
+It is remarkable that the results of SBS are better even though the models have been optimised to work with the LBS algorithm.
+The performance of both algorithms is compared in Table 2 .

@@ -1,0 +1,2 @@
+Using Mann-Whitney U tests, patients in music therapy group showed significantly lower numerical pain score at 60min (p=0.045) whereas there was no significant difference between the two groups at all time points for anxiety scores (p>0.05).
+In the intervention group, Friedman tests showed that there was a significant difference in numerical pain (χ2=36.957, df=4, p<0.001) and anxiety score across times (χ2=18.545, p=0.001).

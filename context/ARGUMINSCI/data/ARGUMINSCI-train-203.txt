@@ -1,0 +1,2 @@
+As the bending stiffness of the cloth is small, the buckled edge exerts small forces on the vertices.
+However, in the coarse mesh situation, the buckled edge is approximated by a straight line between the vertices.

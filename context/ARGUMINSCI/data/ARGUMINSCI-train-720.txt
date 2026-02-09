@@ -1,0 +1,2 @@
+The graph is constructed by packing spheres centered on the approximate medial surface into the character and by connecting sphere centers with graph edges.
+Pinocchio then finds the optimal embedding of the skeleton into this graph with respect to a discrete penalty function.

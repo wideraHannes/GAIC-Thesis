@@ -1,0 +1,3 @@
+Cani, M.-P., and Desbrun, M. 1997.
+Animation of deformable models using implicit
+          surfaces.

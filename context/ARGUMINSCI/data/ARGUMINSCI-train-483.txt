@@ -1,0 +1,2 @@
+Using the circular rendering option and a periodic simulation domain creates a seamless texture mapping with the appearance of blood emanating from the center of the bowl.
+The final composite shows the circular shape being repositioned in perspective, registered to the bowl.

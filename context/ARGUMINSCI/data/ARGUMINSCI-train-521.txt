@@ -1,0 +1,2 @@
+In contrast, since γ &lt; 0.5 everywhere inside small scale features, blurring will still result in γ being small.
+We then define ρ i = min(max(γ ρ

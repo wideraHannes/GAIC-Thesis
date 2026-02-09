@@ -1,0 +1,2 @@
+Since then, many methods have been proposed to further improve the accuracy of Eulerian surface tracking.
+Various approaches have been proposed to track the liquid domain more faithfully.

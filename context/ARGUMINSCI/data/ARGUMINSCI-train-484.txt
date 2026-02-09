@@ -1,0 +1,2 @@
+While the semi-Lagrangian procedure for backward advection does not change significantly when going from twoto three-dimensional problems, significant surface tracking issues arise when moving to three dimensions.
+This article discusses these issues, as well as the general method, and demonstrates how semi-Lagrangian surface contouring can be useful for animating the complex and interesting behavior of fluids.

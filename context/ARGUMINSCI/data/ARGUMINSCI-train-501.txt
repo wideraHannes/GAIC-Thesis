@@ -1,0 +1,2 @@
+To achieve this, we need markers that are both small in scale and highly discriminative.
+These two goals are in tension: small markers are less discriminative.

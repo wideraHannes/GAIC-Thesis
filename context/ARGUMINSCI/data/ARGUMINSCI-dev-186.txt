@@ -1,0 +1,46 @@
+The whole algorithm can be summarized in the following steps:
+        
+          Figure 5: 3D models used for testing
+        
+        
+          
+            
+              
+                
+                  
+                   Hand
+                   Woman
+                   Creature
+                
+              
+              
+                
+                   vertices
+                   2402
+                   3356
+                   6802
+                
+                
+                   triangles
+                   4800
+                   5205
+                   13590
+                
+                
+                   joints
+                   23
+                   78
+                   56
+                
+              
+            
+          
+          Hand Woman Creature vertices 2402 3356 6802 triangles 4800 5205 13590 joints 23 78 56
+          Table 1: Complexities of example models
+        
+        • compute matrices C i for all joints and convert their rotation parts to quaternions q i • for each vertex v influenced by joints j 1 , . . . , j n – compute (or re-use a cached) center of rotation r c according to section 4 – blend quaternions q j 1 , . . . q j n using QLERP and convert the result to matrix Q – compute the position of vertex v in the deformed skin using the equation (9)
+      
+      
+        <H1>5 Results and Comparison</H1>
+        We tested the SBS algorithm on three models, see Figure 5 and Table 1.
+We compare the shape of the deformed skin on the model of woman, because human eye is most sensitive to the deformations of human body.

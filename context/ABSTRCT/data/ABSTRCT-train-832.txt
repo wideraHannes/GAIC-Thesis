@@ -1,0 +1,2 @@
+Decision boundaries were to accept the null hypothesis of futility if the test statistic z < 0.39 (P ≥ .348) and reject the null hypothesis if z > 2.54 (P ≤ .0056).
+After interim analysis of 48 patients, the study was closed for futility.

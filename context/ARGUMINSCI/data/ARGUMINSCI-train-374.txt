@@ -1,0 +1,6 @@
+If overfitting is a problem, provisions such as those taken in [Wang and Phillips 2002] could also be used.
+However, in all the examples in this paper, no singular values were zeroed.
+      
+      
+        <H2>5.3 Handling Normals</H2>
+        It is not only important for the geometry in a skin approximation to be accurate, but also important for normals to be well approximated.

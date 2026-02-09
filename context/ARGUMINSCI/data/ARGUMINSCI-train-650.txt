@@ -1,0 +1,5 @@
+The weights w i may be chosen both to assign more importance to certain joints (e.g., those with constraints) and to taper off towards the end of the window.
+This optimization has a closed-form solution:
+        
+          2
+          θ = arctan ∑ ∑ i i w w i i (x (x i i z x i i − + x z i i z z

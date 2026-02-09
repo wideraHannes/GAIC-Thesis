@@ -1,0 +1,3 @@
+For instance, character deformations in our model are only driven by the skeleton’s joint parameters.
+Our method cannot capture deformations that are driven by abstract parameters such as “happiness” as in 
+[Lewis et al. 2000; Sloan et al. 2001].

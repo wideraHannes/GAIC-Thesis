@@ -1,0 +1,2 @@
+The basic idea is to reorder the forward tracing and the re-scaling steps to simplify the calculations.
+The resulting discrete conservative advection operator is not the same as the one computed with the original scheme.

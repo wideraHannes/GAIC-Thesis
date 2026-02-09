@@ -1,0 +1,4 @@
+A few examples of this approach are 
+[Terzopoulos et al., 1989], [Desbrun and Cani, 1996], [Cani and Desbrun, 1997], [Stora et al., 1999], [Müller et al., 2003], [Premo ze et al., 2003], and 
+[Müller et al., 2004].
+These meshless methods are particularly well suited to changing domains because points can move freely without concerns about mesh quality.

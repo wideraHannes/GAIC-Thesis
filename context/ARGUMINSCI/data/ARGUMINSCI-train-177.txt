@@ -1,0 +1,2 @@
+We ultimately represent our surface as the union of all such local convex hull shapes, and the minimum signed distance from these shapes to a point in space defines the outer part of our level set function.
+In practice, we compute the local convex hull by finding the two outermost planes tangent to a set of three spheres.

@@ -1,0 +1,3 @@
+ACM SIGGRAPH, 1993.
+          [14] Jos Stam and Eugene Fiume.
+Depicting Fire and Other Gaseous Phenomena Using Diffusion Processes.

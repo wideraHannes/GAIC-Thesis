@@ -1,0 +1,2 @@
+The evaluation approach is applied for a systematic intercomparison of 71 CTCs (objective and manual, from COST Action 733) with respect to their ability to resolve daily precipitation in the Alpine region.
+For essentially all CTCs, the Brier skill score is found to be higher for weak and moderate compared to intense precipitation, for winter compared to summer, and over the north and west of the Alps compared to the south and east.

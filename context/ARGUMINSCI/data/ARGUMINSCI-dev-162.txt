@@ -1,0 +1,7 @@
+Define x x; a horizonz; 0 = x=L z x; x and z; 0 a vertical = z=L z texture .
+If both map of variable, these variables z , with obey initial equation condition 11, texture then at map a later coordinates time, t , at x time x; z;t t =0 and for z the x; parcel z;t will at location contain x; the z at time t , that is, they tell where the parcel of fluid “came from.” When implementing periodic boundary conditions, it is more desirable to keep track of displacement offsets from x and z because Defining of the discontinuity p x = x , of x=L x and x and z p as z = you z cross , z=L periodic z , we arrive boundaries. at the following equations
+            (12) (13)
+          
+        
+        
+          <H2>3.3 Solution Method</H2>

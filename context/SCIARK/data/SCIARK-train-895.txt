@@ -1,0 +1,2 @@
+Causal interactions between trade openness, renewable electricity consumption, and economic growth in Asia-Pacific countries: Fresh evidence from a bootstrap ARDL approach
+This paper applies a new bootstrap Autoregressive Distributed Lag (ADL) approach to examine the nexus between trade openness, renewable electricity consumption, and economic growth for seven countries in the Asia-Pacific region during 1980–2017 period.

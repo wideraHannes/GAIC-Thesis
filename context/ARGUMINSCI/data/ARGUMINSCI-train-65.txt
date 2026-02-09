@@ -1,0 +1,2 @@
+In addition, we will demonstrate how the curve skeleton technique can drive muscle-based systems to achieve realistic muscle deformation during animation.
+Using our technique, the animator is able to work without digressing from the familiarity of the current joint-based system, but at the same time achieves maximum visual realism in terms of skin deformation.

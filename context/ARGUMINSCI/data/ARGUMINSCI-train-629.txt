@@ -1,0 +1,3 @@
+In this context, our algorithm could be viewed as an extension of speech recognition methods that use connected word models 
+[ RJ93 ].
+Arikan et al.

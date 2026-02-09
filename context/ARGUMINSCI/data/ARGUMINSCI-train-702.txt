@@ -1,0 +1,2 @@
+P.: Physically based motion transformation.
+In Computer Graphics (SIGGRAPH 99 Proceedings) (Aug. 1999), pp. 11–20.

@@ -1,0 +1,2 @@
+To generate the motion, we applied the resulting sequence specification to the source motion and used basic smoothing.
+All timings were performed on a workstation with dual 2.4 Ghz Intel Xeon processors.

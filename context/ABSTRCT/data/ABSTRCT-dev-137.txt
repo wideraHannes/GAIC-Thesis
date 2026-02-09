@@ -1,0 +1,2 @@
+Cox regression analysis suggests an improvement in survival for patients treated with SIR-Spheres who survive more than 15 months (P = 0.06).
+There was no increase in grade 3-4 treatment related toxicity and no loss of quality of life for patients receiving SIR-Spheres in comparison to patients receiving HAC alone.

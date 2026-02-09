@@ -1,0 +1,3 @@
+The output of step 3 is a list, containing all fluid particles within interaction range h of a triangle t.
+To speed up the search for these particles we use a regular grid with spatial hashing 
+[ 27 ].

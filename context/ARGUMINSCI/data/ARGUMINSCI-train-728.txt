@@ -1,0 +1,2 @@
+We begin with a character rigged in an animation package such as Maya.
+We then sample this character’s skin deformations by exporting the character’s geometry in several poses.

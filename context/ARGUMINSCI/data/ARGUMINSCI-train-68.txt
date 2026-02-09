@@ -1,0 +1,2 @@
+Published control methods for 3D walking, running, and stair climbing make obvious candidates for integration into our system.
+Coping with variable terrain and dynamic environments are dimensions of added complexity that should provide work for years to come.

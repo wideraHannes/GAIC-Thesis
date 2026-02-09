@@ -1,0 +1,3 @@
+Alternatively, de novo controller optimization has been used to capture features of human walking 
+[Wang et al. 2009; Wang et al. 2010].
+While these methods were shown to produce gaits for a variety of characters and environmental conditions, they do not employ realistic effort measures or biologicallyplausible control torques.

@@ -1,0 +1,3 @@
+Real-time interpolation</H2>
+        In order to demonstrate real-time motion interpolation we modified a motion with two consecutive leaps.
+We let the user control the landing and take-off positions along an evenly spaced grid to generate a set of parameterized motions.

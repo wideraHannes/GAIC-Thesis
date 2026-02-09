@@ -1,0 +1,2 @@
+In Proceedings of the 26th annual conference on Computer graphics and interactive techniques, pages 121–128.
+ACM Press/Addison-Wesley Publishing Co., 1999.

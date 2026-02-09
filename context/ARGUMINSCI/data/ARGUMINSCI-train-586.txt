@@ -1,0 +1,2 @@
+We capture the rest state of cloth by assigning each particle an unchanging coordinate (u i , v i ) in the plane. 3 Section 4 makes use of these planar coordinates.
+Collisions between cloth and solid objects are handled by preventing cloth particles from interpenetrating solid objects.

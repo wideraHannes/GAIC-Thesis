@@ -1,0 +1,2 @@
+Change in global perfusion did not differ between treatment groups: the mean (SD) change was -0.5 (9.4) mL/min/100 g in the standard group vs 0.7 (8.6) mL/min/100 g in the intensive group (partial η2, 0.004; 95% CI, -3.551 to 5.818; P = .63).
+No differences were observed when the analysis examined gray or white matter only or was confined to those achieving target BP.

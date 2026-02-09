@@ -1,0 +1,2 @@
+Our goal is to incorporate examplebased skinning into a system having a variety of other skinning and deformation operations, and to be able to invert these operations regardless of their nature.
+Since SSD is the most representative in the family of basic skinning, we will discuss how it performs in the inverse operation of PSD scheme.

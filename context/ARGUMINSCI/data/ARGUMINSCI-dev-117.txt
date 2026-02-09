@@ -1,0 +1,2 @@
+For example, the peg running motion appears very athletic because it would require high torques at the knee and hip joints.
+When physical parameters at certain joints are identified as important, our method can be extended to provide and differentiate these parameters for any K joints with running times of O(KD), reaching the expected bound of O(D 2 ) when all joint torques are required.

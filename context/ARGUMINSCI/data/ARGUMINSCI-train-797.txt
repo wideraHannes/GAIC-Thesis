@@ -1,0 +1,2 @@
+These simulations used no more than 320K tetrahedra each, whereas recent tetrahedra-based free surface methods used up to 4 times more tetrahedra to achieve a similar level of detail.
+Figure 13: Thin Sheet.

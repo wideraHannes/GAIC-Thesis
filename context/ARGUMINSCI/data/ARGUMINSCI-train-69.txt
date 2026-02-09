@@ -1,0 +1,2 @@
+As before, the first part of the controller makes sure that the character assumes a position suitable for performing the kip.
+The larger part of the motion is ballistic, which focuses the control mainly at the kick off and landing phases.

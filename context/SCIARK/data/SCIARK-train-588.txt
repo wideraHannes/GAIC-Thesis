@@ -1,0 +1,2 @@
+Decisions about conservation and management of biodiversity based on hotspots and conservation gaps of endemic seed plant species diversity in China are essential.
+In this paper, based on a species distribution data set with 12,824 Chinese endemic plants, we measured Chinese endemic seed plant diversity using five indices: endemic species richness (ER), weighted endemism (WE), phylogenetic diversity (PD), phylogenetic endemism (PE), and biogeographically weighted evolutionary distinctiveness (BED).

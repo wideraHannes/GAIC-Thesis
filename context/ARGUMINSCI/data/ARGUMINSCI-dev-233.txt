@@ -1,0 +1,2 @@
+For this case, we present a much simpler model based on tracing wind particles that move along a global force field.
+During the simulation, the wind field is evaluated for each wind particle at its current position.

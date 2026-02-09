@@ -1,0 +1,2 @@
+A GIS-based model to assess electric energy consumptions and usable renewable energy potential in Lazio region at municipality scale
+The ongoing energy transition processes need a rapprochement between the places of energy production and consumption with the aim of creating innovative and integrated territorial models.

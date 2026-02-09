@@ -1,0 +1,8 @@
+Thanks to Marlène Arévalo and Christiane Luible for their design work to the garment models illustrating this paper.
+      
+      
+        <H1>10.
+References</H1>
+        
+          
+		  [1] Alexa, M., "Linear Combination of Transformations", SIGGRAPH 2002 Conference Proceedings, Annual Conference Series, ACM Press, Vol. 21(3), pp. 380-387, 2002. - [2] Baraff D., Witkin, A., "Large steps in cloth simulation", ACM Transactions on Graphics, Proceedings of ACM SIGGRAPH, ACM Press, pp.

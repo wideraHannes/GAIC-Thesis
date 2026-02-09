@@ -1,0 +1,3 @@
+For both the semi-Lagrangian step and to advect smoke particles for rendering, a full velocity vector must be found at arbitrary positions in the mesh.
+We interpolate velocity vectors from face normal velocities using the two-step method developed in 
+[Elcott et al., 2005].

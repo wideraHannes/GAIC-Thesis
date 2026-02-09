@@ -1,0 +1,6 @@
+In either case, the user may wish to adjust the transition thresholds (Section 3.2) to give the graph greater connectivity.
+      
+      
+        <H1>4 Extracting Motion</H1>
+        By this stage we have finished constructing the motion graph.
+After describing exactly how a graph walk can be converted into displayable motion, we will consider the general problem of extracting motion that satisfies user constraints.

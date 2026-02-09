@@ -1,0 +1,2 @@
+Here we clarify the conceptual basis for how erosion can constitute a C sink.
+Specifically, the criterion for an erosional C sink is that dynamic replacement of eroded C, and reduced decomposition rates in depositional sites, must together more than compensate for erosional losses.

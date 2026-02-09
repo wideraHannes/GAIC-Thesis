@@ -1,0 +1,2 @@
+What one will receive is a motion like in Figure 5 , where the initial clip is a walking motion and the final clip is a kick.
+The character turns around in place several times in an attempt to better line up with the target clip.

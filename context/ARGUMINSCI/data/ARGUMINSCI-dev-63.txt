@@ -1,0 +1,2 @@
+Statistical models are desirable for human motion representation because they can model any human movement as long as relevant motion data are available.
+A fundamental limitation is that they do not consider the dynamics that cause the motion.

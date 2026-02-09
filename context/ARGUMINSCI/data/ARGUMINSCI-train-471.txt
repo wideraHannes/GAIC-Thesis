@@ -1,0 +1,4 @@
+For rigid N-body collisions by graphics and robotics groups 
+[ 11 , 1 , 10 , 9 ] and for flexible-rigid collision resolution 
+[ 2 ], several approaches have been suggested.
+But they are not directly applicable for deformable N-body collision resolutions, which is the case cloth requires.

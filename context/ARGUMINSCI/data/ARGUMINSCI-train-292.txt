@@ -1,0 +1,2 @@
+For example consider that there is no relative rotation between C k and C l , but there is a relative translation induced by the joints in the chain between k and l.
+Clearly no choice of the center of rotation can avoid this translation, because the rotation is identity.

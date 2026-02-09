@@ -1,0 +1,4 @@
+B Entropy Comparison
+        For more reading on information theory, consult 
+[Cover and Thomas 1991].
+Our analysis is based on the information entropy definition: H(X) = − ∑ n i=1 p(x i ) · log 2 x i .

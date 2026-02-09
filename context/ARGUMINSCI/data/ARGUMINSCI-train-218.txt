@@ -1,0 +1,7 @@
+A fluid’s motion is a curve through the Euclidean space of basis coefficients, shown for N = 3 as an illustrative example.
+From the NavierStokes equations, we derive an expression for the tangent vector w  ̇ as a function of the current state vector.
+          
+        
+      
+      
+        <H1>4.

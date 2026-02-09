@@ -1,0 +1,2 @@
+Not all of it, some of the stuff is longer term.
+For example, the work that we're doing on full end-to-end encryption, that's just -- that's a long-term project.

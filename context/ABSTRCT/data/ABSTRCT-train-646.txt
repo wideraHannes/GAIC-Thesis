@@ -1,0 +1,2 @@
+Compared with each single drug, the combination treatment did not improve survival.
+The hazard ratio of death for patients receiving the combination treatment was 1.17 (95% confidence interval

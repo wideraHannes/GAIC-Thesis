@@ -1,0 +1,2 @@
+The suicide mortality trends from 1985 to 2006 for Japanese aged between 15 and 79 years were analyzed by a Bayesian age-period-cohort analysis to evaluate the independent effects of age, period, and birth cohort.
+Age-specific effect showed an overall increase with age in both genders, but a distinct increase was noted only among men aged between 50 and 64 years.

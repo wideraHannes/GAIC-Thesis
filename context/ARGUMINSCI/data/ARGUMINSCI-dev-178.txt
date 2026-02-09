@@ -1,0 +1,2 @@
+To compute the weight of an edge, we use the difference between joint positions and velocities and the difference between the torso velocities and accelerations in the torso coordinate frame.
+Let P(s i ) be a 3 × n matrix of positions of n joints for s i in torso coordinate frame.

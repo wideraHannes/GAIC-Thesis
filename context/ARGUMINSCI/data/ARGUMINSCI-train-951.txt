@@ -1,0 +1,2 @@
+In the figure, solid and hollow dots represent edge endpoints at the start and end of the timestep, as the particles would evolve if no constraints were applied.
+If the constraint direction, −∇C(x) T , is evaluated at the beginning of the timestep, x n , as in SHAKE, then no scaling, λ , of the constraint direction yields a satisfied end-of-timestep constraint,

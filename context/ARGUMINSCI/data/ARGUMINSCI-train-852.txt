@@ -1,0 +1,2 @@
+By detecting collisions between the wind particles and objects in the scene, we are able to simulate the important effect of lee even with this straightforward method.
+Of course, both approaches have different characteristics and aim at different applications for wind simulation.

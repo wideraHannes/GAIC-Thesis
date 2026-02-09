@@ -1,0 +1,9 @@
+We then show how this framework can be applied to the specific problem of generating different styles of locomotion along arbitrary paths.</Abstract>
+	CR Categories:  I.3.7 [Computer Graphics]: Three-Dimensional Graphics and Realism Keywords: motion synthesis, motion capture, animation with constraints
+    
+    
+      
+        <H1>1 Introduction</H1>
+      
+      Realistic human motion is an important part of media like video games and movies.
+More lifelike characters make for more immersive environments and more believable special effects.

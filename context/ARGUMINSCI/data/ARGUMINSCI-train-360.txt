@@ -1,0 +1,2 @@
+The character must be given in approximately the same orientation and pose as the skeleton.
+Lastly, the character must be proportioned roughly like the given skeleton.

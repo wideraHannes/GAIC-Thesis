@@ -1,0 +1,6 @@
+Artists choose rendering parameters later, e.g. to alter final timing or to animate contour levels that make the smoke slowly dissipate.
+At render time, a library of potentially useful simulations is already built up, and rendering involves little more than appropriate resampling (see section 4.4).
+        
+        
+          <H2>4.2 Setting Up and Running Simulations</H2>
+          Although the code is capable of handling more general situations, such as analytically defined forcing functions, gravitational fields, and diffusion coefficients, only a subset of the functionality is available via the user interface.

@@ -1,0 +1,11 @@
+These methods are a generalization of the staggered grid scheme originally proposed by 
+[Harlow and Welch, 1965].
+This staggered method is used to discretize the inviscid Euler equations:
+          
+            1
+            ∂u p f = − (u · ) u − + ∂t ρ ρ
+          
+          subject to the mass conservation constraint for incompress-
+          
+            2
+            ible fluids: · u =0 .

@@ -1,0 +1,2 @@
+Gathering such a datataset is not only laborious, but it also requires that the captured family of motions is similar in all other respects (e.g. other landing points, initial and final state, overall style) — an aspect that is quite hard to reproduce by real actors.
+In fact, the process of generating such parameterized motions is the most challenging aspect of data acquisition for video game production [Buc].

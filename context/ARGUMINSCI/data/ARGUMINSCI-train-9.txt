@@ -1,0 +1,2 @@
+Fortunately, this number is surprisingly small in practice, because the joint influences tend to be local (e.g. it is unlikely to find vertices influenced by both left and right wrist).
+The additional memory needed for SBS is dominated by caching the computed centers of rotation.

@@ -1,0 +1,2 @@
+Inner Loop.
+Once the parameter values k(i + 1) are refined, we bring the cloth to a static equilibrium position, x n (i + 1).

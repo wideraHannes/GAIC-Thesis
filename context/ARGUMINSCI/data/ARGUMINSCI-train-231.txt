@@ -1,0 +1,2 @@
+Our dynamic morph targets add dynamic behavior to non-linear deformations such that external and inertial forces can be applied, as shown in Fig. 2 .
+The method by Capell et al. [2005] also enables deformations under influence of external forces, corresponding to the behavior in Fig.

@@ -1,0 +1,2 @@
+Therefore, by solving above equation we have: ω 1x = φ 11 −1 d 1x + φ 12 −1 d 2x = φ 12 −1 d 2x ω 2x = φ 21 −1 d 1x + φ 22 −1 d 2x = φ 22 −1 d 2x = d 2x ω 1y = φ 11 −1 d 1y + φ 12 −1 d 2y = φ 12 −1 d 2y ω 2y = φ 21 −1 d 1y + φ 22 −1 d 2y = φ 22 −1 d 2y = d 2y where φ i −1 j is the (i, j)th element of Φ −1 , and if i = j, φ i −1 j = 1.
+Then in an intermediate pose x for α p , we have tan α p = d d x y .

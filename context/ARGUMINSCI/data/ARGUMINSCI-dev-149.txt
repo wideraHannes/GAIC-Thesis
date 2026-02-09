@@ -1,0 +1,6 @@
+Because the fluid simulations do not make use of an explicit reference configuration, strain is computed by integrating strain-rate and advecting the results.
+The transition from elastic resistance to viscous flow is controlled by von Mises’s yield condition, and subsequent behavior is then governed by a quasi-linear plasticity model.
+      
+        <H1>2 Fluids, Solids, and the In-between</H1>
+      
+      While the mechanics describing the behaviors exhibited by solids and fluids may seem distinct, they are actually quite similar.

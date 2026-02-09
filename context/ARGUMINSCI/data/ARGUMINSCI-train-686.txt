@@ -1,0 +1,4 @@
+The force generating capacity of a muscle is dependent on the length of muscle fibers (force-length relationship) and the velocity of muscle fibers (force-velocity relationship).
+The force-length curve shows that muscles can generate force more efficiently near l opt , and the force-velocity curve shows that muscles lose ability to generate force as the magnitude of contraction velocity increases.
+          
+          τ hip = τ GLU + τ HAM hip − τ HFL − τ RF hip , τ knee = τ RF knee + τ VAS − τ HAM knee − τ GAS knee , τ ankle = τ GAS knee + τ SOL − τ TA .

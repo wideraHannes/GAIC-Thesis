@@ -1,0 +1,2 @@
+From the payments side, WhatsApp Payments will be a part of Facebook Pay.
+I mean we announced this program last year that basically we'll make it so if you pay for something in any of our apps, you only need to enter your credit card once, and then you can use that to have a more frictionless checkout experience across the other apps.

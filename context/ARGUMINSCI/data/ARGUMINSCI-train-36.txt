@@ -1,0 +1,2 @@
+As shown in figure 5 , occluding contours are both common and difficult to detect.
+In contrast, our iterative approach relies on strain constraints – which require computing the distance between a point and a line, and color detection – which requires averaging color within a marker.

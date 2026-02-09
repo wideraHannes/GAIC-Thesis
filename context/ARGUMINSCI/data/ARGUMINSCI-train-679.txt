@@ -1,0 +1,2 @@
+I ∗ 0 and p ∗ 0 are the aggregate inertia and momentum of the entire body, and p ∗ 0 is equal to p 0 computed from the previous NewtonEuler recursive equations.
+However, p ∗ i is in general not equal to p i where i = 0 and should only be used as an intermediary quantity in computing the aggregates.

@@ -1,0 +1,2 @@
+Skinning mesh animations.
+ACM Trans.

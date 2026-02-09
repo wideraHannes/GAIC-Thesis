@@ -1,0 +1,2 @@
+Given the end effector velocity, we can get joint angle velocity by inverting the Jacobian.
+However, most articulated figures have kinematic redundancy and thus the inverse of Jacobian is not unique. (more specifically, m n ) Therefore there are an infinite number of possible solutions that satisfy Equation 3.

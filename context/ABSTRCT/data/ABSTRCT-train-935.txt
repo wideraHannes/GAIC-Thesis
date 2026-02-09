@@ -1,0 +1,2 @@
+Relative hazards of death and 95% confidence intervals (CIs) were estimated by the Cox model.
+Investigators, blinded to the results, stopped the trial early because of a low enrollment rate. (From April 1996 to November 1997, 191 of the 350 targeted patients were randomly assigned.)

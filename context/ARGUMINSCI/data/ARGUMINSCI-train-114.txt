@@ -1,0 +1,2 @@
+A comparison to the stable fluids algorithm is included as a rough qualitative validation.
+We demonstrate flow on some simple tetrahedral meshes; however we chose a structured voxelized grid for the bunny example only to facilitate implementation.

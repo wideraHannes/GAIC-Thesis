@@ -1,0 +1,2 @@
+To avoid this issue, we choose to perform the optimization in the original configuration space while imposing “soft” subspace constraints on both kinematic states and generalized forces.
+Let B u and B s denote the subspace matrices for generalized forces u and kinematic states s =

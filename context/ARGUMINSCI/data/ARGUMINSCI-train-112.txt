@@ -1,0 +1,6 @@
+Integrating the methods presented here with this data structure is a promising area for future work.
+        
+        
+          <H2>2.3 Contouring</H2>
+          As our title suggests, we formulate surface tracking as a contouring problem.
+The contouring problem has been well studied in computer graphics and a number of approaches have been suggested.

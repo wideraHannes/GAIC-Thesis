@@ -1,0 +1,2 @@
+As mentioned in Section 3.2, we are looking for a way to interpolate internal elastic forces R i .
+Obviously, as the character moves from one pose to the other, the internal forces change continuously but highly non-linearly.

@@ -1,0 +1,2 @@
+To deal with the fact that ψ n+1 is not a distance function and that the value at the cell’s center may not be the minimum over the cell, we multiply the edge length by some constant before doing the comparison.
+We have found that 1/3 works well in practice—always dividing near the surface, without spuriously dividing too many cells.

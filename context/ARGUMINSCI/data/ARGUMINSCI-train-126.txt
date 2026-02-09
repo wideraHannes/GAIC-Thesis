@@ -1,0 +1,2 @@
+We have the corresponding energy term E prior dynamic = − ln T t=m+1 p(x t |x t−1:t−m , u t ) ∼ −α T t=m+1 x t − i=1 m A i x t−i − Bu t 2 (12) where α is a tuning parameter.
+Conceptually, the dynamic prior can be thought as dimensionality reduction of the motion in a spatialtemporal domain.

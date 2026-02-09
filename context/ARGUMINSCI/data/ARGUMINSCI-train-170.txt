@@ -1,0 +1,2 @@
+In this paper we have presented a technique, known as the curve skeleton based skinning, by considering it as a proper non-linear problem.
+The main advantage of this technique is its consistency with the current animation production practice and the ability to overcome the undesirable drawbacks of skeleton-driven skinning.

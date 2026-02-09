@@ -1,0 +1,2 @@
+The latest climate models all predict warming of high-latitude soils and thus thawing of permafrost under future climate change, but with widely varying magnitudes of permafrost thaw.
+Here we show that in each of the models, their present-day spatial distribution of permafrost and air temperature can be used to infer the sensitivity of permafrost to future global warming.

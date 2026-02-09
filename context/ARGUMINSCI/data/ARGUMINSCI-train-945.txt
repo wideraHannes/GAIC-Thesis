@@ -1,0 +1,9 @@
+Joint weights for each vertex are automatically calculated from sample poses, thereby reducing manual effort and enhancing the quality of WPSD as well as SSD (Skeletal Subspace Deformation).
+We show sufficient speed-up of SSD, PSD (Pose Space Deformation) and WPSD to make them suitable for real-time applications.</Abstract>
+    Categories and Subject Descriptors (according to ACM CCS): I.3.1 [Computer Graphics]: Hardware ArchitectureParallel processing, I.3.5 [Computer Graphics]: Computational Geometry and Object Modeling-Curve, surface, solid and object modeling, I.3.7 [Computer Graphics]: Three-Dimensional Graphics and Realism-Animation.
+      
+        
+          c The Eurographics Association
+        
+        
+          Blackwell Publishing 2006.

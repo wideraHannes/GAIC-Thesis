@@ -1,0 +1,2 @@
+Median PFS was longest for epidermal growth factor receptor gene (EGFR)-mutated patients in the E group, followed by EGFR-mutated patients in V, EGFR wild type in E, and EGFR wild type in V (p = 0.0034).
+Overall survival was longer for EGFR-mutated patients than for EGFR wild-type patients (p < 0.0001).

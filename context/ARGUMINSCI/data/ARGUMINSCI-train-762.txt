@@ -1,0 +1,6 @@
+Approaches to explicit interaction modeling have included layered architectures 
+[BG95], procedural descriptions 
+[PG96], and even cognitive models 
+[FTT99].
+In this context, our work might be viewed as a competency module that enhances the skills of characters to enable their participation in complex interactive performances.
+        c The Eurographics Association 2004.

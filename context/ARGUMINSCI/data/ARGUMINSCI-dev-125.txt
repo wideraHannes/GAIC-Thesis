@@ -1,0 +1,2 @@
+We keep the constraints constant and use a cubic spline to represent the motion.
+The results of this comparison are shown in the video.

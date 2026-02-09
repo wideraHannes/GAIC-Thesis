@@ -1,0 +1,6 @@
+Our approach is different in that we focus on modeling the relationship between kinematic data and generalized forces rather than kinematic motion data itself.
+      
+      
+        <H1>3 Overview</H1>
+        We construct a physically valid statistical model that leverages both physical constraints and statistical motion priors and utilize it to generate physically realistic human motion that achieves the goals specified by the user.
+Physics-based dynamics modeling.

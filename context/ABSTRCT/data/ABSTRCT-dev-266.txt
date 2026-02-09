@@ -1,0 +1,2 @@
+We conducted a hospital-based case-control study including 417 ENKTL cases and 488 age- and sex-matched subjects with nonmalignant diseases unrelated to HBV infection.
+Multivariable unconditional logistic regression analyses were performed to estimate adjusted odds ratios [AOR] and their corresponding 95% confidence intervals (CI).

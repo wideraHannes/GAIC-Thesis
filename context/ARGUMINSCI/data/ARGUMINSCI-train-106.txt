@@ -1,0 +1,2 @@
+We evaluate the level set on each of the vertices of our adaptive BCC mesh, and we extract a triangle mesh using a marching tetrahedra algorithm.
+We then perform a light mesh smoothing to increase the reliability of any curvature computations.

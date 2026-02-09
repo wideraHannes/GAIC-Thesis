@@ -1,0 +1,3 @@
+Motion families</H3>
+        We provide a user interface for the three most useful types of motion families(see Figure 3 ).
+The first type varies the translation of a ground stage along a line, the second type varies the translation of the ground stage along a 2 dimensional grid, and the third type varies both the translation and orientation of the ground stage along a semi-circle such that the orientation of the character is consistently aligned along the normal vector of the arc.

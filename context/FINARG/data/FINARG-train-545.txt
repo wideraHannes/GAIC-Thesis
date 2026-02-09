@@ -1,0 +1,2 @@
+I think what you're asking is specifically for a transactional component when the old transactional component has gone.
+But it's a very hard – but that's a component of the number, not the total.

@@ -1,0 +1,3 @@
+In Proc. of VRIPHYS (2008), pp. 1–10. 2
+          [PKST08] P ABST S., K RZYWINSKI S., S CHENK A., T HOMASZEWSKI B.: Seams and bending in cloth simulation.
+In Proc. of VRIPHYS (2008).

@@ -1,0 +1,2 @@
+This study examines the sensitivity of vegetation model simulations to: (i) the selection of input climatologies representing different time periods and their associated atmospheric CO2 concentrations, (ii) the choice of observed vegetation data for evaluating the model results, and (iii) the methods used to compare simulated and observed vegetation.
+We use vegetation simulated for Asia by the equilibrium vegetation model BIOME4 as a typical example of vegetation model output.

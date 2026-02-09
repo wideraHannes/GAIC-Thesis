@@ -1,0 +1,7 @@
+Although the e k is unknown, we can solve for weights that minimize the e k in a least squares sense by stacking the equations 10 (with e k omitted) into a linear matrix system
+        
+          11
+          2 v − Aw
+        
+        where w is a n joint -dimensional weight vector, v is a 3n pose dimensional vector containing the vertex v  ̃ i from every sample, and A is a 3n pose ×n joint matrix . &gt;From equation 11, we can calculate w from the given value of v and A to reduce the error of this equation.
+We use the non-negative least square (NNLS) method to solve this problem and it determines positive weight values minimizing error in equation 10.

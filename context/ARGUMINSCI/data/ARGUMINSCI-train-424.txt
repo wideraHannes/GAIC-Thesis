@@ -1,0 +1,2 @@
+Sizing Functions We define the level of detail in our simulations with a spatially varying sizing function S(x).
+We have experimented with several different sizing functions depending on factors such as distance to a camera, distance to the liquid surface, curvature of the liquid surface, measures of fluid turbulence, and arbitrary analytical number fields.

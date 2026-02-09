@@ -1,0 +1,2 @@
+Population:                    Number of deliveries, births, admissions, maternal deaths and causes of maternal mortality in the only hospital in the area.
+Methods:                    We compiled a database from the annual hospital reports for the period of 1962-2011 to obtain estimated maternal mortality ratio for each decade.

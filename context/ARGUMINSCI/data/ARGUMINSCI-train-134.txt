@@ -1,0 +1,2 @@
+And now we take a look at a real cylinder model with one vertex sculpted in the second pose, shown in the Figure 4 .
+Forward PSD and the corresponding inverse PSD in the same poses (30, 45 and 60 degree of one rotated joint ) are illustrated respectively in Figure 5 .
