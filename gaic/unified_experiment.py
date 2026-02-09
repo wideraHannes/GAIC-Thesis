@@ -174,7 +174,11 @@ MANIPULATIONS = {
 # -- prompts --
 
 SYSTEM_PROMPT = """## Role
-You are a binary text classifier. Your task is to classify sentences as either "Argument" or "No-Argument". Respond with exactly one label: Argument or No-Argument. Do not explain.
+You are a Dataset Annotator. Classify the input as "Argument" or "No-Argument".
+Respond with exactly one label. Do not explain.
+
+## Rules
+- Only classify as "Argument" if the sentence clearly matches the argument definition below.
 
 {context}"""
 
