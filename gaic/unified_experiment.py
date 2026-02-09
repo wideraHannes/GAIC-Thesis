@@ -203,12 +203,13 @@ def make_client(cfg: dict) -> OpenAI:
 def classify(
     client: OpenAI, cfg: dict, prompts_cfg: dict, sentence: str, context: str
 ) -> str:
-    user_prompt = prompts_cfg["user"].format(context=context, sentence=sentence)
+    system_prompt = prompts_cfg["system"].format(context=context)
+    user_prompt = prompts_cfg["user"].format(sentence=sentence)
     try:
         resp = client.chat.completions.create(
             model=cfg["model"],
             messages=[
-                {"role": "system", "content": prompts_cfg["system"]},
+                {"role": "system", "content": system_prompt},
                 {"role": "user", "content": user_prompt},
             ],
             temperature=cfg["temperature"],
@@ -265,11 +266,10 @@ def run(config: dict, config_path: Path | None = None):
         samples = sample_balanced(texts, labels, dataset, sample_size)
 
         # show prompt once so you can sanity-check
-        example_prompt = cfg_prompts["user"].format(
-            context=context_str, sentence=samples[0][1]
-        )
-        logger.info(f"[SYSTEM]\n{cfg_prompts['system']}")
-        logger.info(f"[USER]\n{example_prompt}")
+        example_system = cfg_prompts["system"].format(context=context_str)
+        example_user = cfg_prompts["user"].format(sentence=samples[0][1])
+        logger.info(f"[SYSTEM]\n{example_system}")
+        logger.info(f"[USER]\n{example_user}")
         logger.info("-" * 40)
 
         # collect predictions per manipulation

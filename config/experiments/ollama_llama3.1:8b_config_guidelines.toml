@@ -12,7 +12,7 @@ max_tokens = 5
 api_key = ""  # only needed for openai
 
 [context]
-sources = ["definition"]  # which context files to load: "definition", "guideline"
+sources = ["definition", "guideline"]  # which context files to load: "definition", "guideline"
 
 [datasets]
 enabled = [
@@ -29,11 +29,8 @@ enabled = [
 ]
 
 [prompts]
-system = """You are a binary text classifier. Your task is to classify sentences as either "Argument" or "No-Argument" based on the provided context. Respond with exactly one label: Argument or No-Argument. Do not explain."""
+system = """You are a binary text classifier. Your task is to classify sentences as either "Argument" or "No-Argument". Respond with exactly one label: Argument or No-Argument. Do not explain.
 
-user = """{context}
+{context}"""
 
-Sentence:
-{sentence}
-
-Label:"""
+user = """{sentence}"""
