@@ -1,0 +1,20 @@
+# GAIC Experiment Configuration — Together AI (Llama 3.1 8B Baseline)
+
+[experiment]
+experiment_name = "baseline"
+sample_size = 100  # balanced Argument / No-Argument per dataset
+output_dir = "experiments/abstract_sanity_check"
+
+[llm]
+provider = "together_ai"
+model = "mistralai/Mistral-Small-24B-Instruct-2501"
+temperature = 0.0
+max_tokens = 5
+
+[context]
+sources = ["definition"]  # baseline only uses definition, no guidelines
+
+[datasets]
+enabled = [
+    "ABSTRCT",
+]

@@ -1,0 +1,1238 @@
+{
+  "timestamp": "2026-02-10T19:21:16.759714",
+  "config_path": "config/experiments/together_mistral_small:25b_config_baseline_n100_only_abstract.toml",
+  "config": {
+    "experiment": {
+      "experiment_name": "baseline",
+      "sample_size": 100,
+      "output_dir": "experiments/abstract_sanity_check"
+    },
+    "llm": {
+      "provider": "together_ai",
+      "model": "mistralai/Mistral-Small-24B-Instruct-2501",
+      "temperature": 0.0,
+      "max_tokens": 5
+    },
+    "context": {
+      "sources": [
+        "definition"
+      ]
+    },
+    "datasets": {
+      "enabled": [
+        "ABSTRCT"
+      ]
+    }
+  },
+  "prompts": {
+    "system": "## Role\nYou are a Dataset Annotator. Classify the input as \"Argument\" or \"No-Argument\".\nRespond with exactly one label. Do not explain.\n\n## Rules\n- Only classify as \"Argument\" if the sentence clearly matches the argument definition below.\n\n{context}",
+    "user": "{sentence}"
+  },
+  "model": "mistralai/Mistral-Small-24B-Instruct-2501",
+  "sample_size": 100,
+  "context_sources": [
+    "definition"
+  ],
+  "datasets": {
+    "ABSTRCT": {
+      "n_samples": 100,
+      "reports": {
+        "original": {
+          "Argument": {
+            "precision": 0.7166666666666667,
+            "recall": 0.86,
+            "f1-score": 0.7818181818181819,
+            "support": 50.0
+          },
+          "No-Argument": {
+            "precision": 0.825,
+            "recall": 0.66,
+            "f1-score": 0.7333333333333333,
+            "support": 50.0
+          },
+          "accuracy": 0.76,
+          "macro avg": {
+            "precision": 0.7708333333333333,
+            "recall": 0.76,
+            "f1-score": 0.7575757575757576,
+            "support": 100.0
+          },
+          "weighted avg": {
+            "precision": 0.7708333333333335,
+            "recall": 0.76,
+            "f1-score": 0.7575757575757575,
+            "support": 100.0
+          }
+        },
+        "feger": {
+          "Argument": {
+            "precision": 0.6666666666666666,
+            "recall": 0.64,
+            "f1-score": 0.6530612244897959,
+            "support": 50.0
+          },
+          "No-Argument": {
+            "precision": 0.6538461538461539,
+            "recall": 0.68,
+            "f1-score": 0.6666666666666666,
+            "support": 50.0
+          },
+          "accuracy": 0.66,
+          "macro avg": {
+            "precision": 0.6602564102564102,
+            "recall": 0.66,
+            "f1-score": 0.6598639455782312,
+            "support": 100.0
+          },
+          "weighted avg": {
+            "precision": 0.6602564102564102,
+            "recall": 0.66,
+            "f1-score": 0.6598639455782314,
+            "support": 100.0
+          }
+        },
+        "shuffle": {
+          "Argument": {
+            "precision": 0.6428571428571429,
+            "recall": 0.18,
+            "f1-score": 0.28125,
+            "support": 50.0
+          },
+          "No-Argument": {
+            "precision": 0.5232558139534884,
+            "recall": 0.9,
+            "f1-score": 0.6617647058823529,
+            "support": 50.0
+          },
+          "accuracy": 0.54,
+          "macro avg": {
+            "precision": 0.5830564784053156,
+            "recall": 0.54,
+            "f1-score": 0.47150735294117646,
+            "support": 100.0
+          },
+          "weighted avg": {
+            "precision": 0.5830564784053156,
+            "recall": 0.54,
+            "f1-score": 0.47150735294117646,
+            "support": 100.0
+          }
+        }
+      },
+      "macro_f1_original": 0.7576,
+      "macro_f1_feger": 0.6599,
+      "macro_f1_shuffle": 0.4715,
+      "delta_feger": -0.0977,
+      "delta_shuffle": -0.2861,
+      "samples": [
+        {
+          "id": "ABSTRCT-train-1",
+          "sentence": "Both treatments were safe and well tolerated.",
+          "true_label": "Argument",
+          "sent_original": "Both treatments were safe and well tolerated.",
+          "sent_feger": "treatments safe tolerated",
+          "sent_shuffle": "treatments safe and were tolerated. Both well",
+          "pred_original": "No-Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "ABSTRCT-train-2",
+          "sentence": "The TAX 326 study shows that docetaxel-platinum regimens relieve symptoms and improve QoL in patients with advanced NSCLC.",
+          "true_label": "Argument",
+          "sent_original": "The TAX 326 study shows that docetaxel-platinum regimens relieve symptoms and improve QoL in patients with advanced NSCLC.",
+          "sent_feger": "tax 326 study shows docetaxel platinum regimens relieve symptoms improve qol patients advanced nsclc",
+          "sent_shuffle": "in QoL shows symptoms that regimens advanced docetaxel-platinum and with TAX improve 326 patients NSCLC. relieve The study",
+          "pred_original": "Argument",
+          "pred_feger": "Argument",
+          "pred_shuffle": "Argument"
+        },
+        {
+          "id": "ABSTRCT-train-3",
+          "sentence": "Docetaxel has shown activity in elderly patients with advanced non-small-cell lung cancer (NSCLC).",
+          "true_label": "Argument",
+          "sent_original": "Docetaxel has shown activity in elderly patients with advanced non-small-cell lung cancer (NSCLC).",
+          "sent_feger": "docetaxel shown activity elderly patients advanced non small cell lung cancer nsclc",
+          "sent_shuffle": "with patients shown non-small-cell (NSCLC). elderly cancer advanced activity in Docetaxel has lung",
+          "pred_original": "Argument",
+          "pred_feger": "Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "ABSTRCT-train-4",
+          "sentence": "Targeted therapies may improve chemotherapy effectiveness without worsening toxicity.",
+          "true_label": "Argument",
+          "sent_original": "Targeted therapies may improve chemotherapy effectiveness without worsening toxicity.",
+          "sent_feger": "targeted therapies improve chemotherapy effectiveness worsening toxicity",
+          "sent_shuffle": "improve without worsening chemotherapy toxicity. may effectiveness Targeted therapies",
+          "pred_original": "Argument",
+          "pred_feger": "Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "ABSTRCT-train-5",
+          "sentence": "The incidence of hepatotoxicity during IPT and ART was high.",
+          "true_label": "Argument",
+          "sent_original": "The incidence of hepatotoxicity during IPT and ART was high.",
+          "sent_feger": "incidence hepatotoxicity ipt art high",
+          "sent_shuffle": "ART hepatotoxicity of was IPT and high. during The incidence",
+          "pred_original": "Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "ABSTRCT-train-6",
+          "sentence": "The small sample size may have limited our ability to detect significant differences beyond 6 months of observation as well as additional significant differences in our study.",
+          "true_label": "Argument",
+          "sent_original": "The small sample size may have limited our ability to detect significant differences beyond 6 months of observation as well as additional significant differences in our study.",
+          "sent_feger": "small sample size limited ability detect significant differences 6 months observation additional significant differences study",
+          "sent_shuffle": "of differences to study. well limited have detect months significant significant as small 6 in beyond sample observation our may additional our ability differences The size as",
+          "pred_original": "No-Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "ABSTRCT-train-7",
+          "sentence": "Scapula-oriented exercise had beneficial effects on pain, quality of life and aspects of strength.",
+          "true_label": "Argument",
+          "sent_original": "Scapula-oriented exercise had beneficial effects on pain, quality of life and aspects of strength.",
+          "sent_feger": "scapula oriented exercise beneficial effects pain quality life aspects strength",
+          "sent_shuffle": "of of quality pain, strength. aspects on had life beneficial effects Scapula-oriented exercise and",
+          "pred_original": "Argument",
+          "pred_feger": "Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "ABSTRCT-train-8",
+          "sentence": "Despite the early closure of the study and the lack of power of the comparison, it seems that ldLV5FU2 could be considered as an active, easier and less expensive option for the treatment of metastatic colorectal cancer compared to classic LV5FU2 or weekly HD-FU.",
+          "true_label": "Argument",
+          "sent_original": "Despite the early closure of the study and the lack of power of the comparison, it seems that ldLV5FU2 could be considered as an active, easier and less expensive option for the treatment of metastatic colorectal cancer compared to classic LV5FU2 or weekly HD-FU.",
+          "sent_feger": "early closure study lack power comparison ldlv5fu2 considered active easier expensive option treatment metastatic colorectal cancer compared classic lv5fu2 weekly hd fu",
+          "sent_shuffle": "lack closure of of classic ldLV5FU2 the and of colorectal an power for considered of easier compared to expensive the active, be as option HD-FU. Despite could seems weekly cancer treatment or early less the metastatic study the comparison, it that the and LV5FU2",
+          "pred_original": "Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "Argument"
+        },
+        {
+          "id": "ABSTRCT-train-9",
+          "sentence": "One-site fornix-based and 2-site limbus-based phacotrabeculectomy were similarly effective in lowering IOP and reducing the need for antiglaucoma medications over a 3-year follow-up period.",
+          "true_label": "Argument",
+          "sent_original": "One-site fornix-based and 2-site limbus-based phacotrabeculectomy were similarly effective in lowering IOP and reducing the need for antiglaucoma medications over a 3-year follow-up period.",
+          "sent_feger": "site fornix based 2 site limbus based phacotrabeculectomy similarly effective lowering iop reducing need antiglaucoma medications 3 year follow period",
+          "sent_shuffle": "need phacotrabeculectomy medications period. reducing lowering antiglaucoma IOP the for fornix-based and 3-year were in and follow-up limbus-based over similarly effective One-site 2-site a",
+          "pred_original": "Argument",
+          "pred_feger": "Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "ABSTRCT-train-10",
+          "sentence": "Treatment with PB+G increased the incidence of severe neutropenia and dyspnea, although the regimen generally was well tolerated.",
+          "true_label": "Argument",
+          "sent_original": "Treatment with PB+G increased the incidence of severe neutropenia and dyspnea, although the regimen generally was well tolerated.",
+          "sent_feger": "treatment pb+g increased incidence severe neutropenia dyspnea regimen generally tolerated",
+          "sent_shuffle": "regimen the the and incidence severe well of dyspnea, was with although PB+G generally tolerated. neutropenia Treatment increased",
+          "pred_original": "Argument",
+          "pred_feger": "Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "ABSTRCT-train-11",
+          "sentence": "HDC has a negative impact on QOL even after treatment phase.",
+          "true_label": "Argument",
+          "sent_original": "HDC has a negative impact on QOL even after treatment phase.",
+          "sent_feger": "hdc negative impact qol treatment phase",
+          "sent_shuffle": "even negative a after on QOL treatment impact HDC has phase.",
+          "pred_original": "Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "ABSTRCT-train-12",
+          "sentence": "Compared with multiple-fraction radiotherapy, single-fraction radiotherapy provides equal palliation and quality of life and has lower medical and societal costs, at least in The Netherlands.",
+          "true_label": "Argument",
+          "sent_original": "Compared with multiple-fraction radiotherapy, single-fraction radiotherapy provides equal palliation and quality of life and has lower medical and societal costs, at least in The Netherlands.",
+          "sent_feger": "compared multiple fraction radiotherapy single fraction radiotherapy provides equal palliation quality life lower medical societal costs netherlands",
+          "sent_shuffle": "medical life and costs, societal provides radiotherapy quality lower least of and with has in and multiple-fraction The single-fraction Netherlands. equal palliation Compared radiotherapy, at",
+          "pred_original": "Argument",
+          "pred_feger": "Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "ABSTRCT-train-13",
+          "sentence": "At present, it does not seem cost-effective to introduce MMS on a large scale for both primary and recurrent BCC.",
+          "true_label": "Argument",
+          "sent_original": "At present, it does not seem cost-effective to introduce MMS on a large scale for both primary and recurrent BCC.",
+          "sent_feger": "present cost effective introduce mms large scale primary recurrent bcc",
+          "sent_shuffle": "BCC. seem for not MMS scale both recurrent cost-effective large and on present, a it primary to introduce At does",
+          "pred_original": "Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "ABSTRCT-train-14",
+          "sentence": "Effects of HT on toxicities, treatment delay, QOL, and fatigue were not observed.",
+          "true_label": "Argument",
+          "sent_original": "Effects of HT on toxicities, treatment delay, QOL, and fatigue were not observed.",
+          "sent_feger": "effects ht toxicities treatment delay qol fatigue observed",
+          "sent_shuffle": "QOL, delay, HT fatigue observed. treatment not and on toxicities, Effects of were",
+          "pred_original": "No-Argument",
+          "pred_feger": "Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "ABSTRCT-train-15",
+          "sentence": "This trial was undertaken to assess whether octreotide would lower insulin and IGF-1 levels and reduce risk of breast cancer recurrence.",
+          "true_label": "Argument",
+          "sent_original": "This trial was undertaken to assess whether octreotide would lower insulin and IGF-1 levels and reduce risk of breast cancer recurrence.",
+          "sent_feger": "trial undertaken assess octreotide lower insulin igf-1 levels reduce risk breast cancer recurrence",
+          "sent_shuffle": "cancer assess and to lower levels reduce breast whether IGF-1 of insulin trial and was risk octreotide would This undertaken recurrence.",
+          "pred_original": "No-Argument",
+          "pred_feger": "Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "ABSTRCT-train-16",
+          "sentence": "Both fixed combinations were capable of significantly reducing the mean diurnal IOP, mean diurnal peak, and mean WDT peak after 8 weeks of treatment.",
+          "true_label": "Argument",
+          "sent_original": "Both fixed combinations were capable of significantly reducing the mean diurnal IOP, mean diurnal peak, and mean WDT peak after 8 weeks of treatment.",
+          "sent_feger": "fixed combinations capable significantly reducing mean diurnal iop mean diurnal peak mean wdt peak 8 weeks treatment",
+          "sent_shuffle": "and of peak treatment. diurnal diurnal WDT IOP, peak, mean fixed mean weeks significantly mean combinations of capable after reducing the Both were 8",
+          "pred_original": "Argument",
+          "pred_feger": "Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "ABSTRCT-train-17",
+          "sentence": "The two schedules are equivalent in terms of overall response rate, median time-to-progression and overall survival.",
+          "true_label": "Argument",
+          "sent_original": "The two schedules are equivalent in terms of overall response rate, median time-to-progression and overall survival.",
+          "sent_feger": "schedules equivalent terms overall response rate median time progression overall survival",
+          "sent_shuffle": "of response in terms overall rate, time-to-progression overall two schedules and survival. equivalent median The are",
+          "pred_original": "Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "ABSTRCT-train-18",
+          "sentence": "The magnitude of improvement obtained was similar whether on a self-declared-healer- or an actor-provided \"treatment\".",
+          "true_label": "Argument",
+          "sent_original": "The magnitude of improvement obtained was similar whether on a self-declared-healer- or an actor-provided \"treatment\".",
+          "sent_feger": "magnitude improvement obtained similar self declared healer- actor provided treatment",
+          "sent_shuffle": "on actor-provided whether similar \"treatment\". an was of a improvement obtained or The magnitude self-declared-healer-",
+          "pred_original": "Argument",
+          "pred_feger": "Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "ABSTRCT-train-19",
+          "sentence": "Hormone replacement therapy is often either undesirable or contraindicated.",
+          "true_label": "Argument",
+          "sent_original": "Hormone replacement therapy is often either undesirable or contraindicated.",
+          "sent_feger": "hormone replacement therapy undesirable contraindicated",
+          "sent_shuffle": "is undesirable or often contraindicated. therapy either Hormone replacement",
+          "pred_original": "No-Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "ABSTRCT-train-20",
+          "sentence": "Survival advantage was significant with regular surveillance but not with irregular surveillance.",
+          "true_label": "Argument",
+          "sent_original": "Survival advantage was significant with regular surveillance but not with irregular surveillance.",
+          "sent_feger": "survival advantage significant regular surveillance irregular surveillance",
+          "sent_shuffle": "but regular was not with surveillance surveillance. significant with Survival advantage irregular",
+          "pred_original": "Argument",
+          "pred_feger": "Argument",
+          "pred_shuffle": "Argument"
+        },
+        {
+          "id": "ABSTRCT-train-21",
+          "sentence": "Patients treated with longer duration therapy (AC\u2192T) had greater symptom severity and poorer QOL at 6 months, but did not differ from shorter duration treatments at 12 months.",
+          "true_label": "Argument",
+          "sent_original": "Patients treated with longer duration therapy (AC\u2192T) had greater symptom severity and poorer QOL at 6 months, but did not differ from shorter duration treatments at 12 months.",
+          "sent_feger": "patients treated longer duration therapy ac\u2192t greater symptom severity poorer qol 6 months differ shorter duration treatments 12 months",
+          "sent_shuffle": "did months, severity from months. (AC\u2192T) therapy and at symptom treatments poorer not 6 at treated QOL with but 12 duration shorter had greater duration Patients longer differ",
+          "pred_original": "Argument",
+          "pred_feger": "Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "ABSTRCT-train-22",
+          "sentence": "Chemotherapy-induced anemia can be successfully treated using recombinant human erythropoietin (rHuEPO).",
+          "true_label": "Argument",
+          "sent_original": "Chemotherapy-induced anemia can be successfully treated using recombinant human erythropoietin (rHuEPO).",
+          "sent_feger": "chemotherapy induced anemia successfully treated recombinant human erythropoietin rhuepo",
+          "sent_shuffle": "recombinant be can human treated using erythropoietin successfully Chemotherapy-induced anemia (rHuEPO).",
+          "pred_original": "Argument",
+          "pred_feger": "Argument",
+          "pred_shuffle": "Argument"
+        },
+        {
+          "id": "ABSTRCT-train-23",
+          "sentence": "Recent research has suggested that physical activity can reduce fatigue in patients receiving active cancer treatment.",
+          "true_label": "Argument",
+          "sent_original": "Recent research has suggested that physical activity can reduce fatigue in patients receiving active cancer treatment.",
+          "sent_feger": "recent research suggested physical activity reduce fatigue patients receiving active cancer treatment",
+          "sent_shuffle": "can fatigue physical activity cancer in receiving reduce research has active treatment. that patients Recent suggested",
+          "pred_original": "Argument",
+          "pred_feger": "Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "ABSTRCT-train-24",
+          "sentence": "The efficacy response is equal in both drugs while test drug showed more safety response.",
+          "true_label": "Argument",
+          "sent_original": "The efficacy response is equal in both drugs while test drug showed more safety response.",
+          "sent_feger": "efficacy response equal drugs test drug showed safety response",
+          "sent_shuffle": "while safety drugs both response. more in response test is equal showed The efficacy drug",
+          "pred_original": "Argument",
+          "pred_feger": "Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "ABSTRCT-train-25",
+          "sentence": "Postmenopausal patients with lymph node-negative breast cancer benefited substantially from adjuvant chemotherapy if their cancer was ER-negative (i.e., endocrine-nonresponsive).",
+          "true_label": "Argument",
+          "sent_original": "Postmenopausal patients with lymph node-negative breast cancer benefited substantially from adjuvant chemotherapy if their cancer was ER-negative (i.e., endocrine-nonresponsive).",
+          "sent_feger": "postmenopausal patients lymph node negative breast cancer benefited substantially adjuvant chemotherapy cancer er negative i.e. endocrine nonresponsive",
+          "sent_shuffle": "cancer their node-negative from breast was (i.e., cancer if ER-negative adjuvant patients chemotherapy with endocrine-nonresponsive). benefited substantially Postmenopausal lymph",
+          "pred_original": "Argument",
+          "pred_feger": "Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "ABSTRCT-train-26",
+          "sentence": "Epidural analgesia was associated with an increase in any, but not serious, postoperative complications and length of stay after abdominal hysterectomy.",
+          "true_label": "Argument",
+          "sent_original": "Epidural analgesia was associated with an increase in any, but not serious, postoperative complications and length of stay after abdominal hysterectomy.",
+          "sent_feger": "epidural analgesia associated increase postoperative complications length stay abdominal hysterectomy",
+          "sent_shuffle": "abdominal an and with but complications length after increase postoperative stay not analgesia serious, was of in any, Epidural associated hysterectomy.",
+          "pred_original": "Argument",
+          "pred_feger": "Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "ABSTRCT-train-27",
+          "sentence": "The use of the Pain Education Program by nurses should be seriously considered on oncology units.",
+          "true_label": "Argument",
+          "sent_original": "The use of the Pain Education Program by nurses should be seriously considered on oncology units.",
+          "sent_feger": "use pain education program nurses seriously considered oncology units",
+          "sent_shuffle": "by should Education Program oncology be considered nurses use of on units. Pain seriously The the",
+          "pred_original": "Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "ABSTRCT-train-28",
+          "sentence": "Increasing evidence suggests that iron-containing multiple micronutrient may reduce the risk of pregnancy-induced hypertension including gestational hypertension or preeclampsia.",
+          "true_label": "Argument",
+          "sent_original": "Increasing evidence suggests that iron-containing multiple micronutrient may reduce the risk of pregnancy-induced hypertension including gestational hypertension or preeclampsia.",
+          "sent_feger": "increasing evidence suggests iron containing multiple micronutrient reduce risk pregnancy induced hypertension including gestational hypertension preeclampsia",
+          "sent_shuffle": "including hypertension iron-containing the multiple gestational or micronutrient pregnancy-induced hypertension risk evidence of suggests preeclampsia. may reduce Increasing that",
+          "pred_original": "Argument",
+          "pred_feger": "Argument",
+          "pred_shuffle": "Argument"
+        },
+        {
+          "id": "ABSTRCT-train-29",
+          "sentence": "Darbepoetin alfa, when administered synchronously with chemotherapy, on an EDS appears to be similarly efficacious to darbepoetin alfa weekly dosing with no unexpected adverse events.",
+          "true_label": "Argument",
+          "sent_original": "Darbepoetin alfa, when administered synchronously with chemotherapy, on an EDS appears to be similarly efficacious to darbepoetin alfa weekly dosing with no unexpected adverse events.",
+          "sent_feger": "darbepoetin alfa administered synchronously chemotherapy eds appears similarly efficacious darbepoetin alfa weekly dosing unexpected adverse events",
+          "sent_shuffle": "darbepoetin be EDS dosing weekly chemotherapy, with appears to no to alfa alfa, efficacious unexpected similarly when adverse synchronously events. on an Darbepoetin administered with",
+          "pred_original": "Argument",
+          "pred_feger": "Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "ABSTRCT-train-30",
+          "sentence": "In conclusion, palliative chemotherapy with carboplatin and vinorelbine beyond three courses conveys no survival or consistent QoL benefits in advanced NSCLC.",
+          "true_label": "Argument",
+          "sent_original": "In conclusion, palliative chemotherapy with carboplatin and vinorelbine beyond three courses conveys no survival or consistent QoL benefits in advanced NSCLC.",
+          "sent_feger": "conclusion palliative chemotherapy carboplatin vinorelbine courses conveys survival consistent qol benefits advanced nsclc",
+          "sent_shuffle": "advanced carboplatin or with three survival consistent in and no benefits courses conclusion, conveys palliative QoL vinorelbine beyond In chemotherapy NSCLC.",
+          "pred_original": "Argument",
+          "pred_feger": "Argument",
+          "pred_shuffle": "Argument"
+        },
+        {
+          "id": "ABSTRCT-train-31",
+          "sentence": "Fixed-combination latanoprost-timolol therapy is as safe and effective in lowering IOP in patients with either ocular hypertension or glaucoma as monotherapy with latanoprost or timolol.",
+          "true_label": "Argument",
+          "sent_original": "Fixed-combination latanoprost-timolol therapy is as safe and effective in lowering IOP in patients with either ocular hypertension or glaucoma as monotherapy with latanoprost or timolol.",
+          "sent_feger": "fixed combination latanoprost timolol therapy safe effective lowering iop patients ocular hypertension glaucoma monotherapy latanoprost timolol",
+          "sent_shuffle": "hypertension patients lowering as glaucoma and safe IOP ocular with in or latanoprost-timolol either latanoprost with therapy or as timolol. effective in Fixed-combination is monotherapy",
+          "pred_original": "Argument",
+          "pred_feger": "Argument",
+          "pred_shuffle": "Argument"
+        },
+        {
+          "id": "ABSTRCT-train-32",
+          "sentence": "Results of this randomized study incorporating prospective QOL measurements suggested that in patients with locally advanced NSCLC, analyzing QOL data by either gender or performance status alone may not accurately reflect how these factors depend upon each another.",
+          "true_label": "Argument",
+          "sent_original": "Results of this randomized study incorporating prospective QOL measurements suggested that in patients with locally advanced NSCLC, analyzing QOL data by either gender or performance status alone may not accurately reflect how these factors depend upon each another.",
+          "sent_feger": "results randomized study incorporating prospective qol measurements suggested patients locally advanced nsclc analyzing qol data gender performance status accurately reflect factors depend",
+          "sent_shuffle": "in factors that these depend accurately patients incorporating status reflect may study suggested data randomized performance by gender NSCLC, another. how alone Results each with QOL this upon not or either prospective measurements locally advanced analyzing of QOL",
+          "pred_original": "Argument",
+          "pred_feger": "Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "ABSTRCT-train-33",
+          "sentence": "Both Baerveldt and Ahmed glaucoma drainage implants performed well in terms of IOP control, preservation of visual function, and having low complication rates.",
+          "true_label": "Argument",
+          "sent_original": "Both Baerveldt and Ahmed glaucoma drainage implants performed well in terms of IOP control, preservation of visual function, and having low complication rates.",
+          "sent_feger": "baerveldt ahmed glaucoma drainage implants performed terms iop control preservation visual function having low complication rates",
+          "sent_shuffle": "visual of and preservation drainage control, function, IOP rates. implants in Baerveldt having of terms complication glaucoma and performed well Both Ahmed low",
+          "pred_original": "Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "ABSTRCT-train-34",
+          "sentence": "The safety profile was similar in both groups, and the tolerance for the long-acting eye drops was as good as for the currently-prescribed eye drops.",
+          "true_label": "Argument",
+          "sent_original": "The safety profile was similar in both groups, and the tolerance for the long-acting eye drops was as good as for the currently-prescribed eye drops.",
+          "sent_feger": "safety profile similar groups tolerance long acting eye drops good currently prescribed eye drops",
+          "sent_shuffle": "was the the as good both in tolerance drops the for as safety eye currently-prescribed long-acting profile eye similar drops. groups, and The was for",
+          "pred_original": "Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "ABSTRCT-train-35",
+          "sentence": "Additional studies should be done in this area to determine the optimum training program.",
+          "true_label": "Argument",
+          "sent_original": "Additional studies should be done in this area to determine the optimum training program.",
+          "sent_feger": "additional studies area determine optimum training program",
+          "sent_shuffle": "to training area this program. optimum in should determine be done Additional studies the",
+          "pred_original": "No-Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "ABSTRCT-train-36",
+          "sentence": "The hypothesised improvement in overall quality of life with the omission of radiotherapy was not seen in the EuroQol assessment or in the functionality and symptoms summary domains of the European Organisation for Research in the Treatment of Cancer (EORTC) scales.",
+          "true_label": "Argument",
+          "sent_original": "The hypothesised improvement in overall quality of life with the omission of radiotherapy was not seen in the EuroQol assessment or in the functionality and symptoms summary domains of the European Organisation for Research in the Treatment of Cancer (EORTC) scales.",
+          "sent_feger": "hypothesised improvement overall quality life omission radiotherapy seen euroqol assessment functionality symptoms summary domains european organisation research treatment cancer eortc scales",
+          "sent_shuffle": "the in omission Treatment symptoms and European of overall for in of functionality EuroQol radiotherapy in the summary was the or Organisation of the assessment in (EORTC) Research improvement The Cancer domains quality of with not seen the hypothesised life scales.",
+          "pred_original": "Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "ABSTRCT-train-37",
+          "sentence": "Erlotinib was generally well tolerated and had no negative impact on QoL in this subpopulation.",
+          "true_label": "Argument",
+          "sent_original": "Erlotinib was generally well tolerated and had no negative impact on QoL in this subpopulation.",
+          "sent_feger": "erlotinib generally tolerated negative impact qol subpopulation",
+          "sent_shuffle": "negative this no had subpopulation. in and generally impact well tolerated QoL Erlotinib was on",
+          "pred_original": "Argument",
+          "pred_feger": "Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "ABSTRCT-train-38",
+          "sentence": "Moreover, these two treatment protocols are inefficient and cost time in application.",
+          "true_label": "Argument",
+          "sent_original": "Moreover, these two treatment protocols are inefficient and cost time in application.",
+          "sent_feger": "treatment protocols inefficient cost time application",
+          "sent_shuffle": "and are two cost time inefficient application. treatment protocols Moreover, these in",
+          "pred_original": "Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "ABSTRCT-train-39",
+          "sentence": "VC, GC, and TC are not superior to PC in terms of overall survival (OS).",
+          "true_label": "Argument",
+          "sent_original": "VC, GC, and TC are not superior to PC in terms of overall survival (OS).",
+          "sent_feger": "vc gc tc superior pc terms overall survival os",
+          "sent_shuffle": "PC survival to superior (OS). overall not and in TC are of VC, GC, terms",
+          "pred_original": "Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "ABSTRCT-train-40",
+          "sentence": "Distress reduction is highlighted as an important mechanism by which health can be improved.",
+          "true_label": "Argument",
+          "sent_original": "Distress reduction is highlighted as an important mechanism by which health can be improved.",
+          "sent_feger": "distress reduction highlighted important mechanism health improved",
+          "sent_shuffle": "by be mechanism important improved. can an is which highlighted as Distress reduction health",
+          "pred_original": "No-Argument",
+          "pred_feger": "Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "ABSTRCT-train-41",
+          "sentence": "Both treatments were well tolerated over 3 months, although ocular stinging occurred more frequently with the dorzolamide/timolol combination.",
+          "true_label": "Argument",
+          "sent_original": "Both treatments were well tolerated over 3 months, although ocular stinging occurred more frequently with the dorzolamide/timolol combination.",
+          "sent_feger": "treatments tolerated 3 months ocular stinging occurred frequently dorzolamide timolol combination",
+          "sent_shuffle": "frequently more tolerated ocular over months, dorzolamide/timolol 3 stinging the treatments occurred were with combination. although Both well",
+          "pred_original": "Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "ABSTRCT-train-42",
+          "sentence": "We conclude that despite significant unfavorable consequences that follow gastrectomy, patients recover with an improved mental status.",
+          "true_label": "Argument",
+          "sent_original": "We conclude that despite significant unfavorable consequences that follow gastrectomy, patients recover with an improved mental status.",
+          "sent_feger": "conclude significant unfavorable consequences follow gastrectomy patients recover improved mental status",
+          "sent_shuffle": "that patients unfavorable consequences mental improved an gastrectomy, follow conclude that with status. significant recover We despite",
+          "pred_original": "Argument",
+          "pred_feger": "Argument",
+          "pred_shuffle": "Argument"
+        },
+        {
+          "id": "ABSTRCT-train-43",
+          "sentence": "Strong opioids were safe and well-tolerated, with no development of tolerance or serious adverse events.",
+          "true_label": "Argument",
+          "sent_original": "Strong opioids were safe and well-tolerated, with no development of tolerance or serious adverse events.",
+          "sent_feger": "strong opioids safe tolerated development tolerance adverse events",
+          "sent_shuffle": "development adverse no with events. serious well-tolerated, were of safe and or Strong opioids tolerance",
+          "pred_original": "Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "ABSTRCT-train-44",
+          "sentence": "The survival was similar to that of transthoracic approach.",
+          "true_label": "Argument",
+          "sent_original": "The survival was similar to that of transthoracic approach.",
+          "sent_feger": "survival similar transthoracic approach",
+          "sent_shuffle": "similar of transthoracic to approach. was that The survival",
+          "pred_original": "Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "ABSTRCT-train-45",
+          "sentence": "Based on habitual positions, travoprost better controls IOP fluctuations than SLT, especially during the daytime.",
+          "true_label": "Argument",
+          "sent_original": "Based on habitual positions, travoprost better controls IOP fluctuations than SLT, especially during the daytime.",
+          "sent_feger": "based habitual positions travoprost better controls iop fluctuations slt especially daytime",
+          "sent_shuffle": "fluctuations the IOP controls daytime. during better habitual than positions, travoprost especially Based on SLT,",
+          "pred_original": "Argument",
+          "pred_feger": "Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "ABSTRCT-train-46",
+          "sentence": "Flavonoid-rich fruits and vegetables may provide additional protection against CINV.",
+          "true_label": "Argument",
+          "sent_original": "Flavonoid-rich fruits and vegetables may provide additional protection against CINV.",
+          "sent_feger": "flavonoid rich fruits vegetables provide additional protection cinv",
+          "sent_shuffle": "protection vegetables and against provide additional CINV. may Flavonoid-rich fruits",
+          "pred_original": "Argument",
+          "pred_feger": "Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "ABSTRCT-train-47",
+          "sentence": "Hot flashes can cause discomfort, disrupted sleep, anxiety, and decreased quality of life.",
+          "true_label": "Argument",
+          "sent_original": "Hot flashes can cause discomfort, disrupted sleep, anxiety, and decreased quality of life.",
+          "sent_feger": "hot flashes cause discomfort disrupted sleep anxiety decreased quality life",
+          "sent_shuffle": "anxiety, sleep, can decreased life. disrupted of and cause discomfort, Hot flashes quality",
+          "pred_original": "Argument",
+          "pred_feger": "Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "ABSTRCT-train-48",
+          "sentence": "Pressure reduction on fewer medications was clinically and statistically significantly better 1 year after stent plus cataract surgery versus cataract surgery alone, with an overall safety profile similar to that of cataract surgery alone.",
+          "true_label": "Argument",
+          "sent_original": "Pressure reduction on fewer medications was clinically and statistically significantly better 1 year after stent plus cataract surgery versus cataract surgery alone, with an overall safety profile similar to that of cataract surgery alone.",
+          "sent_feger": "pressure reduction fewer medications clinically statistically significantly better 1 year stent cataract surgery cataract surgery overall safety profile similar cataract surgery",
+          "sent_shuffle": "was cataract surgery year overall to plus better cataract 1 profile stent safety significantly statistically that clinically with Pressure surgery after versus on cataract similar alone, fewer an medications of alone. surgery reduction and",
+          "pred_original": "Argument",
+          "pred_feger": "Argument",
+          "pred_shuffle": "Argument"
+        },
+        {
+          "id": "ABSTRCT-train-49",
+          "sentence": "The effect of travoprost on IOP reduction in POAG and NTG patients was significant both during the daytime and the nighttime, while the SLT's effect was significant only during the nighttime.",
+          "true_label": "Argument",
+          "sent_original": "The effect of travoprost on IOP reduction in POAG and NTG patients was significant both during the daytime and the nighttime, while the SLT's effect was significant only during the nighttime.",
+          "sent_feger": "effect travoprost iop reduction poag ntg patients significant daytime nighttime slt effect significant nighttime",
+          "sent_shuffle": "the both NTG effect only reduction IOP was patients during and significant nighttime. the the during effect significant and of daytime while the on was in POAG SLT's The travoprost nighttime,",
+          "pred_original": "Argument",
+          "pred_feger": "Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "ABSTRCT-train-50",
+          "sentence": "However, because neorectal capacity decreased equally in both groups, we speculate that the advantage of the colonic J-pouch is not in the creation of a larger neorectal reservoir but rather may be related to decreased motility.",
+          "true_label": "Argument",
+          "sent_original": "However, because neorectal capacity decreased equally in both groups, we speculate that the advantage of the colonic J-pouch is not in the creation of a larger neorectal reservoir but rather may be related to decreased motility.",
+          "sent_feger": "neorectal capacity decreased equally groups speculate advantage colonic j pouch creation larger neorectal reservoir related decreased motility",
+          "sent_shuffle": "we the equally reservoir related not may larger creation neorectal be speculate that but groups, in colonic motility. in a However, decreased advantage is neorectal to rather the capacity of decreased of the J-pouch because both",
+          "pred_original": "Argument",
+          "pred_feger": "Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "ABSTRCT-train-511",
+          "sentence": "Participants were enrolled in a randomized intervention trial to treat sexual dysfunction and completed outcome measures prior to randomization.",
+          "true_label": "No-Argument",
+          "sent_original": "Participants were enrolled in a randomized intervention trial to treat sexual dysfunction and completed outcome measures prior to randomization.",
+          "sent_feger": "participants enrolled randomized intervention trial treat sexual dysfunction completed outcome measures prior randomization",
+          "sent_shuffle": "outcome completed a treat randomized measures to intervention and prior sexual were dysfunction enrolled randomization. trial to Participants in",
+          "pred_original": "No-Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "ABSTRCT-train-512",
+          "sentence": "QoL:",
+          "true_label": "No-Argument",
+          "sent_original": "QoL:",
+          "sent_feger": "qol",
+          "sent_shuffle": "QoL:",
+          "pred_original": "No-Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "ABSTRCT-train-513",
+          "sentence": "Prespecified outcomes were three genitourinary symptoms (bowel function tenderness, frequent urination, and erectile dysfunction [ED]) and measures of physical and emotional function.",
+          "true_label": "No-Argument",
+          "sent_original": "Prespecified outcomes were three genitourinary symptoms (bowel function tenderness, frequent urination, and erectile dysfunction [ED]) and measures of physical and emotional function.",
+          "sent_feger": "prespecified outcomes genitourinary symptoms bowel function tenderness frequent urination erectile dysfunction ed measures physical emotional function",
+          "sent_shuffle": "function. symptoms were and frequent erectile measures and (bowel dysfunction physical [ED]) urination, outcomes and genitourinary of function tenderness, Prespecified three emotional",
+          "pred_original": "No-Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "ABSTRCT-train-514",
+          "sentence": "At six oncology clinics, physicians (N=22) and nurses (N=23) enrolled patients (N=93) who were over 18 years of age, with cancer diagnoses, pain, and a life expectancy of at least 6 months.",
+          "true_label": "No-Argument",
+          "sent_original": "At six oncology clinics, physicians (N=22) and nurses (N=23) enrolled patients (N=93) who were over 18 years of age, with cancer diagnoses, pain, and a life expectancy of at least 6 months.",
+          "sent_feger": "oncology clinics physicians n=22 nurses n=23 enrolled patients n=93 18 years age cancer diagnoses pain life expectancy 6 months",
+          "sent_shuffle": "expectancy (N=22) patients 18 life (N=93) pain, and with who years enrolled at over a cancer 6 six were age, oncology of diagnoses, clinics, least physicians of months. (N=23) and At nurses",
+          "pred_original": "No-Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "ABSTRCT-train-515",
+          "sentence": "Patients in both arms were assessed every 3 weeks.",
+          "true_label": "No-Argument",
+          "sent_original": "Patients in both arms were assessed every 3 weeks.",
+          "sent_feger": "patients arms assessed 3 weeks",
+          "sent_shuffle": "arms every 3 were weeks. both assessed Patients in",
+          "pred_original": "No-Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "ABSTRCT-train-516",
+          "sentence": "Patients completed questionnaires before and after the visit and were interviewed by telephone at 2, 6, and 12 weeks.",
+          "true_label": "No-Argument",
+          "sent_original": "Patients completed questionnaires before and after the visit and were interviewed by telephone at 2, 6, and 12 weeks.",
+          "sent_feger": "patients completed questionnaires visit interviewed telephone 2 6 12 weeks",
+          "sent_shuffle": "2, at and were after 6, 12 the telephone and interviewed completed by questionnaires weeks. visit and Patients before",
+          "pred_original": "No-Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "ABSTRCT-train-517",
+          "sentence": "The total short-term remission rate, the improvement rate of clinical syndrome and quality of life was 50.0%, 70.0% and 76.7% in the treatment group, and 43.3%, 46.7% and 50.0% in the control group, respectively, showing significant difference between the two groups (all P < 0.05).",
+          "true_label": "No-Argument",
+          "sent_original": "The total short-term remission rate, the improvement rate of clinical syndrome and quality of life was 50.0%, 70.0% and 76.7% in the treatment group, and 43.3%, 46.7% and 50.0% in the control group, respectively, showing significant difference between the two groups (all P < 0.05).",
+          "sent_feger": "total short term remission rate improvement rate clinical syndrome quality life 50.0 70.0 76.7 treatment group 43.3 46.7 50.0 control group respectively showing significant difference groups p < 0.05",
+          "sent_shuffle": "and the difference syndrome group, clinical 50.0% group, quality remission respectively, rate, 0.05). and and control 46.7% the two in of 43.3%, in treatment the (all The 76.7% 50.0%, < between significant P short-term and the showing improvement of life was 70.0% total rate groups",
+          "pred_original": "No-Argument",
+          "pred_feger": "Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "ABSTRCT-train-518",
+          "sentence": "Breast intensity-modulated radiation therapy (IMRT) is a technique that ensures a more homogeneous dose distribution.",
+          "true_label": "No-Argument",
+          "sent_original": "Breast intensity-modulated radiation therapy (IMRT) is a technique that ensures a more homogeneous dose distribution.",
+          "sent_feger": "breast intensity modulated radiation therapy imrt technique ensures homogeneous dose distribution",
+          "sent_shuffle": "that dose technique a distribution. homogeneous is radiation ensures therapy (IMRT) more Breast intensity-modulated a",
+          "pred_original": "No-Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "ABSTRCT-train-519",
+          "sentence": "Acupuncture had the additional benefit of increased sex drive in some women, and most reported an improvement in their energy, clarity of thought, and sense of well-being.",
+          "true_label": "No-Argument",
+          "sent_original": "Acupuncture had the additional benefit of increased sex drive in some women, and most reported an improvement in their energy, clarity of thought, and sense of well-being.",
+          "sent_feger": "acupuncture additional benefit increased sex drive women reported improvement energy clarity thought sense",
+          "sent_shuffle": "improvement and in well-being. energy, increased of some an thought, women, their had reported sense most the in of benefit of sex drive and Acupuncture additional clarity",
+          "pred_original": "Argument",
+          "pred_feger": "Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "ABSTRCT-train-520",
+          "sentence": "The trial was designed to use one-sided tests of significance for power calculations, but is now reported with both one-sided and the traditional two-sided tests of significance.",
+          "true_label": "No-Argument",
+          "sent_original": "The trial was designed to use one-sided tests of significance for power calculations, but is now reported with both one-sided and the traditional two-sided tests of significance.",
+          "sent_feger": "trial designed use sided tests significance power calculations reported sided traditional sided tests significance",
+          "sent_shuffle": "reported calculations, significance significance. one-sided one-sided use for now traditional power both trial is tests but was with of to the tests of two-sided The designed and",
+          "pred_original": "No-Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "ABSTRCT-train-521",
+          "sentence": "The median survival in the patients receiving induction chemotherapy only was 8.9 months.",
+          "true_label": "No-Argument",
+          "sent_original": "The median survival in the patients receiving induction chemotherapy only was 8.9 months.",
+          "sent_feger": "median survival patients receiving induction chemotherapy 8.9 months",
+          "sent_shuffle": "induction receiving survival only months. patients 8.9 chemotherapy in the The median was",
+          "pred_original": "Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "ABSTRCT-train-522",
+          "sentence": "The pectoral stretching program did not influence the outcomes measured because the symptoms reported by patients were not a consequence of contracture.",
+          "true_label": "No-Argument",
+          "sent_original": "The pectoral stretching program did not influence the outcomes measured because the symptoms reported by patients were not a consequence of contracture.",
+          "sent_feger": "pectoral stretching program influence outcomes measured symptoms reported patients consequence contracture",
+          "sent_shuffle": "contracture. not stretching patients measured symptoms were consequence influence reported a by because pectoral the did not the outcomes The program of",
+          "pred_original": "Argument",
+          "pred_feger": "Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "ABSTRCT-train-523",
+          "sentence": "In addition, the long-term effectiveness was investigated.",
+          "true_label": "No-Argument",
+          "sent_original": "In addition, the long-term effectiveness was investigated.",
+          "sent_feger": "addition long term effectiveness investigated",
+          "sent_shuffle": "addition, long-term effectiveness the investigated. In was",
+          "pred_original": "No-Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "ABSTRCT-train-524",
+          "sentence": "The difference was more significant for docetaxel 75 mg/m(2) patients, compared with corresponding best supportive care patients (7.5 v 4.6 months; log-rank test, P =.010; 1-year survival, 37% v 11%; chi(2) test, P =.003).",
+          "true_label": "No-Argument",
+          "sent_original": "The difference was more significant for docetaxel 75 mg/m(2) patients, compared with corresponding best supportive care patients (7.5 v 4.6 months; log-rank test, P =.010; 1-year survival, 37% v 11%; chi(2) test, P =.003).",
+          "sent_feger": "difference significant docetaxel 75 mg m(2 patients compared corresponding best supportive care patients 7.5 v 4.6 months log rank test p = .010 1 year survival 37 11 chi(2 test p = .003",
+          "sent_shuffle": "for 4.6 months; corresponding =.010; v care compared patients with survival, supportive 1-year patients, mg/m(2) 11%; docetaxel test, The P best v was test, 37% log-rank more P significant chi(2) =.003). (7.5 difference 75",
+          "pred_original": "Argument",
+          "pred_feger": "Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "ABSTRCT-train-525",
+          "sentence": "Latanoprost 0.005% once daily reduced IOP more effectively than latanoprost 0.0015% twice daily (P < 0.001).",
+          "true_label": "No-Argument",
+          "sent_original": "Latanoprost 0.005% once daily reduced IOP more effectively than latanoprost 0.0015% twice daily (P < 0.001).",
+          "sent_feger": "latanoprost 0.005 daily reduced iop effectively latanoprost 0.0015 twice daily p < 0.001",
+          "sent_shuffle": "effectively latanoprost IOP more < 0.0015% daily than 0.005% once (P 0.001). reduced twice Latanoprost daily",
+          "pred_original": "Argument",
+          "pred_feger": "Argument",
+          "pred_shuffle": "Argument"
+        },
+        {
+          "id": "ABSTRCT-train-526",
+          "sentence": "A nonsignificant reduction (2.4%) in shuttle test distance at the end of radiotherapy was observed in the control group; however, in the exercise group, there was a significant increase (13.2%) in distance walked (P = 0.0003).",
+          "true_label": "No-Argument",
+          "sent_original": "A nonsignificant reduction (2.4%) in shuttle test distance at the end of radiotherapy was observed in the control group; however, in the exercise group, there was a significant increase (13.2%) in distance walked (P = 0.0003).",
+          "sent_feger": "nonsignificant reduction 2.4 shuttle test distance end radiotherapy observed control group exercise group significant increase 13.2 distance walked p 0.0003",
+          "sent_shuffle": "the radiotherapy shuttle significant walked however, in was exercise a distance end of increase at in the 0.0003). test there A = was group; reduction (P (13.2%) the (2.4%) group, in observed in control nonsignificant distance",
+          "pred_original": "Argument",
+          "pred_feger": "Argument",
+          "pred_shuffle": "Argument"
+        },
+        {
+          "id": "ABSTRCT-train-527",
+          "sentence": "573 patients with newly diagnosed glioblastoma were randomly allocated either radiotherapy alone or radiotherapy and temozolomide.",
+          "true_label": "No-Argument",
+          "sent_original": "573 patients with newly diagnosed glioblastoma were randomly allocated either radiotherapy alone or radiotherapy and temozolomide.",
+          "sent_feger": "573 patients newly diagnosed glioblastoma randomly allocated radiotherapy radiotherapy temozolomide",
+          "sent_shuffle": "randomly either glioblastoma were and radiotherapy or allocated patients with radiotherapy temozolomide. diagnosed alone 573 newly",
+          "pred_original": "No-Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "ABSTRCT-train-528",
+          "sentence": "Two primary end points were examined: energy/fatigue and cancer-specific distress.",
+          "true_label": "No-Argument",
+          "sent_original": "Two primary end points were examined: energy/fatigue and cancer-specific distress.",
+          "sent_feger": "primary end points examined energy fatigue cancer specific distress",
+          "sent_shuffle": "and points end cancer-specific examined: energy/fatigue distress. were Two primary",
+          "pred_original": "No-Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "ABSTRCT-train-529",
+          "sentence": "Body cell mass was maintained throughout the study in group B, but declined significantly up to weeks 4 and 8 in group A (intergroup difference: P < 0.05 and 0.01, respectively).",
+          "true_label": "No-Argument",
+          "sent_original": "Body cell mass was maintained throughout the study in group B, but declined significantly up to weeks 4 and 8 in group A (intergroup difference: P < 0.05 and 0.01, respectively).",
+          "sent_feger": "body cell mass maintained study group b declined significantly weeks 4 8 group intergroup difference p < 0.05 0.01 respectively",
+          "sent_shuffle": "8 up B, difference: 0.05 the throughout declined but to group < respectively). A weeks and cell significantly and mass 4 group 0.01, maintained P study in (intergroup Body was in",
+          "pred_original": "Argument",
+          "pred_feger": "Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "ABSTRCT-train-530",
+          "sentence": "They were randomly divided to receive either glutamine-enriched TPN or standard TPN.",
+          "true_label": "No-Argument",
+          "sent_original": "They were randomly divided to receive either glutamine-enriched TPN or standard TPN.",
+          "sent_feger": "randomly divided receive glutamine enriched tpn standard tpn",
+          "sent_shuffle": "glutamine-enriched receive randomly TPN or either TPN. divided to They were standard",
+          "pred_original": "No-Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "ABSTRCT-train-531",
+          "sentence": "Patients who received placebo as premedication had significantly higher IOP at 6 (17.96\u00b15.49 vs 13.61\u00b14.09; P<0.001) and 12 (16.90\u00b14.11 vs 13.96\u00b13.25;",
+          "true_label": "No-Argument",
+          "sent_original": "Patients who received placebo as premedication had significantly higher IOP at 6 (17.96\u00b15.49 vs 13.61\u00b14.09; P<0.001) and 12 (16.90\u00b14.11 vs 13.96\u00b13.25;",
+          "sent_feger": "patients received placebo premedication significantly higher iop 6 17.96\u00b15.49 13.61\u00b14.09 p<0.001 12 16.90\u00b14.11 13.96\u00b13.25",
+          "sent_shuffle": "vs premedication 13.61\u00b14.09; as IOP vs P<0.001) (16.90\u00b14.11 had (17.96\u00b15.49 12 at who 6 received and significantly higher Patients placebo 13.96\u00b13.25;",
+          "pred_original": "Argument",
+          "pred_feger": "Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "ABSTRCT-train-532",
+          "sentence": "Similar results were observed using the LENT-SOMA scale.",
+          "true_label": "No-Argument",
+          "sent_original": "Similar results were observed using the LENT-SOMA scale.",
+          "sent_feger": "similar results observed lent soma scale",
+          "sent_shuffle": "observed using LENT-SOMA scale. were the Similar results",
+          "pred_original": "Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "ABSTRCT-train-533",
+          "sentence": "The primary endpoint was volume of the ipsilateral limb measured opto-electronically using a perometer and expressed as a percentage of the contralateral limb volume.",
+          "true_label": "No-Argument",
+          "sent_original": "The primary endpoint was volume of the ipsilateral limb measured opto-electronically using a perometer and expressed as a percentage of the contralateral limb volume.",
+          "sent_feger": "primary endpoint volume ipsilateral limb measured opto electronically perometer expressed percentage contralateral limb volume",
+          "sent_shuffle": "expressed of percentage volume. perometer opto-electronically a using and as primary a contralateral the measured endpoint limb volume of ipsilateral limb The was the",
+          "pred_original": "No-Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "ABSTRCT-train-534",
+          "sentence": "Mean global quality-of-life scores at the end of treatment were statistically significantly better in the TC arm than in the PT arm (65.25 versus 51.97, respectively; difference = -13.28, 95% CI = -18.88 to -7.68).",
+          "true_label": "No-Argument",
+          "sent_original": "Mean global quality-of-life scores at the end of treatment were statistically significantly better in the TC arm than in the PT arm (65.25 versus 51.97, respectively; difference = -13.28, 95% CI = -18.88 to -7.68).",
+          "sent_feger": "mean global quality life scores end treatment statistically significantly better tc arm pt arm 65.25 51.97 respectively difference = -13.28 95 ci = -18.88 -7.68",
+          "sent_shuffle": "were better the PT = (65.25 95% arm difference 51.97, the statistically significantly = treatment the CI end respectively; Mean to in in quality-of-life -18.88 -13.28, arm scores versus at -7.68). TC than global of",
+          "pred_original": "Argument",
+          "pred_feger": "Argument",
+          "pred_shuffle": "Argument"
+        },
+        {
+          "id": "ABSTRCT-train-535",
+          "sentence": "However, because of toxicity associated with long-term bisphosphonate treatment, establishing the lowest effective dose is important.",
+          "true_label": "No-Argument",
+          "sent_original": "However, because of toxicity associated with long-term bisphosphonate treatment, establishing the lowest effective dose is important.",
+          "sent_feger": "toxicity associated long term bisphosphonate treatment establishing lowest effective dose important",
+          "sent_shuffle": "bisphosphonate establishing with long-term is the effective treatment, because of dose important. associated lowest However, toxicity",
+          "pred_original": "No-Argument",
+          "pred_feger": "Argument",
+          "pred_shuffle": "Argument"
+        },
+        {
+          "id": "ABSTRCT-train-536",
+          "sentence": "A total of 53 patients completed the QOL and functional outcome questionnaires.",
+          "true_label": "No-Argument",
+          "sent_original": "A total of 53 patients completed the QOL and functional outcome questionnaires.",
+          "sent_feger": "total 53 patients completed qol functional outcome questionnaires",
+          "sent_shuffle": "QOL completed of and functional the questionnaires. 53 patients A total outcome",
+          "pred_original": "No-Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "ABSTRCT-train-537",
+          "sentence": "However, 1-month GI toxicity was not only worse in patients with the hypofractionated RT schedule but also adversely affected daily activities.",
+          "true_label": "No-Argument",
+          "sent_original": "However, 1-month GI toxicity was not only worse in patients with the hypofractionated RT schedule but also adversely affected daily activities.",
+          "sent_feger": "1 month gi toxicity worse patients hypofractionated rt schedule adversely affected daily activities",
+          "sent_shuffle": "daily not schedule was patients RT but affected only hypofractionated adversely with 1-month the GI also worse in However, toxicity activities.",
+          "pred_original": "Argument",
+          "pred_feger": "Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "ABSTRCT-train-538",
+          "sentence": "The hazard ration (HR) for PFS was 0.72 (95% CI, 0.58 to 0.90; P = .0031).",
+          "true_label": "No-Argument",
+          "sent_original": "The hazard ration (HR) for PFS was 0.72 (95% CI, 0.58 to 0.90; P = .0031).",
+          "sent_feger": "hazard ration hr pfs 0.72 95 ci 0.58 0.90 p = .0031",
+          "sent_shuffle": "0.72 CI, PFS was = 0.58 0.90; (95% hazard ration P .0031). for to The (HR)",
+          "pred_original": "No-Argument",
+          "pred_feger": "Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "ABSTRCT-train-539",
+          "sentence": "The primary outcomes were fatigue and disease-specific quality of life as assessed by self-reported questionnaires after 12 weeks.",
+          "true_label": "No-Argument",
+          "sent_original": "The primary outcomes were fatigue and disease-specific quality of life as assessed by self-reported questionnaires after 12 weeks.",
+          "sent_feger": "primary outcomes fatigue disease specific quality life assessed self reported questionnaires 12 weeks",
+          "sent_shuffle": "self-reported by fatigue life and quality 12 disease-specific as after primary assessed outcomes questionnaires weeks. of The were",
+          "pred_original": "No-Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "ABSTRCT-train-540",
+          "sentence": "The trial was stopped early because of poor accrual before the target of 123 evaluable patients was met.",
+          "true_label": "No-Argument",
+          "sent_original": "The trial was stopped early because of poor accrual before the target of 123 evaluable patients was met.",
+          "sent_feger": "trial stopped early poor accrual target 123 evaluable patients met",
+          "sent_shuffle": "123 of early before because poor was of the patients trial target was evaluable met. accrual The stopped",
+          "pred_original": "No-Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "ABSTRCT-train-541",
+          "sentence": "The percentage of cases returning to baseline in all QoL domains (except insomnia) was similar at 6 mo between the two groups.",
+          "true_label": "No-Argument",
+          "sent_original": "The percentage of cases returning to baseline in all QoL domains (except insomnia) was similar at 6 mo between the two groups.",
+          "sent_feger": "percentage cases returning baseline qol domains insomnia similar 6 mo groups",
+          "sent_shuffle": "groups. to of at QoL insomnia) 6 the baseline was between similar domains percentage (except returning mo in all The cases two",
+          "pred_original": "No-Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "ABSTRCT-train-542",
+          "sentence": "Notably, patients receiving FLO or FLOT as palliative treatment (n = 98) achieved comparable QOL results.",
+          "true_label": "No-Argument",
+          "sent_original": "Notably, patients receiving FLO or FLOT as palliative treatment (n = 98) achieved comparable QOL results.",
+          "sent_feger": "notably patients receiving flo flot palliative treatment = 98 achieved comparable qol results",
+          "sent_shuffle": "palliative (n FLOT as QOL = achieved treatment patients receiving comparable results. or 98) Notably, FLO",
+          "pred_original": "Argument",
+          "pred_feger": "Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "ABSTRCT-train-543",
+          "sentence": "There was no significant difference between groups in all outcome variables (P > 0.05) through the whole study period.",
+          "true_label": "No-Argument",
+          "sent_original": "There was no significant difference between groups in all outcome variables (P > 0.05) through the whole study period.",
+          "sent_feger": "significant difference groups outcome variables p > 0.05 study period",
+          "sent_shuffle": "through 0.05) difference outcome between the study groups > whole variables was (P no period. in all There significant",
+          "pred_original": "Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "ABSTRCT-train-544",
+          "sentence": "The 2 + 2.5 dosage was discontinued at the end of year 7.",
+          "true_label": "No-Argument",
+          "sent_original": "The 2 + 2.5 dosage was discontinued at the end of year 7.",
+          "sent_feger": "2 + 2.5 dosage discontinued end year 7",
+          "sent_shuffle": "at discontinued + end 7. was year the 2.5 dosage The 2 of",
+          "pred_original": "No-Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "ABSTRCT-train-545",
+          "sentence": "Although infrequent, other similar reports highlight the need for ongoing trials evaluating erythropoietin receptor agonists to ensure that overall survival is monitored closely.",
+          "true_label": "No-Argument",
+          "sent_original": "Although infrequent, other similar reports highlight the need for ongoing trials evaluating erythropoietin receptor agonists to ensure that overall survival is monitored closely.",
+          "sent_feger": "infrequent similar reports highlight need ongoing trials evaluating erythropoietin receptor agonists ensure overall survival monitored closely",
+          "sent_shuffle": "ensure to other agonists highlight receptor that erythropoietin closely. the ongoing infrequent, survival evaluating trials monitored reports overall need for Although similar is",
+          "pred_original": "Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "ABSTRCT-train-546",
+          "sentence": "Seven hundred fifty-two patients (374 QW patients; 378 EDS patients) received \u22651 dose of darbepoetin alfa and were included in the analysis.",
+          "true_label": "No-Argument",
+          "sent_original": "Seven hundred fifty-two patients (374 QW patients; 378 EDS patients) received \u22651 dose of darbepoetin alfa and were included in the analysis.",
+          "sent_feger": "seven patients 374 qw patients 378 eds patients received \u22651 dose darbepoetin alfa included analysis",
+          "sent_shuffle": "analysis. QW fifty-two alfa patients) dose and in patients; of included darbepoetin received hundred \u22651 (374 were 378 EDS Seven patients the",
+          "pred_original": "No-Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "ABSTRCT-train-547",
+          "sentence": "Patients in the control arm received radiotherapy only.",
+          "true_label": "No-Argument",
+          "sent_original": "Patients in the control arm received radiotherapy only.",
+          "sent_feger": "patients control arm received radiotherapy",
+          "sent_shuffle": "control arm radiotherapy only. the received Patients in",
+          "pred_original": "No-Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "ABSTRCT-train-548",
+          "sentence": "The TAX 327 study compared docetaxel administered every 3 weeks (D3), weekly docetaxel (D1), and mitoxantrone (M), each with prednisone (P), in 1,006 men with metastatic hormone-resistant prostate cancer (HRPC).",
+          "true_label": "No-Argument",
+          "sent_original": "The TAX 327 study compared docetaxel administered every 3 weeks (D3), weekly docetaxel (D1), and mitoxantrone (M), each with prednisone (P), in 1,006 men with metastatic hormone-resistant prostate cancer (HRPC).",
+          "sent_feger": "tax 327 study compared docetaxel administered 3 weeks d3 weekly docetaxel d1 mitoxantrone m prednisone p 1,006 men metastatic hormone resistant prostate cancer hrpc",
+          "sent_shuffle": "prednisone and (D3), hormone-resistant 1,006 administered docetaxel docetaxel weekly mitoxantrone weeks metastatic (HRPC). in (M), prostate TAX (D1), with 327 each cancer compared with every 3 men The study (P),",
+          "pred_original": "No-Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "ABSTRCT-train-549",
+          "sentence": "Eighteen patients underwent conventional treatment (surgery, radiotherapy, and chemotherapy) and received adjuvant autologous dendritic cell vaccine, and 16 patients (control group) underwent conventional treatment only.",
+          "true_label": "No-Argument",
+          "sent_original": "Eighteen patients underwent conventional treatment (surgery, radiotherapy, and chemotherapy) and received adjuvant autologous dendritic cell vaccine, and 16 patients (control group) underwent conventional treatment only.",
+          "sent_feger": "eighteen patients underwent conventional treatment surgery radiotherapy chemotherapy received adjuvant autologous dendritic cell vaccine 16 patients control group underwent conventional treatment",
+          "sent_shuffle": "and autologous and (control patients radiotherapy, (surgery, received vaccine, underwent adjuvant 16 patients cell conventional dendritic underwent treatment treatment only. and chemotherapy) Eighteen conventional group)",
+          "pred_original": "No-Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "ABSTRCT-train-550",
+          "sentence": "Patient diaries demonstrated lower swallowing dysfunction AUC with amifostine (z test P = .025).",
+          "true_label": "No-Argument",
+          "sent_original": "Patient diaries demonstrated lower swallowing dysfunction AUC with amifostine (z test P = .025).",
+          "sent_feger": "patient diaries demonstrated lower swallowing dysfunction auc amifostine z test p = .025",
+          "sent_shuffle": "amifostine = with AUC .025). P dysfunction demonstrated (z lower swallowing Patient diaries test",
+          "pred_original": "Argument",
+          "pred_feger": "Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "ABSTRCT-train-551",
+          "sentence": "A two-tailed Student's t test for paired or unpaired data was used for statistical evaluation of differences between treatment and baseline values or between the latanoprost and timolol group.",
+          "true_label": "No-Argument",
+          "sent_original": "A two-tailed Student's t test for paired or unpaired data was used for statistical evaluation of differences between treatment and baseline values or between the latanoprost and timolol group.",
+          "sent_feger": "tailed student t test paired unpaired data statistical evaluation differences treatment baseline values latanoprost timolol group",
+          "sent_shuffle": "treatment evaluation was or values paired for for used of data the and group. differences and two-tailed statistical Student's between timolol test latanoprost or unpaired between A t baseline",
+          "pred_original": "No-Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "ABSTRCT-train-552",
+          "sentence": "Few exercise trials in cancer patients have reported longer-term follow-up.",
+          "true_label": "No-Argument",
+          "sent_original": "Few exercise trials in cancer patients have reported longer-term follow-up.",
+          "sent_feger": "exercise trials cancer patients reported longer term follow",
+          "sent_shuffle": "reported in trials longer-term patients have follow-up. cancer Few exercise",
+          "pred_original": "No-Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "ABSTRCT-train-553",
+          "sentence": "Magnetic resonance imaging scan analysis was masked to treatment group.",
+          "true_label": "No-Argument",
+          "sent_original": "Magnetic resonance imaging scan analysis was masked to treatment group.",
+          "sent_feger": "magnetic resonance imaging scan analysis masked treatment group",
+          "sent_shuffle": "to scan imaging treatment was masked group. analysis Magnetic resonance",
+          "pred_original": "No-Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "ABSTRCT-train-554",
+          "sentence": "Moreover, the safety aspects of the two regimens regarding hyperemia were studied.",
+          "true_label": "No-Argument",
+          "sent_original": "Moreover, the safety aspects of the two regimens regarding hyperemia were studied.",
+          "sent_feger": "safety aspects regimens hyperemia studied",
+          "sent_shuffle": "regimens the safety regarding hyperemia two studied. aspects of Moreover, the were",
+          "pred_original": "No-Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "ABSTRCT-train-555",
+          "sentence": "A regression analysis with interactions was performed to determine if domains of quality of life (EORTC-QLQ-C30) functioning (Health Survey Short Form-36) or psychological distress (Symptom Checklist-90) moderated the effect of CBT on fatigue.",
+          "true_label": "No-Argument",
+          "sent_original": "A regression analysis with interactions was performed to determine if domains of quality of life (EORTC-QLQ-C30) functioning (Health Survey Short Form-36) or psychological distress (Symptom Checklist-90) moderated the effect of CBT on fatigue.",
+          "sent_feger": "regression analysis interactions performed determine domains quality life eortc qlq c30 functioning health survey short form-36 psychological distress symptom checklist-90 moderated effect cbt fatigue",
+          "sent_shuffle": "the was of functioning moderated quality Form-36) (EORTC-QLQ-C30) domains life Short psychological if of (Symptom performed Checklist-90) A on of Survey analysis (Health or with CBT interactions effect fatigue. determine distress regression to",
+          "pred_original": "Argument",
+          "pred_feger": "Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "ABSTRCT-train-556",
+          "sentence": "Although improvements in the UC group occurred by 12-months post-surgery, the change did not meet the clinically relevant threshold.",
+          "true_label": "No-Argument",
+          "sent_original": "Although improvements in the UC group occurred by 12-months post-surgery, the change did not meet the clinically relevant threshold.",
+          "sent_feger": "improvements uc group occurred 12 months post surgery change meet clinically relevant threshold",
+          "sent_shuffle": "meet not UC post-surgery, group the relevant occurred did clinically the improvements change in threshold. by 12-months Although the",
+          "pred_original": "Argument",
+          "pred_feger": "Argument",
+          "pred_shuffle": "Argument"
+        },
+        {
+          "id": "ABSTRCT-train-557",
+          "sentence": "The success of blinding was assessed using a mixed-methods approach.",
+          "true_label": "No-Argument",
+          "sent_original": "The success of blinding was assessed using a mixed-methods approach.",
+          "sent_feger": "success blinding assessed mixed methods approach",
+          "sent_shuffle": "a blinding of mixed-methods assessed using approach. was The success",
+          "pred_original": "No-Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "ABSTRCT-train-558",
+          "sentence": "A total of 358 patients were randomly assigned between July 2003 and March 2005 in two Canadian centers, and 331 were included in the analysis.",
+          "true_label": "No-Argument",
+          "sent_original": "A total of 358 patients were randomly assigned between July 2003 and March 2005 in two Canadian centers, and 331 were included in the analysis.",
+          "sent_feger": "total 358 patients randomly assigned july 2003 march 2005 canadian centers 331 included analysis",
+          "sent_shuffle": "Canadian March July 331 and randomly were 2003 two included and centers, total in in 2005 of the patients analysis. assigned between A 358 were",
+          "pred_original": "No-Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "ABSTRCT-train-559",
+          "sentence": "Relationships between RRS and both survival and clinical worsening-free survival were examined by Kaplan-Meier and Cox proportional hazards analyses.",
+          "true_label": "No-Argument",
+          "sent_original": "Relationships between RRS and both survival and clinical worsening-free survival were examined by Kaplan-Meier and Cox proportional hazards analyses.",
+          "sent_feger": "relationships rrs survival clinical worsening free survival examined kaplan meier cox proportional hazards analyses",
+          "sent_shuffle": "and Kaplan-Meier both survival survival Cox hazards and by proportional were between examined RRS analyses. clinical worsening-free Relationships and",
+          "pred_original": "No-Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "ABSTRCT-train-560",
+          "sentence": "The aim of this study was to investigate the clinical effectiveness of protocol-driven cognitive behavior therapy (CBT) for insomnia, delivered by oncology nurses.",
+          "true_label": "No-Argument",
+          "sent_original": "The aim of this study was to investigate the clinical effectiveness of protocol-driven cognitive behavior therapy (CBT) for insomnia, delivered by oncology nurses.",
+          "sent_feger": "aim study investigate clinical effectiveness protocol driven cognitive behavior therapy cbt insomnia delivered oncology nurses",
+          "sent_shuffle": "(CBT) therapy of behavior was cognitive for protocol-driven nurses. to clinical aim delivered of effectiveness oncology study insomnia, investigate the The this by",
+          "pred_original": "No-Argument",
+          "pred_feger": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        }
+      ]
+    }
+  },
+  "overall": {
+    "mean_macro_f1_original": 0.7576,
+    "mean_macro_f1_feger": 0.6599,
+    "mean_macro_f1_shuffle": 0.4715,
+    "mean_delta_feger": -0.0977,
+    "mean_delta_shuffle": -0.2861
+  }
+}

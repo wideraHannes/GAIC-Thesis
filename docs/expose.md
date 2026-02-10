@@ -3,7 +3,7 @@
 **Student**: Johannes Widera
 **Supervisor:** Marc Feger
 **Institution:** Heinrich Heine University Düsseldorf
-**Date:** January 2026
+**Date:** February 2026
 **Target Venue:** Touché @ CLEF 2026, _Generalizable Argument Identification in Context (GAIC)_
 
 **Thesis Reviewers:**
@@ -21,7 +21,7 @@ The paper concludes:
 
 This thesis directly addresses this open direction. The GAIC shared task [[11]](#11), organized by the same research group, provides the infrastructure to investigate decoder-based models (LLMs) under the same rigorous generalization framework. GAIC explicitly encourages participants to develop robust systems that generalize beyond lexical shortcuts and to investigate ways to exploit rich context information such as annotation guidelines and source documents.
 
-This creates a unique opportunity: to determine whether LLMs overcome the shortcut learning problem identified in encoders, whether they actually utilize the rich context GAIC provides, and whether we can build systems that improve on both dimensions.
+This creates a unique opportunity: to determine whether decoder-based LLMs overcome the shortcut learning problem identified in encoders, how this interacts with model scale and capability, whether LLMs can leverage the rich context GAIC provides, and whether fine-tuning reintroduces the shortcut patterns observed in encoders. By systematically testing five LLMs spanning 7B to frontier scale, this thesis provides the first multi-model analysis of shortcut learning in decoder-based argument mining.
 
 ## 2. Theoretical Foundation
 
@@ -45,7 +45,7 @@ The ACL paper established several critical findings that this thesis builds upon
 
 ### 2.3 What Remains Unknown
 
-The ACL paper focused exclusively on encoder-based transformers. Several questions remain open. First, do decoder-based LLMs exhibit the same shortcut patterns? LLMs differ in inductive bias, are trained on bigger corpora and have larger context windows. Second, can LLMs leverage the rich context GAIC provides? Guidelines, source documents, and paper references are available but may be ignored. Third, does training improve over zero-shot prompting, and if so how robust is it to shortcuts?
+The ACL paper focused exclusively on encoder-based transformers. Several questions remain open. First, do decoder-based LLMs exhibit the same shortcut patterns, and does this depend on model scale? LLMs differ fundamentally in inductive bias, are trained on orders-of-magnitude more data, and have substantially larger context windows — but it is unclear whether these advantages translate into genuine argument understanding or merely enable different shortcuts. Second, can LLMs leverage the rich context GAIC provides? Guidelines, source documents, and paper references are available but may be ignored or even introduce noise. Third, does fine-tuning improve over zero-shot prompting, and if so, does it reintroduce the shortcut learning patterns observed in encoders?
 
 ### 2.4 Architectural Inductive Biases: Encoders vs. Decoders
 
@@ -81,40 +81,45 @@ Crucially, GAIC provides context "where available" [[11]](#11). However, context
 
 This thesis addresses three core research questions through a structured three-part methodology:
 
-### RQ1: Do zero-shot LLMs rely on argument structure?
+### RQ1: Do zero-shot LLMs rely on argument structure, and how does this vary across model scales?
 
-**Motivation:** Feger et al.'s encoders were trained on each dataset before evaluation—they had opportunity to learn shortcuts. Zero-shot LLMs have no such exposure. If manipulation hurts their performance, they must rely on linguistic structure.
+**Motivation:** Feger et al.'s encoders were trained on each dataset before evaluation — they had opportunity to learn shortcuts. Zero-shot LLMs have no such exposure. If manipulation hurts their performance, they must rely on linguistic structure. Testing this across multiple model sizes (7B–frontier) allows distinguishing whether sensitivity to argument structure is an inherent property of the decoder architecture or an emergent capability that requires sufficient model scale.
 
-**Hypothesis:** Zero-shot LLMs will show substantially larger Δ than encoders (Δ > 0.10 vs. encoder Δ ≤ 0.02), indicating reliance on argument structure rather than content-word shortcuts.
+**Hypothesis:** Zero-shot LLMs will show substantially larger manipulation sensitivity than encoders (|Δ| >> 0.02), indicating reliance on linguistic structure rather than content-word shortcuts. This effect may vary across model scales, with smaller models potentially showing reduced sensitivity due to limited task capability.
 
-**Preliminary support:** Pilot experiments show Δ = 0.15 for Feger manipulation and Δ = 0.59 for shuffle (ABSTRCT, n=100) [[a1]](#a1).
+**Preliminary support:** Across five models and 10 datasets, four out of five models show mean |Δ_feger| ≥ 0.085, i.e., 4–10× larger than encoder Δ ≤ 0.02 [[a1]](#a1).
 
-### RQ2: Does context improve zero-shot argument identification?
+### RQ2: How does rich context information affect zero-shot argument identification?
 
-**Motivation:** GAIC provides annotation guidelines, paper references, and document context. If LLMs can utilize this information, it offers a path to generalization that encoders struggle to exploit.
+**Motivation:** GAIC provides annotation guidelines, paper references, and document context — but only for some datasets. If LLMs can utilize this information, it offers a path to generalization that encoders cannot exploit due to their limited input length. However, it is unclear whether context uniformly improves performance or whether its effect depends on model capability, dataset difficulty, and context type.
 
-**Hypothesis:** Adding context, particularly annotation guidelines, will improve F1 compared to inference with generic prompt.
+**Hypothesis:** Context effects are not uniform but depend on the interaction between model, dataset, and context type. Context provides the model with an additional information channel, which may improve performance when the model struggles with a dataset but may introduce noise when performance is already adequate. The key analytical question is under which conditions context helps, hurts, or has no effect — and whether context changes the model's reliance on sentence-internal structure (as measured by Δ under manipulation).
 
-**Preliminary support:** Guidelines improve accuracy from 66% to 82.5% (+16.5pp). ABSTRCT guidelines transfer at 70% accuracy to datasets without native guidelines [[a2]](#a2).
+**Preliminary support:** Experiments across two models and four datasets show that context effects range from +0.33 to −0.20 F1 depending on the model-dataset pair. Context also reduces manipulation sensitivity, suggesting it provides an alternative reasoning channel [[a2]](#a2).
 
 ### RQ3: Does fine-tuning reintroduce shortcut learning?
 
-**Motivation:** Zero-shot LLMs appear robust (RQ1), and context helps them (RQ2). But zero-shot performance may have limits. Fine-tuning can improve absolute performance, but Feger et al. showed that training is exactly where shortcuts emerge in encoders. The question is whether and under which conditions this happens in decoder-based LLMs.
+**Motivation:** RQ1 establishes how zero-shot decoders process argument structure, and RQ2 investigates how context modulates this. But zero-shot performance has limits: decoders achieve F1 ≈ 0.63–0.65, below encoder in-distribution performance (F1 = 0.79). Fine-tuning can close this gap, but Feger et al. showed that training is exactly where shortcuts emerge in encoders. The question is whether this also occurs in decoder-based LLMs.
 
-**Hypothesis:** Fine-tuning on GAIC data will reduce Δ compared to zero-shot baseline, as the model learns dataset-specific content-word patterns. The degree of reduction will indicate whether shortcut learning is architecture-dependent (decoders resist) or training-dependent (any trained model learns shortcuts).
+**Hypothesis:** Fine-tuning on GAIC data will reduce Δ compared to the zero-shot baseline, as the model learns dataset-specific content-word patterns. The degree of reduction will indicate whether shortcut learning is architecture-dependent (decoders resist shortcuts) or training-dependent (any trained model learns shortcuts regardless of architecture).
 
-**No preliminary data yet.** This is the core empirical question of Part 3.
+**No preliminary data yet.** This is the core empirical question of Part 3. The fine-tuning candidate will be selected based on Part 1 and Part 2 results.
 
 ## 5. Methodology
 
-### Part 1: Zero-Shot Robustness
+### Part 1: Zero-Shot Robustness Across Model Scales
 
-**Question:** Do zero-shot LLMs rely on argument structure or superficial cues?
+**Question:** Do zero-shot LLMs rely on argument structure or superficial cues, and how does this vary with model scale?
 
 **Setup:**
 
-- Model: Llama-3.1-8B-Instruct (primary), Mistral-7B-Instruct (comparison)
-- Data: All 10 GAIC datasets, full test splits
+- Models: Five decoder-based LLMs spanning 7B to frontier scale:
+  - Mistral-7B-Instruct-v0.2 (7B)
+  - Llama-3.1-8B-Instruct (8B)
+  - Mistral-Small-24B-Instruct (24B)
+  - Llama-3.1-70B-Instruct (70B)
+  - GPT-4.1 (frontier-scale, closed-weight)
+- Data: All 10 GAIC datasets, balanced samples per dataset
 - Prompt: Generic argument definition, no dataset-specific context
 
 **Manipulations:**
@@ -127,40 +132,40 @@ This thesis addresses three core research questions through a structured three-p
 
 **Metrics:**
 
-- Macro F1 per dataset
-- Δ_feger = F1(M0) − F1(M1)
-- Δ_shuffle = F1(M0) − F1(M2)
+- Macro F1 per dataset and model
+- Δ_feger = F1(M0) − F1(M1) per model
+- Δ_shuffle = F1(M0) − F1(M2) per model
 
 **Comparison baseline:** Encoder results from Feger et al. (Δ ≤ 0.02)
 
-**Output:** Evidence for whether zero-shot LLMs rely on argument structure (large Δ) or shortcuts (small Δ).
+**Output:** Evidence for whether zero-shot LLMs rely on argument structure (large Δ) or shortcuts (small Δ), and how this varies across model scales.
 
-### Part 2: Context Contribution and Robustness
+### Part 2: Context Utilization
 
-**Question:** How much does each context type contribute to performance?
+**Question:** How does rich context information affect argument identification, and under what conditions does it help or hurt?
 
 **Setup:**
 
-- Model: Llama-3.1-8B-Instruct
+- Models: At least two models from Part 1 (one frontier-scale, one open-weight)
 - Data: Four datasets with full context availability (ABSTRCT, ARGUMINSCI, PE, USELEC)
-- Document context: 2 sentences preceding the target
+- Document context: Preceding sentences from the source document
 
 **Context conditions:**
 
-| Condition | Input                            |
-| --------- | -------------------------------- |
-| C0        | Sentence only                    |
-| C1        | Sentence + Paper reference       |
-| C2        | Sentence + Annotation guidelines |
-| C3        | Sentence + Document context      |
-| C4        | Sentence + All available context |
+| Condition  | Input                                             |
+| ---------- | ------------------------------------------------- |
+| Baseline   | Sentence + generic argument definition            |
+| Guidelines | Baseline + dataset-specific annotation guidelines |
+| Full       | Guidelines + document context                     |
 
 **Metrics:**
 
-- Macro F1 per condition
-- Ranking of context contribution
+- Macro F1 per condition, model, and dataset
+- Δ_context = F1(condition) − F1(baseline) per model-dataset pair
+- Manipulation sensitivity (Δ_feger, Δ_shuffle) per context condition
+- Analysis of model × dataset interaction effects
 
-**Output:** Which context types help, by how much, and whether guidelines transfer across datasets.
+**Output:** A characterization of when and why context helps or hurts, and whether context changes the model's reliance on sentence-internal argument structure.
 
 ### Part 3: Fine-Tuning Effects
 
@@ -168,7 +173,7 @@ This thesis addresses three core research questions through a structured three-p
 
 **Setup:**
 
-- Model: Llama-3.1-8B-Instruct + LoRA adapters
+- Model: Best-performing open-weight model from Part 1 + LoRA adapters
 - Data: Full GAIC training set (all 10 datasets)
 - Input format:
 
@@ -212,7 +217,9 @@ This thesis addresses three core research questions through a structured three-p
 
 ### Methodological
 
+- Multi-model, multi-scale experimental design that disentangles architectural from capability effects
 - Word-shuffle manipulation as complementary diagnostic to Feger et al.'s approach
+- Context × manipulation interaction analysis as a novel diagnostic for understanding how models process argument structure
 - Standardized input format for handling variable context availability
 
 ### Practical
@@ -224,19 +231,17 @@ This thesis addresses three core research questions through a structured three-p
 
 ### 7.1 Minimum Requirements (Core Thesis)
 
-- Theoretical framing (argument mining, shortcut learning, LLM)
-- Replication of manipulation experiments with zero-shot LLM
-- Context channel evaluation (C0 through C4)
+- Theoretical framing (argument mining, shortcut learning, LLMs, inductive biases)
+- Multi-model manipulation experiments with zero-shot LLMs across scales
+- Context utilization analysis (baseline, guidelines, full) across multiple models
 
 ### 7.2 Optional Extensions
 
-- Robustness measurement (Δ) per context condition
-- LoRa [[8]](#8) Finetuning on GAIC
-- Investigating different finetuning strategies
-- GAIC submission
-- Full statistical analysis following [[1]](#1)
-- Multiple LLM comparison
-- data contamination analysis (Test if llm has seen Dataset)
+- LoRA [[8]](#8) fine-tuning on GAIC (Part 3)
+- Investigating different fine-tuning strategies (e.g., data augmentation with manipulated examples)
+- GAIC shared task submission
+- Full statistical analysis with confidence intervals following [[1]](#1)
+- Data contamination analysis (test if LLMs have seen benchmark datasets during training)
 
 ## 8. Timeline
 
@@ -260,15 +265,15 @@ This thesis addresses three core research questions through a structured three-p
 ## 9. Table of Contents (Draft)
 
 | Chapter                         | Pages | Content                                          |
-| ------------------------------- | ----- | ------------------------------------------------ | --- |
+| ------------------------------- | ----- | ------------------------------------------------ |
 | 1. Introduction                 | 4     | Motivation, problem statement, contributions     |
 | 2. Background                   | 10    | Argument mining, shortcut learning, LLMs         |
 | 3. The GAIC Shared Task         | 3     | Task description, datasets, context availability |
-| 4. Part 1: Zero-Shot Robustness | 10    | Manipulation experiments, results, analysis      |
-| 5. Part 2: Context Utilization  | 8     | Context conditions, cross-guideline transfer     |
+| 4. Part 1: Zero-Shot Robustness | 10    | Multi-model manipulation experiments, analysis   |
+| 5. Part 2: Context Utilization  | 8     | Context conditions, model × dataset interaction  |
 | 6. Part 3: Fine-Tuning Effects  | 10    | Training setup, Δ comparison, interpretation     |
 | 7. Discussion                   | 6     | Integration, comparison to encoders, limitations |
-| 8. Conclusion                   | 2     | Summary, future work                             |     |
+| 8. Conclusion                   | 2     | Summary, future work                             |
 
 ## 10. References
 
@@ -292,49 +297,67 @@ This thesis addresses three core research questions through a structured three-p
 
 ## a. Preliminary Experiments
 
-Before finalizing this proposal, pilot experiments were conducted to test core assumptions. These findings are preliminary (limited sample sizes) but inform the research design.
+Before finalizing this proposal, systematic preliminary experiments were conducted across five models and all 10 GAIC datasets to test core assumptions and calibrate the research design. These experiments use n=30 balanced samples per dataset (15 Argument, 15 No-Argument) and are therefore preliminary in scale but systematic in coverage.
 
 ### <a id="a1">a1</a> Manipulation Experiments
 
-**Setup:** Llama-3.1-8B-Instruct, zero-shot, on ABSTRCT (n=100).
-
-Two manipulation types were tested:
-
-- **Feger manipulation:** Remove stop words, function words, discourse markers, punctuation (following [[1]](#1))
-- **Word shuffle:** Randomly permute word order while preserving all words (novel diagnostic)
+**Setup:** Five decoder-based LLMs (Mistral-7B, Llama-3.1-8B, Mistral-Small-24B, Llama-3.1-70B, GPT-4.1), zero-shot, on all 10 GAIC datasets, with three manipulation conditions each (original, Feger, shuffle).
 
 **Results:**
 
-| Condition          | F1     | Δ (F1 drop) |
-| ------------------ | ------ | ----------- |
-| Original           | 0.72   | —           |
-| Feger manipulation | 0.58   | 0.15        |
-| Word shuffle       | 0.14   | 0.59        |
-| _Encoders (ref.)_  | _0.77_ | _≤0.02_     |
+| Model                     | Size       | Mean Δ_feger | Mean Δ_shuffle | Mean F1 (original) |
+| ------------------------- | ---------- | ------------ | -------------- | ------------------ |
+| Mistral-7B                | 7B         | −0.122       | −0.213         | 0.604              |
+| Llama-8B                  | 8B         | +0.038       | −0.023         | 0.505              |
+| Mistral-24B               | 24B        | −0.208       | −0.274         | 0.632              |
+| Llama-70B                 | 70B        | −0.085       | −0.129         | 0.651              |
+| GPT-4.1                   | frontier   | −0.195       | −0.269         | 0.623              |
+| _Encoders (Feger et al.)_ | _110–340M_ | _≤0.02_      | _N/A_          | _0.79 (in-dist.)_  |
 
-**Interpretation:** Zero-shot LLMs show substantially greater sensitivity to manipulation than trained encoders. The shuffle result is striking: recall drops from 76% to 8%, indicating the model cannot identify arguments when word order is destroyed. This suggests reliance on genuine linguistic structure, not keyword matching.
+Note: Negative Δ indicates performance drops under manipulation (structure reliance). Encoder Δ values from Feger et al. [[1]](#1) for comparison.
+
+**Interpretation:** Four out of five decoders show |Δ_feger| ≥ 0.085, i.e., 4–10× larger than encoder Δ ≤ 0.02. Removing function words, stop words, and discourse markers substantially hurts decoder performance — the opposite of what Feger et al. found for encoders. This supports the theoretical prediction from Section 2.4: causal attention makes decoders sensitive to the linguistic scaffolding that defines argumentation.
+
+Llama-8B is the exception (Δ_feger = +0.038), but this appears to be a floor effect: with mean F1 = 0.505 (near chance for binary classification), the model lacks sufficient capability for the manipulation diagnostic to be meaningful.
+
+Notably, zero-shot decoders (F1 = 0.62–0.65) already outperform encoder cross-dataset transfer performance (F1 = 0.56–0.61 from Feger et al.) without any training data exposure.
 
 ### <a id="a2">a2</a> Context Experiments
 
-**Setup:** Llama-3.1-8B-Instruct, zero-shot, comparing performance with and without annotation guidelines.
+**Setup:** GPT-4.1 and Mistral-Small-24B, zero-shot, three context conditions (baseline, guidelines, full), on four datasets with full context availability (ABSTRCT, ARGUMINSCI, PE, USELEC).
 
-**Results:**
+**Results (GPT-4.1):**
 
-| Condition                     | Accuracy | F1   |
-| ----------------------------- | -------- | ---- |
-| No guidelines (baseline)      | 66%      | 0.58 |
-| With correct guidelines       | 82.5%    | 0.82 |
-| ABSTRCT guideline (on others) | 70%      | 0.70 |
+| Dataset    | Baseline  | +Guidelines | +Full     | Δ_full     |
+| ---------- | --------- | ----------- | --------- | ---------- |
+| ABSTRCT    | 0.729     | 0.729       | 0.729     | 0.000      |
+| ARGUMINSCI | 0.764     | 0.764       | 0.733     | −0.031     |
+| PE         | 0.433     | 0.486       | 0.542     | +0.109     |
+| USELEC     | 0.722     | 0.732       | 0.697     | −0.025     |
+| **Mean**   | **0.662** | **0.678**   | **0.675** | **+0.013** |
 
-**Interpretation:** Guidelines provide a +16.5 percentage point accuracy improvement. The ABSTRCT guideline transfers reasonably to datasets without native guidelines (70% accuracy across 6 datasets), suggesting general argument definitions can enable cross-dataset application.
+**Results (Mistral-24B):**
 
-### 3 Implications for Research Design
+| Dataset    | Baseline  | +Guidelines | +Full     | Δ_full     |
+| ---------- | --------- | ----------- | --------- | ---------- |
+| ABSTRCT    | 0.700     | 0.665       | 0.667     | −0.033     |
+| ARGUMINSCI | 0.475     | 0.569       | 0.800     | +0.325     |
+| PE         | 0.729     | 0.665       | 0.525     | −0.204     |
+| USELEC     | 0.729     | 0.729       | 0.764     | +0.036     |
+| **Mean**   | **0.658** | **0.657**   | **0.689** | **+0.031** |
 
-These preliminary findings suggest:
+**Interpretation:** Context effects are highly volatile — both model-specific and dataset-specific. Mean improvements are modest (+0.013 to +0.031 F1), but per-dataset effects range from −0.204 to +0.325. Context appears to help models that struggle on a dataset (e.g., Mistral-24B on ARGUMINSCI: +0.325) but can hurt models that already perform well (e.g., Mistral-24B on PE: −0.204).
 
-1. Zero-shot LLMs behave differently from trained encoders under manipulation
-2. Context (specifically guidelines) measurably improves performance
+A cross-cutting finding: context reduces manipulation sensitivity for both models. Adding full context reduces |Δ_feger| by 16% (GPT-4.1) and 26% (Mistral-24B), suggesting that context provides an alternative information channel that partially bypasses sentence-internal processing.
 
-The full thesis will validate these findings at scale and extend them to fine-tuned models.
+### a3. Implications for Research Design
+
+These preliminary findings establish three key insights:
+
+1. **RQ1 is supported:** Decoders process argument structure fundamentally differently from encoders, showing 4–10× larger manipulation sensitivity. This holds across model scales above a capability threshold.
+2. **RQ2 requires nuanced investigation:** Context effects are not uniformly positive. The thesis will systematically analyze conditions under which context helps vs. hurts, and how context interacts with manipulation robustness.
+3. **RQ3 is well-motivated:** Zero-shot decoders show F1 ≈ 0.63–0.65, below encoder in-distribution performance (0.79). Fine-tuning may close this gap, but the central question is whether it preserves the structural reliance demonstrated in RQ1.
+
+The full thesis will validate these findings at full scale (larger sample sizes, statistical significance testing) and extend them to fine-tuned models.
 
 ---
