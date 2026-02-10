@@ -22,13 +22,13 @@ from dotenv import load_dotenv
 from loguru import logger
 from openai import OpenAI
 from portkey_ai import PORTKEY_GATEWAY_URL
-
-load_dotenv()
 from sklearn.metrics import classification_report
 from tqdm import tqdm
 
 from gaic.helper import manipulate_sentence
 from config.paths import PROJECT_ROOT, GAIC_DATA_DIR, CONTEXT_DIR
+
+load_dotenv()
 
 DEFAULT_CONFIG = PROJECT_ROOT / "config" / "experiments" / "experiment_config.toml"
 
@@ -58,6 +58,9 @@ def dataset_from_id(id_: str) -> str:
     return id_.rsplit("-", 2)[0]
 
 
+# Simple general definition for no-context experiments
+SIMPLE_ARGUMENT_DEFINITION = "An argument is a statement that makes a claim or provides reasoning to support or oppose a position."
+
 # Map of context source names to their file names, dataset.json fallback keys,
 # and the capability flag that must be true in dataset.json
 CONTEXT_SOURCES = {
@@ -74,6 +77,9 @@ CONTEXT_SOURCES = {
     "document_context": {
         "capability": "has_document_context",
         "per_sample": True,  # Loaded per sample, not per dataset
+    },
+    "simple_definition": {
+        "simple": True,  # Special flag for hardcoded simple definition
     },
 }
 
@@ -112,9 +118,15 @@ def load_context(dataset: str, sources: list[str]) -> dict[str, str]:
                 )
             continue
 
+        # Handle simple definition (hardcoded, not file-based)
+        if spec.get("simple", False):
+            result[source] = SIMPLE_ARGUMENT_DEFINITION
+            logger.info(f"Using hardcoded simple definition for {dataset}")
+            continue
+
         # check capability flag — skip if explicitly false
-        cap_key = spec["capability"]
-        if not capabilities.get(cap_key, True):
+        cap_key = spec.get("capability")
+        if cap_key and not capabilities.get(cap_key, True):
             logger.info(f"Skipping '{source}' for {dataset} ({cap_key}=false)")
             continue
 
@@ -152,6 +164,7 @@ def assemble_context(context: dict[str, str], document_context: str = "") -> str
     parts = []
     labels = {
         "definition": "Argument Definition",
+        "simple_definition": "Argument Definition",
         "guideline": "Annotation Guideline",
         "document_context": "Document Context (Preceding Sentences)",
     }
@@ -190,6 +203,7 @@ def sample_balanced(
 
 def shuffle_sentence(sentence: str) -> str:
     words = sentence.split()
+    random.seed(42)  # fixed seed for reproducibility across runs
     random.shuffle(words)
     return " ".join(words)
 
@@ -422,7 +436,13 @@ def run(config: dict, config_path: Path | None = None):
         }
 
     # save
-    safe_model = cfg_llm["model"].replace("/", "_").replace(":", "_").replace("@", "").replace(".", "_")
+    safe_model = (
+        cfg_llm["model"]
+        .replace("/", "_")
+        .replace(":", "_")
+        .replace("@", "")
+        .replace(".", "_")
+    )
     out_path = output_dir / f"{experiment_name}_{sample_size}_{safe_model}.json"
     with open(out_path, "w") as f:
         json.dump(results, f, indent=2)

@@ -1,0 +1,30 @@
+# GAIC Experiment Configuration — Together AI (Mistral Small 25B No-Context)
+# Uses simple general definition instead of dataset-specific definitions
+
+[experiment]
+experiment_name = "no_context"
+sample_size = 30  # balanced Argument / No-Argument per dataset
+output_dir = "experiments/unified_outputs"
+
+[llm]
+provider = "together_ai"
+model = "mistralai/Mistral-Small-24B-Instruct-2501"
+temperature = 0.0
+max_tokens = 5
+
+[context]
+sources = ["simple_definition"]  # uses hardcoded simple definition
+
+[datasets]
+enabled = [
+    "ABSTRCT",
+    "ACQUA",
+    "AEC",
+    "AFS",
+    "ARGUMINSCI",
+    "FINARG",
+    "IAM",
+    "PE",
+    "SCIARK",
+    "USELEC",
+]
