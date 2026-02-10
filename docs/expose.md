@@ -146,9 +146,9 @@ This thesis addresses three core research questions through a structured three-p
 
 **Setup:**
 
-- Models: At least two models from Part 1 (one frontier-scale, one open-weight)
-- Data: Four datasets with full context availability (ABSTRCT, ARGUMINSCI, PE, USELEC)
-- Document context: Preceding sentences from the source document
+- Models: All five models from Part 1 (Mistral-7B, Llama-8B, Mistral-24B, Llama-70B, GPT-4.1)
+- Data: Four datasets with full context availability (ABSTRCT, ARGUMINSCI, PE, USELEC); remaining six datasets receive only their definition
+- Document context: Two sentences preceding the target, extracted during preprocessing
 
 **Context conditions:**
 
