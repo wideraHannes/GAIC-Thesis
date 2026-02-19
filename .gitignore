@@ -16,3 +16,24 @@ CLAUDE.md
 .env
 
 Expose_v1.md
+
+*.aux
+*.gz
+*.bbl
+*.blg
+*.fdb_latexmk
+*.fls
+*.idx
+*.ilg
+*.ind
+*.lof
+*.log
+*.lol
+*.lot
+*.out
+*.pdf
+*.run.xml
+ *.synctex.gz
+*.toc
+*-blx.bib
+_minted/
