@@ -1,0 +1,168 @@
+% !TeX TXS-program:compile = txs:///pdflatex/[--shell-escape]
+\documentclass[12pt,a4paper,twoside=false,% twoside=true zum drucken!
+BCOR=12mm,%
+DIV=14,%
+headsepline,%
+cleardoublepage=empty,%
+chapterprefix,%
+parskip,%
+listof=totoc,%
+index=totoc,%
+bibliography=totoc]{scrbook}
+
+%\usepackage[english, ngerman]{babel} % Deutsch
+\usepackage[ngerman, english]{babel} % Englisch
+
+\PassOptionsToPackage{hyphens}{url}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[babel]{csquotes}
+\usepackage[style=alphabetic, backend=bibtex]{biblatex}
+\usepackage{mathptmx}
+\usepackage[scaled=0.92]{helvet}
+\usepackage{courier}
+\usepackage[calc]{datetime2}
+\usepackage{amsmath}
+\makeatletter
+\def\displaymath{\typeout{*** Do not use DISPLAYMATH. Use \[...\] instead ***}}
+\def\eqnarray{\typeout{*** Do not use EQNARRAY(*). Use align(*)-environment instead ***}}
+\makeatother
+\usepackage{amsfonts}
+\usepackage{amstext}
+\usepackage{subfigure}
+\usepackage{color}
+\usepackage{graphicx}
+\usepackage{ifpdf}
+\usepackage{iflang}
+\usepackage{makeidx}
+\usepackage{nomencl}
+\usepackage{setspace}
+\usepackage{lscape}
+\usepackage{tabularx}
+\usepackage{booktabs}
+\usepackage{todonotes}
+\usepackage{listings}
+\usepackage[chapter]{minted}
+\usepackage[%
+    binary-units=true,
+    per-mode=symbol,
+    exponent-product=\cdot,
+    range-units=single,
+    exponent-to-prefix=true,
+    zero-decimal-to-integer=true,
+    list-units=single
+    ]{siunitx}
+
+% first include the hyperref package, then the cite package
+\usepackage[plainpages=false,pdfpagelabels]{hyperref}
+\usepackage[english]{cleveref}
+
+\def\mauve{0}
+\def\graffi{1}
+
+\input{thesis_meta}
+
+\IfLanguageName{ngerman}{
+    \newcommand{\thesistype}{\graduationlevel{}arbeit}
+}{
+    \newcommand{\thesistype}{\graduationlevel{}'s Thesis}
+}
+\newcommand{\thesistypegerman}{\graduationlevel{}arbeit}
+
+\ifpdf
+    \definecolor{brown}{cmyk}{0, 0.81, 1, 0.60}
+    \hypersetup{%
+      pdftitle={\thesistitle{}},
+      pdfsubject={\thesistype{}},
+      pdfauthor={\thesisauthor{}},
+      pdfkeywords={\thesiskeywords{}},
+      colorlinks=false, urlcolor=blue, citecolor=brown,
+      bookmarksnumbered=true,
+    }
+\else   
+\fi
+
+\DefineBibliographyStrings{ngerman}{%
+    mathesis = {Masterarbeit},
+    bathesis = {Bachelorarbeit},
+    phdthesis = {Dissertation}
+}
+
+\DefineBibliographyStrings{english}{%
+    mathesis = {Master's Thesis},
+    bathesis = {Bachelor's Thesis},
+    phdthesis = {PhD Thesis}
+}
+
+\listfiles
+\makeindex
+
+% Include all BibTeX resources in the preambel
+\addbibresource{bib/example.bib}
+
+\begin{document}
+\onehalfspacing
+
+\frontmatter
+
+\include{static/titlepage}
+
+\cleardoublepage
+
+\input{abstract}
+
+\cleardoublepage
+
+\input{acknowledgements}
+
+\cleardoublepage
+
+\pdfbookmark[0]{\contentsname}{content}
+\tableofcontents
+
+\listoffigures % entfernen, wenn leer
+
+\listoftables % entfernen, wenn leer
+
+\listoflistings % entfernen, wenn leer
+
+\mainmatter
+
+\cleardoublepage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%    Beginning of the main document        %%
+%%                                          %%
+%%    Include your tex-files with \input{}  %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\input{chapters/introduction}
+\input{chapters/background}
+\input{chapters/gaic_task}
+\input{chapters/methodology}
+\input{chapters/experiments}
+\input{chapters/discussion}
+\input{chapters/conclusion}
+
+% Auskommentieren, falls kein Anhang notwendig
+\input{anhang}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%    End of the main document              %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\backmatter
+
+\printbibliography
+
+\cleardoublepage
+
+\printindex
+
+\include{static/declaration}
+
+\cleardoublepage
+
+%\input{cd}
+
+\end{document}
