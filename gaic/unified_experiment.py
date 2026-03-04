@@ -282,7 +282,6 @@ def classify(client: OpenAI, cfg: dict, sentence: str, context: str) -> str:
                 {"role": "user", "content": user_prompt},
             ],
             temperature=cfg["temperature"],
-            max_tokens=cfg["max_tokens"],
         )
         return normalize_label(resp.choices[0].message.content or "")
     except Exception as e:

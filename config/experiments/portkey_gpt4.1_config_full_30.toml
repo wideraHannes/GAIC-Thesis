@@ -10,7 +10,6 @@ output_dir = "experiments/unified_outputs"
 provider = "portkey"
 model = "@azure-openai-foundry/gpt-4.1"
 temperature = 0.0
-max_tokens = 5
 
 [context]
 # To enable document context (2 preceding sentences), add "document_context" to sources

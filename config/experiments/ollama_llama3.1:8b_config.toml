@@ -8,7 +8,6 @@ output_dir = "experiments/unified_outputs"
 provider = "ollama"  # "ollama" or "openai"
 model = "llama3.1:8b"
 temperature = 0.0
-max_tokens = 5
 api_key = ""  # only needed for openai
 
 [context]

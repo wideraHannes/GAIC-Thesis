@@ -7,7 +7,6 @@ output_dir = "experiments/v1/mistral_small_24b"
 provider = "mistral"
 model = "mistral-small-latest"
 temperature = 0.0
-max_tokens = 5
 
 [context]
 sources = ["definition", "guideline"]

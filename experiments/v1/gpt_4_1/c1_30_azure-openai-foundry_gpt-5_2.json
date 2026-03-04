@@ -1,0 +1,467 @@
+{
+  "timestamp": "2026-03-05T00:39:43.414108",
+  "config_path": "config/experiments/v1/gpt_4_1/c1.toml",
+  "config": {
+    "experiment": {
+      "experiment_name": "c1",
+      "sample_size": 30,
+      "output_dir": "experiments/v1/gpt_4_1"
+    },
+    "llm": {
+      "provider": "portkey",
+      "model": "@azure-openai-foundry/gpt-5.2",
+      "temperature": 0.0
+    },
+    "context": {
+      "sources": [
+        "definition"
+      ]
+    },
+    "datasets": {
+      "enabled": [
+        "ABSTRCT"
+      ]
+    }
+  },
+  "prompts": {
+    "system": "## Role\nYou are a Dataset Annotator.\n\n## Task\nClassify the input as exactly one of these two labels:\n- \"Argument\"\n- \"No-Argument\"\n\n## Output Format\nRespond with ONLY the label. No explanation. No other text.\n\n## Rules\n- Classify as \"Argument\" if the sentence matches the definition below.\n- Classify as \"No-Argument\" otherwise.\n\n{context}",
+    "user": "{sentence}"
+  },
+  "model": "@azure-openai-foundry/gpt-5.2",
+  "sample_size": 30,
+  "context_sources": [
+    "definition"
+  ],
+  "datasets": {
+    "ABSTRCT": {
+      "n_samples": 30,
+      "reports": {
+        "original": {
+          "Argument": {
+            "precision": 0.631578947368421,
+            "recall": 0.8,
+            "f1-score": 0.7058823529411765,
+            "support": 15.0
+          },
+          "No-Argument": {
+            "precision": 0.7272727272727273,
+            "recall": 0.5333333333333333,
+            "f1-score": 0.6153846153846154,
+            "support": 15.0
+          },
+          "accuracy": 0.6666666666666666,
+          "macro avg": {
+            "precision": 0.6794258373205742,
+            "recall": 0.6666666666666667,
+            "f1-score": 0.660633484162896,
+            "support": 30.0
+          },
+          "weighted avg": {
+            "precision": 0.6794258373205742,
+            "recall": 0.6666666666666666,
+            "f1-score": 0.6606334841628959,
+            "support": 30.0
+          }
+        },
+        "content_only": {
+          "Argument": {
+            "precision": 0.6428571428571429,
+            "recall": 0.6,
+            "f1-score": 0.6206896551724138,
+            "support": 15.0
+          },
+          "No-Argument": {
+            "precision": 0.625,
+            "recall": 0.6666666666666666,
+            "f1-score": 0.6451612903225806,
+            "support": 15.0
+          },
+          "accuracy": 0.6333333333333333,
+          "macro avg": {
+            "precision": 0.6339285714285714,
+            "recall": 0.6333333333333333,
+            "f1-score": 0.6329254727474972,
+            "support": 30.0
+          },
+          "weighted avg": {
+            "precision": 0.6339285714285715,
+            "recall": 0.6333333333333333,
+            "f1-score": 0.6329254727474972,
+            "support": 30.0
+          }
+        },
+        "shuffle": {
+          "Argument": {
+            "precision": 0.5,
+            "recall": 0.2,
+            "f1-score": 0.2857142857142857,
+            "support": 15.0
+          },
+          "No-Argument": {
+            "precision": 0.5,
+            "recall": 0.8,
+            "f1-score": 0.6153846153846154,
+            "support": 15.0
+          },
+          "accuracy": 0.5,
+          "macro avg": {
+            "precision": 0.5,
+            "recall": 0.5,
+            "f1-score": 0.45054945054945056,
+            "support": 30.0
+          },
+          "weighted avg": {
+            "precision": 0.5,
+            "recall": 0.5,
+            "f1-score": 0.4505494505494506,
+            "support": 30.0
+          }
+        }
+      },
+      "macro_f1_original": 0.6606,
+      "macro_f1_content_only": 0.6329,
+      "macro_f1_shuffle": 0.4505,
+      "delta_content_only": -0.0277,
+      "delta_shuffle": -0.2101,
+      "samples": [
+        {
+          "id": "ABSTRCT-dev-1",
+          "sentence": "Long-term relief of symptoms has the potential to improve overall quality of life and increase compliance with anti-oestrogen medications for breast cancer.",
+          "true_label": "Argument",
+          "sent_original": "Long-term relief of symptoms has the potential to improve overall quality of life and increase compliance with anti-oestrogen medications for breast cancer.",
+          "sent_content_only": "long term relief symptoms potential improve overall quality life increase compliance anti oestrogen medications breast cancer",
+          "sent_shuffle": "cancer. the of compliance overall life with for potential and medications increase quality relief of has anti-oestrogen to improve Long-term symptoms breast",
+          "pred_original": "No-Argument",
+          "pred_content_only": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "ABSTRCT-dev-2",
+          "sentence": "However, the complication rate was lower in the viscocanalostomy group.",
+          "true_label": "Argument",
+          "sent_original": "However, the complication rate was lower in the viscocanalostomy group.",
+          "sent_content_only": "complication rate lower viscocanalostomy group",
+          "sent_shuffle": "the rate complication viscocanalostomy lower in group. was However, the",
+          "pred_original": "Argument",
+          "pred_content_only": "Argument",
+          "pred_shuffle": "Argument"
+        },
+        {
+          "id": "ABSTRCT-dev-3",
+          "sentence": "Despite higher rates of some adverse effects (anemia, abdominal pain, constipation, fatigue) the overall toxicity profile of vinflunine was manageable.",
+          "true_label": "Argument",
+          "sent_original": "Despite higher rates of some adverse effects (anemia, abdominal pain, constipation, fatigue) the overall toxicity profile of vinflunine was manageable.",
+          "sent_content_only": "higher rates adverse effects anemia abdominal pain constipation fatigue overall toxicity profile vinflunine manageable",
+          "sent_shuffle": "manageable. adverse toxicity some pain, overall profile was effects the vinflunine constipation, higher fatigue) rates of (anemia, abdominal Despite of",
+          "pred_original": "Argument",
+          "pred_content_only": "Argument",
+          "pred_shuffle": "Argument"
+        },
+        {
+          "id": "ABSTRCT-dev-4",
+          "sentence": "Despite considerable improvement in the treatment of advanced ovarian cancer, the optimization of efficacy and tolerability remains an important issue.",
+          "true_label": "Argument",
+          "sent_original": "Despite considerable improvement in the treatment of advanced ovarian cancer, the optimization of efficacy and tolerability remains an important issue.",
+          "sent_content_only": "considerable improvement treatment advanced ovarian cancer optimization efficacy tolerability remains important issue",
+          "sent_shuffle": "issue. treatment and the cancer, efficacy tolerability important of of an the considerable optimization improvement remains advanced ovarian Despite in",
+          "pred_original": "No-Argument",
+          "pred_content_only": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "ABSTRCT-dev-5",
+          "sentence": "Tenofovir disoproxil fumarate (TDF) monotherapy was effective and well tolerated without TDF resistance development in CHB patients with LAM-R, for up to 240weeks.",
+          "true_label": "Argument",
+          "sent_original": "Tenofovir disoproxil fumarate (TDF) monotherapy was effective and well tolerated without TDF resistance development in CHB patients with LAM-R, for up to 240weeks.",
+          "sent_content_only": "tenofovir disoproxil fumarate tdf monotherapy effective tolerated tdf resistance development chb patients lam r 240weeks",
+          "sent_shuffle": "patients CHB fumarate in was development with resistance 240weeks. effective tolerated disoproxil for TDF without to monotherapy LAM-R, and well Tenofovir (TDF) up",
+          "pred_original": "Argument",
+          "pred_content_only": "Argument",
+          "pred_shuffle": "Argument"
+        },
+        {
+          "id": "ABSTRCT-dev-6",
+          "sentence": "KAMUT khorasan is an ancient grain with widely acclaimed health benefits.",
+          "true_label": "Argument",
+          "sent_original": "KAMUT khorasan is an ancient grain with widely acclaimed health benefits.",
+          "sent_content_only": "kamut khorasan ancient grain widely acclaimed health benefits",
+          "sent_shuffle": "widely an is acclaimed grain with health ancient KAMUT khorasan benefits.",
+          "pred_original": "No-Argument",
+          "pred_content_only": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "ABSTRCT-dev-7",
+          "sentence": "AT represents a valid option for the treatment of MBC.",
+          "true_label": "Argument",
+          "sent_original": "AT represents a valid option for the treatment of MBC.",
+          "sent_content_only": "represents valid option treatment mbc",
+          "sent_shuffle": "treatment valid a of for the MBC. option AT represents",
+          "pred_original": "Argument",
+          "pred_content_only": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "ABSTRCT-dev-8",
+          "sentence": "GEM is equally effective in controlling 'disease-specific' symptoms, but superior in controlling 'constitutional' symptoms.",
+          "true_label": "Argument",
+          "sent_original": "GEM is equally effective in controlling 'disease-specific' symptoms, but superior in controlling 'constitutional' symptoms.",
+          "sent_content_only": "gem equally effective controlling disease specific symptoms superior controlling constitutional symptoms",
+          "sent_shuffle": "but 'constitutional' symptoms, 'disease-specific' symptoms. controlling controlling equally superior effective in GEM is in",
+          "pred_original": "Argument",
+          "pred_content_only": "Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "ABSTRCT-dev-9",
+          "sentence": "The patient accrual to this trial made its results inconclusive, but several observations are notable.",
+          "true_label": "Argument",
+          "sent_original": "The patient accrual to this trial made its results inconclusive, but several observations are notable.",
+          "sent_content_only": "patient accrual trial results inconclusive observations notable",
+          "sent_shuffle": "results are its made notable. observations trial accrual inconclusive, to this several The patient but",
+          "pred_original": "Argument",
+          "pred_content_only": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "ABSTRCT-dev-10",
+          "sentence": "While a higher rate of side effects, albeit mild to moderate, was detected with 1/3 dose bacillus Calmette-Gu\u00e9rin compared to gemcitabine, our study failed to show significant differences between the 2 drugs in terms of quality of life.",
+          "true_label": "Argument",
+          "sent_original": "While a higher rate of side effects, albeit mild to moderate, was detected with 1/3 dose bacillus Calmette-Gu\u00e9rin compared to gemcitabine, our study failed to show significant differences between the 2 drugs in terms of quality of life.",
+          "sent_content_only": "higher rate effects mild moderate detected dose bacillus calmette gu\u00e9rin compared gemcitabine study failed significant differences 2 drugs terms quality life",
+          "sent_shuffle": "was terms moderate, in of the detected side show 2 differences of to to rate to gemcitabine, study bacillus life. drugs significant While of with compared higher quality between failed our effects, mild 1/3 dose Calmette-Gu\u00e9rin a albeit",
+          "pred_original": "Argument",
+          "pred_content_only": "Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "ABSTRCT-dev-11",
+          "sentence": "ONJ is multifactorial and no single treatment modality is likely to reverse it; however, it is treatable and even advanced presentations can improve with intensive multimodal therapy.",
+          "true_label": "Argument",
+          "sent_original": "ONJ is multifactorial and no single treatment modality is likely to reverse it; however, it is treatable and even advanced presentations can improve with intensive multimodal therapy.",
+          "sent_content_only": "onj multifactorial single treatment modality likely reverse treatable advanced presentations improve intensive multimodal therapy",
+          "sent_shuffle": "treatable it; likely therapy. advanced treatment single to is improve reverse even is it intensive however, multifactorial and multimodal no can modality is with ONJ and presentations",
+          "pred_original": "Argument",
+          "pred_content_only": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "ABSTRCT-dev-12",
+          "sentence": "In patients undergoing a restorative resection for low rectal cancer, a colonic JP offers significant advantages in function over an SA or a coloplasty.",
+          "true_label": "Argument",
+          "sent_original": "In patients undergoing a restorative resection for low rectal cancer, a colonic JP offers significant advantages in function over an SA or a coloplasty.",
+          "sent_content_only": "patients undergoing restorative resection low rectal cancer colonic jp offers significant advantages function sa coloplasty",
+          "sent_shuffle": "advantages resection over coloplasty. offers a function colonic significant in patients JP or for cancer, undergoing a restorative an low rectal In a SA",
+          "pred_original": "Argument",
+          "pred_content_only": "Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "ABSTRCT-dev-13",
+          "sentence": "Provision of multimodal exercise programs will improve the short-term health of women undergoing adjuvant therapy for breast cancer but are of questionable economic efficiency.",
+          "true_label": "Argument",
+          "sent_original": "Provision of multimodal exercise programs will improve the short-term health of women undergoing adjuvant therapy for breast cancer but are of questionable economic efficiency.",
+          "sent_content_only": "provision multimodal exercise programs improve short term health women undergoing adjuvant therapy breast cancer questionable economic efficiency",
+          "sent_shuffle": "for will but efficiency. adjuvant of cancer women therapy breast of undergoing questionable improve health multimodal economic programs are the short-term Provision exercise of",
+          "pred_original": "Argument",
+          "pred_content_only": "Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "ABSTRCT-dev-14",
+          "sentence": "These findings demonstrate that a docetaxel plus platinum combination is an effective treatment option with a favorable therapeutic index for first-line treatment of advanced or metastatic NSCLC.",
+          "true_label": "Argument",
+          "sent_original": "These findings demonstrate that a docetaxel plus platinum combination is an effective treatment option with a favorable therapeutic index for first-line treatment of advanced or metastatic NSCLC.",
+          "sent_content_only": "findings demonstrate docetaxel platinum combination effective treatment option favorable therapeutic index line treatment advanced metastatic nsclc",
+          "sent_shuffle": "favorable treatment is NSCLC. for plus docetaxel an a of effective index findings with or option demonstrate therapeutic metastatic a treatment platinum combination advanced These that first-line",
+          "pred_original": "Argument",
+          "pred_content_only": "Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "ABSTRCT-dev-15",
+          "sentence": "Thus, elderly patients in need of intensified chemotherapy may receive FLOT without compromising patient-reported outcome parameters.",
+          "true_label": "Argument",
+          "sent_original": "Thus, elderly patients in need of intensified chemotherapy may receive FLOT without compromising patient-reported outcome parameters.",
+          "sent_content_only": "elderly patients need intensified chemotherapy receive flot compromising patient reported outcome parameters",
+          "sent_shuffle": "chemotherapy receive of intensified outcome FLOT compromising may elderly patients patient-reported parameters. need without Thus, in",
+          "pred_original": "Argument",
+          "pred_content_only": "Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "ABSTRCT-dev-171",
+          "sentence": "Conversion to glaucoma was found to be related to both the baseline and post-treatment IOP levels.",
+          "true_label": "No-Argument",
+          "sent_original": "Conversion to glaucoma was found to be related to both the baseline and post-treatment IOP levels.",
+          "sent_content_only": "conversion glaucoma found related baseline post treatment iop levels",
+          "sent_shuffle": "related both to be IOP the and to to glaucoma post-treatment levels. found baseline Conversion was",
+          "pred_original": "Argument",
+          "pred_content_only": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "ABSTRCT-dev-172",
+          "sentence": "A target IOP of 21 mm Hg at 6 months was achieved in 53 of 56 (95%) eyes in the 5-FU group and 54 of 57 (95%) eyes in the MMC group (P = 1.00).",
+          "true_label": "No-Argument",
+          "sent_original": "A target IOP of 21 mm Hg at 6 months was achieved in 53 of 56 (95%) eyes in the 5-FU group and 54 of 57 (95%) eyes in the MMC group (P = 1.00).",
+          "sent_content_only": "target iop 21 6 months achieved 53 56 95 eyes 5 fu group 54 57 95 eyes mmc group p 1.00",
+          "sent_shuffle": "months in mm 5-FU group and the (95%) (95%) of of was achieved eyes 6 the MMC Hg 57 A = 53 in IOP (P in group of 54 21 1.00). 56 eyes target at",
+          "pred_original": "Argument",
+          "pred_content_only": "Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "ABSTRCT-dev-173",
+          "sentence": "Grade 3 or 4 neutropenia was more frequent in GEM-treated patients versus PLD-treated patients (P = .007).",
+          "true_label": "No-Argument",
+          "sent_original": "Grade 3 or 4 neutropenia was more frequent in GEM-treated patients versus PLD-treated patients (P = .007).",
+          "sent_content_only": "grade 3 4 neutropenia frequent gem treated patients pld treated patients p = .007",
+          "sent_shuffle": "frequent patients was more = (P patients GEM-treated in 3 or PLD-treated .007). neutropenia versus Grade 4",
+          "pred_original": "Argument",
+          "pred_content_only": "Argument",
+          "pred_shuffle": "Argument"
+        },
+        {
+          "id": "ABSTRCT-dev-174",
+          "sentence": "This randomized, multicenter, phase III study compared doxorubicin and docetaxel (AT) with doxorubicin and cyclophosphamide (AC) as first-line chemotherapy (CT) in metastatic breast cancer (MBC).",
+          "true_label": "No-Argument",
+          "sent_original": "This randomized, multicenter, phase III study compared doxorubicin and docetaxel (AT) with doxorubicin and cyclophosphamide (AC) as first-line chemotherapy (CT) in metastatic breast cancer (MBC).",
+          "sent_content_only": "randomized multicenter phase iii study compared doxorubicin docetaxel doxorubicin cyclophosphamide ac line chemotherapy ct metastatic breast cancer mbc",
+          "sent_shuffle": "as doxorubicin docetaxel (CT) chemotherapy compared study (AT) (AC) metastatic with first-line randomized, cyclophosphamide breast and multicenter, cancer III (MBC). doxorubicin and This phase in",
+          "pred_original": "No-Argument",
+          "pred_content_only": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "ABSTRCT-dev-175",
+          "sentence": "Therapy was switched to open-label latanoprost pm and timolol am and pm for uncontrolled IOP.",
+          "true_label": "No-Argument",
+          "sent_original": "Therapy was switched to open-label latanoprost pm and timolol am and pm for uncontrolled IOP.",
+          "sent_content_only": "therapy switched open label latanoprost pm timolol pm uncontrolled iop",
+          "sent_shuffle": "timolol uncontrolled and pm IOP. for latanoprost switched am to open-label pm Therapy was and",
+          "pred_original": "No-Argument",
+          "pred_content_only": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "ABSTRCT-dev-176",
+          "sentence": "The intraocular pressure reductions with brinzolamide two and three times daily were clinically and statistically equivalent.",
+          "true_label": "No-Argument",
+          "sent_original": "The intraocular pressure reductions with brinzolamide two and three times daily were clinically and statistically equivalent.",
+          "sent_content_only": "intraocular pressure reductions brinzolamide times daily clinically statistically equivalent",
+          "sent_shuffle": "and times brinzolamide two statistically daily clinically three intraocular pressure and equivalent. with were The reductions",
+          "pred_original": "Argument",
+          "pred_content_only": "Argument",
+          "pred_shuffle": "Argument"
+        },
+        {
+          "id": "ABSTRCT-dev-177",
+          "sentence": "The experimental group (n\u2009=\u200919) was administered antiviral agents along with Korean Red Ginseng powder capsules (each dose is 1 gram (two capsules), a one-day dose is 3 grams).",
+          "true_label": "No-Argument",
+          "sent_original": "The experimental group (n\u2009=\u200919) was administered antiviral agents along with Korean Red Ginseng powder capsules (each dose is 1 gram (two capsules), a one-day dose is 3 grams).",
+          "sent_content_only": "experimental group = 19 administered antiviral agents korean red ginseng powder capsules dose 1 gram capsules day dose 3 grams",
+          "sent_shuffle": "is Ginseng along dose (two was 19) Korean with powder agents one-day grams). gram capsules is experimental Red dose group (each 3 = a administered antiviral capsules), The (n 1",
+          "pred_original": "No-Argument",
+          "pred_content_only": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "ABSTRCT-dev-178",
+          "sentence": "Grade 3 to 4 hematologic toxicity did not exceed 15% in both treatment arms.",
+          "true_label": "No-Argument",
+          "sent_original": "Grade 3 to 4 hematologic toxicity did not exceed 15% in both treatment arms.",
+          "sent_content_only": "grade 3 4 hematologic toxicity exceed 15 treatment arms",
+          "sent_shuffle": "exceed treatment not did arms. both toxicity to 15% 4 hematologic Grade 3 in",
+          "pred_original": "Argument",
+          "pred_content_only": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "ABSTRCT-dev-179",
+          "sentence": "This is a randomized phase II study designed to compare the toxicity profile of a non-platinum-based with a platinum-based regimen in the treatment of advanced non-small cell lung cancer.",
+          "true_label": "No-Argument",
+          "sent_original": "This is a randomized phase II study designed to compare the toxicity profile of a non-platinum-based with a platinum-based regimen in the treatment of advanced non-small cell lung cancer.",
+          "sent_content_only": "randomized phase ii study designed compare toxicity profile non platinum based platinum based regimen treatment advanced non small cell lung cancer",
+          "sent_shuffle": "platinum-based a the treatment the study II profile toxicity non-platinum-based compare advanced regimen cancer. with cell is of a a lung phase non-small designed to of This randomized in",
+          "pred_original": "No-Argument",
+          "pred_content_only": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "ABSTRCT-dev-180",
+          "sentence": "Chronic hepatitis B management is commonly targeted at reducing viral replication.",
+          "true_label": "No-Argument",
+          "sent_original": "Chronic hepatitis B management is commonly targeted at reducing viral replication.",
+          "sent_content_only": "chronic hepatitis b management commonly targeted reducing viral replication",
+          "sent_shuffle": "at management B reducing commonly targeted viral is Chronic hepatitis replication.",
+          "pred_original": "No-Argument",
+          "pred_content_only": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "ABSTRCT-dev-181",
+          "sentence": "Long-term clinical implications of findings are not known.",
+          "true_label": "No-Argument",
+          "sent_original": "Long-term clinical implications of findings are not known.",
+          "sent_content_only": "long term clinical implications findings known",
+          "sent_shuffle": "of findings not known. implications are Long-term clinical",
+          "pred_original": "No-Argument",
+          "pred_content_only": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "ABSTRCT-dev-182",
+          "sentence": "Pragmatic randomised controlled prospective open trial.",
+          "true_label": "No-Argument",
+          "sent_original": "Pragmatic randomised controlled prospective open trial.",
+          "sent_content_only": "pragmatic randomised controlled prospective open trial",
+          "sent_shuffle": "prospective randomised controlled open Pragmatic trial.",
+          "pred_original": "No-Argument",
+          "pred_content_only": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "ABSTRCT-dev-183",
+          "sentence": "CI -1.54% to 10.80%, P = 0.1493).",
+          "true_label": "No-Argument",
+          "sent_original": "CI -1.54% to 10.80%, P = 0.1493).",
+          "sent_content_only": "ci -1.54 10.80 p = 0.1493",
+          "sent_shuffle": "-1.54% 10.80%, P to 0.1493). CI =",
+          "pred_original": "Argument",
+          "pred_content_only": "Argument",
+          "pred_shuffle": "No-Argument"
+        },
+        {
+          "id": "ABSTRCT-dev-184",
+          "sentence": "The median overall survival (OS) was 34.1 and 30.7 months in Arms A and B, respectively (HR 0.98; 95% CI 0.81-1.18, P = 0.82).",
+          "true_label": "No-Argument",
+          "sent_original": "The median overall survival (OS) was 34.1 and 30.7 months in Arms A and B, respectively (HR 0.98; 95% CI 0.81-1.18, P = 0.82).",
+          "sent_content_only": "median overall survival os 34.1 30.7 months arms b respectively hr 0.98 95 ci 0.81 1.18 p = 0.82",
+          "sent_shuffle": "respectively was 95% 0.82). and in 0.98; Arms B, (HR median A P 34.1 months overall = (OS) CI and 30.7 The survival 0.81-1.18,",
+          "pred_original": "Argument",
+          "pred_content_only": "Argument",
+          "pred_shuffle": "Argument"
+        },
+        {
+          "id": "ABSTRCT-dev-185",
+          "sentence": "Trends observed for the treatment groups were similar.",
+          "true_label": "No-Argument",
+          "sent_original": "Trends observed for the treatment groups were similar.",
+          "sent_content_only": "trends observed treatment groups similar",
+          "sent_shuffle": "the treatment were similar. for groups Trends observed",
+          "pred_original": "No-Argument",
+          "pred_content_only": "No-Argument",
+          "pred_shuffle": "No-Argument"
+        }
+      ]
+    }
+  },
+  "overall": {
+    "mean_macro_f1_original": 0.6606,
+    "mean_macro_f1_content_only": 0.6329,
+    "mean_macro_f1_shuffle": 0.4505,
+    "mean_delta_content_only": -0.0277,
+    "mean_delta_shuffle": -0.2101
+  }
+}
