@@ -59,9 +59,6 @@ def dataset_from_id(id_: str) -> str:
     return id_.rsplit("-", 2)[0]
 
 
-# Simple general definition for no-context experiments
-SIMPLE_ARGUMENT_DEFINITION = "An argument is a statement that makes a claim or provides reasoning to support or oppose a position."
-
 # Map of context source names to their file names, dataset.json fallback keys,
 # and the capability flag that must be true in dataset.json
 CONTEXT_SOURCES = {
@@ -79,8 +76,8 @@ CONTEXT_SOURCES = {
         "capability": "has_document_context",
         "per_sample": True,  # Loaded per sample, not per dataset
     },
-    "simple_definition": {
-        "simple": True,  # Special flag for hardcoded simple definition
+    "zero_shot": {
+        "zero_shot": True,  # True zero-shot: no definition, no context
     },
 }
 
@@ -119,10 +116,10 @@ def load_context(dataset: str, sources: list[str]) -> dict[str, str]:
                 )
             continue
 
-        # Handle simple definition (hardcoded, not file-based)
-        if spec.get("simple", False):
-            result[source] = SIMPLE_ARGUMENT_DEFINITION
-            logger.info(f"Using hardcoded simple definition for {dataset}")
+        # Handle zero-shot (simple criteria, no dataset-specific definition)
+        if spec.get("zero_shot", False):
+            result[source] = ZERO_SHOT_CONTEXT
+            logger.info(f"Zero-shot mode for {dataset} (using simple criteria)")
             continue
 
         # check capability flag — skip if explicitly false
@@ -165,7 +162,7 @@ def assemble_context(context: dict[str, str], document_context: str = "") -> str
     parts = []
     labels = {
         "definition": "Argument Definition",
-        "simple_definition": "Argument Definition",
+        "zero_shot": "Classification Criteria",
         "guideline": "Annotation Guideline",
         "document_context": "Document Context (Preceding Sentences)",
     }
@@ -217,6 +214,10 @@ MANIPULATIONS = {
 
 
 # -- prompts --
+
+# Zero-shot context: simple classification criteria without dataset-specific definitions
+ZERO_SHOT_CONTEXT = """- "Argument" if the sentence is argumentative
+- "No-Argument" if the sentence is not argumentative"""
 
 SYSTEM_PROMPT = """## Role
 You are a Dataset Annotator. Classify the input as "Argument" or "No-Argument".

@@ -13,7 +13,7 @@ temperature = 0.0
 max_tokens = 5
 
 [context]
-sources = ["simple_definition"]  # uses hardcoded simple definition
+sources = ["zero_shot"]  # true zero-shot: simple criteria, no dataset-specific definition
 
 [datasets]
 enabled = [

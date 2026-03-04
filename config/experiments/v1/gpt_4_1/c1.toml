@@ -1,6 +1,6 @@
 [experiment]
 experiment_name = "c1"
-sample_size = 30
+sample_size = 100
 output_dir = "experiments/v1/gpt_4_1"
 
 [llm]
@@ -13,4 +13,4 @@ max_tokens = 5
 sources = ["definition"]
 
 [datasets]
-enabled = ["ABSTRCT", "ACQUA", "AEC", "AFS", "ARGUMINSCI", "FINARG", "IAM", "PE", "SCIARK", "USELEC"]
+enabled = ["ABSTRCT"]
