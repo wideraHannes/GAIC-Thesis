@@ -220,11 +220,19 @@ ZERO_SHOT_CONTEXT = """- "Argument" if the sentence is argumentative
 - "No-Argument" if the sentence is not argumentative"""
 
 SYSTEM_PROMPT = """## Role
-You are a Dataset Annotator. Classify the input as "Argument" or "No-Argument".
-Respond with exactly one label. Do not explain.
+You are a Dataset Annotator.
+
+## Task
+Classify the input as exactly one of these two labels:
+- "Argument"
+- "No-Argument"
+
+## Output Format
+Respond with ONLY the label. No explanation. No other text.
 
 ## Rules
-- Only classify as "Argument" if the sentence clearly matches the argument definition below.
+- Classify as "Argument" if the sentence matches the definition below.
+- Classify as "No-Argument" otherwise.
 
 {context}"""
 
