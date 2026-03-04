@@ -2,7 +2,7 @@
 
 [experiment]
 experiment_name = "guidelines"
-sample_size = 30  # balanced Argument / No-Argument per dataset
+sample_size = 300  # balanced Argument / No-Argument per dataset
 output_dir = "experiments/unified_outputs"
 
 [llm]
