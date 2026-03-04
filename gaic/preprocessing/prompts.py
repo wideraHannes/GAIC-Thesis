@@ -1,21 +1,26 @@
 """Prompt constants for context extraction."""
 
 DEFINITION_SYSTEM_PROMPT = """\
-You are a precise information synthesizer for scientific papers on argument mining.
+You are an academic text analyst. Read the following dataset paper 
+and extract the definition used to distinguish argumentative from 
+non-argumentative sentences.
 
-Your task: Synthesize a clear, concise definition of what constitutes an argument in this dataset.
+Note: The paper may define multiple argument component types 
+(e.g., claims, premises, evidence). Treat ALL argumentative 
+component types as "Argument".
 
-Synthesis rules:
-1. Distill the definition from the paper into clear, natural prose.
-2. Include what IS an argument AND what is NOT an argument.
-3. Write 3-10 sentences in a cohesive, flowing paragraph.
-4. Do NOT mention the dataset name or refer to "the dataset" or "this dataset" - write the definition generically.
+Output a single concise paragraph (3-5 sentences) that describes 
+what counts as an argument in this dataset and, only if the paper 
+explicitly states it, what does not.
 
-Do NOT include: dataset size, number of annotators, collection methodology, experimental results, model performance, comparisons to other datasets, or author opinions about related work.
-
-This is used as prompt context for an LLM to classify sentences as "Argument" or "No-Argument".
-
-Focus exclusively on: What is an argument in this dataset? What is NOT an argument?"""
+Rules:
+- Use the paper's own terminology but avoid annotation-tool jargon
+- Extract ONLY from this paper's own definition, not from cited 
+  related work
+- Do not invent or infer criteria for non-argumentative text if 
+  the paper does not explicitly describe them
+- No examples, no elaboration, no hedging
+"""
 
 DEFINITION_USER_PROMPT = """\
 Dataset: {dataset_name}
@@ -27,18 +32,24 @@ Dataset: {dataset_name}
 Synthesize the argument definition according to the schema."""
 
 GUIDELINES_SYSTEM_PROMPT = """\
-You are a precise information synthesizer for annotation guidelines documents.
+You are an annotation guideline analyst. Read the following 
+annotation guidelines and extract operational decision rules 
+for annotators.
 
-Your task: Synthesize the decision rules an annotator would use to classify a sentence as "Argument" or "No-Argument".
+Output a concise paragraph (maximum 8 sentences) that describes 
+how annotators decide whether a sentence is argumentative or not. 
+Focus on practical decision rules, signal phrases, and boundary 
+cases — not on restating the theoretical definition. If the 
+guidelines contain worked examples showing annotation decisions, 
+include 2-3 boundary examples with their labels and brief 
+reasoning.
 
-Synthesis rules:
-1. Distill the key criteria into clear, natural prose.
-2. Include examples from the guidelines if available.
-3. Write 3-10 sentences in a cohesive, flowing paragraph.
-4. Use your own words to create a clean summary — avoid copying quoted phrases verbatim.
-5. Do NOT mention the dataset name or refer to "the dataset" or "this dataset" - write the criteria generically.
-
-Do NOT include: annotator training procedures, inter-annotator agreement statistics, dataset logistics, file format descriptions, or references to other papers."""
+Rules:
+- Focus on how to decide ambiguous cases
+- No elaboration, no hedging
+- If the guidelines contain no operational rules beyond the 
+  theoretical definition, write "No additional decision rules 
+  found in guidelines."""
 
 GUIDELINES_USER_PROMPT = """\
 Dataset: {dataset_name}

@@ -1,8 +1,8 @@
 {
   "dataset": "IAM",
-  "extracted_at": "2026-02-08T18:10:04.511446+00:00",
+  "extracted_at": "2026-03-04T22:49:48.810916+00:00",
   "model": "@azure-openai-foundry/gpt-5.2-chat",
-  "definition": "An argument is a context-dependent claim: a general, concise statement that directly takes a position on a given topic by either supporting it or contesting it. Such a claim must express a clear stance toward the topic rather than merely mentioning it, and it is evaluated in relation to that specific topic and its surrounding context. An argument may be accompanied by evidence\u2014sentences that directly support the claim through facts, examples, statistics, or authoritative testimony\u2014and in some cases the same sentence can function as both a claim and its own evidence. Claims can exist even if no supporting evidence is found nearby. What does not count as an argument includes sentences that are purely descriptive, background information, definitions, narratives, or factual statements that do not explicitly support or oppose the topic. Statements that are relevant to the topic but do not assert a clear position, as well as evidence-like sentences that only provide support without an associated claim, are also not considered arguments.",
+  "definition": "In the IAM dataset, an argument consists of context-dependent claims and context-dependent evidence defined with respect to a given debating topic. A context-dependent claim is a general and concise statement that directly supports or contests the given topic, and each such claim is annotated with its stance toward the topic. Context-dependent evidence is a text segment that directly supports a claim in the context of the same topic, and the claim sentence itself may also serve as evidence. Sentences that do not directly support or contest the topic are treated as having no relation and are not considered claims.",
   "guideline": null,
   "document_context": {
     "available": false,
