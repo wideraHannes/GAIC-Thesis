@@ -13,6 +13,7 @@ import json
 import os
 import random
 import sys
+import time
 import tomllib
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from datetime import datetime
@@ -43,11 +44,11 @@ def load_config(path: Path) -> dict:
 
 def load_data() -> tuple[dict[str, str], dict[str, str]]:
     texts, labels = {}, {}
-    with open(GAIC_DATA_DIR / "train.jsonl") as f:
+    with open(GAIC_DATA_DIR / "dev.jsonl") as f:
         for line in f:
             item = json.loads(line)
             texts[item["id"]] = item["sentence"]
-    with open(GAIC_DATA_DIR / "train_labels.jsonl") as f:
+    with open(GAIC_DATA_DIR / "dev_labels.jsonl") as f:
         for line in f:
             item = json.loads(line)
             labels[item["id"]] = item["label"]
@@ -210,7 +211,7 @@ def shuffle_sentence(sentence: str) -> str:
 
 MANIPULATIONS = {
     "original": lambda s: s,
-    "feger": manipulate_sentence,
+    "content_only": manipulate_sentence,
     "shuffle": shuffle_sentence,
 }
 
@@ -250,6 +251,11 @@ def make_client(cfg: dict) -> OpenAI:
         return OpenAI(
             base_url="https://api.together.xyz/v1",
             api_key=os.environ["TOGETHER_API_KEY"],
+        )
+    if provider == "mistral":
+        return OpenAI(
+            base_url="https://api.mistral.ai/v1",
+            api_key=os.environ["MISTRAL_API_KEY"],
         )
     if provider == "openai":
         return OpenAI(api_key=cfg.get("api_key", ""))
@@ -389,7 +395,7 @@ def run(config: dict, config_path: Path | None = None):
         # deltas against original
         f1_original = reports["original"]["macro avg"]["f1-score"]
         deltas = {}
-        for name in ["feger", "shuffle"]:
+        for name in ["content_only", "shuffle"]:
             f1_manip = reports[name]["macro avg"]["f1-score"]
             deltas[f"delta_{name}"] = round(f1_manip - f1_original, 4)
 
@@ -397,7 +403,7 @@ def run(config: dict, config_path: Path | None = None):
             "n_samples": len(y_true),
             "reports": reports,
             "macro_f1_original": round(f1_original, 4),
-            "macro_f1_feger": round(reports["feger"]["macro avg"]["f1-score"], 4),
+            "macro_f1_content_only": round(reports["content_only"]["macro avg"]["f1-score"], 4),
             "macro_f1_shuffle": round(reports["shuffle"]["macro avg"]["f1-score"], 4),
             **deltas,
             "samples": sample_records,
@@ -407,11 +413,15 @@ def run(config: dict, config_path: Path | None = None):
             f"Macro-F1 original: {results['datasets'][dataset]['macro_f1_original']:.4f}"
         )
         logger.info(
-            f"Macro-F1 feger:    {results['datasets'][dataset]['macro_f1_feger']:.4f}  (delta: {deltas['delta_feger']:+.4f})"
+            f"Macro-F1 content_only:    {results['datasets'][dataset]['macro_f1_content_only']:.4f}  (delta: {deltas['delta_content_only']:+.4f})"
         )
         logger.info(
             f"Macro-F1 shuffle:  {results['datasets'][dataset]['macro_f1_shuffle']:.4f}  (delta: {deltas['delta_shuffle']:+.4f})"
         )
+
+        # Rate limit delay between datasets
+        logger.info("Waiting 5 seconds before next dataset (rate limit protection)...")
+        time.sleep(5)
 
     # overall summary
     ds = results["datasets"]
@@ -421,14 +431,14 @@ def run(config: dict, config_path: Path | None = None):
             "mean_macro_f1_original": round(
                 sum(d["macro_f1_original"] for d in ds.values()) / n, 4
             ),
-            "mean_macro_f1_feger": round(
-                sum(d["macro_f1_feger"] for d in ds.values()) / n, 4
+            "mean_macro_f1_content_only": round(
+                sum(d["macro_f1_content_only"] for d in ds.values()) / n, 4
             ),
             "mean_macro_f1_shuffle": round(
                 sum(d["macro_f1_shuffle"] for d in ds.values()) / n, 4
             ),
-            "mean_delta_feger": round(
-                sum(d["delta_feger"] for d in ds.values()) / n, 4
+            "mean_delta_content_only": round(
+                sum(d["delta_content_only"] for d in ds.values()) / n, 4
             ),
             "mean_delta_shuffle": round(
                 sum(d["delta_shuffle"] for d in ds.values()) / n, 4
