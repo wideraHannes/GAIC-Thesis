@@ -2,7 +2,7 @@
 
 ## Overview
 
-Analysis of results from `experiments/v1/` across three models (GPT-4.1, Ministral-14b, Ministral-3b) with definition-only context (c1 config).
+Analysis of results from `experiments/v1/` across four models (GPT-4.1, Mistral-Medium, Ministral-14b, Ministral-3b) with definition-only context (c1 config).
 
 ## Summary Table
 
@@ -19,6 +19,17 @@ Analysis of results from `experiments/v1/` across three models (GPT-4.1, Ministr
 | | SCIARK | 0.722 | 0.697 | 0.384 | -0.025 | -0.338 |
 | | USELEC | 0.653 | 0.514 | 0.317 | -0.139 | -0.336 |
 | | **Average** | **0.650** | **0.588** | **0.364** | | |
+| **Mistral-Medium** | ABSTRCT | 0.665 | 0.550 | 0.403 | -0.115 | -0.262 |
+| | ACQUA | 0.799 | 0.475 | 0.403 | -0.324 | -0.396 |
+| | AEC | 0.514 ⚠️ | 0.457 | 0.384 | -0.057 | -0.130 |
+| | AFS | 0.471 ⚠️ | 0.623 ↑ | 0.467 | +0.152 | -0.005 |
+| | ARGUMINSCI | 0.576 ⚠️ | 0.403 | 0.333 | -0.173 | -0.243 |
+| | FINARG | 0.670 | 0.333 | 0.333 | -0.337 | -0.337 |
+| | IAM | 0.700 | 0.732 ↑ | 0.467 | +0.032 | -0.233 |
+| | PE | 0.566 ⚠️ | 0.400 | 0.403 | -0.166 | -0.163 |
+| | SCIARK | 0.764 | 0.653 | 0.467 | -0.112 | -0.298 |
+| | USELEC | 0.633 | 0.471 | 0.475 | -0.162 | -0.158 |
+| | **Average** | **0.636** | **0.510** | **0.414** | | |
 | **Ministral-14b** | ABSTRCT | 0.367 ⚠️ | 0.630 ↑ | 0.400 | +0.263 | +0.033 |
 | | ACQUA | 0.829 | 0.653 | 0.554 | -0.176 | -0.274 |
 | | AEC | 0.471 ⚠️ | 0.397 | 0.444 | -0.074 | -0.027 |
@@ -57,6 +68,9 @@ The main reason **content_only sometimes outperforms original** is **not** becau
 | GPT-4.1 | AFS | **25/5** | 5/25 | 15/15 |
 | GPT-4.1 | ACQUA | 21/9 | 11/18 | 15/15 |
 | GPT-4.1 | ABSTRCT | 20/10 | 16/14 | 15/15 |
+| Mistral-Medium | AFS | **22/8** | 10/20 | 15/15 |
+| Mistral-Medium | ACQUA | 17/13 | 5/25 | 15/15 |
+| Mistral-Medium | ABSTRCT | 17/13 | 5/25 | 15/15 |
 | Ministral-14b | AFS | **25/5** | 14/16 | 15/15 |
 | Ministral-14b | ABSTRCT | 21/8 | 18/12 | 15/15 |
 
@@ -72,8 +86,9 @@ When **content_only** is applied, the bias often shifts or even inverts. This ca
 
 ### F1 Scores on ABSTRCT
 - **GPT-4.1**: 0.554 (poor)
+- **Mistral-Medium**: 0.665 (good)
 - **Ministral-14b**: 0.367 (very poor)
-- **Ministral-3b**: 0.661 (better)
+- **Ministral-3b**: 0.661 (good)
 
 ### The ABSTRCT Definition Challenge
 
@@ -92,7 +107,7 @@ The ABSTRCT definition requires distinguishing:
 
 **Why GPT-4.1 fails**: It's too "clever" — sees scientific language with comparative statements and assumes they're argumentative. The subtle distinction between claims and observations gets conflated.
 
-**Why Ministral-3b does better**: Simpler models may be less biased by surface-level scientific language patterns.
+**Why Mistral-Medium and Ministral-3b do better**: Both achieve ~0.66 F1 on ABSTRCT. Mistral-Medium shows more balanced prediction bias (17/13) compared to GPT-4.1 (20/10), suggesting it's less prone to over-predicting Argument on scientific text. Interestingly, Ministral-14b (the middle-size model) performs worst (0.367), indicating model size alone doesn't determine performance — architecture and training data matter more.
 
 ---
 
@@ -102,11 +117,13 @@ The ABSTRCT definition requires distinguishing:
 
 **Original**: *"I really don't understand why Americans are convinced that guns are essential these days."*
 - GPT-4.1 predicts **Argument** ❌ (this is rhetorical expression, not argument)
+- Mistral-Medium predicts **Argument** ❌ (same error)
 
 **Content-only**: *"understand americans convinced guns essential days"*
 - GPT-4.1 predicts **No-Argument** ✓
+- Mistral-Medium predicts **No-Argument** ✓
 
-**Explanation**: The discourse marker "I really don't understand why" made GPT-4.1 think this was argumentative. Stripping it exposed that there's no actual claim being made.
+**Explanation**: The discourse marker "I really don't understand why" made both models think this was argumentative. Stripping it exposed that there's no actual claim being made. This pattern is consistent across all 4 models — AFS shows content_only improvement for GPT-4.1 (+0.225), Mistral-Medium (+0.152), and Ministral-14b (+0.083).
 
 ### Case 2: AFS (Feudal Rights)
 
@@ -127,6 +144,16 @@ The ABSTRCT definition requires distinguishing:
 - Some models predict **Argument** ✓
 
 **Explanation**: The word "Despite" signaled a concessive/background sentence. Removing it allowed the model to see this as making a substantive claim about what "remains important."
+
+### Case 4: IAM (Mistral-Medium)
+
+**Original**: *"The reduction in heart attacks associated with public smoking bans is well established."*
+- Mistral-Medium predicts **No-Argument** ❌
+
+**Content-only**: *"reduction heart attacks associated public smoking bans established"*
+- Mistral-Medium predicts **Argument** ✓
+
+**Explanation**: The formal academic phrasing "is well established" may have signaled a background/factual statement rather than an argumentative claim. Removing the copula and hedging language revealed the core argumentative content about smoking bans reducing heart attacks.
 
 ---
 
@@ -151,10 +178,24 @@ Shuffle (M2) results consistently drop performance across all models/datasets:
 | Model | Avg Original | Avg Shuffle | Δ |
 |-------|--------------|-------------|---|
 | GPT-4.1 | 0.650 | 0.364 | -0.286 |
+| Mistral-Medium | 0.636 | 0.414 | -0.222 |
 | Ministral-14b | 0.585 | 0.421 | -0.164 |
 | Ministral-3b | 0.571 | 0.441 | -0.130 |
 
 This confirms models need word order (actual language understanding) and aren't purely relying on bag-of-words lexical shortcuts.
+
+---
+
+## Model Ranking Summary
+
+| Rank | Model | Avg Original F1 | Avg Shuffle Drop | Notes |
+|------|-------|-----------------|------------------|-------|
+| 1 | GPT-4.1 | 0.650 | -0.286 | Best overall, but struggles on ABSTRCT (0.554) |
+| 2 | Mistral-Medium | 0.636 | -0.222 | Strong on ABSTRCT (0.665), consistent across datasets |
+| 3 | Ministral-14b | 0.585 | -0.164 | High variance, very poor on ABSTRCT (0.367) |
+| 4 | Ministral-3b | 0.571 | -0.130 | Most robust to shuffle, good ABSTRCT (0.661) |
+
+**Key observation**: Larger models show larger shuffle drops, suggesting they rely more heavily on word order and syntactic patterns. Smaller models are more "robust" to shuffle but have lower baseline performance.
 
 ---
 
