@@ -1,6 +1,6 @@
 [experiment]
 experiment_name = "c1"
-sample_size = 10
+sample_size = 30
 output_dir = "experiments/v1/mistral_small_24b"
 
 [llm]

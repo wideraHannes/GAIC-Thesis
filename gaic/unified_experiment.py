@@ -393,6 +393,9 @@ def run(config: dict, config_path: Path | None = None):
                     record[f"pred_{name}"] = pred
                 sample_records.append(record)
 
+                # Rate limit: 2 seconds per sample (3 requests) stays under 6 req/sec limit
+                time.sleep(2)
+
         # classification_report per variant
         reports = {}
         for name, y_pred in preds.items():
@@ -426,10 +429,6 @@ def run(config: dict, config_path: Path | None = None):
         logger.info(
             f"Macro-F1 shuffle:  {results['datasets'][dataset]['macro_f1_shuffle']:.4f}  (delta: {deltas['delta_shuffle']:+.4f})"
         )
-
-        # Rate limit delay between datasets
-        logger.info("Waiting 5 seconds before next dataset (rate limit protection)...")
-        time.sleep(5)
 
     # overall summary
     ds = results["datasets"]
