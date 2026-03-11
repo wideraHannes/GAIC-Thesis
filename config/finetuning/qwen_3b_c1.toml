@@ -10,20 +10,24 @@ lora_alpha = 32
 lora_dropout = 0.05
 gradient_checkpointing = true
 
+[data]
+# Balanced sampling: n samples per dataset (n/2 Argument + n/2 No-Argument)
+samples_per_dataset = 10
+eval_samples_per_dataset = 10
+seed = 42
+# datasets = ["ABSTRCT", "ACQUA", ...]  # Optional: defaults to all 10 datasets
+
 [training]
-epochs = 10
+epochs = 3
 batch_size = 2
-gradient_accumulation = 1
+gradient_accumulation = 4
 learning_rate = 2e-4
 warmup_ratio = 0.1
 weight_decay = 0.01
 max_seq_length = 2048
-logging_steps = 1
-eval_steps = 5
-save_steps = 5
-# Debug: limit samples (remove these for full training)
-max_train_samples = 10
-max_eval_samples = 2
+logging_steps = 10
+eval_steps = 50
+save_steps = 50
 
 [context]
 sources = ["definition"]

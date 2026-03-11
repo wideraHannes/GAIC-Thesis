@@ -291,8 +291,10 @@ def classify(client: OpenAI, cfg: dict, sentence: str, context: str) -> str:
 
 def normalize_label(pred: str) -> str:
     p = pred.lower().strip()
-    if "no-argument" in p or "no argument" in p or p == "no":
+    # Check No-Argument first (more specific)
+    if "no-argument" in p or "no argument" in p or "not an argument" in p or p == "no":
         return "No-Argument"
+    # Then check Argument
     if "argument" in p or p == "yes":
         return "Argument"
     return pred
@@ -394,7 +396,7 @@ def run(config: dict, config_path: Path | None = None):
                 sample_records.append(record)
 
                 # Rate limit: 2 seconds per sample (3 requests) stays under 6 req/sec limit
-                time.sleep(2)
+                time.sleep(1)
 
         # classification_report per variant
         reports = {}
