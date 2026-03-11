@@ -37,3 +37,8 @@ Expose_v1.md
 *.toc
 *-blx.bib
 _minted/
+
+wandb/
+
+# Finetuning outputs (model checkpoints are large)
+experiments/finetuning/

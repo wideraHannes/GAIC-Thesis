@@ -1,0 +1,32 @@
+[experiment]
+name = "finetuning_qwen_3b_c1"
+output_dir = "experiments/finetuning/qwen_3b_c1"
+
+[model]
+name = "Qwen/Qwen2.5-3B"
+torch_dtype = "float16"
+lora_r = 16
+lora_alpha = 32
+lora_dropout = 0.05
+gradient_checkpointing = true
+
+[training]
+epochs = 10
+batch_size = 2
+gradient_accumulation = 1
+learning_rate = 2e-4
+warmup_ratio = 0.1
+weight_decay = 0.01
+max_seq_length = 2048
+logging_steps = 1
+eval_steps = 5
+save_steps = 5
+# Debug: limit samples (remove these for full training)
+max_train_samples = 10
+max_eval_samples = 2
+
+[context]
+sources = ["definition"]
+
+[wandb]
+project = "gaic-thesis"
