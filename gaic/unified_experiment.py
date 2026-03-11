@@ -414,7 +414,9 @@ def run(config: dict, config_path: Path | None = None):
             "n_samples": len(y_true),
             "reports": reports,
             "macro_f1_original": round(f1_original, 4),
-            "macro_f1_content_only": round(reports["content_only"]["macro avg"]["f1-score"], 4),
+            "macro_f1_content_only": round(
+                reports["content_only"]["macro avg"]["f1-score"], 4
+            ),
             "macro_f1_shuffle": round(reports["shuffle"]["macro avg"]["f1-score"], 4),
             **deltas,
             "samples": sample_records,

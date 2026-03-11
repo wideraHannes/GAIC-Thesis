@@ -23,6 +23,7 @@ dependencies = [
     "tqdm>=4.67.1",
     "transformers>=5.0.0",
     "umap-learn>=0.5.7",
+    "mistralai>=2.0.0",
 ]
 [tool.setuptools]
 packages = ["gaic", "gaic.preprocessing", "config"]
