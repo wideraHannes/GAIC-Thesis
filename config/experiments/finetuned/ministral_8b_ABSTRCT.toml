@@ -1,0 +1,27 @@
+[experiment]
+experiment_name = "finetuned_ministral_8b_ABSTRCT"
+output_dir = "experiments/finetuned/ministral_8b_ABSTRCT"
+sample_size = 20
+
+[model]
+base_model = "mistralai/Ministral-8B-Instruct-2410"
+adapter_path = "experiments/finetuning/ministral_8b_ABSTRCT/final"
+
+[context]
+sources = ["definition"]
+
+[datasets]
+# Test on all 10 datasets to measure cross-dataset generalization
+# The model was finetuned on ABSTRCT only
+enabled = [
+    "ABSTRCT",    # In-domain (finetuned on this)
+    "ACQUA",      # Out-of-domain
+    "AEC",
+    "AFS",
+    "ARGUMINSCI",
+    "FINARG",
+    "IAM",
+    "PE",
+    "SCIARK",
+    "USELEC",
+]

@@ -29,6 +29,36 @@ ministral_14b,ministral-14b-latest,c1,definition,SCIARK,shuffle,0.55,0.6
 ministral_14b,ministral-14b-latest,c1,definition,USELEC,original,0.6228571428571429,0.6333333333333333
 ministral_14b,ministral-14b-latest,c1,definition,USELEC,content_only,0.4857142857142857,0.5
 ministral_14b,ministral-14b-latest,c1,definition,USELEC,shuffle,0.4444444444444444,0.5333333333333333
+ministral_8b,ministral-8b-latest,c1,definition,ABSTRCT,original,0.7664071190211346,0.7666666666666667
+ministral_8b,ministral-8b-latest,c1,definition,ABSTRCT,content_only,0.5927601809954751,0.6
+ministral_8b,ministral-8b-latest,c1,definition,ABSTRCT,shuffle,0.3650793650793651,0.4666666666666667
+ministral_8b,ministral-8b-latest,c1,definition,ACQUA,original,0.4973180076628352,0.7333333333333333
+ministral_8b,ministral-8b-latest,c1,definition,ACQUA,content_only,0.5622895622895623,0.5666666666666667
+ministral_8b,ministral-8b-latest,c1,definition,ACQUA,shuffle,0.4034090909090909,0.5333333333333333
+ministral_8b,ministral-8b-latest,c1,definition,AEC,original,0.4570135746606335,0.4666666666666667
+ministral_8b,ministral-8b-latest,c1,definition,AEC,content_only,0.3659621802002225,0.36666666666666664
+ministral_8b,ministral-8b-latest,c1,definition,AEC,shuffle,0.3333333333333333,0.5
+ministral_8b,ministral-8b-latest,c1,definition,AFS,original,0.4949494949494949,0.5
+ministral_8b,ministral-8b-latest,c1,definition,AFS,content_only,0.4642857142857143,0.4666666666666667
+ministral_8b,ministral-8b-latest,c1,definition,AFS,shuffle,0.3333333333333333,0.5
+ministral_8b,ministral-8b-latest,c1,definition,ARGUMINSCI,original,0.6827262044653349,0.7
+ministral_8b,ministral-8b-latest,c1,definition,ARGUMINSCI,content_only,0.3333333333333333,0.5
+ministral_8b,ministral-8b-latest,c1,definition,ARGUMINSCI,shuffle,0.3333333333333333,0.5
+ministral_8b,ministral-8b-latest,c1,definition,FINARG,original,0.5238095238095238,0.6
+ministral_8b,ministral-8b-latest,c1,definition,FINARG,content_only,0.3333333333333333,0.5
+ministral_8b,ministral-8b-latest,c1,definition,FINARG,shuffle,0.3333333333333333,0.5
+ministral_8b,ministral-8b-latest,c1,definition,IAM,original,0.696969696969697,0.7
+ministral_8b,ministral-8b-latest,c1,definition,IAM,content_only,0.6228571428571429,0.6333333333333333
+ministral_8b,ministral-8b-latest,c1,definition,IAM,shuffle,0.3333333333333333,0.5
+ministral_8b,ministral-8b-latest,c1,definition,PE,original,0.5833333333333333,0.6
+ministral_8b,ministral-8b-latest,c1,definition,PE,content_only,0.5417156286721504,0.5666666666666667
+ministral_8b,ministral-8b-latest,c1,definition,PE,shuffle,0.3333333333333333,0.5
+ministral_8b,ministral-8b-latest,c1,definition,SCIARK,original,0.7664071190211346,0.7666666666666667
+ministral_8b,ministral-8b-latest,c1,definition,SCIARK,content_only,0.4993581514762516,0.5666666666666667
+ministral_8b,ministral-8b-latest,c1,definition,SCIARK,shuffle,0.3333333333333333,0.5
+ministral_8b,ministral-8b-latest,c1,definition,USELEC,original,0.4642857142857143,0.4666666666666667
+ministral_8b,ministral-8b-latest,c1,definition,USELEC,content_only,0.4857142857142857,0.5
+ministral_8b,ministral-8b-latest,c1,definition,USELEC,shuffle,0.3333333333333333,0.5
 gpt_4_1,@azure-openai-foundry/gpt-4.1,c2,"definition, guideline",ABSTRCT,original,0.8316498316498316,0.8333333333333334
 gpt_4_1,@azure-openai-foundry/gpt-4.1,c2,"definition, guideline",ABSTRCT,content_only,0.6122209165687427,0.6333333333333333
 gpt_4_1,@azure-openai-foundry/gpt-4.1,c2,"definition, guideline",ABSTRCT,shuffle,0.6827262044653349,0.7
