@@ -71,6 +71,18 @@ gpt_4_1,@azure-openai-foundry/gpt-4.1,c2,"definition, guideline",PE,shuffle,0.44
 gpt_4_1,@azure-openai-foundry/gpt-4.1,c2,"definition, guideline",USELEC,original,0.7321428571428572,0.7333333333333333
 gpt_4_1,@azure-openai-foundry/gpt-4.1,c2,"definition, guideline",USELEC,content_only,0.5417156286721504,0.5666666666666667
 gpt_4_1,@azure-openai-foundry/gpt-4.1,c2,"definition, guideline",USELEC,shuffle,0.37264957264957266,0.6
+gpt_4_1,@azure-openai-foundry/gpt-4.1,c3,"definition, guideline, document_context",ABSTRCT,original,0.8660714285714286,0.8666666666666667
+gpt_4_1,@azure-openai-foundry/gpt-4.1,c3,"definition, guideline, document_context",ABSTRCT,content_only,0.7285067873303167,0.7333333333333333
+gpt_4_1,@azure-openai-foundry/gpt-4.1,c3,"definition, guideline, document_context",ABSTRCT,shuffle,0.6914285714285715,0.7
+gpt_4_1,@azure-openai-foundry/gpt-4.1,c3,"definition, guideline, document_context",ARGUMINSCI,original,0.7129186602870814,0.7333333333333333
+gpt_4_1,@azure-openai-foundry/gpt-4.1,c3,"definition, guideline, document_context",ARGUMINSCI,content_only,0.625,0.6666666666666666
+gpt_4_1,@azure-openai-foundry/gpt-4.1,c3,"definition, guideline, document_context",ARGUMINSCI,shuffle,0.466484268125855,0.5666666666666667
+gpt_4_1,@azure-openai-foundry/gpt-4.1,c3,"definition, guideline, document_context",PE,original,0.5833333333333333,0.6
+gpt_4_1,@azure-openai-foundry/gpt-4.1,c3,"definition, guideline, document_context",PE,content_only,0.3616858237547893,0.5333333333333333
+gpt_4_1,@azure-openai-foundry/gpt-4.1,c3,"definition, guideline, document_context",PE,shuffle,0.475,0.5333333333333333
+gpt_4_1,@azure-openai-foundry/gpt-4.1,c3,"definition, guideline, document_context",USELEC,original,0.7963800904977376,0.8
+gpt_4_1,@azure-openai-foundry/gpt-4.1,c3,"definition, guideline, document_context",USELEC,content_only,0.6122209165687427,0.6333333333333333
+gpt_4_1,@azure-openai-foundry/gpt-4.1,c3,"definition, guideline, document_context",USELEC,shuffle,0.4420634920634921,0.6666666666666666
 gpt_4_1,@azure-openai-foundry/gpt-4.1,c1,definition,ABSTRCT,original,0.5542857142857143,0.5666666666666667
 gpt_4_1,@azure-openai-foundry/gpt-4.1,c1,definition,ABSTRCT,content_only,0.5661846496106786,0.5666666666666667
 gpt_4_1,@azure-openai-foundry/gpt-4.1,c1,definition,ABSTRCT,shuffle,0.4444444444444444,0.4666666666666667
@@ -233,36 +245,6 @@ ministral_3b,ministral-3b-latest,c1,definition,SCIARK,shuffle,0.4,0.466666666666
 ministral_3b,ministral-3b-latest,c1,definition,USELEC,original,0.55,0.6
 ministral_3b,ministral-3b-latest,c1,definition,USELEC,content_only,0.5248868778280543,0.5333333333333333
 ministral_3b,ministral-3b-latest,c1,definition,USELEC,shuffle,0.4994438264738599,0.5
-qwen_2.5_7b,Qwen/Qwen2.5-7B-Instruct-Turbo,c1,definition,ABSTRCT,original,0.4607464607464607,0.7
-qwen_2.5_7b,Qwen/Qwen2.5-7B-Instruct-Turbo,c1,definition,ABSTRCT,content_only,0.4420634920634921,0.6666666666666666
-qwen_2.5_7b,Qwen/Qwen2.5-7B-Instruct-Turbo,c1,definition,ABSTRCT,shuffle,0.55,0.6
-qwen_2.5_7b,Qwen/Qwen2.5-7B-Instruct-Turbo,c1,definition,ACQUA,original,0.660633484162896,0.6666666666666666
-qwen_2.5_7b,Qwen/Qwen2.5-7B-Instruct-Turbo,c1,definition,ACQUA,content_only,0.53125,0.5333333333333333
-qwen_2.5_7b,Qwen/Qwen2.5-7B-Instruct-Turbo,c1,definition,ACQUA,shuffle,0.6651785714285714,0.6666666666666666
-qwen_2.5_7b,Qwen/Qwen2.5-7B-Instruct-Turbo,c1,definition,AEC,original,0.4993581514762516,0.5666666666666667
-qwen_2.5_7b,Qwen/Qwen2.5-7B-Instruct-Turbo,c1,definition,AEC,content_only,0.5248868778280543,0.5333333333333333
-qwen_2.5_7b,Qwen/Qwen2.5-7B-Instruct-Turbo,c1,definition,AEC,shuffle,0.3772893772893773,0.43333333333333335
-qwen_2.5_7b,Qwen/Qwen2.5-7B-Instruct-Turbo,c1,definition,AFS,original,0.3650793650793651,0.4666666666666667
-qwen_2.5_7b,Qwen/Qwen2.5-7B-Instruct-Turbo,c1,definition,AFS,content_only,0.7129186602870814,0.7333333333333333
-qwen_2.5_7b,Qwen/Qwen2.5-7B-Instruct-Turbo,c1,definition,AFS,shuffle,0.4993581514762516,0.5666666666666667
-qwen_2.5_7b,Qwen/Qwen2.5-7B-Instruct-Turbo,c1,definition,ARGUMINSCI,original,0.8660714285714286,0.8666666666666667
-qwen_2.5_7b,Qwen/Qwen2.5-7B-Instruct-Turbo,c1,definition,ARGUMINSCI,content_only,0.466484268125855,0.5666666666666667
-qwen_2.5_7b,Qwen/Qwen2.5-7B-Instruct-Turbo,c1,definition,ARGUMINSCI,shuffle,0.466484268125855,0.5666666666666667
-qwen_2.5_7b,Qwen/Qwen2.5-7B-Instruct-Turbo,c1,definition,FINARG,original,0.6329254727474972,0.6333333333333333
-qwen_2.5_7b,Qwen/Qwen2.5-7B-Instruct-Turbo,c1,definition,FINARG,content_only,0.4034090909090909,0.5333333333333333
-qwen_2.5_7b,Qwen/Qwen2.5-7B-Instruct-Turbo,c1,definition,FINARG,shuffle,0.4034090909090909,0.5333333333333333
-qwen_2.5_7b,Qwen/Qwen2.5-7B-Instruct-Turbo,c1,definition,IAM,original,0.7222222222222222,0.7333333333333333
-qwen_2.5_7b,Qwen/Qwen2.5-7B-Instruct-Turbo,c1,definition,IAM,content_only,0.8,0.8
-qwen_2.5_7b,Qwen/Qwen2.5-7B-Instruct-Turbo,c1,definition,IAM,shuffle,0.55,0.6
-qwen_2.5_7b,Qwen/Qwen2.5-7B-Instruct-Turbo,c1,definition,PE,original,0.6411483253588517,0.6666666666666666
-qwen_2.5_7b,Qwen/Qwen2.5-7B-Instruct-Turbo,c1,definition,PE,content_only,0.4444444444444444,0.5333333333333333
-qwen_2.5_7b,Qwen/Qwen2.5-7B-Instruct-Turbo,c1,definition,PE,shuffle,0.38440492476060195,0.5
-qwen_2.5_7b,Qwen/Qwen2.5-7B-Instruct-Turbo,c1,definition,SCIARK,original,0.5183150183150184,0.7
-qwen_2.5_7b,Qwen/Qwen2.5-7B-Instruct-Turbo,c1,definition,SCIARK,content_only,0.55,0.6
-qwen_2.5_7b,Qwen/Qwen2.5-7B-Instruct-Turbo,c1,definition,SCIARK,shuffle,0.3333333333333333,0.5
-qwen_2.5_7b,Qwen/Qwen2.5-7B-Instruct-Turbo,c1,definition,USELEC,original,0.6827262044653349,0.7
-qwen_2.5_7b,Qwen/Qwen2.5-7B-Instruct-Turbo,c1,definition,USELEC,content_only,0.5982142857142857,0.6
-qwen_2.5_7b,Qwen/Qwen2.5-7B-Instruct-Turbo,c1,definition,USELEC,shuffle,0.6411483253588517,0.6666666666666666
 gpt_4_1,@azure-openai-foundry/gpt-4.1,c2,[c1 fallback],ACQUA,original,0.7222222222222222,0.7333333333333333
 gpt_4_1,@azure-openai-foundry/gpt-4.1,c2,[c1 fallback],ACQUA,content_only,0.40170940170940167,0.6
 gpt_4_1,@azure-openai-foundry/gpt-4.1,c2,[c1 fallback],ACQUA,shuffle,0.6827262044653349,0.7
@@ -299,3 +281,21 @@ mistral_medium,mistral-medium-latest,c2,[c1 fallback],IAM,shuffle,0.466484268125
 mistral_medium,mistral-medium-latest,c2,[c1 fallback],SCIARK,original,0.7643097643097643,0.7666666666666667
 mistral_medium,mistral-medium-latest,c2,[c1 fallback],SCIARK,content_only,0.6527777777777778,0.6666666666666666
 mistral_medium,mistral-medium-latest,c2,[c1 fallback],SCIARK,shuffle,0.466484268125855,0.5666666666666667
+gpt_4_1,@azure-openai-foundry/gpt-4.1,c3,[c1 fallback],ACQUA,original,0.7222222222222222,0.7333333333333333
+gpt_4_1,@azure-openai-foundry/gpt-4.1,c3,[c1 fallback],ACQUA,content_only,0.40170940170940167,0.6
+gpt_4_1,@azure-openai-foundry/gpt-4.1,c3,[c1 fallback],ACQUA,shuffle,0.6827262044653349,0.7
+gpt_4_1,@azure-openai-foundry/gpt-4.1,c3,[c1 fallback],AEC,original,0.5970695970695971,0.6333333333333333
+gpt_4_1,@azure-openai-foundry/gpt-4.1,c3,[c1 fallback],AEC,content_only,0.576379974326059,0.6333333333333333
+gpt_4_1,@azure-openai-foundry/gpt-4.1,c3,[c1 fallback],AEC,shuffle,0.20634920634920637,0.43333333333333335
+gpt_4_1,@azure-openai-foundry/gpt-4.1,c3,[c1 fallback],AFS,original,0.4,0.4666666666666667
+gpt_4_1,@azure-openai-foundry/gpt-4.1,c3,[c1 fallback],AFS,content_only,0.625,0.6666666666666666
+gpt_4_1,@azure-openai-foundry/gpt-4.1,c3,[c1 fallback],AFS,shuffle,0.2170542635658915,0.4666666666666667
+gpt_4_1,@azure-openai-foundry/gpt-4.1,c3,[c1 fallback],FINARG,original,0.6651785714285714,0.6666666666666666
+gpt_4_1,@azure-openai-foundry/gpt-4.1,c3,[c1 fallback],FINARG,content_only,0.466484268125855,0.5666666666666667
+gpt_4_1,@azure-openai-foundry/gpt-4.1,c3,[c1 fallback],FINARG,shuffle,0.3333333333333333,0.5
+gpt_4_1,@azure-openai-foundry/gpt-4.1,c3,[c1 fallback],IAM,original,0.7991071428571428,0.8
+gpt_4_1,@azure-openai-foundry/gpt-4.1,c3,[c1 fallback],IAM,content_only,0.8642533936651584,0.8666666666666667
+gpt_4_1,@azure-openai-foundry/gpt-4.1,c3,[c1 fallback],IAM,shuffle,0.3333333333333333,0.5
+gpt_4_1,@azure-openai-foundry/gpt-4.1,c3,[c1 fallback],SCIARK,original,0.7222222222222222,0.7333333333333333
+gpt_4_1,@azure-openai-foundry/gpt-4.1,c3,[c1 fallback],SCIARK,content_only,0.696969696969697,0.7
+gpt_4_1,@azure-openai-foundry/gpt-4.1,c3,[c1 fallback],SCIARK,shuffle,0.38440492476060195,0.5

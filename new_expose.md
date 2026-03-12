@@ -1,5 +1,5 @@
-# Do Decoder-Based LLMs Overcome Shortcut Learning in Argument Identification?
 
+# Do Decoder-Based LLMs Overcome Shortcut Learning in Argument Identification?
 **Investigating Robustness, Context Utilization, and Fine-Tuning Effects in the GAIC @ CLEF 2026 Shared Task**
 
 ---

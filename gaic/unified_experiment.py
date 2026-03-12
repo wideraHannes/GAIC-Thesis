@@ -396,7 +396,7 @@ def run(config: dict, config_path: Path | None = None):
                 sample_records.append(record)
 
                 # Rate limit: 2 seconds per sample (3 requests) stays under 6 req/sec limit
-                time.sleep(1)
+                # time.sleep(1)
 
         # classification_report per variant
         reports = {}

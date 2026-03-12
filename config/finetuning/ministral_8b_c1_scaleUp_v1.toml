@@ -1,0 +1,35 @@
+[experiment]
+name = "finetuning_ministral_8b_ABSTRCT"
+output_dir = "experiments/finetuning/ministral_8b_ABSTRCT_400_samples"
+
+[model]
+name = "mistralai/Ministral-8B-Instruct-2410"
+torch_dtype = "float16"
+lora_r = 16
+lora_alpha = 32
+lora_dropout = 0.05
+gradient_checkpointing = true
+
+[data]
+datasets = ["ABSTRCT"]
+samples_per_dataset = 400
+eval_samples_per_dataset = 20
+seed = 42
+
+[training]
+epochs = 1
+batch_size = 4
+gradient_accumulation = 4
+learning_rate = 2e-4
+warmup_ratio = 0.1
+weight_decay = 0.01
+max_seq_length = 1024
+logging_steps = 1
+eval_steps = 10
+save_steps = 10
+
+[context]
+sources = ["definition"]
+
+[wandb]
+project = "gaic-thesis"

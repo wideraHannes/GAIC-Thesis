@@ -15,3 +15,18 @@ Prompt engineering for structured outputs
 Few-shot learning to improve reliability
 
 Fine-tuning to align LLM behavior with classification objectives
+
+# Huggingface Trainer
+
+For our purpose we use the SFT SuperviseFinetuneTrainer
+
+# Framing of Thesis
+
+research contributes to a broader understanding of: how do we build NLP systems that learn tasks rather than datasets? This connects directly to the foundational concerns about robustness, OOD generalization, and shortcut learning that the entire field is wrestling with.
+
+> For the first time, you can give a model a definition it has never seen during training and ask it to apply that definition. This is closer to how humans work — a human annotator reads the guidelines, understands them, and applies them to new text. If decoders can replicate this for argument mining, that's not just a benchmark improvement. It means:
+
+You could deploy one system across all the application domains I mentioned above, just by swapping the definition in the prompt
+New argument mining datasets wouldn't require retraining — just write new guidelines and point the system at them
+Cross-lingual transfer becomes more feasible — translate the definition, keep the model
+The field moves from building dataset-specific classifiers to building definition-following reasoning systems
