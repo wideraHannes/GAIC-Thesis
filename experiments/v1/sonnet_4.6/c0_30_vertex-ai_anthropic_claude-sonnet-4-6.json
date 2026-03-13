@@ -1,21 +1,19 @@
 {
-  "timestamp": "2026-03-13T11:32:23.738325",
-  "config_path": "config/experiments/v1/ministral_14b/c1.toml",
+  "timestamp": "2026-03-13T15:09:33.131797",
+  "config_path": "config/experiments/v1/sonnet_4.6/c0.toml",
   "config": {
     "experiment": {
-      "experiment_name": "c1",
+      "experiment_name": "c0",
       "sample_size": 30,
-      "output_dir": "experiments/v1/ministral_14b"
+      "output_dir": "experiments/v1/sonnet_4.6"
     },
     "llm": {
-      "provider": "mistral",
-      "model": "ministral-14b-latest",
+      "provider": "portkey",
+      "model": "@vertex-ai/anthropic.claude-sonnet-4-6",
       "temperature": 0.0
     },
     "context": {
-      "sources": [
-        "definition"
-      ]
+      "sources": []
     },
     "datasets": {
       "enabled": [
@@ -36,108 +34,112 @@
     "system": "## Role\nYou are a Dataset Annotator.\n\n## Task\nClassify the input as exactly one of these two labels:\n- \"Argument\"\n- \"No-Argument\"\n\n## Output Format\nRespond with ONLY the label. No explanation. No other text.\n\n## Rules\n- Classify as \"Argument\" if the sentence matches the definition below.\n- Classify as \"No-Argument\" otherwise.\n\n{context}",
     "user": "{sentence}"
   },
-  "model": "ministral-14b-latest",
+  "model": "@vertex-ai/anthropic.claude-sonnet-4-6",
   "sample_size": 30,
-  "context_sources": [
-    "definition"
-  ],
+  "context_sources": [],
   "datasets": {
     "ABSTRCT": {
       "n_samples": 30,
       "reports": {
         "original": {
           "Argument": {
-            "precision": 0.5714285714285714,
-            "recall": 0.8,
-            "f1-score": 0.6666666666666666,
+            "precision": 0.9166666666666666,
+            "recall": 0.7333333333333333,
+            "f1-score": 0.8148148148148148,
             "support": 15.0
           },
-          "Evidence": {
+          "No-Argument": {
+            "precision": 0.7777777777777778,
+            "recall": 0.9333333333333333,
+            "f1-score": 0.8484848484848485,
+            "support": 15.0
+          },
+          "accuracy": 0.8333333333333334,
+          "macro avg": {
+            "precision": 0.8472222222222222,
+            "recall": 0.8333333333333333,
+            "f1-score": 0.8316498316498316,
+            "support": 30.0
+          },
+          "weighted avg": {
+            "precision": 0.8472222222222221,
+            "recall": 0.8333333333333334,
+            "f1-score": 0.8316498316498316,
+            "support": 30.0
+          }
+        },
+        "content_only": {
+          "": {
             "precision": 0.0,
             "recall": 0.0,
             "f1-score": 0.0,
             "support": 0.0
           },
-          "No-Argument": {
-            "precision": 0.625,
-            "recall": 0.3333333333333333,
-            "f1-score": 0.43478260869565216,
-            "support": 15.0
-          },
-          "accuracy": 0.5666666666666667,
-          "macro avg": {
-            "precision": 0.3988095238095238,
-            "recall": 0.37777777777777777,
-            "f1-score": 0.3671497584541063,
-            "support": 30.0
-          },
-          "weighted avg": {
-            "precision": 0.5982142857142857,
-            "recall": 0.5666666666666667,
-            "f1-score": 0.5507246376811594,
-            "support": 30.0
-          }
-        },
-        "content_only": {
           "Argument": {
-            "precision": 0.6111111111111112,
-            "recall": 0.7333333333333333,
-            "f1-score": 0.6666666666666666,
+            "precision": 1.0,
+            "recall": 0.3333333333333333,
+            "f1-score": 0.5,
             "support": 15.0
           },
           "No-Argument": {
-            "precision": 0.6666666666666666,
-            "recall": 0.5333333333333333,
-            "f1-score": 0.5925925925925926,
+            "precision": 0.6521739130434783,
+            "recall": 1.0,
+            "f1-score": 0.7894736842105263,
             "support": 15.0
           },
-          "accuracy": 0.6333333333333333,
+          "accuracy": 0.6666666666666666,
           "macro avg": {
-            "precision": 0.6388888888888888,
-            "recall": 0.6333333333333333,
-            "f1-score": 0.6296296296296295,
+            "precision": 0.5507246376811594,
+            "recall": 0.4444444444444444,
+            "f1-score": 0.4298245614035088,
             "support": 30.0
           },
           "weighted avg": {
-            "precision": 0.638888888888889,
-            "recall": 0.6333333333333333,
-            "f1-score": 0.6296296296296297,
+            "precision": 0.826086956521739,
+            "recall": 0.6666666666666666,
+            "f1-score": 0.6447368421052633,
             "support": 30.0
           }
         },
         "shuffle": {
+          "": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1-score": 0.0,
+            "support": 0.0
+          },
           "Argument": {
-            "precision": 0.5,
-            "recall": 0.2,
-            "f1-score": 0.2857142857142857,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1-score": 0.0,
             "support": 15.0
           },
           "No-Argument": {
-            "precision": 0.5,
-            "recall": 0.8,
-            "f1-score": 0.6153846153846154,
+            "precision": 0.8571428571428571,
+            "recall": 0.4,
+            "f1-score": 0.5454545454545454,
             "support": 15.0
           },
-          "accuracy": 0.5,
+          "accuracy": 0.2,
           "macro avg": {
-            "precision": 0.5,
-            "recall": 0.5,
-            "f1-score": 0.45054945054945056,
+            "precision": 0.2857142857142857,
+            "recall": 0.13333333333333333,
+            "f1-score": 0.1818181818181818,
             "support": 30.0
           },
           "weighted avg": {
-            "precision": 0.5,
-            "recall": 0.5,
-            "f1-score": 0.4505494505494506,
+            "precision": 0.42857142857142855,
+            "recall": 0.2,
+            "f1-score": 0.2727272727272727,
             "support": 30.0
           }
         }
       },
-      "macro_f1_original": 0.3671,
-      "macro_f1_content_only": 0.6296,
-      "macro_f1_shuffle": 0.4505,
-      "delta_content_only": 0.2625,
-      "delta_shuffle": 0.0834,
+      "macro_f1_original": 0.8316,
+      "macro_f1_content_only": 0.4298,
+      "macro_f1_shuffle": 0.1818,
+      "delta_content_only": -0.4018,
+      "delta_shuffle": -0.6498,
       "samples": [
         {
           "id": "ABSTRCT-dev-1",
@@ -148,7 +150,7 @@
           "sent_shuffle": "cancer. the of compliance overall life with for potential and medications increase quality relief of has anti-oestrogen to improve Long-term symptoms breast",
           "pred_original": "Argument",
           "pred_content_only": "Argument",
-          "pred_shuffle": "No-Argument"
+          "pred_shuffle": ""
         },
         {
           "id": "ABSTRCT-dev-2",
@@ -158,7 +160,7 @@
           "sent_content_only": "complication rate lower viscocanalostomy group",
           "sent_shuffle": "the rate complication viscocanalostomy lower in group. was However, the",
           "pred_original": "Argument",
-          "pred_content_only": "Argument",
+          "pred_content_only": "No-Argument",
           "pred_shuffle": "No-Argument"
         },
         {
@@ -169,8 +171,8 @@
           "sent_content_only": "higher rates adverse effects anemia abdominal pain constipation fatigue overall toxicity profile vinflunine manageable",
           "sent_shuffle": "manageable. adverse toxicity some pain, overall profile was effects the vinflunine constipation, higher fatigue) rates of (anemia, abdominal Despite of",
           "pred_original": "Argument",
-          "pred_content_only": "Argument",
-          "pred_shuffle": "No-Argument"
+          "pred_content_only": "No-Argument",
+          "pred_shuffle": ""
         },
         {
           "id": "ABSTRCT-dev-4",
@@ -180,8 +182,8 @@
           "sent_content_only": "considerable improvement treatment advanced ovarian cancer optimization efficacy tolerability remains important issue",
           "sent_shuffle": "issue. treatment and the cancer, efficacy tolerability important of of an the considerable optimization improvement remains advanced ovarian Despite in",
           "pred_original": "No-Argument",
-          "pred_content_only": "Argument",
-          "pred_shuffle": "No-Argument"
+          "pred_content_only": "No-Argument",
+          "pred_shuffle": ""
         },
         {
           "id": "ABSTRCT-dev-5",
@@ -191,8 +193,8 @@
           "sent_content_only": "tenofovir disoproxil fumarate tdf monotherapy effective tolerated tdf resistance development chb patients lam r 240weeks",
           "sent_shuffle": "patients CHB fumarate in was development with resistance 240weeks. effective tolerated disoproxil for TDF without to monotherapy LAM-R, and well Tenofovir (TDF) up",
           "pred_original": "Argument",
-          "pred_content_only": "Argument",
-          "pred_shuffle": "No-Argument"
+          "pred_content_only": "No-Argument",
+          "pred_shuffle": ""
         },
         {
           "id": "ABSTRCT-dev-6",
@@ -203,7 +205,7 @@
           "sent_shuffle": "widely an is acclaimed grain with health ancient KAMUT khorasan benefits.",
           "pred_original": "No-Argument",
           "pred_content_only": "No-Argument",
-          "pred_shuffle": "No-Argument"
+          "pred_shuffle": ""
         },
         {
           "id": "ABSTRCT-dev-7",
@@ -212,9 +214,9 @@
           "sent_original": "AT represents a valid option for the treatment of MBC.",
           "sent_content_only": "represents valid option treatment mbc",
           "sent_shuffle": "treatment valid a of for the MBC. option AT represents",
-          "pred_original": "Argument",
+          "pred_original": "No-Argument",
           "pred_content_only": "No-Argument",
-          "pred_shuffle": "No-Argument"
+          "pred_shuffle": ""
         },
         {
           "id": "ABSTRCT-dev-8",
@@ -225,7 +227,7 @@
           "sent_shuffle": "but 'constitutional' symptoms, 'disease-specific' symptoms. controlling controlling equally superior effective in GEM is in",
           "pred_original": "Argument",
           "pred_content_only": "Argument",
-          "pred_shuffle": "No-Argument"
+          "pred_shuffle": ""
         },
         {
           "id": "ABSTRCT-dev-9",
@@ -236,7 +238,7 @@
           "sent_shuffle": "results are its made notable. observations trial accrual inconclusive, to this several The patient but",
           "pred_original": "No-Argument",
           "pred_content_only": "No-Argument",
-          "pred_shuffle": "No-Argument"
+          "pred_shuffle": ""
         },
         {
           "id": "ABSTRCT-dev-10",
@@ -246,8 +248,8 @@
           "sent_content_only": "higher rate effects mild moderate detected dose bacillus calmette gu\u00e9rin compared gemcitabine study failed significant differences 2 drugs terms quality life",
           "sent_shuffle": "was terms moderate, in of the detected side show 2 differences of to to rate to gemcitabine, study bacillus life. drugs significant While of with compared higher quality between failed our effects, mild 1/3 dose Calmette-Gu\u00e9rin a albeit",
           "pred_original": "Argument",
-          "pred_content_only": "No-Argument",
-          "pred_shuffle": "Argument"
+          "pred_content_only": "",
+          "pred_shuffle": ""
         },
         {
           "id": "ABSTRCT-dev-11",
@@ -257,8 +259,8 @@
           "sent_content_only": "onj multifactorial single treatment modality likely reverse treatable advanced presentations improve intensive multimodal therapy",
           "sent_shuffle": "treatable it; likely therapy. advanced treatment single to is improve reverse even is it intensive however, multifactorial and multimodal no can modality is with ONJ and presentations",
           "pred_original": "Argument",
-          "pred_content_only": "Argument",
-          "pred_shuffle": "No-Argument"
+          "pred_content_only": "",
+          "pred_shuffle": ""
         },
         {
           "id": "ABSTRCT-dev-12",
@@ -269,7 +271,7 @@
           "sent_shuffle": "advantages resection over coloplasty. offers a function colonic significant in patients JP or for cancer, undergoing a restorative an low rectal In a SA",
           "pred_original": "Argument",
           "pred_content_only": "Argument",
-          "pred_shuffle": "Argument"
+          "pred_shuffle": ""
         },
         {
           "id": "ABSTRCT-dev-13",
@@ -279,8 +281,8 @@
           "sent_content_only": "provision multimodal exercise programs improve short term health women undergoing adjuvant therapy breast cancer questionable economic efficiency",
           "sent_shuffle": "for will but efficiency. adjuvant of cancer women therapy breast of undergoing questionable improve health multimodal economic programs are the short-term Provision exercise of",
           "pred_original": "Argument",
-          "pred_content_only": "Argument",
-          "pred_shuffle": "No-Argument"
+          "pred_content_only": "No-Argument",
+          "pred_shuffle": ""
         },
         {
           "id": "ABSTRCT-dev-14",
@@ -291,7 +293,7 @@
           "sent_shuffle": "favorable treatment is NSCLC. for plus docetaxel an a of effective index findings with or option demonstrate therapeutic metastatic a treatment platinum combination advanced These that first-line",
           "pred_original": "Argument",
           "pred_content_only": "Argument",
-          "pred_shuffle": "Argument"
+          "pred_shuffle": ""
         },
         {
           "id": "ABSTRCT-dev-15",
@@ -302,7 +304,7 @@
           "sent_shuffle": "chemotherapy receive of intensified outcome FLOT compromising may elderly patients patient-reported parameters. need without Thus, in",
           "pred_original": "Argument",
           "pred_content_only": "Argument",
-          "pred_shuffle": "No-Argument"
+          "pred_shuffle": ""
         },
         {
           "id": "ABSTRCT-dev-171",
@@ -311,9 +313,9 @@
           "sent_original": "Conversion to glaucoma was found to be related to both the baseline and post-treatment IOP levels.",
           "sent_content_only": "conversion glaucoma found related baseline post treatment iop levels",
           "sent_shuffle": "related both to be IOP the and to to glaucoma post-treatment levels. found baseline Conversion was",
-          "pred_original": "Argument",
+          "pred_original": "No-Argument",
           "pred_content_only": "No-Argument",
-          "pred_shuffle": "Argument"
+          "pred_shuffle": ""
         },
         {
           "id": "ABSTRCT-dev-172",
@@ -322,8 +324,8 @@
           "sent_original": "A target IOP of 21 mm Hg at 6 months was achieved in 53 of 56 (95%) eyes in the 5-FU group and 54 of 57 (95%) eyes in the MMC group (P = 1.00).",
           "sent_content_only": "target iop 21 6 months achieved 53 56 95 eyes 5 fu group 54 57 95 eyes mmc group p 1.00",
           "sent_shuffle": "months in mm 5-FU group and the (95%) (95%) of of was achieved eyes 6 the MMC Hg 57 A = 53 in IOP (P in group of 54 21 1.00). 56 eyes target at",
-          "pred_original": "Argument",
-          "pred_content_only": "Argument",
+          "pred_original": "No-Argument",
+          "pred_content_only": "No-Argument",
           "pred_shuffle": "No-Argument"
         },
         {
@@ -334,8 +336,8 @@
           "sent_content_only": "grade 3 4 neutropenia frequent gem treated patients pld treated patients p = .007",
           "sent_shuffle": "frequent patients was more = (P patients GEM-treated in 3 or PLD-treated .007). neutropenia versus Grade 4",
           "pred_original": "Argument",
-          "pred_content_only": "Argument",
-          "pred_shuffle": "Argument"
+          "pred_content_only": "No-Argument",
+          "pred_shuffle": "No-Argument"
         },
         {
           "id": "ABSTRCT-dev-174",
@@ -344,9 +346,9 @@
           "sent_original": "This randomized, multicenter, phase III study compared doxorubicin and docetaxel (AT) with doxorubicin and cyclophosphamide (AC) as first-line chemotherapy (CT) in metastatic breast cancer (MBC).",
           "sent_content_only": "randomized multicenter phase iii study compared doxorubicin docetaxel doxorubicin cyclophosphamide ac line chemotherapy ct metastatic breast cancer mbc",
           "sent_shuffle": "as doxorubicin docetaxel (CT) chemotherapy compared study (AT) (AC) metastatic with first-line randomized, cyclophosphamide breast and multicenter, cancer III (MBC). doxorubicin and This phase in",
-          "pred_original": "Argument",
+          "pred_original": "No-Argument",
           "pred_content_only": "No-Argument",
-          "pred_shuffle": "No-Argument"
+          "pred_shuffle": ""
         },
         {
           "id": "ABSTRCT-dev-175",
@@ -355,9 +357,9 @@
           "sent_original": "Therapy was switched to open-label latanoprost pm and timolol am and pm for uncontrolled IOP.",
           "sent_content_only": "therapy switched open label latanoprost pm timolol pm uncontrolled iop",
           "sent_shuffle": "timolol uncontrolled and pm IOP. for latanoprost switched am to open-label pm Therapy was and",
-          "pred_original": "Argument",
+          "pred_original": "No-Argument",
           "pred_content_only": "No-Argument",
-          "pred_shuffle": "No-Argument"
+          "pred_shuffle": ""
         },
         {
           "id": "ABSTRCT-dev-176",
@@ -366,9 +368,9 @@
           "sent_original": "The intraocular pressure reductions with brinzolamide two and three times daily were clinically and statistically equivalent.",
           "sent_content_only": "intraocular pressure reductions brinzolamide times daily clinically statistically equivalent",
           "sent_shuffle": "and times brinzolamide two statistically daily clinically three intraocular pressure and equivalent. with were The reductions",
-          "pred_original": "Argument",
-          "pred_content_only": "Argument",
-          "pred_shuffle": "No-Argument"
+          "pred_original": "No-Argument",
+          "pred_content_only": "No-Argument",
+          "pred_shuffle": ""
         },
         {
           "id": "ABSTRCT-dev-177",
@@ -378,8 +380,8 @@
           "sent_content_only": "experimental group = 19 administered antiviral agents korean red ginseng powder capsules dose 1 gram capsules day dose 3 grams",
           "sent_shuffle": "is Ginseng along dose (two was 19) Korean with powder agents one-day grams). gram capsules is experimental Red dose group (each 3 = a administered antiviral capsules), The (n 1",
           "pred_original": "No-Argument",
-          "pred_content_only": "Argument",
-          "pred_shuffle": "No-Argument"
+          "pred_content_only": "No-Argument",
+          "pred_shuffle": ""
         },
         {
           "id": "ABSTRCT-dev-178",
@@ -388,9 +390,9 @@
           "sent_original": "Grade 3 to 4 hematologic toxicity did not exceed 15% in both treatment arms.",
           "sent_content_only": "grade 3 4 hematologic toxicity exceed 15 treatment arms",
           "sent_shuffle": "exceed treatment not did arms. both toxicity to 15% 4 hematologic Grade 3 in",
-          "pred_original": "Argument",
-          "pred_content_only": "Argument",
-          "pred_shuffle": "No-Argument"
+          "pred_original": "No-Argument",
+          "pred_content_only": "No-Argument",
+          "pred_shuffle": ""
         },
         {
           "id": "ABSTRCT-dev-179",
@@ -401,7 +403,7 @@
           "sent_shuffle": "platinum-based a the treatment the study II profile toxicity non-platinum-based compare advanced regimen cancer. with cell is of a a lung phase non-small designed to of This randomized in",
           "pred_original": "No-Argument",
           "pred_content_only": "No-Argument",
-          "pred_shuffle": "No-Argument"
+          "pred_shuffle": ""
         },
         {
           "id": "ABSTRCT-dev-180",
@@ -410,9 +412,9 @@
           "sent_original": "Chronic hepatitis B management is commonly targeted at reducing viral replication.",
           "sent_content_only": "chronic hepatitis b management commonly targeted reducing viral replication",
           "sent_shuffle": "at management B reducing commonly targeted viral is Chronic hepatitis replication.",
-          "pred_original": "Argument",
-          "pred_content_only": "Argument",
-          "pred_shuffle": "Argument"
+          "pred_original": "No-Argument",
+          "pred_content_only": "No-Argument",
+          "pred_shuffle": ""
         },
         {
           "id": "ABSTRCT-dev-181",
@@ -443,7 +445,7 @@
           "sent_original": "CI -1.54% to 10.80%, P = 0.1493).",
           "sent_content_only": "ci -1.54 10.80 p = 0.1493",
           "sent_shuffle": "-1.54% 10.80%, P to 0.1493). CI =",
-          "pred_original": "Evidence",
+          "pred_original": "No-Argument",
           "pred_content_only": "No-Argument",
           "pred_shuffle": "No-Argument"
         },
@@ -454,9 +456,9 @@
           "sent_original": "The median overall survival (OS) was 34.1 and 30.7 months in Arms A and B, respectively (HR 0.98; 95% CI 0.81-1.18, P = 0.82).",
           "sent_content_only": "median overall survival os 34.1 30.7 months arms b respectively hr 0.98 95 ci 0.81 1.18 p = 0.82",
           "sent_shuffle": "respectively was 95% 0.82). and in 0.98; Arms B, (HR median A P 34.1 months overall = (OS) CI and 30.7 The survival 0.81-1.18,",
-          "pred_original": "Argument",
-          "pred_content_only": "Argument",
-          "pred_shuffle": "No-Argument"
+          "pred_original": "No-Argument",
+          "pred_content_only": "No-Argument",
+          "pred_shuffle": ""
         },
         {
           "id": "ABSTRCT-dev-185",
@@ -476,91 +478,97 @@
       "reports": {
         "original": {
           "Argument": {
-            "precision": 0.75,
-            "recall": 1.0,
-            "f1-score": 0.8571428571428571,
+            "precision": 0.9090909090909091,
+            "recall": 0.6666666666666666,
+            "f1-score": 0.7692307692307693,
             "support": 15.0
           },
           "No-Argument": {
-            "precision": 1.0,
-            "recall": 0.6666666666666666,
-            "f1-score": 0.8,
+            "precision": 0.7368421052631579,
+            "recall": 0.9333333333333333,
+            "f1-score": 0.8235294117647058,
             "support": 15.0
           },
-          "accuracy": 0.8333333333333334,
+          "accuracy": 0.8,
           "macro avg": {
-            "precision": 0.875,
-            "recall": 0.8333333333333333,
-            "f1-score": 0.8285714285714285,
+            "precision": 0.8229665071770335,
+            "recall": 0.8,
+            "f1-score": 0.7963800904977376,
             "support": 30.0
           },
           "weighted avg": {
-            "precision": 0.875,
-            "recall": 0.8333333333333334,
-            "f1-score": 0.8285714285714285,
+            "precision": 0.8229665071770335,
+            "recall": 0.8,
+            "f1-score": 0.7963800904977376,
             "support": 30.0
           }
         },
         "content_only": {
           "Argument": {
-            "precision": 0.6190476190476191,
-            "recall": 0.8666666666666667,
-            "f1-score": 0.7222222222222222,
+            "precision": 0.5,
+            "recall": 0.13333333333333333,
+            "f1-score": 0.21052631578947367,
             "support": 15.0
           },
           "No-Argument": {
-            "precision": 0.7777777777777778,
-            "recall": 0.4666666666666667,
-            "f1-score": 0.5833333333333334,
+            "precision": 0.5,
+            "recall": 0.8666666666666667,
+            "f1-score": 0.6341463414634146,
             "support": 15.0
           },
-          "accuracy": 0.6666666666666666,
+          "accuracy": 0.5,
           "macro avg": {
-            "precision": 0.6984126984126984,
-            "recall": 0.6666666666666667,
-            "f1-score": 0.6527777777777778,
+            "precision": 0.5,
+            "recall": 0.5,
+            "f1-score": 0.42233632862644416,
             "support": 30.0
           },
           "weighted avg": {
-            "precision": 0.6984126984126984,
-            "recall": 0.6666666666666666,
-            "f1-score": 0.6527777777777779,
+            "precision": 0.5,
+            "recall": 0.5,
+            "f1-score": 0.42233632862644416,
             "support": 30.0
           }
         },
         "shuffle": {
+          "": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1-score": 0.0,
+            "support": 0.0
+          },
           "Argument": {
-            "precision": 0.5555555555555556,
-            "recall": 0.3333333333333333,
-            "f1-score": 0.4166666666666667,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1-score": 0.0,
             "support": 15.0
           },
           "No-Argument": {
-            "precision": 0.5238095238095238,
-            "recall": 0.7333333333333333,
-            "f1-score": 0.6111111111111112,
+            "precision": 0.6666666666666666,
+            "recall": 0.26666666666666666,
+            "f1-score": 0.38095238095238093,
             "support": 15.0
           },
-          "accuracy": 0.5333333333333333,
+          "accuracy": 0.13333333333333333,
           "macro avg": {
-            "precision": 0.5396825396825398,
-            "recall": 0.5333333333333333,
-            "f1-score": 0.513888888888889,
+            "precision": 0.2222222222222222,
+            "recall": 0.08888888888888889,
+            "f1-score": 0.12698412698412698,
             "support": 30.0
           },
           "weighted avg": {
-            "precision": 0.5396825396825397,
-            "recall": 0.5333333333333333,
-            "f1-score": 0.513888888888889,
+            "precision": 0.3333333333333333,
+            "recall": 0.13333333333333333,
+            "f1-score": 0.19047619047619044,
             "support": 30.0
           }
         }
       },
-      "macro_f1_original": 0.8286,
-      "macro_f1_content_only": 0.6528,
-      "macro_f1_shuffle": 0.5139,
-      "delta_content_only": -0.1758,
-      "delta_shuffle": -0.3147,
+      "macro_f1_original": 0.7964,
+      "macro_f1_content_only": 0.4223,
+      "macro_f1_shuffle": 0.127,
+      "delta_content_only": -0.374,
+      "delta_shuffle": -0.6694,
       "samples": [
         {
           "id": "ACQUA-dev-1",
@@ -570,8 +578,8 @@
           "sent_content_only": "windows 8 efficiency improvements windows 7 making 10 faster overall",
           "sent_shuffle": "making faster 7, Windows overall. 10% over has it efficiency improvements Windows 8 about",
           "pred_original": "Argument",
-          "pred_content_only": "Argument",
-          "pred_shuffle": "Argument"
+          "pred_content_only": "No-Argument",
+          "pred_shuffle": "No-Argument"
         },
         {
           "id": "ACQUA-dev-2",
@@ -580,9 +588,9 @@
           "sent_original": "I'll get my AOL instantly on my Blackberry, and instantly on my ipod Touch, but it's a lot slower coming through on my MacBook Pro laptop.",
           "sent_content_only": "aol instantly blackberry instantly ipod touch lot slower coming macbook pro laptop",
           "sent_shuffle": "a ipod instantly laptop. coming my on on it's my my slower get but MacBook Touch, my lot Pro instantly on Blackberry, and I'll AOL through",
-          "pred_original": "Argument",
-          "pred_content_only": "Argument",
-          "pred_shuffle": "No-Argument"
+          "pred_original": "No-Argument",
+          "pred_content_only": "No-Argument",
+          "pred_shuffle": ""
         },
         {
           "id": "ACQUA-dev-3",
@@ -591,9 +599,9 @@
           "sent_original": "To quote you \"Sony is doing much better than Microsoft\" Please elaborate.",
           "sent_content_only": "quote sony better microsoft elaborate",
           "sent_shuffle": "better doing you than Microsoft\" much elaborate. \"Sony is To quote Please",
-          "pred_original": "Argument",
-          "pred_content_only": "Argument",
-          "pred_shuffle": "No-Argument"
+          "pred_original": "No-Argument",
+          "pred_content_only": "No-Argument",
+          "pred_shuffle": ""
         },
         {
           "id": "ACQUA-dev-4",
@@ -602,9 +610,9 @@
           "sent_original": "for those who care about such things... i returned my Nikon 4500 10 days ago on 12th day of free 10-day trial and i traded down to a panasonic lumix LC40 with Leica lens because it had a faster shutter response and looked pretty bad ass.",
           "sent_content_only": "care things returned nikon 4500 10 days ago 12th day free 10 day trial traded panasonic lumix lc40 leica lens faster shutter response looked pretty bad ass",
           "sent_shuffle": "of trial panasonic Nikon i my lumix lens 10 care a about and down 4500 Leica it shutter ass. LC40 with to traded 10-day and faster looked for free 12th bad days had pretty who a such because things... returned ago on day those i response",
-          "pred_original": "Argument",
-          "pred_content_only": "Argument",
-          "pred_shuffle": "No-Argument"
+          "pred_original": "No-Argument",
+          "pred_content_only": "No-Argument",
+          "pred_shuffle": ""
         },
         {
           "id": "ACQUA-dev-5",
@@ -614,8 +622,8 @@
           "sent_content_only": "real reason python slower java dynamic language",
           "sent_shuffle": "a it's Python than will much dynamic still because more Java real is reason language. be slower The why",
           "pred_original": "Argument",
-          "pred_content_only": "Argument",
-          "pred_shuffle": "No-Argument"
+          "pred_content_only": "No-Argument",
+          "pred_shuffle": ""
         },
         {
           "id": "ACQUA-dev-6",
@@ -624,7 +632,7 @@
           "sent_original": "The pasta was mediocre, not as memorable as the pizza.",
           "sent_content_only": "pasta mediocre memorable pizza",
           "sent_shuffle": "as mediocre, was the as memorable pizza. not The pasta",
-          "pred_original": "Argument",
+          "pred_original": "No-Argument",
           "pred_content_only": "No-Argument",
           "pred_shuffle": "No-Argument"
         },
@@ -637,7 +645,7 @@
           "sent_shuffle": "uglier. true, conclusion which slaughtered the makes a but oregon loss Ducks, Saturday second by obviously BYU's virginia was That is little",
           "pred_original": "Argument",
           "pred_content_only": "Argument",
-          "pred_shuffle": "No-Argument"
+          "pred_shuffle": ""
         },
         {
           "id": "ACQUA-dev-8",
@@ -647,8 +655,8 @@
           "sent_content_only": "polygon polygon claimed psp power ps2 apparently easier develop",
           "sent_shuffle": "well. \"psp easier claimed, than apparently to as has it's for ps2,\" for and polygon, develop more power Polygon he",
           "pred_original": "Argument",
-          "pred_content_only": "Argument",
-          "pred_shuffle": "Argument"
+          "pred_content_only": "No-Argument",
+          "pred_shuffle": ""
         },
         {
           "id": "ACQUA-dev-9",
@@ -658,8 +666,8 @@
           "sent_content_only": "skeptical swift faster objective c.",
           "sent_shuffle": "faster skeptical very than Swift is Objective-C. that I am",
           "pred_original": "Argument",
-          "pred_content_only": "Argument",
-          "pred_shuffle": "No-Argument"
+          "pred_content_only": "No-Argument",
+          "pred_shuffle": ""
         },
         {
           "id": "ACQUA-dev-10",
@@ -669,8 +677,8 @@
           "sent_content_only": "graphics decide opengl easier use direct3d directx",
           "sent_shuffle": "DirectX). decide use you OpenGL to than of to easier (Part is the much graphics, Direct3D do them, About if",
           "pred_original": "Argument",
-          "pred_content_only": "Argument",
-          "pred_shuffle": "No-Argument"
+          "pred_content_only": "No-Argument",
+          "pred_shuffle": ""
         },
         {
           "id": "ACQUA-dev-11",
@@ -680,8 +688,8 @@
           "sent_content_only": "compared ford products owned toyota vehicles better experience",
           "sent_shuffle": "a been Ford the products better for we have experience Toyota compared vehicles to us. owned before, When the",
           "pred_original": "Argument",
-          "pred_content_only": "Argument",
-          "pred_shuffle": "Argument"
+          "pred_content_only": "No-Argument",
+          "pred_shuffle": ""
         },
         {
           "id": "ACQUA-dev-12",
@@ -691,8 +699,8 @@
           "sent_content_only": "javascript v8 faster pypy performance deviation 10 20 times faster plain python code",
           "sent_shuffle": "Python a 20 like less to times plain faster 10 than performance with deviation): v8 faster PyPy (with JavaScript is code.",
           "pred_original": "Argument",
-          "pred_content_only": "Argument",
-          "pred_shuffle": "Argument"
+          "pred_content_only": "No-Argument",
+          "pred_shuffle": ""
         },
         {
           "id": "ACQUA-dev-13",
@@ -701,9 +709,9 @@
           "sent_original": "2. PHP is much faster than Java and can replace C or any shell scripting language on a command line interface.",
           "sent_content_only": "2 php faster java replace c shell scripting language command line interface",
           "sent_shuffle": "line than scripting faster replace shell language command Java any a C PHP or is on and can 2. much interface.",
-          "pred_original": "Argument",
-          "pred_content_only": "Argument",
-          "pred_shuffle": "Argument"
+          "pred_original": "No-Argument",
+          "pred_content_only": "No-Argument",
+          "pred_shuffle": ""
         },
         {
           "id": "ACQUA-dev-14",
@@ -714,7 +722,7 @@
           "sent_shuffle": "false. that is or worse Notre virginia, just somehow Dame, that's USC, than point a saying because michigan is The Skov plain",
           "pred_original": "Argument",
           "pred_content_only": "Argument",
-          "pred_shuffle": "No-Argument"
+          "pred_shuffle": ""
         },
         {
           "id": "ACQUA-dev-15",
@@ -725,7 +733,7 @@
           "sent_shuffle": "you and then so beer will the to it enjoy don't generally, rush is results. develop flavors cider, slower",
           "pred_original": "Argument",
           "pred_content_only": "No-Argument",
-          "pred_shuffle": "No-Argument"
+          "pred_shuffle": ""
         },
         {
           "id": "ACQUA-dev-171",
@@ -735,8 +743,8 @@
           "sent_content_only": "thing aware writing world class 3d windoze apps determining opengl better direct3d.",
           "sent_shuffle": "apps, world if Direct3D. in be to you're Windoze OpenGL writing not it 3D better class is but than thing whether aware of is However, a determining",
           "pred_original": "No-Argument",
-          "pred_content_only": "Argument",
-          "pred_shuffle": "No-Argument"
+          "pred_content_only": "No-Argument",
+          "pred_shuffle": ""
         },
         {
           "id": "ACQUA-dev-172",
@@ -745,9 +753,9 @@
           "sent_original": "The whole Florida line didn't play well versus missouri, but was better against georgia.",
           "sent_content_only": "florida line play missouri better georgia",
           "sent_shuffle": "missouri, against versus well georgia. better play Florida but line didn't The whole was",
-          "pred_original": "Argument",
-          "pred_content_only": "Argument",
-          "pred_shuffle": "Argument"
+          "pred_original": "No-Argument",
+          "pred_content_only": "No-Argument",
+          "pred_shuffle": ""
         },
         {
           "id": "ACQUA-dev-173",
@@ -758,7 +766,7 @@
           "sent_shuffle": "solid and Arizona at State appear the oregon california, Utah, position.",
           "pred_original": "No-Argument",
           "pred_content_only": "No-Argument",
-          "pred_shuffle": "No-Argument"
+          "pred_shuffle": ""
         },
         {
           "id": "ACQUA-dev-174",
@@ -767,9 +775,9 @@
           "sent_original": "The same holds true for the LS 460 and LS 460 L, which are expected to fare slightly better in projected resale value than key competitors, such as standard or long-wheelbase versions of the Audi A8 , BMW 7 Series , Jaguar XJ Series and remain on par with the Mercedes-Benz S-Class .",
           "sent_content_only": "holds true ls 460 ls 460 l expected fare slightly better projected resale value key competitors standard long wheelbase versions audi a8 bmw 7 series jaguar xj series remain par mercedes benz s class",
           "sent_shuffle": "LS than competitors, true resale 7 fare Series in L, the key the or versions and for standard 460 such , The remain better XJ S-Class A8 with long-wheelbase projected value which . of on are Jaguar Mercedes-Benz holds as BMW the Audi Series LS and expected to slightly par same 460 ,",
-          "pred_original": "Argument",
+          "pred_original": "No-Argument",
           "pred_content_only": "Argument",
-          "pred_shuffle": "Argument"
+          "pred_shuffle": ""
         },
         {
           "id": "ACQUA-dev-175",
@@ -778,9 +786,9 @@
           "sent_original": "pennsylvania this fall js a better team, but michigan has also made advances.",
           "sent_content_only": "pennsylvania fall better team michigan advances",
           "sent_shuffle": "but team, fall has advances. better made michigan js a pennsylvania this also",
-          "pred_original": "Argument",
-          "pred_content_only": "Argument",
-          "pred_shuffle": "Argument"
+          "pred_original": "No-Argument",
+          "pred_content_only": "No-Argument",
+          "pred_shuffle": "No-Argument"
         },
         {
           "id": "ACQUA-dev-176",
@@ -790,8 +798,8 @@
           "sent_content_only": "took classes barely use tools harder time unprepared knew c++ took classes c c++ java python lisp belt new technologies time taught basics expanded try actually master topics pass test",
           "sent_shuffle": "Because much belt new classes tools technologies use basics the to (Those out actually only expanded time)) Lisp I when who pass the C, and try were quite after the others taught C++, barely further took harder had and Python, knew classes, could under vs. any master unprepared to was of my Others were just I enough test. (even I and Java, many C++ topics I took though the the same at the to and time they same was the had",
           "pred_original": "Argument",
-          "pred_content_only": "No-Argument",
-          "pred_shuffle": "No-Argument"
+          "pred_content_only": "Argument",
+          "pred_shuffle": ""
         },
         {
           "id": "ACQUA-dev-177",
@@ -802,7 +810,7 @@
           "sent_shuffle": "milk in in years. cooler in Store 1997, the Friday playing beer started of for front at and 5 Knox other Knox NY night We the every",
           "pred_original": "No-Argument",
           "pred_content_only": "No-Argument",
-          "pred_shuffle": "No-Argument"
+          "pred_shuffle": ""
         },
         {
           "id": "ACQUA-dev-178",
@@ -813,7 +821,7 @@
           "sent_shuffle": "if long for 8x42 Bushnell a Minox, shot Leica, decent or looking the of even Zeiss, model realize pair binoculars- this 10x42 Nikon, is right a they're . I'm Pentax I but",
           "pred_original": "No-Argument",
           "pred_content_only": "No-Argument",
-          "pred_shuffle": "No-Argument"
+          "pred_shuffle": ""
         },
         {
           "id": "ACQUA-dev-179",
@@ -834,8 +842,8 @@
           "sent_content_only": "think lost cause better concentrate ohio pennsylvania michigan",
           "sent_shuffle": "on concentrate a would lost Ohio, or cause to pennsylvania be think better it michigan. and it Many is",
           "pred_original": "No-Argument",
-          "pred_content_only": "Argument",
-          "pred_shuffle": "No-Argument"
+          "pred_content_only": "No-Argument",
+          "pred_shuffle": ""
         },
         {
           "id": "ACQUA-dev-181",
@@ -845,7 +853,7 @@
           "sent_content_only": "samsung blames verizon motorola visa versa",
           "sent_shuffle": "blames (Motorola) and Verizon versa. Samsung visa",
           "pred_original": "No-Argument",
-          "pred_content_only": "Argument",
+          "pred_content_only": "No-Argument",
           "pred_shuffle": "No-Argument"
         },
         {
@@ -857,7 +865,7 @@
           "sent_shuffle": "environment. building in experience MySQL, CSS a UNIX websites and / HTML, must JavaScript have Linux using PHP, Candidates solid",
           "pred_original": "No-Argument",
           "pred_content_only": "No-Argument",
-          "pred_shuffle": "No-Argument"
+          "pred_shuffle": ""
         },
         {
           "id": "ACQUA-dev-183",
@@ -866,9 +874,9 @@
           "sent_original": "I'll start in virginia and end in california but am happy to be flexible if anyone's got any better ideas ...",
           "sent_content_only": "start virginia end california happy flexible got better ideas",
           "sent_shuffle": "ideas end if and am flexible anyone's better in be any happy start to in got california but I'll virginia ...",
-          "pred_original": "Argument",
-          "pred_content_only": "Argument",
-          "pred_shuffle": "Argument"
+          "pred_original": "No-Argument",
+          "pred_content_only": "No-Argument",
+          "pred_shuffle": ""
         },
         {
           "id": "ACQUA-dev-184",
@@ -878,8 +886,8 @@
           "sent_content_only": "spare time lance mediocre softball player better soccer midfielder great little league baseball basketball coach son blaze",
           "sent_shuffle": "great soccer player, Blaze. baseball a is a a coach better league his and to midfielder spare little son, Lance basketball mediocre softball In time, and",
           "pred_original": "No-Argument",
-          "pred_content_only": "Argument",
-          "pred_shuffle": "No-Argument"
+          "pred_content_only": "No-Argument",
+          "pred_shuffle": ""
         },
         {
           "id": "ACQUA-dev-185",
@@ -899,91 +907,103 @@
       "reports": {
         "original": {
           "Argument": {
-            "precision": 0.5,
-            "recall": 0.7333333333333333,
-            "f1-score": 0.5945945945945946,
+            "precision": 0.45454545454545453,
+            "recall": 0.6666666666666666,
+            "f1-score": 0.5405405405405406,
             "support": 15.0
           },
           "No-Argument": {
-            "precision": 0.5,
-            "recall": 0.26666666666666666,
-            "f1-score": 0.34782608695652173,
+            "precision": 0.375,
+            "recall": 0.2,
+            "f1-score": 0.2608695652173913,
             "support": 15.0
           },
-          "accuracy": 0.5,
+          "accuracy": 0.43333333333333335,
           "macro avg": {
-            "precision": 0.5,
-            "recall": 0.5,
-            "f1-score": 0.4712103407755582,
+            "precision": 0.4147727272727273,
+            "recall": 0.43333333333333335,
+            "f1-score": 0.40070505287896596,
             "support": 30.0
           },
           "weighted avg": {
-            "precision": 0.5,
-            "recall": 0.5,
-            "f1-score": 0.4712103407755582,
+            "precision": 0.4147727272727273,
+            "recall": 0.43333333333333335,
+            "f1-score": 0.4007050528789659,
             "support": 30.0
           }
         },
         "content_only": {
+          "": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1-score": 0.0,
+            "support": 0.0
+          },
           "Argument": {
-            "precision": 0.4117647058823529,
-            "recall": 0.4666666666666667,
-            "f1-score": 0.4375,
+            "precision": 0.6,
+            "recall": 0.2,
+            "f1-score": 0.3,
             "support": 15.0
           },
           "No-Argument": {
-            "precision": 0.38461538461538464,
-            "recall": 0.3333333333333333,
-            "f1-score": 0.35714285714285715,
+            "precision": 0.4782608695652174,
+            "recall": 0.7333333333333333,
+            "f1-score": 0.5789473684210527,
             "support": 15.0
           },
-          "accuracy": 0.4,
+          "accuracy": 0.4666666666666667,
           "macro avg": {
-            "precision": 0.3981900452488688,
-            "recall": 0.4,
-            "f1-score": 0.3973214285714286,
+            "precision": 0.35942028985507246,
+            "recall": 0.3111111111111111,
+            "f1-score": 0.2929824561403509,
             "support": 30.0
           },
           "weighted avg": {
-            "precision": 0.3981900452488688,
-            "recall": 0.4,
-            "f1-score": 0.3973214285714286,
+            "precision": 0.5391304347826087,
+            "recall": 0.4666666666666667,
+            "f1-score": 0.4394736842105263,
             "support": 30.0
           }
         },
         "shuffle": {
+          "": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1-score": 0.0,
+            "support": 0.0
+          },
           "Argument": {
-            "precision": 1.0,
-            "recall": 0.13333333333333333,
-            "f1-score": 0.23529411764705882,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1-score": 0.0,
             "support": 15.0
           },
           "No-Argument": {
-            "precision": 0.5357142857142857,
-            "recall": 1.0,
-            "f1-score": 0.6976744186046512,
+            "precision": 1.0,
+            "recall": 0.26666666666666666,
+            "f1-score": 0.42105263157894735,
             "support": 15.0
           },
-          "accuracy": 0.5666666666666667,
+          "accuracy": 0.13333333333333333,
           "macro avg": {
-            "precision": 0.7678571428571428,
-            "recall": 0.5666666666666667,
-            "f1-score": 0.466484268125855,
+            "precision": 0.3333333333333333,
+            "recall": 0.08888888888888889,
+            "f1-score": 0.14035087719298245,
             "support": 30.0
           },
           "weighted avg": {
-            "precision": 0.7678571428571428,
-            "recall": 0.5666666666666667,
-            "f1-score": 0.46648426812585503,
+            "precision": 0.5,
+            "recall": 0.13333333333333333,
+            "f1-score": 0.2105263157894737,
             "support": 30.0
           }
         }
       },
-      "macro_f1_original": 0.4712,
-      "macro_f1_content_only": 0.3973,
-      "macro_f1_shuffle": 0.4665,
-      "delta_content_only": -0.0739,
-      "delta_shuffle": -0.0047,
+      "macro_f1_original": 0.4007,
+      "macro_f1_content_only": 0.293,
+      "macro_f1_shuffle": 0.1404,
+      "delta_content_only": -0.1077,
+      "delta_shuffle": -0.2604,
       "samples": [
         {
           "id": "AEC-dev-1",
@@ -992,9 +1012,9 @@
           "sent_original": "So if 2(1eye + 1eye) = X, then X would Equal 4 eyes, which would make both persons blind.",
           "sent_content_only": "2(1eye + 1eye = x x equal 4 eyes persons blind",
           "sent_shuffle": "would which 1eye) would = make persons X, eyes, both Equal if 4 2(1eye blind. then X So +",
-          "pred_original": "No-Argument",
+          "pred_original": "Argument",
           "pred_content_only": "No-Argument",
-          "pred_shuffle": "No-Argument"
+          "pred_shuffle": ""
         },
         {
           "id": "AEC-dev-2",
@@ -1003,9 +1023,9 @@
           "sent_original": "If evolutionary theory is flawed, what do you propose as a counter-theory?",
           "sent_content_only": "evolutionary theory flawed propose counter theory",
           "sent_shuffle": "you what theory propose as do counter-theory? is flawed, If evolutionary a",
-          "pred_original": "Argument",
-          "pred_content_only": "Argument",
-          "pred_shuffle": "No-Argument"
+          "pred_original": "No-Argument",
+          "pred_content_only": "No-Argument",
+          "pred_shuffle": ""
         },
         {
           "id": "AEC-dev-3",
@@ -1014,9 +1034,9 @@
           "sent_original": "But that is not the only factor to determine if it is right.",
           "sent_content_only": "factor determine right",
           "sent_shuffle": "to factor is if right. only is determine not the But that it",
-          "pred_original": "Argument",
+          "pred_original": "No-Argument",
           "pred_content_only": "No-Argument",
-          "pred_shuffle": "No-Argument"
+          "pred_shuffle": ""
         },
         {
           "id": "AEC-dev-4",
@@ -1025,9 +1045,9 @@
           "sent_original": "If you wish to \"stay natural\", how can you pick and chose what parts you live by and what not to live by?",
           "sent_content_only": "wish stay natural pick chose parts live live",
           "sent_shuffle": "by live wish you natural\", parts and what by? how pick you not chose and live \"stay what can you If to to",
-          "pred_original": "Argument",
+          "pred_original": "No-Argument",
           "pred_content_only": "No-Argument",
-          "pred_shuffle": "No-Argument"
+          "pred_shuffle": ""
         },
         {
           "id": "AEC-dev-5",
@@ -1038,7 +1058,7 @@
           "sent_shuffle": "cage a it in humain them for leave lives. to down IMO rest not and there more the put them but is of",
           "pred_original": "Argument",
           "pred_content_only": "No-Argument",
-          "pred_shuffle": "No-Argument"
+          "pred_shuffle": ""
         },
         {
           "id": "AEC-dev-6",
@@ -1047,9 +1067,9 @@
           "sent_original": "So the poeple taht made it great were about protecting families.",
           "sent_content_only": "poeple taht great protecting families",
           "sent_shuffle": "were taht poeple about it great protecting made So the families.",
-          "pred_original": "Argument",
+          "pred_original": "No-Argument",
           "pred_content_only": "No-Argument",
-          "pred_shuffle": "No-Argument"
+          "pred_shuffle": ""
         },
         {
           "id": "AEC-dev-7",
@@ -1058,9 +1078,9 @@
           "sent_original": "but no example posted here has really made much of a case against it.",
           "sent_content_only": "example posted case",
           "sent_shuffle": "much against made really it. case has example of posted here but no a",
-          "pred_original": "No-Argument",
+          "pred_original": "Argument",
           "pred_content_only": "No-Argument",
-          "pred_shuffle": "No-Argument"
+          "pred_shuffle": ""
         },
         {
           "id": "AEC-dev-8",
@@ -1071,7 +1091,7 @@
           "sent_shuffle": "sales, weapon that NOT to be cannot the extend ban amendments lawmakers it. need and to the assault private gun reguulate pass reform our passed without urge If suit we",
           "pred_original": "Argument",
           "pred_content_only": "Argument",
-          "pred_shuffle": "No-Argument"
+          "pred_shuffle": ""
         },
         {
           "id": "AEC-dev-9",
@@ -1081,8 +1101,8 @@
           "sent_content_only": "relies fallacy argument im)probability second dependent irreducible complexity dembski explained",
           "sent_shuffle": "explained). fallacy relies irreducible (im)probability); is complexity himself (the dependent Dembski upon second, it it a (as argument from First, upon has",
           "pred_original": "Argument",
-          "pred_content_only": "Argument",
-          "pred_shuffle": "Argument"
+          "pred_content_only": "No-Argument",
+          "pred_shuffle": ""
         },
         {
           "id": "AEC-dev-10",
@@ -1092,8 +1112,8 @@
           "sent_content_only": "publications presented answer behe claim scientific papers topic",
           "sent_shuffle": "scientific no presented claim in papers the answer were on that the there publications topic. to Behe's But were",
           "pred_original": "Argument",
-          "pred_content_only": "Argument",
-          "pred_shuffle": "No-Argument"
+          "pred_content_only": "No-Argument",
+          "pred_shuffle": ""
         },
         {
           "id": "AEC-dev-11",
@@ -1103,8 +1123,8 @@
           "sent_content_only": "believe evolutionary biology faith",
           "sent_shuffle": "\"believe\" biology \"by in faith.\" don't evolutionary But I",
           "pred_original": "Argument",
-          "pred_content_only": "Argument",
-          "pred_shuffle": "No-Argument"
+          "pred_content_only": "No-Argument",
+          "pred_shuffle": ""
         },
         {
           "id": "AEC-dev-12",
@@ -1113,9 +1133,9 @@
           "sent_original": "So when we call you \"homophobic\", we are being kind and generous to you, even if you do not deserve it.",
           "sent_content_only": "homophobic kind generous deserve",
           "sent_shuffle": "deserve \"homophobic\", even you kind you, if not we to do and when generous we you are being So call it.",
-          "pred_original": "No-Argument",
+          "pred_original": "Argument",
           "pred_content_only": "No-Argument",
-          "pred_shuffle": "No-Argument"
+          "pred_shuffle": ""
         },
         {
           "id": "AEC-dev-13",
@@ -1126,7 +1146,7 @@
           "sent_shuffle": "marriages. marriage could gay started we have damaging before then without falling people apart, had it marriage had If legalized",
           "pred_original": "Argument",
           "pred_content_only": "Argument",
-          "pred_shuffle": "Argument"
+          "pred_shuffle": ""
         },
         {
           "id": "AEC-dev-14",
@@ -1137,7 +1157,7 @@
           "sent_shuffle": "name? one for the do ask revenge own murdered, to your you if have you in what right But, werent",
           "pred_original": "Argument",
           "pred_content_only": "No-Argument",
-          "pred_shuffle": "No-Argument"
+          "pred_shuffle": ""
         },
         {
           "id": "AEC-dev-15",
@@ -1148,7 +1168,7 @@
           "sent_shuffle": "what denied saying best. wrong, orientation are is is you wanting not at marriage sexual not its be =D based your So, to Bigotry",
           "pred_original": "No-Argument",
           "pred_content_only": "Argument",
-          "pred_shuffle": "No-Argument"
+          "pred_shuffle": ""
         },
         {
           "id": "AEC-dev-171",
@@ -1158,8 +1178,8 @@
           "sent_content_only": "talking additional rights lesser restrictions",
           "sent_shuffle": "but talking not lesser additional rights restrictions. about We are",
           "pred_original": "Argument",
-          "pred_content_only": "Argument",
-          "pred_shuffle": "No-Argument"
+          "pred_content_only": "No-Argument",
+          "pred_shuffle": ""
         },
         {
           "id": "AEC-dev-172",
@@ -1170,7 +1190,7 @@
           "sent_shuffle": "in for a drop gun these would support on your increase violence. above, things Based post",
           "pred_original": "Argument",
           "pred_content_only": "Argument",
-          "pred_shuffle": "No-Argument"
+          "pred_shuffle": ""
         },
         {
           "id": "AEC-dev-173",
@@ -1180,7 +1200,7 @@
           "sent_content_only": "science controlled godless naturalists",
           "sent_shuffle": "by is controlled godless Science naturalists.",
           "pred_original": "Argument",
-          "pred_content_only": "Argument",
+          "pred_content_only": "No-Argument",
           "pred_shuffle": "No-Argument"
         },
         {
@@ -1191,8 +1211,8 @@
           "sent_content_only": "gene established leads established pathway given trait deliberately accidentally modifying gene fact duplicates established gene lead established pathway established trait",
           "sent_shuffle": "deliberately modifying in an other via fact gene pathway gene the has to so established established lead established trait. duplicates the that gene accidentally some same the Yes, or trait, established to through same a it been would established leads a given the once that pathway",
           "pred_original": "Argument",
-          "pred_content_only": "Argument",
-          "pred_shuffle": "No-Argument"
+          "pred_content_only": "",
+          "pred_shuffle": ""
         },
         {
           "id": "AEC-dev-175",
@@ -1202,7 +1222,7 @@
           "sent_content_only": "sadly creationism assertion dogmatism",
           "sent_shuffle": "creationism an assertion is dogmatism. Sadly, of",
           "pred_original": "Argument",
-          "pred_content_only": "Argument",
+          "pred_content_only": "No-Argument",
           "pred_shuffle": "No-Argument"
         },
         {
@@ -1214,7 +1234,7 @@
           "sent_shuffle": "Churches not for were science. checked, places Last I",
           "pred_original": "Argument",
           "pred_content_only": "No-Argument",
-          "pred_shuffle": "No-Argument"
+          "pred_shuffle": ""
         },
         {
           "id": "AEC-dev-177",
@@ -1225,7 +1245,7 @@
           "sent_shuffle": "major include to historical from several periods. examples Make sure",
           "pred_original": "No-Argument",
           "pred_content_only": "No-Argument",
-          "pred_shuffle": "No-Argument"
+          "pred_shuffle": ""
         },
         {
           "id": "AEC-dev-178",
@@ -1236,7 +1256,7 @@
           "sent_shuffle": "religious about, what right. law, we issue; we're one's upon talking into terminology putting just and is beliefs isn't the them both know others, The not forcing",
           "pred_original": "Argument",
           "pred_content_only": "Argument",
-          "pred_shuffle": "No-Argument"
+          "pred_shuffle": ""
         },
         {
           "id": "AEC-dev-179",
@@ -1246,7 +1266,7 @@
           "sent_content_only": "implies support legalization",
           "sent_shuffle": "you support of everything. that legalization Which implies",
           "pred_original": "Argument",
-          "pred_content_only": "Argument",
+          "pred_content_only": "No-Argument",
           "pred_shuffle": "No-Argument"
         },
         {
@@ -1256,9 +1276,9 @@
           "sent_original": "Read again: \"I tell you the truth, until heaven and earth disappear, NOT THE SMALLEST LETTER, NOT THE LEAST STROKE OF A PEN, will by any means disappear from the Law until everything is accomplished.\"",
           "sent_content_only": "read tell truth heaven earth disappear smallest letter stroke pen means disappear law accomplished",
           "sent_shuffle": "and NOT the OF until PEN, the NOT means by SMALLEST earth disappear, disappear heaven STROKE Law truth, any Read is THE LEAST \"I everything from A tell will you accomplished.\" LETTER, THE again: until",
-          "pred_original": "No-Argument",
-          "pred_content_only": "Argument",
-          "pred_shuffle": "No-Argument"
+          "pred_original": "Argument",
+          "pred_content_only": "No-Argument",
+          "pred_shuffle": ""
         },
         {
           "id": "AEC-dev-181",
@@ -1267,9 +1287,9 @@
           "sent_original": "Actually, I think I'm going to retract my admission regarding this double-muscling mutation.",
           "sent_content_only": "actually think going retract admission double muscling mutation",
           "sent_shuffle": "my retract think regarding mutation. to double-muscling admission I'm going Actually, I this",
-          "pred_original": "Argument",
-          "pred_content_only": "Argument",
-          "pred_shuffle": "No-Argument"
+          "pred_original": "No-Argument",
+          "pred_content_only": "",
+          "pred_shuffle": ""
         },
         {
           "id": "AEC-dev-182",
@@ -1279,8 +1299,8 @@
           "sent_content_only": "seen exactly type effect teaching label better peoples time",
           "sent_shuffle": "throughout type another what one than has peoples of better to label have is seen done effect teaching We exactly time.",
           "pred_original": "Argument",
-          "pred_content_only": "Argument",
-          "pred_shuffle": "No-Argument"
+          "pred_content_only": "No-Argument",
+          "pred_shuffle": ""
         },
         {
           "id": "AEC-dev-183",
@@ -1289,9 +1309,9 @@
           "sent_original": "You just responded to what you wanted to hear.",
           "sent_content_only": "responded wanted hear",
           "sent_shuffle": "to wanted to what hear. responded you You just",
-          "pred_original": "No-Argument",
+          "pred_original": "Argument",
           "pred_content_only": "No-Argument",
-          "pred_shuffle": "No-Argument"
+          "pred_shuffle": ""
         },
         {
           "id": "AEC-dev-184",
@@ -1313,7 +1333,7 @@
           "sent_shuffle": "the what of That's they yourself victims like sure next can't is faces last law make time we're could'nt saying. time\" you Making really of you anti-gun are protect gonna but spitting the crime, \"We protect another in",
           "pred_original": "Argument",
           "pred_content_only": "No-Argument",
-          "pred_shuffle": "No-Argument"
+          "pred_shuffle": ""
         }
       ]
     },
@@ -1322,91 +1342,97 @@
       "reports": {
         "original": {
           "Argument": {
-            "precision": 0.5416666666666666,
-            "recall": 0.8666666666666667,
-            "f1-score": 0.6666666666666666,
+            "precision": 0.5238095238095238,
+            "recall": 0.7333333333333333,
+            "f1-score": 0.6111111111111112,
             "support": 15.0
           },
           "No-Argument": {
-            "precision": 0.6666666666666666,
-            "recall": 0.26666666666666666,
-            "f1-score": 0.38095238095238093,
+            "precision": 0.5555555555555556,
+            "recall": 0.3333333333333333,
+            "f1-score": 0.4166666666666667,
             "support": 15.0
           },
-          "accuracy": 0.5666666666666667,
+          "accuracy": 0.5333333333333333,
           "macro avg": {
-            "precision": 0.6041666666666666,
-            "recall": 0.5666666666666667,
-            "f1-score": 0.5238095238095237,
+            "precision": 0.5396825396825398,
+            "recall": 0.5333333333333333,
+            "f1-score": 0.513888888888889,
             "support": 30.0
           },
           "weighted avg": {
-            "precision": 0.6041666666666666,
-            "recall": 0.5666666666666667,
-            "f1-score": 0.5238095238095238,
+            "precision": 0.5396825396825397,
+            "recall": 0.5333333333333333,
+            "f1-score": 0.513888888888889,
             "support": 30.0
           }
         },
         "content_only": {
           "Argument": {
-            "precision": 0.6428571428571429,
-            "recall": 0.6,
-            "f1-score": 0.6206896551724138,
+            "precision": 1.0,
+            "recall": 0.4,
+            "f1-score": 0.5714285714285714,
             "support": 15.0
           },
           "No-Argument": {
             "precision": 0.625,
-            "recall": 0.6666666666666666,
-            "f1-score": 0.6451612903225806,
+            "recall": 1.0,
+            "f1-score": 0.7692307692307693,
             "support": 15.0
           },
-          "accuracy": 0.6333333333333333,
+          "accuracy": 0.7,
           "macro avg": {
-            "precision": 0.6339285714285714,
-            "recall": 0.6333333333333333,
-            "f1-score": 0.6329254727474972,
+            "precision": 0.8125,
+            "recall": 0.7,
+            "f1-score": 0.6703296703296704,
             "support": 30.0
           },
           "weighted avg": {
-            "precision": 0.6339285714285715,
-            "recall": 0.6333333333333333,
-            "f1-score": 0.6329254727474972,
+            "precision": 0.8125,
+            "recall": 0.7,
+            "f1-score": 0.6703296703296703,
             "support": 30.0
           }
         },
         "shuffle": {
+          "": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1-score": 0.0,
+            "support": 0.0
+          },
           "Argument": {
-            "precision": 1.0,
-            "recall": 0.13333333333333333,
-            "f1-score": 0.23529411764705882,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1-score": 0.0,
             "support": 15.0
           },
           "No-Argument": {
-            "precision": 0.5357142857142857,
-            "recall": 1.0,
-            "f1-score": 0.6976744186046512,
+            "precision": 0.6,
+            "recall": 0.2,
+            "f1-score": 0.3,
             "support": 15.0
           },
-          "accuracy": 0.5666666666666667,
+          "accuracy": 0.1,
           "macro avg": {
-            "precision": 0.7678571428571428,
-            "recall": 0.5666666666666667,
-            "f1-score": 0.466484268125855,
+            "precision": 0.19999999999999998,
+            "recall": 0.06666666666666667,
+            "f1-score": 0.09999999999999999,
             "support": 30.0
           },
           "weighted avg": {
-            "precision": 0.7678571428571428,
-            "recall": 0.5666666666666667,
-            "f1-score": 0.46648426812585503,
+            "precision": 0.3,
+            "recall": 0.1,
+            "f1-score": 0.15,
             "support": 30.0
           }
         }
       },
-      "macro_f1_original": 0.5238,
-      "macro_f1_content_only": 0.6329,
-      "macro_f1_shuffle": 0.4665,
-      "delta_content_only": 0.1091,
-      "delta_shuffle": -0.0573,
+      "macro_f1_original": 0.5139,
+      "macro_f1_content_only": 0.6703,
+      "macro_f1_shuffle": 0.1,
+      "delta_content_only": 0.1564,
+      "delta_shuffle": -0.4139,
       "samples": [
         {
           "id": "AFS-dev-1",
@@ -1417,7 +1443,7 @@
           "sent_shuffle": "by study been death proved there then against arguments using already to wrong. of other this there this produced was studies opponents theory factor, penalty would have the If another the",
           "pred_original": "Argument",
           "pred_content_only": "Argument",
-          "pred_shuffle": "No-Argument"
+          "pred_shuffle": ""
         },
         {
           "id": "AFS-dev-2",
@@ -1428,7 +1454,7 @@
           "sent_shuffle": "policies gun their increased laws. fact this efforts laws focus enforcement on rather and of control anti-gun proponents reduction existing concede sentencing when they or Gun essentially than",
           "pred_original": "Argument",
           "pred_content_only": "Argument",
-          "pred_shuffle": "No-Argument"
+          "pred_shuffle": ""
         },
         {
           "id": "AFS-dev-3",
@@ -1439,7 +1465,7 @@
           "sent_shuffle": "prevent yes, imprisonment murderer again? definite killing a for a Can life from",
           "pred_original": "Argument",
           "pred_content_only": "Argument",
-          "pred_shuffle": "No-Argument"
+          "pred_shuffle": ""
         },
         {
           "id": "AFS-dev-4",
@@ -1450,7 +1476,7 @@
           "sent_shuffle": "it gays marriage know. of part the status obtained because to out a have I who little from don't about simply about denying I'm unsure state",
           "pred_original": "No-Argument",
           "pred_content_only": "No-Argument",
-          "pred_shuffle": "No-Argument"
+          "pred_shuffle": ""
         },
         {
           "id": "AFS-dev-5",
@@ -1459,9 +1485,9 @@
           "sent_original": "Or a Democratic President saying \"if they bring a knife to the fight we bring a gun\".",
           "sent_content_only": "democratic president saying bring knife fight bring gun",
           "sent_shuffle": "bring to \"if they a bring we knife a a Democratic fight gun\". saying the Or President",
-          "pred_original": "Argument",
+          "pred_original": "No-Argument",
           "pred_content_only": "No-Argument",
-          "pred_shuffle": "No-Argument"
+          "pred_shuffle": ""
         },
         {
           "id": "AFS-dev-6",
@@ -1472,7 +1498,7 @@
           "sent_shuffle": "perpretrator. can only to people death have against really penalty vengeance is support the the I simple see why So, reason the",
           "pred_original": "Argument",
           "pred_content_only": "Argument",
-          "pred_shuffle": "Argument"
+          "pred_shuffle": ""
         },
         {
           "id": "AFS-dev-7",
@@ -1481,9 +1507,9 @@
           "sent_original": "All citizens are protected under the law for equal treatment.",
           "sent_content_only": "citizens protected law equal treatment",
           "sent_shuffle": "for protected are equal the law treatment. under All citizens",
-          "pred_original": "Argument",
-          "pred_content_only": "Argument",
-          "pred_shuffle": "Argument"
+          "pred_original": "No-Argument",
+          "pred_content_only": "No-Argument",
+          "pred_shuffle": "No-Argument"
         },
         {
           "id": "AFS-dev-8",
@@ -1494,7 +1520,7 @@
           "sent_shuffle": "steady armed 25 criminals their drastically guaranteed months, the since that decrease in now a upward this unarmed. years 12 While is robbery changed over prey are in the past previous with firearms, has figures showed",
           "pred_original": "Argument",
           "pred_content_only": "Argument",
-          "pred_shuffle": "No-Argument"
+          "pred_shuffle": ""
         },
         {
           "id": "AFS-dev-9",
@@ -1505,7 +1531,7 @@
           "sent_shuffle": "removable justice is valued most similiar a part a and punishment (in of justified. sometimes opinion) realize of they the is achieve my result but right I both the",
           "pred_original": "Argument",
           "pred_content_only": "No-Argument",
-          "pred_shuffle": "No-Argument"
+          "pred_shuffle": ""
         },
         {
           "id": "AFS-dev-10",
@@ -1515,7 +1541,7 @@
           "sent_content_only": "death penalty painful public spectacle",
           "sent_shuffle": "isn't the death a painful, US spectacle. penalty in Also, the public",
           "pred_original": "Argument",
-          "pred_content_only": "Argument",
+          "pred_content_only": "No-Argument",
           "pred_shuffle": "No-Argument"
         },
         {
@@ -1526,8 +1552,8 @@
           "sent_content_only": "necessity becomming hardcore prisoner survive decreases",
           "sent_shuffle": "to becomming of survive hardcore prisoner decreases. a The necessity",
           "pred_original": "Argument",
-          "pred_content_only": "Argument",
-          "pred_shuffle": "No-Argument"
+          "pred_content_only": "No-Argument",
+          "pred_shuffle": ""
         },
         {
           "id": "AFS-dev-12",
@@ -1536,9 +1562,9 @@
           "sent_original": "In the time you have been here you have proven exactly one the many claims you have made; that being that the state of Georgia attempted to ban handgun ownership in 1837.",
           "sent_content_only": "time proven exactly claims state georgia attempted ban handgun ownership 1837",
           "sent_shuffle": "to been exactly you attempted one state here being the have proven handgun claims Georgia that in the many that time made; the you ownership have ban 1837. have of In you",
-          "pred_original": "Argument",
+          "pred_original": "No-Argument",
           "pred_content_only": "Argument",
-          "pred_shuffle": "No-Argument"
+          "pred_shuffle": ""
         },
         {
           "id": "AFS-dev-13",
@@ -1547,9 +1573,9 @@
           "sent_original": "Any deterent value that the death penalty brings to the table is simply a nice side effect.",
           "sent_content_only": "deterent value death penalty brings table simply nice effect",
           "sent_shuffle": "brings table death penalty side nice a the to deterent value simply effect. the is Any that",
-          "pred_original": "No-Argument",
+          "pred_original": "Argument",
           "pred_content_only": "No-Argument",
-          "pred_shuffle": "No-Argument"
+          "pred_shuffle": ""
         },
         {
           "id": "AFS-dev-14",
@@ -1560,7 +1586,7 @@
           "sent_shuffle": "to have should the speedier route needle. a Yes, we",
           "pred_original": "Argument",
           "pred_content_only": "No-Argument",
-          "pred_shuffle": "No-Argument"
+          "pred_shuffle": ""
         },
         {
           "id": "AFS-dev-15",
@@ -1571,7 +1597,7 @@
           "sent_shuffle": "in 4 walls, outside day in magazines: tv, just no a no and no cell, the a meal But bodily contact, and not for grate a put a him floor needs. him why 6x6",
           "pred_original": "Argument",
           "pred_content_only": "No-Argument",
-          "pred_shuffle": "No-Argument"
+          "pred_shuffle": ""
         },
         {
           "id": "AFS-dev-171",
@@ -1582,7 +1608,7 @@
           "sent_shuffle": "something.\" have gets Patience that that my gonna the proclaims I'm \" cartoon it vulture I arse, patience of When personal, kill",
           "pred_original": "No-Argument",
           "pred_content_only": "No-Argument",
-          "pred_shuffle": "No-Argument"
+          "pred_shuffle": ""
         },
         {
           "id": "AFS-dev-172",
@@ -1591,9 +1617,9 @@
           "sent_original": "Now the courts have held in some instances, the right to keep and bear arms is an individual right and in some instances, it is a states right.",
           "sent_content_only": "courts held instances right bear arms individual right instances states right",
           "sent_shuffle": "right an to some right. some in keep arms right is and and is a the bear courts individual states held instances, instances, the it Now have in",
-          "pred_original": "Argument",
-          "pred_content_only": "Argument",
-          "pred_shuffle": "No-Argument"
+          "pred_original": "No-Argument",
+          "pred_content_only": "No-Argument",
+          "pred_shuffle": ""
         },
         {
           "id": "AFS-dev-173",
@@ -1604,7 +1630,7 @@
           "sent_shuffle": "that these convinced are days. essential Americans don't guns understand why I really are",
           "pred_original": "No-Argument",
           "pred_content_only": "No-Argument",
-          "pred_shuffle": "No-Argument"
+          "pred_shuffle": ""
         },
         {
           "id": "AFS-dev-174",
@@ -1613,9 +1639,9 @@
           "sent_original": "Feudal lords had the right to the virginity of every young girl in their fiefdom.",
           "sent_content_only": "feudal lords right virginity young girl fiefdom",
           "sent_shuffle": "of their virginity the fiefdom. in to had every the right girl Feudal lords young",
-          "pred_original": "Argument",
+          "pred_original": "No-Argument",
           "pred_content_only": "No-Argument",
-          "pred_shuffle": "No-Argument"
+          "pred_shuffle": ""
         },
         {
           "id": "AFS-dev-175",
@@ -1624,9 +1650,9 @@
           "sent_original": "You say I prattle and ramble, but its just because you don't understand that I am using technique that you don't even know about.",
           "sent_content_only": "prattle ramble understand technique know",
           "sent_shuffle": "am ramble, that about. that you technique don't I using say understand even but because I know and you its just You prattle don't",
-          "pred_original": "No-Argument",
+          "pred_original": "Argument",
           "pred_content_only": "No-Argument",
-          "pred_shuffle": "No-Argument"
+          "pred_shuffle": ""
         },
         {
           "id": "AFS-dev-176",
@@ -1646,9 +1672,9 @@
           "sent_original": "As I say this case does not fit the bill completely, but I'm sure similar cases must arise and they should be an exception.",
           "sent_content_only": "case fit bill completely sure similar cases arise exception",
           "sent_shuffle": "cases does and exception. sure completely, arise but similar must I I'm be not bill say an case they fit the As this should",
-          "pred_original": "No-Argument",
-          "pred_content_only": "Argument",
-          "pred_shuffle": "No-Argument"
+          "pred_original": "Argument",
+          "pred_content_only": "No-Argument",
+          "pred_shuffle": ""
         },
         {
           "id": "AFS-dev-178",
@@ -1658,8 +1684,8 @@
           "sent_content_only": "dangerous precedent suggest cases witness victim conviction fair choice wording use",
           "sent_shuffle": "fair, conviction there's whatever use. that suggest only that where wording one just, a one very witness/victim dangerous isn't might to choice in cases of It's precedent or",
           "pred_original": "Argument",
-          "pred_content_only": "Argument",
-          "pred_shuffle": "No-Argument"
+          "pred_content_only": "No-Argument",
+          "pred_shuffle": ""
         },
         {
           "id": "AFS-dev-179",
@@ -1669,8 +1695,8 @@
           "sent_content_only": "state want influencing breath criticize believing influence government",
           "sent_shuffle": "I criticize the \"ONLY\" the \"influencing\", want next believing who breath am you for should me state influence don't government. then in First you one",
           "pred_original": "Argument",
-          "pred_content_only": "Argument",
-          "pred_shuffle": "No-Argument"
+          "pred_content_only": "No-Argument",
+          "pred_shuffle": ""
         },
         {
           "id": "AFS-dev-180",
@@ -1681,7 +1707,7 @@
           "sent_shuffle": "is shit\" to the kid, gone wonder kid out far the is parent too who why of their Any \"beats violent.",
           "pred_original": "Argument",
           "pred_content_only": "No-Argument",
-          "pred_shuffle": "No-Argument"
+          "pred_shuffle": ""
         },
         {
           "id": "AFS-dev-181",
@@ -1691,8 +1717,8 @@
           "sent_content_only": "germans invade countries armed citizens mandated law access weapons real weapons single shot",
           "sent_shuffle": "shot. with not weapons, by have real just armed access not to law would to countries weapons citizens, mandated Germans invade single",
           "pred_original": "Argument",
-          "pred_content_only": "Argument",
-          "pred_shuffle": "No-Argument"
+          "pred_content_only": "No-Argument",
+          "pred_shuffle": ""
         },
         {
           "id": "AFS-dev-182",
@@ -1714,7 +1740,7 @@
           "sent_shuffle": "judged, mother to be different and should the you don't have cars. parents father If want",
           "pred_original": "Argument",
           "pred_content_only": "No-Argument",
-          "pred_shuffle": "No-Argument"
+          "pred_shuffle": ""
         },
         {
           "id": "AFS-dev-184",
@@ -1725,7 +1751,7 @@
           "sent_shuffle": "of segment a will tool which is through of population government some should the fulfilled. the The be",
           "pred_original": "Argument",
           "pred_content_only": "No-Argument",
-          "pred_shuffle": "No-Argument"
+          "pred_shuffle": ""
         },
         {
           "id": "AFS-dev-185",
@@ -1734,7 +1760,7 @@
           "sent_original": "Louisiana meanwhile has many factors which lead to its place on the list.",
           "sent_content_only": "louisiana factors lead place list",
           "sent_shuffle": "to lead has place list. which the its many factors Louisiana meanwhile on",
-          "pred_original": "Argument",
+          "pred_original": "No-Argument",
           "pred_content_only": "No-Argument",
           "pred_shuffle": "No-Argument"
         }
@@ -1744,60 +1770,6 @@
       "n_samples": 30,
       "reports": {
         "original": {
-          "Argument": {
-            "precision": 0.5384615384615384,
-            "recall": 0.4666666666666667,
-            "f1-score": 0.5,
-            "support": 15.0
-          },
-          "No-Argument": {
-            "precision": 0.5294117647058824,
-            "recall": 0.6,
-            "f1-score": 0.5625,
-            "support": 15.0
-          },
-          "accuracy": 0.5333333333333333,
-          "macro avg": {
-            "precision": 0.5339366515837104,
-            "recall": 0.5333333333333333,
-            "f1-score": 0.53125,
-            "support": 30.0
-          },
-          "weighted avg": {
-            "precision": 0.5339366515837104,
-            "recall": 0.5333333333333333,
-            "f1-score": 0.53125,
-            "support": 30.0
-          }
-        },
-        "content_only": {
-          "Argument": {
-            "precision": 0.6,
-            "recall": 0.4,
-            "f1-score": 0.48,
-            "support": 15.0
-          },
-          "No-Argument": {
-            "precision": 0.55,
-            "recall": 0.7333333333333333,
-            "f1-score": 0.6285714285714286,
-            "support": 15.0
-          },
-          "accuracy": 0.5666666666666667,
-          "macro avg": {
-            "precision": 0.575,
-            "recall": 0.5666666666666667,
-            "f1-score": 0.5542857142857143,
-            "support": 30.0
-          },
-          "weighted avg": {
-            "precision": 0.575,
-            "recall": 0.5666666666666667,
-            "f1-score": 0.5542857142857142,
-            "support": 30.0
-          }
-        },
-        "shuffle": {
           "Argument": {
             "precision": 1.0,
             "recall": 0.06666666666666667,
@@ -1823,13 +1795,79 @@
             "f1-score": 0.4034090909090909,
             "support": 30.0
           }
+        },
+        "content_only": {
+          "": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1-score": 0.0,
+            "support": 0.0
+          },
+          "Argument": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1-score": 0.0,
+            "support": 15.0
+          },
+          "No-Argument": {
+            "precision": 0.5357142857142857,
+            "recall": 1.0,
+            "f1-score": 0.6976744186046512,
+            "support": 15.0
+          },
+          "accuracy": 0.5,
+          "macro avg": {
+            "precision": 0.17857142857142858,
+            "recall": 0.3333333333333333,
+            "f1-score": 0.23255813953488372,
+            "support": 30.0
+          },
+          "weighted avg": {
+            "precision": 0.26785714285714285,
+            "recall": 0.5,
+            "f1-score": 0.3488372093023256,
+            "support": 30.0
+          }
+        },
+        "shuffle": {
+          "": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1-score": 0.0,
+            "support": 0.0
+          },
+          "Argument": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1-score": 0.0,
+            "support": 15.0
+          },
+          "No-Argument": {
+            "precision": 0.9166666666666666,
+            "recall": 0.7333333333333333,
+            "f1-score": 0.8148148148148148,
+            "support": 15.0
+          },
+          "accuracy": 0.36666666666666664,
+          "macro avg": {
+            "precision": 0.3055555555555555,
+            "recall": 0.24444444444444444,
+            "f1-score": 0.2716049382716049,
+            "support": 30.0
+          },
+          "weighted avg": {
+            "precision": 0.4583333333333333,
+            "recall": 0.36666666666666664,
+            "f1-score": 0.4074074074074074,
+            "support": 30.0
+          }
         }
       },
-      "macro_f1_original": 0.5312,
-      "macro_f1_content_only": 0.5543,
-      "macro_f1_shuffle": 0.4034,
-      "delta_content_only": 0.023,
-      "delta_shuffle": -0.1278,
+      "macro_f1_original": 0.4034,
+      "macro_f1_content_only": 0.2326,
+      "macro_f1_shuffle": 0.2716,
+      "delta_content_only": -0.1709,
+      "delta_shuffle": -0.1318,
       "samples": [
         {
           "id": "ARGUMINSCI-dev-1",
@@ -1839,8 +1877,8 @@
           "sent_content_only": "implementation supports collision detection response disabled tests",
           "sent_shuffle": "which these response, and tests. for detection also were supports collision The implementation disabled",
           "pred_original": "No-Argument",
-          "pred_content_only": "Argument",
-          "pred_shuffle": "Argument"
+          "pred_content_only": "No-Argument",
+          "pred_shuffle": ""
         },
         {
           "id": "ARGUMINSCI-dev-2",
@@ -1849,9 +1887,9 @@
           "sent_original": "As shown in Figure 9 , we can also model highly deformable, sticky objects that interact with each other.",
           "sent_content_only": "shown figure 9 model highly deformable sticky objects interact",
           "sent_shuffle": "that objects 9 model , interact each we sticky with highly shown deformable, in other. can also As Figure",
-          "pred_original": "Argument",
-          "pred_content_only": "Argument",
-          "pred_shuffle": "No-Argument"
+          "pred_original": "No-Argument",
+          "pred_content_only": "No-Argument",
+          "pred_shuffle": ""
         },
         {
           "id": "ARGUMINSCI-dev-3",
@@ -1862,7 +1900,7 @@
           "sent_shuffle": "should up joints scale and we bulges, that muscle when scale bulge, example, the the when to muscle muscle relaxes. can add For capture down",
           "pred_original": "No-Argument",
           "pred_content_only": "No-Argument",
-          "pred_shuffle": "No-Argument"
+          "pred_shuffle": ""
         },
         {
           "id": "ARGUMINSCI-dev-4",
@@ -1871,9 +1909,9 @@
           "sent_original": "Finally, precomputation of the force polynomial coefficients in Eqn. (7) can be significant in case of StVK models, but never prohibitive.",
           "sent_content_only": "finally precomputation force polynomial coefficients eqn 7 significant case stvk models prohibitive",
           "sent_shuffle": "never polynomial case force (7) in of but coefficients significant models, can precomputation be of StVK in Eqn. Finally, the prohibitive.",
-          "pred_original": "Argument",
+          "pred_original": "No-Argument",
           "pred_content_only": "No-Argument",
-          "pred_shuffle": "No-Argument"
+          "pred_shuffle": ""
         },
         {
           "id": "ARGUMINSCI-dev-5",
@@ -1884,7 +1922,7 @@
           "sent_shuffle": "human fully synthesize et 2009]. work future locomotion more automatically Lee controllers models detailed, et an for exciting muscle-actuated al. for al. is to 2008; Finally, area [Weinstein",
           "pred_original": "No-Argument",
           "pred_content_only": "No-Argument",
-          "pred_shuffle": "No-Argument"
+          "pred_shuffle": ""
         },
         {
           "id": "ARGUMINSCI-dev-6",
@@ -1893,9 +1931,9 @@
           "sent_original": "Realistic deformation is a complex and subtle phenomenon due to the tightly coupled interplay of bones and musculature governing the deformations.",
           "sent_content_only": "realistic deformation complex subtle phenomenon tightly coupled interplay bones musculature governing deformations",
           "sent_shuffle": "the and of complex to interplay bones governing subtle coupled musculature the deformation tightly is and phenomenon due Realistic a deformations.",
-          "pred_original": "Argument",
-          "pred_content_only": "Argument",
-          "pred_shuffle": "No-Argument"
+          "pred_original": "No-Argument",
+          "pred_content_only": "No-Argument",
+          "pred_shuffle": ""
         },
         {
           "id": "ARGUMINSCI-dev-7",
@@ -1904,9 +1942,9 @@
           "sent_original": "While this would be problematic when using a multi-step differential equation solver which expects continuity (such as a RungeKutta method), it should not interfere with a one-step solver such as the backward Euler method.",
           "sent_content_only": "problematic multi step differential equation solver expects continuity rungekutta method interfere step solver backward euler method",
           "sent_shuffle": "when method), it which with such (such equation as solver one-step continuity a differential multi-step as using not While Euler expects RungeKutta would backward solver should be interfere problematic the method. a this a",
-          "pred_original": "Argument",
-          "pred_content_only": "Argument",
-          "pred_shuffle": "No-Argument"
+          "pred_original": "No-Argument",
+          "pred_content_only": "No-Argument",
+          "pred_shuffle": ""
         },
         {
           "id": "ARGUMINSCI-dev-8",
@@ -1916,8 +1954,8 @@
           "sent_content_only": "example possible enhance sampling scheme ways exploiting curvature adaptivity topological information measures vorticity velocity variation",
           "sent_shuffle": "adaptivity, exploiting scheme or variation. to possible in perhaps sampling vorticity various topological by and example, ways, it curvature velocity be measures enhance our of For may information,",
           "pred_original": "No-Argument",
-          "pred_content_only": "Argument",
-          "pred_shuffle": "No-Argument"
+          "pred_content_only": "",
+          "pred_shuffle": ""
         },
         {
           "id": "ARGUMINSCI-dev-9",
@@ -1926,9 +1964,9 @@
           "sent_original": "In current graphic card architectures, data transfer from CPU to GPU is slow compared with memory access within the GPU.",
           "sent_content_only": "current graphic card architectures data transfer cpu gpu slow compared memory access gpu",
           "sent_shuffle": "GPU. data with architectures, to compared memory the transfer slow within GPU current is graphic access from CPU In card",
-          "pred_original": "No-Argument",
+          "pred_original": "Argument",
           "pred_content_only": "No-Argument",
-          "pred_shuffle": "No-Argument"
+          "pred_shuffle": ""
         },
         {
           "id": "ARGUMINSCI-dev-10",
@@ -1937,9 +1975,9 @@
           "sent_original": "The first model is based on the work of Stam \n[Sta97] and calculates the numerical solution of the Navier-Stokes equation with a semi-Lagrangian approach.",
           "sent_content_only": "model based work stam sta97 calculates numerical solution navier stokes equation semi lagrangian approach",
           "sent_shuffle": "solution on Navier-Stokes approach. the [Sta97] the and numerical of first calculates a the Stam model semi-Lagrangian based equation work of The is with",
-          "pred_original": "Argument",
-          "pred_content_only": "Argument",
-          "pred_shuffle": "No-Argument"
+          "pred_original": "No-Argument",
+          "pred_content_only": "No-Argument",
+          "pred_shuffle": ""
         },
         {
           "id": "ARGUMINSCI-dev-11",
@@ -1948,9 +1986,9 @@
           "sent_original": "Instead, we define internal behavior by formulating a vector condition C(x) which we want to be zero, and then defining the associated energy as k C(x) T C(x) where k is a stiffness constant.",
           "sent_content_only": "instead define internal behavior formulating vector condition c(x want zero defining associated energy k c(x t c(x k stiffness constant",
           "sent_shuffle": "by defining the we k where be C(x) zero, which T to C(x) condition vector k formulating energy Instead, stiffness want then define a C(x) associated internal as behavior is constant. and we a",
-          "pred_original": "Argument",
-          "pred_content_only": "No-Argument",
-          "pred_shuffle": "No-Argument"
+          "pred_original": "No-Argument",
+          "pred_content_only": "",
+          "pred_shuffle": ""
         },
         {
           "id": "ARGUMINSCI-dev-12",
@@ -1972,7 +2010,7 @@
           "sent_shuffle": "Realism\u2014Animation compelling tension liquids, of variety of and is thin that and droplets meshes, surface visually complex of splashing. Keywords: the [Computer during <H1>1 most Three-Dimensional arise sheets aspects Graphics liquids simulation, Introduction</H1> One the Graphics]: fluid",
           "pred_original": "No-Argument",
           "pred_content_only": "No-Argument",
-          "pred_shuffle": "No-Argument"
+          "pred_shuffle": ""
         },
         {
           "id": "ARGUMINSCI-dev-14",
@@ -1983,7 +2021,7 @@
           "sent_shuffle": "not papers, these treated conditions are explicitly. boundary In all",
           "pred_original": "No-Argument",
           "pred_content_only": "No-Argument",
-          "pred_shuffle": "No-Argument"
+          "pred_shuffle": ""
         },
         {
           "id": "ARGUMINSCI-dev-15",
@@ -1992,9 +2030,9 @@
           "sent_original": "It turns out that the number of different non-trivial joint sets, and therefore the number of running the SVD, is surprisingly small for common models \u2013 about several tens.",
           "sent_content_only": "turns number different non trivial joint sets number running svd surprisingly small common models tens",
           "sent_shuffle": "SVD, number sets, for small of number therefore and of joint models is tens. running about turns the out the several the \u2013 different non-trivial common It that surprisingly",
-          "pred_original": "Argument",
+          "pred_original": "No-Argument",
           "pred_content_only": "No-Argument",
-          "pred_shuffle": "No-Argument"
+          "pred_shuffle": ""
         },
         {
           "id": "ARGUMINSCI-dev-171",
@@ -2025,8 +2063,8 @@
           "sent_original": "Interpolation synthesis of articulated figure motion.",
           "sent_content_only": "interpolation synthesis articulated figure motion",
           "sent_shuffle": "articulated synthesis of figure Interpolation motion.",
-          "pred_original": "Argument",
-          "pred_content_only": "Argument",
+          "pred_original": "No-Argument",
+          "pred_content_only": "No-Argument",
           "pred_shuffle": "No-Argument"
         },
         {
@@ -2080,8 +2118,8 @@
           "sent_original": "Equation 2 gives us the difference in joint position and body velocity.",
           "sent_content_only": "equation 2 gives difference joint position body velocity",
           "sent_shuffle": "joint difference gives position and in velocity. us the Equation 2 body",
-          "pred_original": "Argument",
-          "pred_content_only": "Argument",
+          "pred_original": "No-Argument",
+          "pred_content_only": "No-Argument",
           "pred_shuffle": "No-Argument"
         },
         {
@@ -2091,9 +2129,9 @@
           "sent_original": "Optimality principles for model-based prediction of human gait.",
           "sent_content_only": "optimality principles model based prediction human gait",
           "sent_shuffle": "model-based prediction human gait. for of Optimality principles",
-          "pred_original": "Argument",
-          "pred_content_only": "Argument",
-          "pred_shuffle": "No-Argument"
+          "pred_original": "No-Argument",
+          "pred_content_only": "No-Argument",
+          "pred_shuffle": ""
         },
         {
           "id": "ARGUMINSCI-dev-180",
@@ -2113,9 +2151,9 @@
           "sent_original": "Thus we have a total of five measurements per cloth sample that will be used for parameter fitting (two stretch, one shear, and two bending).",
           "sent_content_only": "total measurements cloth sample parameter fitting stretch shear bending",
           "sent_shuffle": "parameter will cloth stretch, (two five of sample for shear, that fitting we used and be have two total bending). measurements per Thus a one",
-          "pred_original": "Argument",
+          "pred_original": "No-Argument",
           "pred_content_only": "No-Argument",
-          "pred_shuffle": "No-Argument"
+          "pred_shuffle": ""
         },
         {
           "id": "ARGUMINSCI-dev-182",
@@ -2135,9 +2173,9 @@
           "sent_original": "In order to evaluate the third term pr physics , we first use backward difference to compute joint velocities and use central difference to compute joint accelerations.",
           "sent_content_only": "order evaluate term pr physics use backward difference compute joint velocities use central difference compute joint accelerations",
           "sent_shuffle": "compute use , accelerations. and term third we to difference first velocities order difference compute backward to joint joint the central pr physics to In evaluate use",
-          "pred_original": "Argument",
+          "pred_original": "No-Argument",
           "pred_content_only": "No-Argument",
-          "pred_shuffle": "No-Argument"
+          "pred_shuffle": ""
         },
         {
           "id": "ARGUMINSCI-dev-184",
@@ -2148,7 +2186,7 @@
           "sent_shuffle": "extremes points the global \u2212 1/2 (1/ in elementary mathematical \u03c0 1/4). discovers \u00b1 The analysis",
           "pred_original": "No-Argument",
           "pred_content_only": "No-Argument",
-          "pred_shuffle": "No-Argument"
+          "pred_shuffle": ""
         },
         {
           "id": "ARGUMINSCI-dev-185",
@@ -2157,8 +2195,8 @@
           "sent_original": "Optimized spatial hashing for collision detection of deformable objects.",
           "sent_content_only": "optimized spatial hashing collision detection deformable objects",
           "sent_shuffle": "for of deformable collision objects. hashing detection Optimized spatial",
-          "pred_original": "Argument",
-          "pred_content_only": "Argument",
+          "pred_original": "No-Argument",
+          "pred_content_only": "No-Argument",
           "pred_shuffle": "No-Argument"
         }
       ]
@@ -2168,32 +2206,71 @@
       "reports": {
         "original": {
           "Argument": {
-            "precision": 0.7,
-            "recall": 0.4666666666666667,
-            "f1-score": 0.56,
+            "precision": 0.75,
+            "recall": 0.2,
+            "f1-score": 0.3157894736842105,
             "support": 15.0
           },
           "No-Argument": {
-            "precision": 0.6,
-            "recall": 0.8,
-            "f1-score": 0.6857142857142857,
+            "precision": 0.5384615384615384,
+            "recall": 0.9333333333333333,
+            "f1-score": 0.6829268292682927,
             "support": 15.0
           },
-          "accuracy": 0.6333333333333333,
+          "accuracy": 0.5666666666666667,
           "macro avg": {
-            "precision": 0.6499999999999999,
-            "recall": 0.6333333333333333,
-            "f1-score": 0.6228571428571429,
+            "precision": 0.6442307692307692,
+            "recall": 0.5666666666666667,
+            "f1-score": 0.4993581514762516,
             "support": 30.0
           },
           "weighted avg": {
-            "precision": 0.65,
-            "recall": 0.6333333333333333,
-            "f1-score": 0.6228571428571429,
+            "precision": 0.6442307692307693,
+            "recall": 0.5666666666666667,
+            "f1-score": 0.4993581514762516,
             "support": 30.0
           }
         },
         "content_only": {
+          "Argument": {
+            "precision": 0.5,
+            "recall": 0.06666666666666667,
+            "f1-score": 0.11764705882352941,
+            "support": 15.0
+          },
+          "ERROR": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1-score": 0.0,
+            "support": 0.0
+          },
+          "No-Argument": {
+            "precision": 0.5185185185185185,
+            "recall": 0.9333333333333333,
+            "f1-score": 0.6666666666666666,
+            "support": 15.0
+          },
+          "accuracy": 0.5,
+          "macro avg": {
+            "precision": 0.3395061728395062,
+            "recall": 0.3333333333333333,
+            "f1-score": 0.26143790849673204,
+            "support": 30.0
+          },
+          "weighted avg": {
+            "precision": 0.5092592592592593,
+            "recall": 0.5,
+            "f1-score": 0.3921568627450981,
+            "support": 30.0
+          }
+        },
+        "shuffle": {
+          "": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1-score": 0.0,
+            "support": 0.0
+          },
           "Argument": {
             "precision": 0.0,
             "recall": 0.0,
@@ -2201,58 +2278,31 @@
             "support": 15.0
           },
           "No-Argument": {
-            "precision": 0.4642857142857143,
-            "recall": 0.8666666666666667,
-            "f1-score": 0.6046511627906976,
+            "precision": 0.7,
+            "recall": 0.4666666666666667,
+            "f1-score": 0.56,
             "support": 15.0
           },
-          "accuracy": 0.43333333333333335,
+          "accuracy": 0.23333333333333334,
           "macro avg": {
-            "precision": 0.23214285714285715,
-            "recall": 0.43333333333333335,
-            "f1-score": 0.3023255813953488,
+            "precision": 0.2333333333333333,
+            "recall": 0.15555555555555556,
+            "f1-score": 0.18666666666666668,
             "support": 30.0
           },
           "weighted avg": {
-            "precision": 0.23214285714285715,
-            "recall": 0.43333333333333335,
-            "f1-score": 0.3023255813953488,
-            "support": 30.0
-          }
-        },
-        "shuffle": {
-          "Argument": {
-            "precision": 1.0,
-            "recall": 0.06666666666666667,
-            "f1-score": 0.125,
-            "support": 15.0
-          },
-          "No-Argument": {
-            "precision": 0.5172413793103449,
-            "recall": 1.0,
-            "f1-score": 0.6818181818181818,
-            "support": 15.0
-          },
-          "accuracy": 0.5333333333333333,
-          "macro avg": {
-            "precision": 0.7586206896551724,
-            "recall": 0.5333333333333333,
-            "f1-score": 0.4034090909090909,
-            "support": 30.0
-          },
-          "weighted avg": {
-            "precision": 0.7586206896551725,
-            "recall": 0.5333333333333333,
-            "f1-score": 0.4034090909090909,
+            "precision": 0.35,
+            "recall": 0.23333333333333334,
+            "f1-score": 0.28,
             "support": 30.0
           }
         }
       },
-      "macro_f1_original": 0.6229,
-      "macro_f1_content_only": 0.3023,
-      "macro_f1_shuffle": 0.4034,
-      "delta_content_only": -0.3205,
-      "delta_shuffle": -0.2194,
+      "macro_f1_original": 0.4994,
+      "macro_f1_content_only": 0.2614,
+      "macro_f1_shuffle": 0.1867,
+      "delta_content_only": -0.2379,
+      "delta_shuffle": -0.3127,
       "samples": [
         {
           "id": "FINARG-dev-1",
@@ -2261,9 +2311,9 @@
           "sent_original": "I think when we look at the bridges for revenue, and obviously units are a key driver of revenue, things like Prime are key in that bridge.",
           "sent_content_only": "think look bridges revenue obviously units key driver revenue things prime key bridge",
           "sent_shuffle": "driver units revenue, bridge. things the at and key are obviously revenue, think a in are when of that look Prime bridges for key I we like",
-          "pred_original": "Argument",
+          "pred_original": "No-Argument",
           "pred_content_only": "No-Argument",
-          "pred_shuffle": "No-Argument"
+          "pred_shuffle": ""
         },
         {
           "id": "FINARG-dev-2",
@@ -2274,7 +2324,7 @@
           "sent_shuffle": "different us increasing communities. people one be focuses the interact for that this just and or is ways build to to of the So going want",
           "pred_original": "No-Argument",
           "pred_content_only": "No-Argument",
-          "pred_shuffle": "No-Argument"
+          "pred_shuffle": ""
         },
         {
           "id": "FINARG-dev-3",
@@ -2284,8 +2334,8 @@
           "sent_content_only": "talk premium services mix office commercial 365 business 60 driving mix shift e3 ultimately e5 continue headroom number right encouraged arpu growth value proposition customers choosing premium skus continuing choose premium skus time",
           "sent_shuffle": "and is see in mix, that premium has but headroom about SKUs value to ARPU ultimately are the continuing what's driving in by talk the premium growth encouraged the proposition shift 60%, will that's we mix the services number choosing our right, whether E3 Office When choose and those customers to continue you that are 365 SKUs I have you time. to premium over the and Commercial business that or E5 to about being",
           "pred_original": "Argument",
-          "pred_content_only": "No-Argument",
-          "pred_shuffle": "No-Argument"
+          "pred_content_only": "Argument",
+          "pred_shuffle": ""
         },
         {
           "id": "FINARG-dev-4",
@@ -2295,7 +2345,7 @@
           "sent_content_only": "",
           "sent_shuffle": "I that's how see So it.",
           "pred_original": "No-Argument",
-          "pred_content_only": "No-Argument",
+          "pred_content_only": "ERROR",
           "pred_shuffle": "No-Argument"
         },
         {
@@ -2307,7 +2357,7 @@
           "sent_shuffle": "we done has although changes. this, of gone and this a pretty had has number mean, well my what of take we've I think made I own hoped,",
           "pred_original": "No-Argument",
           "pred_content_only": "No-Argument",
-          "pred_shuffle": "No-Argument"
+          "pred_shuffle": ""
         },
         {
           "id": "FINARG-dev-6",
@@ -2318,7 +2368,7 @@
           "sent_shuffle": "record day Amazon devices. a for It was",
           "pred_original": "No-Argument",
           "pred_content_only": "No-Argument",
-          "pred_shuffle": "No-Argument"
+          "pred_shuffle": ""
         },
         {
           "id": "FINARG-dev-7",
@@ -2338,9 +2388,9 @@
           "sent_original": "We're starting to see the benefit of that already in our top line numbers.",
           "sent_content_only": "starting benefit line numbers",
           "sent_shuffle": "already line that of numbers. top benefit to in see the We're starting our",
-          "pred_original": "Argument",
+          "pred_original": "No-Argument",
           "pred_content_only": "No-Argument",
-          "pred_shuffle": "No-Argument"
+          "pred_shuffle": ""
         },
         {
           "id": "FINARG-dev-9",
@@ -2351,7 +2401,7 @@
           "sent_shuffle": "working we've an on for been while. area that And it's a",
           "pred_original": "No-Argument",
           "pred_content_only": "No-Argument",
-          "pred_shuffle": "No-Argument"
+          "pred_shuffle": ""
         },
         {
           "id": "FINARG-dev-10",
@@ -2360,9 +2410,9 @@
           "sent_original": "We are honing the businesses that we're in and making them as efficient, as profitable as possible while also investing very pointedly and very wisely, we believe, in things that will enhance customer experience and create lasting businesses for us down the line.",
           "sent_content_only": "honing businesses making efficient profitable possible investing pointedly wisely believe things enhance customer experience create lasting businesses line",
           "sent_shuffle": "making the them believe, for also line. we businesses experience and as that pointedly efficient, wisely, lasting businesses customer as very very things us will investing possible the create enhance We honing in that and we're and profitable as while are in down",
-          "pred_original": "No-Argument",
+          "pred_original": "Argument",
           "pred_content_only": "No-Argument",
-          "pred_shuffle": "Argument"
+          "pred_shuffle": ""
         },
         {
           "id": "FINARG-dev-11",
@@ -2384,7 +2434,7 @@
           "sent_shuffle": "cloud, we overall strength in in that margin gross talk the see business. really about our Karl, improvement the what in also Windows drive we addition to the Really, can it's",
           "pred_original": "Argument",
           "pred_content_only": "No-Argument",
-          "pred_shuffle": "No-Argument"
+          "pred_shuffle": ""
         },
         {
           "id": "FINARG-dev-13",
@@ -2393,9 +2443,9 @@
           "sent_original": "So I guess what I'm saying is I just expect some of this to land in this year.",
           "sent_content_only": "guess saying expect land year",
           "sent_shuffle": "to this I'm expect saying I this is some in I of guess land year. just So what",
-          "pred_original": "Argument",
+          "pred_original": "No-Argument",
           "pred_content_only": "No-Argument",
-          "pred_shuffle": "No-Argument"
+          "pred_shuffle": ""
         },
         {
           "id": "FINARG-dev-14",
@@ -2404,9 +2454,9 @@
           "sent_original": "So I feel good that we're staying on the trajectory that we showed in the projections.",
           "sent_content_only": "feel good staying trajectory showed projections",
           "sent_shuffle": "on trajectory we're staying the that showed the I feel in projections. that we So good",
-          "pred_original": "Argument",
+          "pred_original": "No-Argument",
           "pred_content_only": "No-Argument",
-          "pred_shuffle": "No-Argument"
+          "pred_shuffle": ""
         },
         {
           "id": "FINARG-dev-15",
@@ -2415,9 +2465,9 @@
           "sent_original": "And so we think the mix shift to Stories is a big opportunity for us and it's going to take time to continue to get advertisers in, but we're very happy with demand to date.",
           "sent_content_only": "think mix shift stories big opportunity going time continue advertisers happy demand date",
           "sent_shuffle": "is opportunity mix time with continue very it's in, get us a big but Stories take happy shift advertisers And to for to we demand we're to think to the date. and going so to",
-          "pred_original": "Argument",
+          "pred_original": "No-Argument",
           "pred_content_only": "No-Argument",
-          "pred_shuffle": "No-Argument"
+          "pred_shuffle": ""
         },
         {
           "id": "FINARG-dev-171",
@@ -2437,9 +2487,9 @@
           "sent_original": "And really when you look around the world, it's really if you exclude China, essentially every single currency has weakened against the dollar.",
           "sent_content_only": "look world exclude china essentially single currency weakened dollar",
           "sent_shuffle": "single every when essentially around China, currency exclude dollar. the really really weakened you if the look has world, it's And you against",
-          "pred_original": "Argument",
+          "pred_original": "No-Argument",
           "pred_content_only": "Argument",
-          "pred_shuffle": "No-Argument"
+          "pred_shuffle": ""
         },
         {
           "id": "FINARG-dev-173",
@@ -2470,9 +2520,9 @@
           "sent_original": "But there are other stimulus programs as well that likely have an effect to the consumer level.",
           "sent_content_only": "stimulus programs likely effect consumer level",
           "sent_shuffle": "well have programs as consumer the to likely that there are effect level. stimulus an But other",
-          "pred_original": "No-Argument",
+          "pred_original": "Argument",
           "pred_content_only": "No-Argument",
-          "pred_shuffle": "No-Argument"
+          "pred_shuffle": ""
         },
         {
           "id": "FINARG-dev-176",
@@ -2483,7 +2533,7 @@
           "sent_shuffle": "has a Year, the U.S. and strong have New we a season, Chinese strong like quarter the We in so of that help holiday now season in a December. included much did that",
           "pred_original": "No-Argument",
           "pred_content_only": "No-Argument",
-          "pred_shuffle": "No-Argument"
+          "pred_shuffle": ""
         },
         {
           "id": "FINARG-dev-177",
@@ -2493,8 +2543,8 @@
           "sent_content_only": "outlook different outcome guaranteed",
           "sent_shuffle": "the all and then guaranteed. not different outlook outcome was really But our was",
           "pred_original": "No-Argument",
-          "pred_content_only": "Argument",
-          "pred_shuffle": "No-Argument"
+          "pred_content_only": "No-Argument",
+          "pred_shuffle": ""
         },
         {
           "id": "FINARG-dev-178",
@@ -2503,7 +2553,7 @@
           "sent_original": "You can see the \u2013 in our supplemental revenue disclosure, it's in other revenue, and it's the majority of the other revenue in that line item.",
           "sent_content_only": "supplemental revenue disclosure revenue majority revenue line item",
           "sent_shuffle": "the other disclosure, item. the our in it's it's in in of can and that revenue, see majority line \u2013 revenue supplemental revenue You the other",
-          "pred_original": "Argument",
+          "pred_original": "No-Argument",
           "pred_content_only": "No-Argument",
           "pred_shuffle": "No-Argument"
         },
@@ -2536,9 +2586,9 @@
           "sent_original": "What I can tell you there is we still think there's a lot of room in Prime.",
           "sent_content_only": "tell think lot room prime",
           "sent_shuffle": "we there's there is in room of think still I can lot Prime. you a What tell",
-          "pred_original": "Argument",
+          "pred_original": "No-Argument",
           "pred_content_only": "No-Argument",
-          "pred_shuffle": "No-Argument"
+          "pred_shuffle": ""
         },
         {
           "id": "FINARG-dev-182",
@@ -2549,7 +2599,7 @@
           "sent_shuffle": "on on stats spent those. basis time breaking a out specific We're not quarterly",
           "pred_original": "No-Argument",
           "pred_content_only": "No-Argument",
-          "pred_shuffle": "No-Argument"
+          "pred_shuffle": ""
         },
         {
           "id": "FINARG-dev-183",
@@ -2560,7 +2610,7 @@
           "sent_shuffle": "excited pretty they platforms can to that use we're see together, as and people progress. these different So invest,",
           "pred_original": "No-Argument",
           "pred_content_only": "No-Argument",
-          "pred_shuffle": "No-Argument"
+          "pred_shuffle": ""
         },
         {
           "id": "FINARG-dev-184",
@@ -2571,7 +2621,7 @@
           "sent_shuffle": "are that say totally and China different. India I would",
           "pred_original": "No-Argument",
           "pred_content_only": "No-Argument",
-          "pred_shuffle": "No-Argument"
+          "pred_shuffle": ""
         },
         {
           "id": "FINARG-dev-185",
@@ -2591,91 +2641,97 @@
       "reports": {
         "original": {
           "Argument": {
-            "precision": 0.6875,
+            "precision": 0.7857142857142857,
             "recall": 0.7333333333333333,
-            "f1-score": 0.7096774193548387,
+            "f1-score": 0.7586206896551724,
             "support": 15.0
           },
           "No-Argument": {
-            "precision": 0.7142857142857143,
-            "recall": 0.6666666666666666,
-            "f1-score": 0.6896551724137931,
+            "precision": 0.75,
+            "recall": 0.8,
+            "f1-score": 0.7741935483870968,
             "support": 15.0
           },
-          "accuracy": 0.7,
+          "accuracy": 0.7666666666666667,
           "macro avg": {
-            "precision": 0.7008928571428572,
-            "recall": 0.7,
-            "f1-score": 0.699666295884316,
+            "precision": 0.7678571428571428,
+            "recall": 0.7666666666666666,
+            "f1-score": 0.7664071190211346,
             "support": 30.0
           },
           "weighted avg": {
-            "precision": 0.7008928571428572,
-            "recall": 0.7,
-            "f1-score": 0.6996662958843161,
+            "precision": 0.7678571428571428,
+            "recall": 0.7666666666666667,
+            "f1-score": 0.7664071190211346,
             "support": 30.0
           }
         },
         "content_only": {
           "Argument": {
-            "precision": 0.5714285714285714,
+            "precision": 0.9230769230769231,
             "recall": 0.8,
-            "f1-score": 0.6666666666666666,
+            "f1-score": 0.8571428571428571,
             "support": 15.0
           },
           "No-Argument": {
-            "precision": 0.6666666666666666,
-            "recall": 0.4,
-            "f1-score": 0.5,
+            "precision": 0.8235294117647058,
+            "recall": 0.9333333333333333,
+            "f1-score": 0.875,
             "support": 15.0
           },
-          "accuracy": 0.6,
+          "accuracy": 0.8666666666666667,
           "macro avg": {
-            "precision": 0.6190476190476191,
-            "recall": 0.6000000000000001,
-            "f1-score": 0.5833333333333333,
+            "precision": 0.8733031674208145,
+            "recall": 0.8666666666666667,
+            "f1-score": 0.8660714285714286,
             "support": 30.0
           },
           "weighted avg": {
-            "precision": 0.619047619047619,
-            "recall": 0.6,
-            "f1-score": 0.5833333333333334,
+            "precision": 0.8733031674208145,
+            "recall": 0.8666666666666667,
+            "f1-score": 0.8660714285714285,
             "support": 30.0
           }
         },
         "shuffle": {
+          "": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1-score": 0.0,
+            "support": 0.0
+          },
           "Argument": {
-            "precision": 1.0,
-            "recall": 0.2,
-            "f1-score": 0.3333333333333333,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1-score": 0.0,
             "support": 15.0
           },
           "No-Argument": {
-            "precision": 0.5555555555555556,
-            "recall": 1.0,
-            "f1-score": 0.7142857142857143,
+            "precision": 0.6666666666666666,
+            "recall": 0.26666666666666666,
+            "f1-score": 0.38095238095238093,
             "support": 15.0
           },
-          "accuracy": 0.6,
+          "accuracy": 0.13333333333333333,
           "macro avg": {
-            "precision": 0.7777777777777778,
-            "recall": 0.6,
-            "f1-score": 0.5238095238095238,
+            "precision": 0.2222222222222222,
+            "recall": 0.08888888888888889,
+            "f1-score": 0.12698412698412698,
             "support": 30.0
           },
           "weighted avg": {
-            "precision": 0.7777777777777779,
-            "recall": 0.6,
-            "f1-score": 0.5238095238095238,
+            "precision": 0.3333333333333333,
+            "recall": 0.13333333333333333,
+            "f1-score": 0.19047619047619044,
             "support": 30.0
           }
         }
       },
-      "macro_f1_original": 0.6997,
-      "macro_f1_content_only": 0.5833,
-      "macro_f1_shuffle": 0.5238,
-      "delta_content_only": -0.1163,
-      "delta_shuffle": -0.1759,
+      "macro_f1_original": 0.7664,
+      "macro_f1_content_only": 0.8661,
+      "macro_f1_shuffle": 0.127,
+      "delta_content_only": 0.0997,
+      "delta_shuffle": -0.6394,
       "samples": [
         {
           "id": "IAM-dev-1",
@@ -2685,8 +2741,8 @@
           "sent_content_only": "particular point systemic presence racial socio economic geographic gender bias implementation evidence practice illegitimate need suspension abolition ref",
           "sent_shuffle": "the evidence of and is need in socio-economic, its geographic, and bias illegitimate racial, of of systemic the In abolition gender as they or in how point practice to suspension [ref]. implementation particular, presence",
           "pred_original": "Argument",
-          "pred_content_only": "Argument",
-          "pred_shuffle": "Argument"
+          "pred_content_only": "No-Argument",
+          "pred_shuffle": ""
         },
         {
           "id": "IAM-dev-2",
@@ -2697,7 +2753,7 @@
           "sent_shuffle": "on do, while humans speciesism them we experimenting so on from to can experiment suffer refrain it is Animals like humans.",
           "pred_original": "Argument",
           "pred_content_only": "Argument",
-          "pred_shuffle": "No-Argument"
+          "pred_shuffle": ""
         },
         {
           "id": "IAM-dev-3",
@@ -2708,7 +2764,7 @@
           "sent_shuffle": "to owners' to or of of of services of (\u4e2d\u534e\u4eba\u6c11\u5171\u548c\u56fd\u5546\u6807\u6cd5) out rights products the the of trademark promoting the [ref]. sets with exclusive consumer and The maintenance the protection trademarks, economy of general view bearing socialist guidelines interests market Law quality a People's registered and Republic China on administration trademarks, development Trademark of protecting",
           "pred_original": "No-Argument",
           "pred_content_only": "No-Argument",
-          "pred_shuffle": "No-Argument"
+          "pred_shuffle": ""
         },
         {
           "id": "IAM-dev-4",
@@ -2717,9 +2773,9 @@
           "sent_original": "Sex-selective abortion affects the human sex ratio\u2014the relative number of males to females in a given age group [ref], with China and India, the two most populous countries of the world, having unbalanced gender ratios.",
           "sent_content_only": "sex selective abortion affects human sex ratio relative number males females given age group ref china india populous countries world having unbalanced gender ratios",
           "sent_shuffle": "of females sex China having India, the age populous two a males to countries number with world, ratio\u2014the most Sex-selective gender in [ref], affects unbalanced of and the the human ratios. given group abortion relative",
-          "pred_original": "Argument",
+          "pred_original": "No-Argument",
           "pred_content_only": "Argument",
-          "pred_shuffle": "Argument"
+          "pred_shuffle": ""
         },
         {
           "id": "IAM-dev-5",
@@ -2729,8 +2785,8 @@
           "sent_content_only": "olympics force host cities create expensive infrastructure buildings fall disuse",
           "sent_shuffle": "infrastructure into expensive create disuse. fall to force and host cities that The Olympics buildings",
           "pred_original": "Argument",
-          "pred_content_only": "No-Argument",
-          "pred_shuffle": "No-Argument"
+          "pred_content_only": "Argument",
+          "pred_shuffle": ""
         },
         {
           "id": "IAM-dev-6",
@@ -2750,9 +2806,9 @@
           "sent_original": "While taking out a student loan may seem a daunting prospect, it is also the perfect opportunity to begin to build a solid credit history.",
           "sent_content_only": "taking student loan daunting prospect perfect opportunity begin build solid credit history",
           "sent_shuffle": "opportunity is daunting to begin may loan prospect, perfect a it to taking the solid also out credit student history. seem a While a build",
-          "pred_original": "No-Argument",
+          "pred_original": "Argument",
           "pred_content_only": "Argument",
-          "pred_shuffle": "No-Argument"
+          "pred_shuffle": ""
         },
         {
           "id": "IAM-dev-8",
@@ -2763,7 +2819,7 @@
           "sent_shuffle": "much be heart also develop attack emphysema, tremendously lung and, help reducing slowly might that cancer heart smoking theoretically, prevent bans to and seem than to more attacks. in diseases \u201cPublic effective",
           "pred_original": "Argument",
           "pred_content_only": "Argument",
-          "pred_shuffle": "No-Argument"
+          "pred_shuffle": ""
         },
         {
           "id": "IAM-dev-9",
@@ -2772,9 +2828,9 @@
           "sent_original": "Beauty contests, like sport, can be an important focus of national or regional pride.",
           "sent_content_only": "beauty contests sport important focus national regional pride",
           "sent_shuffle": "focus regional important an pride. or be like of sport, can Beauty contests, national",
-          "pred_original": "No-Argument",
-          "pred_content_only": "Argument",
-          "pred_shuffle": "No-Argument"
+          "pred_original": "Argument",
+          "pred_content_only": "No-Argument",
+          "pred_shuffle": ""
         },
         {
           "id": "IAM-dev-10",
@@ -2785,7 +2841,7 @@
           "sent_shuffle": "escape the which unpleasant perceived can Internet user a Internet in banal from life. as of of uses access an daily/real the aspects increase escapism or Ease to the",
           "pred_original": "Argument",
           "pred_content_only": "Argument",
-          "pred_shuffle": "No-Argument"
+          "pred_shuffle": ""
         },
         {
           "id": "IAM-dev-11",
@@ -2796,7 +2852,7 @@
           "sent_shuffle": "patrons. social of by caused potential its individual networking the by concern relative regarding freedom misuse services has The afforded",
           "pred_original": "Argument",
           "pred_content_only": "Argument",
-          "pred_shuffle": "No-Argument"
+          "pred_shuffle": ""
         },
         {
           "id": "IAM-dev-12",
@@ -2807,7 +2863,7 @@
           "sent_shuffle": "job and capital, are particularly opportunities urban young education in attracted communities to lose centers. adults who Rural human",
           "pred_original": "Argument",
           "pred_content_only": "Argument",
-          "pred_shuffle": "No-Argument"
+          "pred_shuffle": ""
         },
         {
           "id": "IAM-dev-13",
@@ -2816,7 +2872,7 @@
           "sent_original": "This rule of transparency gives your partner a feeling of security and trustworthiness.",
           "sent_content_only": "rule transparency gives partner feeling security trustworthiness",
           "sent_shuffle": "a partner of of trustworthiness. your and feeling transparency gives This rule security",
-          "pred_original": "No-Argument",
+          "pred_original": "Argument",
           "pred_content_only": "Argument",
           "pred_shuffle": "No-Argument"
         },
@@ -2827,9 +2883,9 @@
           "sent_original": "The reduction in heart attacks associated with public smoking bans is a big deal,\u201d said Steven Schroeder, M.D., director, Smoking Cessation Leadership Center University of California, San Francisco.",
           "sent_content_only": "reduction heart attacks associated public smoking bans big deal said steven schroeder m.d. director smoking cessation leadership center university california san francisco",
           "sent_shuffle": "director, Schroeder, is Leadership Francisco. with associated a said bans of big Smoking Steven California, reduction deal,\u201d in M.D., San attacks Center public smoking University The heart Cessation",
-          "pred_original": "Argument",
-          "pred_content_only": "No-Argument",
-          "pred_shuffle": "No-Argument"
+          "pred_original": "No-Argument",
+          "pred_content_only": "Argument",
+          "pred_shuffle": ""
         },
         {
           "id": "IAM-dev-15",
@@ -2838,9 +2894,9 @@
           "sent_original": "A legal precedent concerning the legality of abortion was set in Australia in 1969, by the Menhennitt ruling in the Victorian Supreme Court case R v Davidson [ref], which held that abortion was lawfully justified if necessary to preserve the physical or mental health of the woman concerned, provided that the danger involved in the abortion did not outweigh the danger which the abortion was designed to prevent.",
           "sent_content_only": "legal precedent concerning legality abortion set australia 1969 menhennitt ruling victorian supreme court case r davidson ref held abortion lawfully justified necessary preserve physical mental health woman concerned provided danger involved abortion outweigh danger abortion designed prevent",
           "sent_shuffle": "the that held v abortion outweigh of was Menhennitt the set lawfully that Victorian in woman case the the the the Court Australia physical the involved to mental R danger the necessary Supreme in in A ruling the abortion provided Davidson did or in designed danger preserve was prevent. 1969, abortion legal precedent [ref], to legality justified not which health of concerned, was which abortion if concerning by",
-          "pred_original": "Argument",
+          "pred_original": "No-Argument",
           "pred_content_only": "Argument",
-          "pred_shuffle": "Argument"
+          "pred_shuffle": ""
         },
         {
           "id": "IAM-dev-171",
@@ -2850,7 +2906,7 @@
           "sent_content_only": "war 500,000 women volunteer uniformed auxiliaries german armed forces wehrmacht",
           "sent_shuffle": "were auxiliaries 500,000 women forces armed German uniformed volunteer the war the (Wehrmacht). than in During more",
           "pred_original": "No-Argument",
-          "pred_content_only": "Argument",
+          "pred_content_only": "No-Argument",
           "pred_shuffle": "No-Argument"
         },
         {
@@ -2860,9 +2916,9 @@
           "sent_original": "Increasing support for abstinence-only sex education by conservative groups has been one of the primary causes of this controversy.",
           "sent_content_only": "increasing support abstinence sex education conservative groups primary causes controversy",
           "sent_shuffle": "primary the sex has education causes this by of of been support one for controversy. conservative groups Increasing abstinence-only",
-          "pred_original": "Argument",
-          "pred_content_only": "Argument",
-          "pred_shuffle": "No-Argument"
+          "pred_original": "No-Argument",
+          "pred_content_only": "No-Argument",
+          "pred_shuffle": ""
         },
         {
           "id": "IAM-dev-173",
@@ -2883,8 +2939,8 @@
           "sent_content_only": "timing levels sexual activity similar sweden france canada great britain high u.s. rates arise primarily possibly effective contraceptive use sexually active teenagers ref",
           "sent_shuffle": "[Sweden, by across use sexually possibly France, sexual because less-effective, less, of similar the levels primarily high rates and [ref]. contraceptive of Since teenagers Canada, US], and active and arise U.S. activity quite Great Britain, the timing are",
           "pred_original": "Argument",
-          "pred_content_only": "No-Argument",
-          "pred_shuffle": "No-Argument"
+          "pred_content_only": "Argument",
+          "pred_shuffle": ""
         },
         {
           "id": "IAM-dev-175",
@@ -2894,8 +2950,8 @@
           "sent_content_only": "revenues tourism case taxed order offset cost scientific research",
           "sent_shuffle": "the offset in in any be scientific case order of from to tourism cost research. taxed Revenues could",
           "pred_original": "Argument",
-          "pred_content_only": "Argument",
-          "pred_shuffle": "No-Argument"
+          "pred_content_only": "No-Argument",
+          "pred_shuffle": ""
         },
         {
           "id": "IAM-dev-176",
@@ -2906,7 +2962,7 @@
           "sent_shuffle": "country studying all-encompassing semester, per Institute International cost average abroad the $36,000 year. $18,000 in full to of foreign research a around academic the or of Education, per According by hovers",
           "pred_original": "No-Argument",
           "pred_content_only": "No-Argument",
-          "pred_shuffle": "No-Argument"
+          "pred_shuffle": ""
         },
         {
           "id": "IAM-dev-177",
@@ -2916,8 +2972,8 @@
           "sent_content_only": "standards determining apply death sentence murder cases",
           "sent_shuffle": "whether apply in determining murder the sentence to standards have in cases. used death The been",
           "pred_original": "No-Argument",
-          "pred_content_only": "Argument",
-          "pred_shuffle": "No-Argument"
+          "pred_content_only": "No-Argument",
+          "pred_shuffle": ""
         },
         {
           "id": "IAM-dev-178",
@@ -2927,8 +2983,8 @@
           "sent_content_only": "combat organ trafficking recommends steps",
           "sent_shuffle": "trafficking, among other he steps: organ recommends, To combat",
           "pred_original": "No-Argument",
-          "pred_content_only": "Argument",
-          "pred_shuffle": "No-Argument"
+          "pred_content_only": "No-Argument",
+          "pred_shuffle": ""
         },
         {
           "id": "IAM-dev-179",
@@ -2938,8 +2994,8 @@
           "sent_content_only": "difference cohen explains obligation right justly demand",
           "sent_shuffle": "right to what do. others an that we a demand ought what difference, whereas that do, Cohen is we is justly obligation is The explains, can",
           "pred_original": "No-Argument",
-          "pred_content_only": "Argument",
-          "pred_shuffle": "No-Argument"
+          "pred_content_only": "No-Argument",
+          "pred_shuffle": ""
         },
         {
           "id": "IAM-dev-180",
@@ -2949,8 +3005,8 @@
           "sent_content_only": "vaccines determined safe efficacious advance phase iii trials focuses efficacy vaccine hundreds thousands volunteers",
           "sent_shuffle": "the trials, to volunteers. the efficacious and phase on hundreds III of determined focuses thousands which to efficacy of safe in then advance to Vaccines be vaccine",
           "pred_original": "No-Argument",
-          "pred_content_only": "Argument",
-          "pred_shuffle": "No-Argument"
+          "pred_content_only": "No-Argument",
+          "pred_shuffle": ""
         },
         {
           "id": "IAM-dev-181",
@@ -2961,7 +3017,7 @@
           "sent_shuffle": "developed no that without sector was subsidies energy History shows [ref].",
           "pred_original": "Argument",
           "pred_content_only": "No-Argument",
-          "pred_shuffle": "No-Argument"
+          "pred_shuffle": ""
         },
         {
           "id": "IAM-dev-182",
@@ -2970,8 +3026,8 @@
           "sent_original": "Renewable energy is just that \u2013 renewable.",
           "sent_content_only": "renewable energy renewable",
           "sent_shuffle": "energy just that is renewable. Renewable \u2013",
-          "pred_original": "Argument",
-          "pred_content_only": "Argument",
+          "pred_original": "No-Argument",
+          "pred_content_only": "No-Argument",
           "pred_shuffle": "No-Argument"
         },
         {
@@ -2983,7 +3039,7 @@
           "sent_shuffle": "who visit Gilbert the writer Doug of Sun, by athlete, Edmonton and rare former exception the the sports A was said:",
           "pred_original": "No-Argument",
           "pred_content_only": "No-Argument",
-          "pred_shuffle": "No-Argument"
+          "pred_shuffle": ""
         },
         {
           "id": "IAM-dev-184",
@@ -3004,8 +3060,8 @@
           "sent_content_only": "structured homeschooling includes method style home education follows basic curriculum articulated goals outcomes",
           "sent_shuffle": "outcomes. or curriculum method education basic with and style a goals that homeschooling follows includes articulated of home Structured any",
           "pred_original": "No-Argument",
-          "pred_content_only": "Argument",
-          "pred_shuffle": "No-Argument"
+          "pred_content_only": "No-Argument",
+          "pred_shuffle": ""
         }
       ]
     },
@@ -3014,32 +3070,38 @@
       "reports": {
         "original": {
           "Argument": {
-            "precision": 0.6923076923076923,
-            "recall": 0.6,
-            "f1-score": 0.6428571428571429,
+            "precision": 0.5555555555555556,
+            "recall": 0.6666666666666666,
+            "f1-score": 0.6060606060606061,
             "support": 15.0
           },
           "No-Argument": {
-            "precision": 0.6470588235294118,
-            "recall": 0.7333333333333333,
-            "f1-score": 0.6875,
+            "precision": 0.5833333333333334,
+            "recall": 0.4666666666666667,
+            "f1-score": 0.5185185185185185,
             "support": 15.0
           },
-          "accuracy": 0.6666666666666666,
+          "accuracy": 0.5666666666666667,
           "macro avg": {
-            "precision": 0.6696832579185521,
-            "recall": 0.6666666666666666,
-            "f1-score": 0.6651785714285714,
+            "precision": 0.5694444444444444,
+            "recall": 0.5666666666666667,
+            "f1-score": 0.5622895622895623,
             "support": 30.0
           },
           "weighted avg": {
-            "precision": 0.669683257918552,
-            "recall": 0.6666666666666666,
-            "f1-score": 0.6651785714285715,
+            "precision": 0.5694444444444445,
+            "recall": 0.5666666666666667,
+            "f1-score": 0.5622895622895623,
             "support": 30.0
           }
         },
         "content_only": {
+          "": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1-score": 0.0,
+            "support": 0.0
+          },
           "Argument": {
             "precision": 0.6,
             "recall": 0.4,
@@ -3047,58 +3109,64 @@
             "support": 15.0
           },
           "No-Argument": {
-            "precision": 0.55,
-            "recall": 0.7333333333333333,
-            "f1-score": 0.6285714285714286,
-            "support": 15.0
-          },
-          "accuracy": 0.5666666666666667,
-          "macro avg": {
-            "precision": 0.575,
-            "recall": 0.5666666666666667,
-            "f1-score": 0.5542857142857143,
-            "support": 30.0
-          },
-          "weighted avg": {
-            "precision": 0.575,
-            "recall": 0.5666666666666667,
-            "f1-score": 0.5542857142857142,
-            "support": 30.0
-          }
-        },
-        "shuffle": {
-          "Argument": {
-            "precision": 1.0,
-            "recall": 0.06666666666666667,
-            "f1-score": 0.125,
-            "support": 15.0
-          },
-          "No-Argument": {
-            "precision": 0.5172413793103449,
-            "recall": 1.0,
-            "f1-score": 0.6818181818181818,
+            "precision": 0.5555555555555556,
+            "recall": 0.6666666666666666,
+            "f1-score": 0.6060606060606061,
             "support": 15.0
           },
           "accuracy": 0.5333333333333333,
           "macro avg": {
-            "precision": 0.7586206896551724,
-            "recall": 0.5333333333333333,
-            "f1-score": 0.4034090909090909,
+            "precision": 0.38518518518518513,
+            "recall": 0.35555555555555557,
+            "f1-score": 0.36202020202020196,
             "support": 30.0
           },
           "weighted avg": {
-            "precision": 0.7586206896551725,
+            "precision": 0.5777777777777778,
             "recall": 0.5333333333333333,
-            "f1-score": 0.4034090909090909,
+            "f1-score": 0.543030303030303,
+            "support": 30.0
+          }
+        },
+        "shuffle": {
+          "": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1-score": 0.0,
+            "support": 0.0
+          },
+          "Argument": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1-score": 0.0,
+            "support": 15.0
+          },
+          "No-Argument": {
+            "precision": 0.42857142857142855,
+            "recall": 0.2,
+            "f1-score": 0.2727272727272727,
+            "support": 15.0
+          },
+          "accuracy": 0.1,
+          "macro avg": {
+            "precision": 0.14285714285714285,
+            "recall": 0.06666666666666667,
+            "f1-score": 0.0909090909090909,
+            "support": 30.0
+          },
+          "weighted avg": {
+            "precision": 0.21428571428571427,
+            "recall": 0.1,
+            "f1-score": 0.13636363636363635,
             "support": 30.0
           }
         }
       },
-      "macro_f1_original": 0.6652,
-      "macro_f1_content_only": 0.5543,
-      "macro_f1_shuffle": 0.4034,
-      "delta_content_only": -0.1109,
-      "delta_shuffle": -0.2618,
+      "macro_f1_original": 0.5623,
+      "macro_f1_content_only": 0.362,
+      "macro_f1_shuffle": 0.0909,
+      "delta_content_only": -0.2003,
+      "delta_shuffle": -0.4714,
       "samples": [
         {
           "id": "PE-dev-1",
@@ -3107,9 +3175,9 @@
           "sent_original": "From my point of view, computers have an important and inevitable role in economic, business, and other part of societies.",
           "sent_content_only": "point view computers important inevitable role economic business societies",
           "sent_shuffle": "societies. computers business, view, and economic, and of have in part inevitable my role point other an important From of",
-          "pred_original": "Argument",
-          "pred_content_only": "Argument",
-          "pred_shuffle": "No-Argument"
+          "pred_original": "No-Argument",
+          "pred_content_only": "No-Argument",
+          "pred_shuffle": ""
         },
         {
           "id": "PE-dev-2",
@@ -3119,8 +3187,8 @@
           "sent_content_only": "regardless exceptions obvious living small towns healthier big cities",
           "sent_shuffle": "healthier is it in is that big obvious small in of towns some than cities. living Regardless exceptions,",
           "pred_original": "Argument",
-          "pred_content_only": "No-Argument",
-          "pred_shuffle": "No-Argument"
+          "pred_content_only": "Argument",
+          "pred_shuffle": ""
         },
         {
           "id": "PE-dev-3",
@@ -3131,7 +3199,7 @@
           "sent_shuffle": "in it which that follow practices can enlightenment is religious the one's I own am bring vital to However, convinced mind.",
           "pred_original": "Argument",
           "pred_content_only": "Argument",
-          "pred_shuffle": "No-Argument"
+          "pred_shuffle": ""
         },
         {
           "id": "PE-dev-4",
@@ -3153,7 +3221,7 @@
           "sent_shuffle": "the for studied become and overseas his/her lived more than one eligible who job peers. will Therefore, has",
           "pred_original": "Argument",
           "pred_content_only": "No-Argument",
-          "pred_shuffle": "No-Argument"
+          "pred_shuffle": ""
         },
         {
           "id": "PE-dev-6",
@@ -3162,9 +3230,9 @@
           "sent_original": "On the other hand, it is possible for ordinary people to participate in some actions of environment protection, and they also can benefit from the improvement of environment.",
           "sent_content_only": "hand possible ordinary people participate actions environment protection benefit improvement environment",
           "sent_shuffle": "and environment to can environment. possible is participate actions people the in they of improvement the some other protection, of it benefit for ordinary from On hand, also",
-          "pred_original": "No-Argument",
+          "pred_original": "Argument",
           "pred_content_only": "Argument",
-          "pred_shuffle": "No-Argument"
+          "pred_shuffle": ""
         },
         {
           "id": "PE-dev-7",
@@ -3173,9 +3241,9 @@
           "sent_original": "To begin with, telephones and email help people, who live far away from other people, to connect each other.",
           "sent_content_only": "begin telephones email help people live far away people connect",
           "sent_shuffle": "people, other and live email to each help from connect far begin away with, other. people, who To telephones",
-          "pred_original": "No-Argument",
-          "pred_content_only": "No-Argument",
-          "pred_shuffle": "No-Argument"
+          "pred_original": "Argument",
+          "pred_content_only": "Argument",
+          "pred_shuffle": ""
         },
         {
           "id": "PE-dev-8",
@@ -3184,9 +3252,9 @@
           "sent_original": "In conclusion, technology has brought many benefits, but traditional skills and ways are always valuable and will last forever.",
           "sent_content_only": "conclusion technology brought benefits traditional skills ways valuable forever",
           "sent_shuffle": "valuable always brought skills many and last benefits, are will and conclusion, ways technology forever. but traditional In has",
-          "pred_original": "No-Argument",
+          "pred_original": "Argument",
           "pred_content_only": "No-Argument",
-          "pred_shuffle": "No-Argument"
+          "pred_shuffle": ""
         },
         {
           "id": "PE-dev-9",
@@ -3196,7 +3264,7 @@
           "sent_content_only": "dependence computers bad thing",
           "sent_shuffle": "computers a bad is thing. on not Thus, dependence",
           "pred_original": "Argument",
-          "pred_content_only": "Argument",
+          "pred_content_only": "No-Argument",
           "pred_shuffle": "No-Argument"
         },
         {
@@ -3207,8 +3275,8 @@
           "sent_content_only": "trying learn skills working places week gaining tasks reasons account important causes choice",
           "sent_shuffle": "take tasks week causes as two in gaining and are a important choice. account the of to more which learn reasons my working most places in the Trying skills, into",
           "pred_original": "Argument",
-          "pred_content_only": "No-Argument",
-          "pred_shuffle": "No-Argument"
+          "pred_content_only": "",
+          "pred_shuffle": ""
         },
         {
           "id": "PE-dev-11",
@@ -3219,7 +3287,7 @@
           "sent_shuffle": "way I that I change the think. experienced Many circumstances",
           "pred_original": "No-Argument",
           "pred_content_only": "No-Argument",
-          "pred_shuffle": "No-Argument"
+          "pred_shuffle": ""
         },
         {
           "id": "PE-dev-12",
@@ -3228,9 +3296,9 @@
           "sent_original": "In the second place, the revolution in females' right has brought about many benefits not only to themselves but society as well.",
           "sent_content_only": "second place revolution females right brought benefits society",
           "sent_shuffle": "well. revolution second only has many to society in benefits but not brought the about the themselves females' right In place, as",
-          "pred_original": "Argument",
+          "pred_original": "No-Argument",
           "pred_content_only": "Argument",
-          "pred_shuffle": "Argument"
+          "pred_shuffle": "No-Argument"
         },
         {
           "id": "PE-dev-13",
@@ -3240,7 +3308,7 @@
           "sent_content_only": "people believe non academic subjects completely removed strongly disagree",
           "sent_shuffle": "should completely non-academic subjects with removed, strongly be some people disagree that. that I While believe",
           "pred_original": "Argument",
-          "pred_content_only": "No-Argument",
+          "pred_content_only": "Argument",
           "pred_shuffle": "No-Argument"
         },
         {
@@ -3252,7 +3320,7 @@
           "sent_shuffle": "a environment to up, culture. up grow his because important personality future person the and a life, person that his/her and build is very the Where lives grow",
           "pred_original": "Argument",
           "pred_content_only": "No-Argument",
-          "pred_shuffle": "No-Argument"
+          "pred_shuffle": ""
         },
         {
           "id": "PE-dev-15",
@@ -3262,8 +3330,8 @@
           "sent_content_only": "illustrated solutions introduced assist reducing pollution traffic problems",
           "sent_shuffle": "be assist solutions can traffic and pollution to introduced illustrated before, reducing problems. other in As several",
           "pred_original": "No-Argument",
-          "pred_content_only": "Argument",
-          "pred_shuffle": "No-Argument"
+          "pred_content_only": "No-Argument",
+          "pred_shuffle": ""
         },
         {
           "id": "PE-dev-171",
@@ -3272,9 +3340,9 @@
           "sent_original": "First of all, restaurants are places where people come and pay some money to enjoy their meals.",
           "sent_content_only": "restaurants places people come pay money enjoy meals",
           "sent_shuffle": "people pay places where their enjoy to and come of all, money meals. are some First restaurants",
-          "pred_original": "No-Argument",
+          "pred_original": "Argument",
           "pred_content_only": "No-Argument",
-          "pred_shuffle": "No-Argument"
+          "pred_shuffle": ""
         },
         {
           "id": "PE-dev-172",
@@ -3285,7 +3353,7 @@
           "sent_shuffle": "the extracurricular in attending as opportunity an kind many activities part club, campus club. happing joining instance, of students around sports have or to take conversation For can such",
           "pred_original": "No-Argument",
           "pred_content_only": "No-Argument",
-          "pred_shuffle": "No-Argument"
+          "pred_shuffle": ""
         },
         {
           "id": "PE-dev-173",
@@ -3295,8 +3363,8 @@
           "sent_content_only": "huge injection campaigns organized country community health state improved remarkably",
           "sent_shuffle": "our community's organized throughout improved be will the country, huge injection state remarkably. are health When campaigns",
           "pred_original": "Argument",
-          "pred_content_only": "Argument",
-          "pred_shuffle": "No-Argument"
+          "pred_content_only": "",
+          "pred_shuffle": ""
         },
         {
           "id": "PE-dev-174",
@@ -3305,9 +3373,9 @@
           "sent_original": "Adding to that, exchange of knowledge in different sectors of research like electronics, medical, astronomy etc would become easier.",
           "sent_content_only": "adding exchange knowledge different sectors research electronics medical astronomy etc easier",
           "sent_shuffle": "astronomy medical, of of knowledge etc become in electronics, would research to like that, easier. different sectors Adding exchange",
-          "pred_original": "No-Argument",
-          "pred_content_only": "No-Argument",
-          "pred_shuffle": "No-Argument"
+          "pred_original": "Argument",
+          "pred_content_only": "Argument",
+          "pred_shuffle": ""
         },
         {
           "id": "PE-dev-175",
@@ -3327,9 +3395,9 @@
           "sent_original": "Part-time jobs furnish them with precious chance to practice what they are learning at their universities.",
           "sent_content_only": "time jobs furnish precious chance practice learning universities",
           "sent_shuffle": "to what precious chance their they learning practice jobs furnish at universities. with are Part-time them",
-          "pred_original": "No-Argument",
+          "pred_original": "Argument",
           "pred_content_only": "No-Argument",
-          "pred_shuffle": "No-Argument"
+          "pred_shuffle": ""
         },
         {
           "id": "PE-dev-177",
@@ -3339,8 +3407,8 @@
           "sent_content_only": "hand critics idea maintain educational benefits internet yield undeniable remain certain shortcomings",
           "sent_shuffle": "Internet educational that shortcomings. are this of although the still the yield the that remain benefits other may certain critics there idea maintain On hand, undeniable,",
           "pred_original": "Argument",
-          "pred_content_only": "No-Argument",
-          "pred_shuffle": "No-Argument"
+          "pred_content_only": "Argument",
+          "pred_shuffle": ""
         },
         {
           "id": "PE-dev-178",
@@ -3351,7 +3419,7 @@
           "sent_shuffle": "to the if night. bring have won't you wants or are music, the who late one same play at you over, a problem study For reason, friends",
           "pred_original": "No-Argument",
           "pred_content_only": "No-Argument",
-          "pred_shuffle": "No-Argument"
+          "pred_shuffle": ""
         },
         {
           "id": "PE-dev-179",
@@ -3362,7 +3430,7 @@
           "sent_shuffle": "for families with help continue earn number rich of may studies, vast their the pay, a which background With of a from the quality and poverty tax to amount better life. students the they",
           "pred_original": "Argument",
           "pred_content_only": "Argument",
-          "pred_shuffle": "No-Argument"
+          "pred_shuffle": ""
         },
         {
           "id": "PE-dev-180",
@@ -3373,7 +3441,7 @@
           "sent_shuffle": "and discuss will against arguments for animal some This essay domestication.",
           "pred_original": "No-Argument",
           "pred_content_only": "No-Argument",
-          "pred_shuffle": "No-Argument"
+          "pred_shuffle": ""
         },
         {
           "id": "PE-dev-181",
@@ -3382,9 +3450,9 @@
           "sent_original": "First of all, it will be easier for me to find an engineering job in the city.",
           "sent_content_only": "easier find engineering job city",
           "sent_shuffle": "for find be easier the in job to me of all, engineering city. will an First it",
-          "pred_original": "No-Argument",
+          "pred_original": "Argument",
           "pred_content_only": "No-Argument",
-          "pred_shuffle": "No-Argument"
+          "pred_shuffle": ""
         },
         {
           "id": "PE-dev-182",
@@ -3395,7 +3463,7 @@
           "sent_shuffle": "lot a which because one is of person he knowledge a knows circumstance of investment. rich Consider in",
           "pred_original": "No-Argument",
           "pred_content_only": "No-Argument",
-          "pred_shuffle": "No-Argument"
+          "pred_shuffle": ""
         },
         {
           "id": "PE-dev-183",
@@ -3417,7 +3485,7 @@
           "sent_shuffle": "privacies being their invade monitored. constantly cameras argue due that these Nevertheless, some to",
           "pred_original": "Argument",
           "pred_content_only": "Argument",
-          "pred_shuffle": "No-Argument"
+          "pred_shuffle": ""
         },
         {
           "id": "PE-dev-185",
@@ -3427,7 +3495,7 @@
           "sent_content_only": "threatened boss going fire",
           "sent_shuffle": "who boss been going him. his fire was threatened by He has to",
           "pred_original": "No-Argument",
-          "pred_content_only": "Argument",
+          "pred_content_only": "No-Argument",
           "pred_shuffle": "No-Argument"
         }
       ]
@@ -3437,91 +3505,97 @@
       "reports": {
         "original": {
           "Argument": {
-            "precision": 0.7,
-            "recall": 0.9333333333333333,
-            "f1-score": 0.8,
+            "precision": 0.9090909090909091,
+            "recall": 0.6666666666666666,
+            "f1-score": 0.7692307692307693,
             "support": 15.0
           },
           "No-Argument": {
-            "precision": 0.9,
-            "recall": 0.6,
-            "f1-score": 0.72,
+            "precision": 0.7368421052631579,
+            "recall": 0.9333333333333333,
+            "f1-score": 0.8235294117647058,
             "support": 15.0
           },
-          "accuracy": 0.7666666666666667,
+          "accuracy": 0.8,
           "macro avg": {
-            "precision": 0.8,
-            "recall": 0.7666666666666666,
-            "f1-score": 0.76,
+            "precision": 0.8229665071770335,
+            "recall": 0.8,
+            "f1-score": 0.7963800904977376,
             "support": 30.0
           },
           "weighted avg": {
-            "precision": 0.8,
-            "recall": 0.7666666666666667,
-            "f1-score": 0.7599999999999999,
+            "precision": 0.8229665071770335,
+            "recall": 0.8,
+            "f1-score": 0.7963800904977376,
             "support": 30.0
           }
         },
         "content_only": {
           "Argument": {
-            "precision": 0.5909090909090909,
-            "recall": 0.8666666666666667,
-            "f1-score": 0.7027027027027027,
+            "precision": 0.9090909090909091,
+            "recall": 0.6666666666666666,
+            "f1-score": 0.7692307692307693,
             "support": 15.0
           },
           "No-Argument": {
-            "precision": 0.75,
-            "recall": 0.4,
-            "f1-score": 0.5217391304347826,
+            "precision": 0.7368421052631579,
+            "recall": 0.9333333333333333,
+            "f1-score": 0.8235294117647058,
             "support": 15.0
           },
-          "accuracy": 0.6333333333333333,
+          "accuracy": 0.8,
           "macro avg": {
-            "precision": 0.6704545454545454,
-            "recall": 0.6333333333333333,
-            "f1-score": 0.6122209165687427,
+            "precision": 0.8229665071770335,
+            "recall": 0.8,
+            "f1-score": 0.7963800904977376,
             "support": 30.0
           },
           "weighted avg": {
-            "precision": 0.6704545454545454,
-            "recall": 0.6333333333333333,
-            "f1-score": 0.6122209165687427,
+            "precision": 0.8229665071770335,
+            "recall": 0.8,
+            "f1-score": 0.7963800904977376,
             "support": 30.0
           }
         },
         "shuffle": {
+          "": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1-score": 0.0,
+            "support": 0.0
+          },
           "Argument": {
-            "precision": 0.6666666666666666,
-            "recall": 0.26666666666666666,
-            "f1-score": 0.38095238095238093,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1-score": 0.0,
             "support": 15.0
           },
           "No-Argument": {
-            "precision": 0.5416666666666666,
-            "recall": 0.8666666666666667,
-            "f1-score": 0.6666666666666666,
+            "precision": 1.0,
+            "recall": 0.13333333333333333,
+            "f1-score": 0.23529411764705882,
             "support": 15.0
           },
-          "accuracy": 0.5666666666666667,
+          "accuracy": 0.06666666666666667,
           "macro avg": {
-            "precision": 0.6041666666666666,
-            "recall": 0.5666666666666667,
-            "f1-score": 0.5238095238095237,
+            "precision": 0.3333333333333333,
+            "recall": 0.044444444444444446,
+            "f1-score": 0.0784313725490196,
             "support": 30.0
           },
           "weighted avg": {
-            "precision": 0.6041666666666666,
-            "recall": 0.5666666666666667,
-            "f1-score": 0.5238095238095238,
+            "precision": 0.5,
+            "recall": 0.06666666666666667,
+            "f1-score": 0.11764705882352941,
             "support": 30.0
           }
         }
       },
-      "macro_f1_original": 0.76,
-      "macro_f1_content_only": 0.6122,
-      "macro_f1_shuffle": 0.5238,
-      "delta_content_only": -0.1478,
-      "delta_shuffle": -0.2362,
+      "macro_f1_original": 0.7964,
+      "macro_f1_content_only": 0.7964,
+      "macro_f1_shuffle": 0.0784,
+      "delta_content_only": 0.0,
+      "delta_shuffle": -0.7179,
       "samples": [
         {
           "id": "SCIARK-dev-1",
@@ -3532,7 +3606,7 @@
           "sent_shuffle": "concentration. the that the oceans the changes atmospheric temperatures cause pre-historic of are conclude probably in of of the We changes CO_2",
           "pred_original": "Argument",
           "pred_content_only": "Argument",
-          "pred_shuffle": "No-Argument"
+          "pred_shuffle": ""
         },
         {
           "id": "SCIARK-dev-2",
@@ -3543,7 +3617,7 @@
           "sent_shuffle": "will linked but it multi-stakeholder to forms be governance will of institutions. disappear, emerging Private not",
           "pred_original": "Argument",
           "pred_content_only": "No-Argument",
-          "pred_shuffle": "No-Argument"
+          "pred_shuffle": ""
         },
         {
           "id": "SCIARK-dev-3",
@@ -3554,7 +3628,7 @@
           "sent_shuffle": "to connected status level violence. was domestic the in Turkey Low social of",
           "pred_original": "Argument",
           "pred_content_only": "Argument",
-          "pred_shuffle": "No-Argument"
+          "pred_shuffle": ""
         },
         {
           "id": "SCIARK-dev-4",
@@ -3563,9 +3637,9 @@
           "sent_original": "Female genital mutilation can no longer be considered to be only an issue for women.",
           "sent_content_only": "female genital mutilation longer considered issue women",
           "sent_shuffle": "to for considered be women. issue longer mutilation be can no an Female genital only",
-          "pred_original": "Argument",
+          "pred_original": "No-Argument",
           "pred_content_only": "No-Argument",
-          "pred_shuffle": "No-Argument"
+          "pred_shuffle": ""
         },
         {
           "id": "SCIARK-dev-5",
@@ -3576,7 +3650,7 @@
           "sent_shuffle": "interests require of vehicles, carbon and grids, technologies policies biomass low-carbon entrenched smart the businesses and solar cooking, as in sectors and emerging renewables, etc. These oil, like storage, energy, electric and would such to modern reconcile conflicting retreating sectors coal transitions the capture",
           "pred_original": "No-Argument",
           "pred_content_only": "Argument",
-          "pred_shuffle": "No-Argument"
+          "pred_shuffle": ""
         },
         {
           "id": "SCIARK-dev-6",
@@ -3586,8 +3660,8 @@
           "sent_content_only": "true causes death degrees severity injuries caused rtc underestimated absence integration health police databases",
           "sent_shuffle": "underestimated caused of databases. absence degrees and the are of injuries the true RTC and by causes in police death integration of severity health The of of",
           "pred_original": "Argument",
-          "pred_content_only": "Argument",
-          "pred_shuffle": "No-Argument"
+          "pred_content_only": "No-Argument",
+          "pred_shuffle": ""
         },
         {
           "id": "SCIARK-dev-7",
@@ -3598,7 +3672,7 @@
           "sent_shuffle": "high. safe lack waterborne sanitation, the disease regions drinking risk many of and communities thus to in water and Many access is",
           "pred_original": "Argument",
           "pred_content_only": "Argument",
-          "pred_shuffle": "No-Argument"
+          "pred_shuffle": ""
         },
         {
           "id": "SCIARK-dev-8",
@@ -3607,9 +3681,9 @@
           "sent_original": "As such, our results underline the importance of enabling and fostering gender diversity and have critical implications for firms and policy makers alike.",
           "sent_content_only": "results underline importance enabling fostering gender diversity critical implications firms policy makers alike",
           "sent_shuffle": "implications critical our have the and for diversity alike. importance and such, and gender fostering makers underline firms of enabling As results policy",
-          "pred_original": "Argument",
+          "pred_original": "No-Argument",
           "pred_content_only": "Argument",
-          "pred_shuffle": "Argument"
+          "pred_shuffle": ""
         },
         {
           "id": "SCIARK-dev-9",
@@ -3618,9 +3692,9 @@
           "sent_original": "Conclusions Laws that prohibit child marriage should be strengthened and health sector screening for violence experience could help identify women at risk of unmet need and improve women's reproductive agency.",
           "sent_content_only": "conclusions laws prohibit child marriage strengthened health sector screening violence experience identify women risk unmet need improve women reproductive agency",
           "sent_shuffle": "women violence health improve of should marriage screening sector experience and and agency. risk could women's Laws for identify that help reproductive child need be strengthened unmet Conclusions prohibit at",
-          "pred_original": "Argument",
+          "pred_original": "No-Argument",
           "pred_content_only": "Argument",
-          "pred_shuffle": "No-Argument"
+          "pred_shuffle": ""
         },
         {
           "id": "SCIARK-dev-10",
@@ -3631,7 +3705,7 @@
           "sent_shuffle": "identifying high risk pregnancy. tool a at good for those The screening violence sensitivity be tool in a for and could Conclusions: has domestic",
           "pred_original": "Argument",
           "pred_content_only": "Argument",
-          "pred_shuffle": "Argument"
+          "pred_shuffle": ""
         },
         {
           "id": "SCIARK-dev-11",
@@ -3642,7 +3716,7 @@
           "sent_shuffle": "growth strengthen decarbonizing to achieving by and economic its targets its the the emission EU sustaining commitments to Thus, needs trajectory.",
           "pred_original": "Argument",
           "pred_content_only": "Argument",
-          "pred_shuffle": "Argument"
+          "pred_shuffle": ""
         },
         {
           "id": "SCIARK-dev-12",
@@ -3653,7 +3727,7 @@
           "sent_shuffle": "reported or was dementia. literature by experienced comparable that of to the level than individuals greater of in with burden relatives HD relatives The carer by",
           "pred_original": "Argument",
           "pred_content_only": "Argument",
-          "pred_shuffle": "No-Argument"
+          "pred_shuffle": ""
         },
         {
           "id": "SCIARK-dev-13",
@@ -3663,8 +3737,8 @@
           "sent_content_only": "conclusions intimate partner violence associated incidence common mental disorders women",
           "sent_shuffle": "incidence in the with women. disorders associated partner of violence is mental Conclusions: Intimate common",
           "pred_original": "Argument",
-          "pred_content_only": "Argument",
-          "pred_shuffle": "No-Argument"
+          "pred_content_only": "No-Argument",
+          "pred_shuffle": ""
         },
         {
           "id": "SCIARK-dev-14",
@@ -3675,7 +3749,7 @@
           "sent_shuffle": "management of sustainability industry. supply-chain importance improving of environmental for results full US \u201clandless the underscore poultry fallacy in farming\u201d and These the the",
           "pred_original": "Argument",
           "pred_content_only": "Argument",
-          "pred_shuffle": "No-Argument"
+          "pred_shuffle": ""
         },
         {
           "id": "SCIARK-dev-15",
@@ -3684,9 +3758,9 @@
           "sent_original": "Conclusions:                    The prevalence of alcohol and illicit drugs is very high in patients presenting to the ED-MNH with injury.",
           "sent_content_only": "conclusions prevalence alcohol illicit drugs high patients presenting ed mnh injury",
           "sent_shuffle": "to presenting alcohol very and the with illicit patients ED-MNH high The in prevalence injury. drugs is Conclusions: of",
-          "pred_original": "Argument",
-          "pred_content_only": "Argument",
-          "pred_shuffle": "Argument"
+          "pred_original": "No-Argument",
+          "pred_content_only": "No-Argument",
+          "pred_shuffle": ""
         },
         {
           "id": "SCIARK-dev-171",
@@ -3697,7 +3771,7 @@
           "sent_shuffle": "workers survey over through to 2018 characteristics 16 was mental 2017 social June Chengdu years status information collect old to June and respondent demographic from directions(east,south,west,and sampling health questionnaire-based Methods driven their conducted on household in four north)of A non-Chengdu method.",
           "pred_original": "No-Argument",
           "pred_content_only": "No-Argument",
-          "pred_shuffle": "No-Argument"
+          "pred_shuffle": ""
         },
         {
           "id": "SCIARK-dev-172",
@@ -3706,9 +3780,9 @@
           "sent_original": "We overall found that approximately 6.2\u202fMt (95% confidence interval, CI: 2.0\u201320.4\u202fMt) of macroplastics and 3.0\u202fMt (CI: 1.5\u20135.2\u202fMt) of microplastics were lost to the environment in 2015.",
           "sent_content_only": "overall found approximately 6.2 mt 95 confidence interval ci 2.0\u201320.4 mt macroplastics 3.0 mt ci 1.5\u20135.2 mt microplastics lost environment 2015",
           "sent_shuffle": "1.5\u20135.2 macroplastics CI: the microplastics Mt 6.2 Mt) 2.0\u201320.4 and interval, to 2015. of 3.0 environment overall of (CI: found Mt in approximately lost (95% confidence were We that Mt)",
-          "pred_original": "Argument",
-          "pred_content_only": "Argument",
-          "pred_shuffle": "Argument"
+          "pred_original": "No-Argument",
+          "pred_content_only": "No-Argument",
+          "pred_shuffle": ""
         },
         {
           "id": "SCIARK-dev-173",
@@ -3717,9 +3791,9 @@
           "sent_original": "Abstract: Greenhouse gas emissions have significantly altered global climate, and will continue to do so in the future.",
           "sent_content_only": "abstract greenhouse gas emissions significantly altered global climate continue future",
           "sent_shuffle": "do to have and significantly global the altered will in Greenhouse continue gas so future. climate, Abstract: emissions",
-          "pred_original": "Argument",
-          "pred_content_only": "Argument",
-          "pred_shuffle": "No-Argument"
+          "pred_original": "No-Argument",
+          "pred_content_only": "No-Argument",
+          "pred_shuffle": ""
         },
         {
           "id": "SCIARK-dev-174",
@@ -3728,9 +3802,9 @@
           "sent_original": "After applying stringent genome-wide significance criteria (P &lt;3.6\u00d710\u22128), we found that DNA methylation levels at 29 CpG sites in peripheral blood were associated with respiratory function or COPD.",
           "sent_content_only": "applying stringent genome wide significance criteria p lt;3.6\u00d710\u22128 found dna methylation levels 29 cpg sites peripheral blood associated respiratory function copd",
           "sent_shuffle": "in CpG that were COPD. (P criteria DNA at found respiratory methylation peripheral 29 function applying levels stringent sites or significance associated &lt;3.6\u00d710\u22128), we with After genome-wide blood",
-          "pred_original": "Argument",
-          "pred_content_only": "Argument",
-          "pred_shuffle": "No-Argument"
+          "pred_original": "No-Argument",
+          "pred_content_only": "No-Argument",
+          "pred_shuffle": ""
         },
         {
           "id": "SCIARK-dev-175",
@@ -3739,9 +3813,9 @@
           "sent_original": "While it is recognized that disturbed ecosystems might negatively affect human well-being, it is not clear whether biodiversity is related to or can promote \u201cgood\u201d human health and well-being.",
           "sent_content_only": "recognized disturbed ecosystems negatively affect human clear biodiversity related promote good human health",
           "sent_shuffle": "is not human can or ecosystems disturbed it well-being, clear affect \u201cgood\u201d related well-being. whether health it is is biodiversity and that human might negatively promote While recognized to",
-          "pred_original": "No-Argument",
+          "pred_original": "Argument",
           "pred_content_only": "Argument",
-          "pred_shuffle": "No-Argument"
+          "pred_shuffle": ""
         },
         {
           "id": "SCIARK-dev-176",
@@ -3751,8 +3825,8 @@
           "sent_content_only": "study aimed measure students happiness psychological status sample high school students",
           "sent_shuffle": "sample a measure well-being students' and school happiness status high study in aimed of students. psychological This to",
           "pred_original": "No-Argument",
-          "pred_content_only": "Argument",
-          "pred_shuffle": "No-Argument"
+          "pred_content_only": "No-Argument",
+          "pred_shuffle": ""
         },
         {
           "id": "SCIARK-dev-177",
@@ -3761,9 +3835,9 @@
           "sent_original": "This article presents an integrated multi-criteria decision-making (MCDM) method that is based on hesitant fuzzy linguistic (HFL) term set.",
           "sent_content_only": "article presents integrated multi criteria decision making mcdm method based hesitant fuzzy linguistic hfl term set",
           "sent_shuffle": "fuzzy hesitant integrated that multi-criteria linguistic term decision-making on (HFL) is article based presents set. (MCDM) method This an",
-          "pred_original": "Argument",
+          "pred_original": "No-Argument",
           "pred_content_only": "No-Argument",
-          "pred_shuffle": "No-Argument"
+          "pred_shuffle": ""
         },
         {
           "id": "SCIARK-dev-178",
@@ -3774,7 +3848,7 @@
           "sent_shuffle": "in reviews expert literatures the structured of and interviews to searches, met criteria. and identify study REA bibliography articles used 57 academic inclusion series that Google Scholar grey The a the",
           "pred_original": "No-Argument",
           "pred_content_only": "No-Argument",
-          "pred_shuffle": "No-Argument"
+          "pred_shuffle": ""
         },
         {
           "id": "SCIARK-dev-179",
@@ -3783,9 +3857,9 @@
           "sent_original": "The application of the framework allows a comprehensive evaluation and comparison of the results for the impacts addressed.",
           "sent_content_only": "application framework allows comprehensive evaluation comparison results impacts addressed",
           "sent_shuffle": "results the framework and allows comprehensive impacts a comparison the application of of for addressed. evaluation The the",
-          "pred_original": "Argument",
-          "pred_content_only": "Argument",
-          "pred_shuffle": "No-Argument"
+          "pred_original": "No-Argument",
+          "pred_content_only": "No-Argument",
+          "pred_shuffle": ""
         },
         {
           "id": "SCIARK-dev-180",
@@ -3795,8 +3869,8 @@
           "sent_content_only": "seas land use plans german state saxony english region east england examined consideration climate change impacts based set criteria drawn literature",
           "sent_shuffle": "their of use and Saxony, drawn impacts on a for climate examined the plans of criteria consideration based were of from change England the literature. set land SEAs the English of in the state region of East of German",
           "pred_original": "No-Argument",
-          "pred_content_only": "Argument",
-          "pred_shuffle": "No-Argument"
+          "pred_content_only": "No-Argument",
+          "pred_shuffle": ""
         },
         {
           "id": "SCIARK-dev-181",
@@ -3805,9 +3879,9 @@
           "sent_original": "Therefore, we investigated the dynamics of gender stereotype content in Sweden with a primary interest in the male stereotype and perceptions of gender equality.",
           "sent_content_only": "investigated dynamics gender stereotype content sweden primary interest male stereotype perceptions gender equality",
           "sent_shuffle": "in of stereotype equality. primary Sweden male with interest the we a of gender in investigated gender dynamics and stereotype content Therefore, the perceptions",
-          "pred_original": "Argument",
-          "pred_content_only": "Argument",
-          "pred_shuffle": "Argument"
+          "pred_original": "No-Argument",
+          "pred_content_only": "No-Argument",
+          "pred_shuffle": ""
         },
         {
           "id": "SCIARK-dev-182",
@@ -3818,7 +3892,7 @@
           "sent_shuffle": "century-saving every globe, have 21st especially challenge other of the consistently the sustaining nations, the man's dire The developed one United battled greatest States the like and environment. across of Abstract: country",
           "pred_original": "No-Argument",
           "pred_content_only": "No-Argument",
-          "pred_shuffle": "No-Argument"
+          "pred_shuffle": ""
         },
         {
           "id": "SCIARK-dev-183",
@@ -3850,8 +3924,8 @@
           "sent_content_only": "female genital mutilation fgm procedure performed non medical reasons traditionally encountered canada health implications women",
           "sent_shuffle": "in is non-medical women. that procedure a reasons encountered health that and genital traditionally implications not mutilation Canada for is serious performed for Female (FGM) has",
           "pred_original": "No-Argument",
-          "pred_content_only": "Argument",
-          "pred_shuffle": "No-Argument"
+          "pred_content_only": "No-Argument",
+          "pred_shuffle": ""
         }
       ]
     },
@@ -3860,91 +3934,97 @@
       "reports": {
         "original": {
           "Argument": {
-            "precision": 0.6,
-            "recall": 0.8,
-            "f1-score": 0.6857142857142857,
+            "precision": 0.45454545454545453,
+            "recall": 0.3333333333333333,
+            "f1-score": 0.38461538461538464,
             "support": 15.0
           },
           "No-Argument": {
-            "precision": 0.7,
-            "recall": 0.4666666666666667,
-            "f1-score": 0.56,
+            "precision": 0.47368421052631576,
+            "recall": 0.6,
+            "f1-score": 0.5294117647058824,
             "support": 15.0
           },
-          "accuracy": 0.6333333333333333,
+          "accuracy": 0.4666666666666667,
           "macro avg": {
-            "precision": 0.6499999999999999,
-            "recall": 0.6333333333333333,
-            "f1-score": 0.6228571428571429,
+            "precision": 0.46411483253588515,
+            "recall": 0.4666666666666667,
+            "f1-score": 0.4570135746606335,
             "support": 30.0
           },
           "weighted avg": {
-            "precision": 0.65,
-            "recall": 0.6333333333333333,
-            "f1-score": 0.6228571428571429,
+            "precision": 0.46411483253588515,
+            "recall": 0.4666666666666667,
+            "f1-score": 0.4570135746606335,
             "support": 30.0
           }
         },
         "content_only": {
           "Argument": {
-            "precision": 0.5,
-            "recall": 0.6666666666666666,
-            "f1-score": 0.5714285714285714,
+            "precision": 0.75,
+            "recall": 0.2,
+            "f1-score": 0.3157894736842105,
             "support": 15.0
           },
           "No-Argument": {
-            "precision": 0.5,
-            "recall": 0.3333333333333333,
-            "f1-score": 0.4,
+            "precision": 0.5384615384615384,
+            "recall": 0.9333333333333333,
+            "f1-score": 0.6829268292682927,
             "support": 15.0
           },
-          "accuracy": 0.5,
+          "accuracy": 0.5666666666666667,
           "macro avg": {
-            "precision": 0.5,
-            "recall": 0.5,
-            "f1-score": 0.4857142857142857,
+            "precision": 0.6442307692307692,
+            "recall": 0.5666666666666667,
+            "f1-score": 0.4993581514762516,
             "support": 30.0
           },
           "weighted avg": {
-            "precision": 0.5,
-            "recall": 0.5,
-            "f1-score": 0.4857142857142857,
+            "precision": 0.6442307692307693,
+            "recall": 0.5666666666666667,
+            "f1-score": 0.4993581514762516,
             "support": 30.0
           }
         },
         "shuffle": {
+          "": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1-score": 0.0,
+            "support": 0.0
+          },
           "Argument": {
-            "precision": 0.6666666666666666,
-            "recall": 0.13333333333333333,
-            "f1-score": 0.2222222222222222,
+            "precision": 1.0,
+            "recall": 0.06666666666666667,
+            "f1-score": 0.125,
             "support": 15.0
           },
           "No-Argument": {
-            "precision": 0.5185185185185185,
-            "recall": 0.9333333333333333,
-            "f1-score": 0.6666666666666666,
+            "precision": 0.5384615384615384,
+            "recall": 0.4666666666666667,
+            "f1-score": 0.5,
             "support": 15.0
           },
-          "accuracy": 0.5333333333333333,
+          "accuracy": 0.26666666666666666,
           "macro avg": {
-            "precision": 0.5925925925925926,
-            "recall": 0.5333333333333333,
-            "f1-score": 0.4444444444444444,
+            "precision": 0.5128205128205128,
+            "recall": 0.17777777777777778,
+            "f1-score": 0.20833333333333334,
             "support": 30.0
           },
           "weighted avg": {
-            "precision": 0.5925925925925927,
-            "recall": 0.5333333333333333,
-            "f1-score": 0.4444444444444444,
+            "precision": 0.7692307692307693,
+            "recall": 0.26666666666666666,
+            "f1-score": 0.3125,
             "support": 30.0
           }
         }
       },
-      "macro_f1_original": 0.6229,
-      "macro_f1_content_only": 0.4857,
-      "macro_f1_shuffle": 0.4444,
-      "delta_content_only": -0.1371,
-      "delta_shuffle": -0.1784,
+      "macro_f1_original": 0.457,
+      "macro_f1_content_only": 0.4994,
+      "macro_f1_shuffle": 0.2083,
+      "delta_content_only": 0.0423,
+      "delta_shuffle": -0.2487,
       "samples": [
         {
           "id": "USELEC-dev-1",
@@ -3955,7 +4035,7 @@
           "sent_shuffle": "and to need the the reforms term do So we limits.",
           "pred_original": "Argument",
           "pred_content_only": "Argument",
-          "pred_shuffle": "No-Argument"
+          "pred_shuffle": ""
         },
         {
           "id": "USELEC-dev-2",
@@ -3966,7 +4046,7 @@
           "sent_shuffle": "there of for them. are and waiting our out just think hopes, grab our dreams the onto possibilities us country, our I greatest to",
           "pred_original": "No-Argument",
           "pred_content_only": "No-Argument",
-          "pred_shuffle": "No-Argument"
+          "pred_shuffle": ""
         },
         {
           "id": "USELEC-dev-3",
@@ -3976,8 +4056,8 @@
           "sent_content_only": "john mccain fundamental difference end war",
           "sent_shuffle": "between this difference fundamental war. end a -- us, this is will John McCain we",
           "pred_original": "Argument",
-          "pred_content_only": "Argument",
-          "pred_shuffle": "Argument"
+          "pred_content_only": "No-Argument",
+          "pred_shuffle": ""
         },
         {
           "id": "USELEC-dev-4",
@@ -3987,7 +4067,7 @@
           "sent_content_only": "military morale high",
           "sent_shuffle": "our morale is military, high. -- the We have",
           "pred_original": "No-Argument",
-          "pred_content_only": "Argument",
+          "pred_content_only": "No-Argument",
           "pred_shuffle": "No-Argument"
         },
         {
@@ -4008,7 +4088,7 @@
           "sent_original": "We have seen Afghanistan worsen, deteriorate.",
           "sent_content_only": "seen afghanistan worsen deteriorate",
           "sent_shuffle": "Afghanistan have seen worsen, We deteriorate.",
-          "pred_original": "Argument",
+          "pred_original": "No-Argument",
           "pred_content_only": "No-Argument",
           "pred_shuffle": "No-Argument"
         },
@@ -4019,8 +4099,8 @@
           "sent_original": "We've got to recruit 100,000 new teachers.",
           "sent_content_only": "got recruit 100,000 new teachers",
           "sent_shuffle": "got recruit 100,000 to teachers. We've new",
-          "pred_original": "Argument",
-          "pred_content_only": "Argument",
+          "pred_original": "No-Argument",
+          "pred_content_only": "No-Argument",
           "pred_shuffle": "No-Argument"
         },
         {
@@ -4030,9 +4110,9 @@
           "sent_original": "Mr. Ford has said, I believe, that it was accurate, and that the White House made no attempt to block the issuing of that report.",
           "sent_content_only": "mr. ford said believe accurate white house attempt block issuing report",
           "sent_shuffle": "no the accurate, block to that believe, and made issuing that attempt Ford House of White has that I report. it was Mr. said, the",
-          "pred_original": "Argument",
+          "pred_original": "No-Argument",
           "pred_content_only": "No-Argument",
-          "pred_shuffle": "No-Argument"
+          "pred_shuffle": ""
         },
         {
           "id": "USELEC-dev-9",
@@ -4041,9 +4121,9 @@
           "sent_original": "But I do believe that no one in this country should be denied the right to express themselves, or to even try to persuade others to follow their leader.",
           "sent_content_only": "believe country denied right express try persuade follow leader",
           "sent_shuffle": "or right should to try one no denied be to country others to leader. express follow I the do themselves, their that to in this persuade But believe even",
-          "pred_original": "Argument",
+          "pred_original": "No-Argument",
           "pred_content_only": "Argument",
-          "pred_shuffle": "No-Argument"
+          "pred_shuffle": ""
         },
         {
           "id": "USELEC-dev-10",
@@ -4054,7 +4134,7 @@
           "sent_shuffle": "with that the rather Communist and in see, we're and the Philippines, them right of we facing a wolves trying wrongs them throwing power to help our Pacific. then the And think than better off, example to retain friendship I for the",
           "pred_original": "Argument",
           "pred_content_only": "Argument",
-          "pred_shuffle": "Argument"
+          "pred_shuffle": ""
         },
         {
           "id": "USELEC-dev-11",
@@ -4063,9 +4143,9 @@
           "sent_original": "And I think this is something the American people see.",
           "sent_content_only": "think american people",
           "sent_shuffle": "American this think people something the see. is And I",
-          "pred_original": "Argument",
+          "pred_original": "No-Argument",
           "pred_content_only": "No-Argument",
-          "pred_shuffle": "No-Argument"
+          "pred_shuffle": ""
         },
         {
           "id": "USELEC-dev-12",
@@ -4074,9 +4154,9 @@
           "sent_original": "We need to be smarter about now we wage a war on terror.",
           "sent_content_only": "need smarter wage war terror",
           "sent_shuffle": "we now to a terror. about on wage be smarter We need war",
-          "pred_original": "Argument",
-          "pred_content_only": "Argument",
-          "pred_shuffle": "No-Argument"
+          "pred_original": "No-Argument",
+          "pred_content_only": "No-Argument",
+          "pred_shuffle": ""
         },
         {
           "id": "USELEC-dev-13",
@@ -4085,9 +4165,9 @@
           "sent_original": "I think it's a privacy issue.",
           "sent_content_only": "think privacy issue",
           "sent_shuffle": "a think it's privacy I issue.",
-          "pred_original": "Argument",
-          "pred_content_only": "Argument",
-          "pred_shuffle": "No-Argument"
+          "pred_original": "No-Argument",
+          "pred_content_only": "No-Argument",
+          "pred_shuffle": "Argument"
         },
         {
           "id": "USELEC-dev-14",
@@ -4097,7 +4177,7 @@
           "sent_content_only": "ford believe mr. frankel yugoslavians consider dominated soviet union",
           "sent_shuffle": "Union. - themselves uh uh consider dominated Soviet Mr. Yugoslavians the - I the don't by Frankel that FORD: believe,",
           "pred_original": "Argument",
-          "pred_content_only": "Argument",
+          "pred_content_only": "No-Argument",
           "pred_shuffle": "No-Argument"
         },
         {
@@ -4108,7 +4188,7 @@
           "sent_content_only": "terms darfur agree genocide",
           "sent_shuffle": "Darfur, I it's genocide. of agree In terms",
           "pred_original": "Argument",
-          "pred_content_only": "Argument",
+          "pred_content_only": "No-Argument",
           "pred_shuffle": "No-Argument"
         },
         {
@@ -4118,9 +4198,9 @@
           "sent_original": "I've also proposed a voluntary national test in the fourth grade and eighth grade, and a form of testing the governor has not endorsed.",
           "sent_content_only": "proposed voluntary national test fourth grade eighth grade form testing governor endorsed",
           "sent_shuffle": "a national testing endorsed. grade, grade of and and form also eighth has test fourth proposed not voluntary the in the I've a governor",
-          "pred_original": "Argument",
-          "pred_content_only": "Argument",
-          "pred_shuffle": "No-Argument"
+          "pred_original": "No-Argument",
+          "pred_content_only": "No-Argument",
+          "pred_shuffle": ""
         },
         {
           "id": "USELEC-dev-172",
@@ -4131,7 +4211,7 @@
           "sent_shuffle": "he spending, $2.2 the tax is up in trillion and proposed to going gap. he the reason new I says tax that close because he's rich The bring to",
           "pred_original": "Argument",
           "pred_content_only": "Argument",
-          "pred_shuffle": "Argument"
+          "pred_shuffle": ""
         },
         {
           "id": "USELEC-dev-173",
@@ -4141,7 +4221,7 @@
           "sent_content_only": "cut drug czar office 83 percent",
           "sent_shuffle": "office cut you 83 drug czar's percent. the But here",
           "pred_original": "Argument",
-          "pred_content_only": "Argument",
+          "pred_content_only": "No-Argument",
           "pred_shuffle": "No-Argument"
         },
         {
@@ -4152,8 +4232,8 @@
           "sent_content_only": "know senator d'amato think hearing whitewater remember general chairman friend",
           "sent_shuffle": "remember, two had general a I D'Amato hearing a on have he's mine. not Whitewater, friend again or can't I I he's of Senator chairman, think may my And know but",
           "pred_original": "No-Argument",
-          "pred_content_only": "Argument",
-          "pred_shuffle": "No-Argument"
+          "pred_content_only": "No-Argument",
+          "pred_shuffle": ""
         },
         {
           "id": "USELEC-dev-175",
@@ -4163,8 +4243,8 @@
           "sent_content_only": "1974 worst recession deepest penetrating recession second world war",
           "sent_shuffle": "since recession the and worst the World recession, most Second 1974, penetrating we the War. deepest In had",
           "pred_original": "Argument",
-          "pred_content_only": "Argument",
-          "pred_shuffle": "No-Argument"
+          "pred_content_only": "No-Argument",
+          "pred_shuffle": ""
         },
         {
           "id": "USELEC-dev-176",
@@ -4175,7 +4255,7 @@
           "sent_shuffle": "of were what the were and options and know I that if I all think to that I would These to in access just open the information, ideas which of me. position had are would",
           "pred_original": "No-Argument",
           "pred_content_only": "No-Argument",
-          "pred_shuffle": "No-Argument"
+          "pred_shuffle": ""
         },
         {
           "id": "USELEC-dev-177",
@@ -4185,8 +4265,8 @@
           "sent_content_only": "parents teachers rich money strong values value education",
           "sent_shuffle": "values strong they're but not in value rich they they parents have are and education. money, Both teachers,",
           "pred_original": "Argument",
-          "pred_content_only": "Argument",
-          "pred_shuffle": "No-Argument"
+          "pred_content_only": "No-Argument",
+          "pred_shuffle": ""
         },
         {
           "id": "USELEC-dev-178",
@@ -4229,8 +4309,8 @@
           "sent_content_only": "surely aware equipment arms resources castro came united states flowed florida parts united states castro mountains",
           "sent_shuffle": "that States, and equipment out other parts aware Florida the Castro States to and arms United of came mountains. most and He the resources the must in United flowed be of the for Castro from surely of",
           "pred_original": "Argument",
-          "pred_content_only": "Argument",
-          "pred_shuffle": "No-Argument"
+          "pred_content_only": "No-Argument",
+          "pred_shuffle": ""
         },
         {
           "id": "USELEC-dev-182",
@@ -4240,7 +4320,7 @@
           "sent_content_only": "mccain right",
           "sent_shuffle": "OK. But -- All MCCAIN: right.",
           "pred_original": "No-Argument",
-          "pred_content_only": "Argument",
+          "pred_content_only": "No-Argument",
           "pred_shuffle": "No-Argument"
         },
         {
@@ -4250,8 +4330,8 @@
           "sent_original": "When you came to office 32 million people on food stamps.",
           "sent_content_only": "came office 32 million people food stamps",
           "sent_shuffle": "people to came on 32 million food office When you stamps.",
-          "pred_original": "Argument",
-          "pred_content_only": "Argument",
+          "pred_original": "No-Argument",
+          "pred_content_only": "No-Argument",
           "pred_shuffle": "No-Argument"
         },
         {
@@ -4273,17 +4353,17 @@
           "sent_content_only": "work budget aggressive program painful program start borrowing money getting investment money street entrepreneurs build factories hire people maybe start manufacturing goods country",
           "sent_shuffle": "an money getting is borrowing who so will can program, in and entrepreneurs on street we'll work money aggressive more build What start we and country can here the start less not again. through manufacturing a people, this do investment factories, on who maybe that by painful program, that goods we budget hire",
           "pred_original": "Argument",
-          "pred_content_only": "Argument",
-          "pred_shuffle": "No-Argument"
+          "pred_content_only": "No-Argument",
+          "pred_shuffle": ""
         }
       ]
     }
   },
   "overall": {
-    "mean_macro_f1_original": 0.6093,
-    "mean_macro_f1_content_only": 0.5405,
-    "mean_macro_f1_shuffle": 0.46,
-    "mean_delta_content_only": -0.0688,
-    "mean_delta_shuffle": -0.1493
+    "mean_macro_f1_original": 0.6028,
+    "mean_macro_f1_content_only": 0.4833,
+    "mean_macro_f1_shuffle": 0.1512,
+    "mean_delta_content_only": -0.1194,
+    "mean_delta_shuffle": -0.4515
   }
 }

@@ -271,22 +271,35 @@ def make_client(cfg: dict) -> OpenAI:
     raise ValueError(f"Unknown provider: {provider}")
 
 
-def classify(client: OpenAI, cfg: dict, sentence: str, context: str) -> str:
+def classify(client: OpenAI, cfg: dict, sentence: str, context: str, max_retries: int = 3) -> str:
     system_prompt = SYSTEM_PROMPT.format(context=context)
     user_prompt = USER_PROMPT.format(sentence=sentence)
-    try:
-        resp = client.chat.completions.create(
-            model=cfg["model"],
-            messages=[
-                {"role": "system", "content": system_prompt},
-                {"role": "user", "content": user_prompt},
-            ],
-            temperature=cfg["temperature"],
-        )
-        return normalize_label(resp.choices[0].message.content or "")
-    except Exception as e:
-        logger.error(f"LLM error: {e}")
-        return "ERROR"
+
+    for attempt in range(max_retries):
+        try:
+            resp = client.chat.completions.create(
+                model=cfg["model"],
+                messages=[
+                    {"role": "system", "content": system_prompt},
+                    {"role": "user", "content": user_prompt},
+                ],
+                temperature=cfg["temperature"],
+            )
+            return normalize_label(resp.choices[0].message.content or "")
+        except Exception as e:
+            error_str = str(e).lower()
+            # Retry on transient errors (rate limits, timeouts, server errors)
+            is_retryable = any(x in error_str for x in ["rate", "limit", "timeout", "503", "502", "429", "overloaded"])
+
+            if is_retryable and attempt < max_retries - 1:
+                wait_time = 2 ** attempt  # exponential backoff: 1s, 2s, 4s
+                logger.warning(f"Retry {attempt + 1}/{max_retries} after {wait_time}s: {e}")
+                time.sleep(wait_time)
+            else:
+                logger.error(f"LLM error (attempt {attempt + 1}/{max_retries}): {e} -> defaulting to No-Argument")
+                return "No-Argument"
+
+    return "No-Argument"
 
 
 def normalize_label(pred: str) -> str:
@@ -396,7 +409,7 @@ def run(config: dict, config_path: Path | None = None):
                 sample_records.append(record)
 
                 # Rate limit: 2 seconds per sample (3 requests) stays under 6 req/sec limit
-                time.sleep(2)
+            # time.sleep(2)
 
         # classification_report per variant
         reports = {}
