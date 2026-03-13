@@ -15,3 +15,6 @@ more details in [KW11](docs/diaries/KW11)
   - Finetuning works but is flaky look deeper into best approach -> First finish Part 1,2
   - but generally possible!
 -
+
+- conducted Evaluation of how good the context is via [gaic/context_quality](gaic/context_quality_experiment.py)
+  - next step would be to look at annotation guideline in isolation without definition
