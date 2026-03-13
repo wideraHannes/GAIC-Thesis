@@ -241,11 +241,11 @@ def plot_delta_scatter(metrics_df: pd.DataFrame):
         color = model_colors.get(row["model_short"], "#333333")
         marker = context_markers.get(row["context"], "o")
 
-        # Size by baseline F1 (better models = larger points)
-        size = 100 + row["baseline_f1"] * 300
+        # Size by delta_content (content sensitivity = point size)
+        size = 100 + abs(row["delta_content"]) * 1500
 
         ax.scatter(
-            row["delta_content"],
+            row["baseline_f1"],
             row["delta_shuffle"],
             c=[color],
             marker=marker,
@@ -258,7 +258,7 @@ def plot_delta_scatter(metrics_df: pd.DataFrame):
         # Label each point
         ax.annotate(
             row["label"],
-            (row["delta_content"], row["delta_shuffle"]),
+            (row["baseline_f1"], row["delta_shuffle"]),
             fontsize=9,
             fontweight="bold",
             xytext=(8, 8),
@@ -268,22 +268,13 @@ def plot_delta_scatter(metrics_df: pd.DataFrame):
 
     # Reference lines
     ax.axhline(0, color="gray", linestyle="-", linewidth=0.5)
-    ax.axvline(0, color="gray", linestyle="-", linewidth=0.5)
 
     # Encoder baseline zone (Feger et al.: Δ ≤ 0.02)
     ax.axhspan(-0.02, 0.02, alpha=0.15, color="red", label="Encoder zone (Feger: Δ ≤ 0.02)")
-    ax.axvspan(-0.02, 0.02, alpha=0.15, color="red")
 
-    # Dynamic quadrant annotations based on data range
-    x_min, x_max = agg["delta_content"].min(), agg["delta_content"].max()
+    # Dynamic range for axis limits
+    x_min, x_max = agg["baseline_f1"].min(), agg["baseline_f1"].max()
     y_min, y_max = agg["delta_shuffle"].min(), agg["delta_shuffle"].max()
-
-    if x_max > 0.05:
-        ax.text(x_max * 0.7, y_min * 0.7, "Content helps\nShuffle hurts", fontsize=10, ha="center", alpha=0.6,
-                style="italic", bbox=dict(boxstyle="round", facecolor="wheat", alpha=0.3))
-    if x_min < -0.1 and y_min < -0.1:
-        ax.text(x_min * 0.7, y_min * 0.7, "Both hurt\n(structure-dependent)", fontsize=10, ha="center", alpha=0.6,
-                style="italic", bbox=dict(boxstyle="round", facecolor="wheat", alpha=0.3))
 
     # Legend for models
     from matplotlib.lines import Line2D
@@ -296,14 +287,15 @@ def plot_delta_scatter(metrics_df: pd.DataFrame):
     ax.add_artist(legend1)
     ax.legend(handles=context_handles, title="Context", loc="lower left", fontsize=9)
 
-    ax.set_xlabel("Δ Content-Only (avg F1 change when removing function words)", fontsize=11)
-    ax.set_ylabel("Δ Shuffle (avg F1 change when shuffling word order)", fontsize=11)
-    ax.set_title("Manipulation Sensitivity by Model × Context\n(averaged across datasets, point size = baseline F1)", fontweight="bold", fontsize=13)
+    ax.set_xlabel("Baseline F1 (original text performance)", fontsize=11)
+    ax.set_ylabel("Δ Shuffle (F1 change when shuffling word order)", fontsize=11)
+    ax.set_title("Shuffle Sensitivity vs Performance\n(averaged across datasets, point size = |Δ content-only|)", fontweight="bold", fontsize=13)
 
     # Dynamic axis limits with padding
-    padding = 0.05
-    ax.set_xlim(min(x_min - padding, -0.02 - padding), max(x_max + padding, 0.02 + padding))
-    ax.set_ylim(min(y_min - padding, -0.02 - padding), max(y_max + padding, 0.02 + padding))
+    x_padding = 0.05
+    y_padding = 0.05
+    ax.set_xlim(max(0, x_min - x_padding), min(1, x_max + x_padding))
+    ax.set_ylim(min(y_min - y_padding, -0.02 - y_padding), max(y_max + y_padding, 0.02 + y_padding))
 
     plt.tight_layout()
     plt.savefig(V1_DIR / "plot_delta_scatter.png", dpi=150, bbox_inches="tight")

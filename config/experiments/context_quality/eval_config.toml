@@ -1,0 +1,26 @@
+# Context Quality Evaluation Experiment
+# Evaluates how well extracted definitions and guidelines fit the samples
+
+[experiment]
+experiment_name = "context_quality_eval"
+sample_size = 10  # 5 Argument + 5 No-Argument per dataset
+output_dir = "experiments/context_quality"
+
+[llm]
+provider = "portkey"
+model = "@vertex-ai/anthropic.claude-opus-4-6"
+temperature = 0.0
+
+[datasets]
+enabled = [
+    "ABSTRCT",
+    "ACQUA",
+    "AEC",
+    "AFS",
+    "ARGUMINSCI",
+    "FINARG",
+    "IAM",
+    "PE",
+    "SCIARK",
+    "USELEC",
+]
