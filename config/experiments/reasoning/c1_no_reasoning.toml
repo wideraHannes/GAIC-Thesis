@@ -1,15 +1,16 @@
 [experiment]
-experiment_name = "c0"
+experiment_name = "c1_no_reasoning"
 sample_size = 30
-output_dir = "experiments/v2/mistral_medium"
+output_dir = "experiments/reasoning"
 
 [llm]
-provider = "mistral"
-model = "mistral-medium-latest"
+provider = "openai"
+model = "gpt-4.1-2025-04-14"
 temperature = 0.0
+reasoning = false
 
 [context]
-sources = []
+sources = ["definition"]
 
 [datasets]
 enabled = ["ABSTRCT", "ACQUA", "AEC", "AFS", "ARGUMINSCI", "FINARG", "IAM", "PE", "SCIARK", "USELEC"]

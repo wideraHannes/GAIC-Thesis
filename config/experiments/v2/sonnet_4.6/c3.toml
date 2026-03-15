@@ -1,0 +1,24 @@
+# GAIC Experiment Configuration — Portkey (Claude Sonnet 4.6 via Vertex AI)
+# c3: Definition + Guideline + Document Context
+
+[experiment]
+experiment_name = "c3"
+sample_size = 30  # balanced Argument / No-Argument per dataset
+output_dir = "experiments/v2/sonnet_4.6"
+
+[llm]
+provider = "portkey"
+model = "@vertex-ai/anthropic.claude-sonnet-4-6"
+temperature = 0.0
+
+[context]
+sources = ["definition", "guideline", "document_context"]
+
+[datasets]
+# Datasets with guidelines and document context
+enabled = [
+    "ABSTRCT",
+    "ARGUMINSCI",
+    "PE",
+    "USELEC",
+]

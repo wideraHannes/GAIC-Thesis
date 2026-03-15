@@ -1,0 +1,29 @@
+# GAIC Experiment Configuration — Portkey (Claude Sonnet 4.6 via Vertex AI)
+# c0: No context (baseline)
+
+[experiment]
+experiment_name = "c0"
+sample_size = 30  # balanced Argument / No-Argument per dataset
+output_dir = "experiments/v2/sonnet_4.6"
+
+[llm]
+provider = "portkey"
+model = "@vertex-ai/anthropic.claude-sonnet-4-6"
+temperature = 0.0
+
+[context]
+sources = []  # no context
+
+[datasets]
+enabled = [
+    "ABSTRCT",
+    "ACQUA",
+    "AEC",
+    "AFS",
+    "ARGUMINSCI",
+    "FINARG",
+    "IAM",
+    "PE",
+    "SCIARK",
+    "USELEC",
+]

@@ -170,9 +170,12 @@ def assemble_context(context: dict[str, str], document_context: str = "") -> str
             template = CONTEXT_SECTION_TEMPLATES[name]
             parts.append(template.format(content=context[name]))
 
-    # Fallback for c0 (no context) - provide basic classification criteria
+    # Fallback for c0 (no context) - true zero-shot with minimal task instruction
     if not parts:
         parts.append(CONTEXT_SECTION_TEMPLATES["c0_fallback"])
+    else:
+        # For c1-c3: add task section referencing the criteria above
+        parts.append("## Task\nClassify whether the following sentence is an argument based on the criteria above.")
 
     return "\n\n".join(parts)
 
@@ -220,21 +223,15 @@ MANIPULATIONS = {
 # System prompt template - context comes FIRST for better attention
 SYSTEM_PROMPT = """You are an expert in argumentation analysis.
 
-{context}
-
-## Task
-Classify whether the following sentence is an argument based on the criteria above."""
+{context}"""
 
 USER_PROMPT = "{sentence}"
 
 # Context section templates with usage guidance
 # Order matters: definition → guideline (overrides) → document_context (supplementary)
 CONTEXT_SECTION_TEMPLATES = {
-    "c0_fallback": """## Classification Criteria
-Use your general understanding of argumentation.
-
-- "Argument": A sentence that contains a claim supported by reasoning or evidence, expresses a stance, or draws a conclusion.
-- "No-Argument": A sentence that is purely factual, procedural, or background information without taking a position.""",
+    "c0_fallback": """## Task
+Classify whether the sentence is an argument or not.""",
     "definition": """## Argument Definition
 {content}""",
     "guideline": """## Annotation Guideline
@@ -256,10 +253,16 @@ CONTEXT_ORDER = ["definition", "guideline", "document_context"]
 # -- classification --
 
 
-class Classification(BaseModel):
+class ClassificationWithReasoning(BaseModel):
     """Structured output schema for argument classification with reasoning."""
 
     reason: str = Field(description="Brief rationale (1 sentence max)")
+    label: Literal["Argument", "No-Argument"]
+
+
+class ClassificationNoReasoning(BaseModel):
+    """Structured output schema for argument classification without reasoning."""
+
     label: Literal["Argument", "No-Argument"]
 
 
@@ -299,6 +302,10 @@ def classify(
     system_prompt = SYSTEM_PROMPT.format(context=context)
     user_prompt = USER_PROMPT.format(sentence=sentence)
 
+    # Select schema based on reasoning flag (default False)
+    use_reasoning = cfg.get("reasoning", False)
+    schema = ClassificationWithReasoning if use_reasoning else ClassificationNoReasoning
+
     for attempt in range(max_retries):
         try:
             resp = client.beta.chat.completions.parse(
@@ -308,11 +315,12 @@ def classify(
                     {"role": "user", "content": user_prompt},
                 ],
                 temperature=cfg["temperature"],
-                response_format=Classification,
+                response_format=schema,
             )
             parsed = resp.choices[0].message.parsed
             if parsed is not None:
-                return {"reason": parsed.reason, "label": parsed.label}
+                reason = getattr(parsed, "reason", "") if use_reasoning else ""
+                return {"reason": reason, "label": parsed.label}
             # Fallback: try to parse content if structured parsing failed
             content = resp.choices[0].message.content or ""
             return {"reason": "", "label": normalize_label(content)}
@@ -365,6 +373,10 @@ def run(config: dict, config_path: Path | None = None):
     context_sources = config.get("context", {}).get("sources", ["definition"])
     logger.info(f"Context sources: {context_sources}")
 
+    # reasoning flag: default False
+    use_reasoning = cfg_llm.get("reasoning", False)
+    logger.info(f"Reasoning enabled: {use_reasoning}")
+
     client = make_client(cfg_llm)
     texts, labels = load_data()
 
@@ -378,6 +390,7 @@ def run(config: dict, config_path: Path | None = None):
         },
         "model": cfg_llm["model"],
         "sample_size": sample_size,
+        "reasoning_enabled": use_reasoning,
         "context_sources": context_sources,
         "datasets": {},
     }

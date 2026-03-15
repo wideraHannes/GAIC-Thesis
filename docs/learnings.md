@@ -32,8 +32,13 @@ Cross-lingual transfer becomes more feasible — translate the definition, keep 
 The field moves from building dataset-specific classifiers to building definition-following reasoning systems
 
 # Finetuning
+
 What finetuning Even Makes Sense?
 
 https://meta-pytorch.org/torchtune/stable/tutorials/lora_finetune.html#lora-finetune-label
 
 https://docs.mistral.ai/cookbooks/mistral-fine_tune-mistral_finetune_api
+
+# interesting claim we could do
+
+For Generalization one could claim Worst Performance would be delivering no additional Context, mid performance with argument definition and aannotation guideline and SOTA Performance
