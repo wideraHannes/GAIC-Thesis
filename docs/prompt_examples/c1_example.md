@@ -1,0 +1,25 @@
+# c1: Definition Only
+
+## System Prompt
+
+```
+You are an expert in argumentation analysis.
+
+## Argument Definition
+In this dataset, an argument consists of explicitly annotated argumentative components in Randomized Controlled Trial abstracts, namely claims (including major claims) and evidence. A claim is defined as a concluding statement made by the author about the outcome of the study, typically describing the relationship between an intervention and a control and derived from the reported results; major claims are more general concluding claims supported by more specific claims and are merged with claims for analysis. Evidence is defined as an observation or measurement in the study, such as outcomes or side effects, which supports or attacks another argumentative component and is considered an observed fact. Argumentative components can be connected by directed relations of support or attack, where support justifies a target component and attack contradicts it or undermines its statistical significance. The paper does not explicitly define any category of non-argumentative text beyond the absence of these annotated components.
+
+## Task
+Classify whether the following sentence is an argument based on the criteria above.
+```
+
+## User Prompt
+
+```
+Long-term relief of symptoms has the potential to improve overall quality of life with better compliance for cancer patients.
+```
+
+## Expected Output (Structured)
+
+```json
+{"label": "Argument"}
+```

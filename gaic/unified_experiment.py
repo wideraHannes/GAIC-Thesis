@@ -18,11 +18,13 @@ import tomllib
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from datetime import datetime
 from pathlib import Path
+from typing import Literal
 
 from dotenv import load_dotenv
 from loguru import logger
 from openai import OpenAI
 from portkey_ai import PORTKEY_GATEWAY_URL
+from pydantic import BaseModel, Field
 from sklearn.metrics import classification_report
 from tqdm import tqdm
 
@@ -76,9 +78,6 @@ CONTEXT_SOURCES = {
         "capability": "has_document_context",
         "per_sample": True,  # Loaded per sample, not per dataset
     },
-    "zero_shot": {
-        "zero_shot": True,  # True zero-shot: no definition, no context
-    },
 }
 
 
@@ -114,12 +113,6 @@ def load_context(dataset: str, sources: list[str]) -> dict[str, str]:
                 logger.warning(
                     f"Unknown context source '{source}' for {dataset}, skipped"
                 )
-            continue
-
-        # Handle zero-shot (simple criteria, no dataset-specific definition)
-        if spec.get("zero_shot", False):
-            result[source] = ZERO_SHOT_CONTEXT
-            logger.info(f"Zero-shot mode for {dataset} (using simple criteria)")
             continue
 
         # check capability flag — skip if explicitly false
@@ -158,27 +151,30 @@ def load_document_context(dataset: str, sample_id: str) -> str:
 
 
 def assemble_context(context: dict[str, str], document_context: str = "") -> str:
-    """Format loaded context sources into a single string for the prompt."""
+    """Format loaded context sources into a single string for the prompt.
+
+    Uses templates from CONTEXT_SECTION_TEMPLATES with explicit ordering:
+    definition → guideline → document_context (most general to most specific).
+    Falls back to c0_fallback when no context is provided.
+    """
     parts = []
-    labels = {
-        "definition": "Argument Definition",
-        "zero_shot": "Classification Criteria",
-        "guideline": "Annotation Guideline",
-        "document_context": "Document Context (Preceding Sentences)",
-    }
 
-    # Add dataset-level context first
-    for name, content in context.items():
-        if content:
-            label = labels.get(name, name.replace("_", " ").title())
-            parts.append(f"## {label}\n{content}")
+    # Add context in explicit order (definition → guideline → document_context)
+    for name in CONTEXT_ORDER:
+        # Handle document_context specially (passed as separate argument)
+        if name == "document_context":
+            if document_context:
+                template = CONTEXT_SECTION_TEMPLATES[name]
+                parts.append(template.format(content=document_context))
+        elif name in context and context[name]:
+            template = CONTEXT_SECTION_TEMPLATES[name]
+            parts.append(template.format(content=context[name]))
 
-    # Add document context if provided
-    if document_context:
-        label = labels["document_context"]
-        parts.append(f"## {label}\n{document_context}")
+    # Fallback for c0 (no context) - provide basic classification criteria
+    if not parts:
+        parts.append(CONTEXT_SECTION_TEMPLATES["c0_fallback"])
 
-    return "\n\n".join(parts) if parts else ""
+    return "\n\n".join(parts)
 
 
 def sample_balanced(
@@ -200,10 +196,16 @@ def sample_balanced(
 
 
 def shuffle_sentence(sentence: str) -> str:
+    # Preserve ending punctuation
+    end_punct = ""
+    if sentence and sentence[-1] in ".!?":
+        end_punct = sentence[-1]
+        sentence = sentence[:-1].strip()
+
     words = sentence.split()
     random.seed(42)  # fixed seed for reproducibility across runs
     random.shuffle(words)
-    return " ".join(words)
+    return " ".join(words) + end_punct
 
 
 MANIPULATIONS = {
@@ -215,31 +217,50 @@ MANIPULATIONS = {
 
 # -- prompts --
 
-# Zero-shot context: simple classification criteria without dataset-specific definitions
-ZERO_SHOT_CONTEXT = """- "Argument" if the sentence is argumentative
-- "No-Argument" if the sentence is not argumentative"""
+# System prompt template - context comes FIRST for better attention
+SYSTEM_PROMPT = """You are an expert in argumentation analysis.
 
-SYSTEM_PROMPT = """## Role
-You are a Dataset Annotator.
+{context}
 
 ## Task
-Classify the input as exactly one of these two labels:
-- "Argument"
-- "No-Argument"
-
-## Output Format
-Respond with ONLY the label. No explanation. No other text.
-
-## Rules
-- Classify as "Argument" if the sentence matches the definition below.
-- Classify as "No-Argument" otherwise.
-
-{context}"""
+Classify whether the following sentence is an argument based on the criteria above."""
 
 USER_PROMPT = "{sentence}"
 
+# Context section templates with usage guidance
+# Order matters: definition → guideline (overrides) → document_context (supplementary)
+CONTEXT_SECTION_TEMPLATES = {
+    "c0_fallback": """## Classification Criteria
+Use your general understanding of argumentation.
+
+- "Argument": A sentence that contains a claim supported by reasoning or evidence, expresses a stance, or draws a conclusion.
+- "No-Argument": A sentence that is purely factual, procedural, or background information without taking a position.""",
+    "definition": """## Argument Definition
+{content}""",
+    "guideline": """## Annotation Guideline
+{content}
+
+When the definition and guideline conflict, follow the guideline.""",
+    "document_context": """## Document Context
+The following sentences immediately precede the target sentence in the original document:
+
+{content}
+
+Use this context to resolve ambiguity when the target sentence's meaning depends on preceding text.""",
+}
+
+# Explicit ordering for context assembly (most general → most specific)
+CONTEXT_ORDER = ["definition", "guideline", "document_context"]
+
 
 # -- classification --
+
+
+class Classification(BaseModel):
+    """Structured output schema for argument classification with reasoning."""
+
+    reason: str = Field(description="Brief rationale (1 sentence max)")
+    label: Literal["Argument", "No-Argument"]
 
 
 def make_client(cfg: dict) -> OpenAI:
@@ -273,21 +294,28 @@ def make_client(cfg: dict) -> OpenAI:
 
 def classify(
     client: OpenAI, cfg: dict, sentence: str, context: str, max_retries: int = 3
-) -> str:
+) -> dict[str, str]:
+    """Classify a sentence and return both reasoning and label."""
     system_prompt = SYSTEM_PROMPT.format(context=context)
     user_prompt = USER_PROMPT.format(sentence=sentence)
 
     for attempt in range(max_retries):
         try:
-            resp = client.chat.completions.create(
+            resp = client.beta.chat.completions.parse(
                 model=cfg["model"],
                 messages=[
                     {"role": "system", "content": system_prompt},
                     {"role": "user", "content": user_prompt},
                 ],
                 temperature=cfg["temperature"],
+                response_format=Classification,
             )
-            return normalize_label(resp.choices[0].message.content or "")
+            parsed = resp.choices[0].message.parsed
+            if parsed is not None:
+                return {"reason": parsed.reason, "label": parsed.label}
+            # Fallback: try to parse content if structured parsing failed
+            content = resp.choices[0].message.content or ""
+            return {"reason": "", "label": normalize_label(content)}
         except Exception as e:
             error_str = str(e).lower()
             # Retry on transient errors (rate limits, timeouts, server errors)
@@ -306,9 +334,9 @@ def classify(
                 logger.error(
                     f"LLM error (attempt {attempt + 1}/{max_retries}): {e} -> defaulting to No-Argument"
                 )
-                return "No-Argument"
+                return {"reason": f"Error: {e}", "label": "No-Argument"}
 
-    return "No-Argument"
+    return {"reason": "Max retries exceeded", "label": "No-Argument"}
 
 
 def normalize_label(pred: str) -> str:
@@ -412,9 +440,10 @@ def run(config: dict, config_path: Path | None = None):
                     )
 
                 for name, fut in futures.items():
-                    pred = fut.result()
-                    preds[name].append(pred)
-                    record[f"pred_{name}"] = pred
+                    result = fut.result()
+                    preds[name].append(result["label"])
+                    record[f"pred_{name}"] = result["label"]
+                    record[f"reason_{name}"] = result["reason"]
                 sample_records.append(record)
 
                 # Rate limit: 2 seconds per sample (3 requests) stays under 6 req/sec limit
