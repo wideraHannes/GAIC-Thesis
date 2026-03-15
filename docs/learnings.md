@@ -30,3 +30,10 @@ You could deploy one system across all the application domains I mentioned above
 New argument mining datasets wouldn't require retraining — just write new guidelines and point the system at them
 Cross-lingual transfer becomes more feasible — translate the definition, keep the model
 The field moves from building dataset-specific classifiers to building definition-following reasoning systems
+
+# Finetuning
+What finetuning Even Makes Sense?
+
+https://meta-pytorch.org/torchtune/stable/tutorials/lora_finetune.html#lora-finetune-label
+
+https://docs.mistral.ai/cookbooks/mistral-fine_tune-mistral_finetune_api
