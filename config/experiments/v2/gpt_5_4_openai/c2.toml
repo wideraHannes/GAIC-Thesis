@@ -1,0 +1,15 @@
+[experiment]
+experiment_name = "c2"
+sample_size = 30
+output_dir = "experiments/v2/gpt_5_4_openai"
+
+[llm]
+provider = "openai"
+model = "gpt-5.4-2026-03-05"
+temperature = 0.0
+
+[context]
+sources = ["definition", "guideline"]
+
+[datasets]
+enabled = ["ABSTRCT", "ARGUMINSCI", "PE", "USELEC"]

@@ -1,0 +1,15 @@
+[experiment]
+experiment_name = "c0"
+sample_size = 30
+output_dir = "experiments/v2/ministral_8b"
+
+[llm]
+provider = "mistral"
+model = "ministral-8b-latest"
+temperature = 0.0
+
+[context]
+sources = [""]
+
+[datasets]
+enabled = ["ABSTRCT", "ACQUA", "AEC", "AFS", "ARGUMINSCI", "FINARG", "IAM", "PE", "SCIARK", "USELEC"]
