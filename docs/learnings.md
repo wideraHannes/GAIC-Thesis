@@ -42,3 +42,11 @@ https://docs.mistral.ai/cookbooks/mistral-fine_tune-mistral_finetune_api
 # interesting claim we could do
 
 For Generalization one could claim Worst Performance would be delivering no additional Context, mid performance with argument definition and aannotation guideline and SOTA Performance
+
+# framing
+
+Die korrekte Storyline für die Thesis:
+
+RQ1: "Decoder LLMs zeigen inhärente strukturelle Sensitivität aus dem Pre-Training (Δ_content ≈ 0.10, Δ_order ≈ 0.20) — im Gegensatz zu trainierten Encodern die diese Sensitivität nicht aufweisen (Feger: Δ ≤ 0.02)."
+RQ2: "Kontext-Informationen (Definitionen, Guidelines) verstärken diese Sensitivität UND verbessern die absolute Performance."
+RQ4: "Fine-Tuning testet ob diese inhärente Sensitivität das Training überlebt oder ob Shortcuts sie zerstören."

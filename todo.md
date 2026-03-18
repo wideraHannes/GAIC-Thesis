@@ -1,3 +1,8 @@
+## KW 12
+
+-> Our solution to marks problem is -> no training in RQ1 and 2
+-> Whats the most clever way to train this system without shortcut
+
 ## KW 11
 
 more details in [KW11](docs/diaries/KW11)

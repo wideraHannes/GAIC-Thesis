@@ -42,3 +42,5 @@ wandb/
 
 # Finetuning outputs (model checkpoints are large)
 experiments/finetuning/
+
+midterm_feedback_deepresearch
