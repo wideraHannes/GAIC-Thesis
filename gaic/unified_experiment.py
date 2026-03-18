@@ -175,7 +175,9 @@ def assemble_context(context: dict[str, str], document_context: str = "") -> str
         parts.append(CONTEXT_SECTION_TEMPLATES["c0_fallback"])
     else:
         # For c1-c3: add task section referencing the criteria above
-        parts.append("## Task\nClassify whether the following sentence is an argument based on the criteria above.")
+        parts.append(
+            "## Task\nClassify whether the following sentence is an argument based on the criteria above."
+        )
 
     return "\n\n".join(parts)
 

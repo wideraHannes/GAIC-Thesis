@@ -1,11 +1,11 @@
 [experiment]
 experiment_name = "c1"
 sample_size = 60
-output_dir = "experiments/v3/mistral_medium"
+output_dir = "experiments/v3/ministral_8b"
 
 [llm]
 provider = "mistral"
-model = "mistral-medium-latest"
+model = "ministral-8b-latest"
 temperature = 0.0
 
 [context]

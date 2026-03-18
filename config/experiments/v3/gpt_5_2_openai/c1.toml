@@ -1,11 +1,11 @@
 [experiment]
 experiment_name = "c1"
 sample_size = 60
-output_dir = "experiments/v3/mistral_medium"
+output_dir = "experiments/v3/gpt_5_2_openai"
 
 [llm]
-provider = "mistral"
-model = "mistral-medium-latest"
+provider = "openai"
+model = "gpt-5.2-2025-12-11"
 temperature = 0.0
 
 [context]

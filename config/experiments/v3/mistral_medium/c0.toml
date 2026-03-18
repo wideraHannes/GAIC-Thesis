@@ -9,7 +9,7 @@ model = "mistral-medium-latest"
 temperature = 0.0
 
 [context]
-sources = ["zero_shot"]
+sources = []
 
 [datasets]
 enabled = ["ABSTRCT", "ACQUA", "AEC", "AFS", "ARGUMINSCI", "FINARG", "IAM", "PE", "SCIARK", "USELEC"]
