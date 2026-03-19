@@ -1,4 +1,34 @@
 model_dir,model,context,context_sources,dataset,manipulation,macro_f1,accuracy
+ministral_8b,ministral-8b-latest,c0,,ABSTRCT,original,0.7376858058874963,0.75
+ministral_8b,ministral-8b-latest,c0,,ABSTRCT,content_only,0.4957983193277311,0.5833333333333334
+ministral_8b,ministral-8b-latest,c0,,ABSTRCT,shuffle,0.4034090909090909,0.5333333333333333
+ministral_8b,ministral-8b-latest,c0,,ACQUA,original,0.7482517482517483,0.75
+ministral_8b,ministral-8b-latest,c0,,ACQUA,content_only,0.4444444444444444,0.5333333333333333
+ministral_8b,ministral-8b-latest,c0,,ACQUA,shuffle,0.3693367162015223,0.5166666666666667
+ministral_8b,ministral-8b-latest,c0,,AEC,original,0.4514285714285714,0.4666666666666667
+ministral_8b,ministral-8b-latest,c0,,AEC,content_only,0.5368941031182464,0.5833333333333334
+ministral_8b,ministral-8b-latest,c0,,AEC,shuffle,0.38440492476060195,0.5
+ministral_8b,ministral-8b-latest,c0,,AFS,original,0.513888888888889,0.5333333333333333
+ministral_8b,ministral-8b-latest,c0,,AFS,content_only,0.6723196320781835,0.6833333333333333
+ministral_8b,ministral-8b-latest,c0,,AFS,shuffle,0.4444444444444444,0.5333333333333333
+ministral_8b,ministral-8b-latest,c0,,ARGUMINSCI,original,0.4957983193277311,0.5833333333333334
+ministral_8b,ministral-8b-latest,c0,,ARGUMINSCI,content_only,0.3333333333333333,0.5
+ministral_8b,ministral-8b-latest,c0,,ARGUMINSCI,shuffle,0.3333333333333333,0.5
+ministral_8b,ministral-8b-latest,c0,,FINARG,original,0.4257486878666255,0.48333333333333334
+ministral_8b,ministral-8b-latest,c0,,FINARG,content_only,0.3333333333333333,0.5
+ministral_8b,ministral-8b-latest,c0,,FINARG,shuffle,0.3258426966292135,0.48333333333333334
+ministral_8b,ministral-8b-latest,c0,,IAM,original,0.7643097643097643,0.7666666666666667
+ministral_8b,ministral-8b-latest,c0,,IAM,content_only,0.7101449275362319,0.7166666666666667
+ministral_8b,ministral-8b-latest,c0,,IAM,shuffle,0.48412698412698413,0.5666666666666667
+ministral_8b,ministral-8b-latest,c0,,PE,original,0.6760443307757886,0.6833333333333333
+ministral_8b,ministral-8b-latest,c0,,PE,content_only,0.3453145057766367,0.43333333333333335
+ministral_8b,ministral-8b-latest,c0,,PE,shuffle,0.4034090909090909,0.5333333333333333
+ministral_8b,ministral-8b-latest,c0,,SCIARK,original,0.7285067873303167,0.7333333333333333
+ministral_8b,ministral-8b-latest,c0,,SCIARK,content_only,0.48717948717948717,0.55
+ministral_8b,ministral-8b-latest,c0,,SCIARK,shuffle,0.3258426966292135,0.48333333333333334
+ministral_8b,ministral-8b-latest,c0,,USELEC,original,0.52,0.5333333333333333
+ministral_8b,ministral-8b-latest,c0,,USELEC,content_only,0.37478991596638656,0.48333333333333334
+ministral_8b,ministral-8b-latest,c0,,USELEC,shuffle,0.3333333333333333,0.5
 ministral_8b,ministral-8b-latest,c1,definition,ABSTRCT,original,0.8331479421579533,0.8333333333333334
 ministral_8b,ministral-8b-latest,c1,definition,ABSTRCT,content_only,0.5832074901842343,0.6166666666666667
 ministral_8b,ministral-8b-latest,c1,definition,ABSTRCT,shuffle,0.38440492476060195,0.5
@@ -41,6 +71,18 @@ ministral_8b,ministral-8b-latest,c2,"definition, guideline",PE,shuffle,0.4664842
 ministral_8b,ministral-8b-latest,c2,"definition, guideline",USELEC,original,0.6789636722050126,0.6833333333333333
 ministral_8b,ministral-8b-latest,c2,"definition, guideline",USELEC,content_only,0.5982142857142857,0.6
 ministral_8b,ministral-8b-latest,c2,"definition, guideline",USELEC,shuffle,0.511559752523608,0.5833333333333334
+ministral_8b,ministral-8b-latest,c3,"definition, guideline, document_context",ABSTRCT,original,0.899888765294772,0.9
+ministral_8b,ministral-8b-latest,c3,"definition, guideline, document_context",ABSTRCT,content_only,0.8285714285714285,0.8333333333333334
+ministral_8b,ministral-8b-latest,c3,"definition, guideline, document_context",ABSTRCT,shuffle,0.4957983193277311,0.5833333333333334
+ministral_8b,ministral-8b-latest,c3,"definition, guideline, document_context",ARGUMINSCI,original,0.7330367074527253,0.7333333333333333
+ministral_8b,ministral-8b-latest,c3,"definition, guideline, document_context",ARGUMINSCI,content_only,0.6571428571428571,0.6666666666666666
+ministral_8b,ministral-8b-latest,c3,"definition, guideline, document_context",ARGUMINSCI,shuffle,0.35214211076280044,0.48333333333333334
+ministral_8b,ministral-8b-latest,c3,"definition, guideline, document_context",PE,original,0.4744790093627303,0.5166666666666667
+ministral_8b,ministral-8b-latest,c3,"definition, guideline, document_context",PE,content_only,0.5125,0.5666666666666667
+ministral_8b,ministral-8b-latest,c3,"definition, guideline, document_context",PE,shuffle,0.5125,0.5666666666666667
+ministral_8b,ministral-8b-latest,c3,"definition, guideline, document_context",USELEC,original,0.6194503171247357,0.65
+ministral_8b,ministral-8b-latest,c3,"definition, guideline, document_context",USELEC,content_only,0.6474735605170387,0.6666666666666666
+ministral_8b,ministral-8b-latest,c3,"definition, guideline, document_context",USELEC,shuffle,0.5588235294117647,0.5666666666666667
 gpt_5_2_openai,gpt-5.2-2025-12-11,c2,"definition, guideline",ABSTRCT,original,0.883300916921367,0.8833333333333333
 gpt_5_2_openai,gpt-5.2-2025-12-11,c2,"definition, guideline",ABSTRCT,content_only,0.8830409356725146,0.8833333333333333
 gpt_5_2_openai,gpt-5.2-2025-12-11,c2,"definition, guideline",ABSTRCT,shuffle,0.7222222222222222,0.7333333333333333
@@ -239,3 +281,21 @@ mistral_medium,mistral-medium-latest,c2,[c1 fallback],IAM,shuffle,0.511559752523
 mistral_medium,mistral-medium-latest,c2,[c1 fallback],SCIARK,original,0.783273131425396,0.7833333333333333
 mistral_medium,mistral-medium-latest,c2,[c1 fallback],SCIARK,content_only,0.5832074901842343,0.6166666666666667
 mistral_medium,mistral-medium-latest,c2,[c1 fallback],SCIARK,shuffle,0.5238095238095238,0.6
+ministral_8b,ministral-8b-latest,c3,[c1 fallback],ACQUA,original,0.7442455242966752,0.75
+ministral_8b,ministral-8b-latest,c3,[c1 fallback],ACQUA,content_only,0.5154553049289892,0.5166666666666667
+ministral_8b,ministral-8b-latest,c3,[c1 fallback],ACQUA,shuffle,0.5238095238095238,0.6
+ministral_8b,ministral-8b-latest,c3,[c1 fallback],AEC,original,0.49776785714285715,0.5
+ministral_8b,ministral-8b-latest,c3,[c1 fallback],AEC,content_only,0.48412698412698413,0.5666666666666667
+ministral_8b,ministral-8b-latest,c3,[c1 fallback],AEC,shuffle,0.3333333333333333,0.5
+ministral_8b,ministral-8b-latest,c3,[c1 fallback],AFS,original,0.6986607142857143,0.7
+ministral_8b,ministral-8b-latest,c3,[c1 fallback],AFS,content_only,0.5875,0.6333333333333333
+ministral_8b,ministral-8b-latest,c3,[c1 fallback],AFS,shuffle,0.3333333333333333,0.5
+ministral_8b,ministral-8b-latest,c3,[c1 fallback],FINARG,original,0.5417156286721504,0.5666666666666667
+ministral_8b,ministral-8b-latest,c3,[c1 fallback],FINARG,content_only,0.3333333333333333,0.5
+ministral_8b,ministral-8b-latest,c3,[c1 fallback],FINARG,shuffle,0.3333333333333333,0.5
+ministral_8b,ministral-8b-latest,c3,[c1 fallback],IAM,original,0.6811188811188811,0.6833333333333333
+ministral_8b,ministral-8b-latest,c3,[c1 fallback],IAM,content_only,0.6651785714285714,0.6666666666666666
+ministral_8b,ministral-8b-latest,c3,[c1 fallback],IAM,shuffle,0.4034090909090909,0.5333333333333333
+ministral_8b,ministral-8b-latest,c3,[c1 fallback],SCIARK,original,0.6329254727474972,0.6333333333333333
+ministral_8b,ministral-8b-latest,c3,[c1 fallback],SCIARK,content_only,0.546964663243733,0.5833333333333334
+ministral_8b,ministral-8b-latest,c3,[c1 fallback],SCIARK,shuffle,0.3333333333333333,0.5
