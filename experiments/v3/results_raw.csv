@@ -95,6 +95,18 @@ gpt_5_2_openai,gpt-5.2-2025-12-11,c2,"definition, guideline",PE,shuffle,0.576379
 gpt_5_2_openai,gpt-5.2-2025-12-11,c2,"definition, guideline",USELEC,original,0.6491228070175439,0.65
 gpt_5_2_openai,gpt-5.2-2025-12-11,c2,"definition, guideline",USELEC,content_only,0.6378269617706237,0.65
 gpt_5_2_openai,gpt-5.2-2025-12-11,c2,"definition, guideline",USELEC,shuffle,0.44919278252611583,0.5166666666666667
+gpt_5_2_openai,gpt-5.2-2025-12-11,c3,"definition, guideline, document_context",ABSTRCT,original,0.9166435120866907,0.9166666666666666
+gpt_5_2_openai,gpt-5.2-2025-12-11,c3,"definition, guideline, document_context",ABSTRCT,content_only,0.8660714285714286,0.8666666666666667
+gpt_5_2_openai,gpt-5.2-2025-12-11,c3,"definition, guideline, document_context",ABSTRCT,shuffle,0.8141368628555337,0.8166666666666667
+gpt_5_2_openai,gpt-5.2-2025-12-11,c3,"definition, guideline, document_context",ARGUMINSCI,original,0.8465473145780051,0.85
+gpt_5_2_openai,gpt-5.2-2025-12-11,c3,"definition, guideline, document_context",ARGUMINSCI,content_only,0.5970695970695971,0.6333333333333333
+gpt_5_2_openai,gpt-5.2-2025-12-11,c3,"definition, guideline, document_context",ARGUMINSCI,shuffle,0.5875,0.6333333333333333
+gpt_5_2_openai,gpt-5.2-2025-12-11,c3,"definition, guideline, document_context",PE,original,0.5238095238095237,0.5666666666666667
+gpt_5_2_openai,gpt-5.2-2025-12-11,c3,"definition, guideline, document_context",PE,content_only,0.5822890559732665,0.5833333333333334
+gpt_5_2_openai,gpt-5.2-2025-12-11,c3,"definition, guideline, document_context",PE,shuffle,0.5666666666666667,0.5666666666666667
+gpt_5_2_openai,gpt-5.2-2025-12-11,c3,"definition, guideline, document_context",USELEC,original,0.7376858058874963,0.75
+gpt_5_2_openai,gpt-5.2-2025-12-11,c3,"definition, guideline, document_context",USELEC,content_only,0.5822890559732665,0.5833333333333334
+gpt_5_2_openai,gpt-5.2-2025-12-11,c3,"definition, guideline, document_context",USELEC,shuffle,0.6329254727474972,0.6333333333333333
 gpt_5_2_openai,gpt-5.2-2025-12-11,c1,definition,ABSTRCT,original,0.6632996632996633,0.6666666666666666
 gpt_5_2_openai,gpt-5.2-2025-12-11,c1,definition,ABSTRCT,content_only,0.6475524475524476,0.65
 gpt_5_2_openai,gpt-5.2-2025-12-11,c1,definition,ABSTRCT,shuffle,0.5064629847238543,0.5333333333333333
@@ -155,18 +167,30 @@ gpt_5_2_openai,gpt-5.2-2025-12-11,c0,,SCIARK,shuffle,0.5238095238095237,0.566666
 gpt_5_2_openai,gpt-5.2-2025-12-11,c0,,USELEC,original,0.47248453272549656,0.55
 gpt_5_2_openai,gpt-5.2-2025-12-11,c0,,USELEC,content_only,0.35214211076280044,0.48333333333333334
 gpt_5_2_openai,gpt-5.2-2025-12-11,c0,,USELEC,shuffle,0.3258426966292135,0.48333333333333334
-mistral_medium,mistral-medium-latest,c2,"definition, guideline",ABSTRCT,original,0.8331479421579533,0.8333333333333334
-mistral_medium,mistral-medium-latest,c2,"definition, guideline",ABSTRCT,content_only,0.6914285714285715,0.7
-mistral_medium,mistral-medium-latest,c2,"definition, guideline",ABSTRCT,shuffle,0.625,0.6666666666666666
-mistral_medium,mistral-medium-latest,c2,"definition, guideline",ARGUMINSCI,original,0.6703296703296704,0.7
+mistral_medium,mistral-medium-latest,c2,"definition, guideline",ABSTRCT,original,0.9166435120866907,0.9166666666666666
+mistral_medium,mistral-medium-latest,c2,"definition, guideline",ABSTRCT,content_only,0.8141368628555337,0.8166666666666667
+mistral_medium,mistral-medium-latest,c2,"definition, guideline",ABSTRCT,shuffle,0.6919359710057384,0.7166666666666667
+mistral_medium,mistral-medium-latest,c2,"definition, guideline",ARGUMINSCI,original,0.7532314923619272,0.7666666666666667
 mistral_medium,mistral-medium-latest,c2,"definition, guideline",ARGUMINSCI,content_only,0.466484268125855,0.5666666666666667
-mistral_medium,mistral-medium-latest,c2,"definition, guideline",ARGUMINSCI,shuffle,0.3333333333333333,0.5
-mistral_medium,mistral-medium-latest,c2,"definition, guideline",PE,original,0.6228571428571429,0.6333333333333333
-mistral_medium,mistral-medium-latest,c2,"definition, guideline",PE,content_only,0.6329254727474972,0.6333333333333333
-mistral_medium,mistral-medium-latest,c2,"definition, guideline",PE,shuffle,0.475,0.5333333333333333
-mistral_medium,mistral-medium-latest,c2,"definition, guideline",USELEC,original,0.7222222222222222,0.7333333333333333
-mistral_medium,mistral-medium-latest,c2,"definition, guideline",USELEC,content_only,0.6666666666666666,0.6666666666666666
-mistral_medium,mistral-medium-latest,c2,"definition, guideline",USELEC,shuffle,0.6122209165687427,0.6333333333333333
+mistral_medium,mistral-medium-latest,c2,"definition, guideline",ARGUMINSCI,shuffle,0.3693367162015223,0.5166666666666667
+mistral_medium,mistral-medium-latest,c2,"definition, guideline",PE,original,0.569377990430622,0.6
+mistral_medium,mistral-medium-latest,c2,"definition, guideline",PE,content_only,0.607843137254902,0.6166666666666667
+mistral_medium,mistral-medium-latest,c2,"definition, guideline",PE,shuffle,0.546964663243733,0.5833333333333334
+mistral_medium,mistral-medium-latest,c2,"definition, guideline",USELEC,original,0.7101449275362319,0.7166666666666667
+mistral_medium,mistral-medium-latest,c2,"definition, guideline",USELEC,content_only,0.6825396825396826,0.6833333333333333
+mistral_medium,mistral-medium-latest,c2,"definition, guideline",USELEC,shuffle,0.5688416211555045,0.5833333333333334
+mistral_medium,mistral-medium-latest,c3,"definition, guideline, document_context",ABSTRCT,original,0.9332591768631813,0.9333333333333333
+mistral_medium,mistral-medium-latest,c3,"definition, guideline, document_context",ABSTRCT,content_only,0.8316498316498316,0.8333333333333334
+mistral_medium,mistral-medium-latest,c3,"definition, guideline, document_context",ABSTRCT,shuffle,0.7376858058874963,0.75
+mistral_medium,mistral-medium-latest,c3,"definition, guideline, document_context",ARGUMINSCI,original,0.7532314923619272,0.7666666666666667
+mistral_medium,mistral-medium-latest,c3,"definition, guideline, document_context",ARGUMINSCI,content_only,0.4957983193277311,0.5833333333333334
+mistral_medium,mistral-medium-latest,c3,"definition, guideline, document_context",ARGUMINSCI,shuffle,0.5238095238095238,0.6
+mistral_medium,mistral-medium-latest,c3,"definition, guideline, document_context",PE,original,0.546964663243733,0.5833333333333334
+mistral_medium,mistral-medium-latest,c3,"definition, guideline, document_context",PE,content_only,0.569377990430622,0.6
+mistral_medium,mistral-medium-latest,c3,"definition, guideline, document_context",PE,shuffle,0.5647321428571428,0.5666666666666667
+mistral_medium,mistral-medium-latest,c3,"definition, guideline, document_context",USELEC,original,0.6977777777777778,0.7166666666666667
+mistral_medium,mistral-medium-latest,c3,"definition, guideline, document_context",USELEC,content_only,0.6329254727474972,0.6333333333333333
+mistral_medium,mistral-medium-latest,c3,"definition, guideline, document_context",USELEC,shuffle,0.5832175604334537,0.5833333333333334
 mistral_medium,mistral-medium-latest,c0,,ABSTRCT,original,0.7643097643097643,0.7666666666666667
 mistral_medium,mistral-medium-latest,c0,,ABSTRCT,content_only,0.6411483253588517,0.6666666666666666
 mistral_medium,mistral-medium-latest,c0,,ABSTRCT,shuffle,0.4444444444444444,0.5333333333333333
