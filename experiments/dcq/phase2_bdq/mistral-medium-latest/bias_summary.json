@@ -1,32 +1,28 @@
 {
   "model": "mistral-medium-latest",
-  "total_samples": 50,
-  "random_chance_threshold": 10,
+  "total_samples": 100,
+  "random_chance_threshold": 20,
   "position_frequencies": {
-    "E": {
-      "count": 32,
-      "percentage": 64.0
+    "B": {
+      "count": 6,
+      "percentage": 6.0
     },
     "D": {
-      "count": 10,
-      "percentage": 20.0
+      "count": 25,
+      "percentage": 25.0
+    },
+    "E": {
+      "count": 66,
+      "percentage": 66.0
     },
     "C": {
-      "count": 4,
-      "percentage": 8.0
-    },
-    "B": {
-      "count": 3,
-      "percentage": 6.0
+      "count": 2,
+      "percentage": 2.0
     },
     "A": {
       "count": 1,
-      "percentage": 2.0
+      "percentage": 1.0
     }
   },
-  "non_preferred_positions": [
-    "A",
-    "B",
-    "C"
-  ]
+  "non_preferred_positions": ["A", "B", "C"]
 }

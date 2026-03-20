@@ -387,13 +387,26 @@ def run_bdq(base_cfg: dict, model_cfg: dict):
     results_file = output_dir / "bdq_results.jsonl"
     summary_file = output_dir / "bias_summary.json"
 
-    # Load ALL perturbation files from phase1_perturbations/
+    # Load perturbation files from phase1_perturbations/
+    # Optionally sample a subset for BDQ (faster bias detection)
+    bdq_samples_per_dataset = cfg["phase2"].get("samples_per_dataset", None)
+
     perturbations = []
     for jsonl_file in sorted(perturbations_dir.glob("*.jsonl")):
+        dataset_samples = []
         with open(jsonl_file) as f:
             for line in f:
-                perturbations.append(json.loads(line))
-        logger.info(f"Loaded {jsonl_file.name}")
+                dataset_samples.append(json.loads(line))
+
+        # Sample if limit specified
+        if bdq_samples_per_dataset and len(dataset_samples) > bdq_samples_per_dataset:
+            random.seed(42)
+            dataset_samples = random.sample(dataset_samples, bdq_samples_per_dataset)
+            logger.info(f"Loaded {jsonl_file.name}: {bdq_samples_per_dataset} samples (sampled)")
+        else:
+            logger.info(f"Loaded {jsonl_file.name}: {len(dataset_samples)} samples")
+
+        perturbations.extend(dataset_samples)
 
     logger.info(f"Total: {len(perturbations)} perturbation sets")
 

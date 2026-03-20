@@ -30,6 +30,7 @@ max_retries = 3
 [phase2]
 temperature = 0
 max_tokens = 1
+samples_per_dataset = 10  # 10 per dataset = 100 total for bias detection
 output_dir = "bdq_results"
 
 # ----------------------------------------------------------------------------
