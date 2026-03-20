@@ -35,7 +35,7 @@ from portkey_ai import PORTKEY_GATEWAY_URL
 from tqdm import tqdm
 
 from config.paths import GAIC_DATA_DIR
-from gaic.dcq.schemas import PerturbationSet, QuizAnswer
+from gaic.dcq.schemas import PerturbationSet
 
 load_dotenv()
 
@@ -177,16 +177,33 @@ def make_client(cfg: dict) -> OpenAI:
 
 
 def load_dev_data(datasets: list[str]) -> dict:
-    """Load dev.jsonl and filter by enabled datasets."""
+    """Load dev.jsonl + dev_labels.jsonl and filter by enabled datasets."""
+    # Load labels first
+    labels = {}
+    with open(GAIC_DATA_DIR / "dev_labels.jsonl") as f:
+        for line in f:
+            label_entry = json.loads(line)
+            labels[label_entry["id"]] = label_entry["label"]
+
+    # Load data and join with labels
     data = {}
     with open(GAIC_DATA_DIR / "dev.jsonl") as f:
         for line in f:
             sample = json.loads(line)
-            dataset = sample["Dataset"]
+            sample_id = sample["id"]
+            # Extract dataset from id (e.g., "ABSTRCT-dev-1" -> "ABSTRCT")
+            dataset = sample_id.split("-")[0]
+
             if dataset in datasets:
                 if dataset not in data:
                     data[dataset] = []
-                data[dataset].append(sample)
+                # Normalize to expected format
+                data[dataset].append({
+                    "ID": sample_id,
+                    "Dataset": dataset,
+                    "Sentence": sample["sentence"],
+                    "Label": labels.get(sample_id, "Unknown"),
+                })
     return data
 
 
@@ -219,88 +236,128 @@ def generate_perturbations(base_cfg: dict):
 
     output_dir = Path(base_cfg["output"]["base_dir"]) / "phase1_perturbations"
     output_dir.mkdir(parents=True, exist_ok=True)
-    output_file = output_dir / base_cfg["phase1"]["output_file"]
 
     # Load data
     datasets = base_cfg["datasets"]["enabled"]
     data = load_dev_data(datasets)
 
-    # Sample balanced
-    all_samples = []
-    for dataset, samples in data.items():
-        selected = sample_balanced(samples, base_cfg["sampling"]["samples_per_dataset"])
-        all_samples.extend([(dataset, s) for s in selected])
-
-    logger.info(f"Total samples to perturb: {len(all_samples)}")
-
     # Setup client
     client = make_client(base_cfg["phase1"])
     max_retries = base_cfg["phase1"]["max_retries"]
 
-    # Generate perturbations
-    results = []
-    with tqdm(total=len(all_samples), desc="Generating perturbations") as pbar:
-        for dataset, sample in all_samples:
-            sentence = sample["Sentence"]
+    # Generate perturbations per dataset
+    target_count = base_cfg["sampling"]["samples_per_dataset"]
 
-            # Retry loop with validation
-            for attempt in range(max_retries):
-                try:
-                    resp = client.beta.chat.completions.parse(
-                        model=base_cfg["phase1"]["model"],
-                        messages=[
-                            {"role": "user", "content": PERTURBATION_PROMPT.format(original_sentence=sentence)}
-                        ],
-                        temperature=base_cfg["phase1"]["temperature"],
-                        response_format=PerturbationSet,
-                    )
+    for dataset in datasets:
+        if dataset not in data:
+            logger.warning(f"No data found for {dataset}, skipping")
+            continue
 
-                    parsed = resp.choices[0].message.parsed
-                    if parsed is None:
-                        raise ValueError("No parsed output")
+        output_file = output_dir / f"{dataset}.jsonl"
 
-                    # Validate: all perturbations must be distinct and different from original
-                    perturbations = [
-                        parsed.perturbation_1,
-                        parsed.perturbation_2,
-                        parsed.perturbation_3,
-                        parsed.perturbation_4,
-                    ]
+        # Skip if already exists
+        if output_file.exists():
+            logger.info(f"Skipping {dataset} - {output_file} already exists")
+            continue
 
-                    if len(set(perturbations)) != 4:
-                        raise ValueError("Perturbations are not all distinct")
+        # Get all samples, balanced by class
+        all_samples = data[dataset]
+        args = [s for s in all_samples if s["Label"] == "Argument"]
+        no_args = [s for s in all_samples if s["Label"] == "No-Argument"]
+        random.seed(42)
+        random.shuffle(args)
+        random.shuffle(no_args)
 
-                    if sentence in perturbations:
-                        raise ValueError("Original sentence found in perturbations")
+        logger.info(f"Generating perturbations for {dataset}: target {target_count} samples")
 
-                    # Success - save result
-                    results.append({
-                        "id": sample["ID"],
-                        "dataset": dataset,
-                        "label": sample["Label"],
-                        "original": sentence,
-                        "perturbations": perturbations,
-                    })
+        results = []
+        arg_idx, no_arg_idx = 0, 0
+        per_class = target_count // 2
+
+        with tqdm(total=target_count, desc=f"  {dataset}") as pbar:
+            while len(results) < target_count:
+                # Pick next sample, alternating classes to maintain balance
+                arg_count = sum(1 for r in results if r["label"] == "Argument")
+                no_arg_count = len(results) - arg_count
+
+                if arg_count < per_class and arg_idx < len(args):
+                    sample = args[arg_idx]
+                    arg_idx += 1
+                elif no_arg_count < per_class and no_arg_idx < len(no_args):
+                    sample = no_args[no_arg_idx]
+                    no_arg_idx += 1
+                elif arg_idx < len(args):
+                    sample = args[arg_idx]
+                    arg_idx += 1
+                elif no_arg_idx < len(no_args):
+                    sample = no_args[no_arg_idx]
+                    no_arg_idx += 1
+                else:
+                    logger.warning(f"Exhausted samples for {dataset}, got {len(results)}/{target_count}")
                     break
 
-                except Exception as e:
-                    if attempt < max_retries - 1:
-                        logger.warning(f"Retry {attempt + 1}/{max_retries} for {sample['ID']}: {e}")
-                        time.sleep(2 ** attempt)
-                    else:
-                        logger.error(f"Failed to generate perturbations for {sample['ID']} after {max_retries} attempts")
-                        raise
+                sentence = sample["Sentence"]
+                success = False
 
-            pbar.update(1)
+                # Retry loop with validation
+                for attempt in range(max_retries):
+                    try:
+                        resp = client.beta.chat.completions.parse(
+                            model=base_cfg["phase1"]["model"],
+                            messages=[
+                                {"role": "user", "content": PERTURBATION_PROMPT.format(original_sentence=sentence)}
+                            ],
+                            temperature=base_cfg["phase1"]["temperature"],
+                            response_format=PerturbationSet,
+                        )
 
-    # Save results as JSONL
-    with open(output_file, "w") as f:
-        for result in results:
-            f.write(json.dumps(result) + "\n")
+                        parsed = resp.choices[0].message.parsed
+                        if parsed is None:
+                            raise ValueError("No parsed output")
+
+                        # Validate: all perturbations must be distinct and different from original
+                        perturbations = [
+                            parsed.perturbation_1,
+                            parsed.perturbation_2,
+                            parsed.perturbation_3,
+                            parsed.perturbation_4,
+                        ]
+
+                        if len(set(perturbations)) != 4:
+                            raise ValueError("Perturbations are not all distinct")
+
+                        if sentence in perturbations:
+                            raise ValueError("Original sentence found in perturbations")
+
+                        # Success - save result
+                        results.append({
+                            "id": sample["ID"],
+                            "dataset": dataset,
+                            "label": sample["Label"],
+                            "original": sentence,
+                            "perturbations": perturbations,
+                        })
+                        success = True
+                        pbar.update(1)
+                        time.sleep(0.5)  # Rate limit
+                        break
+
+                    except Exception as e:
+                        if attempt < max_retries - 1:
+                            logger.warning(f"Retry {attempt + 1}/{max_retries} for {sample['ID']}: {e}")
+                            time.sleep(2 ** attempt)
+                        else:
+                            logger.warning(f"Skipping {sample['ID']}, trying next sample: {e}")
+
+        # Save results as JSONL per dataset
+        with open(output_file, "w") as f:
+            for result in results:
+                f.write(json.dumps(result) + "\n")
+
+        print(f"  Saved {len(results)} perturbations to {output_file}")
 
     print("=" * 80)
-    print(f"Phase 1 Complete. Saved {len(results)} perturbation sets to:")
-    print(f"  {output_file}")
+    print("Phase 1 Complete.")
     print("=" * 80)
 
 
@@ -323,20 +380,22 @@ def run_bdq(base_cfg: dict, model_cfg: dict):
 
     # Setup paths
     base_dir = Path(cfg["output"]["base_dir"])
-    input_file = base_dir / "phase1_perturbations" / cfg["phase1"]["output_file"]
+    perturbations_dir = base_dir / "phase1_perturbations"
     output_dir = base_dir / "phase2_bdq" / model_name
     output_dir.mkdir(parents=True, exist_ok=True)
 
     results_file = output_dir / "bdq_results.jsonl"
     summary_file = output_dir / "bias_summary.json"
 
-    # Load perturbations
+    # Load ALL perturbation files from phase1_perturbations/
     perturbations = []
-    with open(input_file) as f:
-        for line in f:
-            perturbations.append(json.loads(line))
+    for jsonl_file in sorted(perturbations_dir.glob("*.jsonl")):
+        with open(jsonl_file) as f:
+            for line in f:
+                perturbations.append(json.loads(line))
+        logger.info(f"Loaded {jsonl_file.name}")
 
-    logger.info(f"Loaded {len(perturbations)} perturbation sets")
+    logger.info(f"Total: {len(perturbations)} perturbation sets")
 
     # Setup client
     client = make_client(cfg["model"])
@@ -370,22 +429,24 @@ def run_bdq(base_cfg: dict, model_cfg: dict):
                     option_d=options[3],
                 )
 
-                # Get answer
+                # Get answer (raw text, as per original DCQ implementation)
                 try:
-                    resp = client.beta.chat.completions.parse(
+                    resp = client.chat.completions.create(
                         model=cfg["model"]["model"],
                         messages=[{"role": "user", "content": prompt}],
                         temperature=cfg["phase2"]["temperature"],
                         max_tokens=cfg["phase2"]["max_tokens"],
-                        response_format=QuizAnswer,
                     )
 
-                    parsed = resp.choices[0].message.parsed
-                    answer = parsed.answer if parsed else "E"
+                    raw_answer = (resp.choices[0].message.content or "").strip().upper()
+                    # Extract single letter A-E
+                    answer = raw_answer[0] if raw_answer and raw_answer[0] in "ABCDE" else "E"
 
                 except Exception as e:
                     logger.error(f"Error for {sample['id']}: {e}")
                     answer = "E"
+
+                time.sleep(0.5)  # Rate limit
 
                 position_counts[answer] += 1
 
@@ -471,20 +532,11 @@ def run_bcq(base_cfg: dict, model_cfg: dict):
 
     # Setup paths
     base_dir = Path(cfg["output"]["base_dir"])
-    perturbations_file = base_dir / "phase1_perturbations" / cfg["phase1"]["output_file"]
+    perturbations_dir = base_dir / "phase1_perturbations"
     bias_summary_file = base_dir / "phase2_bdq" / model_name / "bias_summary.json"
 
     output_dir = base_dir / "phase3_bcq" / model_name
     output_dir.mkdir(parents=True, exist_ok=True)
-
-    results_file = output_dir / "bcq_results.jsonl"
-    report_file = output_dir / "contamination_report.json"
-
-    # Load inputs
-    perturbations = []
-    with open(perturbations_file) as f:
-        for line in f:
-            perturbations.append(json.loads(line))
 
     with open(bias_summary_file) as f:
         bias_summary = json.load(f)
@@ -496,23 +548,33 @@ def run_bcq(base_cfg: dict, model_cfg: dict):
     }
 
     logger.info(f"Non-preferred positions: {non_preferred}")
-    logger.info(f"Testing {len(perturbations)} samples")
 
     # Setup client
     client = make_client(cfg["model"])
 
-    # Run BCQ
-    results = []
-    by_dataset = {}
+    # Process each dataset separately
+    for jsonl_file in sorted(perturbations_dir.glob("*.jsonl")):
+        dataset = jsonl_file.stem  # e.g., "ABSTRCT" from "ABSTRCT.jsonl"
 
-    # Group by dataset
-    for p in perturbations:
-        if p["dataset"] not in by_dataset:
-            by_dataset[p["dataset"]] = []
-        by_dataset[p["dataset"]].append(p)
+        results_file = output_dir / f"{dataset}_bcq_results.jsonl"
+        report_file = output_dir / f"{dataset}_contamination_report.json"
 
-    for dataset in sorted(by_dataset.keys()):
-        samples = by_dataset[dataset]
+        # Skip if already exists
+        if report_file.exists():
+            logger.info(f"Skipping {dataset} - {report_file} already exists")
+            continue
+
+        # Load perturbations for this dataset
+        samples = []
+        with open(jsonl_file) as f:
+            for line in f:
+                samples.append(json.loads(line))
+
+        logger.info(f"Processing {dataset}: {len(samples)} samples")
+
+        # Run BCQ for this dataset
+        results = []
+        bcq_per_position = {pos: 0 for pos in non_preferred}
         dataset_correct = 0
 
         with tqdm(total=len(samples), desc=f"  {dataset:12s}") as pbar:
@@ -540,22 +602,23 @@ def run_bcq(base_cfg: dict, model_cfg: dict):
                         option_d=options[3],
                     )
 
-                    # Get answer
+                    # Get answer (raw text, as per original DCQ implementation)
                     try:
-                        resp = client.beta.chat.completions.parse(
+                        resp = client.chat.completions.create(
                             model=cfg["model"]["model"],
                             messages=[{"role": "user", "content": prompt}],
                             temperature=cfg["phase3"]["temperature"],
                             max_tokens=cfg["phase3"]["max_tokens"],
-                            response_format=QuizAnswer,
                         )
 
-                        parsed = resp.choices[0].message.parsed
-                        answer = parsed.answer if parsed else "E"
+                        raw_answer = (resp.choices[0].message.content or "").strip().upper()
+                        answer = raw_answer[0] if raw_answer and raw_answer[0] in "ABCDE" else "E"
 
                     except Exception as e:
                         logger.error(f"Error for {sample['id']} at position {position}: {e}")
                         answer = "E"
+
+                    time.sleep(0.5)  # Rate limit
 
                     is_correct = answer == position
                     position_results.append({
@@ -563,6 +626,10 @@ def run_bcq(base_cfg: dict, model_cfg: dict):
                         "answer": answer,
                         "correct": is_correct,
                     })
+
+                    # Track per-position stats for this dataset
+                    if is_correct:
+                        bcq_per_position[position] += 1
 
                 # Take MAX accuracy across positions (as per paper)
                 sample_correct = any(r["correct"] for r in position_results)
@@ -579,86 +646,63 @@ def run_bcq(base_cfg: dict, model_cfg: dict):
 
                 pbar.update(1)
 
-        contamination_rate = dataset_correct / len(samples) * 100
-        print(f"    Contamination: {contamination_rate:.1f}% ({dataset_correct}/{len(samples)})")
+        # Save results for this dataset
+        with open(results_file, "w") as f:
+            for result in results:
+                f.write(json.dumps(result) + "\n")
 
-    # Save results
-    with open(results_file, "w") as f:
-        for result in results:
-            f.write(json.dumps(result) + "\n")
+        # Compute min/max contamination for this dataset using Cohen's κ
+        total = len(results)
 
-    # Compute per-position BCQ statistics (as per original DCQ implementation)
-    bcq_per_position = {pos: 0 for pos in non_preferred}
-    for result in results:
-        for pr in result["position_results"]:
-            if pr["correct"]:
-                bcq_per_position[pr["position"]] += 1
+        # Build triples: (position, bcq_correct_count, bdq_bias_count)
+        # Scale BDQ bias proportionally to this dataset's sample count
+        num_datasets = len(list(perturbations_dir.glob("*.jsonl")))
+        triples = [
+            (pos, bcq_per_position[pos], bdq_position_counts.get(pos, 0) // num_datasets)
+            for pos in non_preferred
+        ]
+        # Sort by BCQ correct count (descending), then by BDQ bias (ascending)
+        triples.sort(key=lambda x: (-x[1], x[2]))
 
-    # Compute max/min contamination following original paper methodology
-    overall_total = len(results)
+        max_count = triples[0][1]
+        max_cont_positional_bias = triples[0][2]
+        max_cont_level = max_count / total if total > 0 else 0
 
-    # Build triples: (position, bcq_correct_count, bdq_bias_count)
-    triples = [
-        (pos, bcq_per_position[pos], bdq_position_counts.get(pos, 0))
-        for pos in non_preferred
-    ]
-    # Sort by BCQ correct count (descending), then by BDQ bias (ascending)
-    triples.sort(key=lambda x: (-x[1], x[2]))
+        # Cohen's Kappa for min contamination
+        if total > max_cont_positional_bias:
+            kappa = (max_count - max_cont_positional_bias) / (total - max_cont_positional_bias)
+        else:
+            kappa = 0
 
-    max_count = triples[0][1]
-    max_cont_positional_bias = triples[0][2]
-    max_cont_level = max_count / overall_total if overall_total > 0 else 0
+        # Min contamination = max(kappa, second_best_position_rate)
+        if len(triples) > 1:
+            second_max_count = triples[1][1]
+            min_cont_level = max(kappa, second_max_count / total if total > 0 else 0)
+        else:
+            min_cont_level = kappa
 
-    # Cohen's Kappa for min contamination
-    if overall_total > max_cont_positional_bias:
-        kappa = (max_count - max_cont_positional_bias) / (overall_total - max_cont_positional_bias)
-    else:
-        kappa = 0
-
-    # Min contamination = max(kappa, second_best_position_rate)
-    if len(triples) > 1:
-        second_max_count = triples[1][1]
-        min_cont_level = max(kappa, second_max_count / overall_total if overall_total > 0 else 0)
-    else:
-        min_cont_level = kappa
-
-    # Per-dataset stats
-    by_dataset_stats = {}
-    for dataset in by_dataset.keys():
-        dataset_results = [r for r in results if r["dataset"] == dataset]
-        correct = sum(1 for r in dataset_results if r["correct"])
-        total = len(dataset_results)
-
-        by_dataset_stats[dataset] = {
-            "correct": correct,
+        report = {
+            "model": cfg["model"]["model"],
+            "dataset": dataset,
+            "non_preferred_positions": non_preferred,
+            "bcq_per_position": bcq_per_position,
             "total": total,
-            "contamination_rate": correct / total * 100 if total > 0 else 0,
-        }
-
-    report = {
-        "model": cfg["model"]["model"],
-        "non_preferred_positions": non_preferred,
-        "bcq_per_position": bcq_per_position,
-        "overall": {
-            "total": overall_total,
+            "correct": dataset_correct,
             "max_contamination": max_cont_level * 100,
             "min_contamination": min_cont_level * 100,
             "contamination_range": f"[{min_cont_level * 100:.1f}%, {max_cont_level * 100:.1f}%]",
-        },
-        "by_dataset": by_dataset_stats,
-    }
+        }
 
-    with open(report_file, "w") as f:
-        json.dump(report, f, indent=2)
+        with open(report_file, "w") as f:
+            json.dump(report, f, indent=2)
+
+        print(f"    {dataset}: [{min_cont_level * 100:.1f}%, {max_cont_level * 100:.1f}%] (n={total})")
 
     print()
     print("=" * 80)
-    print(f"CONTAMINATION RANGE: [{min_cont_level * 100:.1f}%, {max_cont_level * 100:.1f}%]")
-    print(f"  (n={overall_total} samples)")
-    print("=" * 80)
-    print("Phase 3 Complete. Results saved to:")
-    print(f"  {results_file}")
-    print(f"  {report_file}")
+    print("Phase 3 Complete. Per-dataset results saved to:")
+    print(f"  {output_dir}/{{DATASET}}_bcq_results.jsonl")
+    print(f"  {output_dir}/{{DATASET}}_contamination_report.json")
     print("=" * 80)
 
 

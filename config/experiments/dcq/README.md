@@ -31,15 +31,18 @@ Results are saved to `experiments/dcq/`:
 ```
 experiments/dcq/
 ├── phase1_perturbations/
-│   └── perturbations.jsonl
+│   ├── ABSTRCT.jsonl
+│   ├── ACQUA.jsonl
+│   └── ...                          # One file per dataset
 ├── phase2_bdq/
-│   ├── gpt-5.2-2025-12-11/
-│   │   ├── bdq_results.jsonl
-│   │   └── bias_summary.json
-│   └── ...
+│   └── {model_name}/
+│       ├── bdq_results.jsonl
+│       └── bias_summary.json
 └── phase3_bcq/
-    ├── gpt-5.2-2025-12-11/
-    │   ├── bcq_results.jsonl
-    │   └── contamination_report.json
-    └── ...
+    └── {model_name}/
+        ├── ABSTRCT_bcq_results.jsonl
+        ├── ABSTRCT_contamination_report.json
+        ├── ACQUA_bcq_results.jsonl
+        ├── ACQUA_contamination_report.json
+        └── ...                      # Per-dataset results with min/max contamination
 ```

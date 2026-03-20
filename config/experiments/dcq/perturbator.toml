@@ -10,20 +10,19 @@ experiment_name = "dcq_contamination_test"
 # ----------------------------------------------------------------------------
 # Generates 4 synonym-based perturbations per sample using GPT-4.1
 # Input: dev.jsonl (50 samples per dataset, balanced)
-# Output: experiments/dcq/phase1_perturbations/perturbations.jsonl
+# Output: experiments/dcq/phase1_perturbations/{DATASET}.jsonl
 
 [phase1]
 provider = "openai"
 model = "gpt-4.1"
 temperature = 1.0
 max_retries = 3
-output_file = "perturbations.jsonl"
 
 # ----------------------------------------------------------------------------
 # PHASE 2: Bias Detector Quiz (BDQ)
 # ----------------------------------------------------------------------------
 # Detects model position bias using quiz with ONLY perturbations
-# Input: phase1_perturbations/perturbations.jsonl
+# Input: phase1_perturbations/*.jsonl (all datasets)
 # Output: experiments/dcq/phase2_bdq/{model_name}/
 #   - bdq_results.jsonl (per-sample predictions)
 #   - bias_summary.json (position frequency analysis)
@@ -84,7 +83,7 @@ base_dir = "experiments/dcq"
 # Directory structure:
 # experiments/dcq/
 #   phase1_perturbations/
-#     perturbations.jsonl
+#     {DATASET}.jsonl  (e.g., ABSTRCT.jsonl, ACQUA.jsonl, ...)
 #   phase2_bdq/
 #     {model_name}/
 #       bdq_results.jsonl

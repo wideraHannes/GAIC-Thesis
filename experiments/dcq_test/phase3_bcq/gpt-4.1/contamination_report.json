@@ -1,0 +1,26 @@
+{
+  "model": "gpt-4.1",
+  "non_preferred_positions": [
+    "B",
+    "C",
+    "D"
+  ],
+  "bcq_per_position": {
+    "B": 3,
+    "C": 2,
+    "D": 2
+  },
+  "overall": {
+    "total": 4,
+    "max_contamination": 75.0,
+    "min_contamination": 75.0,
+    "contamination_range": "[75.0%, 75.0%]"
+  },
+  "by_dataset": {
+    "ABSTRCT": {
+      "correct": 3,
+      "total": 4,
+      "contamination_rate": 75.0
+    }
+  }
+}
