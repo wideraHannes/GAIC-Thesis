@@ -1,0 +1,6 @@
+# DCQ Model Config: Ministral 8B
+
+[model]
+provider = "mistral"
+model = "ministral-8b-latest"
+temperature = 0

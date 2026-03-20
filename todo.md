@@ -2,6 +2,9 @@
 
 -> Our solution to marks problem is -> no training in RQ1 and 2
 -> Whats the most clever way to train this system without shortcut
+  -> Gollie Fine Tuning 
+
+-> Data Contamination testing with the DCQ method by Golchin
 
 ## KW 11
 

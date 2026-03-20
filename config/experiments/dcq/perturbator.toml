@@ -1,0 +1,95 @@
+# ============================================================================
+# DCQ (Data Contamination Quiz) Base Configuration
+# Based on Golchin & Surdeanu (TACL 2025)
+# ============================================================================
+
+experiment_name = "dcq_contamination_test"
+
+# ----------------------------------------------------------------------------
+# PHASE 1: Perturbation Generation
+# ----------------------------------------------------------------------------
+# Generates 4 synonym-based perturbations per sample using GPT-4.1
+# Input: dev.jsonl (50 samples per dataset, balanced)
+# Output: experiments/dcq/phase1_perturbations/perturbations.jsonl
+
+[phase1]
+provider = "openai"
+model = "gpt-4.1"
+temperature = 1.0
+max_retries = 3
+output_file = "perturbations.jsonl"
+
+# ----------------------------------------------------------------------------
+# PHASE 2: Bias Detector Quiz (BDQ)
+# ----------------------------------------------------------------------------
+# Detects model position bias using quiz with ONLY perturbations
+# Input: phase1_perturbations/perturbations.jsonl
+# Output: experiments/dcq/phase2_bdq/{model_name}/
+#   - bdq_results.jsonl (per-sample predictions)
+#   - bias_summary.json (position frequency analysis)
+
+[phase2]
+temperature = 0
+max_tokens = 1
+output_dir = "bdq_results"
+
+# ----------------------------------------------------------------------------
+# PHASE 3: Bias Compensator Quiz (BCQ)
+# ----------------------------------------------------------------------------
+# Detects contamination by inserting original at non-preferred positions
+# Input: phase1_perturbations/perturbations.jsonl + phase2_bdq/bias_summary.json
+# Output: experiments/dcq/phase3_bcq/{model_name}/
+#   - bcq_results.jsonl (per-sample predictions)
+#   - contamination_report.json (final contamination rates)
+
+[phase3]
+temperature = 0
+max_tokens = 1
+bias_threshold = 0.20  # Positions < 20% are non-preferred
+output_dir = "bcq_results"
+
+# ----------------------------------------------------------------------------
+# Data Sampling
+# ----------------------------------------------------------------------------
+
+[sampling]
+samples_per_dataset = 50  # 25 Argument + 25 No-Argument
+split = "dev"  # Tests if models have seen evaluation data
+
+# ----------------------------------------------------------------------------
+# Datasets (All 10 from GAIC-2026)
+# ----------------------------------------------------------------------------
+
+[datasets]
+enabled = [
+    "ABSTRCT",
+    "ACQUA",
+    "AEC",
+    "AFS",
+    "ARGUMINSCI",
+    "FINARG",
+    "IAM",
+    "PE",
+    "SCIARK",
+    "USELEC"
+]
+
+# ----------------------------------------------------------------------------
+# Output Structure
+# ----------------------------------------------------------------------------
+
+[output]
+base_dir = "experiments/dcq"
+
+# Directory structure:
+# experiments/dcq/
+#   phase1_perturbations/
+#     perturbations.jsonl
+#   phase2_bdq/
+#     {model_name}/
+#       bdq_results.jsonl
+#       bias_summary.json
+#   phase3_bcq/
+#     {model_name}/
+#       bcq_results.jsonl
+#       contamination_report.json

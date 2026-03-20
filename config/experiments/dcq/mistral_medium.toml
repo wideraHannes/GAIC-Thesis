@@ -1,0 +1,6 @@
+# DCQ Model Config: Mistral Medium
+
+[model]
+provider = "mistral"
+model = "mistral-medium-latest"
+temperature = 0
