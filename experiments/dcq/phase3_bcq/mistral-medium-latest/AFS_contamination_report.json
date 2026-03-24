@@ -1,0 +1,19 @@
+{
+  "model": "mistral-medium-latest",
+  "dataset": "AFS",
+  "non_preferred_positions": [
+    "A",
+    "B",
+    "C"
+  ],
+  "bcq_per_position": {
+    "A": 2,
+    "B": 16,
+    "C": 17
+  },
+  "total": 50,
+  "correct": 22,
+  "max_contamination": 34.0,
+  "min_contamination": 34.0,
+  "contamination_range": "[34.0%, 34.0%]"
+}

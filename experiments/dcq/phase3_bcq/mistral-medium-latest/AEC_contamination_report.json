@@ -1,0 +1,19 @@
+{
+  "model": "mistral-medium-latest",
+  "dataset": "AEC",
+  "non_preferred_positions": [
+    "A",
+    "B",
+    "C"
+  ],
+  "bcq_per_position": {
+    "A": 1,
+    "B": 16,
+    "C": 18
+  },
+  "total": 50,
+  "correct": 25,
+  "max_contamination": 36.0,
+  "min_contamination": 36.0,
+  "contamination_range": "[36.0%, 36.0%]"
+}
