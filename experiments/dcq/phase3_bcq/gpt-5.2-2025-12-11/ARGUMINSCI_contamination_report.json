@@ -1,0 +1,21 @@
+{
+  "model": "gpt-5.2-2025-12-11",
+  "dataset": "ARGUMINSCI",
+  "non_preferred_positions": [
+    "A",
+    "B",
+    "C",
+    "D"
+  ],
+  "bcq_per_position": {
+    "A": 7,
+    "B": 13,
+    "C": 15,
+    "D": 19
+  },
+  "total": 50,
+  "correct": 27,
+  "max_contamination": 38.0,
+  "min_contamination": 38.0,
+  "contamination_range": "[38.0%, 38.0%]"
+}

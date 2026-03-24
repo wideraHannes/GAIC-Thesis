@@ -444,11 +444,13 @@ def run_bdq(base_cfg: dict, model_cfg: dict):
 
                 # Get answer (raw text, as per original DCQ implementation)
                 try:
+                    # OpenAI uses max_completion_tokens, others use max_tokens
+                    token_param = "max_completion_tokens" if cfg["model"]["provider"] == "openai" else "max_tokens"
                     resp = client.chat.completions.create(
                         model=cfg["model"]["model"],
                         messages=[{"role": "user", "content": prompt}],
                         temperature=cfg["phase2"]["temperature"],
-                        max_tokens=cfg["phase2"]["max_tokens"],
+                        **{token_param: cfg["phase2"]["max_tokens"]},
                     )
 
                     raw_answer = (resp.choices[0].message.content or "").strip().upper()
@@ -617,11 +619,13 @@ def run_bcq(base_cfg: dict, model_cfg: dict):
 
                     # Get answer (raw text, as per original DCQ implementation)
                     try:
+                        # OpenAI uses max_completion_tokens, others use max_tokens
+                        token_param = "max_completion_tokens" if cfg["model"]["provider"] == "openai" else "max_tokens"
                         resp = client.chat.completions.create(
                             model=cfg["model"]["model"],
                             messages=[{"role": "user", "content": prompt}],
                             temperature=cfg["phase3"]["temperature"],
-                            max_tokens=cfg["phase3"]["max_tokens"],
+                            **{token_param: cfg["phase3"]["max_tokens"]},
                         )
 
                         raw_answer = (resp.choices[0].message.content or "").strip().upper()

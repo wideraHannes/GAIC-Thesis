@@ -1,0 +1,33 @@
+{
+  "model": "gpt-5.2-2025-12-11",
+  "total_samples": 100,
+  "random_chance_threshold": 20,
+  "position_frequencies": {
+    "B": {
+      "count": 3,
+      "percentage": 3.0
+    },
+    "D": {
+      "count": 9,
+      "percentage": 9.0
+    },
+    "C": {
+      "count": 3,
+      "percentage": 3.0
+    },
+    "E": {
+      "count": 81,
+      "percentage": 81.0
+    },
+    "A": {
+      "count": 4,
+      "percentage": 4.0
+    }
+  },
+  "non_preferred_positions": [
+    "A",
+    "B",
+    "C",
+    "D"
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "model": "gpt-5.2-2025-12-11",
+  "dataset": "AFS",
+  "non_preferred_positions": [
+    "A",
+    "B",
+    "C",
+    "D"
+  ],
+  "bcq_per_position": {
+    "A": 4,
+    "B": 8,
+    "C": 14,
+    "D": 22
+  },
+  "total": 50,
+  "correct": 27,
+  "max_contamination": 44.0,
+  "min_contamination": 44.0,
+  "contamination_range": "[44.0%, 44.0%]"
+}

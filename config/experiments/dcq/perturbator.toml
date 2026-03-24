@@ -29,7 +29,7 @@ max_retries = 3
 
 [phase2]
 temperature = 0
-max_tokens = 1
+max_tokens = 10
 samples_per_dataset = 10  # 10 per dataset = 100 total for bias detection
 output_dir = "bdq_results"
 
@@ -44,7 +44,7 @@ output_dir = "bdq_results"
 
 [phase3]
 temperature = 0
-max_tokens = 1
+max_tokens = 10
 bias_threshold = 0.20  # Positions < 20% are non-preferred
 output_dir = "bcq_results"
 
