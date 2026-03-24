@@ -671,11 +671,11 @@ def run_bcq(base_cfg: dict, model_cfg: dict):
         # Compute min/max contamination for this dataset using Cohen's κ
         total = len(results)
 
-        # Build triples: (position, bcq_correct_count, bdq_bias_count)
-        # Scale BDQ bias proportionally to this dataset's sample count
-        num_datasets = len(list(perturbations_dir.glob("*.jsonl")))
+        # Build triples: (position, bcq_correct_count, expected_bias_count)
+        # Scale BDQ bias rate to this dataset's sample count
+        bdq_total = bias_summary["total_samples"]
         triples = [
-            (pos, bcq_per_position[pos], bdq_position_counts.get(pos, 0) // num_datasets)
+            (pos, bcq_per_position[pos], (bdq_position_counts.get(pos, 0) / bdq_total) * total)
             for pos in non_preferred
         ]
         # Sort by BCQ correct count (descending), then by BDQ bias (ascending)

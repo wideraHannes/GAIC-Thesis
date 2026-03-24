@@ -1,10 +1,16 @@
+## KW 13
+
+-> finishing data contamination experiments
+-> Bringing it together with the other
+
 ## KW 12
 
 -> Our solution to marks problem is -> no training in RQ1 and 2
 -> Whats the most clever way to train this system without shortcut
-  -> Gollie Fine Tuning 
+-> Gollie Fine Tuning
 
 -> Data Contamination testing with the DCQ method by Golchin
+-> Need to finish it seems promising
 
 ## KW 11
 
