@@ -16,6 +16,6 @@
   "total": 50,
   "correct": 27,
   "max_contamination": 42.0,
-  "min_contamination": 42.0,
-  "contamination_range": "[42.0%, 42.0%]"
+  "min_contamination": 38.0,
+  "contamination_range": "[38.0%, 42.0%]"
 }
