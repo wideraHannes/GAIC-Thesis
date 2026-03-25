@@ -2,6 +2,7 @@
 
 -> finishing data contamination experiments
 -> Bringing it together with the other
+-> Whats now the best idea for Improving the system
 
 ## KW 12
 

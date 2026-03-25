@@ -1,0 +1,21 @@
+{
+  "model": "ministral-8b-latest",
+  "dataset": "USELEC",
+  "non_preferred_positions": [
+    "A",
+    "B",
+    "C",
+    "D"
+  ],
+  "bcq_per_position": {
+    "A": 0,
+    "B": 0,
+    "C": 13,
+    "D": 8
+  },
+  "total": 50,
+  "correct": 15,
+  "max_contamination": 26.0,
+  "min_contamination": 25.252525252525253,
+  "contamination_range": "[25.3%, 26.0%]"
+}

@@ -1,0 +1,21 @@
+{
+  "model": "ministral-8b-latest",
+  "dataset": "SCIARK",
+  "non_preferred_positions": [
+    "A",
+    "B",
+    "C",
+    "D"
+  ],
+  "bcq_per_position": {
+    "A": 0,
+    "B": 0,
+    "C": 7,
+    "D": 12
+  },
+  "total": 50,
+  "correct": 17,
+  "max_contamination": 24.0,
+  "min_contamination": 24.0,
+  "contamination_range": "[24.0%, 24.0%]"
+}

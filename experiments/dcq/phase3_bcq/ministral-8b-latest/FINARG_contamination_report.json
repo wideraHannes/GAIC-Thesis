@@ -1,0 +1,21 @@
+{
+  "model": "ministral-8b-latest",
+  "dataset": "FINARG",
+  "non_preferred_positions": [
+    "A",
+    "B",
+    "C",
+    "D"
+  ],
+  "bcq_per_position": {
+    "A": 1,
+    "B": 0,
+    "C": 16,
+    "D": 7
+  },
+  "total": 50,
+  "correct": 18,
+  "max_contamination": 32.0,
+  "min_contamination": 31.313131313131315,
+  "contamination_range": "[31.3%, 32.0%]"
+}

@@ -1,0 +1,21 @@
+{
+  "model": "ministral-8b-latest",
+  "total_samples": 100,
+  "random_chance_threshold": 20,
+  "position_frequencies": {
+    "E": {
+      "count": 99,
+      "percentage": 99.0
+    },
+    "C": {
+      "count": 1,
+      "percentage": 1.0
+    }
+  },
+  "non_preferred_positions": [
+    "A",
+    "B",
+    "C",
+    "D"
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "model": "ministral-8b-latest",
+  "dataset": "ACQUA",
+  "non_preferred_positions": [
+    "A",
+    "B",
+    "C",
+    "D"
+  ],
+  "bcq_per_position": {
+    "A": 0,
+    "B": 0,
+    "C": 3,
+    "D": 2
+  },
+  "total": 50,
+  "correct": 4,
+  "max_contamination": 6.0,
+  "min_contamination": 5.05050505050505,
+  "contamination_range": "[5.1%, 6.0%]"
+}
