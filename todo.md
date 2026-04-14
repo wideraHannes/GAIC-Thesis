@@ -1,3 +1,12 @@
+## KW 14
+
+-> Gollie Finetuning with varying defintions 4
+-> Start writing structuring of thesis
+-> Prepare Marc Donnerstag
+
+-> Start writing thesis try to interpret results first basic sections
+-> Start exploring finetuning via Gollie
+
 ## KW 13
 
 -> finishing data contamination experiments
