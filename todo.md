@@ -2,6 +2,7 @@
 
 --> Gollie Finetuning (cancled for now)
 --> Correct dataset citation in GAIC TASk chapter
+--> Experimented with Few Shot prompting -> No relevant results
 
 - Finish GAIC task chapter
 - continue with Results and background

@@ -22,7 +22,7 @@ This thesis tests that prediction. Across five models spanning 7B to frontier sc
 
 ## Methodology
 
-The thesis follows a three-part structure, each addressing a core research question:
+The thesis follows a two-part structure, each addressing a core research question:
 
 ### Part 1: Do Zero-Shot LLMs Rely on Argument Structure?
 
@@ -49,10 +49,6 @@ The GAIC task provides annotation guidelines, source documents, and paper refere
 | **Full** | Guidelines + document context (preceding sentences) |
 
 **Preliminary result:** Context effects range from +0.33 to -0.20 F1 depending on model and dataset. Context helps struggling models but can introduce noise when performance is already adequate. Context also reduces manipulation sensitivity, suggesting it provides an alternative reasoning channel.
-
-### Part 3: Does Fine-Tuning Reintroduce Shortcuts?
-
-Zero-shot decoders reach F1 ~ 0.63--0.65, below encoder in-distribution performance (0.79). Fine-tuning (LoRA) can close this gap -- but does it reintroduce the shortcut patterns that plague encoders?
 
 ## Models Under Test
 
