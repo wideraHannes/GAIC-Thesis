@@ -150,22 +150,32 @@ def load_document_context(dataset: str, sample_id: str) -> str:
     return ""
 
 
-def assemble_context(context: dict[str, str], document_context: str = "") -> str:
+def assemble_context(
+    context: dict[str, str],
+    document_context: str = "",
+    demonstrations: list[dict] | None = None,
+) -> str:
     """Format loaded context sources into a single string for the prompt.
 
     Uses templates from CONTEXT_SECTION_TEMPLATES with explicit ordering:
-    definition → guideline → document_context (most general to most specific).
+    definition → guideline → few_shot → document_context (most general to most specific).
     Falls back to c0_fallback when no context is provided.
     """
     parts = []
 
-    # Add context in explicit order (definition → guideline → document_context)
+    # Add context in explicit order
     for name in CONTEXT_ORDER:
         # Handle document_context specially (passed as separate argument)
         if name == "document_context":
             if document_context:
                 template = CONTEXT_SECTION_TEMPLATES[name]
                 parts.append(template.format(content=document_context))
+        # Handle few_shot specially (passed as separate argument)
+        elif name == "few_shot":
+            if demonstrations:
+                formatted = format_demonstrations(demonstrations)
+                template = CONTEXT_SECTION_TEMPLATES[name]
+                parts.append(template.format(content=formatted))
         elif name in context and context[name]:
             template = CONTEXT_SECTION_TEMPLATES[name]
             parts.append(template.format(content=context[name]))
@@ -174,7 +184,7 @@ def assemble_context(context: dict[str, str], document_context: str = "") -> str
     if not parts:
         parts.append(CONTEXT_SECTION_TEMPLATES["c0_fallback"])
     else:
-        # For c1-c3: add task section referencing the criteria above
+        # For c1-c3+: add task section referencing the criteria above
         parts.append(
             "## Task\nClassify whether the following sentence is an argument based on the criteria above."
         )
@@ -195,6 +205,56 @@ def sample_balanced(
     no_args = [s for s in samples if s[2] == "No-Argument"]
     k = n // 2
     return args[:k] + no_args[:k]
+
+
+# -- few-shot demonstrations --
+
+
+def load_train_data() -> tuple[dict[str, str], dict[str, str]]:
+    """Load train split for few-shot demonstrations."""
+    texts, labels = {}, {}
+    with open(GAIC_DATA_DIR / "train.jsonl") as f:
+        for line in f:
+            item = json.loads(line)
+            texts[item["id"]] = item["sentence"]
+    with open(GAIC_DATA_DIR / "train_labels.jsonl") as f:
+        for line in f:
+            item = json.loads(line)
+            labels[item["id"]] = item["label"]
+    return texts, labels
+
+
+def load_demonstrations(dataset: str, k: int) -> list[dict]:
+    """Load k positive + k negative = 2k total demos deterministically from train split.
+
+    Takes first k Argument and first k No-Argument samples (sorted by ID for reproducibility).
+    Returns interleaved list: [Arg, No-Arg, Arg, No-Arg, ...].
+    """
+    train_texts, train_labels = load_train_data()
+    dataset_ids = sorted(
+        [id_ for id_ in train_texts if dataset_from_id(id_) == dataset]
+    )
+
+    arg_ids = [id_ for id_ in dataset_ids if train_labels[id_] == "Argument"][:k]
+    noarg_ids = [id_ for id_ in dataset_ids if train_labels[id_] == "No-Argument"][:k]
+
+    # Interleave: Arg, No-Arg, Arg, No-Arg, ...
+    demos = []
+    for arg_id, noarg_id in zip(arg_ids, noarg_ids):
+        demos.append({"sentence": train_texts[arg_id], "label": "Argument"})
+        demos.append({"sentence": train_texts[noarg_id], "label": "No-Argument"})
+
+    return demos
+
+
+def format_demonstrations(demos: list[dict]) -> str:
+    """Format demos for injection into context."""
+    lines = []
+    for i, d in enumerate(demos, 1):
+        lines.append(
+            f'Example {i}:\nSentence: "{d["sentence"]}"\nLabel: {d["label"]}\n'
+        )
+    return "\n".join(lines)
 
 
 # -- manipulation --
@@ -246,10 +306,14 @@ The following sentences immediately precede the target sentence in the original 
 {content}
 
 Use this context to resolve ambiguity when the target sentence's meaning depends on preceding text.""",
+    "few_shot": """## Examples
+
+{content}""",
 }
 
 # Explicit ordering for context assembly (most general → most specific)
-CONTEXT_ORDER = ["definition", "guideline", "document_context"]
+# few_shot goes after guideline but before document_context
+CONTEXT_ORDER = ["definition", "guideline", "few_shot", "document_context"]
 
 
 # -- classification --
@@ -379,6 +443,14 @@ def run(config: dict, config_path: Path | None = None):
     use_reasoning = cfg_llm.get("reasoning", False)
     logger.info(f"Reasoning enabled: {use_reasoning}")
 
+    # few-shot config: k = number of positive AND negative examples (total = 2k)
+    fs_config = config.get("few_shot", {})
+    few_shot_k = fs_config.get("k", 0)
+    if few_shot_k > 0:
+        logger.info(
+            f"Few-shot enabled: k={few_shot_k} (total {2 * few_shot_k} examples)"
+        )
+
     client = make_client(cfg_llm)
     texts, labels = load_data()
 
@@ -394,6 +466,7 @@ def run(config: dict, config_path: Path | None = None):
         "sample_size": sample_size,
         "reasoning_enabled": use_reasoning,
         "context_sources": context_sources,
+        "few_shot_k": few_shot_k,
         "datasets": {},
     }
 
@@ -403,7 +476,16 @@ def run(config: dict, config_path: Path | None = None):
     for dataset in datasets:
         logger.info(f"--- {dataset} ---")
         context_parts = load_context(dataset, context_sources)
-        base_context_str = assemble_context(context_parts)
+
+        # Load few-shot demonstrations if enabled
+        demonstrations = []
+        if few_shot_k > 0:
+            demonstrations = load_demonstrations(dataset, few_shot_k)
+            logger.info(f"Loaded {len(demonstrations)} demonstrations for {dataset}")
+
+        base_context_str = assemble_context(
+            context_parts, demonstrations=demonstrations
+        )
         logger.info(f"Loaded context for {dataset}: {list(context_parts.keys())}")
         if use_doc_context:
             logger.info("Document context enabled (per-sample loading)")
@@ -413,7 +495,9 @@ def run(config: dict, config_path: Path | None = None):
         # (if doc context enabled, show example with first sample's context)
         if use_doc_context:
             example_doc_ctx = load_document_context(dataset, samples[0][0])
-            example_context = assemble_context(context_parts, example_doc_ctx)
+            example_context = assemble_context(
+                context_parts, example_doc_ctx, demonstrations
+            )
         else:
             example_context = base_context_str
         example_system = SYSTEM_PROMPT.format(context=example_context)
@@ -443,7 +527,9 @@ def run(config: dict, config_path: Path | None = None):
                     record["document_context"] = doc_context
 
                 # Assemble full context for this sample
-                full_context = assemble_context(context_parts, doc_context)
+                full_context = assemble_context(
+                    context_parts, doc_context, demonstrations
+                )
 
                 # fire all 3 manipulations in parallel
                 futures = {}
@@ -462,7 +548,8 @@ def run(config: dict, config_path: Path | None = None):
                 sample_records.append(record)
 
                 # Rate limit: 2 seconds per sample (3 requests) stays under 6 req/sec limit
-                time.sleep(2)
+
+                # time.sleep(2)
 
         # classification_report per variant
         reports = {}
@@ -478,7 +565,7 @@ def run(config: dict, config_path: Path | None = None):
             f1_manip = reports[name]["macro avg"]["f1-score"]
             deltas[f"delta_{name}"] = round(f1_manip - f1_original, 4)
 
-        results["datasets"][dataset] = {
+        dataset_result = {
             "n_samples": len(y_true),
             "reports": reports,
             "macro_f1_original": round(f1_original, 4),
@@ -489,6 +576,10 @@ def run(config: dict, config_path: Path | None = None):
             **deltas,
             "samples": sample_records,
         }
+        # Track demonstrations used for reproducibility
+        if demonstrations:
+            dataset_result["demonstrations"] = demonstrations
+        results["datasets"][dataset] = dataset_result
 
         logger.info(
             f"Macro-F1 original: {results['datasets'][dataset]['macro_f1_original']:.4f}"

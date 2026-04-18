@@ -1,0 +1,18 @@
+[experiment]
+experiment_name = "rq4_fewshot_k3"
+sample_size = 60
+output_dir = "experiments/rq4_fewshot/mistral_medium"
+
+[llm]
+provider = "mistral"
+model = "mistral-medium-latest"
+temperature = 0.0
+
+[context]
+sources = ["definition"]
+
+[few_shot]
+k = 3    # 3 positive + 3 negative = 6 total examples
+
+[datasets]
+enabled = ["IAM"]
