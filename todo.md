@@ -1,3 +1,11 @@
+## KW 15
+
+--> Gollie Finetuning (cancled for now)
+--> Correct dataset citation in GAIC TASk chapter
+
+- Finish GAIC task chapter
+- continue with Results and background
+
 ## KW 14
 
 -> Gollie Finetuning with varying defintions 4

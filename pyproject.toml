@@ -29,6 +29,7 @@ dependencies = [
     "trl>=0.14.0",
     "datasets>=3.1.0",
     "plotly>=6.6.0",
+    "chromadb>=1.0.0",
 ]
 [tool.setuptools]
 packages = ["gaic", "gaic.preprocessing", "gaic.finetuning", "config"]

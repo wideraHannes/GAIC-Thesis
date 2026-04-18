@@ -150,22 +150,32 @@ def load_document_context(dataset: str, sample_id: str) -> str:
     return ""
 
 
-def assemble_context(context: dict[str, str], document_context: str = "") -> str:
+def assemble_context(
+    context: dict[str, str],
+    document_context: str = "",
+    demonstrations: list[dict] | None = None,
+) -> str:
     """Format loaded context sources into a single string for the prompt.
 
     Uses templates from CONTEXT_SECTION_TEMPLATES with explicit ordering:
-    definition → guideline → document_context (most general to most specific).
+    definition → guideline → few_shot → document_context (most general to most specific).
     Falls back to c0_fallback when no context is provided.
     """
     parts = []
 
-    # Add context in explicit order (definition → guideline → document_context)
+    # Add context in explicit order
     for name in CONTEXT_ORDER:
         # Handle document_context specially (passed as separate argument)
         if name == "document_context":
             if document_context:
                 template = CONTEXT_SECTION_TEMPLATES[name]
                 parts.append(template.format(content=document_context))
+        # Handle few_shot specially (passed as separate argument)
+        elif name == "few_shot":
+            if demonstrations:
+                formatted = format_demonstrations(demonstrations)
+                template = CONTEXT_SECTION_TEMPLATES[name]
+                parts.append(template.format(content=formatted))
         elif name in context and context[name]:
             template = CONTEXT_SECTION_TEMPLATES[name]
             parts.append(template.format(content=context[name]))
@@ -174,7 +184,7 @@ def assemble_context(context: dict[str, str], document_context: str = "") -> str
     if not parts:
         parts.append(CONTEXT_SECTION_TEMPLATES["c0_fallback"])
     else:
-        # For c1-c3: add task section referencing the criteria above
+        # For c1-c3+: add task section referencing the criteria above
         parts.append(
             "## Task\nClassify whether the following sentence is an argument based on the criteria above."
         )
@@ -195,6 +205,87 @@ def sample_balanced(
     no_args = [s for s in samples if s[2] == "No-Argument"]
     k = n // 2
     return args[:k] + no_args[:k]
+
+
+# -- few-shot demonstrations --
+
+
+def load_train_data() -> tuple[dict[str, str], dict[str, str]]:
+    """Load train split for few-shot demonstrations."""
+    texts, labels = {}, {}
+    with open(GAIC_DATA_DIR / "train.jsonl") as f:
+        for line in f:
+            item = json.loads(line)
+            texts[item["id"]] = item["sentence"]
+    with open(GAIC_DATA_DIR / "train_labels.jsonl") as f:
+        for line in f:
+            item = json.loads(line)
+            labels[item["id"]] = item["label"]
+    return texts, labels
+
+
+def load_demonstrations(
+    dataset: str,
+    k: int,
+    strategy: str = "deterministic",
+    test_sentence: str = None,
+    collection=None,
+) -> list[dict]:
+    """Load demonstrations using specified strategy.
+
+    Strategies:
+    - "deterministic": First k Arg + first k No-Arg from dataset's train split
+    - "retrieval": Top-k most similar Arg + No-Arg from same dataset's train data
+
+    Returns 2k total demos, grouped by label.
+    """
+    if strategy == "retrieval":
+        from gaic.embeddings import get_collection, retrieve_similar_demos
+
+        if collection is None:
+            collection = get_collection()
+        return retrieve_similar_demos(test_sentence, k, collection, dataset=dataset)
+
+    # Default: deterministic
+    train_texts, train_labels = load_train_data()
+    dataset_ids = sorted(
+        [id_ for id_ in train_texts if dataset_from_id(id_) == dataset]
+    )
+
+    arg_ids = [id_ for id_ in dataset_ids if train_labels[id_] == "Argument"][:k]
+    noarg_ids = [id_ for id_ in dataset_ids if train_labels[id_] == "No-Argument"][:k]
+
+    # Interleave: Arg, No-Arg, Arg, No-Arg, ...
+    demos = []
+    for arg_id, noarg_id in zip(arg_ids, noarg_ids):
+        demos.append({"sentence": train_texts[arg_id], "label": "Argument"})
+        demos.append({"sentence": train_texts[noarg_id], "label": "No-Argument"})
+
+    return demos
+
+
+def format_demonstrations(demos: list[dict]) -> str:
+    """Format demos for injection into context, grouped by label."""
+    # Separate by label
+    args = [d for d in demos if d["label"] == "Argument"]
+    noargs = [d for d in demos if d["label"] == "No-Argument"]
+
+    lines = []
+
+    # Arguments section
+    if args:
+        lines.append("### Sentences that ARE Arguments:")
+        for i, d in enumerate(args, 1):
+            lines.append(f'{i}. "{d["sentence"]}"')
+        lines.append("")
+
+    # No-Arguments section
+    if noargs:
+        lines.append("### Sentences that are NOT Arguments:")
+        for i, d in enumerate(noargs, 1):
+            lines.append(f'{i}. "{d["sentence"]}"')
+
+    return "\n".join(lines)
 
 
 # -- manipulation --
@@ -246,10 +337,14 @@ The following sentences immediately precede the target sentence in the original 
 {content}
 
 Use this context to resolve ambiguity when the target sentence's meaning depends on preceding text.""",
+    "few_shot": """## Examples
+
+{content}""",
 }
 
 # Explicit ordering for context assembly (most general → most specific)
-CONTEXT_ORDER = ["definition", "guideline", "document_context"]
+# few_shot goes after guideline but before document_context
+CONTEXT_ORDER = ["definition", "guideline", "few_shot", "document_context"]
 
 
 # -- classification --
@@ -379,6 +474,22 @@ def run(config: dict, config_path: Path | None = None):
     use_reasoning = cfg_llm.get("reasoning", False)
     logger.info(f"Reasoning enabled: {use_reasoning}")
 
+    # few-shot config: k = number of positive AND negative examples (total = 2k)
+    fs_config = config.get("few_shot", {})
+    few_shot_k = fs_config.get("k", 0)
+    few_shot_strategy = fs_config.get("strategy", "deterministic")
+    if few_shot_k > 0:
+        logger.info(
+            f"Few-shot enabled: k={few_shot_k} (total {2 * few_shot_k} examples), strategy={few_shot_strategy}"
+        )
+
+    # Load ChromaDB collection once if using retrieval strategy
+    chroma_collection = None
+    if few_shot_k > 0 and few_shot_strategy == "retrieval":
+        from gaic.embeddings import get_collection
+        chroma_collection = get_collection()
+        logger.info("Loaded ChromaDB collection for retrieval")
+
     client = make_client(cfg_llm)
     texts, labels = load_data()
 
@@ -394,6 +505,8 @@ def run(config: dict, config_path: Path | None = None):
         "sample_size": sample_size,
         "reasoning_enabled": use_reasoning,
         "context_sources": context_sources,
+        "few_shot_k": few_shot_k,
+        "few_shot_strategy": few_shot_strategy,
         "datasets": {},
     }
 
@@ -403,19 +516,39 @@ def run(config: dict, config_path: Path | None = None):
     for dataset in datasets:
         logger.info(f"--- {dataset} ---")
         context_parts = load_context(dataset, context_sources)
-        base_context_str = assemble_context(context_parts)
+
+        # Load few-shot demonstrations if enabled (deterministic: once per dataset)
+        demonstrations = []
+        if few_shot_k > 0 and few_shot_strategy == "deterministic":
+            demonstrations = load_demonstrations(dataset, few_shot_k, strategy="deterministic")
+            logger.info(f"Loaded {len(demonstrations)} demonstrations for {dataset}")
+
+        base_context_str = assemble_context(
+            context_parts, demonstrations=demonstrations
+        )
         logger.info(f"Loaded context for {dataset}: {list(context_parts.keys())}")
         if use_doc_context:
             logger.info("Document context enabled (per-sample loading)")
+        if few_shot_strategy == "retrieval":
+            logger.info("Retrieval strategy: demos will be loaded per-sample")
         samples = sample_balanced(texts, labels, dataset, sample_size)
 
         # show prompt once so you can sanity-check
         # (if doc context enabled, show example with first sample's context)
+        # For retrieval, get example demos for first sample
+        example_demos = demonstrations
+        if few_shot_k > 0 and few_shot_strategy == "retrieval":
+            example_demos = load_demonstrations(
+                dataset, few_shot_k, strategy="retrieval",
+                test_sentence=samples[0][1], collection=chroma_collection
+            )
         if use_doc_context:
             example_doc_ctx = load_document_context(dataset, samples[0][0])
-            example_context = assemble_context(context_parts, example_doc_ctx)
+            example_context = assemble_context(
+                context_parts, example_doc_ctx, example_demos
+            )
         else:
-            example_context = base_context_str
+            example_context = assemble_context(context_parts, demonstrations=example_demos)
         example_system = SYSTEM_PROMPT.format(context=example_context)
         example_user = USER_PROMPT.format(sentence=samples[0][1])
         logger.info(f"[SYSTEM]\n{example_system}")
@@ -442,8 +575,18 @@ def run(config: dict, config_path: Path | None = None):
                     doc_context = load_document_context(dataset, sample_id)
                     record["document_context"] = doc_context
 
+                # Load demonstrations (per-sample for retrieval, reuse for deterministic)
+                sample_demos = demonstrations
+                if few_shot_k > 0 and few_shot_strategy == "retrieval":
+                    sample_demos = load_demonstrations(
+                        dataset, few_shot_k, strategy="retrieval",
+                        test_sentence=sentence, collection=chroma_collection
+                    )
+
                 # Assemble full context for this sample
-                full_context = assemble_context(context_parts, doc_context)
+                full_context = assemble_context(
+                    context_parts, doc_context, sample_demos
+                )
 
                 # fire all 3 manipulations in parallel
                 futures = {}
@@ -462,7 +605,8 @@ def run(config: dict, config_path: Path | None = None):
                 sample_records.append(record)
 
                 # Rate limit: 2 seconds per sample (3 requests) stays under 6 req/sec limit
-                time.sleep(2)
+
+                # time.sleep(2)
 
         # classification_report per variant
         reports = {}
@@ -478,7 +622,7 @@ def run(config: dict, config_path: Path | None = None):
             f1_manip = reports[name]["macro avg"]["f1-score"]
             deltas[f"delta_{name}"] = round(f1_manip - f1_original, 4)
 
-        results["datasets"][dataset] = {
+        dataset_result = {
             "n_samples": len(y_true),
             "reports": reports,
             "macro_f1_original": round(f1_original, 4),
@@ -489,6 +633,10 @@ def run(config: dict, config_path: Path | None = None):
             **deltas,
             "samples": sample_records,
         }
+        # Track demonstrations used for reproducibility
+        if demonstrations:
+            dataset_result["demonstrations"] = demonstrations
+        results["datasets"][dataset] = dataset_result
 
         logger.info(
             f"Macro-F1 original: {results['datasets'][dataset]['macro_f1_original']:.4f}"
