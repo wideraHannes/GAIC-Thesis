@@ -224,12 +224,29 @@ def load_train_data() -> tuple[dict[str, str], dict[str, str]]:
     return texts, labels
 
 
-def load_demonstrations(dataset: str, k: int) -> list[dict]:
-    """Load k positive + k negative = 2k total demos deterministically from train split.
+def load_demonstrations(
+    dataset: str,
+    k: int,
+    strategy: str = "deterministic",
+    test_sentence: str = None,
+    collection=None,
+) -> list[dict]:
+    """Load demonstrations using specified strategy.
 
-    Takes first k Argument and first k No-Argument samples (sorted by ID for reproducibility).
-    Returns interleaved list: [Arg, No-Arg, Arg, No-Arg, ...].
+    Strategies:
+    - "deterministic": First k Arg + first k No-Arg from dataset's train split
+    - "retrieval": Top-k most similar Arg + No-Arg from same dataset's train data
+
+    Returns 2k total demos, grouped by label.
     """
+    if strategy == "retrieval":
+        from gaic.embeddings import get_collection, retrieve_similar_demos
+
+        if collection is None:
+            collection = get_collection()
+        return retrieve_similar_demos(test_sentence, k, collection, dataset=dataset)
+
+    # Default: deterministic
     train_texts, train_labels = load_train_data()
     dataset_ids = sorted(
         [id_ for id_ in train_texts if dataset_from_id(id_) == dataset]
@@ -248,12 +265,26 @@ def load_demonstrations(dataset: str, k: int) -> list[dict]:
 
 
 def format_demonstrations(demos: list[dict]) -> str:
-    """Format demos for injection into context."""
+    """Format demos for injection into context, grouped by label."""
+    # Separate by label
+    args = [d for d in demos if d["label"] == "Argument"]
+    noargs = [d for d in demos if d["label"] == "No-Argument"]
+
     lines = []
-    for i, d in enumerate(demos, 1):
-        lines.append(
-            f'Example {i}:\nSentence: "{d["sentence"]}"\nLabel: {d["label"]}\n'
-        )
+
+    # Arguments section
+    if args:
+        lines.append("### Sentences that ARE Arguments:")
+        for i, d in enumerate(args, 1):
+            lines.append(f'{i}. "{d["sentence"]}"')
+        lines.append("")
+
+    # No-Arguments section
+    if noargs:
+        lines.append("### Sentences that are NOT Arguments:")
+        for i, d in enumerate(noargs, 1):
+            lines.append(f'{i}. "{d["sentence"]}"')
+
     return "\n".join(lines)
 
 
@@ -446,10 +477,18 @@ def run(config: dict, config_path: Path | None = None):
     # few-shot config: k = number of positive AND negative examples (total = 2k)
     fs_config = config.get("few_shot", {})
     few_shot_k = fs_config.get("k", 0)
+    few_shot_strategy = fs_config.get("strategy", "deterministic")
     if few_shot_k > 0:
         logger.info(
-            f"Few-shot enabled: k={few_shot_k} (total {2 * few_shot_k} examples)"
+            f"Few-shot enabled: k={few_shot_k} (total {2 * few_shot_k} examples), strategy={few_shot_strategy}"
         )
+
+    # Load ChromaDB collection once if using retrieval strategy
+    chroma_collection = None
+    if few_shot_k > 0 and few_shot_strategy == "retrieval":
+        from gaic.embeddings import get_collection
+        chroma_collection = get_collection()
+        logger.info("Loaded ChromaDB collection for retrieval")
 
     client = make_client(cfg_llm)
     texts, labels = load_data()
@@ -467,6 +506,7 @@ def run(config: dict, config_path: Path | None = None):
         "reasoning_enabled": use_reasoning,
         "context_sources": context_sources,
         "few_shot_k": few_shot_k,
+        "few_shot_strategy": few_shot_strategy,
         "datasets": {},
     }
 
@@ -477,10 +517,10 @@ def run(config: dict, config_path: Path | None = None):
         logger.info(f"--- {dataset} ---")
         context_parts = load_context(dataset, context_sources)
 
-        # Load few-shot demonstrations if enabled
+        # Load few-shot demonstrations if enabled (deterministic: once per dataset)
         demonstrations = []
-        if few_shot_k > 0:
-            demonstrations = load_demonstrations(dataset, few_shot_k)
+        if few_shot_k > 0 and few_shot_strategy == "deterministic":
+            demonstrations = load_demonstrations(dataset, few_shot_k, strategy="deterministic")
             logger.info(f"Loaded {len(demonstrations)} demonstrations for {dataset}")
 
         base_context_str = assemble_context(
@@ -489,17 +529,26 @@ def run(config: dict, config_path: Path | None = None):
         logger.info(f"Loaded context for {dataset}: {list(context_parts.keys())}")
         if use_doc_context:
             logger.info("Document context enabled (per-sample loading)")
+        if few_shot_strategy == "retrieval":
+            logger.info("Retrieval strategy: demos will be loaded per-sample")
         samples = sample_balanced(texts, labels, dataset, sample_size)
 
         # show prompt once so you can sanity-check
         # (if doc context enabled, show example with first sample's context)
+        # For retrieval, get example demos for first sample
+        example_demos = demonstrations
+        if few_shot_k > 0 and few_shot_strategy == "retrieval":
+            example_demos = load_demonstrations(
+                dataset, few_shot_k, strategy="retrieval",
+                test_sentence=samples[0][1], collection=chroma_collection
+            )
         if use_doc_context:
             example_doc_ctx = load_document_context(dataset, samples[0][0])
             example_context = assemble_context(
-                context_parts, example_doc_ctx, demonstrations
+                context_parts, example_doc_ctx, example_demos
             )
         else:
-            example_context = base_context_str
+            example_context = assemble_context(context_parts, demonstrations=example_demos)
         example_system = SYSTEM_PROMPT.format(context=example_context)
         example_user = USER_PROMPT.format(sentence=samples[0][1])
         logger.info(f"[SYSTEM]\n{example_system}")
@@ -526,9 +575,17 @@ def run(config: dict, config_path: Path | None = None):
                     doc_context = load_document_context(dataset, sample_id)
                     record["document_context"] = doc_context
 
+                # Load demonstrations (per-sample for retrieval, reuse for deterministic)
+                sample_demos = demonstrations
+                if few_shot_k > 0 and few_shot_strategy == "retrieval":
+                    sample_demos = load_demonstrations(
+                        dataset, few_shot_k, strategy="retrieval",
+                        test_sentence=sentence, collection=chroma_collection
+                    )
+
                 # Assemble full context for this sample
                 full_context = assemble_context(
-                    context_parts, doc_context, demonstrations
+                    context_parts, doc_context, sample_demos
                 )
 
                 # fire all 3 manipulations in parallel
