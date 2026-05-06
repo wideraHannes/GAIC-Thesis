@@ -487,6 +487,7 @@ def run(config: dict, config_path: Path | None = None):
     chroma_collection = None
     if few_shot_k > 0 and few_shot_strategy == "retrieval":
         from gaic.embeddings import get_collection
+
         chroma_collection = get_collection()
         logger.info("Loaded ChromaDB collection for retrieval")
 
@@ -520,7 +521,9 @@ def run(config: dict, config_path: Path | None = None):
         # Load few-shot demonstrations if enabled (deterministic: once per dataset)
         demonstrations = []
         if few_shot_k > 0 and few_shot_strategy == "deterministic":
-            demonstrations = load_demonstrations(dataset, few_shot_k, strategy="deterministic")
+            demonstrations = load_demonstrations(
+                dataset, few_shot_k, strategy="deterministic"
+            )
             logger.info(f"Loaded {len(demonstrations)} demonstrations for {dataset}")
 
         base_context_str = assemble_context(
@@ -539,8 +542,11 @@ def run(config: dict, config_path: Path | None = None):
         example_demos = demonstrations
         if few_shot_k > 0 and few_shot_strategy == "retrieval":
             example_demos = load_demonstrations(
-                dataset, few_shot_k, strategy="retrieval",
-                test_sentence=samples[0][1], collection=chroma_collection
+                dataset,
+                few_shot_k,
+                strategy="retrieval",
+                test_sentence=samples[0][1],
+                collection=chroma_collection,
             )
         if use_doc_context:
             example_doc_ctx = load_document_context(dataset, samples[0][0])
@@ -548,7 +554,9 @@ def run(config: dict, config_path: Path | None = None):
                 context_parts, example_doc_ctx, example_demos
             )
         else:
-            example_context = assemble_context(context_parts, demonstrations=example_demos)
+            example_context = assemble_context(
+                context_parts, demonstrations=example_demos
+            )
         example_system = SYSTEM_PROMPT.format(context=example_context)
         example_user = USER_PROMPT.format(sentence=samples[0][1])
         logger.info(f"[SYSTEM]\n{example_system}")
@@ -579,8 +587,11 @@ def run(config: dict, config_path: Path | None = None):
                 sample_demos = demonstrations
                 if few_shot_k > 0 and few_shot_strategy == "retrieval":
                     sample_demos = load_demonstrations(
-                        dataset, few_shot_k, strategy="retrieval",
-                        test_sentence=sentence, collection=chroma_collection
+                        dataset,
+                        few_shot_k,
+                        strategy="retrieval",
+                        test_sentence=sentence,
+                        collection=chroma_collection,
                     )
 
                 # Assemble full context for this sample
@@ -606,7 +617,7 @@ def run(config: dict, config_path: Path | None = None):
 
                 # Rate limit: 2 seconds per sample (3 requests) stays under 6 req/sec limit
 
-                # time.sleep(2)
+                time.sleep(2)
 
         # classification_report per variant
         reports = {}

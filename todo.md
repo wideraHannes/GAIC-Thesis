@@ -1,3 +1,18 @@
+
+## KW 18
+
+- Add new AEC zu tables?
+  - We need to run it with the other models
+- Add KNN to Baseline Comparison
+- Write the Text for the results
+- Integrate formalizing task and Methodology 
+- Zugfahrt:
+  - Read fegers thesis (done)
+
+## KW 16
+
+--> MAYBE Experiment with Longer context from 2 -> 6 sentences prior?
+
 ## KW 15
 
 --> Gollie Finetuning (cancled for now)
