@@ -1,0 +1,13 @@
+# GAIC Submission Configuration
+
+[llm]
+provider = "openai"
+model = "gpt-5.2-2025-12-11"
+temperature = 0.0
+reasoning = false
+
+[submission]
+context_strategy = "dynamic"  # c0, c1, or dynamic
+input_file = "dev.jsonl"     # test.jsonl or dev.jsonl for validation
+output_dir = "submissions/gpt5.2_dynamic"
+max_workers = 8              # parallel API calls

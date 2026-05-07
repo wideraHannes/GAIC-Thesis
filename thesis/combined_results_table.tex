@@ -1,0 +1,29 @@
+\begin{table}[ht]
+\centering
+\caption{Comparison of argument identification approaches on the GAIC benchmark.
+SOTA represents in-distribution supervised performance (upper bound).
+Encoder shows the best cross-dataset transfer result from \citet{Feger2025-kz}.
+KNN uses $k$-nearest neighbor retrieval ($k=50$).
+LLM is our zero-shot decoder-based approach evaluated on the dev set.
+Best zero-shot method per row in \textbf{bold}.}
+\label{tab:combined_results}
+\begin{tabular}{lcccc}
+\toprule
+\textbf{Dataset} & \textbf{SOTA} & \textbf{Encoder} & \textbf{KNN} & \textbf{LLM} \\
+                 & \textit{(upper bound)} & \textit{(cross-dataset)} & \textit{($k$=50)} & \textit{(zero-shot)} \\
+\midrule
+ABSTRCT     & 0.89 & 0.74          & 0.87          & \textbf{0.89} \\
+ACQUA       & 0.84 & 0.66          & 0.66          & \textbf{0.82} \\
+AEC         & 0.96 & 0.57          & 0.60          & \textbf{0.93} \\
+AFS         & 0.84 & 0.60          & \textbf{0.76} & 0.71 \\
+ARGUMINSCI  & 0.84 & 0.59          & 0.69          & \textbf{0.77} \\
+FINARG      & 0.68 & \textbf{0.66} & 0.61          & 0.55 \\
+IAM         & 0.76 & \textbf{0.73} & 0.60          & 0.71 \\
+PE          & 0.78 & \textbf{0.69} & 0.57          & 0.55 \\
+SCIARK      & 0.83 & \textbf{0.75} & 0.71          & 0.70 \\
+USELEC      & 0.74 & \textbf{0.70} & \textbf{0.70} & 0.58 \\
+\midrule
+\textbf{Mean} & 0.82 & 0.65 & 0.68 & \textbf{0.73} \\
+\bottomrule
+\end{tabular}
+\end{table}

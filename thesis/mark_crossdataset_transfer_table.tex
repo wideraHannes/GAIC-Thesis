@@ -1,0 +1,27 @@
+\begin{table}[ht]
+\centering
+\caption{Cross-dataset transfer results from \citet{Feger2025-kz} on the 10 
+GAIC benchmark datasets. Each encoder model is trained on all datasets except 
+the target and evaluated zero-shot on the held-out target. The SOTA column 
+reports in-distribution state-of-the-art performance trained directly on the 
+target dataset, included here as an upper bound. Best per row in \textbf{bold}.}
+\label{tab:feger_baselines}
+\begin{tabular}{lccccc}
+\toprule
+\textbf{Dataset} & \textbf{WRAP} & \textbf{BERT} & \textbf{RoBERTa} & \textbf{DistilBERT} & \textbf{SOTA} \\
+\midrule
+ABSTRCT     & \textbf{0.74} & \textbf{0.74} & \textbf{0.74} & 0.71          & 0.89 \\
+ACQUA       & \textbf{0.66} & 0.60          & 0.59          & 0.59          & 0.84 \\
+AEC         & 0.52          & \textbf{0.57} & 0.51          & 0.56          & 0.96 \\
+AFS         & 0.57          & 0.58          & 0.59          & \textbf{0.60} & 0.84 \\
+ARGUMINSCI  & \textbf{0.59} & 0.47          & 0.55          & 0.50          & 0.84 \\
+FINARG      & 0.61          & 0.62          & \textbf{0.66} & 0.65          & 0.68 \\
+IAM         & \textbf{0.73} & 0.71          & \textbf{0.73} & \textbf{0.73} & 0.76 \\
+PE          & 0.65          & 0.65          & \textbf{0.69} & 0.65          & 0.78 \\
+SCIARK      & \textbf{0.75} & 0.73          & 0.74          & 0.73          & 0.83 \\
+USELEC      & \textbf{0.70} & 0.66          & 0.68          & 0.59          & 0.74 \\
+\midrule
+\textbf{Mean} & \textbf{0.652} & 0.633 & 0.648 & 0.631 & 0.816 \\
+\bottomrule
+\end{tabular}
+\end{table}
