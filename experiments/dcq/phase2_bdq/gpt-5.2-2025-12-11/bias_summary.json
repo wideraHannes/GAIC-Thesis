@@ -1,27 +1,23 @@
 {
   "model": "gpt-5.2-2025-12-11",
-  "total_samples": 100,
-  "random_chance_threshold": 20,
+  "total_samples": 110,
+  "random_chance_threshold": 22,
   "position_frequencies": {
-    "B": {
-      "count": 3,
-      "percentage": 3.0
+    "E": {
+      "count": 99,
+      "percentage": 90.0
     },
     "D": {
-      "count": 9,
-      "percentage": 9.0
+      "count": 7,
+      "percentage": 6.363636363636363
     },
     "C": {
       "count": 3,
-      "percentage": 3.0
+      "percentage": 2.727272727272727
     },
-    "E": {
-      "count": 81,
-      "percentage": 81.0
-    },
-    "A": {
-      "count": 4,
-      "percentage": 4.0
+    "B": {
+      "count": 1,
+      "percentage": 0.9090909090909091
     }
   },
   "non_preferred_positions": [

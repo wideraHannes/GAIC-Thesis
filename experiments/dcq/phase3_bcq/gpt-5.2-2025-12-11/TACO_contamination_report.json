@@ -1,0 +1,21 @@
+{
+  "model": "gpt-5.2-2025-12-11",
+  "dataset": "TACO",
+  "non_preferred_positions": [
+    "A",
+    "B",
+    "C",
+    "D"
+  ],
+  "bcq_per_position": {
+    "A": 5,
+    "B": 6,
+    "C": 7,
+    "D": 12
+  },
+  "total": 50,
+  "correct": 14,
+  "max_contamination": 24.0,
+  "min_contamination": 18.834951456310677,
+  "contamination_range": "[18.8%, 24.0%]"
+}

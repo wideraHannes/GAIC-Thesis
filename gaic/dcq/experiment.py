@@ -207,13 +207,59 @@ def load_dev_data(datasets: list[str]) -> dict:
     return data
 
 
+def load_test_data(datasets: list[str]) -> dict:
+    """Load test.jsonl and filter by enabled datasets (no labels)."""
+    data = {}
+    with open(GAIC_DATA_DIR / "test.jsonl") as f:
+        for line in f:
+            sample = json.loads(line)
+            sample_id = sample["id"]
+            # Extract dataset from id (e.g., "TACO-test-1" -> "TACO")
+            dataset = sample_id.split("-")[0]
+
+            if dataset in datasets:
+                if dataset not in data:
+                    data[dataset] = []
+                # Normalize to expected format (no labels for test)
+                data[dataset].append({
+                    "ID": sample_id,
+                    "Dataset": dataset,
+                    "Sentence": sample["sentence"],
+                    "Label": "Unknown",
+                })
+    return data
+
+
+def load_data(datasets: list[str], split: str = "dev") -> dict:
+    """Load data from specified split, trying test.jsonl for missing datasets."""
+    if split == "dev":
+        data = load_data(datasets, split=base_cfg["sampling"].get("split", "dev"))
+        # Check for datasets not found in dev, try test
+        missing = [d for d in datasets if d not in data]
+        if missing:
+            logger.info(f"Datasets {missing} not in dev.jsonl, checking test.jsonl")
+            test_data = load_test_data(missing)
+            data.update(test_data)
+    elif split == "test":
+        data = load_test_data(datasets)
+    else:
+        raise ValueError(f"Unknown split: {split}")
+    return data
+
+
 def sample_balanced(samples: list[dict], n: int) -> list[dict]:
-    """Sample n samples with balanced Argument/No-Argument split."""
+    """Sample n samples with balanced Argument/No-Argument split (or random if no labels)."""
     args = [s for s in samples if s["Label"] == "Argument"]
     no_args = [s for s in samples if s["Label"] == "No-Argument"]
 
-    per_class = n // 2
     random.seed(42)
+
+    # If no labeled samples, sample randomly
+    if not args and not no_args:
+        logger.info(f"No labeled samples, sampling {n} randomly")
+        return random.sample(samples, min(n, len(samples)))
+
+    per_class = n // 2
     selected = random.sample(args, min(per_class, len(args))) + random.sample(
         no_args, min(per_class, len(no_args))
     )
@@ -239,7 +285,7 @@ def generate_perturbations(base_cfg: dict):
 
     # Load data
     datasets = base_cfg["datasets"]["enabled"]
-    data = load_dev_data(datasets)
+    data = load_data(datasets, split=base_cfg["sampling"].get("split", "dev"))
 
     # Setup client
     client = make_client(base_cfg["phase1"])
@@ -260,41 +306,21 @@ def generate_perturbations(base_cfg: dict):
             logger.info(f"Skipping {dataset} - {output_file} already exists")
             continue
 
-        # Get all samples, balanced by class
+        # Get samples - balanced by class if labeled, random otherwise
         all_samples = data[dataset]
-        args = [s for s in all_samples if s["Label"] == "Argument"]
-        no_args = [s for s in all_samples if s["Label"] == "No-Argument"]
+        samples_to_process = sample_balanced(all_samples, target_count)
         random.seed(42)
-        random.shuffle(args)
-        random.shuffle(no_args)
+        random.shuffle(samples_to_process)
 
-        logger.info(f"Generating perturbations for {dataset}: target {target_count} samples")
+        logger.info(f"Generating perturbations for {dataset}: target {target_count} samples, have {len(samples_to_process)}")
 
         results = []
-        arg_idx, no_arg_idx = 0, 0
-        per_class = target_count // 2
+        sample_idx = 0
 
-        with tqdm(total=target_count, desc=f"  {dataset}") as pbar:
-            while len(results) < target_count:
-                # Pick next sample, alternating classes to maintain balance
-                arg_count = sum(1 for r in results if r["label"] == "Argument")
-                no_arg_count = len(results) - arg_count
-
-                if arg_count < per_class and arg_idx < len(args):
-                    sample = args[arg_idx]
-                    arg_idx += 1
-                elif no_arg_count < per_class and no_arg_idx < len(no_args):
-                    sample = no_args[no_arg_idx]
-                    no_arg_idx += 1
-                elif arg_idx < len(args):
-                    sample = args[arg_idx]
-                    arg_idx += 1
-                elif no_arg_idx < len(no_args):
-                    sample = no_args[no_arg_idx]
-                    no_arg_idx += 1
-                else:
-                    logger.warning(f"Exhausted samples for {dataset}, got {len(results)}/{target_count}")
-                    break
+        with tqdm(total=min(target_count, len(samples_to_process)), desc=f"  {dataset}") as pbar:
+            while len(results) < target_count and sample_idx < len(samples_to_process):
+                sample = samples_to_process[sample_idx]
+                sample_idx += 1
 
                 sentence = sample["Sentence"]
                 success = False
