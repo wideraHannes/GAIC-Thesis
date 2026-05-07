@@ -9,20 +9,23 @@
 \toprule
 \textbf{Model} & \textbf{Ctx} & \textbf{ABSTRCT} & \textbf{ACQUA} & \textbf{AEC} & \textbf{AFS} & \textbf{ARGUMINSCI} & \textbf{FINARG} & \textbf{IAM} & \textbf{PE} & \textbf{SCIARK} & \textbf{USELEC} & \textbf{Avg} \\
 \midrule
-gpt\_5\_2\_openai & c0 & \cellcolor{yellow!30}0.692 & \cellcolor{yellow!30}0.618 & \cellcolor{yellow!30}\textbf{0.562} & \cellcolor{yellow!30}0.569 & \cellcolor{orange!30}0.524 & \cellcolor{orange!30}0.405 & \cellcolor{yellow!30}0.563 & \cellcolor{yellow!30}0.666 & \cellcolor{yellow!30}0.601 & \cellcolor{orange!30}0.472 & \cellcolor{yellow!30}0.567 \\
- & c1 & \cellcolor{yellow!30}0.663 & \cellcolor{green!20}0.749 & \cellcolor{orange!30}0.498 & \cellcolor{green!20}\textbf{0.767} & \cellcolor{green!40}\textbf{0.917} & \cellcolor{orange!30}0.438 & \cellcolor{green!20}0.764 & \cellcolor{yellow!30}0.600 & \cellcolor{green!20}0.717 & \cellcolor{yellow!30}0.630 & \cellcolor{yellow!30}0.674 \\
+gpt\_5\_2\_openai & c0 & \cellcolor{yellow!30}0.692 & \cellcolor{yellow!30}0.618 & \cellcolor{yellow!30}0.562 & \cellcolor{yellow!30}0.569 & \cellcolor{orange!30}0.524 & \cellcolor{orange!30}0.405 & \cellcolor{yellow!30}0.563 & \cellcolor{yellow!30}0.666 & \cellcolor{yellow!30}0.601 & \cellcolor{orange!30}0.472 & \cellcolor{yellow!30}0.567 \\
+ & c1 & \cellcolor{yellow!30}0.663 & \cellcolor{green!20}0.749 & \cellcolor{green!40}\textbf{0.967} & \cellcolor{green!20}\textbf{0.767} & \cellcolor{green!40}\textbf{0.917} & \cellcolor{orange!30}0.438 & \cellcolor{green!20}0.764 & \cellcolor{yellow!30}0.600 & \cellcolor{green!20}0.717 & \cellcolor{yellow!30}0.630 & \cellcolor{green!20}0.721 \\
  & c2 & \cellcolor{green!40}0.883 & -- & -- & -- & \cellcolor{green!40}0.883 & -- & -- & \cellcolor{yellow!30}0.583 & -- & \cellcolor{yellow!30}0.649 & \cellcolor{green!20}0.750 \\
  & c3 & \cellcolor{green!40}0.917 & -- & -- & -- & \cellcolor{green!20}0.847 & -- & -- & \cellcolor{orange!30}0.524 & -- & \cellcolor{green!20}\textbf{0.738} & \cellcolor{green!20}\textbf{0.757} \\
+ & c3_no_guideline & -- & -- & -- & -- & -- & \cellcolor{orange!30}0.540 & -- & -- & \cellcolor{green!20}0.748 & -- & \cellcolor{yellow!30}0.644 \\
 \midrule
 ministral\_8b & c0 & \cellcolor{green!20}0.738 & \cellcolor{green!20}0.748 & \cellcolor{orange!30}0.451 & \cellcolor{orange!30}0.514 & \cellcolor{orange!30}0.496 & \cellcolor{orange!30}0.426 & \cellcolor{green!20}0.764 & \cellcolor{yellow!30}0.676 & \cellcolor{green!20}0.729 & \cellcolor{orange!30}0.520 & \cellcolor{yellow!30}0.606 \\
- & c1 & \cellcolor{green!20}0.833 & \cellcolor{green!20}0.744 & \cellcolor{orange!30}0.498 & \cellcolor{yellow!30}0.699 & \cellcolor{green!20}0.733 & \cellcolor{orange!30}0.542 & \cellcolor{yellow!30}0.681 & \cellcolor{yellow!30}\textbf{0.697} & \cellcolor{yellow!30}0.633 & \cellcolor{yellow!30}0.580 & \cellcolor{yellow!30}0.664 \\
+ & c1 & \cellcolor{green!20}0.833 & \cellcolor{green!20}0.744 & \cellcolor{green!40}0.950 & \cellcolor{yellow!30}0.699 & \cellcolor{green!20}0.733 & \cellcolor{orange!30}0.542 & \cellcolor{yellow!30}0.681 & \cellcolor{yellow!30}\textbf{0.697} & \cellcolor{yellow!30}0.633 & \cellcolor{yellow!30}0.580 & \cellcolor{green!20}0.709 \\
  & c2 & \cellcolor{green!40}\textbf{0.950} & -- & -- & -- & \cellcolor{yellow!30}0.668 & -- & -- & \cellcolor{yellow!30}0.603 & -- & \cellcolor{yellow!30}0.679 & \cellcolor{green!20}0.725 \\
  & c3 & \cellcolor{green!40}0.900 & -- & -- & -- & \cellcolor{green!20}0.733 & -- & -- & \cellcolor{orange!30}0.474 & -- & \cellcolor{yellow!30}0.619 & \cellcolor{yellow!30}0.682 \\
+ & c3_no_guideline & -- & -- & -- & -- & -- & \cellcolor{yellow!30}0.563 & -- & -- & \cellcolor{yellow!30}0.619 & -- & \cellcolor{yellow!30}0.591 \\
 \midrule
 mistral\_medium & c0 & \cellcolor{green!20}0.764 & \cellcolor{green!20}0.732 & \cellcolor{orange!30}0.444 & \cellcolor{orange!30}0.451 & \cellcolor{yellow!30}0.576 & \cellcolor{red!30}0.365 & \cellcolor{yellow!30}0.661 & \cellcolor{yellow!30}0.641 & \cellcolor{green!40}\textbf{0.867} & \cellcolor{yellow!30}0.562 & \cellcolor{yellow!30}0.606 \\
- & c1 & \cellcolor{green!40}0.900 & \cellcolor{green!20}\textbf{0.764} & \cellcolor{orange!30}0.486 & \cellcolor{green!20}0.766 & \cellcolor{green!20}0.757 & \cellcolor{yellow!30}\textbf{0.583} & \cellcolor{green!20}\textbf{0.782} & \cellcolor{yellow!30}0.603 & \cellcolor{green!20}0.783 & \cellcolor{yellow!30}0.614 & \cellcolor{green!20}0.704 \\
+ & c1 & \cellcolor{green!40}0.900 & \cellcolor{green!20}\textbf{0.764} & \cellcolor{green!40}0.917 & \cellcolor{green!20}0.766 & \cellcolor{green!20}0.757 & \cellcolor{yellow!30}0.583 & \cellcolor{green!20}\textbf{0.782} & \cellcolor{yellow!30}0.603 & \cellcolor{green!20}0.783 & \cellcolor{yellow!30}0.614 & \cellcolor{green!20}0.747 \\
  & c2 & \cellcolor{green!40}0.917 & -- & -- & -- & \cellcolor{green!20}0.753 & -- & -- & \cellcolor{yellow!30}0.569 & -- & \cellcolor{green!20}0.710 & \cellcolor{green!20}0.737 \\
  & c3 & \cellcolor{green!40}0.933 & -- & -- & -- & \cellcolor{green!20}0.753 & -- & -- & \cellcolor{orange!30}0.547 & -- & \cellcolor{yellow!30}0.698 & \cellcolor{green!20}0.733 \\
+ & c3_no_guideline & -- & -- & -- & -- & -- & \cellcolor{yellow!30}\textbf{0.611} & -- & -- & \cellcolor{green!20}0.762 & -- & \cellcolor{yellow!30}0.686 \\
 \bottomrule
 \end{tabular}
 \end{table}

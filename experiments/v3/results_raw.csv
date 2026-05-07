@@ -71,6 +71,12 @@ ministral_8b,ministral-8b-latest,c2,"definition, guideline",PE,shuffle,0.4664842
 ministral_8b,ministral-8b-latest,c2,"definition, guideline",USELEC,original,0.6789636722050126,0.6833333333333333
 ministral_8b,ministral-8b-latest,c2,"definition, guideline",USELEC,content_only,0.5982142857142857,0.6
 ministral_8b,ministral-8b-latest,c2,"definition, guideline",USELEC,shuffle,0.511559752523608,0.5833333333333334
+ministral_8b,ministral-8b-latest,c3_no_guideline,"definition, document_context",FINARG,original,0.5628096764791606,0.5833333333333334
+ministral_8b,ministral-8b-latest,c3_no_guideline,"definition, document_context",FINARG,content_only,0.46172248803827753,0.5
+ministral_8b,ministral-8b-latest,c3_no_guideline,"definition, document_context",FINARG,shuffle,0.3939393939393939,0.5166666666666667
+ministral_8b,ministral-8b-latest,c3_no_guideline,"definition, document_context",SCIARK,original,0.6194503171247357,0.65
+ministral_8b,ministral-8b-latest,c3_no_guideline,"definition, document_context",SCIARK,content_only,0.6622222222222223,0.6833333333333333
+ministral_8b,ministral-8b-latest,c3_no_guideline,"definition, document_context",SCIARK,shuffle,0.5688416211555045,0.5833333333333334
 ministral_8b,ministral-8b-latest,c3,"definition, guideline, document_context",ABSTRCT,original,0.899888765294772,0.9
 ministral_8b,ministral-8b-latest,c3,"definition, guideline, document_context",ABSTRCT,content_only,0.8285714285714285,0.8333333333333334
 ministral_8b,ministral-8b-latest,c3,"definition, guideline, document_context",ABSTRCT,shuffle,0.4957983193277311,0.5833333333333334
@@ -107,6 +113,12 @@ gpt_5_2_openai,gpt-5.2-2025-12-11,c3,"definition, guideline, document_context",P
 gpt_5_2_openai,gpt-5.2-2025-12-11,c3,"definition, guideline, document_context",USELEC,original,0.7376858058874963,0.75
 gpt_5_2_openai,gpt-5.2-2025-12-11,c3,"definition, guideline, document_context",USELEC,content_only,0.5822890559732665,0.5833333333333334
 gpt_5_2_openai,gpt-5.2-2025-12-11,c3,"definition, guideline, document_context",USELEC,shuffle,0.6329254727474972,0.6333333333333333
+gpt_5_2_openai,gpt-5.2-2025-12-11,c3_no_guideline,"definition, document_context",FINARG,original,0.5396419437340154,0.55
+gpt_5_2_openai,gpt-5.2-2025-12-11,c3_no_guideline,"definition, document_context",FINARG,content_only,0.4998456313677061,0.55
+gpt_5_2_openai,gpt-5.2-2025-12-11,c3_no_guideline,"definition, document_context",FINARG,shuffle,0.37478991596638656,0.48333333333333334
+gpt_5_2_openai,gpt-5.2-2025-12-11,c3_no_guideline,"definition, document_context",SCIARK,original,0.7482517482517483,0.75
+gpt_5_2_openai,gpt-5.2-2025-12-11,c3_no_guideline,"definition, document_context",SCIARK,content_only,0.6316964285714286,0.6333333333333333
+gpt_5_2_openai,gpt-5.2-2025-12-11,c3_no_guideline,"definition, document_context",SCIARK,shuffle,0.6632996632996633,0.6666666666666666
 gpt_5_2_openai,gpt-5.2-2025-12-11,c1,definition,ABSTRCT,original,0.6632996632996633,0.6666666666666666
 gpt_5_2_openai,gpt-5.2-2025-12-11,c1,definition,ABSTRCT,content_only,0.6475524475524476,0.65
 gpt_5_2_openai,gpt-5.2-2025-12-11,c1,definition,ABSTRCT,shuffle,0.5064629847238543,0.5333333333333333
@@ -221,6 +233,12 @@ mistral_medium,mistral-medium-latest,c0,,SCIARK,shuffle,0.5238095238095237,0.566
 mistral_medium,mistral-medium-latest,c0,,USELEC,original,0.5622895622895623,0.5666666666666667
 mistral_medium,mistral-medium-latest,c0,,USELEC,content_only,0.49760765550239233,0.5333333333333333
 mistral_medium,mistral-medium-latest,c0,,USELEC,shuffle,0.38440492476060195,0.5
+mistral_medium,mistral-medium-latest,c3_no_guideline,"definition, document_context",FINARG,original,0.6113770768797522,0.6166666666666667
+mistral_medium,mistral-medium-latest,c3_no_guideline,"definition, document_context",FINARG,content_only,0.37478991596638656,0.48333333333333334
+mistral_medium,mistral-medium-latest,c3_no_guideline,"definition, document_context",FINARG,shuffle,0.4034090909090909,0.5333333333333333
+mistral_medium,mistral-medium-latest,c3_no_guideline,"definition, document_context",SCIARK,original,0.7624434389140271,0.7666666666666667
+mistral_medium,mistral-medium-latest,c3_no_guideline,"definition, document_context",SCIARK,content_only,0.7664071190211346,0.7666666666666667
+mistral_medium,mistral-medium-latest,c3_no_guideline,"definition, document_context",SCIARK,shuffle,0.6296296296296295,0.6333333333333333
 mistral_medium,mistral-medium-latest,c1,definition,ABSTRCT,original,0.9,0.9
 mistral_medium,mistral-medium-latest,c1,definition,ABSTRCT,content_only,0.717978848413631,0.7333333333333333
 mistral_medium,mistral-medium-latest,c1,definition,ABSTRCT,shuffle,0.5506349723217193,0.6166666666666667
@@ -251,3 +269,12 @@ mistral_medium,mistral-medium-latest,c1,definition,SCIARK,shuffle,0.523809523809
 mistral_medium,mistral-medium-latest,c1,definition,USELEC,original,0.613986013986014,0.6166666666666667
 mistral_medium,mistral-medium-latest,c1,definition,USELEC,content_only,0.4909502262443439,0.5
 mistral_medium,mistral-medium-latest,c1,definition,USELEC,shuffle,0.475,0.5333333333333333
+ministral_8b,ministral-8b-latest,c1,definition,AEC,original,0.949874686716792,0.95
+ministral_8b,ministral-8b-latest,c1,definition,AEC,content_only,0.3333333333333333,0.5
+ministral_8b,ministral-8b-latest,c1,definition,AEC,shuffle,0.9166435120866907,0.9166666666666666
+gpt_5_2_openai,gpt-5.2-2025-12-11,c1,definition,AEC,original,0.9666295884315907,0.9666666666666667
+gpt_5_2_openai,gpt-5.2-2025-12-11,c1,definition,AEC,content_only,0.3333333333333333,0.5
+gpt_5_2_openai,gpt-5.2-2025-12-11,c1,definition,AEC,shuffle,0.6703296703296704,0.7
+mistral_medium,mistral-medium-latest,c1,definition,AEC,original,0.9166435120866907,0.9166666666666666
+mistral_medium,mistral-medium-latest,c1,definition,AEC,content_only,0.3333333333333333,0.5
+mistral_medium,mistral-medium-latest,c1,definition,AEC,shuffle,0.9332591768631813,0.9333333333333333

@@ -1,3 +1,6 @@
+## KW 19
+
+-> Run Eval Experiments on the Heldout dataset with best model
 
 ## KW 18
 
@@ -5,7 +8,7 @@
   - We need to run it with the other models
 - Add KNN to Baseline Comparison
 - Write the Text for the results
-- Integrate formalizing task and Methodology 
+- Integrate formalizing task and Methodology
 - Zugfahrt:
   - Read fegers thesis (done)
 

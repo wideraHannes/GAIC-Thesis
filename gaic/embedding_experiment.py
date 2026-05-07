@@ -107,9 +107,7 @@ def cosine_distance(a: np.ndarray, b: np.ndarray) -> float:
     return float(1.0 - dot / norm)
 
 
-def compute_separation_metrics(
-    embeddings: np.ndarray, metadata: list[dict]
-) -> dict:
+def compute_separation_metrics(embeddings: np.ndarray, metadata: list[dict]) -> dict:
     """Compute centroid cosine distance between Argument/No-Argument per dataset x manipulation."""
     metrics = {}
 
@@ -166,9 +164,7 @@ def plot_umap_grid(
     datasets = sorted(set(m["dataset"] for m in metadata))
     n_datasets = len(datasets)
 
-    fig, axes = plt.subplots(
-        n_datasets, 2, figsize=(10, 3 * n_datasets), squeeze=False
-    )
+    fig, axes = plt.subplots(n_datasets, 2, figsize=(10, 3 * n_datasets), squeeze=False)
     fig.suptitle("UMAP Embedding Space: Original vs Shuffled", fontsize=14, y=1.01)
 
     colors = {"Argument": "#2196F3", "No-Argument": "#F44336"}
@@ -321,7 +317,11 @@ def run(config: dict, config_path: Path | None = None):
     # -- Select device --
     device, dtype = select_device()
     # Override dtype if specified in config
-    dtype_map = {"float16": torch.float16, "bfloat16": torch.bfloat16, "float32": torch.float32}
+    dtype_map = {
+        "float16": torch.float16,
+        "bfloat16": torch.bfloat16,
+        "float32": torch.float32,
+    }
     if "dtype" in cfg_model:
         dtype = dtype_map.get(cfg_model["dtype"], dtype)
         # MPS doesn't support bfloat16
@@ -383,7 +383,10 @@ def run(config: dict, config_path: Path | None = None):
 
     # -- Build output filename stem --
     safe_model = (
-        model_name.replace("/", "_").replace(":", "_").replace("@", "").replace(".", "_")
+        model_name.replace("/", "_")
+        .replace(":", "_")
+        .replace("@", "")
+        .replace(".", "_")
     )
     stem = f"{experiment_name}_{sample_size}_{safe_model}"
 
