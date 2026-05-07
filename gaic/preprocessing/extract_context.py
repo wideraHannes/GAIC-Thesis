@@ -1,17 +1,23 @@
 """Extract structured context from dataset papers and annotation guidelines.
 
-Uses Kreuzberg for PDF-to-text extraction and GPT-5.2 (via Portkey) for
-structured information extraction. Produces per-dataset context files
-(definition.md, guideline.md, preceding_text.md, dataset.json) under
-the project's context/ directory.
+Uses Kreuzberg for PDF-to-text extraction and OpenAI for structured
+information extraction. Produces per-dataset context files
+(definition.md, guideline.md, dataset.json) under the project's context/ directory.
 
 Usage:
+    # Process specific datasets
+    uv run python gaic/preprocessing/extract_context.py --datasets TACO TAUS TAPE
+
+    # Guidelines only (no paper/definition extraction)
+    uv run python gaic/preprocessing/extract_context.py --datasets TAUS TAPE --guidelines-only
+
+    # Process all training datasets (original behavior)
     uv run python gaic/preprocessing/extract_context.py
 """
 
+import argparse
 import json
 import os
-import re
 from datetime import datetime, timezone
 from pathlib import Path
 
@@ -19,7 +25,6 @@ from dotenv import load_dotenv
 from kreuzberg import extract_file_sync
 from loguru import logger
 from openai import OpenAI
-from portkey_ai import PORTKEY_GATEWAY_URL
 
 from config.paths import CONTEXT_DIR, GAIC_DATA_DIR, PROJECT_ROOT
 from gaic.preprocessing.prompts import (
@@ -34,7 +39,7 @@ from gaic.preprocessing.schemas import DefinitionExtraction, GuidelinesExtractio
 # Constants
 # ---------------------------------------------------------------------------
 
-MODEL = "@azure-openai-foundry/gpt-5.2-chat"
+MODEL = "gpt-5.2-2025-12-11"
 
 ALL_DATASETS = [
     "ABSTRCT",
@@ -47,10 +52,22 @@ ALL_DATASETS = [
     "PE",
     "SCIARK",
     "USELEC",
+    "TACO",
 ]
 
+# Datasets that only have guidelines (definition comes from TACO)
+GUIDELINES_ONLY_DATASETS = {"TAPE", "TAUS"}
+
 # Datasets that have annotation guideline PDFs
-DATASETS_WITH_GUIDELINES = {"ABSTRCT", "ARGUMINSCI", "PE", "USELEC"}
+DATASETS_WITH_GUIDELINES = {
+    "ABSTRCT",
+    "ARGUMINSCI",
+    "PE",
+    "USELEC",
+    "TACO",
+    "TAPE",
+    "TAUS",
+}
 
 # Datasets where the source text provides document context (preceding sentences)
 DATASETS_WITH_DOCUMENT_CONTEXT = {
@@ -60,6 +77,7 @@ DATASETS_WITH_DOCUMENT_CONTEXT = {
     "PE",
     "SCIARK",
     "USELEC",
+    "TACO",
 }
 
 # ---------------------------------------------------------------------------
@@ -68,14 +86,14 @@ DATASETS_WITH_DOCUMENT_CONTEXT = {
 
 
 def create_client() -> OpenAI:
-    """Create an OpenAI client configured with Portkey gateway."""
+    """Create an OpenAI client."""
     load_dotenv()
-    api_key = os.environ.get("PORTKEY_API_KEY")
+    api_key = os.environ.get("OPENAI_API_KEY")
     if not api_key:
         raise EnvironmentError(
-            "PORTKEY_API_KEY not found in environment. Please set it in your .env file."
+            "OPENAI_API_KEY not found in environment. Please set it in your .env file."
         )
-    return OpenAI(base_url=PORTKEY_GATEWAY_URL, api_key=api_key)
+    return OpenAI(api_key=api_key)
 
 
 def extract_pdf_text(pdf_path: Path) -> str:
@@ -221,21 +239,19 @@ def process_dataset(client: OpenAI, dataset: str) -> dict:
     guidelines_text_chars = None
 
     try:
-        # --- Extract definition from paper PDF ---
+        # --- Extract definition from paper PDF (if exists) ---
         paper_pdf_path = GAIC_DATA_DIR / dataset / "paper" / f"{dataset}.pdf"
-        if not paper_pdf_path.exists():
-            raise FileNotFoundError(f"Paper PDF not found: {paper_pdf_path}")
+        if paper_pdf_path.exists():
+            logger.info(f"  Extracting text from {paper_pdf_path.name}...")
+            paper_text = extract_pdf_text(paper_pdf_path)
+            paper_text_chars = len(paper_text)
+            logger.info(f"  Paper text: {paper_text_chars} chars")
 
-        logger.info(f"  Extracting text from {paper_pdf_path.name}...")
-        paper_text = extract_pdf_text(paper_pdf_path)
-        paper_text_chars = len(paper_text)
-        logger.info(f"  Paper text: {paper_text_chars} chars")
-
-        logger.info(f"  Extracting definition via {MODEL}...")
-        definition_result = extract_definition(client, dataset, paper_text)
-        definition_text = definition_result.definition
-        write_definition(output_dir, definition_text)
-        logger.info(f"  Definition extracted ({len(definition_text)} chars)")
+            logger.info(f"  Extracting definition via {MODEL}...")
+            definition_result = extract_definition(client, dataset, paper_text)
+            definition_text = definition_result.definition
+            write_definition(output_dir, definition_text)
+            logger.info(f"  Definition extracted ({len(definition_text)} chars)")
 
         # --- Extract guidelines (only for datasets that have them) ---
         if dataset in DATASETS_WITH_GUIDELINES:
@@ -301,15 +317,25 @@ def process_dataset(client: OpenAI, dataset: str) -> dict:
 
 
 def main():
-    """Run context extraction for all 10 datasets."""
-    logger.info(f"Starting context extraction for {len(ALL_DATASETS)} datasets")
+    """Run context extraction for datasets."""
+    parser = argparse.ArgumentParser(description="Extract context from dataset PDFs")
+    parser.add_argument(
+        "--datasets",
+        nargs="+",
+        default=ALL_DATASETS,
+        help="Datasets to process (default: all)",
+    )
+    args = parser.parse_args()
+
+    datasets = args.datasets
+    logger.info(f"Starting context extraction for {len(datasets)} datasets")
     logger.info(f"Model: {MODEL}")
     logger.info(f"Output directory: {CONTEXT_DIR}")
 
     client = create_client()
 
     results = []
-    for dataset in ALL_DATASETS:
+    for dataset in datasets:
         result = process_dataset(client, dataset)
         results.append(result)
 

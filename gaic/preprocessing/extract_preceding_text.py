@@ -1,13 +1,15 @@
-"""Extract preceding sentences for all samples in GAIC datasets.
+"""Extract document context for GAIC datasets.
 
-For datasets with document context (ABSTRCT, ARGUMINSCI, FINARG, PE, SCIARK, USELEC),
-this script extracts the 2 sentences immediately preceding each argumentative sentence
-and writes them to individual files: context/{DATASET}/data/{ID}.txt
+Extracts preceding sentences or full document and writes to
+individual files: context/{DATASET}/data/{ID}.txt
 
 Usage:
-    uv run python gaic/preprocessing/extract_preceding_text.py
+    uv run python gaic/preprocessing/extract_preceding_text.py --datasets TACO --context full
+    uv run python gaic/preprocessing/extract_preceding_text.py --datasets ABSTRCT --context 2
+    uv run python gaic/preprocessing/extract_preceding_text.py --datasets PE --context 3
 """
 
+import argparse
 import json
 import re
 from pathlib import Path
@@ -28,7 +30,9 @@ DATASETS_WITH_DOCUMENT_CONTEXT = [
     "PE",
     "SCIARK",
     "USELEC",
+    "TACO",
 ]
+
 
 # ---------------------------------------------------------------------------
 # Utility functions
@@ -56,17 +60,20 @@ def get_preceding_sentences(doc_text: str, target: str, n: int = 2) -> list[str]
 # ---------------------------------------------------------------------------
 
 
-def extract_preceding_sentences_for_dataset(dataset: str, output_dir: Path) -> int:
-    """Load all train+dev samples for a dataset and extract preceding sentences.
+def extract_context_for_dataset(dataset: str, output_dir: Path, context_mode: str) -> int:
+    """Extract document context for a dataset.
 
-    Writes each sample's preceding text to context/{dataset}/data/{id}.txt
+    Args:
+        context_mode: 'full' for entire document, or number of preceding sentences (e.g. '2')
+
+    Writes to context/{dataset}/data/{id}.txt
     Returns the count of successfully processed samples.
     """
     data_dir = output_dir / "data"
     data_dir.mkdir(exist_ok=True, parents=True)
 
     total_count = 0
-    for split in ("train", "dev"):
+    for split in ("train", "dev", "test"):
         jsonl_path = GAIC_DATA_DIR / f"{split}.jsonl"
         if not jsonl_path.exists():
             logger.warning(f"  {split}.jsonl not found, skipping")
@@ -92,16 +99,23 @@ def extract_preceding_sentences_for_dataset(dataset: str, output_dir: Path) -> i
                     continue
 
                 doc_text = doc_path.read_text()
-                preceding = get_preceding_sentences(doc_text, item["sentence"])
+
+                if context_mode == "full":
+                    context_text = doc_text.strip()
+                else:
+                    n = int(context_mode)
+                    preceding = get_preceding_sentences(doc_text, item["sentence"], n=n)
+                    context_text = "\n".join(preceding)
 
                 # Write to individual file: context/{dataset}/data/{id}.txt
                 output_file = data_dir / f"{item['id']}.txt"
                 with open(output_file, "w") as f_out:
-                    f_out.write("\n".join(preceding))
+                    f_out.write(context_text)
 
                 count += 1
 
-        logger.info(f"    Extracted preceding sentences for {count} samples")
+        action = "full documents" if context_mode == "full" else f"{context_mode} preceding sentences"
+        logger.info(f"    Extracted {action} for {count} samples")
         total_count += count
 
     return total_count
@@ -109,8 +123,8 @@ def extract_preceding_sentences_for_dataset(dataset: str, output_dir: Path) -> i
 
 
 
-def process_dataset(dataset: str) -> dict:
-    """Process a single dataset: extract preceding sentences and write to individual files.
+def process_dataset(dataset: str, context_mode: str) -> dict:
+    """Process a single dataset: extract document context.
 
     Returns a status dict with 'dataset', 'status' ('OK'/'FAIL'), 'count', and 'error' (if any).
     """
@@ -119,7 +133,7 @@ def process_dataset(dataset: str) -> dict:
     output_dir.mkdir(parents=True, exist_ok=True)
 
     try:
-        count = extract_preceding_sentences_for_dataset(dataset, output_dir)
+        count = extract_context_for_dataset(dataset, output_dir, context_mode)
         if count == 0:
             logger.warning(f"  No entries found for {dataset}")
             return {"dataset": dataset, "status": "OK", "count": 0, "error": None}
@@ -143,15 +157,23 @@ def process_dataset(dataset: str) -> dict:
 
 
 def main():
-    """Run preceding sentence extraction for all datasets with document context."""
-    logger.info(
-        f"Starting preceding sentence extraction for {len(DATASETS_WITH_DOCUMENT_CONTEXT)} datasets"
-    )
+    """Run document context extraction for datasets."""
+    parser = argparse.ArgumentParser(description="Extract document context")
+    parser.add_argument("--datasets", nargs="+", default=DATASETS_WITH_DOCUMENT_CONTEXT,
+                        help="Datasets to process (default: all with document context)")
+    parser.add_argument("--context", default="2",
+                        help="'full' for entire document, or number of preceding sentences (default: 2)")
+    args = parser.parse_args()
+
+    datasets = args.datasets
+    context_mode = args.context
+    logger.info(f"Starting document context extraction for {len(datasets)} datasets")
+    logger.info(f"Context mode: {context_mode}")
     logger.info(f"Output directory: {CONTEXT_DIR}")
 
     results = []
-    for dataset in DATASETS_WITH_DOCUMENT_CONTEXT:
-        result = process_dataset(dataset)
+    for dataset in datasets:
+        result = process_dataset(dataset, context_mode)
         results.append(result)
 
     # Summary

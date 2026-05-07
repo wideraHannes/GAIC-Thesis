@@ -1,0 +1,23 @@
+{
+  "dataset": "TACO",
+  "extracted_at": "2026-05-07T08:46:13.587064+00:00",
+  "model": "gpt-5.2-2025-12-11",
+  "definition": "In TACO, a tweet is annotated as an Argument if it contains an inference, defined (via the Cambridge Dictionary) as a guess you make or an opinion you form based on the information you have. Argument tweets include Statements, where only inference is presented, and Reasons, where the inference is based on information included in the tweet (e.g., references), combining inference with information. Information is defined as facts or details about a person, company, product, etc., and is used to distinguish different kinds of argumentative tweets but does not by itself make a tweet argumentative. A tweet is No-Argument when it lacks inference, including Notifications that only provide information and None tweets that provide neither inference nor information.",
+  "guideline": "Label a sentence/tweet as argumentative if it contains an Inference (what the author wants you to believe), regardless of truth or your agreement; if there is no Inference, it is No-Argument. Decide by asking: (1) what belief/claim is being pushed (Inference), (2) what facts/details are given (Information), and (3) whether the belief emerges from the facts; if Inference is present without explicit facts, label as Statement, and if Inference is supported by explicit Information in the text (e.g., dates, quotes/headlines, experiences, considerations, source references/URLs/quotations), label as Reason. Treat standpoints, rhetorical questions, some hashtags, and exception-phrasing (\u201cnot everyone\u2026, but everyone\u2026\u201d) as strong Inference cues; treat concrete dates, quotes/headlines, and narrated experiences as Information cues; treat insults as not Inference (often None). For uncertainty, look up the tweet and thread context, but if still in absolute doubt, default to 0 (no component/no argument). Boundary examples: \u201cPossible tangible benefit of #Brexit: a fairer immigration system.\u201d = Statement (Inference-only assertion with implicit background, no explicit Information); a headline/link promo like \u201cMexico top court declares\u2026 unconstitutional\u2026 https://\u2026\u201d = Notification (Information-only summary, no Inference); \u201c@sinnfeinireland Blah blah\u2026\u201d = None (neither Information nor Inference). Another boundary: an ad/donation tweet can still be Reason if it contains both a factual/consideration component and an Inference in a hashtag (e.g., #AbortionIsHealthcare) even if it initially reads as marketing.",
+  "document_context": {
+    "available": true,
+    "strategy": "2 preceding sentences",
+    "preceding_sentences": 2
+  },
+  "sources": {
+    "paper_pdf": "data/GAIC-2026/data/TACO/paper/TACO.pdf",
+    "paper_text_chars": 35269,
+    "guidelines_pdf": "data/GAIC-2026/data/TACO/guidelines/TACO-Guidelines.pdf",
+    "guidelines_text_chars": 6735
+  },
+  "capabilities": {
+    "has_definition": true,
+    "has_guidelines": true,
+    "has_document_context": true
+  }
+}
