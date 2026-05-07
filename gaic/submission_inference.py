@@ -43,8 +43,6 @@ if TYPE_CHECKING:
 # Constants
 # ---------------------------------------------------------------------------
 
-DEFINITION_INHERITANCE = {"TAPE": "TACO", "TAUS": "TACO"}
-
 METRICS_HEADER = f"{'Dataset':<12} {'N':>6} {'Macro-F1':>10} {'Acc':>8} {'Arg-F1':>8} {'NoArg-F1':>10}"
 METRICS_SEP = "-" * 60
 
@@ -152,34 +150,12 @@ def get_context_sources(dataset: str, strategy: str) -> list[str]:
 
     if capabilities.get("has_definition", False):
         sources.append("definition")
-    elif dataset in DEFINITION_INHERITANCE:
-        parent_caps = _load_dataset_json(DEFINITION_INHERITANCE[dataset]).get("capabilities", {})
-        if parent_caps.get("has_definition", False):
-            sources.append("definition")
-
     if capabilities.get("has_guidelines", False):
         sources.append("guideline")
     if capabilities.get("has_document_context", False):
         sources.append("document_context")
 
     return sources
-
-
-def load_context_with_inheritance(dataset: str, sources: list[str]) -> dict[str, str]:
-    """Load context, handling definition inheritance for TAPE/TAUS."""
-    result = {}
-
-    if "definition" in sources and dataset in DEFINITION_INHERITANCE:
-        source_dataset = DEFINITION_INHERITANCE[dataset]
-        def_path = CONTEXT_DIR / source_dataset / "definition.md"
-        if def_path.exists():
-            content = def_path.read_text().strip()
-            if content:
-                result["definition"] = content
-        sources = [s for s in sources if s != "definition"]
-
-    result.update(load_context(dataset, sources))
-    return result
 
 
 # ---------------------------------------------------------------------------
@@ -207,7 +183,6 @@ def process_sample(
 
     result = classify(client, client_cfg, sample["sentence"], full_context)
 
-    # Build complete list of context sources used
     sources_used = list(context_parts.keys())
     if doc_context:
         sources_used.append("document_context")
@@ -221,7 +196,7 @@ def process_sample(
             "label": result["label"],
             "reason": result.get("reason", ""),
             "context_strategy": context_strategy,
-            "context_sources_used": sources_used,
+            "context_sources": sources_used,
             "system_prompt": system_prompt,
             "user_prompt": user_prompt,
         },
@@ -240,10 +215,12 @@ def process_dataset(
 ) -> None:
     """Process all samples for a dataset with parallel API calls."""
     sources = get_context_sources(dataset, config.context_strategy)
-    context_parts = load_context_with_inheritance(dataset, sources)
+    static_sources = [s for s in sources if s != "document_context"]
+    context_parts = load_context(dataset, static_sources)
     use_doc_context = "document_context" in sources
 
-    logger.info(f"{dataset}: {len(samples)} samples, context: {list(context_parts.keys())}")
+    context_display = ", ".join(sources) if sources else "none"
+    logger.info(f"{dataset}: {len(samples)} samples, context: [{context_display}]")
 
     dataset_preds = {}
     results = []
@@ -251,8 +228,8 @@ def process_dataset(
     with ThreadPoolExecutor(max_workers=config.max_workers) as executor:
         futures = {
             executor.submit(
-                process_sample, sample, dataset, context_parts, use_doc_context,
-                client, client_cfg, config.context_strategy
+                process_sample, sample, dataset, context_parts,
+                use_doc_context, client, client_cfg, config.context_strategy
             ): sample
             for sample in samples
         }

@@ -31,6 +31,8 @@ DATASETS_WITH_DOCUMENT_CONTEXT = [
     "SCIARK",
     "USELEC",
     "TACO",
+    "TAPE",  # Uses TACO source documents
+    "TAUS",  # Uses TACO source documents
 ]
 
 

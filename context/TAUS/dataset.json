@@ -5,8 +5,8 @@
   "definition": null,
   "guideline": "Label a tweet/sentence as Argument if it contains at least one claim (even implicit) that asserts a position, evaluation, policy, or judgment that could be supported or attacked; otherwise label No-Argument. Enforce dataset-specific exclusions: if necessary context is missing (e.g., refers to an unavailable parent tweet) or the text is not in English, label No-Argument. For multi-sentence tweets, any single claim makes the whole tweet Argument. Treat questions as Argument when they implicitly advance a claim or reasoning (e.g., \u201cIf Middle-earth is the whole \u2018Earth,\u2019 then why does the map extend\u2026?\u201d), and treat implicit prompts as claims when they clearly imply a stance/request for evidence (e.g., \u201cShow me the descriptions of skin colors in Tolkien\u2019s writing\u201d \u2192 Argument). Do not count pure insults as claims (e.g., \u201cdon\u2019t be a dick about it\u201d \u2192 No-Argument). Use cue phrases as signals but not guarantees: claim indicators include \u201cI believe,\u201d \u201cI think,\u201d \u201cin my judgment/opinion,\u201d \u201cI am in favor of,\u201d \u201chowever,\u201d \u201cso,\u201d \u201cfor this reason,\u201d while premise indicators include \u201cbecause,\u201d \u201csince,\u201d and \u201cfor example\u201d; still rely on context because indicators can appear without an actual claim. Boundary/nested case rule: a statement used as a reason may still be annotated as a claim if it is itself a disputable assertion needing justification (e.g., \u201cCommunism is the enemy of all religions\u201d \u2192 claim/Argument even when functioning as support), and clauses are segmented by meaning (not punctuation), with no clause labeled as both claim and premise.",
   "document_context": {
-    "available": false,
-    "strategy": null,
+    "available": true,
+    "strategy": "full document (from TACO source)",
     "preceding_sentences": null
   },
   "sources": {
@@ -16,8 +16,8 @@
     "guidelines_text_chars": 37523
   },
   "capabilities": {
-    "has_definition": false,
+    "has_definition": true,
     "has_guidelines": true,
-    "has_document_context": false
+    "has_document_context": true
   }
 }
