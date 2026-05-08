@@ -1,0 +1,21 @@
+{
+  "model": "ministral-8b-latest",
+  "dataset": "TACO",
+  "non_preferred_positions": [
+    "A",
+    "B",
+    "C",
+    "D"
+  ],
+  "bcq_per_position": {
+    "A": 0,
+    "B": 0,
+    "C": 7,
+    "D": 6
+  },
+  "total": 50,
+  "correct": 8,
+  "max_contamination": 14.000000000000002,
+  "min_contamination": 13.131313131313133,
+  "contamination_range": "[13.1%, 14.0%]"
+}

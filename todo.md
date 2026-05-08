@@ -1,10 +1,10 @@
 ## KW 19
 
--> Run Eval Experiments on the Heldout dataset with best model
+(done)-> Run Eval Experiments on the Heldout dataset with best model
 
 -> decide what todo with the 60 sample experiments dev
 
--> Evaluation on Dev would be nicer
+(done)-> Evaluation on Dev would be nicer
 
 ## KW 18
 
