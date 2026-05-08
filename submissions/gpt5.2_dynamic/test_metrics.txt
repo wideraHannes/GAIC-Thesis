@@ -1,0 +1,23 @@
+GPT 5.2 Dynamic - Test Set Evaluation
+============================================================
+
+Submission: /Users/hanneswidera/Uni/Master/thesis/GAIC_thesis/submissions/gpt5.2_dynamic/submission.jsonl
+Labels: /Users/hanneswidera/Uni/Master/thesis/GAIC_thesis/data/GAIC-2026/data/test_labels.jsonl
+
+Dataset           N   Macro-F1      Acc   Arg-F1   NoArg-F1
+------------------------------------------------------------
+ABSTRCT         340     0.8735   0.8735   0.8724     0.8746
+ACQUA           340     0.7882   0.7882   0.7882     0.7882
+AEC             340     0.9141   0.9147   0.9068     0.9214
+AFS             340     0.7119   0.7176   0.7526     0.6712
+ARGUMINSCI      340     0.7933   0.7941   0.7799     0.8066
+FINARG          340     0.4764   0.5235   0.3193     0.6335
+IAM             340     0.7146   0.7147   0.7087     0.7205
+PE              340     0.6646   0.6765   0.7277     0.6014
+SCIARK          340     0.6682   0.6735   0.7102     0.6263
+TACO            340     0.8408   0.8412   0.8333     0.8483
+TAPE            340     0.7604   0.7676   0.7189     0.8020
+TAUS            340     0.7853   0.7882   0.7600     0.8105
+USELEC          340     0.7029   0.7059   0.7326     0.6732
+------------------------------------------------------------
+TOTAL          4420     0.7522   0.7523   0.7472     0.7572
