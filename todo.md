@@ -1,8 +1,44 @@
+## KW 23
+
+Write Notebook Paper give it Marc Latest Tuesday!
+
+## KW 22
+
+- Start writing the Background sections!:
+  (done)-- 2.4 Decoder
+  (WIP) -- 2.4.x In Context Learning
+  (WIP) -- 2.5 Data Contamination LLMs
+
+Essential:
+
+- Results
+  - Combine Formalization with Results
+- Discussion
+- Finish
+
+- already Write about my Results
+
+## KW 21
+
+-> continue with the section why Encoder is Problematic Weaknesses and Shortcut learning via the mathematical example and other desired properties
+-> define a list of desired properties for the task
+-> So we have these desired properties defined q_d, g_d they are explicitly what the labeller sued to label the sentence with Y (true label) and what is required therefore to label correctly. What we are doing we take the true q_D ----> and make it q_D (summerized) and q_D (summmerized) so our system is an approximation to the system that the labeller used not a perfect one and we need to introduce Y_pred
+
+-> Talk about failure modes in our system:
+-> one Failure mode is A bad summerization extraction from the true q_D,  
+-> Failed LLM to predict
+-> Wrong label by annotators
+
+## KW 20
+
+- Define Classification as a generative Task (Decoders for argument mining)
+  - https://wandb.ai/gladiator/LLMs-as-classifiers/reports/LLMs-are-machine-learning-classifiers--VmlldzoxMTEwNzUyNA
+
 ## KW 19
 
 (done)-> Run Eval Experiments on the Heldout dataset with best model
 
--> decide what todo with the 60 sample experiments dev
+(done)-> decide what todo with the 60 sample experiments dev
 
 (done)-> Evaluation on Dev would be nicer
 
