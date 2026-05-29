@@ -60,6 +60,8 @@ For submission, each sample receives the maximum available context for its datas
 
 ## Quick Start
 
+To reproduce the official GAIC results:
+
 ```bash
 git clone https://github.com/wideraHannes/GAIC-Thesis.git
 cd GAIC-Thesis
@@ -70,6 +72,8 @@ uv sync
 # Run submission inference
 uv run gaic/submission_inference.py --config config/submission/gpt5.2_dynamic.toml
 ```
+
+To experiment with different models, swap out `provider` and `model` in the config file and add the corresponding API key to your `.env` file.
 
 ## Reproduction
 
@@ -103,8 +107,9 @@ uv run gaic/unified_experiment.py config/experiments/v3/gpt_5_2_openai/c1.toml
 # Context extraction from PDFs
 uv run gaic/preprocessing/extract_context.py
 
-# Data contamination audit
-uv run gaic/contamination_test.py
+# Data contamination audit (see config/experiments/dcq/README.md for full details)
+uv run gaic/dcq/experiment.py generate config/experiments/dcq/perturbator.toml
+uv run gaic/dcq/experiment.py bdq config/experiments/dcq/perturbator.toml config/experiments/dcq/gpt52.toml
 ```
 
 ## Configuration

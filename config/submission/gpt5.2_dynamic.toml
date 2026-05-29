@@ -9,5 +9,5 @@ reasoning = false
 [submission]
 context_strategy = "dynamic"  # c0, c1, or dynamic
 input_file = "test.jsonl"     # test.jsonl or dev.jsonl for validation
-output_dir = "submissions/gpt5.2_dynamic"
+output_dir = "submissions/gpt5.2_experiment"
 max_workers = 8              # parallel API calls
