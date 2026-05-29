@@ -1,7 +1,3 @@
-## KW 23
-
-Write Notebook Paper give it Marc Latest Tuesday!
-
 ## KW 22
 
 - Start writing the Background sections!:
