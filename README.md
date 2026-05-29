@@ -12,13 +12,18 @@ Argument identification models typically learn dataset-specific shortcuts rather
 
 ## Results
 
-Official held-out test set scores:
+Official held-out test set scores ([full leaderboard](https://touche.webis.de/clef26/touche26-web/generalizable-argument-mining.html#leaderboard)):
 
 | Team                | System                | TACO       | TAPE       | TAUS       | Main       |
 | ------------------- | --------------------- | ---------- | ---------- | ---------- | ---------- |
 | **context-awakens** | **Full GAIC Testset** | **0.8408** | 0.7604     | **0.7853** | **0.7955** |
 | arginvariant        | arginvariant_1        | 0.8133     | **0.7757** | 0.7612     | 0.7834     |
+| arginvariant        | arinvariant_2         | 0.8133     | **0.7757** | 0.7598     | 0.7829     |
 | the-wildcards       | hybrid                | 0.8265     | 0.7465     | 0.7735     | 0.7822     |
+| the-wildcards       | local                 | 0.7912     | 0.7506     | 0.7660     | 0.7693     |
+| arginvariant        | arginvariant_3        | 0.8101     | 0.7204     | 0.7377     | 0.7561     |
+| code-doctors        | run_1                 | 0.6025     | 0.6748     | 0.6734     | 0.6502     |
+| the-wildcards       | solo                  | 0.5098     | 0.6216     | 0.6499     | 0.5938     |
 
 The Main score averages TACO, TAPE, and TAUS — three annotation schemes applied to the same 340 sentences. A system must condition on the annotation rule, not just sentence surface.
 
