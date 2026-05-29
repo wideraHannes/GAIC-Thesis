@@ -27,6 +27,10 @@ Official held-out test set scores ([full leaderboard](https://touche.webis.de/cl
 
 The Main score averages TACO, TAPE, and TAUS — three annotation schemes applied to the same 340 sentences. A system must condition on the annotation rule, not just sentence surface.
 
+![TACO Test Samples in Training Embedding Space](experiments/rq4_retrieval/fig_taco_highlighted.png)
+
+*UMAP projection of TACO test samples overlaid on the 10 GAIC training datasets. The TACO centroid lies in the central region with overlap across debate and mixed-domain datasets — surface similarity alone cannot solve this evaluation.*
+
 ## Approach
 
 ### Context Ladder
