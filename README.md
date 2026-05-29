@@ -1,178 +1,155 @@
-# Can Large Language Models Generalize Arguments in Context?
+# Context-Awakens at Touché 2026
 
-**Master's Thesis** | Heinrich Heine University Dusseldorf | February -- August 2026
+**1st Place — GAIC Shared Task @ Touché 2026** | Macro-F1: **0.7955**
 
-**Student:** Johannes Widera | **Supervisor:** Marc Feger
+This repository contains the code and data for our submission to the [Generalizable Argument Identification in Context (GAIC)](https://touche.webis.de/clef26/touche26-web/generalizable-argument-mining.html) shared task at Touché @ CLEF 2026.
 
-**Target Venue:** [Touché @ CLEF 2026 -- Generalizable Argument Identification in Context (GAIC)](https://touche.webis.de/clef26/touche26-web/generalizable-argument-mining.html)
+## Overview
 
----
+Argument identification models typically learn dataset-specific shortcuts rather than argumentative structure, leading to poor cross-dataset generalization. We approach GAIC by keeping model parameters fixed and moving dataset-specific information into the prompt: argument definitions, annotation guidelines, and document context. Our zero-shot system reaches 0.7955 macro-F1 on the Main evaluation and ranks first among submitted systems.
 
-## The Problem
+> **Paper:** [Context-Awakens at Touché: Generalizable Argument Identification with In-Context Learning](working_notes_touche.pdf) (CLEF 2026 Working Notes)
 
-State-of-the-art argument mining models learn **datasets, not arguments**. Feger et al. ([ACL 2025](https://aclanthology.org/2025.acl-long.1280/)) showed that BERT, RoBERTa, and DistilBERT achieve strong in-distribution performance (mean F1 = 0.79) but collapse on cross-dataset transfer (F1 = 0.56--0.61). Removing stop words, function words, and discourse markers -- roughly 50% of all words -- caused *almost no performance change* (Δ ≤ 0.02). These encoder models rely on content-word shortcuts, not the linguistic structure that defines argumentation.
+## Results
 
-Their paper concludes with an open direction: **decoder-based argument mining**.
+Official held-out test set scores:
 
-## The Idea
+| Team                | System                | TACO       | TAPE       | TAUS       | Main       |
+| ------------------- | --------------------- | ---------- | ---------- | ---------- | ---------- |
+| **context-awakens** | **Full GAIC Testset** | **0.8408** | 0.7604     | **0.7853** | **0.7955** |
+| arginvariant        | arginvariant_1        | 0.8133     | **0.7757** | 0.7612     | 0.7834     |
+| the-wildcards       | hybrid                | 0.8265     | 0.7465     | 0.7735     | 0.7822     |
 
-Decoder-based LLMs process language fundamentally differently. Causal attention enforces strict left-to-right processing -- word order is not just learned but architecturally required. A discourse marker like *"therefore"* directly shapes the entire chain of computation from that point forward. This leads to a concrete prediction: **LLMs should be sensitive to the linguistic scaffolding that encoders ignore.**
+The Main score averages TACO, TAPE, and TAUS — three annotation schemes applied to the same 340 sentences. A system must condition on the annotation rule, not just sentence surface.
 
-This thesis tests that prediction. Across three models spanning 7B to frontier scale and 10 benchmark datasets from the GAIC shared task, we systematically investigate whether decoder-based LLMs overcome the shortcut learning problem -- and what happens when you give them rich context like annotation guidelines and source documents.
+## Approach
 
-## Modular Experiment Architecture
+### Context Ladder
 
-The experiment framework is built around **composable, TOML-configurable components**:
+We stack context sources cumulatively:
 
-```
-┌─────────────────────────────────────────────────────────────────────────┐
-│                         TOML Configuration                              │
-│  [experiment] name, sample_size, output_dir                             │
-│  [llm] provider, model, temperature                                     │
-│  [context] sources = ["definition", "guideline", "document_context"]    │
-│  [datasets] enabled = ["ABSTRCT", "PE", ...]                            │
-└─────────────────────────────────────────────────────────────────────────┘
-                                    │
-                                    ▼
-┌─────────────────────────────────────────────────────────────────────────┐
-│                      unified_experiment.py                              │
-│                                                                         │
-│  ┌──────────────┐   ┌──────────────┐   ┌──────────────┐                 │
-│  │ Data Loader  │   │   Context    │   │    Text      │                 │
-│  │              │   │   Assembler  │   │ Manipulator  │                 │
-│  │ • train.jsonl│   │              │   │              │                 │
-│  │ • dev.jsonl  │   │ • definition │   │ • M0: orig   │                 │
-│  │ • labels     │   │ • guideline  │   │ • M1: content│                 │
-│  │ • balanced   │   │ • doc_context│   │ • M2: shuffle│                 │
-│  │   sampling   │   │ • few-shot   │   │   (spaCy)    │                 │
-│  └──────┬───────┘   └──────┬───────┘   └──────┬───────┘                 │
-│         │                  │                  │                         │
-│         └──────────────────┼──────────────────┘                         │
-│                            ▼                                            │
-│  ┌──────────────────────────────────────────────────────────────────┐   │
-│  │                    LLM Classification                            │   │
-│  │  • Multi-provider: OpenAI, Portkey, Together AI, Mistral, Ollama │   │
-│  │  • Structured output (Pydantic schemas)                          │   │
-│  │  • Parallel execution via ThreadPoolExecutor                     │   │
-│  └──────────────────────────────────────────────────────────────────┘   │
-│                            │                                            │
-│                            ▼                                            │
-│  ┌──────────────────────────────────────────────────────────────────┐   │
-│  │                    Metrics & Output                              │   │
-│  │  • classification_report per manipulation                        │   │
-│  │  • Δ_content_only, Δ_shuffle deltas                              │   │
-│  │  • Full sample-level predictions + config → JSON                 │   │
-│  └──────────────────────────────────────────────────────────────────┘   │
-└─────────────────────────────────────────────────────────────────────────┘
-```
+| Level | Prompt Content         | Coverage       |
+| ----- | ---------------------- | -------------- |
+| C0    | Generic instruction    | 10/10 datasets |
+| C1    | + Argument definition  | 10/10 datasets |
+| C2    | + Annotation guideline | 4/10 datasets  |
+| C3    | + Document context     | 4/10 datasets  |
 
-### Key Design Principles
+Adding the dataset-specific definition (C0→C1) provides the largest gain: +0.10 to +0.15 macro-F1 across models.
 
-1. **Configuration-Driven**: Every experiment is fully parameterized via TOML. Swap models, context sources, or datasets without touching code.
+### Models
 
-2. **Pluggable Context Sources**: Context is assembled from modular sources (`definition`, `guideline`, `document_context`, `few_shot`) that can be combined arbitrarily. Each dataset declares its capabilities in `dataset.json`.
+| Model              | Size    | Provider   |
+| ------------------ | ------- | ---------- |
+| Ministral 8B       | 8B      | Mistral AI |
+| Mistral Medium 3.1 | unknown | Mistral AI |
+| GPT-5.2            | unknown | OpenAI     |
 
-3. **Provider Abstraction**: LLM access is unified through the OpenAI client interface with `base_url` switching. Adding a new provider requires only a new case in `make_client()`.
+### Dynamic Context Strategy
 
-4. **Parallel Manipulations**: For each sample, all three text manipulations (M0, M1, M2) are classified in parallel via `ThreadPoolExecutor`, maximizing throughput.
+For submission, each sample receives the maximum available context for its dataset. Context is extracted automatically from dataset papers and guideline documents using GPT-5.2 with Pydantic schemas.
 
-5. **Reproducible Outputs**: Results JSON files include the full experiment config, prompts, and sample-level predictions for complete reproducibility.
-
-## Methodology
-
-The thesis follows a two-part structure, each addressing a core research question:
-
-### Part 1: Do Zero-Shot LLMs Rely on Argument Structure?
-
-Every sentence is classified three times under controlled text manipulations:
-
-| Manipulation | What it does |
-|---|---|
-| **M0: Original** | Unmodified sentence |
-| **M1: Content-Only** | Remove stop words, function words, discourse markers, punctuation (via spaCy) |
-| **M2: Shuffle** | Randomly permute word order (seed=42) |
-
-If removing linguistic scaffolding hurts performance (large Δ), the model relies on argument structure. If it doesn't (small Δ), the model uses shortcuts -- just like the encoders.
-
-### Part 2: Can LLMs Leverage Rich Context?
-
-The GAIC task provides annotation guidelines, source documents, and paper references -- but only for some datasets. We test three context conditions:
-
-| Condition | Input |
-|---|---|
-| **Baseline** | Sentence + generic argument definition |
-| **Guidelines** | Baseline + dataset-specific annotation guidelines |
-| **Full** | Guidelines + document context (preceding sentences) |
-
-## Models
-
-| Model | Size | Provider |
-|---|---|---|
-| Mistral-7B-Instruct-v0.2 | 7B | [Mistral AI](https://mistral.ai) |
-| Mistral-Small-24B-Instruct | 24B | [Mistral AI](https://mistral.ai) |
-| GPT-5.2 | frontier | [Portkey](https://portkey.ai) (Azure OpenAI) |
-
-Mistral models are accessed via the **[Mistral AI API](https://mistral.ai)**. GPT-5.2 is accessed via **[Portkey](https://portkey.ai)** as a unified gateway to Azure OpenAI.
-
-## Datasets
-
-10 benchmark datasets from the GAIC shared task (~17k labeled sentences):
-
-| Dataset | Domain | Document Context | Guidelines |
-|---|---|---|---|
-| ABSTRCT | Biomedical abstracts | Yes | Yes |
-| ARGUMINSCI | Scientific papers | Yes | Yes |
-| PE | Persuasive essays | Yes | Yes |
-| USELEC | US election debates | Yes | Yes |
-| FINARG | Financial text | Yes | -- |
-| SCIARK | Scientific articles | Yes | -- |
-| ACQUA | Argument quality | -- | -- |
-| AEC | Argument efficacy | -- | -- |
-| AFS | Argument facet similarity | -- | -- |
-| IAM | Internet argument mining | -- | -- |
-
-## Running Experiments
+## Quick Start
 
 ```bash
-# Install dependencies
+git clone https://github.com/wideraHannes/GAIC-Thesis.git
+cd GAIC-Thesis
+
+# Install dependencies (requires uv: https://github.com/astral-sh/uv)
 uv sync
 
-# Run an experiment with a specific config
-uv run gaic/unified_experiment.py config/experiments/<config>.toml
+# Run submission inference
+uv run gaic/submission_inference.py --config config/submission/gpt5.2_dynamic.toml
+```
 
-# Cross-guideline transfer experiment
-uv run gaic/cross_guideline_experiment.py
+## Reproduction
 
-# Data contamination test
+### Prerequisites
+
+- Python 3.13+
+- [uv](https://github.com/astral-sh/uv) package manager
+- API access: OpenAI or Mistral AI
+
+### Environment Setup
+
+```bash
+cp .env.example .env
+# Add API keys:
+# OPENAI_API_KEY=...
+# MISTRAL_API_KEY=...
+# PORTKEY_API_KEY=... (optional, for Azure gateway)
+
+uv sync
+```
+
+### Running Experiments
+
+```bash
+# Submission inference (test set)
+uv run gaic/submission_inference.py --config config/submission/gpt5.2_dynamic.toml
+
+# Development experiments
+uv run gaic/unified_experiment.py config/experiments/v3/gpt_5_2_openai/c1.toml
+
+# Context extraction from PDFs
+uv run gaic/preprocessing/extract_context.py
+
+# Data contamination audit
 uv run gaic/contamination_test.py
 ```
 
-### Example Configuration
+## Configuration
+
+Experiments are fully parameterized via TOML:
 
 ```toml
-# config/experiments/mistral_small_baseline.toml
-
-[experiment]
-experiment_name = "baseline"
-sample_size = 30  # balanced Argument / No-Argument per dataset
-output_dir = "experiments/unified_outputs"
-
 [llm]
-provider = "mistral"
-model = "mistral-small-latest"
+provider = "openai"
+model = "gpt-5.2-2025-12-11"
 temperature = 0.0
 
-[context]
-sources = ["definition"]  # options: "definition", "guideline", "document_context"
-
-[datasets]
-enabled = ["ABSTRCT", "PE", "ARGUMINSCI", "USELEC", ...]
+[submission]
+context_strategy = "dynamic"  # c0, c1, c2 or dynamic
+input_file = "test.jsonl"
+output_dir = "submissions/gpt5.2_test"
 ```
 
-Experiments are fully parameterized via TOML configs in `config/experiments/`. Each config specifies the LLM provider, model, context sources, sample size, and enabled datasets.
+See `config/experiments/` for experiment configurations with context ladder and manipulation settings.
+
+## Datasets
+
+10 benchmark datasets from GAIC (~17k sentences):
+
+| Dataset    | Domain                    | Guidelines | Doc Context |
+| ---------- | ------------------------- | ---------- | ----------- |
+| ABSTRCT    | Biomedical abstracts      | Yes        | Yes         |
+| ARGUMINSCI | Scientific papers         | Yes        | Yes         |
+| PE         | Persuasive essays         | Yes        | Yes         |
+| USELEC     | US election debates       | Yes        | Yes         |
+| FINARG     | Financial text            | —          | Yes         |
+| SCIARK     | Scientific articles       | —          | Yes         |
+| ACQUA      | Argument quality          | —          | —           |
+| AEC        | Argument efficacy         | —          | —           |
+| AFS        | Argument facet similarity | —          | —           |
+| IAM        | Internet argument mining  | —          | —           |
 
 ## References
 
-- Feger, M., Boland, K., & Dietze, S. (2025). *Limited generalizability in argument mining: State-of-the-art models learn datasets, not arguments.* Proceedings of ACL 2025, 23900--23915.
-- Geirhos, R. et al. (2020). *Shortcut learning in deep neural networks.* Nature Machine Intelligence, 2(11), 665--673.
-- GAIC Shared Task (2026). *Generalizable Argument Identification in Context.* Touche @ CLEF 2026.
+- Feger, M., Boland, K., & Dietze, S. (2025). [Limited generalizability in argument mining: State-of-the-art models learn datasets, not arguments](https://aclanthology.org/2025.acl-long.1280/). ACL 2025.
+- Kiesel, J. et al. (2026). [Overview of Touché 2026 — Argumentation Systems](https://touche.webis.de/clef26/touche26-web/). CLEF 2026.
+
+## Other Projects
+
+- [SHAP-In-NLP](https://github.com/wideraHannes/SHAP-In-NLP) — Explainability methods for NLP models using SHAP (Bachelor thesis)
+- [attention-is-all-you-need-pytorch](https://github.com/wideraHannes/attention-is-all-you-need-pytorch) — PyTorch implementation of the Transformer architecture
+- [VAE](https://github.com/wideraHannes/VAE) — Variational Autoencoder implementation
+- [microscopic-image-cvae](https://github.com/floriankark/microscopic-image-cvae) — Conditional VAE for microscopic image generation
+
+## Acknowledgments
+
+- Heinrich Heine University Düsseldorf
+- codecentric AG
+
+## License
+
+MIT
