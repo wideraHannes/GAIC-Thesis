@@ -66,6 +66,9 @@ To reproduce the official GAIC results:
 git clone https://github.com/wideraHannes/GAIC-Thesis.git
 cd GAIC-Thesis
 
+# Download GAIC 2026 data (git submodule)
+git submodule update --init --recursive
+
 # Install dependencies (requires uv: https://github.com/astral-sh/uv)
 uv sync
 
@@ -82,10 +85,14 @@ To experiment with different models, swap out `provider` and `model` in the conf
 - Python 3.13+
 - [uv](https://github.com/astral-sh/uv) package manager
 - API access: OpenAI or Mistral AI
+- Git (with submodule support)
 
 ### Environment Setup
 
 ```bash
+# Download GAIC 2026 data (git submodule)
+git submodule update --init --recursive
+
 cp .env.example .env
 # Add API keys:
 # OPENAI_API_KEY=...
