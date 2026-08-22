@@ -1,0 +1,19 @@
+# GAIC Submission — guideline-only variant (no dataset criterion / definition)
+#
+# Same as the official "dynamic" submission, but the dataset criterion
+# (definition = q̃_d) is dropped from the prompt. Only guideline (g̃_d) and
+# document_context (c) are used. Restricted to TACO/TAPE/TAUS, which is all
+# that the main score and the rule-sensitive-disagreement analysis need.
+
+[llm]
+provider = "openai"
+model = "gpt-5.2-2025-12-11"
+temperature = 0.0
+reasoning = false
+
+[submission]
+context_strategy = "no_definition"   # guideline + document_context, no definition
+input_file = "test.jsonl"
+output_dir = "submissions/gpt5.2_no_definition"
+max_workers = 8
+datasets = ["TACO", "TAPE", "TAUS"]

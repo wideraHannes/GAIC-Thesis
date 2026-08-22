@@ -144,11 +144,14 @@ def get_context_sources(dataset: str, strategy: str) -> list[str]:
     if strategy == "c1":
         return ["definition", "guideline", "document_context"]
 
-    # dynamic: include only what's available
+    # dynamic / no_definition: include only what's available.
+    # no_definition drops the dataset criterion (definition) and keeps
+    # guideline + document_context, to isolate the effect of the guideline.
     capabilities = _load_dataset_json(dataset).get("capabilities", {})
+    include_definition = strategy != "no_definition"
     sources = []
 
-    if capabilities.get("has_definition", False):
+    if include_definition and capabilities.get("has_definition", False):
         sources.append("definition")
     if capabilities.get("has_guidelines", False):
         sources.append("guideline")
@@ -445,7 +448,7 @@ def main():
     parser.add_argument("--config", type=Path, help="TOML config file")
     parser.add_argument("--model", type=str, help="Model name (required if no --config)")
     parser.add_argument("--provider", type=str, default="together_ai", help="LLM provider")
-    parser.add_argument("--context-strategy", type=str, default="dynamic", choices=["c0", "c1", "dynamic"])
+    parser.add_argument("--context-strategy", type=str, default="dynamic", choices=["c0", "c1", "dynamic", "no_definition"])
     parser.add_argument("--output-dir", type=Path, default=Path("submissions"))
     parser.add_argument("--temperature", type=float, default=0.0)
     parser.add_argument("--reasoning", action="store_true")
