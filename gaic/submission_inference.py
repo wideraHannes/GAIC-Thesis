@@ -65,6 +65,7 @@ class InferenceConfig:
     reasoning: bool = False
     datasets: list[str] | None = None  # None = all datasets
     max_workers: int = 8
+    context_map: dict[str, str] = field(default_factory=dict)  # dataset -> alternate context dir name
 
 
 @dataclass
@@ -174,11 +175,12 @@ def process_sample(
     client: OpenAI,
     client_cfg: dict,
     context_strategy: str,
+    context_dataset: str | None = None,
 ) -> dict:
     """Process a single sample: load context, classify, return result."""
     doc_context = ""
     if use_doc_context:
-        doc_context = load_document_context(dataset, sample["id"])
+        doc_context = load_document_context(context_dataset or dataset, sample["id"])
 
     full_context = assemble_context(context_parts, doc_context)
     system_prompt = SYSTEM_PROMPT.format(context=full_context)
@@ -217,13 +219,15 @@ def process_dataset(
     f_log,
 ) -> None:
     """Process all samples for a dataset with parallel API calls."""
-    sources = get_context_sources(dataset, config.context_strategy)
+    context_dataset = config.context_map.get(dataset, dataset)
+    sources = get_context_sources(context_dataset, config.context_strategy)
     static_sources = [s for s in sources if s != "document_context"]
-    context_parts = load_context(dataset, static_sources)
+    context_parts = load_context(context_dataset, static_sources)
     use_doc_context = "document_context" in sources
 
     context_display = ", ".join(sources) if sources else "none"
-    logger.info(f"{dataset}: {len(samples)} samples, context: [{context_display}]")
+    context_note = f" (context: {context_dataset})" if context_dataset != dataset else ""
+    logger.info(f"{dataset}{context_note}: {len(samples)} samples, context: [{context_display}]")
 
     dataset_preds = {}
     results = []
@@ -232,7 +236,8 @@ def process_dataset(
         futures = {
             executor.submit(
                 process_sample, sample, dataset, context_parts,
-                use_doc_context, client, client_cfg, config.context_strategy
+                use_doc_context, client, client_cfg, config.context_strategy,
+                context_dataset,
             ): sample
             for sample in samples
         }
@@ -440,6 +445,7 @@ def build_config(args: argparse.Namespace) -> InferenceConfig:
         ),
         datasets=args.datasets or sub_cfg.get("datasets"),
         max_workers=args.max_workers if args.max_workers != 8 else sub_cfg.get("max_workers", 8),
+        context_map=sub_cfg.get("context_map", {}),
     )
 
 
@@ -470,6 +476,8 @@ def main():
     logger.info(f"Max workers: {config.max_workers}")
     if config.datasets:
         logger.info(f"Datasets: {config.datasets}")
+    if config.context_map:
+        logger.info(f"Context map: {config.context_map}")
 
     run_inference(config)
 

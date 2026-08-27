@@ -1,0 +1,10 @@
+Submission: submissions/gpt5.2_correct_definition_run3/submission.jsonl
+Labels: test.jsonl
+
+Dataset           N   Macro-F1      Acc   Arg-F1   NoArg-F1
+------------------------------------------------------------
+TACO            340     0.8764   0.8765   0.8727     0.8800
+TAPE            340     0.7821   0.7941   0.7308     0.8333
+TAUS            340     0.7931   0.8000   0.7554     0.8308
+------------------------------------------------------------
+TOTAL          1020     0.8195   0.8235   0.7926     0.8464

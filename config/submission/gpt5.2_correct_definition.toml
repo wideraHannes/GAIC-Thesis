@@ -1,0 +1,24 @@
+# GAIC Submission — corrected dataset definitions
+#
+# Same as the official "dynamic" submission, but fixes a bug where TAPE and
+# TAUS were using TACO's argument definition. context_map redirects the
+# definition/guideline/document_context lookup for TAPE/TAUS to the
+# corrected TAPE_v2/TAUS_v2 context folders, while metrics/logs still
+# report against the real TAPE/TAUS dataset names.
+
+[llm]
+provider = "openai"
+model = "gpt-5.2-2025-12-11"
+temperature = 0.0
+reasoning = false
+
+[submission]
+context_strategy = "dynamic"  # c0, c1, or dynamic
+input_file = "test.jsonl"     # test.jsonl or dev.jsonl for validation
+output_dir = "submissions/gpt5.2_correct_definition_run4"
+max_workers = 8
+datasets = ["TACO", "TAPE", "TAUS"]
+
+[submission.context_map]
+TAPE = "TAPE_v2"
+TAUS = "TAUS_v2"
