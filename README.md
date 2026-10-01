@@ -58,6 +58,12 @@ Adding the dataset-specific definition (C0→C1) provides the largest gain: +0.1
 
 For submission, each sample receives the maximum available context for its dataset. Context is extracted automatically from dataset papers and guideline documents using GPT-5.2 with Pydantic schemas.
 
+### Data Contamination Check (DCQ)
+
+To check whether the models have seen the evaluation data during pretraining, we run a three-phase Data Contamination Quiz: GPT-4.1 generates synonym-perturbed variants of each original sentence, a Bias Detector Quiz identifies option positions the model avoids, and a Bias Compensator Quiz places the original sentence in those positions to measure how often the model recognizes it. See [`config/experiments/dcq/README.md`](config/experiments/dcq/README.md) for details.
+
+![DCQ protocol](assets/dcq_protocol.png)
+
 ## Quick Start
 
 To reproduce the official GAIC results:
@@ -159,18 +165,6 @@ See `config/experiments/` for experiment configurations with context ladder and 
 - Feger, M., Boland, K., & Dietze, S. (2025). [Limited generalizability in argument mining: State-of-the-art models learn datasets, not arguments](https://aclanthology.org/2025.acl-long.1280/). ACL 2025.
 - Kiesel, J. et al. (2026). [Overview of Touché 2026 — Argumentation Systems](https://touche.webis.de/clef26/touche26-web/). CLEF 2026.
 
-## Other Projects
-
-- [SHAP-In-NLP](https://github.com/wideraHannes/SHAP-In-NLP) — Explainability methods for NLP models using SHAP (Bachelor thesis)
-- [attention-is-all-you-need-pytorch](https://github.com/wideraHannes/attention-is-all-you-need-pytorch) — PyTorch implementation of the Transformer architecture
-- [VAE](https://github.com/wideraHannes/VAE) — Variational Autoencoder implementation
-- [microscopic-image-cvae](https://github.com/floriankark/microscopic-image-cvae) — Conditional VAE for microscopic image generation
-
-## Acknowledgments
-
-- Heinrich Heine University Düsseldorf
-- codecentric AG
-
 ## Citation
 
 If you use this work, please cite:
@@ -188,6 +182,13 @@ If you use this work, please cite:
   year =                     2026
 }
 ```
+
+## Other Projects
+
+- [SHAP-In-NLP](https://github.com/wideraHannes/SHAP-In-NLP) — Explainability methods for NLP models using SHAP (Bachelor thesis)
+- [attention-is-all-you-need-pytorch](https://github.com/wideraHannes/attention-is-all-you-need-pytorch) — PyTorch implementation of the Transformer architecture
+- [VAE](https://github.com/wideraHannes/VAE) — Variational Autoencoder implementation
+- [microscopic-image-cvae](https://github.com/floriankark/microscopic-image-cvae) — Conditional VAE for microscopic image generation
 
 ## License
 
