@@ -8,7 +8,7 @@ This repository contains the code and data for our submission to the [Generaliza
 
 Argument identification models typically learn dataset-specific shortcuts rather than argumentative structure, leading to poor cross-dataset generalization. We approach GAIC by keeping model parameters fixed and moving dataset-specific information into the prompt: argument definitions, annotation guidelines, and document context. Our zero-shot system reaches 0.7955 macro-F1 on the Main evaluation and ranks first among submitted systems.
 
-> **Paper:** [Context-Awakens at Touché: Generalizable Argument Identification with In-Context Learning](working_notes_touche.pdf) (CLEF 2026 Working Notes)
+> **Paper:** [Context-Awakens at Touché: Generalizable Argument Identification with In-Context Learning](https://downloads.webis.de/touche/publications/papers/widera_2026.pdf) (CLEF 2026 Working Notes)
 
 ## Results
 
@@ -170,6 +170,24 @@ See `config/experiments/` for experiment configurations with context ladder and 
 
 - Heinrich Heine University Düsseldorf
 - codecentric AG
+
+## Citation
+
+If you use this work, please cite:
+
+```bibtex
+@InProceedings{widera:2026,
+  author =                   {Johannes Widera},
+  booktitle =                {Working Notes of the Conference and Labs of the Evaluation Forum},
+  editor =                   {Eva S\'anchez Salido and Alberto Barr\'on-Cede\~no and Alba Garc\'{\i}a Seco Herrera and Sean MacAvaney and Julia Maria Stru{\ss}},
+  month =                    sep,
+  series =                   {CEUR Workshop Proceedings},
+  site =                     {Jena, Germany},
+  title =                    {{Context-Awakens at Touch{\'e}: Generalizable Argument Identification with In-Context Learning}},
+  url =                      {https://downloads.webis.de/touche/publications/papers/widera_2026.pdf},
+  year =                     2026
+}
+```
 
 ## License
 
